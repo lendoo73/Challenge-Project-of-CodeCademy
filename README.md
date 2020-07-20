@@ -9,6 +9,6 @@ I have created different folders for different programming languages.
   * Games of Chance
   * Become a Pokémon Master
 * ## C#
-  * Console Game
+  * <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/c%23/console_game" target="_blank">Console Game</a>
 * ## Java
   * Magic 8-Ball
