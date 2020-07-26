@@ -38,16 +38,7 @@ class Field {
       }
     } while(!(done));
   }
-/*
-  print() {
-    // print field to the console:
-    clearConsole();
-    this.field.forEach(row => {
-      console.log(row.join().replace(/,/g, ""));
-    });
-    this.getInput();
-  }
-*/
+
   print() {
     // print field to the console:
     clearConsole();
