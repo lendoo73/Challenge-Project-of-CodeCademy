@@ -1,6 +1,6 @@
 #### DATA VISUALIZATION WITH MATPLOTLIB
 
-# <a href="https://www.codecademy.com/practice/projects/roller-coaster" target="_blank">Sublime Limes' Line Graphs</a>
+# <a href="https://www.codecademy.com/practice/projects/roller-coaster" target="_blank">Roller Coaster</a>
 
 1. In order to complete this project, you should have completed the first two lessons in the Data Analysis with Pandas course and the first two lessons in the Data Visualization in Python course.
 2. <p>Roller coasters are thrilling amusement park rides designed to make you squeal and scream! They take you up high, drop you to the ground quickly, and sometimes even spin you upside down before returning to a stop. Today you will be taking control back from the roller coasters and visualizing data covering international roller coaster rankings and roller coaster statistics.</p><p>Roller coasters are often split into two main categories based on their construction material: wood or steel. Rankings for the best wood and steel roller coasters from the 2013 to 2018 Golden Ticket Awards are provided in 'Golden_Ticket_Award_Winners_Wood.csv' and 'Golden_Ticket_Award_Winners_Steel.csv', respectively. Load each csv into a DataFrame and inspect it to gain familiarity with the data.</p>
