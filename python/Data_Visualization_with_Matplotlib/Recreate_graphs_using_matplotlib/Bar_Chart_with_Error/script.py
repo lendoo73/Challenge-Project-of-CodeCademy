@@ -9,7 +9,7 @@ error = [1.5, 2.1, 1.2, 3.2, 2.3, 1.7, 2.4]
 # 1:
 plt.figure(figsize = [10, 8])
 # 2 - 3:
-plt.bar(range(len(past_years_averages)), past_years_averages, yerr = error)
+plt.bar(range(len(past_years_averages)), past_years_averages, yerr = error, capsize = 10)
 # 4:
 plt.axis([-0.5, 6.5, 70, 95])
 # 5:
