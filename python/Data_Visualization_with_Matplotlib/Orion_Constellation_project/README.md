@@ -4,4 +4,3 @@ This project was made by part of the <a
   ----------
 I also <a 
     href="https://repl.it/@lendoo73/OrionConstellation#main.py" target="_blank">uploaded to the REPL.</a> Click on Run &#9658; to see in action.
-    ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `#c5f015`
