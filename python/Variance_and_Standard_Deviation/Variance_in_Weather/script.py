@@ -1,8 +1,8 @@
 import codecademylib3_seaborn
 import pandas as pd
 import numpy as np
-from weather_data import london_data
 
+london_data = pd.read_csv("london_data.csv")
 # 1:
 #print(london_data.head())
 # 2:
@@ -80,3 +80,5 @@ for h in range(0, 24):
 print("Certain hours that have higher variance than others: ")  
 print(* certain_hours, sep = ", ")
 
+# 14: Save the dataframe to csv file:
+#london_data.to_csv(r"london_data.csv", index=False)
