@@ -8,7 +8,7 @@ In this project, we will investigate a dataset containing information about the 
 I also created a Jupiter NoteBook project from this coding challenge. This is my first time to create a coding challenge using Jupiter NoteBook.
 The starting code you can find <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Data_Visualization_with_Matplotlib/Life_Expectancy_By_Country/start" target="_blank">here</a>.
 And <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/blob/master/python/Data_Visualization_with_Matplotlib/Life_Expectancy_By_Country/finish/life_expectancy_by_country.ipynb" target="_blank">here</a> is my solution.
-------------
+<hr />
 1. <p>We’ve imported a dataset containing the life expectancy in different countries. The data can be found in the variable named <code>data</code>.</p><p>To begin, let’s get a sense of what this data looks like. Print <code>data.head()</code> to see the first 5 rows of the dataset.</p><p>Look at the names of the columns. What other pieces of information does this dataset contain?</p><p>You may want to comment out this print statement after looking at the data.</p>
 2. <p>Let’s isolate the column that contains the life expectancy and store it in a variable named <code>life_expectancy</code>. To get a single column from a Panda DataFrame, use this syntax:<br /><code>single_column = dataFrameName["columnName"]</code></p><p>Make sure to pay attention to capitalization and spaces when using the column name!</p>
 3. <p>We can now use NumPy functions on that column! Let’s use the <code>np.quantile()</code> function to find the quartiles of <code>life_expectancy</code>. Store the result in a variable named <code>life_expectancy_quartiles</code> and print the results.</p>
