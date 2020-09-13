@@ -9,12 +9,12 @@ In this project, we will investigate a dataset containing information about the 
 3. <p>We can now use NumPy functions on that column! Let’s use the <code>np.quantile()</code> function to find the quartiles of <code>life_expectancy</code>. Store the result in a variable named <code>life_expectancy_quartiles</code> and print the results.</p>
 4. <p>Nice work! By looking at those three values you can get a sense of the spread of the data. For example, it seems like some of the data is fairly close together — a quarter of the data is between <code>72.5</code> years and <code>75.4</code> years.</p><p>Could you predict what the histogram might look like from those three number? Plot the histogram by using the following two lines of code:<br /><code>plt.hist(life_expectancy)</code><br /><code>plt.show()</code></p>Does it look how you expected?
 5. <p>Let’s take a moment to think about the meaning of these quartiles. If your country has a life expectancy of <code>70</code> years, does that fall in the first, second, third, or final quarter of the data?</p>
-6. <p></p><p></p>
-7. <p></p><p></p>
-8. <p></p><p></p>
+6. <p>GDP is a mesaure of a country’s wealth. Let’s now use the GDP data to see if life expectancy is affected by this value.</p><p>Let’s split the data into two groups based on GDP. If we find the median GDP, we can create two datasets for “low GDP countries” and “high GDP countries.</p><p>To start, let’s isolate the GDP column and store it in a variable named <code>gdp</code>. This should be similar to how you isolated the life expectancy column.</p>
+7. <p>We now want to find the median GDP. You can use NumPy’s <code>np.median()</code> function, but since the median is also a quantile, we can call <code>np.quanitle()</code> using <code>0.5</code> as the second parameter.</p><p>Store the median in a variable named <code>median_gdp</code>. Print that variable to see the median.</p>
+8. <p>Let’s now grab all of the rows from our original dataset that have a GDP less than or equal to the median. The following code will do that for you<br /><code>low_gdp = data[data['GDP'] <= median_gdp]</code></p><p>Do the same for all of the rows that have a GDP higher than the median. Store those rows in a variable named <code>high_gdp<code>.</p><p>The line of code should look almost identical to the one above, but you should change the <code><=<code> to <code>><code>.</p>
 9. <p></p><p></p>
 10. <p></p><p></p>
 11. <p></p><p></p>
 12. <p></p><p></p>
 <code>
-
+<p></p>
