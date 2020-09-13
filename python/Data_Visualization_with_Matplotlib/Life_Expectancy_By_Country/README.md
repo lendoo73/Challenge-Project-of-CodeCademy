@@ -8,12 +8,13 @@ In this project, we will investigate a dataset containing information about the 
 2. <p>Let’s isolate the column that contains the life expectancy and store it in a variable named <code>life_expectancy</code>. To get a single column from a Panda DataFrame, use this syntax:<br /><code>single_column = dataFrameName["columnName"]</code></p><p>Make sure to pay attention to capitalization and spaces when using the column name!</p>
 3. <p>We can now use NumPy functions on that column! Let’s use the <code>np.quantile()</code> function to find the quartiles of <code>life_expectancy</code>. Store the result in a variable named <code>life_expectancy_quartiles</code> and print the results.</p>
 4. <p>Nice work! By looking at those three values you can get a sense of the spread of the data. For example, it seems like some of the data is fairly close together — a quarter of the data is between <code>72.5</code> years and <code>75.4</code> years.</p><p>Could you predict what the histogram might look like from those three number? Plot the histogram by using the following two lines of code:<br /><code>plt.hist(life_expectancy)</code><br /><code>plt.show()</code></p>Does it look how you expected?
-5. <p></p>
-6. <p></p>
-7. <p></p>
-8. <p></p>
-9. <p></p>
-10. <p></p>
-11. <p></p>
-12. <p></p>
+5. <p>Let’s take a moment to think about the meaning of these quartiles. If your country has a life expectancy of <code>70</code> years, does that fall in the first, second, third, or final quarter of the data?</p>
+6. <p></p><p></p>
+7. <p></p><p></p>
+8. <p></p><p></p>
+9. <p></p><p></p>
+10. <p></p><p></p>
+11. <p></p><p></p>
+12. <p></p><p></p>
+<code>
 
