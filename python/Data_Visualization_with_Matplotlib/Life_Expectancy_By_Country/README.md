@@ -5,8 +5,11 @@ Over the course of the past few centuries, technological and medical advancement
 In this project, we will investigate a dataset containing information about the average life expectancy in 158 different countries. We will specifically look at how a country’s economic success might impact the life expectancy in that area.
 
 <a href="https://repl.it/@lendoo73/lifeExpectancy#main.py" target="_blank">Try on Repl.</a>
+
 I also created a Jupiter NoteBook project from this coding challenge. This is my first time to create a coding challenge using Jupiter NoteBook.
+
 The starting code you can find <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Data_Visualization_with_Matplotlib/Life_Expectancy_By_Country/start" target="_blank">here</a>.
+
 And <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/blob/master/python/Data_Visualization_with_Matplotlib/Life_Expectancy_By_Country/finish/life_expectancy_by_country.ipynb" target="_blank">here</a> is my solution.
 <hr />
 1. <p>We’ve imported a dataset containing the life expectancy in different countries. The data can be found in the variable named <code>data</code>.</p><p>To begin, let’s get a sense of what this data looks like. Print <code>data.head()</code> to see the first 5 rows of the dataset.</p><p>Look at the names of the columns. What other pieces of information does this dataset contain?</p><p>You may want to comment out this print statement after looking at the data.</p>
