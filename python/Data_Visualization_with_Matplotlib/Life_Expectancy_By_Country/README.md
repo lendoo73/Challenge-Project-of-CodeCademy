@@ -4,4 +4,6 @@ Over the course of the past few centuries, technological and medical advancement
 
 In this project, we will investigate a dataset containing information about the average life expectancy in 158 different countries. We will specifically look at how a country’s economic success might impact the life expectancy in that area.
 ------------
-1. We’ve imported a dataset containing the life expectancy in different countries. The data can be found in the variable named `data`.
+1. <p>We’ve imported a dataset containing the life expectancy in different countries. The data can be found in the variable named `data`.</p><p>To begin, let’s get a sense of what this data looks like. Print `data.head()` to see the first 5 rows of the dataset.</p><p>Look at the names of the columns. What other pieces of information does this dataset contain?</p><p>You may want to comment out this print statement after looking at the data.</p>
+2. <p>Let’s isolate the column that contains the life expectancy and store it in a variable named `life_expectancy`. To get a single column from a Panda DataFrame, use this syntax:<br /> `single_column = dataFrameName["columnName"]`</p><p>Make sure to pay attention to capitalization and spaces when using the column name!</p>
+3. b
