@@ -2,7 +2,7 @@
 # <a href="https://www.codecademy.com/paths/analyze-data-with-python/tracks/ida-7-hypothesis-testing-scipy/modules/ida-7-1-hypothesis-testing/projects/familiar" target="_blank">Familiar: A Study In Data Analysis</a>
 <p>Welcome to Familiar, a startup in the new market of blood transfusion! You’ve joined the team because you appreciate the flexible hours and extremely intelligent team, but the overeager doorman welcoming you into the office is a nice way to start your workday (well, work-evening).</p>
 <p>Familiar has fallen into some tough times lately, so you’re hoping to help them make some insights about their product and help move the needle (so to speak).</p>
-## <p>What Can Familiar Do For You?</p>
+<h2>What Can Familiar Do For You?</h2>
 1. <p>We’re going to start by including a data interface that a previous software engineer wrote for you, it’s aptly titled <code>familiar</code>, so just import that.</p>
 2. <p>Perfect, now the first thing we want to show is that our most basic package, the Vein Pack, actually has a significant impact on the subscribers. It would be a marketing goldmine if we can show that subscribers to the Vein Pack live longer than other people.</p><p>Lifespans of Vein Pack users are returned by the function <code>lifespans(package='vein')</code>, which is part of the <code>familiar</code> module. Call that function and save the data into a variable called <code>vein_pack_lifespans</code>.</p> 
 3. <p>We’d like to find out if the average lifespan of a Vein Pack subscriber is significantly different from the average life expectancy of <code>71</code> years.</p><p>Import the statistical test we would use to determine if a sample comes from a population that has a given mean from <code>scipy.stats</code>.</p>
