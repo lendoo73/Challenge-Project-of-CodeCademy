@@ -1,4 +1,4 @@
-# Capstone Project: MuscleHub A/B Test
+# [Capstone Project: MuscleHub A/B Test](https://www.codecademy.com/paths/analyze-data-with-python/tracks/ida-8-final-projects/modules/ida-8-2-capstones/informationals/ida-capstone-musclehub)
 ### Help MuscleHub analyze an A/B test and choose a business strategy.
 You’ve been hired to help MuscleHub, a fancy gym, run an A/B test!
 
