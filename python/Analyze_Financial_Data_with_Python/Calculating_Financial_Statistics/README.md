@@ -90,9 +90,12 @@ Another important statistic for assessing risk is the correlation between the re
 Two assets from the same industry generally have a positive correlation, as they are likely affected by similar external conditions.
 When building a portfolio, it is generally a good idea to include assets that are not correlated with each other. If assets are independent of one another, then there is a lower risk of the financial loss that can occur when assets in a portfolio are correlated. This allows for greater diversification and balances out the overall risk and return of the portfolio.
 
+### Correlation II
 The formula for the Pearson correlation coefficient:
-### <a href="https://www.codecogs.com/eqnedit.php?latex=r_{xy}&space;=&space;\frac{n&space;*&space;\sum&space;(X_{i}&space;*&space;Y_{i})&space;-&space;\sum&space;X_{i}&space;*&space;\sum&space;Y_{i}}{\sqrt{n&space;*&space;\sum&space;X_{i}^{2}&space;-&space;(\sum&space;X_{i})^{2}}\sqrt{n&space;*&space;\sum&space;Y_{i}^{2}&space;-&space;(\sum&space;Y_{i})^{2}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r_{xy}&space;=&space;\frac{n&space;*&space;\sum&space;(X_{i}&space;*&space;Y_{i})&space;-&space;\sum&space;X_{i}&space;*&space;\sum&space;Y_{i}}{\sqrt{n&space;*&space;\sum&space;X_{i}^{2}&space;-&space;(\sum&space;X_{i})^{2}}\sqrt{n&space;*&space;\sum&space;Y_{i}^{2}&space;-&space;(\sum&space;Y_{i})^{2}}}" title="r_{xy} = \frac{n * \sum (X_{i} * Y_{i}) - \sum X_{i} * \sum Y_{i}}{\sqrt{n * \sum X_{i}^{2} - (\sum X_{i})^{2}}\sqrt{n * \sum Y_{i}^{2} - (\sum Y_{i})^{2}}}" /></a>
+#### <a href="https://www.codecogs.com/eqnedit.php?latex=r_{xy}&space;=&space;\frac{n&space;*&space;\sum&space;(X_{i}&space;*&space;Y_{i})&space;-&space;\sum&space;X_{i}&space;*&space;\sum&space;Y_{i}}{\sqrt{n&space;*&space;\sum&space;X_{i}^{2}&space;-&space;(\sum&space;X_{i})^{2}}\sqrt{n&space;*&space;\sum&space;Y_{i}^{2}&space;-&space;(\sum&space;Y_{i})^{2}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r_{xy}&space;=&space;\frac{n&space;*&space;\sum&space;(X_{i}&space;*&space;Y_{i})&space;-&space;\sum&space;X_{i}&space;*&space;\sum&space;Y_{i}}{\sqrt{n&space;*&space;\sum&space;X_{i}^{2}&space;-&space;(\sum&space;X_{i})^{2}}\sqrt{n&space;*&space;\sum&space;Y_{i}^{2}&space;-&space;(\sum&space;Y_{i})^{2}}}" title="r_{xy} = \frac{n * \sum (X_{i} * Y_{i}) - \sum X_{i} * \sum Y_{i}}{\sqrt{n * \sum X_{i}^{2} - (\sum X_{i})^{2}}\sqrt{n * \sum Y_{i}^{2} - (\sum Y_{i})^{2}}}" /></a>
 r<sub>xy</sub>: correlation coefficient<br />
 X<sub>i</sub>: the i<sup>th</sup> value in dataset X<br />
 Y<sub>i</sub>: the i<sup>th</sup> value in dataset Y<br />
 n: the number of values in the dataset
+
+`calculate_correlation()`: calculates the correlation coefficient between two input datasets
