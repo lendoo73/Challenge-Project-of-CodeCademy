@@ -87,4 +87,6 @@ Another important statistic for assessing risk is the correlation between the re
 
 Two assets from the same industry generally have a positive correlation, as they are likely affected by similar external conditions.
 When building a portfolio, it is generally a good idea to include assets that are not correlated with each other. If assets are independent of one another, then there is a lower risk of the financial loss that can occur when assets in a portfolio are correlated. This allows for greater diversification and balances out the overall risk and return of the portfolio.
-`calculate_correlation()`: calculate the correlation coefficient between two datasets
+
+The formula for the Pearson correlation coefficient:
+
