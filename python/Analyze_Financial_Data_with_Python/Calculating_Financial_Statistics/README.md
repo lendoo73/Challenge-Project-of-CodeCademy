@@ -84,5 +84,7 @@ Another important statistic for assessing risk is the correlation between the re
 * **Negative correlation** – when the rate of return of one asset deviates upward from its mean, the other usually deviates downward.
 
 * **No correlation** – when a change in one asset’s rate of return does not dictate a change in another. The correlation coefficient will be close to 0.
+
 Two assets from the same industry generally have a positive correlation, as they are likely affected by similar external conditions.
 When building a portfolio, it is generally a good idea to include assets that are not correlated with each other. If assets are independent of one another, then there is a lower risk of the financial loss that can occur when assets in a portfolio are correlated. This allows for greater diversification and balances out the overall risk and return of the portfolio.
+`calculate_correlation()`: calculate the correlation coefficient between two datasets
