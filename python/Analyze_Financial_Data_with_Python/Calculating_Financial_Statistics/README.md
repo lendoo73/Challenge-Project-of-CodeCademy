@@ -57,6 +57,9 @@ The weights of each asset is obtained by:
 #### <a href="https://www.codecogs.com/eqnedit.php?latex=W_{i}&space;=&space;\frac{S_{i}}{S_{1}&space;&plus;&space;S_{2}&space;&plus;&space;...&space;&plus;&space;S_{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?W_{i}&space;=&space;\frac{S_{i}}{S_{1}&space;&plus;&space;S_{2}&space;&plus;&space;...&space;&plus;&space;S_{n}}" title="W_{i} = \frac{S_{i}}{S_{1} + S_{2} + ... + S_{n}}" /></a>
 W<sub>i</sub>: weight of the i<sup>th</sup> investment in the portfolio<br />
 S<sub>i</sub>: starting price of the i<sup>th</sup> investment in the portfolio
-
-
+### Variance
+One of the key statistics for understanding risk is variance. Variance is a measure of the spread of a dataset, or how far apart each value is from the mean. The greater the variance, the more spread out or variable the data is.
+An asset with a high variance is generally a riskier one because its return can vary significantly in a short period of time, making it less stable and more unpredictable.
+The formula for calculating variance is:
+#### <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma^{2}&space;=&space;\frac{\sum&space;(X_{i}&space;-&space;\bar{X})^2}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma^{2}&space;=&space;\frac{\sum&space;(X_{i}&space;-&space;\bar{X})^2}{n}" title="\sigma^{2} = \frac{\sum (X_{i} - \bar{X})^2}{n}" /></a>
 
