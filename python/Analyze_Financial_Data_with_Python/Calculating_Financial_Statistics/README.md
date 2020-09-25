@@ -3,7 +3,7 @@
 ### Simple Rate of Return
 The difference between the starting and ending price of an investment over a time period, divided by the starting price.
 If an investment returns dividends, those dividends should be added to the numerator.
-#### R = (E - S + D) / S
+#### <a href="https://www.codecogs.com/eqnedit.php?latex=R&space;=&space;\frac{E&space;-&space;S&space;&plus;&space;D}{S}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R&space;=&space;\frac{E&space;-&space;S&space;&plus;&space;D}{S}" title="R = \frac{E - S + D}{S}" /></a>
 R: simple rate of return<br />
 S: starting price of investment<br />
 E: ending price of investment<br />
