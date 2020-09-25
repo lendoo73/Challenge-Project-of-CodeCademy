@@ -77,3 +77,10 @@ X̄: the mean of the dataset<br />
 n: the number of values in the dataset
 
 `calculate_stddev()`: calculate the standard deviation
+### Correlation I
+Another important statistic for assessing risk is the correlation between the returns of two assets. Correlation is a measure of how closely two datasets are associated with each other. It is often represented by the correlation coefficient, which is a value that ranges between -1 and 1. This indicates whether there is a positive correlation, negative correlation, or no correlation:
+* **Positive correlation** – when the rate of return of one asset deviates upward from its mean, the other usually deviates upward as well.
+
+* **Negative correlation** – when the rate of return of one asset deviates upward from its mean, the other usually deviates downward.
+
+* **No correlation** – when a change in one asset’s rate of return does not dictate a change in another. The correlation coefficient will be close to 0.
