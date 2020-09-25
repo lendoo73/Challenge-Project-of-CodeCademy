@@ -62,4 +62,8 @@ One of the key statistics for understanding risk is variance. Variance is a meas
 An asset with a high variance is generally a riskier one because its return can vary significantly in a short period of time, making it less stable and more unpredictable.
 The formula for calculating variance is:
 #### <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma^{2}&space;=&space;\frac{\sum&space;(X_{i}&space;-&space;\bar{X})^2}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma^{2}&space;=&space;\frac{\sum&space;(X_{i}&space;-&space;\bar{X})^2}{n}" title="\sigma^{2} = \frac{\sum (X_{i} - \bar{X})^2}{n}" /></a>
+σ<sup>2</sup>: variance<br />
+X<sub>i</sub>: the i<sup>th</sup> value in the dataset<br />
+X̄: the mean of the dataset<br />
+n: the number of values in the dataset
 
