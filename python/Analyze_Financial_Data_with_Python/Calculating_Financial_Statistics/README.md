@@ -38,7 +38,7 @@ If we are converting daily returns to annual returns, t may be 252 because that 
 An extension of the previous conversion formula.
 #### <a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;\frac{r0_{1}&space;&plus;&space;r0_{2}&space;&plus;&space;...&space;r0_{n}}{n}&space;*&space;t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;\frac{r0_{1}&space;&plus;&space;r0_{2}&space;&plus;&space;...&space;r0_{n}}{n}&space;*&space;t" title="r = \frac{r0_{1} + r0_{2} + ... r0_{n}}{n} * t" /></a>
 r: converted log rate of return<br />
-r<sub>0<sub><sub>n</sub>: the nth log return from the original time period<br />
+r<sub>0</sub><sub>n</sub>: the n<sup>th</sup> log return from the original time period<br />
 n: the number of returns from the original time period<br />
 t: the number of original time periods in the new time period
 
