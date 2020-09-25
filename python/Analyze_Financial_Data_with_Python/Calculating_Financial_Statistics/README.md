@@ -1,3 +1,5 @@
+# Calculating Financial Statistics
+
 `display_as_percentage()`: converting a decimal value to the percent form
 
 ### Simple Rate of Return
