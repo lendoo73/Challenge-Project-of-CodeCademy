@@ -48,6 +48,6 @@ t: the number of original time periods in the new time period
 Investments often make up the pieces of a larger financial portfolio.
 Let’s get a preview of how to calculate the expected rate of return for an entire portfolio of investments.
 Using the simple rate of return makes it easy to aggregate across multiple assets. The portfolio return would simply be the weighted average of each individual asset’s simple rate of return.
-<a href="https://www.codecogs.com/eqnedit.php?latex=R&space;=&space;(W_{1}&space;*&space;R_{1})&space;&plus;&space;(W_{2}&space;*&space;R_{2})&space;&plus;&space;...&space;&plus;&space;(W_{n}&space;*&space;R_{n})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R&space;=&space;(W_{1}&space;*&space;R_{1})&space;&plus;&space;(W_{2}&space;*&space;R_{2})&space;&plus;&space;...&space;&plus;&space;(W_{n}&space;*&space;R_{n})" title="R = (W_{1} * R_{1}) + (W_{2} * R_{2}) + ... + (W_{n} * R_{n})" /></a>
+#### <a href="https://www.codecogs.com/eqnedit.php?latex=R&space;=&space;(W_{1}&space;*&space;R_{1})&space;&plus;&space;(W_{2}&space;*&space;R_{2})&space;&plus;&space;...&space;&plus;&space;(W_{n}&space;*&space;R_{n})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R&space;=&space;(W_{1}&space;*&space;R_{1})&space;&plus;&space;(W_{2}&space;*&space;R_{2})&space;&plus;&space;...&space;&plus;&space;(W_{n}&space;*&space;R_{n})" title="R = (W_{1} * R_{1}) + (W_{2} * R_{2}) + ... + (W_{n} * R_{n})" /></a>
 
 
