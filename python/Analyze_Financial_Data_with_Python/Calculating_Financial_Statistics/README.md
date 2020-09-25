@@ -55,6 +55,8 @@ R<sub>i</sub>: simple rate of return of the i<sup>th</sup> investment in the por
 
 The weights of each asset is obtained by:
 #### <a href="https://www.codecogs.com/eqnedit.php?latex=W_{i}&space;=&space;\frac{S_{i}}{S_{1}&space;&plus;&space;S_{2}&space;&plus;&space;...&space;&plus;&space;S_{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?W_{i}&space;=&space;\frac{S_{i}}{S_{1}&space;&plus;&space;S_{2}&space;&plus;&space;...&space;&plus;&space;S_{n}}" title="W_{i} = \frac{S_{i}}{S_{1} + S_{2} + ... + S_{n}}" /></a>
+W<sub>i</sub>: weight of the i<sup>th</sup> investment in the portfolio<br />
+S<sub>i</sub>: starting price of the i<sup>th</sup> investment in the portfolio
 
 
 
