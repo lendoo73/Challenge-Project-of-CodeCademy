@@ -90,7 +90,7 @@ When building a portfolio, it is generally a good idea to include assets that ar
 
 The formula for the Pearson correlation coefficient:
 ### <a href="https://www.codecogs.com/eqnedit.php?latex=r_{xy}&space;=&space;\frac{n&space;*&space;\sum&space;(X_{i}&space;*&space;Y_{i})&space;-&space;\sum&space;X_{i}&space;*&space;\sum&space;Y_{i}}{\sqrt{n&space;*&space;\sum&space;X_{i}^{2}&space;-&space;(\sum&space;X_{i})^{2}}\sqrt{n&space;*&space;\sum&space;Y_{i}^{2}&space;-&space;(\sum&space;Y_{i})^{2}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r_{xy}&space;=&space;\frac{n&space;*&space;\sum&space;(X_{i}&space;*&space;Y_{i})&space;-&space;\sum&space;X_{i}&space;*&space;\sum&space;Y_{i}}{\sqrt{n&space;*&space;\sum&space;X_{i}^{2}&space;-&space;(\sum&space;X_{i})^{2}}\sqrt{n&space;*&space;\sum&space;Y_{i}^{2}&space;-&space;(\sum&space;Y_{i})^{2}}}" title="r_{xy} = \frac{n * \sum (X_{i} * Y_{i}) - \sum X_{i} * \sum Y_{i}}{\sqrt{n * \sum X_{i}^{2} - (\sum X_{i})^{2}}\sqrt{n * \sum Y_{i}^{2} - (\sum Y_{i})^{2}}}" /></a>
-r<sub>xy</sub>: correlation coefficient
-X<sub>i</sub>: the i<sup>th</sup> value in dataset X
-Y<sub>i</sub>: the i<sup>th</sup> value in dataset Y
+r<sub>xy</sub>: correlation coefficient<br />
+X<sub>i</sub>: the i<sup>th</sup> value in dataset X<br />
+Y<sub>i</sub>: the i<sup>th</sup> value in dataset Y<br />
 n: the number of values in the dataset
