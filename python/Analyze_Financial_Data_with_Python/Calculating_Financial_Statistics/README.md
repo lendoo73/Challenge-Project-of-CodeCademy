@@ -31,6 +31,7 @@ r0: original log rate of return<br />
 t: the number of original time periods in the new time period<br />
 
 If we are converting daily returns to annual returns, t may be 252 because that is typically the number of trading days in a year.
+`calculate_variance()`: calculate the variance
 
 `annualize_return()`: calculate the converted rate of return
 
@@ -66,4 +67,9 @@ The formula for calculating variance is:
 X<sub>i</sub>: the i<sup>th</sup> value in the dataset<br />
 X̄: the mean of the dataset<br />
 n: the number of values in the dataset
+### Standard Deviation
+It is common to use the standard deviation to describe the spread of the dataset.
+Standard deviation is simply the square root of the variance. It has the same unit as the original dataset.
+#### <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;=&space;\sqrt[]{\frac{\sum&space;(X_{i}&space;-&space;\bar{X})^2}{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;=&space;\sqrt[]{\frac{\sum&space;(X_{i}&space;-&space;\bar{X})^2}{n}}" title="\sigma = \sqrt[]{\frac{\sum (X_{i} - \bar{X})^2}{n}}" /></a>
+
 
