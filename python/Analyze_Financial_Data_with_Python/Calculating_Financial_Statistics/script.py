@@ -26,3 +26,22 @@ def calculate_stddev(dataset):
   variance = calculate_variance(dataset)
   stddev = sqrt(variance)
   return stddev
+
+def calculate_correlation(set_x, set_y):
+  # Sum of all values in each dataset
+  sum_x = sum(set_x)
+  sum_y = sum(set_y)
+
+  # Sum of all squared values in each dataset
+  sum_x2 = sum([x ** 2 for x in set_x])
+  sum_y2 = sum([y ** 2 for y in set_y])
+
+  sum_xy = sum([x * y for x, y in zip(set_x, set_y)])
+  # Length of dataset
+  n = len(set_x)
+
+  # Calculate correlation coefficient
+  numerator = n * sum_xy - sum_x * sum_y
+  denominator = sqrt((n * sum_x2 - sum_x ** 2) * (n * sum_y2 - sum_y ** 2))
+
+  return numerator / denominator
