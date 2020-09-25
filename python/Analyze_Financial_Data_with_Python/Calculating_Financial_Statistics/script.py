@@ -8,3 +8,6 @@ def calculate_simple_return(start_price, end_price, dividend = 0):
 
 def calculate_log_return(start_price, end_price):
   return log(end_price / start_price)
+
+def annualize_return(log_return, t):
+  return log_return * t
