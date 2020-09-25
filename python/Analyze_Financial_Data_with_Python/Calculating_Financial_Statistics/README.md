@@ -14,7 +14,7 @@ D: dividend<br />
 Also known as the continuously compounded return.
 This is the expected return for an investment where the earnings are assumed to be continually reinvested over the time period.
 It is calculated by taking the difference between the log of the ending price and the log of the starting price.
-#### r = log(E) - log(S) = log(E / S)
+#### <a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;log(E)&space;-&space;log(S)&space;=&space;log(\frac{E}{S})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;log(E)&space;-&space;log(S)&space;=&space;log(\frac{E}{S})" title="r = log(E) - log(S) = log(\frac{E}{S})" /></a>
 r: logarithmic rate of return<br />
 S: starting price of investment<br />
 E: ending price of investment<br />
