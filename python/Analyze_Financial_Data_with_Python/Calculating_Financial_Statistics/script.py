@@ -6,8 +6,20 @@ def display_as_percentage(val):
 def calculate_simple_return(start_price, end_price, dividend = 0):
   return (end_price - start_price + dividend) / start_price
 
+def get_simple_returns(prices):
+  returns = []
+  for i in range(len(prices) - 1):
+    returns.append(calculate_simple_return(prices[i], prices[i + 1]))
+  return returns
+
 def calculate_log_return(start_price, end_price):
   return log(end_price / start_price)
+
+def get_log_returns(prices):
+  returns = []
+  for i in range(len(prices) - 1):
+    returns.append(calculate_log_return(prices[i], prices[i + 1]))
+  return returns
 
 def annualize_return(log_return, t):
   return log_return * t
