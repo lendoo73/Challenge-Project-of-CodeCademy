@@ -38,7 +38,8 @@ def return_portfolios(expected_returns, cov_matrix):
   
 def optimal_portfolio(returns):
     n = returns.shape[1]
-    returns = np.transpose(returns.as_matrix())
+    #returns = np.transpose(returns.as_matrix())
+    returns = np.transpose(returns.to_numpy())
 
     N = 100
     mus = [10**(5.0 * t/N - 1.0) for t in range(N)]
