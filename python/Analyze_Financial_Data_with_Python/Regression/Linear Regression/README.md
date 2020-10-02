@@ -17,3 +17,10 @@ For each data point, we calculate loss, a number that measures how bad the model
 We can think about loss as the squared distance from the point to the line. We do the squared distance (instead of just the distance) so that points above and below the line both contribute to total loss in the same way:
 ![Image](https://content.codecademy.com/programs/machine-learning/linear-regression/points.svg)
 
+In this example:
+
+* For point A, the squared distance is 9 (3²)
+* For point B, the squared distance is 1 (1²)
+
+So the total loss, with this model, is 10. If we found a line that had less loss than 10, that line would be a better model for this data.
+
