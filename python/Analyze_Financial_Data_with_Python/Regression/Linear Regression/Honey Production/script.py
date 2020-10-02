@@ -5,6 +5,7 @@ import numpy as np
 from sklearn import linear_model
 
 df = pd.read_csv("https://content.codecademy.com/programs/data-science-path/linear_regression/honeyproduction.csv")
+#df = pd.read_csv("honeyproduction.csv")
 # 1. Use .head() to get a sense of how this DataFrame is structured:
 #print(df.head())
 
