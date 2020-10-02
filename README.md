@@ -32,6 +32,16 @@ I have created different folders for different programming languages.
       * [Statistics for Data Analysis](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Statistics_for_Data_Analysis)
         * [Variance and Standard Deviation](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Statistics_for_Data_Analysis/Variance_and_Standard_Deviation)
           * [Variance in Weather](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Statistics_for_Data_Analysis/Variance_and_Standard_Deviation/Variance_in_Weather)
+  * [Analyze Financial Data with Python](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python)
+    * [Analyzing Stock Data](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Analyzing_Stock_Data)
+    * [Bank Teller](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Bank_Teller)
+    * [Calculating Financial Statistics](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Calculating_Financial_Statistics)
+    * [Real Estate Investment Trust Analysis](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Real_Estate_Investment_Trust_Analysis)
+    * [US Financial Health](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/US%20Financial%20Health)
+    * [Visualizing Finance Data](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Visualizing_Finance_Data)
+      * [Mean Variance Optimization](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Visualizing_Finance_Data/Mean_Variance_Optimization)
+      * [Portfolio Optimization](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Visualizing_Finance_Data/Portfolio_Optimization)
+      * [Visualizing Tech Stocks](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Visualizing_Finance_Data/Visualizing_Tech_Stocks)
 * ## <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/c%23" target="_blank">C#</a>
   * <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/c%23/console_game" target="_blank">Console Game</a>
 * ## <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/java" target="_blank">Java</a>
