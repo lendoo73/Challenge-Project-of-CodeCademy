@@ -15,5 +15,5 @@ When we perform Linear Regression, the goal is to get the “best” m and b for
 When we think about how we can assign a slope and intercept to fit a set of points, we have to define what the best fit is.<br />
 For each data point, we calculate loss, a number that measures how bad the model’s (in this case, the line’s) prediction was.<br />
 We can think about loss as the squared distance from the point to the line. We do the squared distance (instead of just the distance) so that points above and below the line both contribute to total loss in the same way:
-![Image](https://content.codecademy.com/programs/machine-learning/linear-regression/points.svg =250x)
+![Image](https://content.codecademy.com/programs/machine-learning/linear-regression/points.svg)
 
