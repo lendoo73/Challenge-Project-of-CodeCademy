@@ -10,6 +10,28 @@ I have created different folders for different programming languages.
   * <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/become_a_pokemon_master" target="_blank">Become a Pokémon Master</a>
   * [Analyze Data with Python](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python)
     * [Biodiversity_in_National_Parks](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Biodiversity_in_National_Parks)
+    * [Data Visualization with Matplotlib](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib)
+      * [Life Expectancy By Country](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Life_Expectancy_By_Country)
+      * [Orion_Constellation_project](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Orion_Constellation_project)
+      * [Recreate_graphs_using_matplotlib](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Recreate_graphs_using_matplotlib)
+        * [Bar Chart with Error](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Recreate_graphs_using_matplotlib/Bar_Chart_with_Error)
+        * [Labeled Pie Chart](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Recreate_graphs_using_matplotlib/Labeled_Pie_Chart)
+        * [Line with Shaded Error](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Recreate_graphs_using_matplotlib/Line_with_Shaded_Error)
+        * [Side By Side Bars](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Recreate_graphs_using_matplotlib/Side_By_Side_Bars)
+        * [Stacked Bars](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Recreate_graphs_using_matplotlib/Stacked_Bars)
+        * [Two Histograms on a Plot](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Recreate_graphs_using_matplotlib/Two_Histograms_on_a_Plot)
+      * [Roller_Coaster](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Roller_Coaster)
+      * [Sublime Limes' Line Graphs](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Data_Visualization_with_Matplotlib/Sublime_Limes'_Line_Graphs)
+    * [Hypothesis Testing with SciPy](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Hypothesis_Testing_with_SciPy)
+      * [Analyze Farmurgs A_B Test](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Hypothesis_Testing_with_SciPy/Analyze_Farmurgs_A_B_Test)
+      * [Familiar: A Study In Data Analysis](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Hypothesis_Testing_with_SciPy/Familiar_A_Study_In_Data_Analysis)
+      * [FetchMaker](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Hypothesis_Testing_with_SciPy/FetchMaker)
+      * [Sample Size Determination](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Hypothesis_Testing_with_SciPy/Sample_Size_Determination)
+        * [AB Testing at Nosh Mish Mosh](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Hypothesis_Testing_with_SciPy/Sample_Size_Determination/AB_Testing_at_Nosh_Mish_Mosh)
+    * [MuscleHub AB Test](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/MuscleHub_AB_Test)
+      * [Statistics for Data Analysis](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Statistics_for_Data_Analysis)
+        * [Variance and Standard Deviation](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Statistics_for_Data_Analysis/Variance_and_Standard_Deviation)
+          * [Variance in Weather](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Data_with_Python/Statistics_for_Data_Analysis/Variance_and_Standard_Deviation/Variance_in_Weather)
 * ## <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/c%23" target="_blank">C#</a>
   * <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/c%23/console_game" target="_blank">Console Game</a>
 * ## <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/java" target="_blank">Java</a>
