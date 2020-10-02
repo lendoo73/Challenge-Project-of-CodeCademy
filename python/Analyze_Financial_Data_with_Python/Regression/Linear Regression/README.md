@@ -42,8 +42,11 @@ We can scale the size of the step by multiplying the gradient by a learning rate
 * `current_b` is our guess for what the `b` value is, 
 * `b_gradient` is the gradient of the loss curve at our current guess, 
 * `learning_rate` is proportional to the size of the step we want to take
+
 We have to choose a learning rate, which will determine how far down the loss curve we go.<br />
-A **small learning** rate will take a long time to converge — you might run out of time or cycles before getting an answer. A **large learning rate** might skip over the best value. It might never converge! 
+A **small learning** rate will take a long time to converge — you might run out of time or cycles before getting an answer. <br />
+A **large learning rate** might skip over the best value. It might never converge!<br />
+You just have to find a learning rate large enough that gradient descent converges with the efficiency you need, and not so large that convergence never happens.
 ## [Convergence](https://www.codecademy.com/paths/finance-python/tracks/regression-for-finance/modules/linear-regression-python-finance/lessons/linear-regression/exercises/convergence)
 How do we know when we should stop changing the parameters m and b?<br />
 we have to define convergence. Convergence is when the loss stops changing (or changes very slowly) when parameters are changed.
