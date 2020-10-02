@@ -30,3 +30,7 @@ As we try to minimize loss, we take each parameter we are changing, and move it 
 The process by which we do this is called gradient descent. We move in the direction that decreases our loss the most. Gradient refers to the slope of the curve at any point.<br />
 To find the gradient of loss as intercept changes, the formula comes out to be:<br />
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{2}{N}\sum_{i=1}^{N}-(y_{i}-(mx_{i}&plus;b))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{2}{N}\sum_{i=1}^{N}-(y_{i}-(mx_{i}&plus;b))" title="\frac{2}{N}\sum_{i=1}^{N}-(y_{i}-(mx_{i}+b))" /></a>
+* `N` is the number of points we have in our dataset
+* `m` is the current gradient guess
+* `b` is the current intercept guess
+## Gradient Descent for Slope
