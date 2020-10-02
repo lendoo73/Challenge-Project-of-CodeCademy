@@ -24,3 +24,5 @@ In this example:
 
 So the total loss, with this model, is 10. If we found a line that had less loss than 10, that line would be a better model for this data.
 
+The goal of a linear regression model is to find the slope and intercept pair that minimizes loss on average across all of the data.
+
