@@ -36,9 +36,14 @@ To find the gradient of loss as intercept changes, the formula comes out to be:<
 ## [Gradient Descent for Slope](https://www.codecademy.com/paths/finance-python/tracks/regression-for-finance/modules/linear-regression-python-finance/lessons/linear-regression/exercises/gradient-descent-m)
 To find the m gradient, or the way the loss changes as the slope of our line changes, we can use this formula:<br />
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{2}{N}\sum_{i=1}^{N}-x_{i}(y_{i}-(mx_{i}&plus;b))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{2}{N}\sum_{i=1}^{N}-x_{i}(y_{i}-(mx_{i}&plus;b))" title="\frac{2}{N}\sum_{i=1}^{N}-x_{i}(y_{i}-(mx_{i}+b))" /></a>
-## learning rate
+## [learning rate](https://www.codecademy.com/paths/finance-python/tracks/regression-for-finance/modules/linear-regression-python-finance/lessons/linear-regression/exercises/put-together)
 We can scale the size of the step by multiplying the gradient by a learning rate.<br />
 `new_b = current_b - (learning_rate * b_gradient)`
 * `current_b` is our guess for what the `b` value is, 
 * `b_gradient` is the gradient of the loss curve at our current guess, 
 * `learning_rate` is proportional to the size of the step we want to take
+We have to choose a learning rate, which will determine how far down the loss curve we go.<br />
+A **small learning** rate will take a long time to converge — you might run out of time or cycles before getting an answer. A **large learning rate** might skip over the best value. It might never converge! 
+## [Convergence](https://www.codecademy.com/paths/finance-python/tracks/regression-for-finance/modules/linear-regression-python-finance/lessons/linear-regression/exercises/convergence)
+How do we know when we should stop changing the parameters m and b?<br />
+we have to define convergence. Convergence is when the loss stops changing (or changes very slowly) when parameters are changed.
