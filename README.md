@@ -42,7 +42,9 @@ I have created different folders for different programming languages.
       * [Mean Variance Optimization](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Visualizing_Finance_Data/Mean_Variance_Optimization)
       * [Portfolio Optimization](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Visualizing_Finance_Data/Portfolio_Optimization)
       * [Visualizing Tech Stocks](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Visualizing_Finance_Data/Visualizing_Tech_Stocks)
-     * [Capstone project](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Capstone_project)
+    * [Capstone project](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python/Capstone_project)
+  * [Visualize Data with Python](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Visualize_Data_with_Python)
+    * [Bechdel Test](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Visualize_Data_with_Python/Bechdel_Test)
 * ## <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/c%23" target="_blank">C#</a>
   * <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/c%23/console_game" target="_blank">Console Game</a>
 * ## <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/java" target="_blank">Java</a>
