@@ -5,7 +5,7 @@ I have created different folders for different programming languages.
 
 <details><summary>JavaScript</summary>
 <p>
-  [Number Guesser](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/javascript/numberGuesser)
+  <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/javascript/numberGuesser">Number Guesser</a>
 </p>
 </details>
 
