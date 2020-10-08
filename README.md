@@ -3,7 +3,7 @@
 This reposotory includes my own solutions to the programming challenges on the CodeCademy website.
 I have created different folders for different programming languages.
 
-<details><summary>## JavaScript</summary>
+<details><summary> ## JavaScript</summary>
 <p>
   [Number Guesser](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/javascript/numberGuesser)
 </p>
