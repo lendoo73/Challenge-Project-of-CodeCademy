@@ -3,8 +3,8 @@
 This reposotory includes my own solutions to the programming challenges on the CodeCademy website.
 I have created different folders for different programming languages.
 
-<details><summary>## JavaScript </summary>
-  <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/javascript/numberGuesser" target="_blank">Number Guesser</a>
+## <details><summary>JavaScript</summary>
+  [Number Guesser](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/javascript/numberGuesser)
 </details>
 * ## <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python" target="_blank">Python</a>
   * <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/gameOfChance" target="_blank">Games of Chance</a>
