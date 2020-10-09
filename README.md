@@ -51,7 +51,7 @@ I have created different folders for different programming languages.
   <summary>Java</summary>
   <ul>
     <li>
-        <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/java" target="_blank">Magic 8 ball</a>
+        <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/java/magic_8_ball" target="_blank">Magic 8 ball</a>
     </li>
   </ul>
 </details>
