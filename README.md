@@ -43,7 +43,7 @@ I have created different folders for different programming languages.
   <summary>C#</summary>
   <ul>
     <li>
-        <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/c%23" target="_blank">Console game</a>
+        <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/c%23/console_game" target="_blank">Console game</a>
     </li>
   </ul>
 </details>
