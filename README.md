@@ -39,7 +39,19 @@ I have created different folders for different programming languages.
     </li>
   </ul>
 </details>
-<details><summary>C#</summary>
+<details>
+  <summary>C#</summary>
+  <ul>
+    <li>
+        <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/c%23" target="_blank">Console game</a>
+    </li>
+  </ul>
 </details>
-<details><summary>Java</summary>
+<details>
+  <summary>Java</summary>
+  <ul>
+    <li>
+        <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/java" target="_blank">Magic 8 ball</a>
+    </li>
+  </ul>
 </details>
