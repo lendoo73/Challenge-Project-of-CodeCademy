@@ -33,6 +33,11 @@ I have created different folders for different programming languages.
         <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python">Analyze Financial Data with Python</a>
     </li>
   </ul>
+  <ul>
+    <li>
+        <a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Visualize_Data_with_Python">Visualize Data with Python</a>
+    </li>
+  </ul>
 </details>
 <details><summary>C#</summary>
 </details>
