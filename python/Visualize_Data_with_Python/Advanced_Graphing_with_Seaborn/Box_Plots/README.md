@@ -11,9 +11,9 @@ Let’s examine how we interpret a box plot:
 
 ```
 sns.boxplot(
-    data=df, 
-    x = 'label', 
-    y='value'
+    data=df,      # the dataset we’re plotting, like a DataFrame, list, or an array
+    x = 'label',  # a one-dimensional set of values, like a Series, list, or array
+    y='value'     # a second set of one-dimensional data
 )
 plt.show()
 ```
