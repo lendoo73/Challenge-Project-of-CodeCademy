@@ -8,3 +8,12 @@ Let’s examine how we interpret a box plot:
 * The **diamonds** show outliers
 
 ![Box Plot](https://content.codecademy.com/courses/updated_images/box-plot-white_Updated_1.svg)
+
+```
+sns.boxplot(
+    data=df, 
+    x = 'label', 
+    y='value'
+)
+plt.show()
+```
