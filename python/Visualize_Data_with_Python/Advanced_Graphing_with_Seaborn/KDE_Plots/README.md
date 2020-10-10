@@ -11,8 +11,8 @@ When using a KDE we need to plot each of the original datasets separately:
 
 ```
 sns.kdeplot(dataset1, shade = True)
-sns.kdeplot(dataset2, shade=True)
-sns.kdeplot(dataset3, shade=True)
+sns.kdeplot(dataset2, shade = True)
+sns.kdeplot(dataset3, shade = True)
 plt.legend()
 plt.show()
 ```
