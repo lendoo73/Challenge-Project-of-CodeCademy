@@ -1,1 +1,1 @@
-f
+# [Bar Charts Hide Information](https://www.codecademy.com/paths/visualize-data-with-python/tracks/advanced-graphing-in-python/modules/seaborn-dvp/lessons/seaborn-distributions/exercises/bar-charts-hide)
