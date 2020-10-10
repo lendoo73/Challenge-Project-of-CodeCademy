@@ -17,3 +17,5 @@ sns.boxplot(
 )
 plt.show()
 ```
+
+If you use a Pandas Series for the x and y values, the Series will also generate the axis labels. 
