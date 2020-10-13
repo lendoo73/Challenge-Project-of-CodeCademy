@@ -8,4 +8,4 @@ During this project, you will analyze, prepare, and plot data. Your visualizatio
 
 After you complete your visualizations, you’ll be creating a presentation to share the images with the rest of the Netflix Stock Profile team.
 
-Link to [Stock profile of Netflix (2017)]()
+Link to [Stock profile of Netflix (2017)](https://docs.google.com/presentation/d/1fGC8ieUS_s3ADgGhXgPuboqZEfR1PaetgcokC_q0QIA/edit#slide=id.p)
