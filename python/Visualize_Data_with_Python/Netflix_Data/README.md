@@ -7,3 +7,5 @@ In finance, a stock profile is a series of studies, visualizations, and analyses
 During this project, you will analyze, prepare, and plot data. Your visualizations will help the financial analysts asses the risk of the Netflix stock.
 
 After you complete your visualizations, you’ll be creating a presentation to share the images with the rest of the Netflix Stock Profile team.
+
+Link to [Stock profile of Netflix (2017)]()
