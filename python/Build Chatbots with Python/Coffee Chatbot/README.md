@@ -1,4 +1,4 @@
-[Coffee Chatbot](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/introduction-to-python-and-chatbots/modules/chatbot-evolution-and-dialog-trees/projects/coffee-chatbot)
+# [Coffee Chatbot](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/introduction-to-python-and-chatbots/modules/chatbot-evolution-and-dialog-trees/projects/coffee-chatbot)
 But first, coffee.
 
 Whether it’s to get us ready to jump-start our day or to get us through a late-night cram session, many of us need our regular caffeine fix! Ordering coffee is just one example of a process that can be automated with the help of a chatbot.
