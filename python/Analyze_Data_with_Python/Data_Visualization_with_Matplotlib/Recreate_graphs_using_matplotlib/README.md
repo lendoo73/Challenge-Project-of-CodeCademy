@@ -1,2 +1,2 @@
 # [Matplotlib Cheatsheet](https://content.codecademy.com/courses/matplotlib/data_vis_matplotlib_cheatsheet_v1_revisons.pdf)
-![](https://content.codecademy.com/courses/matplotlib/data_vis_matplotlib_cheatsheet_v1_revisons.pdf)
+![chaet](https://content.codecademy.com/courses/matplotlib/data_vis_matplotlib_cheatsheet_v1_revisons.pdf)
