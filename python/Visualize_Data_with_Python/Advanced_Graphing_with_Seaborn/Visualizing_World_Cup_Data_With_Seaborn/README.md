@@ -1,7 +1,7 @@
 #### Advanced Graphing with Seaborn
 # [Visualizing World Cup Data With Seaborn](https://www.codecademy.com/paths/visualize-data-with-python/tracks/advanced-graphing-in-python/modules/seaborn-dvp/projects/world-cup-viz)
 
-[Link to Repl](repl.it/@lendoo73/VisualizingWorldCupDataWithSeaborn)
+[Link to Repl](https://repl.it/@lendoo73/VisualizingWorldCupDataWithSeaborn#README.md)
 
 For this project you will be exploring data from the [Fifa World Cup](https://en.wikipedia.org/wiki/FIFA_World_Cup) from 1930-2014 to analyze trends and discover insights about the world’s game, fútbol!
 
