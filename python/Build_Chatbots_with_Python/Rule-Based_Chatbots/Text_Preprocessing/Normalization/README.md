@@ -74,3 +74,10 @@ print(lemmatized)
 # ["NBC", "wa", "founded", "in", "1926"]
 ```
 The result, saved to lemmatized contains 'wa', because lemmatize() treats every word as a noun. To take advantage of the power of lemmatization, we need to tag each word in our text with the most likely part of speech. 
+
+## Part-of-Speech Tagging
+To improve the performance of lemmatization, we need to find the part of speech for each word in our string.
+
+`get_part_of_speech()`: The function accepts a word, then returns the most common part of speech for that word.
+
+1. ### Import wordnet and Counter:
