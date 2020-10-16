@@ -31,3 +31,23 @@ print(statement_no_stop)
 # ['NBC', 'founded', '1926', 'making', 'oldest', 'major', 'broadcast', 'network', 'USA']
 ```
 We first tokenized our string, nbc_statement, then used a list comprehension to return a list with all of the stopwords removed.
+
+## Stemming
+Stemming is the text preprocessing normalization task concerned with bluntly removing word affixes (prefixes and suffixes).
+For example, stemming would cast the word “going” to “go”. This is a common method used by search engines to improve matching between user input and website hits.
+
+NLTK has a built-in stemmer called PorterStemmer. You can use it with a list comprehension to stem each word in a tokenized list of words.
+```
+# import stemmer:
+from nltk.stem import PorterStemmer
+
+# initialize the stemmer:
+stemmer = PorterStemmer()
+
+tokenized = ['NBC', 'was', 'founded', 'in', '1926', '.', 'This', 'makes', 'NBC', 'the', 'oldest', 'major', 'broadcast', 'network', '.']
+
+stemmed = [stemmer.stem(token) for token in tokenized]
+
+print(stemmed)
+# ['nbc', 'wa', 'found', 'in', '1926', '.', 'thi', 'make', 'nbc', 'the', 'oldest', 'major', 'broadcast', 'network', '.']
+```
