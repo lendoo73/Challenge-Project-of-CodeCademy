@@ -107,6 +107,7 @@ Now that we have a count for each part of speech, we can use the .most_common() 
 most_likely_part_of_speech = pos_counts.most_common(1)[0][0]
 ```
 <hr />
+
 Now that we can find the most probable part of speech for a given word, we can pass this into our lemmatizer when we find the root for each word.
 ```
 tokenized = ["How", "old", "is", "the", "country", "Indonesia"]
