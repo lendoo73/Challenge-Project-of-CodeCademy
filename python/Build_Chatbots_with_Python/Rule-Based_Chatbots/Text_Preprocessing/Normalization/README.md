@@ -1,5 +1,5 @@
 #### TEXT PREPROCESSING
-# Normalization
+# [Normalization](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-text-preprocessing/lessons/text-preprocessing/exercises/normalization)
 Some data may require further processing through text normalization. Text ***normalization*** is a catch-all term for various text pre-processing tasks.
 Example:
 * Upper or lowercasing: `my_string.upper()`, `my_string.lower()`
@@ -7,7 +7,7 @@ Example:
 * Stemming – bluntly removing prefixes and suffixes from a word
 * Lemmatization – replacing a single-word token with its root
 
-## Stopword Removal
+## [Stopword Removal](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-text-preprocessing/lessons/text-preprocessing/exercises/stopword-removal)
 Stopwords are words that we remove during preprocessing when we don’t care about sentence structure. They are usually the most common words in a language and don’t provide any information about the tone of a statement.
 
 They include words such as “a”, “an”, and “the”.
@@ -32,7 +32,7 @@ print(statement_no_stop)
 ```
 We first tokenized our string, nbc_statement, then used a list comprehension to return a list with all of the stopwords removed.
 
-## Stemming
+## [Stemming](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-text-preprocessing/lessons/text-preprocessing/exercises/stemming)
 Stemming is the text preprocessing normalization task concerned with bluntly removing word affixes (prefixes and suffixes).
 For example, stemming would cast the word “going” to “go”. This is a common method used by search engines to improve matching between user input and website hits.
 
@@ -53,3 +53,24 @@ print(stemmed)
 ```
 The words like ‘was’ and ‘founded’ became ‘wa’ and ‘found’.
 Words can often be converted to something unrecognizable.
+## [Lemmatization](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-text-preprocessing/lessons/text-preprocessing/exercises/lemmatization)
+*Lemmatization* is a method for casting words to their root forms.
+
+This is a more involved process than stemming, because it requires the method to know the part-of-speech for each word. Since lemmatization requires the part of speech, it is a less efficient approach than stemming.
+
+We can use NLTK’s WordNetLemmatizer to lemmatize text:
+```
+from nltk.stem import WordNetLemmatizer
+
+lemmatizer = WordNetLemmatizer()
+```
+Once we have the lemmatizer initialized, we can use a list comprehension to apply the lemmatize operation to each word in a list:
+```
+tokenized = ["NBC", "was", "founded", "in", "1926"]
+
+lemmatized = [lemmatizer.lemmatize(token) for token in tokenized]
+
+print(lemmatized)
+# ["NBC", "wa", "founded", "in", "1926"]
+```
+The result, saved to lemmatized contains 'wa', because lemmatize() treats every word as a noun. To take advantage of the power of lemmatization, we need to tag each word in our text with the most likely part of speech. 
