@@ -1,4 +1,5 @@
 #### TEXT PREPROCESSING
+
 # [Tokenization](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-text-preprocessing/lessons/text-preprocessing/exercises/tokenization)
 For many natural language processing tasks, we need access to each word in a string. To access each word, we first have to break the text into smaller components. The method for breaking text into smaller components is called ***tokenization*** and the individual components are called tokens.
 
