@@ -1,3 +1,4 @@
+#### TEXT PREPROCESSING
 # Noise Removal
 Depending on the goal of your project and where you get your data from, you may want to remove unwanted information, such as:
 * punctuation and accents
