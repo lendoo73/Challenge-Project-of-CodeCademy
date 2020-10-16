@@ -81,3 +81,30 @@ To improve the performance of lemmatization, we need to find the part of speech 
 `get_part_of_speech()`: The function accepts a word, then returns the most common part of speech for that word.
 
 ### 1. Import wordnet and Counter:
+```
+from nltk.corpus import wordnet
+from collections import Counter
+```
+* `wordnet` is a database that we use for contextualizing words
+* `Counter` is a container that stores elements as dictionary keys
+
+### 2. Get synonyms:
+`wordnet.synsets()` returns a set of synonyms for the word:
+```
+probable_part_of_speech = wordnet.synsets(word)
+```
+The returned synonyms come with their part of speech.
+### 3. Use synonyms to determine the most likely part of speech:
+Next, we create a Counter() object and set each value to the count of the number of synonyms that fall into each part of speech:
+```
+pos_counts["n"] = len(  [ item for item in probable_part_of_speech if item.pos()=="n"]  )
+... 
+```
+This line counts the number of nouns in the synonym set.
+### 4. Return the most common part of speech:
+Now that we have a count for each part of speech, we can use the .most_common() counter method to find and return the most likely part of speech:
+```
+most_likely_part_of_speech = pos_counts.most_common(1)[0][0]
+```
+<hr />
+Now that we can find the most probable part of speech for a given word, we can pass this into our lemmatizer when we find the root for each word.
