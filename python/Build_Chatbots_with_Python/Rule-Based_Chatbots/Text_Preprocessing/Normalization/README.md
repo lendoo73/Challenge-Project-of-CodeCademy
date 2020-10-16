@@ -75,9 +75,9 @@ print(lemmatized)
 ```
 The result, saved to lemmatized contains 'wa', because lemmatize() treats every word as a noun. To take advantage of the power of lemmatization, we need to tag each word in our text with the most likely part of speech. 
 
-## Part-of-Speech Tagging
+## [Part-of-Speech Tagging](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-text-preprocessing/lessons/text-preprocessing/exercises/part-of-speech-tagging)
 To improve the performance of lemmatization, we need to find the part of speech for each word in our string.
 
 `get_part_of_speech()`: The function accepts a word, then returns the most common part of speech for that word.
 
-1. ### Import wordnet and Counter:
+### 1. Import wordnet and Counter:
