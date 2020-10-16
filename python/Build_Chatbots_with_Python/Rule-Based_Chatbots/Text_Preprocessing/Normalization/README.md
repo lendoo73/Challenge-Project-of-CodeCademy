@@ -51,3 +51,5 @@ stemmed = [stemmer.stem(token) for token in tokenized]
 print(stemmed)
 # ['nbc', 'wa', 'found', 'in', '1926', '.', 'thi', 'make', 'nbc', 'the', 'oldest', 'major', 'broadcast', 'network', '.']
 ```
+The words like ‘was’ and ‘founded’ became ‘wa’ and ‘found’.
+Words can often be converted to something unrecognizable.
