@@ -19,13 +19,19 @@ The chunk grammar to find the first form of verb phrase:
 chunk_grammar = "VP: {<VB.*><DT>?<JJ>*<NN><RB.?>?}"
 ```
 * `VP`: the user-defined name of the chunk you are searching for. In this case VP stands for verb phrase
-* `<VB.*>` matches any verb using the `.` as a wildcard and the `*` quantifier to match 0 or more occurrences of any character.<br />
+* `<VB.*>`: matches any verb using the `.` as a wildcard and the `*` quantifier to match 0 or more occurrences of any character.<br />
 `VB`	Verb, base form	<br />
 `VBD`	Verb, past tense	<br />
 `VBG`	Verb, gerund or present participle	<br />
 `VBN`	Verb, past participle	<br />
 `VBP`	Verb, non-3rd person singular present	<br />
 `VBZ`	Verb, 3rd person singular present
+* `<DT>?<JJ>*<NN>`: matches any noun phrase
+* `<RB.?>`: matches any adverb using the `.` as a wildcard and the optional quantifier to match 0 or 1 occurrence of any character.<br />
+`RB`	Adverb<br />
+`RBR`	Adverb, comparative<br />
+`RBS`	Adverb, superlative
+* `?`: an optional quantifier, matching either 0 or 1 adverbs
 2. The second structure switches the order of the verb and the noun phrase, but also ends with an optional adverb.
 ```
 (
@@ -34,4 +40,8 @@ chunk_grammar = "VP: {<VB.*><DT>?<JJ>*<NN><RB.?>?}"
   ('lion', 'NN'),
   ('said', 'VBD')
 )
+```
+The chunk grammar for the second form of verb phrase:
+```
+chunk_grammar = "VP: {<DT>?<JJ>*<NN><VB.*><RB.?>?}"
 ```
