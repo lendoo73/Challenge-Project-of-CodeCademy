@@ -24,6 +24,19 @@ word_sentence = ['do', 'you', 'suppose', 'oz', 'could', 'give', 'me', 'a', 'hear
 
 part_of_speech_tagged_sentence = pos_tag(word_sentence)
 ```
+Abbreviations are given instead of the full part of speech name.
 ```
-[('do', 'VB'), ('you', 'PRP'), ('suppose', 'VB'), ('oz', 'NNS'), ('could', 'MD'), ('give', 'VB'), ('me', 'PRP'), ('a', 'DT'), ('heart', 'NN'), ('?', '.')]
+[
+('do', 'VB'), 
+('you', 'PRP'), 
+('suppose', 'VB'), 
+('oz', 'NNS'), 
+('could', 'MD'), 
+('give', 'VB'), 
+('me', 'PRP'), 
+('a', 'DT'), 
+('heart', 'NN'), 
+('?', '.')
+]
 ```
+A complete list of part-of-speech tags and their abbreviations can be found [here](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html).
