@@ -12,3 +12,18 @@
 | **Preposition** | a word placed before a noun or pronoun to form a phrase modifying another word in the sentence | to, at, after, on, but | We went **to** work **on** Friday. |
 | **Conjunction** | a word that joins words, phrases, clauses, or sentences | and, but, when | I like tigers **and** I like lions. I like lions **and** tigers. I like tigers **but** I don't like lions. |
 | **Interjection** | a short exclamation, inserted into a sentence to express emotion | oh!, ouch!, hi!, well | **Ouch**! That hurts! **Hi**! How are you? **Well**, I don't know. |
+
+Automate the part-of-speech tagging process with `nltk`‘s `pos_tag()` function:
+* the function takes one argument, a list of words in the order they appear in a sentence,
+* returns a list of tuples, where the first entry in the tuple is a word and the second is the part-of-speech tag.
+
+```
+from nltk import pos_tag
+
+word_sentence = ['do', 'you', 'suppose', 'oz', 'could', 'give', 'me', 'a', 'heart', '?']
+
+part_of_speech_tagged_sentence = pos_tag(word_sentence)
+```
+```
+[('do', 'VB'), ('you', 'PRP'), ('suppose', 'VB'), ('oz', 'NNS'), ('could', 'MD'), ('give', 'VB'), ('me', 'PRP'), ('a', 'DT'), ('heart', 'NN'), ('?', '.')]
+```
