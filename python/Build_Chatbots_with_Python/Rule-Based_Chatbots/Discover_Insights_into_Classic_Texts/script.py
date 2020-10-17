@@ -6,6 +6,7 @@ from chunk_counters import np_chunk_counter, vp_chunk_counter
 text = open(
   "dorian_gray.txt",
   #"the_iliad.txt",
+  #"my_text.txt",
   encoding = 'utf-8'
 ).read().lower()
 
