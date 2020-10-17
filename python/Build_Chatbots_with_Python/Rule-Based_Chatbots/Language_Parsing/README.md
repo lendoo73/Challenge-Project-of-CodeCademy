@@ -1,5 +1,5 @@
 #### NATURAL LANGUAGE PARSING WITH REGULAR EXPRESSIONS
-## [Part-of-Speech Tagging](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-language-parsing/lessons/nlp-regex-parsing-intro/exercises/pos-tagging)
+# [Part-of-Speech Tagging](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-language-parsing/lessons/nlp-regex-parsing-intro/exercises/pos-tagging)
 
 | Part of speech | Function or "job" | Example words | Example sentences |
 | --- | --- | --- | --- |
