@@ -1,5 +1,5 @@
 #### NATURAL LANGUAGE PARSING WITH REGULAR EXPRESSIONS
-# [Part-of-Speech Tagging](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-language-parsing/lessons/nlp-regex-parsing-intro/exercises/pos-tagging)
+## [Part-of-Speech Tagging](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-language-parsing/lessons/nlp-regex-parsing-intro/exercises/pos-tagging)
 
 | Part of speech | Function or "job" | Example words | Example sentences |
 | --- | --- | --- | --- |
@@ -27,16 +27,49 @@ part_of_speech_tagged_sentence = pos_tag(word_sentence)
 Abbreviations are given instead of the full part of speech name.
 ```
 [
-('do', 'VB'), 
-('you', 'PRP'), 
+('do', 'VB'),                   # Verb, base form
+('you', 'PRP'),                 # Personal pronoun 
 ('suppose', 'VB'), 
-('oz', 'NNS'), 
-('could', 'MD'), 
+('oz', 'NNS'),                  # Noun, plural
+('could', 'MD'),                # Modal
 ('give', 'VB'), 
 ('me', 'PRP'), 
-('a', 'DT'), 
-('heart', 'NN'), 
+('a', 'DT'),                    # Determiner
+('heart', 'NN'),                # Noun, singular or mass 
 ('?', '.')
 ]
 ```
 A complete list of part-of-speech tags and their abbreviations can be found [here](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html).
+## Chunking
+Given your part-of-speech tagged text, you can now use regular expressions to find patterns in sentence structure that give insight into the meaning of a text. This technique of grouping words by their part-of-speech tag is called ***chunking***.
+
+With chunking in nltk, you can define a pattern of parts-of-speech tags using a modified notation of regular expressions. You can then find non-overlapping matches, or chunks of words, in the part-of-speech tagged sentences of a text.
+
+##### chunk grammar
+The regular expression you build to find chunks is called ***chunk grammar***.
+```
+chunk_grammar = "AN: {<JJ><NN>}"        # will match any adjective that is followed by a noun.
+```
+* `AN` is a user-defined name for the kind of chunk you are searching for. In this case AN stands for adjective-noun
+* `{}` surround the actual chunk grammar
+* `<JJ>` operates similarly to a regex character class, matching any adjective
+* `<NN>` matches any noun, singular or plural
+
+##### `nltk RegexpParser` object
+To use the chunk grammar defined, you must create a nltk RegexpParser object and give it a piece of chunk grammar as an argument.
+```
+chunk_parser = RegexpParser(chunk_grammar)
+```
+You can then use the `RegexpParser` object’s `.parse()` method, which takes a list of part-of-speech tagged words as an argument, and identifies where such chunks occur in the sentence!
+```
+pos_tagged_sentence = [
+  ('where', 'WRB'), 
+  ('is', 'VBZ'), 
+  ('the', 'DT'), 
+  ('emerald', 'JJ'), 
+  ('city', 'NN'), 
+  ('?', '.')
+]
+
+chunked = chunk_parser.parse(pos_tagged_sentence)
+```
