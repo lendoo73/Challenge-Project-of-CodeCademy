@@ -1,5 +1,5 @@
 #### NATURAL LANGUAGE PARSING WITH REGULAR EXPRESSIONS
-# [Chunking Verb Phrases](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-language-parsing/lessons/nlp-regex-parsing-intro/exercises/chunking-verb-phrases
+# [Chunking Verb Phrases](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/rule-based-chatbots/modules/nlp-language-parsing/lessons/nlp-regex-parsing-intro/exercises/chunking-verb-phrases)
 Another popular type of chunking is VP-chunking, or ***verb phrase chunking***.
 
 A verb phrase is a phrase that contains a verb and its complements, objects, or modifiers.
