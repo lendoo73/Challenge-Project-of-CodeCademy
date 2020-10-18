@@ -15,3 +15,8 @@ Using this dictionary, we can convert new documents into vectors using a vectori
 ## BoW Vector
 n Python, we can use a list to represent a vector. Each index in the list will correspond to a word and be set to its count.
 
+`text_to_bow_vector()`
+* **parameters:** `some_text`: the document we pass in to vectorize; `features_dictionary`: the dictionary of vocabulary we generated with the `create_features_dictionary()`
+* **return**: `bow_vector` 
+
+
