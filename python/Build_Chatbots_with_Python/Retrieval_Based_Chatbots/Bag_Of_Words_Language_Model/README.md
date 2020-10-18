@@ -4,7 +4,7 @@ The model has many, many use cases including:
 * finding out if a tweet has positive or negative sentiment
 * creating word clouds
 
-# Bag-of-words (BoW)
+# [Bag-of-words (BoW)](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/retrieval-based-chatbots/modules/language-and-topic-modeling-chatbots/lessons/language-model-bag-of-words/exercises/what-is-bag-of-words)
 Bag-of-words (BoW) is a statistical language model based on word count.
 
 ## Statistical language model
