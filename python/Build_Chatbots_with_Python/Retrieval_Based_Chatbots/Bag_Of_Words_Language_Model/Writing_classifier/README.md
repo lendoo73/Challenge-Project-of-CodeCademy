@@ -9,4 +9,4 @@ But which one sent you the card?
 
 You can classify writing as related to one friend or another by building a kind of friend writing classifier. You have past writing from all three friends stored up in the variable friends_docs, which means you can use scikit-learn’s bag-of-words and Naive Bayes classifier to determine who the mystery friend is!
 
-[Link to GitHub](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Build_Chatbots_with_Python/Retrieval_Based_Chatbots/Bag_Of_Words_Language_Model/Writing_classifier)
+[Link to Repl](https://repl.it/@lendoo73/WritingClassifier#README.md)
