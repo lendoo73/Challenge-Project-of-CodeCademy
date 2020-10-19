@@ -50,6 +50,9 @@ friends_classifier.fit(friends_vectors, friends_labels)
 # 8. Change predictions:
 predictions = friends_classifier.predict(mystery_vector)
 
+predictions_proba = friends_classifier.predict_proba(mystery_vector)
+print(predictions_proba)
+
 mystery_friend = predictions[0] if predictions[0] else "someone else"
 
 # Uncomment the print statement:
