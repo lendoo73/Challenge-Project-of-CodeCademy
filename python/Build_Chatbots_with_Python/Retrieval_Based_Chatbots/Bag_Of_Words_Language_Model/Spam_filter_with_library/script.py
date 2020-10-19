@@ -22,4 +22,10 @@ spam_classifier.fit(training_vectors, training_labels)
 
 predictions = spam_classifier.score(test_vectors, test_labels)
 
-print("The predictions for the test data were {0}% accurate.\n\nFor example, '{1}' was classified as {2}.\n\nMeanwhile, '{3}' was classified as {4}.".format(predictions * 100, test_docs[7], spam_or_not(test_labels[7]), test_docs[15], spam_or_not(test_labels[15])))
+print("The predictions for the test data were {0}% accurate.\n\nFor example, '{1}' was classified as {2}.\n\nMeanwhile, '{3}' was classified as {4}.".format(
+  predictions * 100, 
+  test_docs[7], 
+  spam_or_not(test_labels[7]), 
+  test_docs[15], 
+  spam_or_not(test_labels[15])
+))
