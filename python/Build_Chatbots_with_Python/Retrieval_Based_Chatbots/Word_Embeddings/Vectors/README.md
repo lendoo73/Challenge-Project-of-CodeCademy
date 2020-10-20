@@ -13,4 +13,4 @@ Say we want to represent the length of a word with a vector. We can do so as fol
 "scrabble" ----> [8]
 "antidisestablishmentarianism" ----> [28]
 ```
-![one dimensional vector](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/blob/master/python/Build_Chatbots_with_Python/Retrieval_Based_Chatbots/Word_Embeddings/Vectors/vectors-one-dimension.webp =100x20)
+![one dimensional vector](vectors-one-dimension.webp)
