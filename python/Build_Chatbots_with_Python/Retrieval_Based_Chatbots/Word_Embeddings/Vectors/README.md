@@ -13,7 +13,6 @@ Say we want to represent the length of a word with a vector. We can do so as fol
 "scrabble" ----> [8]
 "antidisestablishmentarianism" ----> [28]
 ```
-
 <img alt="one dimensional vector" src="vectors-one-dimension.webp" width="600" height="300" />
 
 ## 2-dimensional vector
@@ -24,4 +23,5 @@ Now let’s say we also want to record the number of vowels in our words, in add
 "antidisestablishmentarianism" ----> [28, 11]
 ```
 The x-axis is the number of letters, and the y-axis is the number of vowels.
+
 <img alt="two dimensional vector" src="vectors-two-dimensions.webp" width="400" height="400" />
