@@ -8,5 +8,5 @@ tf-idf would deprioritize these sorts of common words.
 
 ## Calculate inverse document frequency
 
-![Calculate inverse document frequency](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/blob/master/python/Build_Chatbots_with_Python/Retrieval_Based_Chatbots/Term_frequency_inverse_document_frequency/Inverse_document_frequency/calculate_inverse_document_frequency.jpg)
+![Calculate inverse document frequency](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/blob/master/python/Build_Chatbots_with_Python/Retrieval_Based_Chatbots/Term_frequency_inverse_document_frequency/Inverse_document_frequency/calculate_inverse_document_frequency.jpg?row=true)
 The important take away from the equation is that as the number of documents with the term t increases, the inverse document frequency decreases (due to the nature of the log function).
