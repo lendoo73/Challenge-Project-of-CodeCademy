@@ -25,3 +25,11 @@ Now let’s say we also want to record the number of vowels in our words, in add
 The x-axis is the number of letters, and the y-axis is the number of vowels.
 
 <img alt="two dimensional vector" src="vectors-two-dimensions.webp" width="400" height="400" />
+## Any number of dimensions
+We are able to have vectors in any number of dimensions. Even 1,000!
+
+Vectors help us summarize information about an object using numbers. Then, using the number representation, we can make comparisons between the vector representations of different objects!
+
+This idea is central to how word embeddings map words into vectors.
+
+We can easily represent vectors in Python using NumPy arrays. 
