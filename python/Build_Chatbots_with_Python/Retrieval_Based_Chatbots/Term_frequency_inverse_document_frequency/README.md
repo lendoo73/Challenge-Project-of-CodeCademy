@@ -1,4 +1,4 @@
-# Term frequency-inverse document frequency
+# [Term frequency-inverse document frequency](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/retrieval-based-chatbots/modules/language-and-topic-modeling-chatbots/lessons/language-model-tf-idf/exercises/what-is-tfidf)
 Term frequency-inverse document frequency is a numerical statistic used to indicate how important a word is to each document in a collection of documents, or a corpus.
 
 When applying tf-idf to a corpus, each word is given a tf-idf score for each document, representing the relevance of that word to the particular document.
