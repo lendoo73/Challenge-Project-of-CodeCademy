@@ -13,4 +13,4 @@ Say we want to represent the length of a word with a vector. We can do so as fol
 "scrabble" ----> [8]
 "antidisestablishmentarianism" ----> [28]
 ```
-<img alt="one dimensional vector" src="vectors-one-dimension.webp" width="400" height="200" />
+<img alt="one dimensional vector" src="vectors-one-dimension.webp" width="600" height="300" />
