@@ -4,4 +4,6 @@ Newspapers and their online formats supply the public with the information we ne
 
 Given the vast amount of news articles in circulation, identifying and organizing articles by topic is a useful activity. This can help you sift through the enormous amount of information out there so you can find the news relevant to your interests, or even allow you to build a news recommendation engine!
 
-The News International is the largest English language newspaper in Pakistan, covering local and international news across a variety of sectors. A selection of articles from a Kaggle Dataset of The News International articles is provided in the workspace.
+[The News International](https://www.thenews.com.pk) 
+is the largest English language newspaper in Pakistan, covering local and international news across a variety of sectors. A selection of articles from a [Kaggle Dataset of The News International articles](https://www.kaggle.com/asad1m9a9h6mood/news-articles)
+is provided in the workspace.
