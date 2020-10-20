@@ -1,0 +1,10 @@
+#### TERM FREQUENCY–INVERSE DOCUMENT FREQUENCY
+# [Inverse Document Frequency](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/retrieval-based-chatbots/modules/language-and-topic-modeling-chatbots/lessons/language-model-tf-idf/exercises/inverse-document-frequency)
+The inverse document frequency component of the tf-idf score penalizes terms that appear more frequently across a corpus.
+The intuition is that words that appear more frequently in the corpus give less insight into the topic or meaning of an individual document, and should thus be deprioritized.
+
+For example, terms like “the” or “go” are used all over the place, so in a bag-of-words model, they would be given priority even though they don’t provide much meaning; 
+tf-idf would deprioritize these sorts of common words.
+
+## Calculate inverse document frequency
+<a href="https://www.codecogs.com/eqnedit.php?latex=log(\frac{Total&space;number&space;of&space;documents}{Number&space;of&space;documents&space;with&space;term&space;t})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(\frac{Total&space;number&space;of&space;documents}{Number&space;of&space;documents&space;with&space;term&space;t})" title="log(\frac{Total number of documents}{Number of documents with term t})" /></a>
