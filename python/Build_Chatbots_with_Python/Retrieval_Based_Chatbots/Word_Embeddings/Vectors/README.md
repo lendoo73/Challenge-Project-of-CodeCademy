@@ -23,4 +23,4 @@ Now let’s say we also want to record the number of vowels in our words, in add
 "antidisestablishmentarianism" ----> [28, 11]
 ```
 The x-axis is the number of letters, and the y-axis is the number of vowels.
-<img alt="one dimensional vector" src="vectors-one-dimension.webp" width="600" height="300" />
+<img alt="one dimensional vector" src="vectors-two-dimensions.webp" width="300" height="300" />
