@@ -9,4 +9,4 @@ tf-idf would deprioritize these sorts of common words.
 ## Calculate inverse document frequency
 <a href="https://www.codecogs.com/eqnedit.php?latex=log(\frac{Total&space;number&space;of&space;documents}{Number&space;of&space;documents&space;with&space;term&space;t})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(\frac{Total&space;number&space;of&space;documents}{Number&space;of&space;documents&space;with&space;term&space;t})" title="log(\frac{Total number of documents}{Number of documents with term t})" /></a>
 
-![Calculate inverse document frequency](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Calculate inverse document frequency](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/blob/master/python/Build_Chatbots_with_Python/Retrieval_Based_Chatbots/Term_frequency_inverse_document_frequency/Inverse_document_frequency/calculate_inverse_document_frequency.jpg?raw=true)
