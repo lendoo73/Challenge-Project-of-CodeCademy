@@ -12,5 +12,10 @@ Tf-idf relies on two different metrics in order to come up with an overall score
 * ***term frequency***: how often a word appears in a document. This is the same as bag-of-words’ word count.
 * ***inverse document frequency***: a measure of how often a word appears in the overall corpus.
 
-tf-idf can give better insight into how important a word is to a particular document of a corpus.
+Tf-idf can give better insight into how important a word is to a particular document of a corpus.
+## [Calculate tf-idf](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/retrieval-based-chatbots/modules/language-and-topic-modeling-chatbots/lessons/language-model-tf-idf/exercises/term-frequency-inverse-document-frequency)
+Tf-idf scores are calculated on a term-document basis. there is a tf-idf score for each word, for each document.
+
+The tf-idf score for some term t in a document d in some corpus is calculated as follows:
+#### **tfidf(t,d)=tf(t,d)∗idf(t,corpus)**
  
