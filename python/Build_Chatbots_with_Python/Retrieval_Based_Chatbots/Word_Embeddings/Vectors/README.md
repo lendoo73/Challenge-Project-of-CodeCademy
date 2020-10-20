@@ -25,6 +25,7 @@ Now let’s say we also want to record the number of vowels in our words, in add
 The x-axis is the number of letters, and the y-axis is the number of vowels.
 
 <img alt="two dimensional vector" src="vectors-two-dimensions.webp" width="600" height="400" />
+
 ## Any number of dimensions
 We are able to have vectors in any number of dimensions. Even 1,000!
 
