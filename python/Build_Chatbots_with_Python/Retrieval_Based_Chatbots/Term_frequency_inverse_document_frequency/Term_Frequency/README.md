@@ -13,6 +13,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 # A CountVectorizer object is initialized:
 vectorizer = CountVectorizer()
 
-# The CountVectorizer object is fit (trained) and transformed (applied) on the corpus of data, returning the term frequencies for each term-document pair
+# The CountVectorizer object is fit (trained) and transformed (applied) on the corpus of data, 
+# returning the term frequencies for each term-document pair:
 term_frequencies = vectorizer.fit_transform(corpus_of_data)
 ```
