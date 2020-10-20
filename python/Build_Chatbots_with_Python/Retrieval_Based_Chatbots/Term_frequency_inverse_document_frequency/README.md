@@ -16,4 +16,6 @@ tf-idf can give better insight into how important a word is to a particular docu
 
 ## Calculate inverse document frequency
 <a href="https://www.codecogs.com/eqnedit.php?latex=log(\frac{Total&space;number&space;of&space;documents}{Number&space;of&space;documents&space;with&space;term&space;t})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(\frac{Total&space;number&space;of&space;documents}{Number&space;of&space;documents&space;with&space;term&space;t})" title="log(\frac{Total number of documents}{Number of documents with term t})" /></a>
+
+![Calculate inverse document frequency](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
  
