@@ -17,5 +17,5 @@ Tf-idf can give better insight into how important a word is to a particular docu
 Tf-idf scores are calculated on a term-document basis. there is a tf-idf score for each word, for each document.
 
 The tf-idf score for some term t in a document d in some corpus is calculated as follows:
-#### **tfidf(t,d)=tf(t,d)∗idf(t,corpus)**
+### *tfidf(t, d) = tf(t, d) ∗ idf(t, corpus)*
  
