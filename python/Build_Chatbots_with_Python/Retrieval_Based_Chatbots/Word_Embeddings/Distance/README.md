@@ -33,3 +33,5 @@ Cosine distance is concerned with the angle between two vectors, rather than by 
 Two vectors that point in the same direction have no angle between them, and have a cosine distance of `0`.
 
 Two vectors that point in opposite directions have a cosine distance of `1`.
+
+For the mathematically adventurous, [you can read up on the calculation here](https://en.wikipedia.org/wiki/Cosine_similarity#Definition).
