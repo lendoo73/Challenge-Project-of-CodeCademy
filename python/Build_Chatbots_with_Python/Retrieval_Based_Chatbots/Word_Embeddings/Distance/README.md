@@ -7,3 +7,11 @@ There are a variety of ways to find the distance between vectors.
 Defined as the sum of the differences across each individual dimension of the vectors.
 
 ![manhattan formula](manhattan_formula.jpg)
+
+manhattan distance between x, y three-dimenzional vector:
+
+vector x = [1, 2, 3]
+
+vector y = [2, 4, 6]
+
+manhattan distance = |1 - 2| + |2 - 4| + |3 - 6| = 1 + 2 + 3 = 6
