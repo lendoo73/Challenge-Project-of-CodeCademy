@@ -19,6 +19,9 @@ manhattan distance = |1 - 2| + |2 - 4| + |3 - 6| = 1 + 2 + 3 = 6
 ## Euclidean distance (straight line distance)
 With this distance metric, we take the square root of the sum of the squares of the differences in each dimension.
 
-#### One dimension
+#### *One* dimension
 *d(x, y) = |x - y|* 
+
+#### *n* dimension
+![eucledian formula](eucledian_formula.jpg)
 
