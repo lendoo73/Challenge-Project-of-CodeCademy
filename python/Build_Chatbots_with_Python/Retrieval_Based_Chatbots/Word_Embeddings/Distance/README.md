@@ -25,3 +25,4 @@ With this distance metric, we take the square root of the sum of the squares of 
 ### *n* dimension
 ![eucledian formula](eucledian_formula.jpg)
 
+![eucledian formula](eucledian_example.jpg)
