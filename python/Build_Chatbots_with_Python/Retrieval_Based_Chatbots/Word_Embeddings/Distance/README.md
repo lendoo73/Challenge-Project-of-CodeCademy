@@ -35,3 +35,22 @@ Two vectors that point in the same direction have no angle between them, and hav
 Two vectors that point in opposite directions have a cosine distance of `1`.
 
 For the mathematically adventurous, [you can read up on the calculation here](https://en.wikipedia.org/wiki/Cosine_similarity#Definition).
+
+# calculate the Manhattan, Euclidean, and cosine distances using SciPy:
+```
+from scipy.spatial.distance import cityblock, euclidean, cosine
+
+vector_a = np.array([1,2,3])
+vector_b = np.array([2,4,6])
+
+# Manhattan distance:
+manhattan_d = cityblock(vector_a,vector_b) # 6
+
+# Euclidean distance:
+euclidean_d = euclidean(vector_a,vector_b) # 3.74
+
+# Cosine distance:
+cosine_d = cosine(vector_a,vector_b) # 0.0
+```
+
+When working with vectors that have a large number of dimensions, such as word embeddings, the distances calculated by Manhattan and Euclidean distance can become rather large. Thus, calculations using cosine distance are preferred!
