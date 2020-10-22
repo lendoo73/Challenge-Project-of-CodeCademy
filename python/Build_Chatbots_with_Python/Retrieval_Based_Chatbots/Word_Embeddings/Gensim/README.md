@@ -29,3 +29,16 @@ vocabulary_of_model = list(model.wv.vocab.items())
 When we train a word2vec model on a smaller corpus of text, we pick up on the unique ways in which words of the text are used.
 
 For example, if we were using scripts from the television show Friends as a training corpus, the model would pick up on the unique ways in which words are used in the show. While the generalized vectors in a spaCy model might not place the vectors for “Ross” and “Rachel” close together, a gensim word embedding model trained on Friends’ scrips would place the vectors for words like “Ross” and “Rachel”, two characters that have a continuous on and off-again relationship throughout the show, very close together!
+
+To easily find which vectors gensim placed close together in its word embedding model, we can use the `.most_similar()` method.
+```
+model.most_similar("my_word_here", topn = 100)
+```
+* `"my_word_here"`: the target word token we want to find most similar words to
+* `topn`: a keyword argument that indicates how many similar word vectors we want returned
+
+The `.doesnt_match()` method:
+```
+model.doesnt_match(["asia", "mars", "pluto"])
+```
+When given a list of terms in the vocabulary as an argument, .doesnt_match() returns which term is furthest from the others.
