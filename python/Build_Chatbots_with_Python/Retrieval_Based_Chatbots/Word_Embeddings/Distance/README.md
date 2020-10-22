@@ -37,6 +37,7 @@ Two vectors that point in opposite directions have a cosine distance of `1`.
 For the mathematically adventurous, [you can read up on the calculation here](https://en.wikipedia.org/wiki/Cosine_similarity#Definition).
 
 <hr />
+
 ## Calculate the Manhattan, Euclidean, and cosine distances using SciPy
 ```
 from scipy.spatial.distance import cityblock, euclidean, cosine
