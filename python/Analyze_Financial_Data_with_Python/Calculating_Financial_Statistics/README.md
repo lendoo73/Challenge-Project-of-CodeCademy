@@ -61,7 +61,7 @@ The weights of each asset is obtained by:
 W<sub>i</sub>: weight of the i<sup>th</sup> investment in the portfolio<br />
 S<sub>i</sub>: starting price of the i<sup>th</sup> investment in the portfolio
 
-### [Variance](#Variance)
+### Variance
 
 One of the key statistics for understanding risk is variance. Variance is a measure of the spread of a dataset, or how far apart each value is from the mean. The greater the variance, the more spread out or variable the data is.
 An asset with a high variance is generally a riskier one because its return can vary significantly in a short period of time, making it less stable and more unpredictable.
