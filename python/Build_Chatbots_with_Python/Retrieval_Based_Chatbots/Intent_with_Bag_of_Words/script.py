@@ -1,5 +1,5 @@
 from collections import Counter
-from preprocessing import preprocess, response_a, response_b
+from preprocessing import preprocess
 
 user_message = preprocess("Hello! What is the fit of the 'Elosie' dress? My shoulders are broad, so I often size up for a comfortable fit. Do dress sizes run large or small? Especially in the shoulders?")
 response_a = preprocess("All of our dresses sare cut from a polyester blend for a strechy fit")
