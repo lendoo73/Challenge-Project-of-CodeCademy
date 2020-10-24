@@ -15,3 +15,7 @@ print(word_counts)
 ```
 We can use the results of this mapping to construct a measure of the intent of a user’s message.
 Then we’ll use this measure to retrieve the most similar answer from our collection of **predefined chatbot responses**.
+
+There are a number of different ways in which we can define sentence similarity. 
+
+A simple BoW model is best-fit for a situation where *the order of words does not contain much information about the intent of a user’s message*.
