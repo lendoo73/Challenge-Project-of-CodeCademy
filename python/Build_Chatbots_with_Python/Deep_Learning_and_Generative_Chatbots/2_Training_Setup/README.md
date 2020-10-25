@@ -1,5 +1,5 @@
 #### GENERATING TEXT WITH DEEP LEARNING
-# [Training Setup](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/deep-learning-and-generative-chatbots/modules/deep-learning-for-nlp/lessons/generating-text-with-deep-learning/exercises/training-setup-part-1)
+# [Training Setup (part 1)](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/deep-learning-and-generative-chatbots/modules/deep-learning-for-nlp/lessons/generating-text-with-deep-learning/exercises/training-setup-part-1)
 For each sentence, Keras expects a NumPy matrix containing one-hot vectors for each token.
 
 ## one-hot vector
