@@ -1,5 +1,5 @@
 #### GENERATING TEXT WITH DEEP LEARNING
-# Preprocessing for seq2seq
+# [Preprocessing for seq2seq](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/deep-learning-and-generative-chatbots/modules/deep-learning-for-nlp/lessons/generating-text-with-deep-learning/exercises/preprocessing-for-seq-2-seq)
 
 We can import Keras from Tensorflow:
 ```
