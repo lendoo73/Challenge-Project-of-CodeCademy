@@ -5,4 +5,6 @@ While POS tagging allows us to extract key entities in a user message, it does n
 A retrieval-based chatbot is a collection of predefined responses. Each response is a complete sentence, but with many key words replaced with blank spots. These blanks is labeled with a reference to a broad kind of entity. 
 
 A predefined response for a weather report chatbot might look like:
-```"Good Morning! Yous should see sunny skies this {weekday} around the greater Chicago area, including in {neighborhood-chicago}"```
+```
+"Good Morning! Yous should see sunny skies this {weekday} around the greater Chicago area, including in {neighborhood-chicago}"
+```
