@@ -9,4 +9,4 @@ A predefined response for a weather report chatbot might look like:
 "Good Morning! Yous should see sunny skies this {weekday} around the greater Chicago area, including in {neighborhood-chicago}"
 ```
 In order to produce a coherent response, the chatbot must ***insert entities from a user message*** into these blank spots.
-Chatbot architects often use word embedding models, like word2vec, to rank the similarity of user-provided entities and the broad category associated with a response “blank spot”.
+Chatbot architects often use [word embedding models](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Build_Chatbots_with_Python/Retrieval_Based_Chatbots/Word_Embeddings), like word2vec, to rank the similarity of user-provided entities and the broad category associated with a response “blank spot”.
