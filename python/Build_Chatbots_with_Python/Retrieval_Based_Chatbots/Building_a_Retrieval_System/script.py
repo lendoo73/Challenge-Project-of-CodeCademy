@@ -10,7 +10,7 @@ class ChatBot:
     bow_user_message = Counter(preprocess(user_message))
     processed_responses = [Counter(preprocess(response)) for response in responses]
     # define similarity_list here:
-    similarity_list = [compare_overlap(doc, bow_user_message) for doc in processed_responses]
+    similarity_list = [compare_overlap(bow_user_message, doc) for doc in processed_responses]
     # define response_index here:
     response_index = similarity_list.index(max(similarity_list))
 
