@@ -14,4 +14,4 @@ We’ll need the following for our Keras implementation:
 
 We also need to mark the start and end of each document (sentence) in the target samples so that the model recognizes where to begin and end its text generation.
 
-One way to do this is adding "<START>" at the beginning and "<END>" at the end of each target document (in our case, this will be our Spanish sentences). For example, "Estoy feliz." becomes "<START> Estoy feliz. <END>".
+One way to do this is adding "<START>" at the beginning and "<END>" at the end of each target document (in our case, this will be our Spanish sentences). For example, `"Estoy feliz."` becomes `"<START> Estoy feliz. <END>"`.
