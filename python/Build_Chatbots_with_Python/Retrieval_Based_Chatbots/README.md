@@ -3,6 +3,8 @@ Retrieval-based chatbots are the most popular chatbot implementation in use toda
 
 This popularity is due in large part to the strength of retrieval-based bots in closed-domain conversations — conversations that are clearly limited in scope.
 
+A retrieval-based chatbots cannot generalize conversation (even with lots and lots of data) or generate anything new.
+
 Most chatbot systems depend on three main tasks in order to convincingly complete a conversation:
 ## 1. Intent Classification:
 When presented with user input, a system must classify the intent of the message. 
