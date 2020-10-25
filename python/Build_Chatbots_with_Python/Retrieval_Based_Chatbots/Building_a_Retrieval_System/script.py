@@ -31,7 +31,7 @@ class ChatBot:
   # define .respond() here:
   def respond(self, user_message):
     best_response = self.find_intent_match(responses, user_message)
-    entity =  self.find_entities(user_message )
+    entity =  self.find_entities(user_message)
     print(best_response.format(entity))
 
   def chat(self):
