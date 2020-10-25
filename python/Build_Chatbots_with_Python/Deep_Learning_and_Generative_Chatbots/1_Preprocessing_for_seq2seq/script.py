@@ -1,0 +1,52 @@
+from tensorflow import keras
+import re
+
+# Importing our translations
+data_path = "span-eng.txt"
+# Defining lines as a list of each line
+with open(data_path, 'r', encoding='utf-8') as f:
+  lines = f.read().split('\n')
+
+# Building empty lists to hold sentences
+input_docs = []
+target_docs = []
+# Building empty vocabulary sets
+input_tokens = set()
+target_tokens = set()
+
+for line in lines:
+  # Input and target sentences are separated by tabs
+  input_doc, target_doc = line.split('\t')
+  # Appending each input sentence to input_docs
+  input_docs.append(input_doc)
+  # Splitting words from punctuation
+  target_doc = " ".join(re.findall(r"[\w']+|[^\s\w]", target_doc))
+  # 1. Redefine target_doc below 
+  target_doc = "<START> " + target_doc + " <END>"
+  # and append it to target_docs:
+  target_docs.append(target_doc)
+  
+  # Now we split up each sentence into words
+  # and add each unique word to our vocabulary set
+  for token in re.findall(r"[\w']+|[^\s\w]", input_doc):
+    print(token)
+    # 2. Add your code here:
+    input_tokens.add(token)
+    
+  for token in target_doc.split():
+    print(token)
+    # 2. And here:
+    target_tokens.add(token)
+
+input_tokens = sorted(list(input_tokens))
+target_tokens = sorted(list(target_tokens))
+
+# 3. Create num_encoder_tokens and num_decoder_tokens:
+num_encoder_tokens = len(input_tokens)
+num_decoder_tokens = len(target_tokens)
+
+try:
+  max_encoder_seq_length = max([len(re.findall(r"[\w']+|[^\s\w]", input_doc)) for input_doc in input_docs])
+  max_decoder_seq_length = max([len(re.findall(r"[\w']+|[^\s\w]", target_doc)) for target_doc in target_docs])
+except ValueError:
+  pass
