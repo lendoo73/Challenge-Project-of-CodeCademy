@@ -12,3 +12,15 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 vectorizer = TfidfVectorizer()
 ```
+We can then ***fit the tf-idf model*** with the `.fit_transform()` method and input a list of string objects. Using the vectorized results of this fitted model, we can compute the ***cosine similarity*** of the user message and a possible response with the aptly named cosine_similarity() function:
+```
+# fit model
+tfidf_vectors = vectorizer.fit_transform(input_list)
+
+# compute cosine similarity 
+cosine_sim = cosine_similarity(user_message_vector, response_vector)
+```
+
+Most retrieval-based chatbots use multiple measures in order to rank the similarity between a user’s input and a number of possible responses. Oftentimes, different measures produce different similarity rankings.
+
+***The selection of a similarity measure*** is one of the most important decisions chatbot architects have to make while building a system. We should always consider the relative strengths and weaknesses of different metrics.
