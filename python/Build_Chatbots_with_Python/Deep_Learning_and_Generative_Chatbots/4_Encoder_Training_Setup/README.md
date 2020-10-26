@@ -1,0 +1,1 @@
+# [Encoder Training Setup](https://www.codecademy.com/paths/build-chatbots-with-python/tracks/deep-learning-and-generative-chatbots/modules/deep-learning-for-nlp/lessons/generating-text-with-deep-learning/exercises/encoder-training-setup)
