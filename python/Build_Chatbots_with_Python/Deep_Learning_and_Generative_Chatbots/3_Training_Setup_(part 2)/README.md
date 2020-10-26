@@ -15,3 +15,7 @@ To build out a three-dimensional NumPy matrix of one-hot vectors, we can assign 
 ```
 matrix_name[line, timestep, features_dict[token]] = 1.
 ```
+Keras will fit — or train — the seq2seq model using these matrices of one-hot vectors:
+* the encoder input data
+* the decoder input data
+* the decoder target data
