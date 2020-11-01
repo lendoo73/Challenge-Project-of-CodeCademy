@@ -18,6 +18,7 @@ I have created different folders for different programming languages.
     <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Analyze_Financial_Data_with_Python">Analyze Financial Data with Python</a></li>
     <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Visualize_Data_with_Python">Visualize Data with Python</a></li>
     <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Build_Chatbots_with_Python">Build Chatbots with Python</a></li>
+    <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_Statistics_with_Python">Learn Statistics with Python</a></li>
   </ul>
 </details>
 <details>
