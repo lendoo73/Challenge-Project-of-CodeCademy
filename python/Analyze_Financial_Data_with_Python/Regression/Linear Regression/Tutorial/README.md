@@ -57,4 +57,4 @@ A **large learning rate** might skip over the best value. It might never converg
 You just have to find a learning rate large enough that gradient descent converges with the efficiency you need, and not so large that convergence never happens.
 ## [Convergence](https://www.codecademy.com/paths/finance-python/tracks/regression-for-finance/modules/linear-regression-python-finance/lessons/linear-regression/exercises/convergence)
 How do we know when we should stop changing the parameters m and b?<br />
-we have to define convergence. Convergence is when the loss stops changing (or changes very slowly) when parameters are changed.
+We have to define convergence. Convergence is when the loss stops changing (or changes very slowly) when parameters are changed.
