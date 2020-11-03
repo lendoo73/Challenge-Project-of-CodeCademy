@@ -58,3 +58,5 @@ You just have to find a learning rate large enough that gradient descent converg
 ## [Convergence](https://www.codecademy.com/paths/finance-python/tracks/regression-for-finance/modules/linear-regression-python-finance/lessons/linear-regression/exercises/convergence)
 How do we know when we should stop changing the parameters m and b?<br />
 We have to define convergence. Convergence is when the loss stops changing (or changes very slowly) when parameters are changed.
+
+`gradient_descent()`
