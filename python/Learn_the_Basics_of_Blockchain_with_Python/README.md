@@ -12,6 +12,7 @@ A block is an individual transaction or piece of data that is being stored withi
 
 ## Blockchain:
 A blockchain is a continuously growing list (“chain”) of records (“block”), called blocks, which are linked chronologically and secured using cryptography.
+A blockchain is an accurate and permanent record of transactions that have been verified and stored in a chronological sequence.
 
 # [The Blockchain Network](https://www.codecademy.com/courses/introduction-to-blockchain/lessons/blockchain-introduction/exercises/blockchain-network)
 In the blockchain, there are many participants in the network that are constantly checking to ensure that each transaction is valid.
@@ -55,4 +56,28 @@ The output is known as the hash of the input.
 
 There are many types of hash functions available. 
 Blockchain uses a *cryptographic hash function*, meaning that the output is *random but deterministic*.
+This means the same input will always produce the same hash.
+That process is one-way, so the output (hash) cannot be used to produce the original input.
 
+## Deterministic:
+The same input will always produce the same output, but that output cannot produce the original input.
+
+## Hash:
+A calculated string of letters and numbers produced from a specific input.
+
+## Hash Function:
+A function that takes in an input of a random size, performs hashing on the input, and generates a seemingly random output of a fixed size, also known as the hash.
+
+# [The Genesis Block](https://www.codecademy.com/courses/introduction-to-blockchain/lessons/blockchain-introduction/exercises/genesis-block)
+A blockchain is similar to a permanent book of records,  it keeps an accurate unchanging record of all data, or transactions, stored in chronological order.
+Each block has a reference to the block’s previous hash.
+If a block’s contents are tampered with, the block’s hash changes and the chain breaks, making it difficult to successfully tamper with any one piece of the chain.
+
+Since all blocks in the blockchain have a reference to the previous block, the first block is a little different than the rest.
+It is known as the *Genesis Block*. The Genesis Block does not have a block before it. 
+So it wouldn’t make sense to have a previous hash stored inside it. 
+The value of the previous hash is typically hard-coded into the Genesis Block with the default value of zero.
+
+## Genesis Block:
+The first block on the blockchain and it is typically hard-coded into the blockchain structure.
+Being the first block on the blockchain, it does not have a link to a previous hash.
