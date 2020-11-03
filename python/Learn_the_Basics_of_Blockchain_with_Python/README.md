@@ -35,3 +35,12 @@ A client that owns a copy of the blockchain and verifies transactions across the
 # [Blocks in the Blockchain](https://www.codecademy.com/courses/introduction-to-blockchain/lessons/blockchain-introduction/exercises/blockchain-blocks)
 A block contains transaction data and other important details related to the creation of that block, such as the time when it was created and other unique information.
 To create a block, we must have a record that we wish to store.
+
+A block will always contain 
+* a timestamp or the data regarding the time when the block was created;
+* a unique hash or a unique code produced by combining all the contents within the block itself — also known as a digital fingerprint;
+* a previous hash or a reference to the prior block’s hash. This reference to the prior block is how blocks chain to one another.
+
+## Properties in a Block:
+* ### Timestamp:
+The time the block is created determines the location of it on the blockchain.
