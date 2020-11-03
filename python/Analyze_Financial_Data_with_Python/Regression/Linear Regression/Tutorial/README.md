@@ -33,6 +33,8 @@ To find the gradient of loss as intercept changes, the formula comes out to be:<
 * `N` is the number of points we have in our dataset
 * `m` is the current gradient guess
 * `b` is the current intercept guess
+
+`get_gradient_at_b()`
 ## [Gradient Descent for Slope](https://www.codecademy.com/paths/finance-python/tracks/regression-for-finance/modules/linear-regression-python-finance/lessons/linear-regression/exercises/gradient-descent-m)
 To find the m gradient, or the way the loss changes as the slope of our line changes, we can use this formula:<br />
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{2}{N}\sum_{i=1}^{N}-x_{i}(y_{i}-(mx_{i}&plus;b))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{2}{N}\sum_{i=1}^{N}-x_{i}(y_{i}-(mx_{i}&plus;b))" title="\frac{2}{N}\sum_{i=1}^{N}-x_{i}(y_{i}-(mx_{i}+b))" /></a>
