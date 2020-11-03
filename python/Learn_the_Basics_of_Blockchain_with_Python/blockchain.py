@@ -13,10 +13,9 @@ class Blockchain:
         self.chain.append(genesis_block)
 
     def add_block(self, transactions):
-        previous_hash = (self.chain[len(self.chain)-1]).hash
+        previous_hash = (self.chain[len(self.chain) - 1]).hash
         new_block = Block(transactions, previous_hash)
         new_block.generate_hash()
-        # proof = proof_of_work(block)
         self.chain.append(new_block)
 
     def print_blocks(self):
@@ -28,7 +27,7 @@ class Blockchain:
     def validate_chain(self):
         for i in range(1, len(self.chain)):
             current = self.chain[i]
-            previous = self.chain[i-1]
+            previous = self.chain[i - 1]
             if(current.hash != current.generate_hash()):
                 print("Current hash does not equal generated hash")
                 return False
@@ -39,7 +38,7 @@ class Blockchain:
  
     def proof_of_work(self, block, difficulty=2):
         proof = block.generate_hash()
-        while proof[:2] != "0"*difficulty:
+        while proof[:2] != "0" * difficulty:
             block.nonce += 1
             proof = block.generate_hash()
         block.nonce = 0
