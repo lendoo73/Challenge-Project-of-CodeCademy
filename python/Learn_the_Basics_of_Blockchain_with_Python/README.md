@@ -42,5 +42,17 @@ A block will always contain
 * a previous hash or a reference to the prior block’s hash. This reference to the prior block is how blocks chain to one another.
 
 ## Properties in a Block:
-* ### Timestamp:
-The time the block is created determines the location of it on the blockchain.
+* **Timestamp:** The time the block is created determines the location of it on the blockchain.
+* **Transaction Data:** The information to be securely stored in the block.
+* **Hash:** A unique code produced by combining all the contents within the block itself — also known as a digital fingerprint.
+* **Previous Hash:** Each block has a reference to the block prior to its hash. This is what makes the blockchain unique because this link will be broken if a block is tampered with.
+
+# [Hashing](https://www.codecademy.com/courses/introduction-to-blockchain/lessons/blockchain-introduction/exercises/hashing)
+Hashing is an application of cryptography that is fundamental to the design of the blockchain. It is a way to generate a seemingly random, but calculated string of letters and numbers from any input.
+
+Think of a hash function as a machine that takes an object and turns it into a varying combination of letters and numbers. 
+The output is known as the hash of the input.
+
+There are many types of hash functions available. 
+Blockchain uses a *cryptographic hash function*, meaning that the output is *random but deterministic*.
+
