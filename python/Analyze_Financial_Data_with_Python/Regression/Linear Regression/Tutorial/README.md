@@ -49,6 +49,8 @@ We can scale the size of the step by multiplying the gradient by a learning rate
 * `b_gradient` is the gradient of the loss curve at our current guess, 
 * `learning_rate` is proportional to the size of the step we want to take
 
+`step_gradient()`
+
 We have to choose a learning rate, which will determine how far down the loss curve we go.<br />
 A **small learning** rate will take a long time to converge — you might run out of time or cycles before getting an answer. <br />
 A **large learning rate** might skip over the best value. It might never converge!<br />
