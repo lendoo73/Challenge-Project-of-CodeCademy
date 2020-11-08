@@ -15,5 +15,11 @@ If you combine a bunch of such perceptrons, you will get a neural network that c
 So the perceptron is an artificial neuron that can make a simple decision.
 
 The perceptron has three main components:
-* **inputs**: Each input corresponds to a feature. (age, height, weight, college degree...
-* **weights**: 
+* **inputs:** Each input corresponds to a feature. (age, height, weight, college degree...
+* **weights:** Each input also has a weight which assigns a certain amount of importance to the input. If an input’s weight is large, it means this input plays a bigger role in determining the output. 
+* **output:** The perceptron uses the inputs and weights to produce an output. The type of the output varies depending on the nature of the problem. 
+
+### [Weighted Sum](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-foundations-deep-learning-and-perceptrons/modules/perceptron/lessons/perceptron/exercises/weighted-sum)
+How are the inputs and weights turned into an output? This is a two-step process, and the first step is finding the weighted sum of the inputs.
+
+ The weighted sum is a number that gives a reasonable representation of the inputs:
