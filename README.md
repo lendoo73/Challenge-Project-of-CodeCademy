@@ -20,6 +20,7 @@ I have created different folders for different programming languages.
     <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Build_Chatbots_with_Python">Build Chatbots with Python</a></li>
     <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_Statistics_with_Python">Learn Statistics with Python</a></li>
     <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_the_Basics_of_Blockchain_with_Python">Learn the Basics of Blockchain with Python</a></li>
+    <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_the_Watson_API">Learn the Watson API</a></li>
   </ul>
 </details>
 <details>
