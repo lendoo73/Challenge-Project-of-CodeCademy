@@ -85,3 +85,33 @@ Since the labels are also a +1 or a -1, there are four different possibilities f
 These training error values will be crucial in improving the perceptron’s performance.
 
 `training()`
+
+## [Tweaking the Weights](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-foundations-deep-learning-and-perceptrons/modules/perceptron/lessons/perceptron/exercises/tweaking-weights)
+We slowly nudge the perceptron towards a better version of itself that eventually has zero error.
+
+The only way to do that is to change the parameters that define the perceptron. We can’t change the inputs so the only thing that can be tweaked are the weights. As we change the weights, the outputs change as well.
+
+The goal is to find the optimal combination of weights that will produce the correct output for as many points as possible in the dataset.
+
+### [The Perceptron Algorithm](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-foundations-deep-learning-and-perceptrons/modules/perceptron/lessons/perceptron/exercises/perceptron-algorithm)
+There needs to be a way to guarantee that the perceptron improves its performance over time.
+The **Perceptron Algorithm** optimally tweak the weights and nudge the perceptron towards zero error.
+
+The most important part of the algorithm is the update rule where the weights get updated:
+
+***weight = weight + (error ∗ input)***
+
+We keep on tweaking the weights until all possible labels are correctly predicted by the perceptron. This means that multiple passes might need to be made through the `training_set` before the Perceptron Algorithm comes to a halt.
+
+The `training()` method:
+* `foundLine = False`: a boolean that indicates whether the perceptron has found a line to separate the positive and negative labels
+* `while not foundLine`: a while loop that continues to train the perceptron until the line is found
+* `total_error = 0`: to count the total error the perceptron makes in each round
+* `total_error += abs(error)`: to update the total error the perceptron makes in each round
+
+## [The Bias Weight](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-foundations-deep-learning-and-perceptrons/modules/perceptron/lessons/perceptron/exercises/bias-weight)
+You have understood that the perceptron can be trained to produce correct outputs by tweaking the regular weights.
+
+There are times when a minor adjustment is needed for the perceptron to be more accurate. This supporting role is played by the bias weight. It takes a default input value of 1 and some random weight value.
+
+So now the weighted sum equation should look like:
