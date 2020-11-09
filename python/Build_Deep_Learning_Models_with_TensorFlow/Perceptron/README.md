@@ -115,4 +115,47 @@ You have understood that the perceptron can be trained to produce correct output
 There are times when a minor adjustment is needed for the perceptron to be more accurate. This supporting role is played by the bias weight. It takes a default input value of 1 and some random weight value.
 
 So now the weighted sum equation should look like:
+
 ![bias weight formula](bias_weight.jpg)
+In the `Perceptron` constructor parameters:
+* now there are 3 inputs instead of 2 (`num_inputs = 3`)
+* now there are 3 weights instead of 2 (`weights = [1, 1, 1]`)
+
+## [Representing a Line](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-foundations-deep-learning-and-perceptrons/modules/perceptron/lessons/perceptron/exercises/represent-line)
+We could visualize the perceptron’s training process to gain a better understanding of what’s going on.
+
+The weights change throughout the training process so if only we could meaningfully visualize those weights…
+
+The weights can actually be used to represent a line! 
+
+A line can be represented using the slope-intercept form.
+
+ A perceptron’s weights can be used to find the slope and intercept of the line that the perceptron represents:
+ * `slope = -self.weights[0] / self.weights[1]`
+ * `intercept = -self.weights[2] / self.weights[1]`
+
+## [Finding a Linear Classifier](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-foundations-deep-learning-and-perceptrons/modules/perceptron/lessons/perceptron/exercises/linear-classifier)
+**The perceptron has**
+* **inputs**, 
+* **weights**, 
+* and an **output**. 
+
+The weights are parameters that define the perceptron and they can be used to represent a line. In other words, the perceptron can be visualized as a line.
+
+What does it mean for the perceptron to correctly classify every point in the training set?
+
+Theoretically, it means that the perceptron predicted every label correctly.
+
+Visually, it means that the perceptron found a linear classifier, or a decision boundary, that separates the two distinct set of points in the training set.
+
+# [Neural Networks](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-foundations-deep-learning-and-perceptrons/modules/perceptron/lessons/perceptron/exercises/non-linear-classifier)
+There are any limits to a single perceptron?
+
+The data points in the training set were linearly separable i.e. a single line could easily separate the two dissimilar sets of points.
+What would happen if the data points were scattered in such a way that a line could no longer classify the points?
+
+A single perceptron with only two inputs wouldn’t work for such a scenario because it cannot represent a non-linear decision boundary.
+
+That’s when more perceptrons and features come into play!
+
+By increasing the number of features and perceptrons, we can give rise to the **Multilayer Perceptrons**, also known as **Neural Networks**, which can solve much more complicated problems.
