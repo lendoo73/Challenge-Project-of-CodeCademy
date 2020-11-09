@@ -115,3 +115,4 @@ You have understood that the perceptron can be trained to produce correct output
 There are times when a minor adjustment is needed for the perceptron to be more accurate. This supporting role is played by the bias weight. It takes a default input value of 1 and some random weight value.
 
 So now the weighted sum equation should look like:
+![bias weight formula](bias_weight.jpg)
