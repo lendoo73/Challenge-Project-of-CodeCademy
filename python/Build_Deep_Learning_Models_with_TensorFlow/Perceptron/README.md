@@ -81,4 +81,7 @@ Since the labels are also a +1 or a -1, there are four different possibilities f
 | +1 | -1 | 2 |
 | -1 | -1 | 0 |
 | -1 | +1 | -2 |
+
 These training error values will be crucial in improving the perceptron’s performance.
+
+`training()`
