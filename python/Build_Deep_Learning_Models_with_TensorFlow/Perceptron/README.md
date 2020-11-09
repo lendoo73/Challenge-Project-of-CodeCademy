@@ -73,4 +73,10 @@ The goal is to nudge the perceptron towards zero training error. The training er
 
 ***training error = actual label − predicted label***
 
-For each point in the training set, the perceptron either produces a `+1` or a `-1` (as we are using the *Sign Activation Function*). 
+For each point in the training set, the perceptron either produces a `+1` or a `-1` (as we are using the *Sign Activation Function*).
+Since the labels are also a +1 or a -1, there are four different possibilities for the error the perceptron makes:
+| **Actual** | **Predicted** | **Trainig Error** |
+| --- | --- | --- |
+| +1 | +1 | 0 |
+| +1 | -1 | 2 |
+| -1 | -1 | 0 |
