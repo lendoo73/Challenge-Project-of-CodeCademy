@@ -23,3 +23,4 @@ The perceptron has three main components:
 How are the inputs and weights turned into an output? This is a two-step process, and the first step is finding the weighted sum of the inputs.
 
  The weighted sum is a number that gives a reasonable representation of the inputs:
+ ![weighted sum formula](weighted_sum_formula.jpg)
