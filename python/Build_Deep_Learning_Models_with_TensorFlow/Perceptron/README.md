@@ -25,3 +25,5 @@ How are the inputs and weights turned into an output? This is a two-step process
  The weighted sum is a number that gives a reasonable representation of the inputs:
  
  ![weighted sum formula](weighted_sum_formula.jpg)
+
+The `x`‘s are the inputs and the `w`‘s are the weights.
