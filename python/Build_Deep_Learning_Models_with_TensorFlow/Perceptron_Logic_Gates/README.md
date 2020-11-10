@@ -7,3 +7,5 @@ Given two inputs, an AND gate will output a 1 only if both inputs are a 1.
 An OR gate outputs a 1 if any of the inputs is a 1.
 
 An XOR gate outputs a 1 only if one of the inputs is a 1.
+
+#### [Link to Repl](https://repl.it/@lendoo73/PerceptronLogicGates#README.md)
