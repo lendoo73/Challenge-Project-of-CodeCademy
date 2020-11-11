@@ -133,3 +133,77 @@ print(model.layers)       # (The list of layers is still empty, we will add laye
 ```
 
 ## [Neural network model: layers](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/neural-network-layers)
+Layers are the building blocks of neural networks and can contain 1 or more neurons.
+Each layer is associated with parameters: weights, and bias, that are tuned during the learning.
+A fully-connected layer in which all neurons connect to all neurons in the next layer is created the following way in TensorFlow:
+```
+from tensorflow.keras import layers
+
+# we chose 3 neurons here
+layer = layers.Dense(3) 
+```
+We chose to create a layer with three neurons, the number of outputs of this layer is 3.
+The bias parameter would be a vector of (3, 1) dimensions. 
+But what is the first dimension of the weights matrix?
+```
+print(layer.weights)                                 # we get an empty array since no input layer is specified.
+```
+```
+# 13388 samples, 11 features as in our dataset
+input = tf.ones((1338, 11))
+# a fully-connected layer with 3 neurons
+layer = layers.Dense(3) 
+# calculate the outputs
+output = layer(input) 
+# print the weights
+print(layer.weights)                                 # the weight matrix has shape = (11, 3)
+```
+TensorFlow will determine the shapes of the weight matrix and bias matrix automatically the moment it encounters the first input.
+
+## [Neural network model: input layer](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/neural-network-input-layer)
+In Keras, an input for a neural network can be specified with a `tf.keras.layers.InputLayer` object.
+
+The following code initializes an input layer for a DataFrame my_data that has 15 columns:
+```
+from tensorflow.keras.layers import InputLayer
+
+my_input = InputLayer(input_shape = (15,))
+```
+The input_shape parameter has to have its first dimension equal to the number of features in the data. 
+You don’t need to specify the second dimension: the number of samples or batch size.
+
+The following code avoids hard-coding with using the .shape property of the my_data DataFrame:
+```
+#get the number of features/dimensions in the data
+num_features = my_data.shape[1] 
+my_input = InputLayer(input_shape = (num_features,)) 
+```
+
+Now add this input layer to a model instance:
+```
+model.add(my_input)
+print(model.summary()) 
+```
+The summary shows that the total number of parameters is 0.
+This shows you that the input layer has no trainable parameters and is just a placeholder for data.
+
+## [Neural network model: output layer](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/neural-network-output-layer)
+The output layer shape depends on your task. In the case of regression, we need one output for each sample. 
+If your data has 100 samples, you would expect your output to be a vector with 100 entries - a numerical prediction for each sample.
+
+We are doing regression and wish to predict one number for each data point: the medical cost billed by health insurance indicated in the `charges` column in our data.
+
+Add a layer with one neuron to a model:
+```
+from tensorflow.keras.layers import Dense
+
+model.add(Dense(1))
+```
+You don’t need to specify the input shape of this layer since Tensorflow with Keras can automatically infer its shape from the previous layer.
+
+## [Neural network model: hidden layers](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/neural-network-hidden-layers)
+
+
+
+
+
