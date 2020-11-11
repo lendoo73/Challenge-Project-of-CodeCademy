@@ -48,6 +48,57 @@ print(“Number of samples: “, features.shape[0])          # 1338
 ```
 
 ## [Data preprocessing: one-hot encoding and standardization](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/dl-one-hot-encoding-standardization)
+### One-hot encoding of categorical features:
+Neural networks cannot work with string data directly. 
+We need to convert our categorical features (“region”) into numerical. 
+*One-hot encoding* creates a binary column for each category.
+Since the “region” variable has four categories, the one-hot encoding will result in four binary columns: “northeast”, “northwest”, “southeast”, “southwest”.
+One-hot encoding can be accomplished by using the pandas get_dummies() function:
+```
+features  = pd.get_dummies(features)
+```
 
+## Split data into train and test sets:
+In machine learning, we train a model on a training data, and we evaluate its performance on a held-out set of data, our test set, not seen during the learning:
+```
+from sklearn.model_selection import train_test_split
 
+features_train, features_test, labels_train, labels_test = train_test_split(
+  features, 
+  labels, 
+  test_size = 0.33,         # we chose the test size to be 33% of the total data,
+  random_state = 42
+)
+```
+## Standardize/normalize numerical features:
+The usual preprocessing step for numerical variables is ***standardization*** that rescales features to zero mean and unit variance. 
+Our features have different scales or units: “age” has an interval of [18, 64] and the “children” column’s interval is much smaller, [0, 5].
+By having features with differing scales, the optimizer might update some weights faster.
 
+***Normalization*** is another way of preprocessing numerical data:
+it scales the numerical features to a fixed range - usually between 0 and 1.
+
+To normalize the numerical features we use `scikit-learn`, `ColumnTransformer`, in the following way:
+```
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import Normalizer
+from sklearn.compose import ColumnTransformer
+ 
+ct = ColumnTransformer(
+  [(
+    "normalize", 
+    Normalizer(), 
+    ["age", "bmi", "children"]        # only numerical columns applies to the Normalizer()
+  )], 
+  remainder = "passthrough"           # ... the rest of the columns
+)
+features_train = ct.fit_transform(features_train)
+features_test = ct.transform(features_test)
+```
+`ColumnTransformer()` returns NumPy arrays and we convert them back to a pandas DataFrame.
+```
+features_train_norm = pd.DataFrame(
+  features_train_norm, 
+  columns = features_train.columns
+)
+```
