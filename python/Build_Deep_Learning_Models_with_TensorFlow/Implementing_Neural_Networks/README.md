@@ -20,3 +20,7 @@ The [Medical Cost Personal Datasets dataset](https://www.kaggle.com/mirichoi0218
 | Column names | Description | Data type |
 | --- | --- | --- |
 | age | age of primary beneficiary | numerical / integer |
+| sex | insurance contractor gender | integer (female 1, male 0) |
+| bmi | body mass index | numerical / real value |
+| children | number of children coverd by health insurance | numerical / integer |
+| smoker | smoking or not | integer / (true 1, false 0) |
