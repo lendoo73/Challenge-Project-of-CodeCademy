@@ -25,5 +25,29 @@ The [Medical Cost Personal Datasets dataset](https://www.kaggle.com/mirichoi0218
 | children | number of children coverd by health insurance | numerical / integer |
 | smoker | smoking or not | integer / (true 1, false 0) |
 | region | the beneficiary’s residential area in the US |	categorical (northeast, northwest, southeast, southwest) |
-| charges |	individual medical costs billed by health insurance |	numerical/real value |
+| charges |	individual medical costs billed by health insurance |	numerical / real value |
+
+We would like to predict the individual medical costs (charges) given the rest of the columns/features.
+Since charges represent continuous values (in dollars), we’re performing a regression task. 
+
+Our data is in the .csv format and we load it with pandas:
+```
+dataset = pd.read_csv('insurance.csv')
+```
+We split the data into features and the target variable:
+```
+#dataframe slicing using iloc; the first six columns:
+features = dataset.iloc[:,0:6]  
+# we select the last column with -1; the last (charges) column:
+labels = dataset.iloc[:,-1] 
+```
+The pandas shape property tells us the shape of our data — a vector of two values: the number of samples and the number of features. 
+```
+print(“Number of features: “, features.shape[1])         # 6
+print(“Number of samples: “, features.shape[0])          # 1338
+```
+
+## [Data preprocessing: one-hot encoding and standardization](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/dl-one-hot-encoding-standardization)
+
+
 
