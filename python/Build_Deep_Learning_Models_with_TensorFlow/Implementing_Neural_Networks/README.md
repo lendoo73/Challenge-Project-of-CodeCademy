@@ -47,7 +47,7 @@ print(“Number of features: “, features.shape[1])         # 6
 print(“Number of samples: “, features.shape[0])          # 1338
 ```
 
-## [Data preprocessing: one-hot encoding and standardization](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/dl-one-hot-encoding-standardization)
+## [Data preprocessing:](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/dl-one-hot-encoding-standardization)
 ### One-hot encoding of categorical features:
 Neural networks cannot work with string data directly. 
 We need to convert our categorical features (“region”) into numerical. 
@@ -58,7 +58,7 @@ One-hot encoding can be accomplished by using the pandas get_dummies() function:
 features  = pd.get_dummies(features)
 ```
 
-## Split data into train and test sets:
+### Split data into train and test sets:
 In machine learning, we train a model on a training data, and we evaluate its performance on a held-out set of data, our test set, not seen during the learning:
 ```
 from sklearn.model_selection import train_test_split
@@ -70,7 +70,7 @@ features_train, features_test, labels_train, labels_test = train_test_split(
   random_state = 42
 )
 ```
-## Standardize/normalize numerical features:
+### Standardize/normalize numerical features:
 The usual preprocessing step for numerical variables is ***standardization*** that rescales features to zero mean and unit variance. 
 Our features have different scales or units: “age” has an interval of [18, 64] and the “children” column’s interval is much smaller, [0, 5].
 By having features with differing scales, the optimizer might update some weights faster.
@@ -92,8 +92,8 @@ ct = ColumnTransformer(
   )], 
   remainder = "passthrough"           # ... the rest of the columns
 )
-features_train = ct.fit_transform(features_train)
-features_test = ct.transform(features_test)
+features_train = ct.fit_transform(features_train)     
+features_test = ct.transform(features_test)        
 ```
 `ColumnTransformer()` returns NumPy arrays and we convert them back to a pandas DataFrame.
 ```
@@ -102,3 +102,34 @@ features_train_norm = pd.DataFrame(
   columns = features_train.columns
 )
 ```
+
+## [Neural network model: tf.keras.Sequential](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/neural-network-sequential)
+Now that we have our data preprocessed we can start building the neural network model.
+A sequential model allows us to create models layer-by-layer in a step-by-step fashion.
+This model can have only one input tensor and only one output tensor.
+
+Import Sequential from keras.models:
+```
+from tensorflow.keras.models import Sequential
+```
+We will design the model in a separate Python function called `design_model()`.
+
+Initializes a Sequential model instance `my_model`:
+```
+def design_model(features):
+  model = Sequential(name = "my first model")               # name is an optional argument to any model in Keras
+  .
+  .
+  .
+  return model
+```
+We invoke our function in the main program with:
+```
+model = design_model(features_train)
+```
+The model’s layers are accessed via the layers attribute:
+```
+print(model.layers)       # (The list of layers is still empty, we will add layers to our model later.)
+```
+
+## [Neural network model: layers](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/neural-network-layers)
