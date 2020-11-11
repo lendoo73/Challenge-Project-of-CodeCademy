@@ -24,3 +24,6 @@ The [Medical Cost Personal Datasets dataset](https://www.kaggle.com/mirichoi0218
 | bmi | body mass index | numerical / real value |
 | children | number of children coverd by health insurance | numerical / integer |
 | smoker | smoking or not | integer / (true 1, false 0) |
+| region | the beneficiary’s residential area in the US |	categorical (northeast, northwest, southeast, southwest) |
+| charges	individual medical costs billed by health insurance |	numerical/real value |
+
