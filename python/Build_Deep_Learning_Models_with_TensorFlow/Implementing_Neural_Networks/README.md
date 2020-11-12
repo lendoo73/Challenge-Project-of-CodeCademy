@@ -202,8 +202,56 @@ model.add(Dense(1))
 You don’t need to specify the input shape of this layer since Tensorflow with Keras can automatically infer its shape from the previous layer.
 
 ## [Neural network model: hidden layers](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/neural-network-hidden-layers)
+We have added one input layer and one output layer to our model.
+Our model. If you think about it, our model currently represents a linear regression.
+To capture more complex or non-linear interactions among the inputs and outputs neural networks, we’ll need to incorporate hidden layers.
 
+Add a hidden layer to a model instance my_model:
+```
+from tensorflow.keras.layers import Dense
 
+my_model.add(
+  Dense(
+    64, 
+    activation = "relu"       # Rectified Linear Unit activation function
+  )
+)
+```
+We chose 64 (2 ** 6) to be the number of neurons since it makes optimization more efficient due to the binary nature of computation.
+With the activation parameter, we specify which activation function we want to have in the output of our hidden layer. 
+
+Adding more layers to a neural network naturally increases the number of parameters to be tuned.
+With every layer, there are associated weight and bias vectors.
+
+The 1st layer’s weight matrix has shape (11, 64) because we feed 11 features to 64 hidden neurons. 
+The output layer has the weight matrix of shape (64, 1) because we have 64 input units and 1 neuron in the final layer.
+
+## [Optimizers](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/dl-optimizers)
+Our goal is for the network to effectively adjust its weights or parameters in order to reach the best performance.
+Keras offers a variety of optimizers such as `SGD` (Stochastic Gradient Descent optimizer), `Adam`, `RMSprop`, and others.
+
+Introducing the Adam optimizer:
+```
+from tensorflow.keras.optimizers import Adam
+
+opt = Adam(learning_rate = 0.01)
+```
+The learning rate determines how big of jumps the optimizer makes in the parameter space (weights and bias) and it is considered a hyperparameter that can be also tuned. 
+While model parameters are the ones that the model uses to make predictions, hyperparameters determine the learning process (learning rate, number of iterations, optimizer type).
+
+If the learning rate is set too high, the optimizer will make large jumps and possibly miss the solution. 
+If set too low, the learning process is too slow and might not converge to a desirable solution with the allotted time.
+We’ll use a value of 0.01, which is often used.
+
+A model instance my_model is compiled with the following code:
+```
+my_model.compile(
+  loss = "mse",  
+  metrics = ["mae"], 
+  optimizer = opt
+)
+```
+**`loss`** denotes the measure of learning success; the lower the loss the better the performance. The most often used loss function is the Mean Squared Error `mse` (the average squared difference between the estimated values and the actual value).
 
 
 
