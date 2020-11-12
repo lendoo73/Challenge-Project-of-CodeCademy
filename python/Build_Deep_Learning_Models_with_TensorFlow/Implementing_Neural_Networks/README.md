@@ -253,5 +253,33 @@ my_model.compile(
 ```
 **`loss`** denotes the measure of learning success; the lower the loss the better the performance. The most often used loss function is the Mean Squared Error `mse` (the average squared difference between the estimated values and the actual value).
 
+We want to observe the progress of the Mean Absolute Error (`mae`) while training the model because MAE can give us a better idea than `mse` on how far off we are from the true values in the units we are predicting.
+We are predicting `charge` in dollars and MAE will tell us how many dollars we’re off, on average, from the actual values as the network is being trained.
 
+## [Training and evaluating the model](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/training-evaluating-model)
+Now that we built the model we are ready to train the model using the training data.
 
+Trains a model instance `model` using training data features_train and training labels labels_train:
+```
+model.fit(
+  features_train,         # the training data set
+  labels_train,           # true labels for the training data points
+  epochs = 40,            # refers to the number of cycles through the full training dataset; 
+                          # Since training of neural networks is an iterative process, you need multiple passes through data. 
+  batch_size = 1,         # the number of data points to work through before updating the model parameters; It is also a hyperparameter that can be tuned.
+  verbose = 1             # will show you the progress bar of the training
+)
+```
+When the training is finalized, we use the trained model to predict values for samples that the training procedure haven’t seen: the test set.
+
+Evaluate the model on the test data:
+```
+val_mse, val_mae = model.evaluate(
+  features_test, 
+  labels_test, 
+  verbose = 0
+)
+
+print("MAE: ", val_mae)
+```
+`model.evaluate()` returns the value for our chosen loss metrics (`mse`) and for an additional metrics (`mae`).
