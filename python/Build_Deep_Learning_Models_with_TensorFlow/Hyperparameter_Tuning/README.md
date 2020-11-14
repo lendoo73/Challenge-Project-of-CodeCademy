@@ -22,20 +22,6 @@ Otherwise, we evaluate the final model on the test set and report the results.
 
 Usually, machine learning engineers choose 70% of data for training, 20% for validating, and 10% for testing. But other splits are possible.
 
-## [Using a validation set for hyperparameter tuning](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/hyperparameter-tuning-neural/exercises/validation-hyperparam-tuning)
-In TensorFlow Keras, validation split can be specified as a parameter in the .fit() function:
-```
-my_model.fit(
-  data, 
-  labels, 
-  epochs = 20, 
-  batch_size = 1, 
-  verbose = 1,  
-  validation_split = 0.2       # a float between 0 and 1, denoting a fraction of the training data to be used as validation data.
-)
-```
-In the example above, 20% of the data would be allocated for validation.
-
 ## [Manual tuning: learning rate](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/hyperparameter-tuning-neural/exercises/manual-learning-rate)
 Neural networks are trained with the gradient descent algorithm and one of the most important hyperparameters in the network training is the ***learning rate***. 
 The learning rate determines how big of a change you apply to the network weights as a consequence of the error gradient calculated on a batch of training data.
