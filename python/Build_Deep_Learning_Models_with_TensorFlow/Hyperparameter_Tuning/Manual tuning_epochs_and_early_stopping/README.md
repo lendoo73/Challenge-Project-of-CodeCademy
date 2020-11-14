@@ -8,4 +8,5 @@ This is typically a large number (100, 1000, or larger). If the data is split in
 Too many epochs can lead to overfitting, and too few to underfitting. 
 One trick is to use ***early stopping***: when the training performance reaches the plateau or starts degrading, the learning stops.
 
-To illustrate we can introduce some overfitting by increasing the number of parameters in the neural network model: 
+To illustrate we can introduce some overfitting by increasing the number of parameters in the neural network model:
+![epoch_overfitting.png]
