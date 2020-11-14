@@ -33,4 +33,24 @@ grid_result = grid.fit(features_train, labels_train, verbose = 0)
 ```
 We’re evaluating our hyperparameter combinations with a mean squared error making sure that `greater_is_better` is set to `False` since we are searching for a set of hyperparameters that yield us the smallest error.
 
+### Randomized search in Keras
+```
+param_grid = {
+  "batch_size": sp_randint(2, 16), 
+  "nb_epoch": sp_randint(10, 100)
+}
+```
+Randomized search will sample values for batch_size and nb_epoch from uniform distributions in the interval [2, 16] and [10, 100] for a fixed number of iterations. 
+```
+grid = RandomizedSearchCV(
+  estimator = model, 
+  param_distributions = param_grid, 
+  scoring = make_scorer(
+    mean_squared_error, 
+    greater_is_better = False
+  ), 
+  n_iter = 12                           # number of iterations
+)
+```
+We cover only simpler cases here, but you can set up GridSearchCV and RandomizedSearchCV to tune over any hyperparameters you can think of: optimizers, number of hidden layers, number of neurons per layer, and so on.
 
