@@ -9,4 +9,4 @@ Too many epochs can lead to overfitting, and too few to underfitting.
 One trick is to use ***early stopping***: when the training performance reaches the plateau or starts degrading, the learning stops.
 
 To illustrate we can introduce some overfitting by increasing the number of parameters in the neural network model:
-![epoch_overfitting.png]
+![plot 1](epoch_overfitting.png)
