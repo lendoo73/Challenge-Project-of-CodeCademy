@@ -36,3 +36,11 @@ from collections import Counter
 
 print("Classes and number of values in the dataset", Counter(data_train["item"]))
 ```
+```
+{"lamps": 75, "tableware": 125, "containers": 100}
+```
+Next, we need to split our data into features and labels:
+```
+train_x = data_train["item"]
+train_y = data_train[["Al", "Mg", "Fe"]]
+```
