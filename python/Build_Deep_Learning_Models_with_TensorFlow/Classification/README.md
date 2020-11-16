@@ -8,3 +8,5 @@ In this lesson, we will talk about two types of classification:
 2. **Multi-class classification** categorizes examples in one of several categories. 
 
 Because neural networks are very effective for high-dimensionality problems and able to model complex relationships between variables, they are often used for classification tasks.
+
+# 1. Loading and analyzing the data
