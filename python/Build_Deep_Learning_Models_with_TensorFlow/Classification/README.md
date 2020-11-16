@@ -78,4 +78,41 @@ train_y = tensorflow.keras.utils.to_categorical(train_y, dtype = "int64")
 test_y = tensorflow.keras.utils.to_categorical(test_y, dtype = "int64")
 ```
 
+## [3. Designing a deep learning model for classification](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-classification/lessons/classification-neural-networks/exercises/deep-model-classification)
+Initialize a Keras Sequential model in TensorFlow:
+```
+from tensorflow.keras.models import Sequential
+
+my_model = Sequential()
+```
+
+The process is the following:
+* set the input layer
+* set the hidden layers
+* set the output layer
+
+### Set the input layer:
+```
+from tensorflow.keras.layers import  InputLayer
+
+my_model.add(
+  InputLayer(
+    input_shape = (data_train.shape[1],)
+  )
+)
+```
+### Set the hidden layers:
+```
+from tensorflow.keras.layers import  Dense
+
+my_model.add(
+  Dense(
+    8,                           # eight hidden units
+    activation = "relu"          # uses a rectified linear unit (relu) as the activation function
+  )
+)
+```
+### Set the output layer:
+```
+```
 
