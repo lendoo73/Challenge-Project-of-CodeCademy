@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 
-
 def plot(history, path):
   #plotting
   fig, axs = plt.subplots(1, 2, gridspec_kw={'hspace': 1, 'wspace': 0.5}) 
@@ -18,6 +17,3 @@ def plot(history, path):
   ax2.set_ylabel("MAE")
 
   plt.savefig(path)
-
-
-  
