@@ -140,3 +140,56 @@ my_model.compile(
 )
 ```
 We are now ready to train our model.
+
+## [5. Train and evaluate the classification model](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-classification/lessons/classification-neural-networks/exercises/train-evaluate-classification-model)
+Train a model instance:
+```
+my_model.fit(
+  my_data, 
+  my_labels, 
+  epochs = 10, 
+  batch_size = 1, 
+  verbose = 1        # To see the progress of the training we set verbose to true (1).
+)
+```
+After the model is trained, we can evaluate it using the unseen test data my_test and test labels test_labels:
+```
+loss, acc = my_model.evaluate(
+  my_test, 
+  test_labels, 
+  verbose = 0
+)
+```
+We take two outputs out of the `evaluate()` function:
+* the value of the loss (`categorical_crossentropy`)
+* accuracy (as set in the `metrics` parameter of `compile()`).
+
+## [6. Additional evaluation statistics](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-classification/lessons/classification-neural-networks/exercises/evaluation-statistics)
+Sometimes having only accuracy reported is not enough or adequate.
+Accuracy is often used when data is balanced, meaning it contains an equal or almost equal number of samples from all the classes.
+However, oftentimes data comes imbalanced.
+Reporting another metric such as **F1-score** is more adequate.
+To observe the F1-score of a trained model instance `my_model`, amongst other metrics, we use `sklearn.metrics.classification_report`:
+```
+import numpy as np
+from sklearn.metrics import classification_report
+
+yhat_classes = np.argmax(            
+  my_model.predict(my_test),         # predict classes for all test cases my_test
+  axis = -1
+)
+y_true = np.argmax(                 # convert the one-hot-encoded labels my_test_labels into the index of the class the sample belongs to. 
+  my_test_labels,                   # The index corresponds to our class encoded as an integer
+  axis = 1
+)
+print(classification_report(y_true, yhat_classes))           # use the .classification_report() method to calculate all the metrics
+```
+
+## [7. Tweak the model](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-classification/lessons/classification-neural-networks/exercises/tweak-model)
+Now that we have run our code several times, we might be wondering if the model can be further improved.
+1. We can try to increase the number of epochs.
+Having 20 epochs, as we previously had, is usually not enough.
+Increasing the number of epochs naturally makes the learning longer, but as you probably observed, the results are often much better.
+2. Other hyperparameters you might consider changing are: the batch size 
+
+
