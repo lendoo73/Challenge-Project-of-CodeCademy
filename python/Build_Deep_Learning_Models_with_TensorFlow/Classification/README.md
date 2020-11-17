@@ -131,3 +131,13 @@ my_model.add(Dense(
 2. We also need to decide which metrics to use to evaluate our model. 
 For classification, we usually use accuracy. 
 Accuracy calculates how often predictions equal labels and is expressed in percentages.
+3.  We will use Adam as our optimizer.
+```
+my_model.compile(
+  loss = "categorical_crossentropy", 
+  optimizer = "adam", 
+  metrics = ["accuracy"]
+)
+
+We are now ready to train our model.
+```
