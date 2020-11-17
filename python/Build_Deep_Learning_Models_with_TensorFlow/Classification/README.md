@@ -138,6 +138,5 @@ my_model.compile(
   optimizer = "adam", 
   metrics = ["accuracy"]
 )
-
-We are now ready to train our model.
 ```
+We are now ready to train our model.
