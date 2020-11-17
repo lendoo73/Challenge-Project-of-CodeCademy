@@ -30,8 +30,8 @@ le = LabelEncoder()
 y_train=le.fit_transform(y_train.astype(str))
 y_test=le.transform(y_test.astype(str))
 #convert the integer encoded labels into binary vectors
-y_train = tensorflow.keras.utils.to_categorical(y_train, dtype = 'int64')
-y_test = tensorflow.keras.utils.to_categorical(y_test, dtype = 'int64')
+y_train = tensorflow.keras.utils.to_categorical(y_train, dtype = "int64")
+y_test = tensorflow.keras.utils.to_categorical(y_test, dtype = "int64")
 
 #design the model
 model = Sequential()
