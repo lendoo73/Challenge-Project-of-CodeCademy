@@ -113,6 +113,21 @@ my_model.add(
 )
 ```
 ### Set the output layer:
+For regression, we don’t use any activation function in the final layer because we needed to predict a number without any transformations. 
+However, for classification, the desired output is a vector of categorical probabilities.
+To have this vector as an output, we need to use the `softmax` activation function that outputs a vector with elements having values between 0 and 1 and that sum to 1 
+(just as all the probabilities of all outcomes for a random variable must sum up to 1).
+In the case of a binary classification problem, a `sigmoid` activation function can also be used in the output layer but paired with the `binary_crossentropy` loss.
+Since we have 3 classes to predict in our glass production data, the final `softmax` layer must have 3 units:
 ```
+my_model.add(Dense(
+  3,                            # the output layer is a softmax with 3 units
+  activation = "softmax")
+)
 ```
 
+## [4. Setting the optimizer](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-classification/lessons/classification-neural-networks/exercises/setting-optimizer-multiclass)
+1. To specify the use of cross-entropy when optimizing the model, we need to set the `loss` parameter to `categorical_crossentropy` of the `Model.compile()` method.
+2. We also need to decide which metrics to use to evaluate our model. 
+For classification, we usually use accuracy. 
+Accuracy calculates how often predictions equal labels and is expressed in percentages.
