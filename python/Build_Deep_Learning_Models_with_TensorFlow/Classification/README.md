@@ -103,7 +103,7 @@ my_model.add(
 ```
 ### Set the hidden layers:
 ```
-from tensorflow.keras.layers import  Dense
+from tensorflow.keras.layers import Dense
 
 my_model.add(
   Dense(
