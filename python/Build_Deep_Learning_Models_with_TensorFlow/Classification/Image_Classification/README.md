@@ -9,3 +9,4 @@ At a high-level, this is very similar to our approach for classifying non-image 
 
 Now, our features are going to come from image pixels.
 Each image will be 256 pixels tall and 256 pixels wide, and each pixel has a value between 0 (black) - 255 (white).
+![X-ray image](xray_diagram_labeled.png)
