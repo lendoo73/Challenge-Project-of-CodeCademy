@@ -34,6 +34,19 @@ my_augmented_image_data_generator = ImageDataGenerator(vertical_flip = True)
 If we use this ImageDataGenerator to load images, it will randomly flip some of those images upside down.
 
 # [Loading Image Data](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/loading-image-data)
-
-
+Now, we can use the ImageDataGenerator object that we just created to load and batch our data:
+```
+training_data_generator.flow_from_directory(
+  "my_data_directory",
+  class_mode = "categorical",
+  color_mode = "rgb,
+  target_size = (128, 128),
+  batch_size = 32
+)
+```
+* `directory`: A string that defines the path to the folder containing our training data.
+class_mode : How we should represent the labels in our data. “For example, we can set this to "categorical" to return our labels as one-hot arrays, with a 1 in the correct class slot.
+color_mode : Specifies the type of image. For example, we set this to "grayscale" for black and white images, or to "rgb" (Red-Green-Blue) for color images.
+target_size : A tuple specifying the height and width of our image. Every image in the directory will be resized into this shape.
+batch_size : The batch size of our data.
 
