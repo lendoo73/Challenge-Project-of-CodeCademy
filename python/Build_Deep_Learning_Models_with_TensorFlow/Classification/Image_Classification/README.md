@@ -83,4 +83,36 @@ Each new “pixel” results from applying the filter to that location in the or
 * Convolution can reduce the size of an input image using only a few parameters.
 * Filters compute new features by only combining features that are near each other in the image. 
 This operation encourages the model to look for local patterns (e.g., edges and objects).
+* Convolutional layers will produce similar outputs even when the objects in an image are translated.
+This is because the same filters are applied across the entire image.
+
+## [Configuring a Convolutional Layer - Filters](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/configuring-a-convolutional-layer-filters)
+In Keras, we can define a `Conv2D` layer to handle the forward and backward passes of convolution.
+```
+#Defines a convolutional layer with 4 filters, each of size 5 by 5:ó
+model.add(tf.keras.layers.Conv2D(
+  4, 
+  5, 
+  activation = "relu"
+))  
+```
+When defining a convolutional layer, we can specify the number and size of the filters that we convolve across each image.
+
+### Number of Filters
+When using convolutional layers, we don’t just convolve one filter.
+We convolve each of these in turn to produce a new set of features. 
+Then we stack these outputs (one for each filter) together in a new “image.”
+
+Our output tensor is then (`batch_size`, `new height`, `new width`, `number of filters`).
+We call this last dimension number of channels ( or feature maps ). 
+These are the result of applying a single filter across the entire image.
+
+### Filter Size
+Each filter has three dimensions: `[Height, Width, Input Channels]`
+* Height: the height of our filter (in pixels)
+* Width: the width of our filter (also in pixels)
+* Input Channels: The number of input channels. 
+- In a black and white image, there is 1 input channel (grayscale). 
+- In an RGB image, there are three input channels. 
+
 
