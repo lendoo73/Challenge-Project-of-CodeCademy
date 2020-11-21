@@ -36,7 +36,7 @@ If we use this ImageDataGenerator to load images, it will randomly flip some of 
 # [Loading Image Data](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/loading-image-data)
 Now, we can use the ImageDataGenerator object that we just created to load and batch our data:
 ```
-training_data_generator.flow_from_directory(
+training_iterator = training_data_generator.flow_from_directory(
   "my_data_directory",
   class_mode = "categorical",
   color_mode = "rgb,
@@ -45,8 +45,28 @@ training_data_generator.flow_from_directory(
 )
 ```
 * `directory`: A string that defines the path to the folder containing our training data.
-class_mode : How we should represent the labels in our data. “For example, we can set this to "categorical" to return our labels as one-hot arrays, with a 1 in the correct class slot.
-color_mode : Specifies the type of image. For example, we set this to "grayscale" for black and white images, or to "rgb" (Red-Green-Blue) for color images.
-target_size : A tuple specifying the height and width of our image. Every image in the directory will be resized into this shape.
-batch_size : The batch size of our data.
+* `class_mode`: How we should represent the labels in our data. “For example, we can set this to `"categorical"` to return our labels as one-hot arrays, with a `1` in the correct class slot.
+* `color_mode`: Specifies the type of image. For example, we set this to `"grayscale"` for black and white images, or to `"rgb"` (Red-Green-Blue) for color images.
+* `target_size`: A tuple specifying the height and width of our image. Every image in the directory will be resized into this shape.
+* `batch_size`: The batch size of our data.
+
+The resulting `training_iterator` variable is a `DirectoryIterator` object. We can pass this object directly to `model.fit()` to train our model on our training data.
+
+# [Modifying our Feed-Forward Classification Model](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/modifying-our-feed-forward-classification-model)
+One way to classify image data is to treat an image as a vector of pixels.
+
+To do this, we need to:
+1. Change the shape of our input layer model to accept our image data. Now, our input shape will be (`image height`, `image width`, `image channels`). 
+For example, if our data were composed of 512x512 pixel RGB images, we add an input shape as follows:
+```
+model.add(tf.keras.Input(shape = (512, 512, 3)))
+```
+2. Add a `Flatten()` layer to “flatten” our input image into a single vector.
+`Flatten()` layer allows us to preserve the batch size of data, but combine the other dimensions of the image (height, width, image channels) into a single, lengthy feature vector.
+We can then pass this output to a `Dense()` layer.
+```
+model.add(tf.keras.layers.Flatten())
+model.add(tf.keras.layers.Dense( ... ))
+```
+
 
