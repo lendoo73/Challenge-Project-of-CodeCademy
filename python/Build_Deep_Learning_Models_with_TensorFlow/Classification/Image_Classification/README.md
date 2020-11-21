@@ -112,7 +112,7 @@ Each filter has three dimensions: `[Height, Width, Input Channels]`
 * Height: the height of our filter (in pixels)
 * Width: the width of our filter (also in pixels)
 * Input Channels: The number of input channels. 
-- In a black and white image, there is 1 input channel (grayscale). 
-- In an RGB image, there are three input channels. 
+  * In a black and white image, there is 1 input channel (grayscale). 
+  * In an RGB image, there are three input channels. 
 
 
