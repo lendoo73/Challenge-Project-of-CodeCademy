@@ -119,6 +119,6 @@ We don’t have control over this dimension, Keras takes care of this last dimen
 Increasing height or width increases the number of pixels that a filter can pay attention to at each step in the convolution. 
 However, doing so also increases the number of learnable parameters. 
 People commonly use filters of size 5x5 and 3x3.  
-In total, the number of parameters in a convolution layer is:
+In total, the number of parameters in a convolution layer is:   
   *Number of filters × (Input Channels × Height × Width + 1)*
 
