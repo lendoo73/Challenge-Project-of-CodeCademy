@@ -120,6 +120,6 @@ Increasing height or width increases the number of pixels that a filter can pay 
 However, doing so also increases the number of learnable parameters. 
 People commonly use filters of size 5x5 and 3x3.
 
-In total, the number of parameters in a convolution layer is:
-#### *Number of filters × (Input Channels × Height × Width + 1)*
+In total, the number of parameters in a convolution layer is:   
+<font size="6">Number of filters × (Input Channels × Height × Width + 1)</font>
 
