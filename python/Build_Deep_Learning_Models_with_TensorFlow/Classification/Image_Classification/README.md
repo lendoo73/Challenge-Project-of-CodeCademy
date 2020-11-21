@@ -114,5 +114,6 @@ Each filter has three dimensions: `[Height, Width, Input Channels]`
 * Input Channels: The number of input channels. 
   * In a black and white image, there is 1 input channel (grayscale). 
   * In an RGB image, there are three input channels. 
+We don’t have control over this dimension, Keras takes care of this last dimension for us.
 
 
