@@ -123,3 +123,57 @@ In total, the number of parameters in a convolution layer is:
 > *Number of filters × (Input Channels × Height × Width + 1)*
 
 Every filter has height, width, and thickness (The number of input channels), along with a bias term.
+
+## [Configuring a Convolutional Layer - Stride and Padding](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/configuring-a-convolutional-layer-stride-and-padding)
+Two other hyperparameters in a convolutional layer are *Stride* and *Padding*.
+
+### Stride
+The stride hyperparameter is how much we move the filter each time we apply it. 
+The default stride is 1, meaning that we move the filter across the image 1-pixel at a time.
+When we reach the end of a row in the image, we then go to the next one.
+If we use a stride greater than 1, we do not apply our filter centered on every pixel. 
+Instead, we move the filter multiple pixels at a time.
+
+For example, if strides = 2, we move the filter two columns over at a time, and then skip every other row.
+
+We can set the stride to any integer.
+```
+#Adds a Conv2D layer with 8 filters, each size 5x5, and uses a stride of 3:
+model.add(tf.keras.layers.Conv2D(
+  8, 
+  5,
+  strides = 3,
+  activation = "relu"
+))
+```
+Larger strides allow us to decrease the size of our output.
+In the case where our stride=2, we apply our filter to every other pixel. 
+As a result, we will halve the height and width of our output.
+
+### Padding
+The padding hyperparameter defines what we do once our filter gets to the end of a row/column.
+In other words: “what happens when we run out of image?”
+There are two main methods for what to do here:
+* valid padding: We just stop.
+The default option is to just stop when our kernel moves off the image. 
+* same padding: We keep going.
+Another option is to pad our input by surrounding our input with zeros.
+
+We can use “same” padding by setting the padding parameter:
+```
+#Adds a Conv2D layer with 8 filters, each size 5x5, and uses a stride of 3:
+model.add(tf.keras.layers.Conv2D(
+  8, 
+  5,
+  strides = 3,
+  padding = "same",
+  activation = "relu"
+))
+```
+
+
+
+
+
+
+
