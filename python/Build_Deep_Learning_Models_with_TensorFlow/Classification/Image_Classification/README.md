@@ -197,7 +197,7 @@ model.add(tf.keras.layers.Conv2D(2, 3, strides = 2, activation = "relu"))
 Like with dense layers, the output of one convolutional layer can be passed as input to another.
 The number of filters used in the previous layer becomes the number of channels that we input into the next!
 
-## [Pooling](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/pooling)
+# [Pooling](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/pooling)
 Another part of Convolutional Networks is Pooling Layers:
 layers that pool local information to reduce the dimensionality of intermediate convolutional outputs.
 
@@ -206,3 +206,41 @@ There are many different types of pooling layer, but the most common is called M
 We can specify the stride and padding in a max pooling layer.
 * However, instead of multiplying each image patch by a filter, we replace the patch with its maximum value.
 ![pooling](Max-Pooling.webp)
+
+For example, we can define a max pooling layer that will move a 3x3 window across the input, with a stride of 3 and valid padding:
+```
+max_pool_2d = tf.keras.layers.MaxPooling2D(
+  pool_size = (3, 3),
+  strides = (3, 3), 
+  padding = "valid"
+)
+```
+Beyond helping reduce the size of hidden layers (and reducing overfitting), max pooling layers have another useful property: they provide some amount of translational invariance.
+Even if we move around objects in the input image, the output will be the same.
+This is very useful for classification.
+
+# [Training the Model](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/training-the-model)
+We have do do three additional things:
+* Define another `ImageDataGenerator` and use it to load our validation data.
+* Compile our model with an optimizer, metric, and a loss function.
+* Train our model using `model.fit()`.
+
+## Validation Data Generator
+We have already defined an `ImageDataGenerator` called `training_data_generator`.
+
+Now, we need another ImageDataGenerator to load our validation data.
+Like with our training data, we are going to need to normalize our pixels.
+However, unlike for our training data, we will not augment the validation data with random shifts.
+
+## Loss, Optimizer, and Metrics
+Because our labels are onehot (`[1,0]` and `[0,1]`), we will use `keras.losses.CategoricalCrossentropy`.
+We will optimize this loss using the `Adam` optimizer.
+Because our dateset is balanced, accuracy is a meaningful metric. 
+We will also include AUC (area under the ROC curve). 
+An ROC curve gives us the relationship between our true positive rate and our false positive rate.
+Like with accuracy, we want our AUC to be as close to `1.0` as possible.
+
+## Training the Model
+To train our model, we have to call `model.fit()` on our training data `DirectoryIterator` and validation data `DirectoryIterator`.
+
+To reap the benefits of data augmentation, we will iterate over our training data five times (five epochs).
