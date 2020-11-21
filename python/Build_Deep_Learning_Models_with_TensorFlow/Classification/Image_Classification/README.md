@@ -205,4 +205,4 @@ There are many different types of pooling layer, but the most common is called M
 * Like in convolution, we move windows of specified size across our input.
 We can specify the stride and padding in a max pooling layer.
 * However, instead of multiplying each image patch by a filter, we replace the patch with its maximum value.
-
+![pooling](Max-Pooling.webp)
