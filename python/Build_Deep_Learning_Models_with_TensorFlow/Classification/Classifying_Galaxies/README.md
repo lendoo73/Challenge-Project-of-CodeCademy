@@ -12,3 +12,4 @@ a crowd-sourced project devoted to annotating galaxies in support of scientific 
 
 You will identify “odd” properties of galaxies. The data falls into four classes:
 * [1,0,0,0] - Galaxies with no identifying characteristics.
+![regular galaxies](regular_galaxies.png)
