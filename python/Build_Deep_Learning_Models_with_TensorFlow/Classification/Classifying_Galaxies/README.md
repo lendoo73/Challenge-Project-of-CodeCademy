@@ -9,3 +9,6 @@ Additionally, scientists are usually interested in subsets of the data, like gal
 In this project, you will build a neural network to classify deep-space galaxies. 
 You will be using image data curated by [Galaxy Zoo](https://www.zooniverse.org/projects/zookeeper/galaxy-zoo/), 
 a crowd-sourced project devoted to annotating galaxies in support of scientific discovery.
+
+You will identify “odd” properties of galaxies. The data falls into four classes:
+* [1,0,0,0] - Galaxies with no identifying characteristics.
