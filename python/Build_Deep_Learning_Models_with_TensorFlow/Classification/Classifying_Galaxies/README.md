@@ -13,3 +13,9 @@ a crowd-sourced project devoted to annotating galaxies in support of scientific 
 You will identify “odd” properties of galaxies. The data falls into four classes:
 * [1,0,0,0] - Galaxies with no identifying characteristics.
 ![regular galaxies](regular_galaxies.png)
+* [0,1,0,0] - Galaxies with rings.
+![ringed galaxies](ringed_galaxies.png)
+* [0,0,1,0] - Galactic mergers.
+![merger galaxies](merger_galaxies.png)
+* [0,0,0,1] - “Other,” Irregular celestial bodies.
+![other galaxies](other_galaxies.png)
