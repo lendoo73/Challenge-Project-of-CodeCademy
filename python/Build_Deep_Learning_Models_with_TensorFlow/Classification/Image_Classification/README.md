@@ -69,4 +69,18 @@ model.add(tf.keras.layers.Flatten())
 model.add(tf.keras.layers.Dense( ... ))
 ```
 
+# [A Better Alternative: Convolutional Neural Networks](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/a-better-alternative-convolutional-neural-networks)
+*Convolutional Neural Networks (CNNs)* use layers specifically designed for image data. 
+These layers capture local relationships between nearby features in an image.
+
+Previously, in our feed-forward model, we multiplied our normalized pixels by a large weight matrix (of shape (65536, 100)) to generate our next set of features.
+
+However, when we use a convolutional layer, we learn a set of smaller weight tensors, called *filters* (also known as *kernels*).
+We move each of these filters (i.e. convolve them) across the height and width of our input, to generate a new “image” of features.
+Each new “pixel” results from applying the filter to that location in the original image.
+
+## Why do convolution-based approaches work well for image data?
+* Convolution can reduce the size of an input image using only a few parameters.
+* Filters compute new features by only combining features that are near each other in the image. 
+This operation encourages the model to look for local patterns (e.g., edges and objects).
 
