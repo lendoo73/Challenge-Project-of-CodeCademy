@@ -171,9 +171,38 @@ model.add(tf.keras.layers.Conv2D(
 ))
 ```
 
+## [Adding Convolutional Layers to Your Model](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/adding-a-convolutional-layer-to-your-model)
 
+### Adding One Convolutional Layer
+Now, we can modify our feed-forward image classification code to use a convolutional layer:
+* We are going to replace the first two Dense layers with a Conv2D layer.
+* Then, we want to move the Flatten layer between the convolutional and last dense layer.
+Because dense layers apply their matrix to the dimension, we will always need to flatten the output of convolutional layers before passing them into a dense layer.
 
+### Stacking Convolutional Layers
+We can stack many layers to learn richer combinations of features.
+We can stack convolutional layers the same way we stacked dense layers.
 
+For example, we can stack three convolutional layers with distinct filter shapes and strides:
+```
+# 8 5x5 filters, with strides of 3
+model.add(tf.keras.layers.Conv2D(8, 5, strides = 3, activation = "relu"))
+ 
+# 4 3x3 filters, with strides of 3
+model.add(tf.keras.layers.Conv2D(4, 3, strides = 3, activation = "relu"))
+ 
+# 2 2x2 filters, with strides of 2
+model.add(tf.keras.layers.Conv2D(2, 3, strides = 2, activation = "relu"))
+```
+Like with dense layers, the output of one convolutional layer can be passed as input to another.
+The number of filters used in the previous layer becomes the number of channels that we input into the next!
 
+## [Pooling](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/pooling)
+Another part of Convolutional Networks is Pooling Layers:
+layers that pool local information to reduce the dimensionality of intermediate convolutional outputs.
 
+There are many different types of pooling layer, but the most common is called Max pooling:
+* Like in convolution, we move windows of specified size across our input.
+We can specify the stride and padding in a max pooling layer.
+* However, instead of multiplying each image patch by a filter, we replace the patch with its maximum value.
 
