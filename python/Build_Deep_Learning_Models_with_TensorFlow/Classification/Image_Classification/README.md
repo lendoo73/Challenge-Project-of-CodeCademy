@@ -121,4 +121,5 @@ However, doing so also increases the number of learnable parameters.
 People commonly use filters of size 5x5 and 3x3.  
 In total, the number of parameters in a convolution layer is:   
 > *Number of filters × (Input Channels × Height × Width + 1)*
+
 Every filter has height, width, and thickness (The number of input channels), along with a bias term.
