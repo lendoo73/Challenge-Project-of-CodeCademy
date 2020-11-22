@@ -89,10 +89,10 @@ This is because the same filters are applied across the entire image.
 ## [Configuring a Convolutional Layer - Filters](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-classification-track/modules/dlsp-image-classification/lessons/image-classification/exercises/configuring-a-convolutional-layer-filters)
 In Keras, we can define a `Conv2D` layer to handle the forward and backward passes of convolution.
 ```
-#Defines a convolutional layer with 4 filters, each of size 5 by 5:ó
+# Defines a convolutional layer with 4 filters, each of size 5 by 5:
 model.add(tf.keras.layers.Conv2D(
-  4, 
-  5, 
+  4,                      # number of filters
+  5,                      # filter size: 5 * 5
   activation = "relu"
 ))  
 ```
