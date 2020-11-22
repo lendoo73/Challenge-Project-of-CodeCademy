@@ -21,7 +21,8 @@ stop = EarlyStopping(
   monitor = "val_loss", # we are monitoring the validation loss to decide when to stop the training
   mode = "min",         # we seek minimal loss
   verbose = 1, 
-  patience = 40         # if the learning reaches a plateau, it will continue for 40 more epochs in case the plateau leads to improved performance
+  patience = 40         # if the learning reaches a plateau, 
+                        # it will continue for 40 more epochs in case the plateau leads to improved performance
 )
  
 history = model.fit(
