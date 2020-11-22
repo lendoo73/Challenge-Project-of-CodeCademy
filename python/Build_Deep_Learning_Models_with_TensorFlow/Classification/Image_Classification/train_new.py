@@ -82,8 +82,9 @@ model.compile(
 print("\nTraining model...")
 
 model.fit(
-        training_iterator,
-        steps_per_epoch=len(training_data)/BATCH_SIZE, #training_iterator.samples/BATCH_SIZE,
-        epochs=4,
-       validation_data=validation_iterator,
-        validation_steps=len(validation_data)/BATCH_SIZE) 
+  training_iterator,
+  steps_per_epoch=len(training_data)/BATCH_SIZE, #training_iterator.samples/BATCH_SIZE,
+  epochs=4,
+  validation_data=validation_iterator,
+  validation_steps=len(validation_data)/BATCH_SIZE
+) 
