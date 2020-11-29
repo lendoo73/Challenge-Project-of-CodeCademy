@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import InputLayer
+from tensorflow.keras.layers import Input   Layer
 from tensorflow.keras.layers import Dropout
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
@@ -30,33 +30,15 @@ def design_model(learning_rate):
     model.add(InputLayer(input_shape = (features_train_scaled.shape[1],)))
     
     # Set the hidden layers:
-    model.add(Dense(
-        1024, 
-        activation = "relu" 
-    ))
-
-    model.add(Dense(
-        16, 
-        activation = "relu" 
-    ))
-    #model.add(Dropout(0.3))
-
-    model.add(Dense(
-        16, 
-        activation = "relu" 
-    ))
-    #model.add(Dropout(0.3))
-    
-    model.add(Dense(
-        16, 
-        activation = "relu" 
-    ))
-
+    model.add(Dense(256, activation = "relu"))
+    model.add(Dense(128, activation = "relu"))
+    #model.add(Dropout(0.1))
+    model.add(Dense(64, activation = "relu"))
+    model.add(Dense(32, activation = "relu"))
+    model.add(Dense(16, activation = "relu"))
+    model.add(Dense(8, activation = "relu"))
     # Set the output layer:
-    model.add(Dense(
-        8,
-        activation = "softmax"
-    ))
+    model.add(Dense(8, activation = "softmax"))
     opt = Adam(learning_rate = learning_rate)
     model.compile(
         loss = "sparse_categorical_crossentropy",  
