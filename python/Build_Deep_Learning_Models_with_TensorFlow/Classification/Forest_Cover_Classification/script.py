@@ -1,12 +1,12 @@
 import pprint
-from model import fit_model
-from visualize import plot_accuracy, plot_heatmap
-from report import class_names
+# from model import fit_model
+# from visualize import plot_accuracy, plot_heatmap
+# from report import class_names
 
-learning_rate = 0.0001
+learning_rate = 0.00005
 # Too many epochs can lead to overfitting, and too few to underfitting. 
-num_epochs = 100
-batch_size = 4096
+num_epochs = 200
+batch_size = 1024
 
 history, features_test, labels_test = fit_model(learning_rate, num_epochs, batch_size)
 #pprint.pprint(history.__dict__)
