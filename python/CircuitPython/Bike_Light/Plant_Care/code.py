@@ -4,7 +4,6 @@ import board
 
 OFF = (0, 0, 0)
 WARNING = (96, 185, 187)
-GREEN = (0, 255, 0)
 A1 = board.A1
 touch = touchio.TouchIn(A1)
 
