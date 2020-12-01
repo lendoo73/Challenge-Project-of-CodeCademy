@@ -22,7 +22,7 @@ I have created different folders for different programming languages.
     <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_the_Basics_of_Blockchain_with_Python">Learn the Basics of Blockchain with Python</a></li>
     <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_the_Watson_API">Learn the Watson API</a></li>
     <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Build_Deep_Learning_Models_with_TensorFlow">Build Deep Learning Models with TensorFlow</a></li>
-    
+    <li><a href="https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/CircuitPython">Learn Hardware Programming with CircuitPython</a></li>
     
   </ul>
 </details>
