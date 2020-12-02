@@ -11,4 +11,4 @@ When making predictions for price, our dependent variable, we’ll want to use m
 To do this, we’ll use Multiple Linear Regression. 
 **Multiple Linear Regression** uses two or more independent variables to predict the values of the dependent variable.
 It is based on the following equation:
-### *y = b + m<sub>1</sub>x<sub>1</sub>*
+### *y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub> + ... + m<sub>n</sub>x<sub>n</sub>*
