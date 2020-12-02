@@ -8,3 +8,7 @@ In predicting the price of a home, one factor to consider is the size of the hom
 The relationship between those two variables, price and size, is important, but there are other variables that factor in to pricing a home: 
 location, air quality, demographics, parking, and more.
 When making predictions for price, our dependent variable, we’ll want to use multiple independent variables. 
+To do this, we’ll use Multiple Linear Regression. 
+**Multiple Linear Regression** uses two or more independent variables to predict the values of the dependent variable.
+It is based on the following equation:
+### y = b + m<sub>1</sub>x<sub>1</sub>
