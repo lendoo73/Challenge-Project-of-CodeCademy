@@ -12,3 +12,25 @@ To do this, we’ll use Multiple Linear Regression.
 **Multiple Linear Regression** uses two or more independent variables to predict the values of the dependent variable.
 It is based on the following equation:
 ### *y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub> + ... + m<sub>n</sub>x<sub>n</sub>*
+
+# [Training Set vs. Test Set](https://www.codecademy.com/courses/machine-learning/lessons/multiple-linear-regression-streeteasy/exercises/training-vs-test)
+We have to split our dataset into:
+* **Training set:** the data used to fit the model
+* **Test set:** the data partitioned away at the very start of the experiment (to provide an unbiased evaluation of the model)
+
+ Putting 80% of your data in the training set and 20% of your data in the test set is a good place to start.
+ ```
+ from sklearn.model_selection import train_test_split
+ 
+x_train, x_test, y_train, y_test = train_test_split(
+  x, 
+  y, 
+  train_size = 0.8, 
+  test_size = 0.2
+)
+ ```
+* `train_size`: the proportion of the dataset to include in the train split (between 0.0 and 1.0)
+* `test_size`: the proportion of the dataset to include in the test split (between 0.0 and 1.0)
+* `random_state`: the seed used by the random number generator [optional]
+
+To learn more, here is a [Training Set vs Validation Set vs Test Set article](https://www.codecademy.com/articles/training-set-vs-validation-set-vs-test-set).
