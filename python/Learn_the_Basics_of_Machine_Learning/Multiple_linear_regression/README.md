@@ -34,3 +34,37 @@ x_train, x_test, y_train, y_test = train_test_split(
 * `random_state`: the seed used by the random number generator [optional]
 
 To learn more, here is a [Training Set vs Validation Set vs Test Set article](https://www.codecademy.com/articles/training-set-vs-validation-set-vs-test-set).
+
+# [Multiple Linear Regression: Scikit-Learn](https://www.codecademy.com/courses/machine-learning/lessons/multiple-linear-regression-streeteasy/exercises/scikit-learn)
+The steps for multiple linear regression in scikit-learn are identical to the steps for simple linear regression. 
+We need to import LinearRegression from the linear_model module:
+```
+from sklearn.linear_model import LinearRegression
+```
+Then, create a LinearRegression model, and then fit it to your x_train and y_train data:
+```
+mlr = LinearRegression()
+ 
+mlr.fit(x_train, y_train)
+```
+We can also use the .predict() function to pass in x-values. It returns the y-values that this plane would predict:
+```
+y_predicted = mlr.predict(x_test)
+```
+
+# [Visualizing Results with Matplotlib](https://www.codecademy.com/courses/machine-learning/lessons/multiple-linear-regression-streeteasy/exercises/visualization)
+Graphs can be created using Matplotlib’s pyplot module. 
+```
+# Create a scatter plot
+plt.scatter(x, y, alpha=0.4)
+ 
+# Create x-axis label and y-axis label
+plt.xlabel("the x-axis label")
+plt.ylabel("the y-axis label")
+ 
+# Create a title
+plt.title("title!")
+ 
+# Show the plot
+plt.show()
+```
