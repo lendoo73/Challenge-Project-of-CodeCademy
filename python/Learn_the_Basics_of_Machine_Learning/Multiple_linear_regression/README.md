@@ -130,3 +130,9 @@ Similarly, a positive linear relationship means that as X values increase, Y val
 Graphically, when you see a downward trend, it means a negative linear relationship exists. 
 When you find an upward trend, it indicates a positive linear relationship.  
 ![positive and negative correlations](correlations.webp)
+
+# [Evaluating the Model's Accuracy](https://www.codecademy.com/courses/machine-learning/lessons/multiple-linear-regression-streeteasy/exercises/model-accuracy)
+When trying to evaluate the accuracy of our multiple linear regression model, one technique we can use is **Residual Analysis**.
+
+The difference between the actual value y, and the predicted value ŷ is the residual e.
+#### *e = y - ŷ*
