@@ -138,3 +138,7 @@ The difference between the actual value y, and the predicted value ŷ is the res
 #### *e = y - ŷ*
 * *y*: the actual rent
 * *ŷ*: the predicted rent
+
+`sklearn`‘s `linear_model.LinearRegression` comes with a `.score()` method that returns the coefficient of determination R² of the prediction.  
+The coefficient R² is defined as:  
+1 -  \frac{u}{v} 
