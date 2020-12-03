@@ -73,5 +73,13 @@ plt.show()
 Now that we have implemented Multiple Linear Regression, we will learn how to tune and evaluate the model.
 
 ### Equation 6.1 
-The equation for multiple linear regression that uses two independent variables is this:  
-*y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub>*
+The equation for multiple linear regression that uses two independent variables:  
+#### *y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub>*
+
+### Equation 6.2 
+The equation for multiple linear regression that uses three independent variables:
+#### *y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub> + m<sub>3</sub>x<sub>3</sub>*
+
+### Equation 6.3 
+As a result, since multiple linear regression can use any number of independent variables, its general equation becomes:
+#### *y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub> + ... + m<sub>n</sub>x<sub>n</sub>*
