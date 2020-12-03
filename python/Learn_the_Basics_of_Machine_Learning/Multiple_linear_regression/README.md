@@ -159,3 +159,15 @@ This means that square feet, number of bedrooms and age of the building together
 
 The best possible R² is 1.00 (and it can be negative because the model can be arbitrarily worse). 
 Usually, a R² of 0.70 is considered good.
+
+# [Review](https://www.codecademy.com/courses/machine-learning/lessons/multiple-linear-regression-streeteasy/exercises/review)
+* **Multiple Linear Regression** uses two or more variables to make predictions about another variable:
+### *y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub> + ... + m<sub>n</sub>x<sub>n</sub>*
+* Multiple linear regression uses a set of independent variables and a dependent variable. 
+It uses these variables to learn how to find optimal parameters. 
+It takes a labeled dataset and learns from it. 
+Once we confirm that it’s learned correctly, we can then use it to make predictions by plugging in new `x` values.
+* **Residual Analysis** is used to evaluate the regression model’s accuracy. 
+In other words, it’s used to see if the model has learned the coefficients correctly.
+* Scikit-learn’s `linear_model.LinearRegression` comes with a `.score()` method that returns the coefficient of determination R² of the prediction. 
+The best score is `1.0`.
