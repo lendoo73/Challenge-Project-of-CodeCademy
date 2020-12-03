@@ -83,3 +83,8 @@ The equation for multiple linear regression that uses three independent variable
 ### Equation 6.3 
 As a result, since multiple linear regression can use any number of independent variables, its general equation becomes:
 #### *y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub> + ... + m<sub>n</sub>x<sub>n</sub>*
+
+* *m<sub>1</sub>, m<sub>2</sub>, m<sub>3</sub>, … m<sub>n</sub>* refer to the **coefficients**
+* *b* refers to the intercept that you want to find.  
+You can plug these values back into the equation to compute the predicted y values.
+
