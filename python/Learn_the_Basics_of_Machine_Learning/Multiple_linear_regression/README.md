@@ -129,3 +129,4 @@ Similarly, a positive linear relationship means that as X values increase, Y val
 
 Graphically, when you see a downward trend, it means a negative linear relationship exists. 
 When you find an upward trend, it indicates a positive linear relationship. 
+![positive and negative correlations](correlations.webp)
