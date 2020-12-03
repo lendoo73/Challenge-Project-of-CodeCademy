@@ -85,6 +85,47 @@ As a result, since multiple linear regression can use any number of independent 
 #### *y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub> + ... + m<sub>n</sub>x<sub>n</sub>*
 
 * *m<sub>1</sub>, m<sub>2</sub>, m<sub>3</sub>, … m<sub>n</sub>* refer to the **coefficients**
-* *b* refers to the intercept that you want to find.  
+* *b* refers to the intercept that you want to find.
+
 You can plug these values back into the equation to compute the predicted y values.
 
+The `.fit()` method gives the model two variables that are useful to us:
+* `.coef_`: contains the coefficients
+* `.intercept_`: contains the intercept
+
+Coefficients are most helpful in determining which independent variable carries more weight. 
+For example, a coefficient of -1.345 will impact the rent more than a coefficient of 0.238, with the former impacting prices negatively and latter positively.
+
+# [Correlations](https://www.codecademy.com/courses/machine-learning/lessons/multiple-linear-regression-streeteasy/exercises/correlations)
+In our Manhattan model, we used 14 variables, so there are 14 coefficients:
+```
+[[ 
+  -302.73009383            # bedrooms - number of bedrooms
+  1199.3859951             # bathrooms - number of bathrooms 
+  4.79976742               # size_sqft - size in square feet
+  -24.28993151             # min_to_subway - distance from subway station in minutes
+  24.19824177              # floor - floor number
+  -7.58272473              # building_age_yrs - building’s age in years
+  -140.90664773            # no_fee - has no broker fee (0 for fee, 1 for no fee)
+  48.85017415              # has_roofdeck - has roof deck (0 for no, 1 for yes)
+  191.4257324              # has_washer_dryer - has in-unit washer/dryer (0/1)
+  -151.11453388            # has_doorman - has doorman (0/1)
+  89.408889                # has_elevator - has elevator (0/1)
+  -57.89714551             # has_dishwasher - has dishwasher (0/1)
+  -19.31948556             # has_patio - has patio (0/1)
+  -38.92369828             # has_gym - has gym (0/1)
+]]
+```
+To see if there are any features that don’t affect price linearly, let’s graph the different features against `rent`.
+
+## Interpreting graphs
+In regression, the independent variables will either have
+* a *positive linear relationship* to the dependent variable,
+* a *negative linear relationship*,
+* or *no relationship*.
+
+A negative linear relationship means that as X values increase, Y values will decrease. 
+Similarly, a positive linear relationship means that as X values increase, Y values will also increase.
+
+Graphically, when you see a downward trend, it means a negative linear relationship exists. 
+When you find an upward trend, it indicates a positive linear relationship. 
