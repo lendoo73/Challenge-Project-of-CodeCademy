@@ -74,4 +74,4 @@ Now that we have implemented Multiple Linear Regression, we will learn how to tu
 
 ### Equation 6.1 
 The equation for multiple linear regression that uses two independent variables is this:  
-*y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub>
+*y = b + m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub>*
