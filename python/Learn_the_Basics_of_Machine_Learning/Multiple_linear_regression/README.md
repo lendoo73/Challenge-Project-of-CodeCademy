@@ -142,3 +142,20 @@ The difference between the actual value y, and the predicted value ŷ is the res
 `sklearn`‘s `linear_model.LinearRegression` comes with a `.score()` method that returns the coefficient of determination R² of the prediction.  
 The coefficient R² is defined as:  
 ![coefficient r2](coefficient_r_2.jpg)
+* *u*: is the residual sum of squares: `((y - y_predict) ** 2).sum()`
+* *v*: is the total sum of squares (TSS): `((y - y.mean()) ** 2).sum()`
+
+The TSS tells you how much variation there is in the y variable.
+
+R² is the percentage variation in y explained by all the x variables together.
+
+For example, say we are trying to predict `rent` based on the `size_sqft` and the `bedrooms` in the apartment and the R² for our model is 0.72 
+— that means that all the x variables (square feet and number of bedrooms) together explain 72% variation in y (`rent`).
+
+Now let’s say we add another x variable, building’s age, to our model. 
+By adding this third relevant x variable, the R² is expected to go up. 
+Let say the new R² is 0.95. 
+This means that square feet, number of bedrooms and age of the building together explain 95% of the variation in the rent.
+
+The best possible R² is 1.00 (and it can be negative because the model can be arbitrarily worse). 
+Usually, a R² of 0.70 is considered good.
