@@ -136,3 +136,5 @@ When trying to evaluate the accuracy of our multiple linear regression model, on
 
 The difference between the actual value y, and the predicted value ŷ is the residual e.
 #### *e = y - ŷ*
+* *y*: the actual rent
+* *ŷ*: the predicted rent
