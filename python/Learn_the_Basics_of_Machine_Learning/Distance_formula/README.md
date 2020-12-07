@@ -17,3 +17,5 @@ If we add up all of these squared differences and take the square root, we’ve 
 
 ![Euclidean formula](euclidean_formula.jpg)
 
+The image below shows a visual of Euclidean distance being calculated:
+![visua]ize calculation()
