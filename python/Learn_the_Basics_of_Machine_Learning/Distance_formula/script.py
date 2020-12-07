@@ -1,3 +1,5 @@
+from scipy.spatial import distance
+
 def equal_dimension(pt1, pt2):
   if len(pt1) == len(pt2):
     return True
@@ -38,14 +40,21 @@ print(euclidean_distance([1, 2], [4, 0]))
 print(euclidean_distance([5, 4, 3], [1, 7, 9]))
 print(euclidean_distance([2, 3, 4], [1, 2]))
 
-print("Manhattan distance:")
+print("\nManhattan distance:")
 print(manhattan_distance([1, 2], [4, 0]))
 print(manhattan_distance([5, 4, 3], [1, 7, 9]))
 print(manhattan_distance([2, 3, 4], [1, 2]))
 
-print("Hamming distance:")
+print("\nHamming distance:")
 print(hamming_distance([1, 2], [4, 0]))
 print(hamming_distance([5, 4, 3], [1, 7, 9]))
 print(hamming_distance([2, 3, 4], [1, 2]))
 print(hamming_distance([1, 2], [1, 100]))
 print(hamming_distance([5, 4, 9], [1, 7, 9]))
+
+print("\nEuclidean Distance (scipy):")
+print(distance.euclidean([1, 2], [4, 0]))
+print("Manhattan Distance (scipy - Cityblock):")
+print(distance.cityblock([1, 2], [4, 0]))
+print("Hamming Distance (scipy):")
+print(distance.hamming([5, 4, 9], [1, 7, 9]))
