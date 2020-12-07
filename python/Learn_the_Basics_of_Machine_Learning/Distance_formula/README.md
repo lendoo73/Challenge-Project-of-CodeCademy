@@ -19,10 +19,14 @@ If we add up all of these squared differences and take the square root, we’ve 
 
 The image below shows a visual of Euclidean distance being calculated:
 
-![visualize calculation](visualize_euclidean_calc.svg)
+![visualize euclidean calculation](visualize_euclidean_calc.svg)
 
 ## [Manhattan Distance](https://www.codecademy.com/courses/machine-learning/lessons/distance-formula/exercises/manhattan-distance)
 Rather than summing the squared difference between each dimension, we instead sum the absolute value of the difference between each dimension.
 It’s called Manhattan distance because it’s similar to how you might navigate when walking city blocks.
 
 ![Manhattan formula](manhattan_formula2.jpg)
+
+Take a look at the image below visualizing Manhattan Distance:
+
+![visualize manhattan calculation](visualize_manhattan_calc.svg)
