@@ -25,4 +25,4 @@ The image below shows a visual of Euclidean distance being calculated:
 Rather than summing the squared difference between each dimension, we instead sum the absolute value of the difference between each dimension.
 It’s called Manhattan distance because it’s similar to how you might navigate when walking city blocks.
 
-![Manhattan formula](manhattan_formula.jpg)
+![Manhattan formula](manhattan_formula2.jpg)
