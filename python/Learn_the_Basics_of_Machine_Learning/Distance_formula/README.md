@@ -30,3 +30,11 @@ It’s called Manhattan distance because it’s similar to how you might navigat
 Take a look at the image below visualizing Manhattan Distance:
 
 ![visualize manhattan calculation](visualize_manhattan_calc.svg)
+
+## [Hamming Distance](https://www.codecademy.com/courses/machine-learning/lessons/distance-formula/exercises/hamming-distance)
+Instead of finding the difference of each dimension, Hamming distance only cares about whether the dimensions are exactly equal.
+When finding the Hamming distance between two points, add one for every dimension that has different values.
+Hamming distance is used in spell checking algorithms.
+For example, the Hamming distance between the word “there” and the typo “thete” is one. 
+Each letter is a dimension, and each dimension has the same value except for one.
+
