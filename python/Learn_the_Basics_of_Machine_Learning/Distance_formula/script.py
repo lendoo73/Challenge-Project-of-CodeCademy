@@ -3,7 +3,6 @@ def equal_dimension(pt1, pt2):
     return True
 
 def euclidean_distance(pt1, pt2):
-  
   if not equal_dimension(pt1, pt2):
     return "ERROR: Different number of dimensions!"
 
