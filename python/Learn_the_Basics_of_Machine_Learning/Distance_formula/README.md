@@ -38,3 +38,9 @@ Hamming distance is used in spell checking algorithms.
 For example, the Hamming distance between the word “there” and the typo “thete” is one. 
 Each letter is a dimension, and each dimension has the same value except for one.
 
+## [SciPy Distances](https://www.codecademy.com/courses/machine-learning/lessons/distance-formula/exercises/review)
+* Euclidean Distance: `.euclidean()`
+* Manhattan Distance: `.cityblock()`; computing Manhattan distance is like asking how many blocks away you are from a point.
+* Hamming Distance: `.hamming()`; always return a number between 0 an 1. 
+Rather than summing the number of differences in dimensions, this implementation sums those differences and then divides by the total number of dimensions.
+In your implementation, the Hamming distance between `[1, 2, 3]` and `[7, 2, -10]` would be `2`. In scipy‘s version, it would be `2/3`.
