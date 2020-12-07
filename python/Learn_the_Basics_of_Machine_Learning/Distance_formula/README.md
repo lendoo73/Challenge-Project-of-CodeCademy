@@ -13,6 +13,6 @@ We can only find the difference between two points if they have the same number 
 
 ## [Euclidean Distance](https://www.codecademy.com/courses/machine-learning/lessons/distance-formula/exercises/euclidean-distance)
 To find the Euclidean distance between two points, we first calculate the squared distance between each dimension.
-If we add up all of these squared differences and take the square root, we’ve computed the Euclidean distance.  
+If we add up all of these squared differences and take the square root, we’ve computed the Euclidean distance.
 ![Euclidean formula](eucledian_formula.jpg)
 
