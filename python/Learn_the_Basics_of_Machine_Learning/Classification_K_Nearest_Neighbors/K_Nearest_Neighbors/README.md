@@ -40,4 +40,11 @@ We now have to find the distance between these two points in three dimensions.
 What if we’re not happy with just three dimensions?
 
 The generalized distance formula between points `x` and `y` is as follows:
+
 ![eucledian formula](../Distance_formula/eucledian_formula.jpg)
+
+Using this formula, we can find the K-Nearest Neighbors of a point in N-dimensional space!
+We now can use as much information about our movies as we want.
+```
+[(movie1[i] - movie2[i]) ** 2 for i in range(len(movie1))]) ** 0.5
+```
