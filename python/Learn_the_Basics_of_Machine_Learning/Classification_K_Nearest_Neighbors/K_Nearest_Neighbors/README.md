@@ -138,6 +138,7 @@ A single outlier could drastically determine the label of an unknown point.
 Our classifier has relied too heavily on the small quirks in the training data.
 
 If k is very large, our classifier will suffer from *underfitting*.
+Underfitting occurs when your classifier doesn’t pay enough attention to the small quirks in the training set.
 ```
 def find_validation_accuracy(training_set, training_labels, validation_set, validation_labels, k):
 
@@ -151,4 +152,22 @@ def find_validation_accuracy(training_set, training_labels, validation_set, vali
 
   return validation_error 
 ```
-Underfitting occurs when your classifier doesn’t pay enough attention to the small quirks in the training set.
+
+# [Using sklearn](https://www.codecademy.com/courses/machine-learning/lessons/knn/exercises/sklearn)
+`sklearn` is a Python library specifically used for Machine Learning.
+
+First, you need to create a KNeighborsClassifier object.
+The code below will create a classifier where k = 3:
+```
+from sklearn.neighbors import KNeighborsClassifier
+
+classifier = KNeighborsClassifier(n_neighbors = 3)
+```
+Next, we’ll need to train our classifier.
+The `.fit()` method takes two parameters: 
+* The first is a list of points, 
+* and the second is the labels associated with those points.
+
+Finally, after training the model, we can classify new points. 
+The `.predict()` method takes a list of points that you want to classify. 
+It returns a list of its guesses for those points.
