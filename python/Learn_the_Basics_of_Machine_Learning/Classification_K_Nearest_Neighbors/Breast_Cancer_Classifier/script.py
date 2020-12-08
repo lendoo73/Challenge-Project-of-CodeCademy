@@ -55,6 +55,7 @@ for k in k_list:
 print(f"The best K is: {best_K} with score: {best_score}")
 print(accuracies[55])
 
+# # Graphing the results:
 print("\n________________________________")
 print("Graphing the results:")
 plt.plot(k_list, accuracies)
