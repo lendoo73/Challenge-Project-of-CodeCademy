@@ -80,17 +80,36 @@ We want to find the k nearest neighbors of the unclassified point.
 In order to find the 5 nearest neighbors, we need to compare this new unclassified movie to every other movie in the dataset.
 This means we’re going to be using the distance formula again and again.
 We ultimately want to end up with a sorted list of distances and the movies associated with those distances.
+
+# [3. Count Neighbors](https://www.codecademy.com/courses/machine-learning/lessons/knn/exercises/count-neighbors)
+We’ve now found the k nearest neighbors, and have stored them in a list.
+
+Our goal now is to count the number of good movies and bad movies in the list of neighbors. 
+If more of the neighbors were good, then the algorithm will classify the unknown movie as good. Otherwise, it will classify it as bad.
+
+In order to find the class of each of the labels, we’ll need to look at our `movie_labels` dataset. For example, `movie_labels['Akira']` would give us `1` because Akira is classified as a good movie.
 ```
-def classify(unknown, dataset, k):
+def classify(unknown, dataset, labels, k):
   distances = []
-  
+
+  #Looping through all points in the dataset
   for title in dataset:
-    distance_to_point = distance(dataset[title], unknown)
+    movie = dataset[title]
+    distance_to_point = distance(movie, unknown)
+    #Adding the distance and point associated with that distance
     distances.append([distance_to_point, title])
-
   distances.sort()
+  #Taking only the k closest points
+  neighbors = distances[0:k]
+  
+  num_good = 0
+  num_bad = 0
 
-  neighbors = distances[ : k]
-
-  return neighbors
+  for movie in neighbors:
+    title = movie[1]
+    if labels[title] == 0:
+      num_bad += 1
+    else:
+      num_good +=1
+  return 1 if num_good > num_bad else 0
 ```
