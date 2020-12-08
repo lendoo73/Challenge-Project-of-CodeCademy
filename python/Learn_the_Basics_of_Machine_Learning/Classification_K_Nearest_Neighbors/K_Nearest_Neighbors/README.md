@@ -54,7 +54,7 @@ We’ll implement the three steps of the K-Nearest Neighbor Algorithm:
 * Find the k nearest neighbors
 * Classify the new point based on those neighbors
 
-# [Data with Different Scales: Normalization](https://www.codecademy.com/courses/machine-learning/lessons/knn/exercises/normalize)
+# [1. Data with Different Scales: Normalization](https://www.codecademy.com/courses/machine-learning/lessons/knn/exercises/normalize)
 When we added the dimension of budget, you might have realized there are some problems with the way our data currently looks.
 
 The maximum difference between two movies’ release dates is about 125 years (The Lumière Brothers were making movies in the 1890s).
@@ -71,4 +71,26 @@ def min_max_normalize(lst):
   normalized = []
 
   return [(val - minimum) / (maximum - minimum) for val in lst]
+```
+# [2. Finding the Nearest Neighbors](https://www.codecademy.com/courses/machine-learning/lessons/knn/exercises/find-neighbors)
+Now that our data has been normalized and we know how to find the distance between two points, we can begin classifying unknown data!
+
+We want to find the k nearest neighbors of the unclassified point.
+
+In order to find the 5 nearest neighbors, we need to compare this new unclassified movie to every other movie in the dataset.
+This means we’re going to be using the distance formula again and again.
+We ultimately want to end up with a sorted list of distances and the movies associated with those distances.
+```
+def classify(unknown, dataset, k):
+  distances = []
+  
+  for title in dataset:
+    distance_to_point = distance(dataset[title], unknown)
+    distances.append([distance_to_point, title])
+
+  distances.sort()
+
+  neighbors = distances[ : k]
+
+  return neighbors
 ```
