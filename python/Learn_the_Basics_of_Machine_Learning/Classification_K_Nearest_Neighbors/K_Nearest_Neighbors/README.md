@@ -48,3 +48,27 @@ We now can use as much information about our movies as we want.
 ```
 [(movie1[i] - movie2[i]) ** 2 for i in range(len(movie1))]) ** 0.5
 ```
+
+We’ll implement the three steps of the K-Nearest Neighbor Algorithm:
+* Normalize the data
+* Find the k nearest neighbors
+* Classify the new point based on those neighbors
+
+# [Data with Different Scales: Normalization](https://www.codecademy.com/courses/machine-learning/lessons/knn/exercises/normalize)
+When we added the dimension of budget, you might have realized there are some problems with the way our data currently looks.
+
+The maximum difference between two movies’ release dates is about 125 years (The Lumière Brothers were making movies in the 1890s).
+However, the difference between two movies’ budget can be millions of dollars.
+
+The problem is that the distance formula treats all dimensions equally, regardless of their scale. The difference in one year is exactly equal to the difference in one dollar of budget.
+
+The solution to this problem is to [normalize the data](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_the_Basics_of_Machine_Learning/Classification_K_Nearest_Neighbors/Normalization) so every value is between 0 and 1.
+We’re going to be using *min-max normalization*.
+```
+def min_max_normalize(lst):
+  minimum = min(lst)
+  maximum = max(lst)
+  normalized = []
+
+  return [(val - minimum) / (maximum - minimum) for val in lst]
+```
