@@ -28,4 +28,4 @@ Star Wars is 125 minutes long and was released in 1977.
 Raiders of the Lost Ark is 115 minutes long and was released in 1981.
 
 The distance between the movies is computed below:
-
+![formula](ST_RotLA.jpg)
