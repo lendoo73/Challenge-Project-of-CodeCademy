@@ -113,3 +113,42 @@ def classify(unknown, dataset, labels, k):
       num_good +=1
   return 1 if num_good > num_bad else 0
 ```
+
+# [Training and Validation Sets](https://www.codecademy.com/courses/machine-learning/lessons/knn/exercises/training-and-validation)
+We now need to report how effective our algorithm is.
+
+As with most machine learning algorithms, we have split our data into a training set and validation set.
+
+Once these sets are created, we will want to use every point in the validation set as input to the K Nearest Neighbor algorithm.
+We will take a movie from the validation set, compare it to all the movies in the training set, find the K Nearest Neighbors, and make a prediction.
+After making that prediction, we can then peek at the real answer (found in the validation labels) to see if our classifier got the answer correct.
+
+If we do this for every movie in the validation set, we can count the number of times the classifier got the answer right and the number of times it got it wrong.
+Using those two numbers, we can compute the validation accuracy.
+
+Validation accuracy will change depending on what K we use.
+
+# [Choosing K](https://www.codecademy.com/courses/machine-learning/lessons/knn/exercises/choosing-k)
+The validation accuracy changes as k changes.
+The first situation that will be useful to consider is when k is very small.
+Let’s say `k = 1`. We would expect the validation accuracy to be fairly low due to *overfitting*. 
+Overfitting occurs when you rely too heavily on your training data; you assume that data in the real world will always behave exactly like your training data.
+In the case of K-Nearest Neighbors, overfitting happens when you don’t consider enough neighbors.
+A single outlier could drastically determine the label of an unknown point.
+Our classifier has relied too heavily on the small quirks in the training data.
+
+If k is very large, our classifier will suffer from *underfitting*.
+```
+def find_validation_accuracy(training_set, training_labels, validation_set, validation_labels, k):
+
+  num_correct = 0
+
+  for title in validation_set:
+    guess = classify(validation_set[title], training_set, training_labels, k)
+    num_correct += 1 if guess == validation_labels[title] else 0
+
+  validation_error = num_correct / len(validation_set)
+
+  return validation_error 
+```
+Underfitting occurs when your classifier doesn’t pay enough attention to the small quirks in the training set.
