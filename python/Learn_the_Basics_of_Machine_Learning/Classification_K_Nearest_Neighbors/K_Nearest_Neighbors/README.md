@@ -17,4 +17,15 @@ Every “good” movie will have a class of `1`, while every bad movie will have
 
 # [Distance Between Points - 2D](https://www.codecademy.com/courses/machine-learning/lessons/knn/exercises/distance-two-d)
 We need to define what it means for two points to be close together or far apart. 
-To do this, we’re going to use the [Distance Formula]().
+To do this, we’re going to use the [Distance Formula](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_the_Basics_of_Machine_Learning/Classification_K_Nearest_Neighbors/Distance_formula).
+
+For this example, the data has two dimensions:
+* The length of the movie
+* The movie’s release date
+
+Consider Star Wars and Raiders of the Lost Ark. 
+Star Wars is 125 minutes long and was released in 1977. 
+Raiders of the Lost Ark is 115 minutes long and was released in 1981.
+
+The distance between the movies is computed below:
+
