@@ -29,3 +29,15 @@ Raiders of the Lost Ark is 115 minutes long and was released in 1981.
 
 The distance between the movies is computed below:
 ![formula](ST_RotLA.jpg)
+
+# [Distance Between Points - 3D](https://www.codecademy.com/courses/machine-learning/lessons/knn/exercises/distance-three-d)
+Making a movie rating predictor based on just the length and release date of movies is pretty limited. 
+There are so many more interesting pieces of data about movies that we could use! So let’s add another dimension.
+
+Let’s say this third dimension is the movie’s budget.
+We now have to find the distance between these two points in three dimensions.
+
+What if we’re not happy with just three dimensions?
+
+The generalized distance formula between points `x` and `y` is as follows:
+![eucledian formula](../Distance_formula/eucledian_formula.jpg)
