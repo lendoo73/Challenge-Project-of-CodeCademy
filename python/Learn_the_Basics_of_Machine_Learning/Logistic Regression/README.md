@@ -68,3 +68,8 @@ The loss function for Logistic Regression, known as **Log Loss**:
 * `h(z`<sup>`(i)`</sup>`)`: the sigmoid of the log-odds of sample `i`, which is the probability of sample `i` belonging to the positive class
 
 The goal of our Logistic Regression model is to find the feature coefficients and intercept, which shape the logistic function, that minimize log-loss for our training data!
+
+Let’s go ahead and break down our log-loss function into two separate parts so it begins to make more sense. 
+Consider the case when a data sample has class y = 1, or for our data when a student passed the exam. 
+The right-side of the equation drops out because we end up with `1 - 1` (or `0` => (1 - y<sup>(i)</sup>) ) multiplied by some value.
+The loss for that individual student becomes:
