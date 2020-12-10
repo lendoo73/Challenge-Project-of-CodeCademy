@@ -43,3 +43,5 @@ The Sigmoid Function is a special case of the more general Logistic Function, wh
 By plugging the log-odds into the Sigmoid Function, defined below, we map the log-odds `z˙˙ to the range `[0, 1]`.
 
 ![sigmoid function](sigmoid_function.jpg)
+
+* e<sup>-z</sup> is the exponential
