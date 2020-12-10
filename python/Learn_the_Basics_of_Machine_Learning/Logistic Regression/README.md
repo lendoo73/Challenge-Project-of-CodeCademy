@@ -24,3 +24,5 @@ In Logistic Regression, we make the same multiplication of feature coefficients 
 
 The log-odds are another way of expressing the probability of a sample belonging to the positive class, or a student passing the exam.
 In probability, we calculate the odds of an event occurring as follows:
+
+![odds](odds.jpg)
