@@ -62,5 +62,7 @@ The loss function for Logistic Regression, known as **Log Loss**:
 
 ![log loss](log_loss.jpg)
 
-* m: the total number of data samples
-* `y`<sup>`(i)`</sup>: the class of data sample i
+* `m`: the total number of data samples
+* `y`<sup>`(i)`</sup>: the class of data sample `i`
+* `z`<sup>`(i)`</sup>: the log-odds of sample `i`
+* `h(z`<sup>`(i)`</sup>`)`: the sigmoid of the log-odds of sample `i`, which is the probability of sample `i` belonging to the positive class
