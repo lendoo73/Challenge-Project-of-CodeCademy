@@ -44,4 +44,18 @@ By plugging the log-odds into the Sigmoid Function, defined below, we map the lo
 
 ![sigmoid function](sigmoid_function.jpg)
 
-* e<sup>-z</sup> is the exponential
+* e<sup>-z</sup> is the exponential function, which can be written in `numpy` as `np.exp(-z)`
+
+This enables our Logistic Regression model to output the probability of a sample belonging to the positive class.
+```
+def sigmoid(z):
+  denominator = 1 + np.exp(-z)
+  return 1 / denominator
+```
+
+# [Log-Loss](https://www.codecademy.com/courses/machine-learning/lessons/logistic-regression/exercises/log-loss-i)
+We need a way to evaluate how well a given model fits the data we have.
+
+The function used to evaluate the performance of a machine learning model is called a *loss function*, or a *cost function*.
+To evaluate how “good a fit” a model is, we calculate the loss for each data sample (how wrong the model’s prediction was) and then average the loss across all samples.
+The loss function for Logistic Regression, known as **Log Loss**.
