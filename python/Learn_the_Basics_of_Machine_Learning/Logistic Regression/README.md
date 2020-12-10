@@ -62,4 +62,5 @@ The loss function for Logistic Regression, known as **Log Loss**:
 
 ![log loss](log_loss.jpg)
 
-
+* m: the total number of data samples
+* y<sup>(i)</sup>
