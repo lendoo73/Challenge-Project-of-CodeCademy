@@ -36,5 +36,5 @@ def log_odds(features, coefficients, intercept):
 ```
 
 # [Sigmoid Function](https://www.codecademy.com/courses/machine-learning/lessons/logistic-regression/exercises/sigmoid)
-
+![sigmoid](sigmoid.webp)
 
