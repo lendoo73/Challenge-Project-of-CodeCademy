@@ -26,3 +26,15 @@ The log-odds are another way of expressing the probability of a sample belonging
 In probability, we calculate the odds of an event occurring as follows:
 
 ![odds](odds.jpg)
+
+The odds tell us how many more times likely an event is to occur than not occur.
+
+The log-odds are then understood as the logarithm of the odds!
+```
+def log_odds(features, coefficients, intercept):
+  return np.dot(features, coefficients) + intercept
+```
+
+# [Sigmoid Function](https://www.codecademy.com/courses/machine-learning/lessons/logistic-regression/exercises/sigmoid)
+
+
