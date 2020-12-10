@@ -42,4 +42,4 @@ def log_odds(features, coefficients, intercept):
 The Sigmoid Function is a special case of the more general Logistic Function, where Logistic Regression gets its name.
 By plugging the log-odds into the Sigmoid Function, defined below, we map the log-odds `z˙˙ to the range `[0, 1]`.
 
-![sigmpid function](sigmpid_function.jpg)
+![sigmoid function](sigmoid_function.jpg)
