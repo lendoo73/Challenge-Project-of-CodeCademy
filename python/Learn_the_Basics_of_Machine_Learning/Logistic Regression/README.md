@@ -36,5 +36,9 @@ def log_odds(features, coefficients, intercept):
 ```
 
 # [Sigmoid Function](https://www.codecademy.com/courses/machine-learning/lessons/logistic-regression/exercises/sigmoid)
+
 ![sigmoid](sigmoid.webp)
+
+The Sigmoid Function is a special case of the more general Logistic Function, where Logistic Regression gets its name.
+By plugging the log-odds into the Sigmoid Function, defined below, we map the log-odds `z˙˙ to the range `[0, 1]`.
 
