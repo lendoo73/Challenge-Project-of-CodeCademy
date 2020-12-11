@@ -75,3 +75,9 @@ The right-side of the equation drops out because we end up with `1 - 1` (or `0` 
 The loss for that individual student becomes:
 
 ![when a student passed the exam](loss_y_1.jpg)
+
+The loss for a student who passed the exam is just the log of the probability the student passed the exam!
+
+And for a student who fails the exam, where a sample has class y = 0, the left-side of the equation drops out and the loss for that student becomes:
+
+![student who fails the exam](loss_y_0.jpg)
