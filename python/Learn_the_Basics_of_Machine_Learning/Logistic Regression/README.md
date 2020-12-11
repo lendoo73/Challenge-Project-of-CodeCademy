@@ -87,3 +87,16 @@ The loss for a student who failed the exam is the log of one minus the probabili
 Let’s take a closer look at what is going on with our loss function by graphing the loss of individual samples when the class label is y = 1 and y = 0.
 
 ![loss function graph](loss-function-graph.webp)
+
+From the graphs you can see that confident correct predictions result in small losses, while confident incorrect predictions result in large losses that approach infinity.
+We want to punish our model with an increasing loss as it makes progressively incorrect predictions, and we want to reward the model with a small loss as it makes correct predictions.
+
+Just like in Linear Regression, we can then use gradient descent to find the coefficients that minimize log-loss across all of our training data.
+
+```
+# Function to calculate log-loss
+def log_loss(probabilities, actual_class):
+  return np.sum(
+    - (1/actual_class.shape[0])*(actual_class*np.log(probabilities) + (1-actual_class)*np.log(1-probabilities))
+  )
+```
