@@ -121,6 +121,19 @@ Now that the model is trained, we can access a few useful attributes of the `Log
 * `model.coef_`: a vector of the coefficients of each feature
 * `model.intercept_`: the intercept b_0
 
+With our trained model we are able to predict whether new data points belong to the positive class using the `.predict()` method!
+`.predict()` takes a matrix of features as a parameter and returns a vector of labels `1` or `0` for each sample. 
+In making its predictions, `sklearn` uses a classification threshold of `0.5`.
+```
+model.predict(features)
+```
+If we are more interested in the predicted probability of the data samples belonging to the positive class than the actual class, we can use the `.predict_proba()` method.
+`.predict_proba()` also takes a matrix of features as a parameter and returns a vector of probabilities, ranging from `0` to `1`, for each sample.
+```
+model.predict_proba(features)
+```
+Before proceeding, one important note is that `sklearn`‘s Logistic Regression implementation requires feature data to be normalized.
+[Normalization]() scales all feature data to vary over the same range.
 
 
 
