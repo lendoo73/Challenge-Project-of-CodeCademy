@@ -93,10 +93,16 @@ We want to punish our model with an increasing loss as it makes progressively in
 
 Just like in Linear Regression, we can then use gradient descent to find the coefficients that minimize log-loss across all of our training data.
 
-```
-# Function to calculate log-loss
-def log_loss(probabilities, actual_class):
-  return np.sum(
-    - (1/actual_class.shape[0])*(actual_class*np.log(probabilities) + (1-actual_class)*np.log(1-probabilities))
-  )
-```
+# [Classification Thresholding](https://www.codecademy.com/courses/machine-learning/lessons/logistic-regression/exercises/thresholding)
+Many machine learning algorithms, including Logistic Regression, spit out a classification probability as their result.
+Once we have this probability, we need to make a decision on what class the sample belongs to. 
+This is where the **classification threshold** comes in!
+
+The default threshold for many algorithms is `0.5`.
+If the predicted probability of an observation belonging to the positive class is greater than or equal to the threshold, 0.5, the classification of the sample is the positive class.
+If the predicted probability of an observation belonging to the positive class is less than the threshold, 0.5, the classification of the sample is the negative class.
+
+We can choose to change the threshold of classification based on the use-case of our model. 
+
+
+
