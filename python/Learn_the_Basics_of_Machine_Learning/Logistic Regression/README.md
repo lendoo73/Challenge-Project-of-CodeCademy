@@ -73,3 +73,5 @@ Let’s go ahead and break down our log-loss function into two separate parts so
 Consider the case when a data sample has class y = 1, or for our data when a student passed the exam. 
 The right-side of the equation drops out because we end up with `1 - 1` (or `0` => (1 - y<sup>(i)</sup>) ) multiplied by some value.
 The loss for that individual student becomes:
+
+![when a student passed the exam](loss_y_1.jpg)
