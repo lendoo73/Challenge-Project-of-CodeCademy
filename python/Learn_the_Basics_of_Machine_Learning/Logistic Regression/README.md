@@ -104,5 +104,23 @@ If the predicted probability of an observation belonging to the positive class i
 
 We can choose to change the threshold of classification based on the use-case of our model. 
 
+# [Logistic Regression models with sklearn](https://www.codecademy.com/courses/machine-learning/lessons/logistic-regression/exercises/scikit-learn)
+We can begin by creating a `LogisticRegression` object.
+```
+from sklearn.linear_model import LogisticRegression
+
+model = LogisticRegression()
+```
+After creating the object, we need to fit our model on the data. 
+When we fit the model with `sklearn` it will perform gradient descent, repeatedly updating the coefficients of our model in order to minimize the log-loss. 
+We train — or fit — the model using the `.fit()` method, which takes two parameters. The first is a matrix of features, and the second is a matrix of class labels.
+```
+model.fit(features, labels)
+```
+Now that the model is trained, we can access a few useful attributes of the `LogisticRegression` object:
+* `model.coef_`: a vector of the coefficients of each feature
+* `model.intercept_`: the intercept b_0
+
+
 
 
