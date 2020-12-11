@@ -86,4 +86,4 @@ The loss for a student who failed the exam is the log of one minus the probabili
 
 Let’s take a closer look at what is going on with our loss function by graphing the loss of individual samples when the class label is y = 1 and y = 0.
 
-![loss function graph]()
+![loss function graph](loss-function-graph.webp)
