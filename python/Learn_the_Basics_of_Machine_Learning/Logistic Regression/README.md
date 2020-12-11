@@ -133,7 +133,13 @@ If we are more interested in the predicted probability of the data samples belon
 model.predict_proba(features)
 ```
 Before proceeding, one important note is that `sklearn`‘s Logistic Regression implementation requires feature data to be normalized.
-[Normalization]() scales all feature data to vary over the same range.
+[Normalization](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_the_Basics_of_Machine_Learning/Classification_K_Nearest_Neighbors/Normalization) scales all feature data to vary over the same range.
+`sklearn`‘s Logistic Regression requires normalized feature data due to a technique called *Regularization* that it uses under the hood. 
 
-
+# [Feature Importance](https://www.codecademy.com/courses/machine-learning/lessons/logistic-regression/exercises/feature-importance)
+Since our data is normalized, all features vary over the same range.
+Given this understanding, we can compare the feature coefficients’ magnitudes and signs to determine which features have the greatest impact on class prediction, and if that impact is positive or negative.
+* Features with larger, positive coefficients will increase the probability of a data sample belonging to the positive class
+* Features with larger, negative coefficients will decrease the probability of a data sample belonging to the positive class
+* Features with small, positive or negative coefficients have minimal impact on the probability of a data sample belonging to the positive class
 
