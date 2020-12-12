@@ -8,3 +8,5 @@ In this project you will create a Logistic Regression model that predicts which 
 
 The data we will be using for training our model is provided by Kaggle. 
 Feel free to make the model better on your own and submit it to the [Kaggle Titanic competition](https://www.kaggle.com/c/titanic)!
+
+[Link to Repl](https://repl.it/@lendoo73/PredictTitanicSurvival#README.md)
