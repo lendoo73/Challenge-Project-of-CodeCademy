@@ -1,7 +1,7 @@
 import pprint
-# from model import fit_model
-# from visualize import plot_accuracy, plot_heatmap
-# from report import class_names
+from model import fit_model
+from visualize import plot_accuracy, plot_heatmap
+from report import class_names
 
 learning_rate = 0.00005
 # Too many epochs can lead to overfitting, and too few to underfitting. 
