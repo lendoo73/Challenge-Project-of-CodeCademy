@@ -7,4 +7,4 @@ Decision trees are machine learning models that try to find patterns in the feat
 If we’re given this magic tree, it seems relatively easy to make classifications.
 Decision trees are supervised machine learning models, which means that they’re created from a training set of labeled data.
 Creating the tree is where the *learning* in machine learning happens.
-![tree]()
+![tree](tree_gif.gif)
