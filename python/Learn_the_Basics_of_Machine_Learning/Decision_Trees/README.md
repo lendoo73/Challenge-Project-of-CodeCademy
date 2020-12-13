@@ -93,3 +93,5 @@ Now that we can find the best feature to split the dataset, we can repeat this p
 We start with every data point from the training set, find the best feature to split the data, split the data based on that feature, and then recursively repeat the process again on each subset that was created from the split.
 We’ll stop the recursion when we can no longer find a feature that results in any information gain.
 In other words, we want to create a leaf of the tree when we can’t find a way to split the data that makes purer subsets.
+
+### `find_best_split()`
