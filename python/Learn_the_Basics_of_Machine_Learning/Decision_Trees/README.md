@@ -28,10 +28,10 @@ To find the Gini impurity, start at 1 and subtract the squared percentage of eac
 impurity = 1
 ```
 For example, if a data set had three items of class `A` and one item of class `B`, the Gini impurity of the set would be:  
-![gini impurity](gini_impurity.jpg)
+![gini impurity](images/gini_impurity.jpg)
 
 If a data set has only one class, you’d end up with a Gini impurity of 0. The lower the impurity, the better the decision tree!  
-![gini impurity 0](gini_impurity0.jpg)
+![gini impurity 0](images/gini_impurity0.jpg)
 
 ```
 def gini(labels):
@@ -50,7 +50,7 @@ We know that we want to end up with leaves with a low Gini Impurity, but we stil
 
 To answer this question, we can calculate the information gain of splitting the data on a certain feature.
 Information gain measures difference in the impurity of the data before and after the split.  
-![information gain](info.svg)  
+![information gain](images/info.svg)  
 
 By splitting the data in that way, we’ve gained some information about how the data is structured — the datasets after the split are purer than they were before the split. 
 The higher the information gain the better — if information gain is 0, then splitting the data on that feature was useless! 
@@ -60,11 +60,11 @@ We’re not quite done calculating the information gain of a set of objects.
 The sizes of the subset that get created after the split are important too!
 For example, the image below shows two sets with the same impurity. 
 Which set would you rather have in your decision tree?  
-![compare pure impurity](impurity-0.svg)  
+![compare pure impurity](images/impurity-0.svg)  
 Both of these sets are perfectly pure, but the purity of the second set is much more meaningful.
 
 It might be helpful to think about the inverse as well. Consider these two sets with the same impurity:
-![compare pure impurity 2](impurity-5.svg)  
+![compare pure impurity 2](images/impurity-5.svg)  
 Both of these sets are completely impure. 
 However, that impurity is much more meaningful in the set with more instances.
 The impurity of the set with two items isn’t as important. 
@@ -74,7 +74,7 @@ Let’s modify the formula for information gain to reflect the fact that the siz
 Instead of simply subtracting the impurity of each set, we’ll subtract the weighted impurity of each of the split sets.
 If the data before the split contained `20` items and one of the resulting splits contained `2` items, then the weighted impurity of that subset would be `2 / 20 * impurity`.
 We’re lowering the importance of the impurity of sets with few elements.  
-![weighted impurity](weighted_info.svg)  
+![weighted impurity](images/weighted_info.svg)  
 Now that we can calculate the information gain using weighted impurity, let’s do that for every possible feature. 
 If we do this, we can find the best feature to split the data on.
 ```
