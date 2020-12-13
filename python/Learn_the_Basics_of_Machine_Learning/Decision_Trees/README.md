@@ -171,3 +171,37 @@ print(classifier.score(
 ))
 ```
 `.score()` returns the percentage of data points from the test set that it classified correctly.
+
+## [Decision Tree Limitations](https://www.codecademy.com/courses/machine-learning/lessons/ml-decision-trees/exercises/greedy)
+One problem with the way we’re currently making our decision trees is that our trees aren’t always *globablly optimal*.
+This means that there might be a better tree out there somewhere that produces better results.
+
+Our current strategy of creating trees is *greedy*. 
+We assume that the best way to create a tree is to find the feature that will result in the largest information gain right now and split on that feature. 
+We never consider the ramifications of that split further down the tree.
+It’s possible that if we split on a suboptimal feature right now, we would find even better splits later on.
+Unfortunately, finding a globally optimal tree is an extremely difficult task, and finding a tree using our greedy approach is a reasonable substitute.
+
+Another problem with our trees is that they potentially *overfit* the data.
+This means that the structure of the tree is too dependent on the training data and doesn’t accurately represent the way the data in the real world looks like.
+Larger trees tend to overfit the data more.
+As the tree gets bigger, it becomes more tuned to the training data and it loses a more generalized understanding of the real world data.
+
+One way to solve this problem is to ***prune the tree***.
+The goal of pruning is to shrink the size of the tree.
+`scikit-learn` currently doesn’t prune the tree by default, however we can dig into the code a bit to prune it ourselves.
+
+You can find the depth of the tree by printing `classifier.tree_.max_depth`.
+Take note of the accuracy as well. `classifier.score(testing_points, testing_labels)`
+
+When you create classifier, you can set the parameter: `max_depth`
+```
+classifier = DecisionTreeClassifier(
+  random_state = 0,
+  max_depth = 11
+)
+```
+Take note of the accuracy again!
+
+
+
