@@ -1,4 +1,15 @@
-cars = [['med', 'low', '3', '4', 'med', 'med'], ['med', 'vhigh', '4', 'more', 'small', 'high'], ['high', 'med', '3', '2', 'med', 'low'], ['med', 'low', '4', '4', 'med', 'low'], ['med', 'low', '5more', '2', 'big', 'med'], ['med', 'med', '2', 'more', 'big', 'high'], ['med', 'med', '2', 'more', 'med', 'med'], ['vhigh', 'vhigh', '2', '2', 'med', 'low'], ['high', 'med', '4', '2', 'big', 'low'], ['low', 'low', '2', '4', 'big', 'med']]
+cars = [
+    ['med', 'low', '3', '4', 'med', 'med'], 
+    ['med', 'vhigh', '4', 'more', 'small', 'high'], 
+    ['high', 'med', '3', '2', 'med', 'low'], 
+    ['med', 'low', '4', '4', 'med', 'low'], 
+    ['med', 'low', '5more', '2', 'big', 'med'], 
+    ['med', 'med', '2', 'more', 'big', 'high'], 
+    ['med', 'med', '2', 'more', 'med', 'med'], 
+    ['vhigh', 'vhigh', '2', '2', 'med', 'low'], 
+    ['high', 'med', '4', '2', 'big', 'low'], 
+    ['low', 'low', '2', '4', 'big', 'med']
+]
 
 car_labels = ['acc', 'acc', 'unacc', 'unacc', 'unacc', 'vgood', 'acc', 'unacc', 'unacc', 'good']
 
