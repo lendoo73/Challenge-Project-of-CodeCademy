@@ -55,6 +55,10 @@ Information gain measures difference in the impurity of the data before and afte
 By splitting the data in that way, we’ve gained some information about how the data is structured — the datasets after the split are purer than they were before the split. 
 The higher the information gain the better — if information gain is 0, then splitting the data on that feature was useless! 
 
-
+## [Weighted Information Gain](https://www.codecademy.com/courses/machine-learning/lessons/ml-decision-trees/exercises/weighted-information-gain)
+We’re not quite done calculating the information gain of a set of objects.
+The sizes of the subset that get created after the split are important too!
+For example, the image below shows two sets with the same impurity. 
+Which set would you rather have in your decision tree?
 
 
