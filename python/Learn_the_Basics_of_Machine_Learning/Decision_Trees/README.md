@@ -32,3 +32,13 @@ For example, if a data set had three items of class `A` and one item of class `B
 
 If a data set has only one class, you’d end up with a Gini impurity of 0. The lower the impurity, the better the decision tree!  
 ![gini impurity 0](gini_impurity0.jpg)
+
+```
+def gini(labels):
+  label_keys = set(labels)
+  impurity = 1
+  for label in label_keys:
+    probability_of_label = labels.count(label) / len(labels)
+    impurity = impurity - probability_of_label ** 2
+  return impurity
+```
