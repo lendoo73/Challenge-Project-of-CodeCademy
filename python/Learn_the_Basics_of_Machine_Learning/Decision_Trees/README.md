@@ -8,7 +8,7 @@ If we’re given this magic tree, it seems relatively easy to make classificatio
 Decision trees are supervised machine learning models, which means that they’re created from a training set of labeled data.
 Creating the tree is where the *learning* in machine learning happens.
 
-![tree](tree_gif.gif)
+![tree](images/tree_gif.gif)
 
 We begin with every point in the training set at the top of the tree.
 These training points have labels — the red points represent students that didn’t get an A on a test and the green points represent students that did get an A on a test.
