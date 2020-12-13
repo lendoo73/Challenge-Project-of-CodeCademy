@@ -44,6 +44,8 @@ def gini(labels):
   return impurity
 ```
 
+`gini_impurity.py`
+
 ## [Information Gain](https://www.codecademy.com/courses/machine-learning/lessons/ml-decision-trees/exercises/information-gain)
 
 We know that we want to end up with leaves with a low Gini Impurity, but we still need to figure out which features to split on in order to achieve this. 
