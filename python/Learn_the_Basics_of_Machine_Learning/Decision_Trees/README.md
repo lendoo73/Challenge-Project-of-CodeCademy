@@ -50,6 +50,7 @@ We know that we want to end up with leaves with a low Gini Impurity, but we stil
 
 To answer this question, we can calculate the information gain of splitting the data on a certain feature.
 Information gain measures difference in the impurity of the data before and after the split. 
+![information gain](info.svg)
 
 
 
