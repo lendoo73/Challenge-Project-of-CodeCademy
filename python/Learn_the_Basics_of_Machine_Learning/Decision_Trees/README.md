@@ -64,4 +64,13 @@ Which set would you rather have in your decision tree?
 Both of these sets are perfectly pure, but the purity of the second set is much more meaningful.
 
 It might be helpful to think about the inverse as well. Consider these two sets with the same impurity:
-![compare pure impurity 2](impurity-5.svg) 
+![compare pure impurity 2](impurity-5.svg)  
+Both of these sets are completely impure. 
+However, that impurity is much more meaningful in the set with more instances.
+The impurity of the set with two items isn’t as important. 
+We know that we’ll only need to split the set one more time in order to make two pure sets.
+
+Let’s modify the formula for information gain to reflect the fact that the size of the set is relevant. 
+Instead of simply subtracting the impurity of each set, we’ll subtract the weighted impurity of each of the split sets.
+If the data before the split contained `20` items and one of the resulting splits contained `2` items, then the weighted impurity of that subset would be `2 / 20 * impurity`.
+We’re lowering the importance of the impurity of sets with few elements.
