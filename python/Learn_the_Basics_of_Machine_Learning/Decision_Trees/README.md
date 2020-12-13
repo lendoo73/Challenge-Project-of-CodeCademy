@@ -56,6 +56,7 @@ Information gain measures difference in the impurity of the data before and afte
 
 By splitting the data in that way, we’ve gained some information about how the data is structured — the datasets after the split are purer than they were before the split. 
 The higher the information gain the better — if information gain is 0, then splitting the data on that feature was useless!  
+
 `information_gain.py`
 
 ## [Weighted Information Gain](https://www.codecademy.com/courses/machine-learning/lessons/ml-decision-trees/exercises/weighted-information-gain)
@@ -116,3 +117,6 @@ We now want to loop through all of the subsets of data and labels.
 ### `split()`
 * takes three parameters: the `data` and `labels` that you want to split and the `index` of the feature you want to split on.
 * returns: `data_subsets` and `label_subsets`
+
+`recursive_tree_building.py`  
+`tree.py`
