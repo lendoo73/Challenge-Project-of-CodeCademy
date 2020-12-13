@@ -75,3 +75,14 @@ Instead of simply subtracting the impurity of each set, we’ll subtract the wei
 If the data before the split contained `20` items and one of the resulting splits contained `2` items, then the weighted impurity of that subset would be `2 / 20 * impurity`.
 We’re lowering the importance of the impurity of sets with few elements.  
 ![weighted impurity](weighted_info.svg)  
+Now that we can calculate the information gain using weighted impurity, let’s do that for every possible feature. 
+If we do this, we can find the best feature to split the data on.
+```
+def information_gain(starting_labels, split_labels):
+  info_gain = gini(starting_labels)
+  for subset in split_labels:
+    # Multiply gini(subset) by the correct percentage below
+    weight = len(subset) / len(starting_labels)
+    info_gain -= gini(subset) * weight
+  return info_gain
+```
