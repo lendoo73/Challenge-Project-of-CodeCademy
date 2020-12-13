@@ -120,3 +120,19 @@ We now want to loop through all of the subsets of data and labels.
 
 `recursive_tree_building.py`  
 `tree.py`
+
+## [Classifying New Data](https://www.codecademy.com/courses/machine-learning/lessons/ml-decision-trees/exercises/classify)
+We can finally use our tree as a classifier!
+Given a new data point, we start at the top of the tree and follow the path of the tree until we hit a leaf. 
+Once we get to a leaf, we’ll use the classes of the points from the training set to make a classification.
+
+We’ve slightly changed the way our build_tree() function works.
+Instead of returning a list of branches or a `Counter` object, the `build_tree()` function now returns a `Leaf` object or an `Internal_Node` object. 
+
+### `classify()`
+Tke a datapoint and a tree as a parameter.
+`classify()` is check if we’re at a leaf by using the `isinstance()` function: `if isinstance(tree, Leaf)` 
+
+If we’ve found a Leaf, that means we want to return the label with the highest count.
+
+If we’re not at a leaf, we want to find the branch that corresponds to our data point.
