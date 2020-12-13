@@ -59,6 +59,6 @@ The higher the information gain the better — if information gain is 0, then sp
 We’re not quite done calculating the information gain of a set of objects.
 The sizes of the subset that get created after the split are important too!
 For example, the image below shows two sets with the same impurity. 
-Which set would you rather have in your decision tree?
-
+Which set would you rather have in your decision tree?  
+![compare pure impurity](impurity-0.svg)
 
