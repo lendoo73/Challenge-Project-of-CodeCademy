@@ -102,3 +102,6 @@ In other words, we want to create a leaf of the tree when we can’t find a way 
 * Takes `data` and `labels` as parameters.
 * 
   * If `best_gain` is `0`, return a `Counter` object of `labels`: We’ve reached the base case — there’s no way to gain any more information so we want to create a leaf.
+  * the recursive case: 
+    * we want to split the data into subsets using the best feature, and then recursively call the `build_tree()` function on those subsets to create subtrees
+    * Finally, we want to return a list of all those subtrees.
