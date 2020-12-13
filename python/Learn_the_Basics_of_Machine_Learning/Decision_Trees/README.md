@@ -154,7 +154,7 @@ Next, we want to create the tree based on our training data. To do this, we’ll
 `.fit()` takes a list of **data** points followed by a list of the **labels** associated with that data. 
 
 When we built our tree from scratch, our data points contained strings like `"vhigh"` or `"5more"`. When creating the tree using `scikit-learn`, it’s a good idea to map those strings to numbers.
-For example, for the first feature representing the price of the car, `"low"` would map to `1`, `"med"` would map to `2`, and so on.
+For example, for the first feature representing the price of the car, `"low"` would map to `1`, `"med"` would map to `2`, and so on. (`change_data()`)
 ```
 classifier.fit(training_data, training_labels)
 ```
