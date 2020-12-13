@@ -36,9 +36,22 @@ If a data set has only one class, you’d end up with a Gini impurity of 0. The 
 ```
 def gini(labels):
   label_keys = set(labels)
+  total_number_of_labels = len(labels)
   impurity = 1
   for label in label_keys:
-    probability_of_label = labels.count(label) / len(labels)
+    probability_of_label = labels.count(label) / total_number_of_labels
     impurity = impurity - probability_of_label ** 2
   return impurity
 ```
+
+## [Information Gain](https://www.codecademy.com/courses/machine-learning/lessons/ml-decision-trees/exercises/information-gain)
+
+We know that we want to end up with leaves with a low Gini Impurity, but we still need to figure out which features to split on in order to achieve this. 
+
+To answer this question, we can calculate the information gain of splitting the data on a certain feature.
+Information gain measures difference in the impurity of the data before and after the split. 
+
+
+
+
+
