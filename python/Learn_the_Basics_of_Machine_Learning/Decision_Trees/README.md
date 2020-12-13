@@ -73,4 +73,5 @@ We know that we’ll only need to split the set one more time in order to make t
 Let’s modify the formula for information gain to reflect the fact that the size of the set is relevant. 
 Instead of simply subtracting the impurity of each set, we’ll subtract the weighted impurity of each of the split sets.
 If the data before the split contained `20` items and one of the resulting splits contained `2` items, then the weighted impurity of that subset would be `2 / 20 * impurity`.
-We’re lowering the importance of the impurity of sets with few elements.
+We’re lowering the importance of the impurity of sets with few elements.  
+![weighted impurity](weighted_info.svg.svg)  
