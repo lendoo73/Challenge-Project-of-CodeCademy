@@ -105,3 +105,10 @@ In other words, we want to create a leaf of the tree when we can’t find a way 
   * the recursive case: 
     * we want to split the data into subsets using the best feature, and then recursively call the `build_tree()` function on those subsets to create subtrees
     * Finally, we want to return a list of all those subtrees.
+
+`branches` : This list will store all of the subtrees we’re about to make from our recursive calls.  
+We now want to loop through all of the subsets of data and labels.
+
+### `split()`
+* takes three parameters: the `data` and `labels` that you want to split and the `index` of the feature you want to split on.
+* returns: `data_subsets` and `label_subsets`
