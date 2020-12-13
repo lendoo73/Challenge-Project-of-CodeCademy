@@ -27,4 +27,5 @@ To find the Gini impurity, start at 1 and subtract the squared percentage of eac
 ```
 impurity = 1
 ```
-For example, if a data set had three items of class `A` and one item of class `B`, the Gini impurity of the set would be:
+For example, if a data set had three items of class `A` and one item of class `B`, the Gini impurity of the set would be:  
+![gini impurity](gini_impurity.jpg)
