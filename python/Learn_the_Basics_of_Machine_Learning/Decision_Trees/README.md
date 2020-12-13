@@ -52,6 +52,8 @@ To answer this question, we can calculate the information gain of splitting the 
 Information gain measures difference in the impurity of the data before and after the split.  
 ![information gain](info.svg)  
 
+By splitting the data in that way, we’ve gained some information about how the data is structured — the datasets after the split are purer than they were before the split. 
+The higher the information gain the better — if information gain is 0, then splitting the data on that feature was useless! 
 
 
 
