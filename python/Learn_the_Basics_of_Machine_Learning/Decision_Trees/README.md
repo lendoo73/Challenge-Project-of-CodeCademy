@@ -20,3 +20,11 @@ Once we have these subsets, we repeat the process — we split the data in each 
 Eventually, we reach a point where we decide to stop splitting the data into smaller groups. 
 We’ve reached a leaf of the tree. We can now count up the labels of the data in that leaf. 
 If an unlabeled point reaches that leaf, it will be classified as the majority label.
+
+## [Gini Impurity](https://www.codecademy.com/courses/machine-learning/lessons/ml-decision-trees/exercises/impurity)
+
+To find the Gini impurity, start at 1 and subtract the squared percentage of each label in the set.
+```
+impurity = 1
+```
+For example, if a data set had three items of class `A` and one item of class `B`, the Gini impurity of the set would be:
