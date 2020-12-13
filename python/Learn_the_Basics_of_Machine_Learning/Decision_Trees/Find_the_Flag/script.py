@@ -3,7 +3,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 import matplotlib.pyplot as plt
-from combination import combinations
 
 # Investigate the Data
 flags = pd.read_csv(
@@ -23,10 +22,6 @@ data = flags[[
 "Crosses","Saltires","Quarters","Sunstars",
 "Crescent","Triangle"
 ]]
-
-#all_combination = combinations(columns)
-#print(len(all_combination))
-#print(type(all_combination))
 
 data = flags[[
   #"Area",
