@@ -95,3 +95,10 @@ We’ll stop the recursion when we can no longer find a feature that results in 
 In other words, we want to create a leaf of the tree when we can’t find a way to split the data that makes purer subsets.
 
 ### `find_best_split()`
+* Takes a set of data points and a set of labels
+* returns the index of the feature that causes the **best split** and the **information gain** caused by that split
+
+### `build_tree()`
+* Takes `data` and `labels` as parameters.
+* 
+  * If `best_gain` is `0`, return a `Counter` object of `labels`: We’ve reached the base case — there’s no way to gain any more information so we want to create a leaf.
