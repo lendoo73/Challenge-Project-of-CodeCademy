@@ -29,3 +29,6 @@ impurity = 1
 ```
 For example, if a data set had three items of class `A` and one item of class `B`, the Gini impurity of the set would be:  
 ![gini impurity](gini_impurity.jpg)
+
+If a data set has only one class, you’d end up with a Gini impurity of 0. The lower the impurity, the better the decision tree!  
+![gini impurity 0](gini_impurity0.jpg)
