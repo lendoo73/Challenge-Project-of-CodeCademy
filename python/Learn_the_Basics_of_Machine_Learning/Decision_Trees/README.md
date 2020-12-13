@@ -64,3 +64,4 @@ Which set would you rather have in your decision tree?
 Both of these sets are perfectly pure, but the purity of the second set is much more meaningful.
 
 It might be helpful to think about the inverse as well. Consider these two sets with the same impurity:
+![compare pure impurity 2](impurity-5.svg) 
