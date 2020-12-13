@@ -55,7 +55,8 @@ Information gain measures difference in the impurity of the data before and afte
 ![information gain](images/info.svg)  
 
 By splitting the data in that way, we’ve gained some information about how the data is structured — the datasets after the split are purer than they were before the split. 
-The higher the information gain the better — if information gain is 0, then splitting the data on that feature was useless! 
+The higher the information gain the better — if information gain is 0, then splitting the data on that feature was useless!  
+`information_gain.py`
 
 ## [Weighted Information Gain](https://www.codecademy.com/courses/machine-learning/lessons/ml-decision-trees/exercises/weighted-information-gain)
 We’re not quite done calculating the information gain of a set of objects.
