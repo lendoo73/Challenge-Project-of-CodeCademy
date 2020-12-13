@@ -89,6 +89,7 @@ def information_gain(starting_labels, split_labels):
     info_gain -= gini(subset) * weight
   return info_gain
 ```
+`weighted_information_gain.py`
 
 ## [Recursive Tree Building](https://www.codecademy.com/courses/machine-learning/lessons/ml-decision-trees/exercises/recursion)
 
