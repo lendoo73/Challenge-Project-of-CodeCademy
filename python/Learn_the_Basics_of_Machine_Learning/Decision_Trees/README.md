@@ -140,3 +140,34 @@ If we’re not at a leaf, we want to find the branch that corresponds to our dat
 `classifying_new_data.py`  
 `tree_final.py`  
 `cars.py`
+
+## [Decision Trees in scikit-learn](https://www.codecademy.com/courses/machine-learning/lessons/ml-decision-trees/exercises/sklearn)
+The `sklearn.tree` module contains the `DecisionTreeClassifier` class.
+To create a DecisionTreeClassifier object, call the constructor:
+```
+from sklearn.tree import DecisionTreeClassifier
+
+classifier = DecisionTreeClassifier()
+```
+Next, we want to create the tree based on our training data. To do this, we’ll use the `.fit()` method.
+
+`.fit()` takes a list of **data** points followed by a list of the **labels** associated with that data. 
+
+When we built our tree from scratch, our data points contained strings like `"vhigh"` or `"5more"`. When creating the tree using `scikit-learn`, it’s a good idea to map those strings to numbers.
+For example, for the first feature representing the price of the car, `"low"` would map to `1`, `"med"` would map to `2`, and so on.
+```
+classifier.fit(training_data, training_labels)
+```
+Finally, once we’ve made our tree, we can use it to classify new data points.
+The `.predict()` method takes an array of data points and will return an array of classifications for those data points.
+```
+predictions = classifier.predict(test_data)
+```
+If you’ve split your data into a test set, you can find the accuracy of the model by calling the `.score()` method using the test data and the test labels as parameters.
+```
+print(classifier.score(
+  test_data, 
+  test_labels
+))
+```
+`.score()` returns the percentage of data points from the test set that it classified correctly.
