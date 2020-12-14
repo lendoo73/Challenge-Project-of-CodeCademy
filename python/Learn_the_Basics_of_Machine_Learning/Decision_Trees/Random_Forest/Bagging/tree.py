@@ -3,6 +3,7 @@ import random
 random.seed(1)
 
 def make_cars():
+    # car.data can found here: Challenge-Project-of-CodeCademy/python/Learn_the_Basics_of_Machine_Learning/Decision_Trees/Decision_Tree_Limitations/car.data
     f = open("car.data", "r")
     cars = []
     for line in f:
