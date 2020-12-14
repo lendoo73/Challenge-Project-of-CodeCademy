@@ -19,3 +19,15 @@ Our [algorithm for creating a decision tree](https://github.com/lendoo73/Challen
 is deterministic — given a training set, the same tree will be made every time.
 
 Random forests create different trees using a process known as ***bagging***.
+Every time a decision tree is made, it is created using a different subset of the points in the training set. 
+For example, if our training set had `1000` rows in it, we could make a decision tree by picking `100` of those rows at random to build the tree. 
+This way, every tree is different, but all trees will still be created from a portion of the training data.
+
+One thing to note is that when we’re randomly selecting these `100` rows, we’re doing so with replacement. 
+Picture putting all `100` rows in a bag and reaching in and grabbing one row at random. 
+After writing down what row we picked, we put that row back in our bag.
+
+When we’re picking our 100 random rows, we could pick the same row more than once.
+
+Because we’re picking these rows with replacement, there’s no need to shrink our bagged training set from `1000` rows to `100`. 
+We can pick `1000` rows at random, and because we can get the same row more than once, we’ll still end up with a unique data set.
