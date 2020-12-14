@@ -85,7 +85,17 @@ from sklearn.ensemble import RandomForestClassifier
 classifier = RandomForestClassifier(n_estimators = 100)
 ```
 
+## [Review](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/review)
 
+* A random forest is an **ensemble machine learning model**. 
+It makes a classification by aggregating the classifications of many decision trees.
+* Random forests are used to **avoid overfitting**. 
+By aggregating the classification of multiple trees, having overfitted trees in a random forest is less impactful.
+* Every decision tree in a random forest is created by using a different subset of data points from the training set. 
+Those data points are chosen at random with replacement, which means **a single data point can be chosen more than once**. 
+This process is known as **bagging**.
+* When creating a tree in a random forest, a randomly selected subset of features are considered as candidates for the best splitting feature. 
+If your dataset has `n` features, it is common practice to randomly select the square root of `n` features.
 
 
 
