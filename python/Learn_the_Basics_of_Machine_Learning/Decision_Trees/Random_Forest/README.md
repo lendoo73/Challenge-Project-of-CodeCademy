@@ -13,7 +13,7 @@ It’s like every tree gets a vote, and the most popular classification wins.
 
 Some of the trees in the random forest may be overfit, but by making the prediction based on a large number of trees, overfitting will have less of an impact.
 
-# [Bagging](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/bagging-i)
+## [Bagging](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/bagging-i)
 
 Our [algorithm for creating a decision tree](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_the_Basics_of_Machine_Learning/Decision_Trees) 
 is deterministic — given a training set, the same tree will be made every time.
@@ -32,7 +32,7 @@ When we’re picking our 100 random rows, we could pick the same row more than o
 Because we’re picking these rows with replacement, there’s no need to shrink our bagged training set from `1000` rows to `100`. 
 We can pick `1000` rows at random, and because we can get the same row more than once, we’ll still end up with a unique data set.
 
-# [Bagging Features](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/bagging-ii)
+## [Bagging Features](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/bagging-ii)
 
 We’re now making trees based on different random subsets of our initial dataset.
 But we can continue to add variety to the ways our trees are created by ***changing the features*** that we use.
@@ -56,6 +56,14 @@ We’ll continue this process until the tree is complete.
 How to choose the number of features to randomly select?
 A good rule of thumb is to randomly select the square root of the total number of features. 
 If we had a dataset with `25` features, we’d want to randomly select `5` features to consider at every split point.
+
+## [Classify](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/classify)
+
+
+
+
+
+
 
 
 
