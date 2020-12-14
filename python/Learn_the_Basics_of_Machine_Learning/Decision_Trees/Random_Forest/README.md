@@ -31,3 +31,32 @@ When we’re picking our 100 random rows, we could pick the same row more than o
 
 Because we’re picking these rows with replacement, there’s no need to shrink our bagged training set from `1000` rows to `100`. 
 We can pick `1000` rows at random, and because we can get the same row more than once, we’ll still end up with a unique data set.
+
+# [Bagging Features](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/bagging-ii)
+
+We’re now making trees based on different random subsets of our initial dataset.
+But we can continue to add variety to the ways our trees are created by ***changing the features*** that we use.
+
+Our car data set, the original features were the following:
+* The price of the car
+* The cost of maintenance
+* The number of doors
+* The number of people the car can hold
+* The size of the trunk
+* The safety rating
+
+Right now when we create a decision tree, we look at every one of those features and choose to split the data based on the feature that produces the most information gain.
+We could change how the tree is created by only allowing a subset of those features to be considered at each split.
+
+After splitting the data on the best feature from that subset, we’ll likely want to split again. 
+For this next split, we’ll randomly select three features again to consider. 
+This time those features might be the cost of maintenance, the number of doors, and the size of the trunk. 
+We’ll continue this process until the tree is complete.
+
+How to choose the number of features to randomly select?
+A good rule of thumb is to randomly select the square root of the total number of features. 
+If we had a dataset with `25` features, we’d want to randomly select `5` features to consider at every split point.
+
+
+
+
