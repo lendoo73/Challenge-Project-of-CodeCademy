@@ -65,13 +65,25 @@ We can now take a new unlabeled point, give that point to each tree in the fores
 
 The trees give us their votes and the label that is predicted most often will be our final classification! 
 
-# [Test Set](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/test-set)
+## [Test Set](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/test-set)
 
 We’re now able to create a random forest, but how accurate is it compared to a single decision tree? 
 To answer this question we’ve split our data into a training set and test set.
 By building our models using the training set and testing on every data point in the test set, we can calculate the accuracy of both a single decision tree and a random forest.
 
+## [Random Forest in Scikit-learn](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/sklearn-random-forest)
 
+`scikit-learn` has a `RandomForestClassifier` class that will do all of this work for you! 
+`RandomForestClassifier` is in the `sklearn.ensemble` module.
+
+`RandomForestClassifier` works almost identically to `DecisionTreeClassifier` — the `.fit()`, `.predict()`, and `.score()` methods work in the exact same way.
+
+When creating a `RandomForestClassifier`, you can choose how many trees to include in the random forest by using the `n_estimators` parameter:
+```
+from sklearn.ensemble import RandomForestClassifier
+
+classifier = RandomForestClassifier(n_estimators = 100)
+```
 
 
 
