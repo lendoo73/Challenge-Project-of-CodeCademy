@@ -59,6 +59,11 @@ If we had a dataset with `25` features, we’d want to randomly select `5` featu
 
 ## [Classify](https://www.codecademy.com/courses/machine-learning/lessons/ml-random-forest/exercises/classify)
 
+Now that we can make different decision trees, it’s time to plant a whole forest! 
+Let’s say we make different `8` trees using bagging and feature bagging. 
+We can now take a new unlabeled point, give that point to each tree in the forest, and count the number of times different labels are predicted.
+
+The trees give us their votes and the label that is predicted most often will be our final classification! 
 
 
 
