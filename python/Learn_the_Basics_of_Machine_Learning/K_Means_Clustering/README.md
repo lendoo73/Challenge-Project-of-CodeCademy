@@ -109,3 +109,31 @@ Repeat Steps 2 and 3 until convergence.
 ---------
 
 ### 1. Place k random centroids for the initial clusters
+
+Because we expect there to be three clusters (for the three species of flowers), let’s implement K-Means where the k is 3.
+```
+# Number of clusters
+k = 3
+```
+Using the NumPy library, we will create three random initial centroids and plot them along with our samples.
+```
+# Create x coordinates of k random centroids
+centroids_x = np.random.uniform(
+  min(x), 
+  max(x), 
+  size = k
+)
+
+# Create y coordinates of k random centroids
+centroids_y = np.random.uniform(
+  min(y), 
+  max(y), 
+  size = k
+)
+
+# Create centroids array
+centroids = np.array(list(zip(centroids_x, centroids_y)))
+#print(centroids)
+```
+
+
