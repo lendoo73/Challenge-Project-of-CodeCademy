@@ -47,3 +47,64 @@ The Iris dataset consists of measurements of sepals and petals of 3 different pl
 * Iris virginica
 
 ![3 different Iris](images/iris.svg)
+
+The sepal is the part that encases and protects the flower when it is in the bud stage. 
+A petal is a leaflike part that is often colorful.
+
+From sklearn library, import the datasets module:
+```
+from sklearn import datasets
+```
+To load the Iris dataset:
+```
+iris = datasets.load_iris()
+```
+The Iris dataset looks like:
+```
+[[ 5.1  3.5  1.4  0.2 ]
+ [ 4.9  3.   1.4  0.2 ]
+ [ 4.7  3.2  1.3  0.2 ]
+ [ 4.6  3.1  1.5  0.2 ]
+   . . .
+ [ 5.9  3.   5.1  1.8 ]]
+```
+We call each piece of data a ***sample***. 
+For example, each flower is one sample. `[ 5.1  3.5  1.4  0.2 ]`
+
+Each characteristic we are interested in is a ***feature***.
+For example, petal length is a feature of this dataset.
+
+The features of the dataset are:
+* **Column 0:** Sepal length  `5.1`
+* **Column 1:** Sepal width   `3.5`
+* **Column 2:** Petal length  `1.4`
+* **Column 3:** Petal width   `0.2`
+
+## [Visualize Before K-Means](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-clustering/exercises/visualize-iris)
+
+With Matplotlib, we can create a 2D scatter plot of the Iris dataset using two of its features (sepal length vs. petal length).
+The sepal length measurements are stored in column `0` of the matrix, and the petal length measurements are stored in column `2` of the matrix.
+We only want to retrieve the values that are in column 0 of a matrix:
+```
+matrix[ :, 0]
+```
+`[:,0]` can be translated to `[all_rows , column_0]`
+
+Once you have the measurements we need, we can make a scatter plot:
+```
+plt.scatter(x, y)
+
+plt.show()
+```
+
+## [Implementing K-Means: Step 1](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-clustering/exercises/step-1)
+
+The K-Means algorithm:
+1. Place k random centroids for the initial clusters.
+2. Assign data samples to the nearest centroid.
+3. Update centroids based on the above-assigned data samples.
+
+Repeat Steps 2 and 3 until convergence.
+---------
+
+
