@@ -97,7 +97,7 @@ plt.scatter(x, y)
 plt.show()
 ```
 
-## [Implementing K-Means: Step 1](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-clustering/exercises/step-1)
+## [Implementing K-Means](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-clustering/exercises/step-1)
 
 The K-Means algorithm:
 1. Place k random centroids for the initial clusters.
@@ -136,4 +136,9 @@ centroids = np.array(list(zip(centroids_x, centroids_y)))
 #print(centroids)
 ```
 
+### 2. Assign data samples to the nearest centroid
 
+Now we have the three random centroids. 
+Let’s assign data points to their nearest centroids.
+
+To do this we’re going to use a Distance Formula to write a distance() function. 
