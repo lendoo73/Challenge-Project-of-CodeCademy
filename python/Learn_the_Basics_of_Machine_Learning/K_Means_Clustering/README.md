@@ -167,3 +167,26 @@ For the condition of the while loop, we need to create an array named errors.
 In each error index, we calculate the difference between the updated centroid (centroids) and the old centroid (centroids_old).
 
 The loop ends when all three values in errors are `0`.
+
+## [Implementing K-Means: Scikit-Learn](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-clustering/exercises/k-means-scikit-learn)
+
+Instead of implementing K-Means from scratch, the `sklearn.cluster` module has many methods that can do this for you.
+
+Import KMeans from sklearn.cluster:
+```
+from sklearn.cluster import KMeans
+```
+For Step 1, use the `KMeans()` method to build a model that finds `k` clusters. 
+To specify the number of clusters (`k`), use the `n_clusters` keyword argument:
+```
+model = KMeans(n_clusters = k)
+```
+For Steps 2 and 3, use the `.fit()` method to compute K-Means clustering:
+```
+model.fit(X)
+```
+After K-Means, we can now predict the closest cluster each sample in X belongs to. 
+Use the `.predict()` method to compute cluster centers and predict cluster index for each sample:
+```
+model.predict(X)
+```
