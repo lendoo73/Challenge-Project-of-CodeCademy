@@ -35,3 +35,15 @@ Repeat Steps 2 and 3 until *convergence* (when points don’t move between clust
 ![k_means clustering](images/k_means_clustering.webp)
 
 Once we are happy with our clusters, we can take a new unlabeled datapoint and quickly assign it to the appropriate cluster.
+
+## [Iris Dataset](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-clustering/exercises/iris-dataset)
+
+The sklearn package embeds some datasets and sample images. 
+One of them is the [Iris dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set).
+
+The Iris dataset consists of measurements of sepals and petals of 3 different plant species:
+* Iris setosa
+* Iris versicolor
+* Iris virginica
+
+![3 different Iris](images/iris.svg)
