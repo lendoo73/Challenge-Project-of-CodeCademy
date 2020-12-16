@@ -108,4 +108,4 @@ Repeat Steps 2 and 3 until convergence.
 
 ---------
 
-
+### 1. Place k random centroids for the initial clusters
