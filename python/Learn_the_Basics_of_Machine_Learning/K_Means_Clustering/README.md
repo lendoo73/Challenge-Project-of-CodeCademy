@@ -145,3 +145,14 @@ To do this we’re going to use a
 [Distance Formula](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_the_Basics_of_Machine_Learning/Classification_K_Nearest_Neighbors/Distance_formula) to write a distance() 
 function.
 Then, we are going to iterate through our data samples and compute the distance from each data point to each of the 3 centroids.
+
+### 3. Update centroids based on the above-assigned data samples
+
+Find new cluster centers by taking the average of the assigned points.
+We can use the `.mean()` function.
+
+Save the old centroids value before updating.
+```
+centroids_old = np.copy(centroids)
+```
+Then, create a for loop that iterates k times.
