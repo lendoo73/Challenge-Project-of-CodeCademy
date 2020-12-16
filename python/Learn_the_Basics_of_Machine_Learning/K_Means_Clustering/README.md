@@ -141,4 +141,7 @@ centroids = np.array(list(zip(centroids_x, centroids_y)))
 Now we have the three random centroids. 
 Let’s assign data points to their nearest centroids.
 
-To do this we’re going to use a Distance Formula to write a distance() function. 
+To do this we’re going to use a 
+[Distance Formula](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Learn_the_Basics_of_Machine_Learning/Classification_K_Nearest_Neighbors/Distance_formula) to write a distance() 
+function.
+Then, we are going to iterate through our data samples and compute the distance from each data point to each of the 3 centroids.
