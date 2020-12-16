@@ -32,6 +32,6 @@ It is an iterative approach:
 
 Repeat Steps 2 and 3 until *convergence* (when points don’t move between clusters and centroids stabilize).
 
-![k_means clustering](k_means_clustering.webp)
+![k_means clustering](images/k_means_clustering.webp)
 
 Once we are happy with our clusters, we can take a new unlabeled datapoint and quickly assign it to the appropriate cluster.
