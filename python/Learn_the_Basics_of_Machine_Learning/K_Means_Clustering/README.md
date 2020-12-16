@@ -190,3 +190,25 @@ Use the `.predict()` method to compute cluster centers and predict cluster index
 ```
 model.predict(X)
 ```
+
+## [New Data?](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-clustering/exercises/new-data)
+
+Since you have created a model that computed K-Means clustering, you can now feed new data samples into it and obtain the cluster labels using the `.predict()` method.
+
+So, suppose we went to the florist and bought 3 more Irises with the measurements:
+```
+[[ 5.1  3.5  1.4  0.2 ]
+ [ 3.4  3.1  1.6  0.3 ]
+ [ 4.9  3.   1.4  0.2 ]]
+```
+We can feed this new data into the model and obtain the labels for them.
+```
+new_samples = np.array([
+  [5.7, 4.4, 1.5, 0.4],
+  [6.5, 3. , 5.5, 0.4],
+  [5.8, 2.7, 5.1, 1.9]
+])
+
+# Predict labels for the new_samples
+print(model.predict(new_samples))
+```
