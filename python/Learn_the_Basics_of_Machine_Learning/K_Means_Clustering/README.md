@@ -212,3 +212,12 @@ new_samples = np.array([
 # Predict labels for the new_samples
 print(model.predict(new_samples))
 ```
+
+## [Visualize After K-Means](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-clustering/exercises/visualize-iris-after-k-means)
+
+To edit colors of the scatter plot, we can set `c = labels`:
+```
+labels = model.predict(samples)
+
+plt.scatter(x, y, c = labels, alpha = 0.5)
+```
