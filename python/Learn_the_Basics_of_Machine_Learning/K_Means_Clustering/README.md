@@ -105,6 +105,7 @@ The K-Means algorithm:
 3. Update centroids based on the above-assigned data samples.
 
 Repeat Steps 2 and 3 until convergence.
+
 ---------
 
 
