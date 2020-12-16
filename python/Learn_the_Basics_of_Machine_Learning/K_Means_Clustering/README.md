@@ -156,3 +156,14 @@ Save the old centroids value before updating.
 centroids_old = np.copy(centroids)
 ```
 Then, create a for loop that iterates k times.
+
+### 4. Repeat Steps 2 and 3 until convergence
+
+This is the part of the algorithm where we repeatedly execute Step 2 and 3 until the centroids stabilize (convergence).
+
+We can do this using a while loop. And everything from Step 2 and 3 goes inside the loop.
+
+For the condition of the while loop, we need to create an array named errors. 
+In each error index, we calculate the difference between the updated centroid (centroids) and the old centroid (centroids_old).
+
+The loop ends when all three values in errors are `0`.
