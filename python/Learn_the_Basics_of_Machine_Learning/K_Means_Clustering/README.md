@@ -279,3 +279,4 @@ The goal is to have low inertia and the least number of clusters.
 
 ### The elbow method:
 Choose an “elbow” in the inertia plot - when inertia begins to decrease more slowly.
+![visualize inertia](number-of-clusters.svg)
