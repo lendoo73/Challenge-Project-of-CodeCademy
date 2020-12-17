@@ -22,4 +22,5 @@ Let’s say we use the regular K-Means algorithm to cluster the points, where th
 We get unlucky and those randomly initialized cluster centroids happen to be the midpoints of the top and bottom line segments of the rectangle formed by the four data points.  
 ![poor clustering](images/poor_cluster.webp)  
 The algorithm would converge immediately, without moving the cluster centroids.
-The two top data points are clustered together (yellow points) and the two bottom data points are clustered together (purple points).
+The two top data points are clustered together (yellow points) and the two bottom data points are clustered together (purple points).  
+![final clustering](images/final_cluster.webp)
