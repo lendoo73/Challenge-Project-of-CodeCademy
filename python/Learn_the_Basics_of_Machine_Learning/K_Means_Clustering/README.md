@@ -260,3 +260,22 @@ The second to fourth columns have the Iris species that are clustered into each 
 * Iris-setosa was clustered with 100% accuracy.
 * Iris-versicolor was clustered with 96% accuracy.
 * Iris-virginica didn’t do so well.
+
+## [The Number of Clusters](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-clustering/exercises/number-of-clusters)
+
+We have grouped the Iris plants into 3 clusters. 
+But suppose we didn’t know there are three species of Iris in the dataset, what is the best number of clusters?
+
+### What is a good cluster?
+Good clustering results in tight clusters, meaning that the samples in each cluster are bunched together.
+How spread out the clusters are is measured by ***inertia***.
+Inertia is the distance from each sample to the centroid of its cluster.
+The lower the inertia is, the better our model has done.
+You can check the inertia of a model by:
+```
+print(model.inertia_)
+```
+The goal is to have low inertia and the least number of clusters.
+
+### The elbow method:
+Choose an “elbow” in the inertia plot - when inertia begins to decrease more slowly.
