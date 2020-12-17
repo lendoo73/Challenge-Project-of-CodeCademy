@@ -13,3 +13,4 @@ K-Means++ changes the way centroids are initalized to try to fix this problem.
 ## [Poor Clustering](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-k-means-plus-plus/exercises/poor-clustering)
 
 Suppose we have four data samples that form a rectangle whose width is greater than its height:
+![rectangle](iamges/no_clusers.webp)
