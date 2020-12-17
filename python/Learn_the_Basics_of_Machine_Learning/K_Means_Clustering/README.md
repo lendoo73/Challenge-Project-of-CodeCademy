@@ -221,3 +221,42 @@ labels = model.predict(samples)
 
 plt.scatter(x, y, c = labels, alpha = 0.5)
 ```
+
+## [Evaluation](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-clustering/exercises/evaluating)
+
+At this point, we have clustered the Iris data into 3 different groups.
+But do the clusters correspond to the actual species?
+
+The Iris dataset comes with target values:
+```
+target = iris.target
+```
+* `0`: Iris-setosa
+* `1`: Iris-versicolor
+* `2`: Iris-virginica
+
+Let’s change these values into the corresponding species using the following code:
+```
+species = np.chararray(target.shape, itemsize=150)
+
+name = [
+  "setosa",
+  "versicolor",
+  "virginica"
+]
+for i in range(len(samples)):
+  species[i] = name[target[i]]
+```
+Then we are going to use the Pandas library to perform a *cross-tabulation*.
+The result should look something like:
+```
+labels    setosa    versicolor    virginica
+0             50             0            0
+1              0             2           36
+2              0            48           14
+```
+The first column has the cluster labels. 
+The second to fourth columns have the Iris species that are clustered into each of the labels.
+* Iris-setosa was clustered with 100% accuracy.
+* Iris-versicolor was clustered with 96% accuracy.
+* Iris-virginica didn’t do so well.
