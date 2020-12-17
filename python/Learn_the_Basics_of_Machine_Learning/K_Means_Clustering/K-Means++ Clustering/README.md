@@ -12,12 +12,12 @@ K-Means++ changes the way centroids are initalized to try to fix this problem.
 
 ## [Poor Clustering](https://www.codecademy.com/courses/machine-learning/lessons/machine-learning-k-means-plus-plus/exercises/poor-clustering)
 
-Suppose we have four data samples that form a rectangle whose width is greater than its height:
+Suppose we have four data samples that form a rectangle whose width is greater than its height:  
 ![rectangle](images/no_clusers.webp)
 
 If you wanted to find two clusters (k = 2) in the data, which points would you cluster together?
 You might guess the points that align vertically cluster together, since the height of the rectangle is smaller than its width.
 
 Let’s say we use the regular K-Means algorithm to cluster the points, where the cluster centroids are initialized randomly.
-We get unlucky and those randomly initialized cluster centroids happen to be the midpoints of the top and bottom line segments of the rectangle formed by the four data points.
+We get unlucky and those randomly initialized cluster centroids happen to be the midpoints of the top and bottom line segments of the rectangle formed by the four data points.  
 ![poor clustering](images/poor_cluster.webp)
