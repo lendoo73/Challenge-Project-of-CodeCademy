@@ -116,7 +116,7 @@ There are times when a minor adjustment is needed for the perceptron to be more 
 
 So now the weighted sum equation should look like:
 
-![bias weight formula](bias_weight.jpg)
+![bias weight formula](bias_weight.jpg)  
 In the `Perceptron` constructor parameters:
 * now there are 3 inputs instead of 2 (`num_inputs = 3`)
 * now there are 3 weights instead of 2 (`weights = [1, 1, 1]`)
