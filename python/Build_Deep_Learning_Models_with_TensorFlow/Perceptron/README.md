@@ -1,6 +1,6 @@
 # [Perceptron](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-foundations-deep-learning-and-perceptrons/modules/perceptron/lessons/perceptron/exercises/what-is-perceptron)
 
-Perceptrons are the building blocks of Neural Networks.
+Perceptrons are the building blocks of [Neural Networks](https://www.codecademy.com/articles/what-are-neural-nets).
 
 The perceptron is an artificial neuron that simulates the task of a biological neuron to solve problems through its own “sense” of the world.
 
