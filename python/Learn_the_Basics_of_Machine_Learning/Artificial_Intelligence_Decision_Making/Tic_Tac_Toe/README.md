@@ -56,4 +56,23 @@ If neither player won, it was a tie, and the board should have a value of `0`.
 
 # [Evaluating Leaves](https://www.codecademy.com/courses/machine-learning/lessons/minimax/exercises/evaluate-leaves)
 
+Let’s imagine a situation where you’re playing as the `"X"` player in a game of Tic-Tac-Toe and the game is almost over. 
+The game board isn’t a leaf but it’s close. 
+You have three possible moves. 
+All three moves will immediately end the game — each of those future boards will be leaves.
 
+Let’s say picking move A will result in you winning and moves B and C will each result in a tie. 
+You’d clearly pick move A.
+
+By picking move A, you’ve picked the move that led to the board with the highest value. 
+You were picking between a `1` (an `"X"` win) or two `0`s (the moves that would lead to a tie). 
+Because you picked the move with the highest value, we can say that `"X"` is the ***maximizing player***.
+
+Let’s say you were playing a the `"O"` player under the same circumstances. 
+Picking move A would somehow immediately lead to `"X"` winning, while moves B and C would lead to a tie. 
+You’d pick one of the boards that would lead to a tie. 
+`"O"` is the ***minimizing player***. 
+You would love to pick a board with the value of `-1` (an `"O"` win), but unfortunately, that board doesn’t exist. 
+You’ll have to settle with picking a board with the value of `0`. 
+At least you prevent `X"` from winning.  
+![minimizing or maximizing player’s turn]()
