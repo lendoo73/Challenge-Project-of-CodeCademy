@@ -75,4 +75,4 @@ You’d pick one of the boards that would lead to a tie.
 You would love to pick a board with the value of `-1` (an `"O"` win), but unfortunately, that board doesn’t exist. 
 You’ll have to settle with picking a board with the value of `0`. 
 At least you prevent `X"` from winning.  
-![minimizing or maximizing player’s turn]()
+![minimizing or maximizing player’s turn](images/tic-tac-toe-min-max.gif)
