@@ -17,6 +17,4 @@ We’ll eventually reach a point where the game is over — we’ll reach a leaf
 Either we won, our opponent won, or it was a tie. 
 At this point, the recursion can stop. 
 Because the game is over, we no longer need to think about how our opponent would react if we reached this point of the game.
-<div style="background-color: 'gray'">
 ![Tic-Tac-Toe Tree](images/tic-tac-toe-gray.svg)
-</div>
