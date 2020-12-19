@@ -75,4 +75,15 @@ You’d pick one of the boards that would lead to a tie.
 You would love to pick a board with the value of `-1` (an `"O"` win), but unfortunately, that board doesn’t exist. 
 You’ll have to settle with picking a board with the value of `0`. 
 At least you prevent `X"` from winning.  
-![minimizing or maximizing player’s turn](images/tic-tac-toe-min-max.gif)
+![minimizing or maximizing player’s turn](images/tic-tac-toe-min-max.gif)  
+The root of the tree ends up with a value of `0`. This means that the best move for the current player is the move that corresponded with the value of `0`.
+
+# [Copying Boards](https://www.codecademy.com/courses/machine-learning/lessons/minimax/exercises/copy)
+
+One of the central ideas behind the minimax algorithm is the idea of exploring future hypothetical board states. 
+Essentially, we’re saying if we were to make this move, what would happen. 
+As a result, as we’re implementing this algorithm in our code, we don’t want to actually make our move on the board. 
+We want to make a copy of the board and make the move on that one.
+```
+new_board = my_board
+```
