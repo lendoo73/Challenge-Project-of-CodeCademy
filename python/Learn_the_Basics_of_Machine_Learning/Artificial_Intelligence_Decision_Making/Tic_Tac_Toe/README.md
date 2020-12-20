@@ -115,6 +115,46 @@ If `is_maximizing` is `True`, then we know we’re working with the maximizing p
 This means when we’re picking the “best” move from the list of moves, we’ll pick the move with the *highest value*.
 If `is_maximizing` is `False`, then we’re the minimizing player and want to pick the *minimum value*.
 
+## [Recursion In Minimax](https://www.codecademy.com/courses/machine-learning/lessons/minimax/exercises/recursion-ii)
 
+We have our variable called `best_value`.
+We’ve made a hypothetical board where we’ve made one of our potential moves.
+We now want to know whether the value of that board is better than our current `best_value`.
 
+In order to find the value of the hypothetical board, we’ll call `minimax()`.
+But this time our parameters are different! 
+The first parameter isn’t the starting board.
+Instead, it’s `new_board`, the hypothetical board that we just made.
+
+The second parameter is dependent on whether we’re the maximizing or minimizing player.
+If `is_maximizing` is `True`, then the new parameter should be `False`.
+If `is_maximizing` is `False`, then we should give the recursive call `True`.
+
+It’s like we’re taking the new board, passing it to the other player, and asking “what would the value of this board be if we gave it to you?”
+
+To give the recursive call the opposite of `is_maximizing`, we can give it `not is_maximizing`.
+
+That call to `minimax()` will return the value of the hypothetical board.
+We can then compare the value to our `best_value`.
+If the value of the hypothetical board was better than `best_value`, then we should make that value the new `best_value`.
+
+## [Which Move?](https://www.codecademy.com/courses/machine-learning/lessons/minimax/exercises/getting-move)
+Our `minimax()` function is returning the value of the best possible move.
+If our final answer is a `1`, we know that `"X"` should be able to win the game.
+
+We first need to set up a variable to keep track of the best move (let’s call it `best_move`).
+Whenever the algorithm finds a new `best_value`, `best_move` variable should be updated to be whatever move resulted in that value.
+
+We want the algorithm to return best_move at the very end.
+We’ll now return a list of two numbers — `[best_value, best_move]`.
+
+# [Play a Game](https://www.codecademy.com/courses/machine-learning/lessons/minimax/exercises/play)
+
+Our `minimax()` function is now returning a list of `[value, move]`.
+`move` gives you the number you should pick to play an optimal game of Tic-Tac-Toe for any given game state.
+
+This line of code instructs the AI to make a move as the "X" player:
+```
+select_space(my_board, minimax(my_board, True)[1], "X")
+```
 
