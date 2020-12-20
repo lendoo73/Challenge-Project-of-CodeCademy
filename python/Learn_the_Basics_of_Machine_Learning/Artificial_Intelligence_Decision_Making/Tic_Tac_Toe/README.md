@@ -87,3 +87,34 @@ We want to make a copy of the board and make the move on that one.
 ```
 new_board = my_board
 ```
+This won’t work the way we want it to! 
+Python objects are saved in memory, and variables point to a location in memory. 
+In this case, new_board, and my_board are two variables that point to the same object in memory. 
+If you change a value in one, it will change in the other because they’re both pointing to the same object.
+
+One way to solve this problem is to use the `deepcopy()` function from Python’s `copy` library.
+```
+new_board = deepcopy(my_board)
+```
+`new_board` is now a copy of my_board in a different place in memory.
+When we change a value in `new_board`, the values in `my_board` will stay the same!
+
+# [The Minimax Function](https://www.codecademy.com/courses/machine-learning/lessons/minimax/exercises/recursion)
+
+The result of this function will be the “value” of the best possible move.
+If the function returns a `1`, that means a move exists that guarantees that `"X"` will win.
+If the function returns a `-1`, that means that there’s nothing that `"X"` can do to prevent `"O"` from winning.
+If the function returns a `0`, then the best `"X"` can do is force a tie (assuming `"O"` doesn’t make a mistake).
+
+Our `minimax()` function has two parameters:
+* The first is the game state that we’re interested in finding the best move. 
+When the `minimax()` function first gets called, this parameter is the current state of the game. 
+We’re asking “what is the best move for the current player right now?”
+* The second parameter is a boolean: `is_maximizing` representing whose turn it is.
+If `is_maximizing` is `True`, then we know we’re working with the maximizing player. 
+This means when we’re picking the “best” move from the list of moves, we’ll pick the move with the *highest value*.
+If `is_maximizing` is `False`, then we’re the minimizing player and want to pick the *minimum value*.
+
+
+
+
