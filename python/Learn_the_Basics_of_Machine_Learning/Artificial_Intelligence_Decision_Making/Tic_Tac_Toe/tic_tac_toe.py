@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 def print_board(board):
     print("|-------------|")
     print("| Tic Tac Toe |")
@@ -42,10 +44,6 @@ def has_won(board, player):
     if board[0][2] == player and board[1][1] == player and board[2][0] == player:
         return True
     return False
-  
-  
-from tic_tac_toe import *
-from copy import deepcopy
 
 def game_is_over(board):
   return has_won(board, "X") or has_won(board, "O") or len(available_moves(board)) == 0
