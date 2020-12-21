@@ -14,3 +14,4 @@ We’ll investigate two techniques to solve this problem:
 * The second technique uses a clever trick called pruning to avoid exploring parts of the tree that we know will be useless.
 
 ---
+## `tree_size()`
