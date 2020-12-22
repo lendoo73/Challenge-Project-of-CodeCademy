@@ -83,8 +83,30 @@ The core idea behind alpha-beta pruning is to ignore parts of the tree that we k
 For example, consider the gif.
 When determining the “value” of the node labeled E, we can stop looking at possible moves as soon as it discovers the `8` node.
 
-We know that B will only consider values less than or equal to `5`, and E will only consider values greater than or equal to `8`. We know that node B will never care about E’s value and we can stop looking through E’s moves.
-![Alpha-Beta Pruning](images/alphabetapruning.gif)
+We know that B will only consider values less than or equal to `5`, and E will only consider values greater than or equal to `8`. We know that node B will never care about E’s value and we can stop looking through E’s moves.  
+![Alpha-Beta Pruning](images/alphabetapruning.gif)  
+We can prune a large section from the right half of the tree. 
+There comes a point where node A will only consider values greater than or equal to `5` and node C will only consider values `3` and below.
+We can stop looking at all of the C’s children because we know they will never be relevant.
+
+Alpha-beta pruning is accomplished by keeping track of two variables for each node — `alpha` and `beta`.
+* `alpha`: keeps track of the minimum score the maximizing player can possibly get.
+It starts at negative infinity and gets updated as that minimum score increases.
+* `beta`: represents the maximum score the minimizing player can possibly get.
+It starts at positive infinity and will decrease as that maximum possible score decreases.
+
+For any node, if alpha is greater than or equal to beta, that means that we can stop looking through that node’s children.
+
+We’ll have to include two new parameters in our function — `alpha` and `beta`.
+When we first call `minimax()` we’ll set `alpha` to negative infinity and `beta` to positive infinity.
+
+We also want to make sure we pass `alpha` and `beta` into our recursive calls. 
+Next, we want to check to see if we should reset alpha and beta. 
+In the maximizing case, we want to reset `alpha` if the newly found `best_value` is greater than `alpha`.
+In the minimizing case, we want to reset `beta` if `best_value` is less than `beta`.
+
+Finally, after resetting `alpha` and `beta`, we want to check to see if we can prune. 
+If `alpha` is greater than or equal to `beta`, we can break and stop looking through the other potential moves.
 
 
 
