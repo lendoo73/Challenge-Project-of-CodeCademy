@@ -84,7 +84,7 @@ For example, consider the gif.
 When determining the “value” of the node labeled E, we can stop looking at possible moves as soon as it discovers the `8` node.
 
 We know that B will only consider values less than or equal to `5`, and E will only consider values greater than or equal to `8`. We know that node B will never care about E’s value and we can stop looking through E’s moves.
-![Alpha-Beta Pruning]()
+![Alpha-Beta Pruning](images/alphabetapruning.gif)
 
 
 
