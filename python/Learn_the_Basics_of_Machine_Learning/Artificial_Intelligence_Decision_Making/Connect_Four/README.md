@@ -14,3 +14,14 @@ We’ll investigate two techniques to solve this problem:
 * The second technique uses a clever trick called pruning to avoid exploring parts of the tree that we know will be useless.
 
 ---
+## `tree_size()`
+This will show you the number of game states in the tree.
+parameters:
+* `board`: 
+* `turn`: `"X"` or `"O"`
+
+## `select_space()`
+parameters:
+* `board`: The board that you’re making the move on.
+* `column`: The column you’re selecting.
+* `turn`: `"X"` or `"O"`; The type of piece you’re putting in column.
