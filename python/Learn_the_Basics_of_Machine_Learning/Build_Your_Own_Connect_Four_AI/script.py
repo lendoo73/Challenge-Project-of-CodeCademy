@@ -39,7 +39,7 @@ def two_ai_game():
     else:
         print("It's a tie!")
 
-def impoved_evaluate_board(board):
+def improved_evaluate_board(board):
   board = np.array(board)
 
   def check_streak(player, row):
@@ -107,5 +107,5 @@ select_space(new_board, 3, "O")
 select_space(new_board, 3, "X")
 select_space(new_board, 4, "X")
 print_board(new_board)
-print(impoved_evaluate_board(new_board))
+print(improved_evaluate_board(new_board))
 """
