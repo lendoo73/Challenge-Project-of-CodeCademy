@@ -10,21 +10,23 @@ Open-source ML library for Python. Built on NumPy, SciPy, and Matplotlib.
 # [Scikit-Learn Cheatsheet](https://www.codecademy.com/paths/machine-learning/tracks/introduction-to-machine-learning-skill-path/modules/introduction-to-machine-learning-skill-path/articles/scikit-learn-cheatsheet)
 
 ## [Linear Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
-### Import and create the model:
+
 ```
+# Import and create the model:
 from sklearn.linear_model import LinearRegression
  
 your_model = LinearRegression()
-```
-### Fit:
-```
-your_model.fit(x_training_data, y_training_data)
-```
-* **`.coef_`**: contains the coefficients
-* **`.intercept_`**: contains the intercept
-### Predict:
-```
-predictions = your_model.predict(your_x_data)
-```
-* **`.score()`**: returns the coefficient of determination R²
 
+# Fit:
+your_model.fit(x_training_data, y_training_data)
+
+print(your_model.coef_)           # contains the coefficients
+print(your_model.intercept_)      # contains the intercept
+
+# Predict:
+predictions = your_model.predict(your_x_data)
+
+print(predictions.score())        # returns the coefficient of determination R²
+```
+
+## [Naive Bayes](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB))
