@@ -29,4 +29,4 @@ predictions = your_model.predict(your_x_data)
 print(predictions.score())        # returns the coefficient of determination R²
 ```
 
-## [Naive Bayes](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB))
+## [Naive Bayes](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB)
