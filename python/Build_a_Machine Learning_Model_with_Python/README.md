@@ -9,8 +9,8 @@ Open-source ML library for Python. Built on NumPy, SciPy, and Matplotlib.
 
 # [Scikit-Learn Cheatsheet](https://www.codecademy.com/paths/machine-learning/tracks/introduction-to-machine-learning-skill-path/modules/introduction-to-machine-learning-skill-path/articles/scikit-learn-cheatsheet)
 
-## [Linear Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
-   ### Import and create the model:
+> ## [Linear Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
+### Import and create the model:
 ```
 from sklearn.linear_model import LinearRegression
  
