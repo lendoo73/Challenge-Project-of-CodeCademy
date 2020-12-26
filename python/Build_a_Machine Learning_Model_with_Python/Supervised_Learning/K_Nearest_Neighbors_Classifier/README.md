@@ -46,3 +46,29 @@ Using a weighted average, we can find movie X’s rating:
 The numerator is the sum of every rating divided by their respective distances.
 The denominator is the sum of one over every distance.
 The weighted average has now gone up to 7.9.
+
+## [K-Nearest Neighbor Regressor with Scikit-learn](https://www.codecademy.com/paths/machine-learning/tracks/introduction-to-supervised-learning-skill-path/modules/k-nearest-neighbors-skill-path/lessons/ml-knn-regression/exercises/sklearn-regression)
+
+The `KNeighborsRegressor` class is very similar to `KNeighborsClassifier`.
+
+We first need to create the regressor. We can use the parameter `n_neighbors` to define our value for `k`.
+
+We can also choose whether or not to use a weighted average using the parameter `weights`. 
+If `weights` equals `"uniform"`, all neighbors will be considered equally in the average. 
+If `weights` equals `"distance"`, then a weighted average is used.
+```
+classifier = KNeighborsRegressor(
+  n_neighbors = 3, 
+  weights = "distance"
+)
+```
+Next, we need to fit the model to our training data using the `.fit()` method. 
+`.fit()` takes two parameters:
+* a list of points, 
+* a list of values associated with those points.
+```
+classifier.fit(
+  training_points, 
+  training_labels
+)
+```
