@@ -24,3 +24,17 @@ For example, if the three nearest neighbors to an unrated movie have ratings of 
     sum_rating += movie_ratings[title]
     avg_rating = sum_rating / k
 ```
+
+## [Weighted Regression](https://www.codecademy.com/paths/machine-learning/tracks/introduction-to-supervised-learning-skill-path/modules/k-nearest-neighbors-skill-path/lessons/ml-knn-regression/exercises/weighted-regression)
+
+We can be even more clever in the way that we compute the average.
+We can compute a weighted average based on how close each neighbor is.
+
+Let’s say we’re trying to predict the rating of movie X and we’ve found its three nearest neighbors:
+| Movie | Rating | Distance to movie X |
+| ----  |:------:| -------------------:|
+| A     | 5.0    | 3.2                 |
+| B     | 6.8    | 11.5                |
+| C     | 9.0    | 1.1                 |
+
+
