@@ -83,3 +83,9 @@ unknown_points = [
  
 guesses = classifier.predict(unknown_points)
 ```
+
+## [Review](https://www.codecademy.com/paths/machine-learning/tracks/introduction-to-supervised-learning-skill-path/modules/k-nearest-neighbors-skill-path/lessons/ml-knn-regression/exercises/review)
+
+* The K-Nearest Neighbor algorithm can be used for regression. Rather than returning a classification, it returns a number.
+* By using a weighted average, data points that are extremely similar to the input point will have more of a say in the final result.
+* scikit-learn has an implementation of a K-Nearest Neighbor regressor named `KNeighborsRegressor`.
