@@ -32,7 +32,7 @@ We can compute a weighted average based on how close each neighbor is.
 
 Let’s say we’re trying to predict the rating of movie X and we’ve found its three nearest neighbors:
 | Movie | Rating | Distance to movie X |
-| ----  |:------:| -------------------:|
+| :----:  |:------:| :-------------------:|
 | A     | 5.0    | 3.2                 |
 | B     | 6.8    | 11.5                |
 | C     | 9.0    | 1.1                 |
