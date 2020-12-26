@@ -22,7 +22,7 @@ For example, if the three nearest neighbors to an unrated movie have ratings of 
          3                
 
 ```
-sum_rating = 0
+  sum_rating = 0
   for neighbor in neighbors:
     title = neighbor[1]
     sum_rating += movie_ratings[title]
