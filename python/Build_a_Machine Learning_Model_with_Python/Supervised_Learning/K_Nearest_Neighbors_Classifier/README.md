@@ -37,4 +37,6 @@ Let’s say we’re trying to predict the rating of movie X and we’ve found it
 | B     | 6.8    | 11.5                |
 | C     | 9.0    | 1.1                 |
 
-
+If we find the mean, the predicted rating for X would be 6.93.
+However, movie X is most similar to movie C, so movie C’s rating should be more important when computing the average.
+Using a weighted average, we can find movie X’s rating:
