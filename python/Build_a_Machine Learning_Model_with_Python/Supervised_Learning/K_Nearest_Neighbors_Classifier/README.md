@@ -72,3 +72,14 @@ classifier.fit(
   training_labels
 )
 ```
+Finally, we can make predictions on new data points using the `.predict()` method. 
+`.predict()` takes a list of points and returns a list of predictions for those points.
+```
+unknown_points = [
+  [0.2, 0.1, 0.7],
+  [0.4, 0.7, 0.6],
+  [0.5, 0.8, 0.1]
+]
+ 
+guesses = classifier.predict(unknown_points)
+```
