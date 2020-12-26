@@ -43,4 +43,6 @@ Using a weighted average, we can find movie X’s rating:
 
 ![weighted average](images/weighted_averages.jpg)  
 
-
+The numerator is the sum of every rating divided by their respective distances.
+The denominator is the sum of one over every distance.
+The weighted average has now gone up to 7.9.
