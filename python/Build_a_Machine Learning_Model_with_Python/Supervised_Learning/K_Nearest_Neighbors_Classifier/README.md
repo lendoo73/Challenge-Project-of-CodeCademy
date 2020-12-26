@@ -16,7 +16,7 @@ We are going to find the `k` nearest neighbors of the new movie by using the dis
 However, instead of counting the number of good and bad neighbors, the regressor averages their IMDb ratings.
 
 For example, if the three nearest neighbors to an unrated movie have ratings of `5.0`, `9.2`, and `6.8`, then we could predict that this new movie will have a rating of `7.0`.
-### `(5 + 9.2 + 6.8) / 3 = 7`
+#### `(5 + 9.2 + 6.8) / 3 = 7`
 ```
   sum_rating = 0
   for neighbor in neighbors:
