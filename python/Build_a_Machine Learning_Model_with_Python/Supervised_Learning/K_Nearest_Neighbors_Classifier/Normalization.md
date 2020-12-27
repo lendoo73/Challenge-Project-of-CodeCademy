@@ -39,3 +39,10 @@ That data is just as squished as before!
 
 ![outliers min-max normalized](images/outlier_min_max_normalized.webp)
 
+Normalizing fixed the squishing problem on the y-axis, but the x-axis is still problematic. 
+Now if we were to compare these points, the y-axis would dominate; the y-axis can differ by 1, but the x-axis can only differ by 0.4.
+
+## Z-Score Normalization
+
+Z-score normalization is a strategy of normalizing data that avoids this outlier issue. 
+
