@@ -104,3 +104,6 @@ print(recall_score(labels, guesses))
 print(precision_score(labels, guesses))
 print(f1_score(labels, guesses))
 ```
+They all take two parameters
+* a list of the true labels 
+* and a list of the predicted classifications.
