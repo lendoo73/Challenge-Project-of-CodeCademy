@@ -35,3 +35,14 @@ In this situation, the statistic that would be helpful is **recall**. Recall mea
 
 ![recall formula](images/recall_formula.jpg)
 
+# [Precision](https://www.codecademy.com/paths/machine-learning/tracks/introduction-to-supervised-learning-skill-path/modules/accuracy-recall-and-precision-skill-path/lessons/ml-accuracy/exercises/precision)
+
+Recall isn’t a perfect statistic either.
+For example, we could create a snow day classifier that always returns True. 
+This would have low accuracy, but its recall would be 1 because it would be able to accurately find every snow day. 
+But this classifier is just as nonsensical as the one before! 
+The statistic that will help demonstrate that this algorithm is flawed is precision.
+
+In the snow day example, precision is the number of snow days the algorithm correctly predicted divided by the number of times it predicted there would be a snow day. The formula for precision is below:
+
+![precision formula](images/precision_formula.jpg)
