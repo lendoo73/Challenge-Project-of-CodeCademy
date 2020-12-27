@@ -46,3 +46,4 @@ Now if we were to compare these points, the y-axis would dominate; the y-axis ca
 
 Z-score normalization is a strategy of normalizing data that avoids this outlier issue. 
 
+![z-score normalization formula](images/z-score_normalization_formula.jpg)
