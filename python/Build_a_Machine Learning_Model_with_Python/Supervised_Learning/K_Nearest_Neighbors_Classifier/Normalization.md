@@ -33,4 +33,6 @@ If the minimum value of a feature was 20, and the maximum value was 40, then 30 
 
 ![min-max normalization formula](images/min_max_normalization_formula.jpg)
 
-
+Min-max normalization has one fairly significant downside: **it does not handle outliers** very well.
+If you have 99 values between 0 and 40, and one value is 100, then the 99 values will all be transformed to a value between 0 and 0.4. 
+That data is just as squished as before!
