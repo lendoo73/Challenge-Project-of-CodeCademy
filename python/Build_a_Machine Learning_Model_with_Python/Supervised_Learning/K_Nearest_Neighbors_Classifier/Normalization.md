@@ -30,3 +30,4 @@ The image below shows the same house data normalized using min-max normalization
 For every feature, the **minimum** value of that feature gets transformed into a **0**, the **maximum** value gets transformed into a **1**, and every **other** value gets transformed into a decimal **between 0 and 1**.
 
 If the minimum value of a feature was 20, and the maximum value was 40, then 30 would be transformed to about 0.5 since it is halfway between 20 and 40.
+![min-max normalization formula](images/min_max_normalization_formula.jpg)
