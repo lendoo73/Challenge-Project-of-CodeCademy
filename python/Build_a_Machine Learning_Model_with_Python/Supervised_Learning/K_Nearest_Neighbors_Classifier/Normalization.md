@@ -37,6 +37,5 @@ Min-max normalization has one fairly significant downside: **it does not handle 
 If you have 99 values between 0 and 40, and one value is 100, then the 99 values will all be transformed to a value between 0 and 0.4. 
 That data is just as squished as before!
 
-![outliers](images/outlier.webp)
 ![outliers min-max normalized](images/outlier_min_max_normalized.webp)
 
