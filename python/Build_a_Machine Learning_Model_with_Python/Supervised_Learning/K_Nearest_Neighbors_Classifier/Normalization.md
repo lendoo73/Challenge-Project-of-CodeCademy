@@ -47,3 +47,31 @@ Now if we were to compare these points, the y-axis would dominate; the y-axis ca
 <p title="(Value - mu) / sigma">Z-score normalization is a strategy of normalizing data that avoids this outlier issue.</p>
 
 ![z-score normalization formula](images/z-score_normalization_formula.jpg)
+
+* **μ**: the mean value of the feature
+* **σ**: the standard deviation of the feature
+
+If a value is exactly equal to the **mean** of all the values of the feature, it will be normalized to **0**. 
+If it is **below the mean**, it will be a **negative number**, and if it is **above the mean** it will be a **positive number**. 
+The size of those negative and positive numbers is determined by the standard deviation of the original feature. 
+If the unnormalized data had a large standard deviation, the normalized values will be closer to 0.
+
+Take a look at the graph below. This is the same data as before, but this time we’re using z-score normalization:
+
+![outlier z-score normalized](images/outlier_z-score_normalized.webp)
+
+While the data still looks squished, notice that the points are now on roughly the same scale for both features — almost all points are between -2 and 2 on both the x-axis and y-axis. 
+The only potential downside is that the features aren’t on the exact same scale.
+
+With min-max normalization, we were guaranteed to reshape both of our features to be between 0 and 1. 
+Using z-score normalization, the x-axis now has a range from about -1.5 to 1.5 while the y-axis has a range from about -2 to 2. 
+This is certainly better than before; the x-axis, which previously had a range of 0 to 40, is no longer dominating the y-axis.
+
+## Review
+
+Normalizing your data is an essential part of machine learning. 
+If you forget to normalize, one of those features might completely dominate the others.
+It’s like you’re throwing away almost all of your information!
+Normalizing solves this problem. 
+* **Min-max normalization**: Guarantees all features will have the exact same scale but does not handle outliers well.
+* **Z-score normalization**: Handles outliers, but does not produce normalized data with the exact same scale.
