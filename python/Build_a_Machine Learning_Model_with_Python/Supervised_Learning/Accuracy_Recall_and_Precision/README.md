@@ -74,4 +74,4 @@ That looks way too high! But if we calculate the harmonic mean, we get:
 
 ![harmonic mean example](images/harmonic_mean_example.jpg)
 
-
+The F1 score is now accurately describing the effectiveness of this classifier.
