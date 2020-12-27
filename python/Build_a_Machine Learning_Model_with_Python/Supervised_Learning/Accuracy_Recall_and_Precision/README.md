@@ -46,3 +46,18 @@ The statistic that will help demonstrate that this algorithm is flawed is precis
 In the snow day example, precision is the number of snow days the algorithm correctly predicted divided by the number of times it predicted there would be a snow day. The formula for precision is below:
 
 ![precision formula](images/precision_formula.jpg)
+
+The algorithm that predicts every day is a snow day has recall of 1, but it will have very low precision. 
+It correctly predicts every snow day, but there are tons of false positives as well.
+
+Precision and recall are statistics that are on opposite ends of a scale. If one goes down, the other will go up.
+
+# [F1 Score](https://www.codecademy.com/paths/machine-learning/tracks/introduction-to-supervised-learning-skill-path/modules/accuracy-recall-and-precision-skill-path/lessons/ml-accuracy/exercises/f-one)
+
+It is useful to consider the precision and recall of an algorithm, however, we still don’t have one number that can sufficiently describe how effective our algorithm is.
+This is the job of the F1 score — **F1 score is the harmonic mean of precision and recall**. 
+The harmonic mean of a group of numbers is a way to average them together. 
+The formula for F1 score is below:
+
+![F1 Score formula](images/f1_score_formula.jpg)
+
