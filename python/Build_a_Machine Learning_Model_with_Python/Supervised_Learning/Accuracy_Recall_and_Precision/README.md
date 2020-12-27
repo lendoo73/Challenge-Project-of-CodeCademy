@@ -67,4 +67,11 @@ We use the harmonic mean rather than the traditional arithmetic mean because we 
 For example, consider a classifier where recall = 1 and precision = 0.01. We know that there is most likely a problem with this classifier since the precision is so low, and so we want the F1 score to reflect that.
 
 If we took the arithmetic mean, we’d get:
+
 ![arithmetic mean example](images/arithmetic_mean_example.jpg)
+
+That looks way too high! But if we calculate the harmonic mean, we get:
+
+![harmonic mean example](images/harmonic_mean_example.jpg)
+
+
