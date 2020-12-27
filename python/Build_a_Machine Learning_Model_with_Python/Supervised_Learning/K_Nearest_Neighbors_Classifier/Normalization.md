@@ -11,3 +11,5 @@ For example, consider a dataset of houses.
 Two potential features might be the number of rooms in the house, and the total age of the house in years. 
 A machine learning algorithm could try to predict which house would be best for you. 
 When the algorithm compares data points, the feature with the larger scale will completely dominate the other. 
+
+![unnurmalized data](images/unnormalized.webp)
