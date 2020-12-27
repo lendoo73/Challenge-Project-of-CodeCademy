@@ -49,3 +49,41 @@ Some neighborhoods/areas might be undersampled, or have significantly less datap
 Imagine this clustering forming:
 
 ![clusters](images/clusters.webp)
+
+The small cluster in the bottom left would probably be a cluster of its own, if it had a comparable amount of samples to the other two clusters. 
+To solve this, we can specifically oversample areas that are undersampled, and add more datapoints there. 
+Conversely, we can undersample groups that are over-represented in our training set.
+
+## Try to Augment the Training Data
+
+In our [Bayes’ Theorem lesson](https://www.codecademy.com/content-items/67dba901393541693a95b927d62b9842/exercises/intro) 
+we discussed that when we have a small total number of an event, this will affect how reliably we can guess if the event will occur. 
+Many systems built to detect fraud suffer from this problem. 
+Suppose we were creating a machine learning model to detect fraudulent credit card activity. 
+On the aggregate, there are very few fraudulent transactions, so the model can reach a very high accuracy by simply predicting that every transaction is legitimate. 
+This approach would not solve our problem very well.
+
+One technique is to identify a fraudulent transaction and make many copies of it in the training set, with small variations in the feature data. 
+We can imagine that if our training set has only 2 examples of fraud, the algorithm will overfit to only identify a transaction as fraudulent if it has the exact characteristics of those couple of examples. 
+When we augment the training data with more fraudulent examples, mildly altered from the ones we know, we reduce the amount of overfitting.
+
+Data augmentation is used most often in image classification techniques. 
+Often, we add copies of each picture with an added rotation, shearing, or color jittering.
+
+Let’s imagine we have a huge dataset of animals, and we’re trying to classify which animal is which. 
+We may only have one instance of an alpac, but we know that this image, sheared:
+
+![llama shear](images/llama_shear.webp)
+
+and this image rotated:
+
+![llama upside down](images/llama_upside_down.webp)
+
+
+
+
+
+
+
+
+
