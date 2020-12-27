@@ -61,3 +61,10 @@ The formula for F1 score is below:
 
 ![F1 Score formula](images/f1_score_formula.jpg)
 
+The F1 score combines both precision and recall into a single statistic. 
+We use the harmonic mean rather than the traditional arithmetic mean because we want the F1 score to have a low value when either precision or recall is 0.
+
+For example, consider a classifier where recall = 1 and precision = 0.01. We know that there is most likely a problem with this classifier since the precision is so low, and so we want the F1 score to reflect that.
+
+If we took the arithmetic mean, we’d get:
+![arithmetic mean example](images/arithmetic_mean_example.jpg)
