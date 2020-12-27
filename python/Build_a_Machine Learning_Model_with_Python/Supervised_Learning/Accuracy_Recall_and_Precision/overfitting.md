@@ -79,11 +79,26 @@ and this image rotated:
 
 ![llama upside down](images/llama_upside_down.webp)
 
+are all also examples of an alpaca. 
+When we add these examples of augmented data to our training set, the model won’t overfit as much.
 
+## Try Restricting the Featureset
 
+If one of your features is more heavily affecting the parameters of the model, try to run your model without that feature.
 
+For example, let’s say you are writing a program to determine if someone’s loan application should be accepted or rejected. 
+Your model shows that the most significant variable is their race — with all other features the same, the model has a much higher chance of producing an “accept” prediction on an application from a white applicant than on a non-white applicant. 
+This parameter weight may be a sign that the training data contained racial bias. 
+We can try to train the model again, with the race data removed from the featureset.
 
+## Reflection
 
+Machine Learning algorithms always must introduce a bias as a function of being programs that are trying to make assumptions and rules by looking at data.
+
+Sometimes the best way to deal with the introduction of bias in a training set is to just acknowledge that it is there. 
+As we try to compensate for the bias, our methods of compensation themselves introduce a bias. 
+It is important to find a balance. 
+The most important thing is to mention the existence of bias in your results, and make sure that all stakeholders know that it exists, so that it is taken into consideration with the decisions made from your model’s results.
 
 
 
