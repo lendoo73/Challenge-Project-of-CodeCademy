@@ -22,4 +22,7 @@ The data would look even more squished;
 the difference in the number of rooms would be even less relevant because the cost of two houses could have a difference of thousands of dollars.
 
 The goal of normalization is **to make every datapoint have the same scale** so each feature is equally important. 
-The image below shows the same house data normalized using min-max normalization.
+The image below shows the same house data normalized using min-max normalization:
+![nurmalized data](images/normalized.webp)
+
+## Min-Max Normalization
