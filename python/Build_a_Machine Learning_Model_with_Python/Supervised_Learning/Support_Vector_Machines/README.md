@@ -7,3 +7,5 @@ That’s why SVMs are supervised machine learning models.
 
 Decision boundaries are easiest to wrap your head around when the data has two features. 
 In this case, the decision boundary is a line.
+
+![two_dimensions](images/two_dimensions.png)
