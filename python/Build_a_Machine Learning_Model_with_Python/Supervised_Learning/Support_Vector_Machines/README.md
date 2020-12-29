@@ -239,4 +239,4 @@ The decision boundary when gamma = 10 looks like this:
 
 Now we’re underfitting. The decision boundary looks like this:
 
-![gamma = 0.1](images/decision_boundary_gamma_small.png)
+![gamma = 0.1](images/decision_boundary_gamma_small.webp)
