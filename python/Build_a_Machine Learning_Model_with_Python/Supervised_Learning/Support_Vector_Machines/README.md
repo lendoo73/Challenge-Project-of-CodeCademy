@@ -229,6 +229,14 @@ You can essentially tune the model to be more or less sensitive to the training 
 A higher `gamma`, say `100`, will put more importance on the training data and could result in overfitting. 
 A lower `gamma` like `0.01` makes the points in the training data less relevant and can result in underfitting.
 
+The decision boundary when `gamma = 1` looks like this:
+
 ![gamma = 1](images/decision_boundary_gamma_one.png)
 
+The decision boundary when gamma = 10 looks like this:
+
 ![gamma = 10](images/decision_boundary_gamma_ten.png)
+
+Now we’re underfitting. The decision boundary looks like this:
+
+![gamma = 0.1](images/decision_boundary_gamma_small.png)
