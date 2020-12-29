@@ -188,8 +188,11 @@ We used a polynomial kernel which transforms every point in the following way:
 
 ![convert 2D to 3D formula](images/convert_to_3d_formula.jpg)
 
+The kernel has added a new dimension to each point! 
+For example, the kernel transforms the point [1, 2] like this:
 
-
+![convert \[1, 2\]](images/convert_example.jpg)  
+![convert \[1, 2\]](images/convert_example2.jpg)
 
 
 
