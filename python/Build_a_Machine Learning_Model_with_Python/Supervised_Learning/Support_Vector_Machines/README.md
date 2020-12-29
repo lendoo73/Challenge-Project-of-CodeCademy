@@ -172,9 +172,6 @@ We can still draw a straight line that, for the most part, separates the two cla
 You shouldn’t need to create a non-linear decision boundary just to fit some outliers. 
 Drawing a line that correctly separates every point would be drastically overfitting the model to the data.
 
-
-![still liearly separable data with outliers](images/outlier_example.webp)
-
 ## [Polynomial Kernel](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/support-vector-machines-skill-path/lessons/machine-learning-support-vector-machine/exercises/polynomial-kernel)
 
 That kernel seems pretty magical. 
