@@ -194,6 +194,41 @@ For example, the kernel transforms the point [1, 2] like this:
 ![convert \[1, 2\]](images/convert_example.jpg)  
 ![convert \[1, 2\]](images/convert_example_2.jpg)
 
+If we plot these new three dimensional points, we get the following graph:
 
+![converted dataset](images/projected_with_boundary.webp)
 
+All of the blue points have scooted away from the red ones. 
+By projecting the data into a higher dimension, the two classes are now linearly separable by a plane. 
+We could visualize what this plane would look like in two dimensions to get the following decision boundary.
 
+![visualized in 2D](images/curved_boundary.webp)
+
+## [Radial Bias Function Kernel](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/support-vector-machines-skill-path/lessons/machine-learning-support-vector-machine/exercises/rbf-kernel)
+
+The most commonly used kernel in SVMs is a **radial basis function (rbf)** kernel. 
+This is the default kernel used in scikit-learn’s `SVC` object. 
+If you don’t specifically set the kernel to `"linear"`, `"poly"` the `SVC` object will use an rbf kernel. 
+If you want to be explicit, you can set `kernel = "rbf"`, although that is redundant.
+
+It is very tricky to visualize how an rbf kernel “transforms” the data. 
+The polynomial kernel we used transformed two-dimensional points into three-dimensional points. 
+An rbf kernel transforms two-dimensional points into points with an infinite number of dimensions!
+
+We won’t get into how the kernel does this — it involves some fairly complicated linear algebra. 
+However, it is important to know about the rbf kernel’s `gamma` parameter.
+```
+classifier = SVC(
+  kernel = "rbf", 
+  gamma = 0.5,
+  C = 2
+)
+```
+`gamma` is similar to the `C` parameter.
+You can essentially tune the model to be more or less sensitive to the training data. 
+A higher `gamma`, say `100`, will put more importance on the training data and could result in overfitting. 
+A lower `gamma` like `0.01` makes the points in the training data less relevant and can result in underfitting.
+
+![gamma = 1](images/decision_boundary_gamma_one.png)
+
+![gamma = 10](images/decision_boundary_gamma_ten.png)
