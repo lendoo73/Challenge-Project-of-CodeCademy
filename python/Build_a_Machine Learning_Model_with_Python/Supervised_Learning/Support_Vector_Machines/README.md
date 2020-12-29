@@ -124,6 +124,71 @@ In this case, the support vectors look like this:
 
 ## [Outliers](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/support-vector-machines-skill-path/lessons/machine-learning-support-vector-machine/exercises/outliers)
 
+SVMs try to maximize the size of the margin while still correctly separating the points of each class. 
+As a result, outliers can be a problem.
+
+![outliers](images/outliers.png)
+
+The size of the margin decreases when a single outlier is present, and as a result, the decision boundary changes as well. 
+However, if we allowed the decision boundary to have some error, we could still use the original line.
+
+SVMs have a parameter `C` that determines how much error the SVM will allow for. 
+If `C` is large, then the SVM has a hard margin — it won’t allow for many misclassifications, and as a result, the margin could be fairly small. 
+If `C` is too large, the model runs the risk of overfitting. 
+It relies too heavily on the training data, including the outliers.
+
+On the other hand, if `C` is small, the SVM has a soft margin. 
+Some points might fall on the wrong side of the line, but the margin will be large. 
+This is resistant to outliers, but if `C` gets too small, you run the risk of underfitting. 
+The SVM will allow for so much error that the training data won’t be represented.
+
+When using scikit-learn’s SVM, you can set the value of `C` when you create the object:
+```
+classifier = SVC(C = 0.01)
+```
+The optimal value of `C` will depend on your data. 
+Don’t always maximize margin size at the expense of error. 
+Don’t always minimize error at the expense of margin size. 
+The best strategy is to validate your model by testing many different values for `C`.
+
+## [Kernels](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/support-vector-machines-skill-path/lessons/machine-learning-support-vector-machine/exercises/kernel)
+
+Up to this point, we have been using data sets that are linearly separable. 
+This means that it’s possible to draw a straight decision boundary between the two classes. 
+However, what would happen if an SVM came along a dataset that wasn’t linearly separable?
+
+![non-liarly separable data](images/circles.png)
+
+It’s impossible to draw a straight line to separate the red points from the blue points!
+
+Luckily, SVMs have a way of handling these data sets. 
+Remember when we set `kernel = 'linear'` when creating our SVM? 
+Kernels are the key to creating a decision boundary between data points that are not linearly separable.
+
+Note that most machine learning models should allow for some error. 
+For example, the image below shows data that isn’t linearly separable. 
+However, it is not linearly separable due to a few outliers. 
+We can still draw a straight line that, for the most part, separates the two classes. 
+You shouldn’t need to create a non-linear decision boundary just to fit some outliers. 
+Drawing a line that correctly separates every point would be drastically overfitting the model to the data.
+
+
+![still liearly separable data with outliers](images/outlier_example.png)
+
+## [Polynomial Kernel](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/support-vector-machines-skill-path/lessons/machine-learning-support-vector-machine/exercises/polynomial-kernel)
+
+That kernel seems pretty magical. 
+It is able to correctly classify every point! 
+
+We start with a group of non-linearly separable points that looked like this:
+
+![non-liarly separable data](images/circles.png)
+
+
+
+
+
+
 
 
 
