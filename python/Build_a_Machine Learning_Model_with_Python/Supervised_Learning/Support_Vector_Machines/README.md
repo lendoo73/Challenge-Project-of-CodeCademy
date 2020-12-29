@@ -127,7 +127,7 @@ In this case, the support vectors look like this:
 SVMs try to maximize the size of the margin while still correctly separating the points of each class. 
 As a result, outliers can be a problem.
 
-![outliers](images/outliers.png)
+![outliers](images/outliers.webp)
 
 The size of the margin decreases when a single outlier is present, and as a result, the decision boundary changes as well. 
 However, if we allowed the decision boundary to have some error, we could still use the original line.
@@ -157,7 +157,7 @@ Up to this point, we have been using data sets that are linearly separable.
 This means that it’s possible to draw a straight decision boundary between the two classes. 
 However, what would happen if an SVM came along a dataset that wasn’t linearly separable?
 
-![non-liarly separable data](images/circles.png)
+![non-liarly separable data](images/circles.webp)
 
 It’s impossible to draw a straight line to separate the red points from the blue points!
 
@@ -173,7 +173,7 @@ You shouldn’t need to create a non-linear decision boundary just to fit some o
 Drawing a line that correctly separates every point would be drastically overfitting the model to the data.
 
 
-![still liearly separable data with outliers](images/outlier_example.png)
+![still liearly separable data with outliers](images/outlier_example.webp)
 
 ## [Polynomial Kernel](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/support-vector-machines-skill-path/lessons/machine-learning-support-vector-machine/exercises/polynomial-kernel)
 
@@ -182,7 +182,7 @@ It is able to correctly classify every point!
 
 We start with a group of non-linearly separable points that looked like this:
 
-![non-liarly separable data](images/circles.png)
+![non-liarly separable data](images/circles.webp)
 
 
 
