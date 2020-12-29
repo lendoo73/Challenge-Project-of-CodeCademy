@@ -192,7 +192,7 @@ The kernel has added a new dimension to each point!
 For example, the kernel transforms the point [1, 2] like this:
 
 ![convert \[1, 2\]](images/convert_example.jpg)  
-![convert \[1, 2\]](images/convert_example2.jpg)
+![convert \[1, 2\]](images/convert_example_2.jpg)
 
 
 
