@@ -87,4 +87,38 @@ So in this case, we’d say: (rare disease will happen | positive test happend])
 
 ![rare disease will happen positive test happend](images/rare_disease_will_happen_positive_test_happend.jpg)
 
+## [Spam Filters](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/bayes-theorem/exercises/bayes-theorem-iii)
+
+Email spam filters use Bayes’ Theorem to determine if certain words indicate that an email is [spam](https://en.wikipedia.org/wiki/Email_spam).
+
+Let’s a take word that often appears in spam: “enhancement”.
+
+With just 3 facts, we can make some preliminary steps towards a good spam filter:
+1. “enhancement” appears in just 0.1% of non-spam emails
+2. “enhancement” appears in 5% of spam emails
+3. Spam emails make up about 20% of total emails
+
+Given that an email contains “enhancement”, what is the probability that the email is spam?
+
+In this example, we are dealing with two probabilities:
+* `P(enhancement)` - the probability that the word “enhancement” appears in an email.
+* `P(spam)` - the probability that an email is spam.
+
+Using Bayes’ Theorem to answer our question means that we want to calculate `P(A|B)`.
+
+But what are `A` and `B` referring to in this case?
+(spam will happen | "enhancement" already happend)
+`A`: spam
+`B`: "enhancement" appears in the email
+
+What is `P(spam)`? `P(spam) = 0.2`
+
+What is `P(enhancement | spam)`? `P(enhancement | spam) = 0.05`
+
+We want to know the overall probability that any email (spam or non-spam) contains “enhancement”.
+
+Because we know the probability of “enhancement” occurring in both spam (`0.05`) and non-spam (`0.001`) emails, we can use a weighted average to calculate the probability of “enhancement” occurring in an email:
+
+![probability of email contain enhancement](images/email_contain_enhancement.jpg)
+
 
