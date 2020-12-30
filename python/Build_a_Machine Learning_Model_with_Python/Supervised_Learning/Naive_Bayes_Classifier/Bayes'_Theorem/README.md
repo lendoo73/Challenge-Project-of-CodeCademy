@@ -47,9 +47,41 @@ Each die is independent: rolling one six does not increase or decrease our chanc
 
 ![probability of pair of dice](images/probability_pair_of_dice.jpg)
 
+## [Testing for a Rare Disease](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/bayes-theorem/exercises/bayes-theorem-i)
 
+Suppose you are a doctor and you need to test if a patient has a certain rare disease.
+The test is very accurate: it’s correct 99% of the time. The disease is very rare: only 1 in 100,000 patients have it.
 
+You administer the test and it comes back positive, so your patient must have the disease, right?
 
+Not necessarily. 
+If we just consider the test, there is only a 1% chance that it is wrong, but we actually have more information: we know how rare the disease is.
+
+Given that the test came back positive, there are two possibilities:
+1. The patient had the disease, and the test correctly diagnosed the disease.
+2. The patient didn’t have the disease and the test incorrectly diagnosed that they had the disease.
+
+## [Bayes' Theorem](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/bayes-theorem/exercises/bayes-theorem-ii)
+
+In the previous exercise, we determined two probabilities:
+1. The patient had the disease, and the test correctly diagnosed the disease ≈ 0.00001
+2. The patient didn’t have the disease and the test incorrectly diagnosed that they had the disease ≈ 0.01
+
+Both events are rare, but we can see that it was about 1,000 times more likely that the test was incorrect than that the patient had this rare disease.
+
+We’re able to come to this conclusion because we had more information than just the accuracy of the test; we also knew the prevalence of this disease. 
+That extra information about how we expect the world to work is called a **prior**.
+
+When we only use the first piece of information (the result of the test), it’s called a **Frequentist Approach** to statistics. 
+When we incorporate our prior, it’s called a **Bayesian Approach**.
+
+In statistics, if we have two events (`A` and `B`), we write the probability that event `A` will happen, given that event `B` already happened as `P(A|B)`. 
+In our example, we want to find `P(rare disease | positive result)`. 
+In other words, we want to find the probability that the patient has the disease given the test came back positive.
+
+We can calculate `P(A|B)` using **Bayes’ Theorem**:
+
+![event A will happen, event B already happend](images/a_will_happen_b_happend.jpg)
 
 
 
