@@ -41,6 +41,15 @@ If the probability of event `A` is `P(A)` and the probability of event `B` is `P
 
 The symbol ∩ just means “and”, so `P(A ∩ B)` means the probability that both `A` and `B` happen.
 
+For instance, suppose we are rolling a pair of dice, and want to know the probability of rolling two sixes.
+Each die has six sides, so the probability of rolling a six is 1/6.
+Each die is independent: rolling one six does not increase or decrease our chance of rolling a second six. 
+
+![probability of pair of dice](images/probability_pair_of_dice.jpg)
+
+
+
+
 
 
 
