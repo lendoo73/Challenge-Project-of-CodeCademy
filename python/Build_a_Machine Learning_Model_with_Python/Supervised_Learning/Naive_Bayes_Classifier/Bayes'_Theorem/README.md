@@ -83,6 +83,8 @@ We can calculate `P(A|B)` using **Bayes’ Theorem**:
 
 ![event A will happen, event B already happend](images/a_will_happen_b_happend.jpg)
 
+So in this case, we’d say: (rare disease will happen | positive test happend])
 
+![rare disease will happen positive test happend](images/rare_disease_will_happen_positive_test_happend.jpg)
 
 
