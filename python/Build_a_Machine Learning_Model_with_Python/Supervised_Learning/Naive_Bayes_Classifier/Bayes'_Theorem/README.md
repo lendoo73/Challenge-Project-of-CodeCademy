@@ -39,7 +39,7 @@ If the probability of event `A` is `P(A)` and the probability of event `B` is `P
 
 ![probability of independent event A - B](images/independent_probability_A_B.jpg)
 
-
+The symbol ∩ just means “and”, so `P(A ∩ B)` means the probability that both `A` and `B` happen.
 
 
 
