@@ -125,3 +125,6 @@ Because we know the probability of “enhancement” occurring in both spam (`0.
 
 We can plug this into Bayes’ Theorem:
 
+![event A will happen, event B already happend](images/a_will_happen_b_happend.jpg)
+
+`P((spam | "enhancement" contain)) = 0.05 * 0.2 / ( 0.05 * 0.2 + 0.0001 * (1 - 0.2) ) = 0.925925925926`
