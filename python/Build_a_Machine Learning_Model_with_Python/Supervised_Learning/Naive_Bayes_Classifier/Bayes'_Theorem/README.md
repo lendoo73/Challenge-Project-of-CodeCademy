@@ -128,3 +128,12 @@ We can plug this into Bayes’ Theorem:
 ![event A will happen, event B already happend](images/a_will_happen_b_happend.jpg)
 
 `P((spam | "enhancement" contain)) = 0.05 * 0.2 / ( 0.05 * 0.2 + 0.0001 * (1 - 0.2) ) = 0.925925925926`
+
+This is the probability that an email is spam given that it contains the word “enhancement”.
+
+## [Review](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/bayes-theorem/exercises/review)
+
+* Two events are independent if the occurrence of one event does not affect the probability of the second event
+* If two events are independent then:
+![probability of independent event A - B](images/independent_probability_A_B.jpg)
+
