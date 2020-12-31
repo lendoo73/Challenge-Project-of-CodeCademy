@@ -122,3 +122,6 @@ Because we know the probability of “enhancement” occurring in both spam (`0.
 ![probability of email contain enhancement](images/email_contain_enhancement.jpg)
 
 `P(enhancement) = 0.05 * 0.2 + 0.0001 * (1 - 0.2)` 
+
+We can plug this into Bayes’ Theorem:
+
