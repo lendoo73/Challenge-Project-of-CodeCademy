@@ -134,6 +134,6 @@ This is the probability that an email is spam given that it contains the word â€
 ## [Review](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/bayes-theorem/exercises/review)
 
 * Two events are independent if the occurrence of one event does not affect the probability of the second event
-* If two events are independent then:
-![probability of independent event A - B](images/independent_probability_A_B.jpg)
+* If two events are independent then:  
+![probability of independent event A - B](images/independent_probability_A_B.jpg)  
 
