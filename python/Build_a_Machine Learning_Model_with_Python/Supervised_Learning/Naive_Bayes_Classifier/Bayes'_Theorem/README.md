@@ -136,4 +136,8 @@ This is the probability that an email is spam given that it contains the word â€
 * Two events are independent if the occurrence of one event does not affect the probability of the second event
 * If two events are independent then:  
 ![probability of independent event A - B](images/independent_probability_A_B.jpg)  
-
+* A prior is an additional piece of information that tells us how likely an event is
+* A frequentist approach to statistics does not incorporate a prior
+* A Bayesian approach to statistics incorporates prior knowledge
+* Bayesâ€™ Theorem is the following:  
+![event A will happen, event B already happend](images/a_will_happen_b_happend.jpg)  
