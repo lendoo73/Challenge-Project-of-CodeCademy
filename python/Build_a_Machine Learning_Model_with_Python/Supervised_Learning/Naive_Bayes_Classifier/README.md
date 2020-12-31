@@ -37,8 +37,10 @@ Let’s look at Bayes’ Theorem for `P(positive | review)`.
 
 ![is the review positive](Bayes'_Theorem/images/is_positive_review.jpg)
 
-
-
+The first part of Bayes’ Theorem that we are going to tackle is `P(positive)`. 
+This is the probability that any review is positive. 
+To find this, we need to look at all of our reviews in our dataset - both positive and negative - and find the percentage of reviews that are positive.  
+`P(Positive) = total_positive / total_reviews`
 
 
 
