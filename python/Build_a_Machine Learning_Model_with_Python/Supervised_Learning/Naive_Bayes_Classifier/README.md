@@ -42,6 +42,71 @@ This is the probability that any review is positive.
 To find this, we need to look at all of our reviews in our dataset - both positive and negative - and find the percentage of reviews that are positive.  
 `P(Positive) = total_positive / total_reviews`
 
+## [Bayes Theorem II](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/naive-bayes-classifier/exercises/bayes-theorem-ii)
+
+Let’s continue to try to classify the review “This crib was amazing”.
+
+We now want to compute `P(review | positive)`.
+
+In other words, if we assume that the review is positive, what is the probability that the words “This”, “crib”, “was”, and “amazing” are the only words in the review?
+
+To find this, we have to assume that each word is conditionally independent. 
+This means that one word appearing doesn’t affect the probability of another word from showing up. 
+This is a pretty big assumption!
+
+### P(“This crib was amazing" ∣ positive) = P(“This" ∣ positive) * P(“crib" ∣ positive) * P(“was" ∣ positive) * P(“amazing" ∣ positive)
+
+`P("crib"|positive)` is the probability that the word “crib” appears in a positive review.
+To find this, we need to count up the total number of times “crib” appeared in our dataset of positive reviews.
+If we take that number and divide it by the total number of words in our positive review dataset, we will end up with the probability of “crib” appearing in a positive review.
+If we do this for every word in our review and multiply the results together, we have `P(review | positive)`.
+```
+for word in review_words:
+  if word in pos_counter:
+    word_in_pos = pos_counter[word]
+    pos_probability = pos_probability * word_in_pos / total_pos
+```
+
+
+## [Smoothing](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/naive-bayes-classifier/exercises/smoothing)
+
+What happens if “crib” was never in any of the positive reviews in our dataset? 
+This fraction would then be 0, and since everything is multiplied together, the entire probability `P(review | positive)` would become 0.
+If the unclassified review has a typo in it, it is very unlikely that that same exact typo will be in the dataset, and the entire probability will be 0. 
+To solve this problem, we will use a technique called ***smoothing***.
+
+In this case, we smooth by adding 1 to the numerator of each probability and `N` to the denominator of each probability. `N` is the number of unique words in our review dataset.
+```
+pos_probability = 1
+neg_probability = 1
+
+review_words = review.split()
+
+for word in review_words:
+  word_in_pos = pos_counter[word]
+  word_in_neg = neg_counter[word]
+  
+  pos_probability *= (word_in_pos + 1) / (total_pos + len(pos_counter))
+  neg_probability *= (word_in_neg + 1) / (total_neg + len(neg_counter))
+```
+
+## [Classify](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/naive-bayes-classifier/exercises/classify)
+
+We’ve now completed both parts of the numerator. We now need to multiply them together.  
+`P(review | positive) * P(positive)`
+
+Let’s now consider the denominator `P(review)`. In our small example, this is the probability that “This”, “crib”, “was”, and “amazing” are the only words in the review. 
+Notice that this is extremely similar to `P(review | positive)`. 
+The only difference is that we don’t assume that the review is positive.
+
+However, before we start to compute the denominator, let’s think about what our ultimate question is. 
+We want to predict whether the review “This crib was amazing” is a positive or negative review. 
+In other words, we’re asking whether `P(positive | review)` is greater than `P(negative | review)`. 
+If we expand those two probabilities, we end up with the following equations:  
+![is the review positive](Bayes'_Theorem/images/is_positive_review.jpg)  
+![is the review negative](Bayes'_Theorem/images/is_negative_review.jpg)  
+
+
 
 
 
