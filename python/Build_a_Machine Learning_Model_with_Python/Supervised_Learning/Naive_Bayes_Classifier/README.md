@@ -189,3 +189,30 @@ Once the model has been trained, we can use the `.predict()` method to predict t
 
 Finally, `.predict_proba()` will return the probability of each label given a point. 
 Instead of just returning whether the review was good or bad, it will return the likelihood of a good or bad review.
+
+## [Review](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/naive-bayes-classifier/exercises/review)
+
+* A tagged dataset is necessary to calculate the probabilities used in Bayes’ Theorem.
+* In this example, the features of our dataset are the words used in a product review. 
+In order to apply Bayes’ Theorem, we assume that these features are independent.
+* Using Bayes’ Theorem, we can find P(class | datapoint) for every possible class. 
+In this example, there were two classes — positive and negative. 
+The class with the highest probability will be the algorithm’s prediction.
+
+Even though our algorithm is running smoothly, there’s always more that we can add to try to improve performance. 
+The following techniques are focused on ways in which we process data before feeding it into the Naive Bayes classifier:
+* Remove punctuation from the training set. 
+Right now in our dataset, there are 702 instances of `"great!"` and 2322 instances of `"great."`. 
+We should probably combine those into 3024 instances of `"great"`.
+* Lowercase every word in the training set. 
+We do this for the same reason why we remove punctuation. 
+We want `"Great"` and `"great"` to be the same.
+* Use a **bigram** or **trigram** model. 
+Right now, the features of a review are individual words. 
+For example, the features of the point `“This crib is great”` are `“This”`, `“crib”`, `“is”`, and `“great”`. 
+If we used a ***bigram model***, the features would be `“This crib”`, `“crib is”`, and `“is great”`. 
+Using a bigram model makes the assumption of independence more reasonable.
+
+These three improvements would all be considered part of the field ***Natural Language Processing***.
+
+You can find the baby product review dataset, along with many others, on [Dr. Julian McAuley’s website](http://jmcauley.ucsd.edu/data/amazon/).
