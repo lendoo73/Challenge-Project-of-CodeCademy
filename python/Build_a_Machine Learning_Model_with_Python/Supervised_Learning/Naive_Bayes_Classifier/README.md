@@ -141,6 +141,40 @@ if final_pos > final_neg:
 else:
   print("The review is negative")
 ```
+## [Formatting the Data for scikit-learn](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/naive-bayes-classifier/exercises/sklearn)
+
+If you have a dataset of text that has been tagged with different classes, you can give your classifier a brand new document and it will predict what class it belongs to.
+
+We need to first transform our data into a format that scikit-learn can use. 
+We’re going to use scikit-learn’s `CountVectorizer` object.
+
+We need to create a `CountVectorizer` and teach it the vocabulary of the training set. This is done by calling the `.fit()` method.
+
+For example, in the code below, we’ve created a CountVectorizer that has been trained on the vocabulary `"Training"`, `"review"`, `"one"`, and `"Second"`.
+```
+from sklearn.feature_extraction.text import CountVectorizer
+
+vectorizer = CountVectorizer()
+ 
+vectorizer.fit(["Training review one", "Second review"])
+```
+After fitting the vectorizer, we can now call its `.transform()` method. 
+The `.transform()` method takes a list of strings and will transform those strings into counts of the trained words. 
+```
+counts = vectorizer.transform(["one review two review"])
+```
+`counts` now stores the array `[2, 1, 0, 0]`. 
+The word `"review"` appeared twice, the word `"one"` appeared once, and neither `"Training"` nor `"Second"` appeared at all.
+
+But how did we know that the `2` corresponded to `review`? 
+You can print `vectorizer.vocabulary_` to see the index that each word corresponds to. 
+```
+{'one': 1, 'Training': 2, 'review': 0, 'Second': 3}
+```
+Finally, notice that even though the word `"two"` was in our new review, there wasn’t an index for it in the vocabulary. 
+This is because `"two"` wasn’t in any of the strings used in the `.fit()` method.
+
+We can now use `counts` as input to our Naive Bayes Classifier.
 
 
 
