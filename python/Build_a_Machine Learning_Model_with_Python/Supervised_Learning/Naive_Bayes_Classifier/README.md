@@ -176,5 +176,16 @@ This is because `"two"` wasn’t in any of the strings used in the `.fit()` meth
 
 We can now use `counts` as input to our Naive Bayes Classifier.
 
+## [Using scikit-learn](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/naive-bayes-classifier-skill-path/lessons/naive-bayes-classifier/exercises/sklearn-ii)
 
+Now that we’ve formatted our data correctly, we can use it using scikit-learn’s `MultinomialNB` classifier.
 
+This classifier can be trained using the `.fit()` method. `.fit()` takes two parameters: 
+* The array of data points (which we just made) 
+* and an array of labels corresponding to each data point.
+
+Once the model has been trained, we can use the `.predict()` method to predict the labels of new points. 
+`.predict()` takes a list of points that you want to classify and it returns the predicted labels of those points.
+
+Finally, `.predict_proba()` will return the probability of each label given a point. 
+Instead of just returning whether the review was good or bad, it will return the likelihood of a good or bad review.
