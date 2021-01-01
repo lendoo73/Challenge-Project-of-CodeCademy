@@ -1,10 +1,22 @@
-from reviews import counter, training_counts
+from reviews import neg_list, pos_list
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
 
 review = "This crib was amazing"
-review = "This crib was great amazing and wonderful"
+
+counter = CountVectorizer()
+
+counter.fit(
+  neg_list + pos_list
+)
+
+#print(counter.vocabulary_)
+
 review_counts = counter.transform([review])
+print(review_counts.toarray())
+
+training_counts = counter.transform(
+  neg_list + pos_list
+)
 
 classifier = MultinomialNB()
 
