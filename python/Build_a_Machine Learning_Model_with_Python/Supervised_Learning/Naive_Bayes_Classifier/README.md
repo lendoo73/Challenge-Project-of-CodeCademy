@@ -54,7 +54,7 @@ To find this, we have to assume that each word is conditionally independent.
 This means that one word appearing doesn’t affect the probability of another word from showing up. 
 This is a pretty big assumption!
 
-### P(“This crib was amazing" ∣ positive) = P(“This" ∣ positive) * P(“crib" ∣ positive) * P(“was" ∣ positive) * P(“amazing" ∣ positive)
+##### P(“This crib was amazing" ∣ positive) = P(“This" ∣ positive) * P(“crib" ∣ positive) * P(“was" ∣ positive) * P(“amazing" ∣ positive)
 
 `P("crib"|positive)` is the probability that the word “crib” appears in a positive review.
 To find this, we need to count up the total number of times “crib” appeared in our dataset of positive reviews.
