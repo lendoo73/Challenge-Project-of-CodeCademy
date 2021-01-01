@@ -16,3 +16,5 @@ Can it learn local phrases or slang?
 Can you create tweets that trick the system?
 
 To complete this project, you will be working in a Jupyter Notebook.
+
+Download the [Twitter project](https://content.codecademy.com/programs/machine-learning/cumulative-projects/twitter_classification_project.zip).
