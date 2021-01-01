@@ -102,12 +102,45 @@ The only difference is that we don’t assume that the review is positive.
 However, before we start to compute the denominator, let’s think about what our ultimate question is. 
 We want to predict whether the review “This crib was amazing” is a positive or negative review. 
 In other words, we’re asking whether `P(positive | review)` is greater than `P(negative | review)`. 
-If we expand those two probabilities, we end up with the following equations:  
-![is the review positive](Bayes'_Theorem/images/is_positive_review.jpg)  
-![is the review negative](Bayes'_Theorem/images/is_negative_review.jpg)  
+If we expand those two probabilities, we end up with the following equations:
 
+![is the review positive](Bayes'_Theorem/images/is_positive_review.jpg)
 
+![is the review negative](Bayes'_Theorem/images/is_negative_review.jpg)
 
+Notice that P(review) is in the denominator of each. 
+That value will be the same in both cases! 
+Since we’re only interested in comparing these two probabilities, there’s no reason why we need to divide them by the same value. 
+We can completely ignore the denominator!
+
+Let’s see if our review was more likely to be positive or negative!
+```
+percent_pos = 0.5
+percent_neg = 0.5
+
+total_pos = sum(pos_counter.values())
+total_neg = sum(neg_counter.values())
+
+pos_probability = 1
+neg_probability = 1
+
+review_words = review.split()
+
+for word in review_words:
+  word_in_pos = pos_counter[word]
+  word_in_neg = neg_counter[word]
+  
+  pos_probability *= (word_in_pos + 1) / (total_pos + len(pos_counter))
+  neg_probability *= (word_in_neg + 1) / (total_neg + len(neg_counter))
+
+final_pos = pos_probability * percent_pos 
+final_neg = neg_probability * percent_neg
+
+if final_pos > final_neg:
+  print("The review is positive")
+else:
+  print("The review is negative")
+```
 
 
 
