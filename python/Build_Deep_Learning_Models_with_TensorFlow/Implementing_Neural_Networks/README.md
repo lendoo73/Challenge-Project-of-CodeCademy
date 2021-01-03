@@ -1,4 +1,7 @@
 # [Implementing Neural Networks](https://www.codecademy.com/paths/build-deep-learning-models-with-tensorflow/tracks/dlsp-getting-started-with-tensorflow/modules/dlsp-implementing-neural-networks/lessons/dl-neural-networks/exercises/introduction)
+
+Perceptrons are the building blocks of Neural Networks.
+
 A neural network, just like any machine learning method, learns how to perform tasks by processing data and adjusting its model to best predict the desired outcome.
 Most popular machine learning tasks are:
 1. **Classification:**  given data and true labels or categories for each data point, train a model that predicts for each data example what its label should be. 
