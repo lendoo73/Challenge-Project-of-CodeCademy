@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Cooking By Myself</h1>
+  <p>Welcome to my cookbook. These are recipes I like.</p>
+  {% for id, name in template_recipes.items() %}
+    <p><a href="/recipe/{{ id }}">{{ name }}</a></p>
+  {% endfor %}
+{% endblock %}
