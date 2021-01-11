@@ -149,6 +149,94 @@ The `{% else %}` and `{% elif %}` delimiters can be included to create multi-bra
 {% endif %}
 ```
 
+## [For Loops](https://www.codecademy.com/courses/learn-flask/lessons/flask-templates/exercises/for-loops)
 
+Repetitive tasks are standard in most computer applications and template rendering is no different. 
+Creating lists, tables or a group of images are all repetitive tasks that can be solved using for loops.
 
+Using the same statement delimiter block as if statements `{% %}`, for loops step through a range of numbers, lists and dictionaries.
+The following code will create an ordered list where each line will output the index of the sequence:
 
+```
+<ol>
+{% for x in range(3) %}
+  <li>{{ x }}</li>
+{% endfor%}
+</ol>
+```
+The local loop variable can be used inside our loop with the expression delimiter `{{x}}`.
+Similar to the if statements we need to close the loop with an `% endfor %} block`.
+
+### Iterate through a list variable:
+
+```
+{% for element in template_list %}
+```
+
+### Iterate through a string:
+
+```
+{% for char_in_string in “Hello!” %}
+```
+
+### Iterate through the keys of a dictionary variable:
+
+```
+{% for key in template_dict %}
+```
+
+### Iterate through keys AND values of a dictionary with `items()`:
+
+```
+{% for key, value in template_dict.items() %}
+```
+Using the filter `dictsort` in a loop outputs the key/value pairs just like `items()`.
+
+## Inheritance
+
+If you go to any website you may notice certain elements exist across different web pages.
+
+The navigation bar is a good example of a common page element. 
+This is the banner at the top of most sites that has links to different pages. 
+No matter what page you’re on the navigation bar is there.
+
+Imagine having separate files for each web page and wanting to make a change to the navigation bar. 
+Would you have to change the content of every template of the site? 
+No, that would take too long.
+
+To solve this problem template files are used to share content across multiple templates. 
+The simplest case is a file that includes the top portion of the templates through the `<body>` tag and then the closing `</body>` and `</html>` tags. 
+Jinja2 statement delimiters are then used to identify the area of the template where specific content will be substituted in.
+```
+# base.html
+<html>
+  <head>
+    <title>MY WEBSITE</title>
+  </head>
+  <body>
+  {% block content %}{% endblock %}
+  </body>
+</html>
+```
+To inherit this content in another template we will use the `extends` statement. 
+The code to be substituted should then be surrounded by `{% block content %}` and `{% endblock %}`. 
+All together this looks like the following template:
+```
+# index.html
+{% extends "base.html"  %}
+ 
+{% block content %}
+    <p>This is my paragraph for this page.</p>
+{% endblock %}
+```
+When a route returns `render_template("index.html")` the rendered page will have this content.
+```
+<html>
+  <head>
+    <title>MY WEBSITE</title>
+  </head>
+  <body>
+    <p>This is my paragraph for this page.</p>
+  </body>
+</html>
+```
