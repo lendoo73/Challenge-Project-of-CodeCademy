@@ -171,15 +171,58 @@ The HTML created from this form implementation is as follows:
 </form>
 ```
 
+## [Handling FlaskForm Data](https://www.codecademy.com/courses/learn-flask/lessons/flask-forms/exercises/handling-flaskform-data)
 
+Once a form is submitted, the data is sent back to the server through a `POST` request. 
 
+Using our FlaskForm class, data is now accessible through the form instance in the Flask app. 
+The data can be directly accessed by using the `data` attribute associated with each field in the class:
+```
+form_data = flask_form.my_textfield.data
+```
+Keeping all the information and functionality attached to the form object has streamlined the form creation and data gathering process.
 
+Remember that when a route handles a form it is necessary to add the `POST` method to the route decorator.
+```
+@app.route(
+  "/recipe/<int:id>", 
+  methods = ["GET", "POST"]
+)
+```
 
+## [Validation](https://www.codecademy.com/courses/learn-flask/lessons/flask-forms/exercises/validation)
 
+In order to submit a form, it is common that certain required text fields must have data, date fields need to have a specific format, or a checkbox agreeing to certain terms needs to be checked.
 
+Validation is when form fields must contain data or a certain format of data in order to move forward with submission. 
+We enable validation in our form class using the `validators` parameter in the form field definitions.
 
+Validators come from the `wtform.validators` module. 
+Importing the `DataRequired()` validator is accomplished like this:
+```
+from wtforms.validators import DataRequired
+```
+The `DataRequired()` validator simply requires a field to have something in it before the form is submitted. 
+Notifying the user that data is required is handled automatically.
+```
+comment =  StringField(
+  "Comment",
+  validators = [DataRequired()]
+)
+```
+The `validators` argument takes a list of validator instances.
 
+The `FlaskForm` class also provides a method called `validate_on_submit()`, which we can used in our route to check for a valid form submission.
+```
+if my_form.validate_on_submit():
+    # get form data
+```
+As we saw in second exercise pertaining to the `request` object, in order to avoid gathering data on first access to the route we had to put the data gathering code inside an `if` statement. 
+The `validate_on_submit()` function does this exact task.
 
+The `validate_on_submit()` function returns `True` when there is a `POST` request and all the associated form validators are satisfied. 
+At this point the data can be gathered and processed. 
+When the function returns `False` the route function can move onto other tasks such as rendering the template.
 
 
 
