@@ -224,31 +224,82 @@ The `validate_on_submit()` function returns `True` when there is a `POST` reques
 At this point the data can be gathered and processed. 
 When the function returns `False` the route function can move onto other tasks such as rendering the template.
 
+##  [More Form Fields](https://www.codecademy.com/courses/learn-flask/lessons/flask-forms/exercises/more-form-fields)
 
+Let’s look at some additional form fields included in [WTForms](https://wtforms.readthedocs.io/en/2.3.x/fields/#basic-fields).
 
+### [TextAreaField](https://wtforms.readthedocs.io/en/2.3.x/fields/#convenience-fields)
 
+The TextAreaField is a text field that supports multi-line input. 
+The data returned from a TextAreaField instance is a string that may include more whitespace characters such as newlines or tabs.
+```
+# Form class declaration
+my_text_area = TextAreaField("Text Area Label")
+```
 
+### [BooleanField](https://wtforms.readthedocs.io/en/2.3.x/fields/#basic-fields)
 
+A checkbox element is created using the BooleanField object. 
+The data returned from a `BooleanField` instance is either `True` or `False`.
+```
+# Form class declaration
+my_checkbox = BooleanField("Checkbox Label")
+```
 
+### [RadioField](https://wtforms.readthedocs.io/en/2.3.x/fields/#basic-fields)
 
+A radio button group is created using the `RadioField` object. 
+Since there are multiple buttons in this group, the instance declaration takes an argument for the group label and a keyword argument `choices` which takes a list of tuples.
 
+Each tuple represents a button in the group and contains the button identifier string and the button label string.
+```
+# Form class declaration
+my_radio_group = RadioField(
+  "Radio Group Label", 
+  choices = [
+    ("id1", "One"), 
+    ("id2","Two"), 
+    ("id3","Three")
+  ]
+)
+```
+Since the `RadioField()` instance generally contains multiple buttons it is necessary to iterate through it to access the components of the subfields.
 
+## [Redirecting](https://www.codecademy.com/courses/learn-flask/lessons/flask-forms/exercises/redirecting)
 
+Besides rendering templates from our routes, it can be important to move from one route to another. 
+This is the role of the function `redirect()`.
 
+Consider the case where we create our form in one route, but after the form submission we want the user to end up in another route. 
+While we can set the `action` attribute in the HTML `<form>` tag go to any path, `redirect()` is the best option to move from one route to another.
+```
+redirect("url_string")
+```
+Using this function inside another route will simply send us to the URL we specify. 
+In the case of a form submission, we can use `redirect()` after we have processed and saved our data inside our `validate_on_submit()` check.
 
+Why don’t we just render a different template after processing our form data? 
+There are many reasons for this, one being that each route comes with its own business logic prior to rendering its template. 
+Rendering a template outside the initial route would mean you need to repeat some or all of this code.
 
+Once again, to avoid possible URL string pitfalls, we can utilize `url_for()` within `redirect()`. 
+This allows us to navigate routes by specifying the route function name instead of the URL path.
+```
+redirect(url_for(
+  "new_route", 
+  _external = True, 
+  _scheme = 'https'
+))
+```
+We must add two new keyword arguments to our call of `url_for()`
+The keyword arguments **`_external = True`** and _**`scheme = 'https'`** ensure that the URL we redirect to is a secure HTTPS address and not an insecure HTTP address.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Similarly, regular keyword arguments can be added if necessary:
+```
+redirect(url_for(
+  "new_route", 
+  new_var = this_var, 
+  _external = True, 
+  _scheme = 'https'
+))
+```
