@@ -43,3 +43,6 @@ Columns with the yellow key represent the **primary key** columns that **uniquel
 Columns with the silver key symbols represent the **foreign key** columns that represent **references to the primary keys of other tables**.
 
 Note: often when modeling application databases, nouns represent entities (readers and books) and verbs represent relationships (to review).
+
+## [Flask application with Flask-SQLAlchemy](https://www.codecademy.com/courses/learn-flask/lessons/flask-intro-sql-alchemy/exercises/flask-sqlalchemy)
+
