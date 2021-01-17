@@ -18,6 +18,28 @@ Each month you pick a book your friends can review and rate.
 Your web app manages registered readers, the list of books you choose each month, and the ratings the readers write for those books. 
 Moreover, you can show the annotations your friends made while reading the suggested books.
 
-The schema for this problem is shown on bellow. 
-Inspect the schema by following the instructions below.
+The schema for this problem is shown on bellow.
+
 ![book schema](images/books-schema.jpg)
+
+Inspect the schema by following the instructions below.
+
+**Entities** in our database are **Reader**, **Book**, **Review** and **Annotation**. 
+Those represent tables in the schema.
+
+**Attributes** are properties of an entity and are represented as **columns** in a database table. 
+For example, Reader’s attributes are NAME, SURNAME and EMAIL, and Review’s attributes are TEXT and STARS (representing ratings from 1 to 5).
+
+**Relationships** are represented as **arrows between tables**. 
+Readers are in a relationship with books by reviewing them and by making annotations. 
+A reader can review and annotate multiple books. 
+A book can have multiple reviews and annotations. 
+Each review or annotation is associated with one book and one reader. 
+We say that Reader is in a one-to-many relationship with Review, and Annotation. 
+Similarly, Book is in a one-to-many relationship with Review and Annotation.
+
+Columns with the yellow key represent the **primary key** columns that **uniquely identify entries in the table**.
+
+Columns with the silver key symbols represent the **foreign key** columns that represent **references to the primary keys of other tables**.
+
+Note: often when modeling application databases, nouns represent entities (readers and books) and verbs represent relationships (to review).
