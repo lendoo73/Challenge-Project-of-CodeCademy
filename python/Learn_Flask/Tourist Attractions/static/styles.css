@@ -1,0 +1,49 @@
+h1 {
+    color: palevioletred;
+}
+
+.navbar {
+    background-color: lightgray;
+    padding: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+    padding: 5px;
+}
+
+a:hover {
+    background-color: darkgrey;
+}
+
+.location { grid-area: loc;}
+.description { grid-area: desc; }
+.loc-form { grid-area: frm; }
+
+.loc-container {
+    display: grid;
+    grid-template-areas: 
+      'loc loc  loc desc desc desc desc desc frm';
+    column-gap: 5px;
+    background-color: lightslategray;
+    padding: 5px;
+ }
+
+ .loc-container > div.location {
+     text-align: right;
+ }
+
+ .loc-container > div {
+    background-color: lightgray;
+    text-align: left;
+}
+
+input.up {
+    background-color: #5cb85c;
+}
+
+input.del {
+    background-color: #d9534f;
+}
