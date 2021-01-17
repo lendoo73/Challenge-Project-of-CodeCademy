@@ -20,4 +20,4 @@ Moreover, you can show the annotations your friends made while reading the sugge
 
 The schema for this problem is shown on bellow. 
 Inspect the schema by following the instructions below.
-![]()
+![book schema](images/books-schema.jpg)
