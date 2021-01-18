@@ -177,4 +177,90 @@ The command is written after all the defined models.
 The result of `db.create_all()` is that the database schema is created representing our declared models. 
 After running the command, you should see your database file in the path and with the name you set in the `SQLALCHEMY_DATABASE_URI` configuration field.
 
+## [Creating database entries: entities](https://www.codecademy.com/courses/learn-flask/lessons/flask-intro-sql-alchemy/exercises/creating-database-entities)
+
+Now that we initialized our database schema, the next step is to start creating entries that will later populate the database. 
+The beauty of SQLAlchemy Object Relational Mapper (ORM) is that our database entries are simply created as instances of Python classes representing the declared models.
+
+We will create our objects in a separate file called **create_objects.py**. 
+To create objects representing model entries, we first need to import the models from the **app.py** file:
+```
+from app import Reader, Book, Review
+```
+We can create an object of class `Book` in the following way:
+```
+ b1 = Book(
+    id = 123, 
+    title = 'Demian', 
+    author_name = 'Hermann', 
+    author_surname = 'Hesse', 
+    month = "February", 
+    year = 2020
+)
+ ```
+An example object of class `Reader` could be:
+```
+r1 = Reader(
+    id = 342, 
+    name = 'Ann', 
+    surname = 'Adams', 
+    email = 'ann.adams@example.com'
+)
+```
+Thanks to the ORM, creating database entries is the same as creating Python objects.
+
+We interact with database entries in the way we interact with Python objects. 
+In case we want to access a specific attribute or column, we do it in the same way we would access attributes of Python objects: by using `.` (dot) notation:
+```
+print("My first reader:", r1.name)          # prints My first reader: Ann
+```
+
+## [Creating database entries: relationships](https://www.codecademy.com/courses/learn-flask/lessons/flask-intro-sql-alchemy/exercises/creating-database-relationships)
+
+Creating objects for tables that have foreign keys is not much different from the usual creation of Python objects.
+
+Consider that we have the following objects already created:
+```
+b1 = Book(
+    id = 123, 
+    title = 'Demian', 
+    author_name = 'Hermann', 
+    author_surname = 'Hesse'
+)
+b2 = Book(
+    id = 533, 
+    title = 'The stranger', 
+    author_name = 'Albert', 
+    author_surname = 'Camus'
+)
+r1 = Reader(
+    id = 342, 
+    name = 'Ann', 
+    surname = 'Adams', 
+    email = 'ann.adams@example.com'
+)
+r2 = Reader(
+    id = 312, 
+    name = 'Sam', 
+    surname = 'Adams', 
+    email = 'sam.adams@example.com'
+)
+```
+To create an entry in the `Review` table, in addition to specifying a review text and a rating, we also need to specify which reader wrote the review, and for which book. 
+In other words, we need to specify values for the review’s foreign keys `reviewer_id` and `book_id` that represent primary keys in `Reader` and `Book`, respectively.
+```
+rev1 = Review(
+    id = 435, 
+    text = 'This book is amazing...', 
+    stars = 5, 
+    reviewer_id = r1.id, 
+    book_id = b1.id
+)
+```
+In the example above we see that the review is written by `Reader` instance `r1` for `Book` instance `b1`. 
+We again used Python’s dot notation to access the `id` attribute of `r1` and `b1` objects.
+
+Note: in the future, when creating database entries you don’t need to specify the primary key value explicitly, if you don’t have a preference for the values. 
+When adding entries to a database, a primary key value will be automatically generated, unless specified. 
+
 
