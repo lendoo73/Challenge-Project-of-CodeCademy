@@ -76,24 +76,38 @@ The database object `db` created in our application contains all the functions a
 SQLAlchemy ORM associates user-defined Python classes with database tables, and instances of those classes (objects) with rows in their corresponding tables. 
 The classes that mirror the database tables are referred to as models.
 
-We would like to create a Flask-SQLAlchemy ORM representation of the following table schema:
+We would like to create a Flask-SQLAlchemy ORM representation of the following table schema:  
 ![book](images/book.jpg)
 
-The key symbol represents the primary key column that denotes a column or a property that uniquely identifies entries in the table. For example, student number, social security number, SKU (stock keeping unit), ISBN (International Standard Book Number), and similar, often serve as primary keys.
+The key symbol represents the primary key column that denotes a column or a property that uniquely identifies entries in the table. 
+For example, student number, social security number, SKU (stock keeping unit), ISBN (International Standard Book Number), and similar, often serve as primary keys.
 
-Model represents a declarative base in SQLAlchemy which can be used to declare models. For Book to be a database model for the database instance db, it has to inherit from db.Model in the following way:
-
+`Model` represents a declarative base in SQLAlchemy which can be used to declare models. 
+For `Book` to be a database model for the database instance `db`, it has to inherit from `db.Model` in the following way:
+```
 class Book(db.Model):
-As you can see in the code editor, the Book model has 5 attributes of Column class. The types of the column are the first argument to Column. We use the following column types:
+```
+As you can see in the code editor, the `Book` model has 5 attributes of Column class. 
+The types of the column are the first argument to Column. We use the following column types:
 
-String(N), where N is the maximum number of characters
-Integer, representing a whole number
-Column can take some other parameters:
+* `String(N)`, where N is the maximum number of characters
+* Integer, representing a whole number
 
-unique: when True, the values in the column must be unique
-index: whenTrue, the column is searchable by its values
-primary_key: when True, the column serves as the primary key
+`Column` can take some other parameters:
+* `unique`: when `True`, the values in the column must be unique
+* `index`: when `True`, the column is searchable by its values
+* `primary_key`: when `True`, the column serves as the primary key
 
+## [Declaring a simple model: Reader](https://www.codecademy.com/courses/learn-flask/lessons/flask-intro-sql-alchemy/exercises/declaring-model-reader)
 
+Adding another model or table schema to your application is simple. 
+You only need to create another class that inherits from `Model`.
+
+The model you will create next, `Reader`, is simple and similar to `Book`.
+
+Here’s the schema representation of Reader:  
+![]()  
+
+We have already provided the Reader class declaration and the representation method.
 
 
