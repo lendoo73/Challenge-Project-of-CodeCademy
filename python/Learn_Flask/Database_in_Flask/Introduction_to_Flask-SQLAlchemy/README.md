@@ -60,10 +60,17 @@ app = Flask(__name__)
 To enable communication with a database, the Flask-SQLAlchemy extension takes the location of the application’s database from the `SQLALCHEMY_DATABASE_URI` configuration variable we set in the following way:
 ```
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///myDB.db' 
-``
+```
 Next, we set the SQLALCHEMY_TRACK_MODIFICATIONS configuration option to False to disable a feature of Flask-SQLAlchemy that signals the application every time a change is about to be made in the database.
-
+```
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+```
 Finally, we create an SQLAlchemy object and bind it to our app:
-
+```
 db = SQLAlchemy(app)
+```
+
+
+
+
+
