@@ -70,6 +70,29 @@ Finally, we create an SQLAlchemy object and bind it to our app:
 db = SQLAlchemy(app)
 ```
 
+## [Declaring a simple model: Book](https://www.codecademy.com/courses/learn-flask/lessons/flask-intro-sql-alchemy/exercises/declaring-model-book)
+
+The database object `db` created in our application contains all the functions and helpers from both SQLAlchemy and SQLAlchemy Object Relational Mapper (ORM). 
+SQLAlchemy ORM associates user-defined Python classes with database tables, and instances of those classes (objects) with rows in their corresponding tables. 
+The classes that mirror the database tables are referred to as models.
+
+We would like to create a Flask-SQLAlchemy ORM representation of the following table schema:
+![]()
+
+The key symbol represents the primary key column that denotes a column or a property that uniquely identifies entries in the table. For example, student number, social security number, SKU (stock keeping unit), ISBN (International Standard Book Number), and similar, often serve as primary keys.
+
+Model represents a declarative base in SQLAlchemy which can be used to declare models. For Book to be a database model for the database instance db, it has to inherit from db.Model in the following way:
+
+class Book(db.Model):
+As you can see in the code editor, the Book model has 5 attributes of Column class. The types of the column are the first argument to Column. We use the following column types:
+
+String(N), where N is the maximum number of characters
+Integer, representing a whole number
+Column can take some other parameters:
+
+unique: when True, the values in the column must be unique
+index: whenTrue, the column is searchable by its values
+primary_key: when True, the column serves as the primary key
 
 
 
