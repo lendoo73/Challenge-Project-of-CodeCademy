@@ -129,7 +129,7 @@ where
 
 By adding `relationship` to `Book` we only handled one side in our one-to-many relationship. 
 Specifically, we only covered the direction denoted by the red arrow in the schema below:  
-![]()  
+![book-review relatioinship](images/book-review.jpg)  
 
 In the next exercise, we will add the Review model and its relationship with the Book model (the blue arrow).
 
