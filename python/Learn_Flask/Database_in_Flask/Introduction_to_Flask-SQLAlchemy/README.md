@@ -141,7 +141,7 @@ We additionally have to specify what the foreign keys are for the model on the �
 To remind you, a foreign key is a field (or collection of fields) in one table that refers to the primary key in another table.
 
 We want to create the following database schema:  
-![foreign keys](omages/reader-book-review.webp)  
+![foreign keys](images/reader-book-review.webp)  
 
 To complete the schema, we need to add the `Review` model, and specify the foreign keys (blue arrows) representing the following relationship:
 * One review ——– one book for which the review was written
