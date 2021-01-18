@@ -163,12 +163,12 @@ The reason is simple: we need to explicitly initialize the database according to
 
 We can initialize our database in two ways:
 1. Using the interactive Python shell.
-   * In the command-line terminal, navigate to the application folder and enter Python’s interactive mode: 
+   * In the command-line terminal, navigate to the application folder and enter Python’s interactive mode:  
      `$ python3`
-   * Import the database instance `db` from **app.py**:
+   * Import the database instance `db` from **app.py**:  
      `>>> from app import db`  
      (this assumes the application file is called app.py)
-   * Create all database tables according to the declared models:
+   * Create all database tables according to the declared models:  
     `>>> db.create_all()`
 2. From within the application file. 
 After all the models have been specified the database is initialized by adding `db.create_all()` to the main program. 
