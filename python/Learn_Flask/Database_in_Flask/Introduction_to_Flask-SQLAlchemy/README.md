@@ -133,4 +133,23 @@ Specifically, we only covered the direction denoted by the red arrow in the sche
 
 In the next exercise, we will add the Review model and its relationship with the Book model (the blue arrow).
 
+## [Declaring relationships (Foreign keys)](https://www.codecademy.com/courses/learn-flask/lessons/flask-intro-sql-alchemy/exercises/relationships-foreign-keys)
 
+In the previous lesson, we began adding a one-to-many relationship to the Book and Reader models by using `.relationship()`. 
+But that does not completely specify our one-to-many relationship. 
+We additionally have to specify what the foreign keys are for the model on the ‘many’ side of the relationship. 
+To remind you, a foreign key is a field (or collection of fields) in one table that refers to the primary key in another table.
+
+We want to create the following database schema:  
+![]()  
+
+To complete the schema, we need to add the Review model, and specify the foreign keys (blue arrows) representing the following relationship:
+
+One review ——– one book for which the review was written
+One review ——– one reader who wrote that review
+The red arrows were covered in the previous exercise with the db.relationship() columns.
+
+Similar to the previous models we declared, the Review model has its own columns such as text, stars (denoting ratings), and its own primary key field id. Review additionally needs to specify which other models it is related to by specifying their primary key in its foreign key column:
+
+book_id = db.Column(db.Integer, db.ForeignKey('book.id'))
+The book_id field is a foreign key that refers to the primary key id of the Book table. Similar to the primary key, a foreign key is just another column in our model with unique entries.
