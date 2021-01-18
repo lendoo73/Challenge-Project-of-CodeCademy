@@ -141,15 +141,17 @@ We additionally have to specify what the foreign keys are for the model on the �
 To remind you, a foreign key is a field (or collection of fields) in one table that refers to the primary key in another table.
 
 We want to create the following database schema:  
-![]()  
+![foreign keys](omages/reader-book-review.webp)  
 
-To complete the schema, we need to add the Review model, and specify the foreign keys (blue arrows) representing the following relationship:
+To complete the schema, we need to add the `Review` model, and specify the foreign keys (blue arrows) representing the following relationship:
+* One review ——– one book for which the review was written
+* One review ——– one reader who wrote that review
 
-One review ——– one book for which the review was written
-One review ——– one reader who wrote that review
-The red arrows were covered in the previous exercise with the db.relationship() columns.
+The red arrows were covered in the previous exercise with the `db.relationship()` columns.
 
-Similar to the previous models we declared, the Review model has its own columns such as text, stars (denoting ratings), and its own primary key field id. Review additionally needs to specify which other models it is related to by specifying their primary key in its foreign key column:
-
+Similar to the previous models we declared, the `Review` model has its own columns such as `text`, `stars` (denoting ratings), and its own primary key field `id`. `Review` additionally needs to specify which other models it is related to by specifying their primary key in its foreign key column:
+```
 book_id = db.Column(db.Integer, db.ForeignKey('book.id'))
-The book_id field is a foreign key that refers to the primary key id of the Book table. Similar to the primary key, a foreign key is just another column in our model with unique entries.
+```
+The `book_id` field is a foreign key that refers to the primary key `id` of the `Book` table. 
+Similar to the primary key, a foreign key is just another column in our model with unique entries.
