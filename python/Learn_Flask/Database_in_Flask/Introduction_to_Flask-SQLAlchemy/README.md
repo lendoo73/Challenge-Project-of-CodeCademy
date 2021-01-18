@@ -77,7 +77,7 @@ SQLAlchemy ORM associates user-defined Python classes with database tables, and 
 The classes that mirror the database tables are referred to as models.
 
 We would like to create a Flask-SQLAlchemy ORM representation of the following table schema:
-![]()
+![book](images/book.jpg)
 
 The key symbol represents the primary key column that denotes a column or a property that uniquely identifies entries in the table. For example, student number, social security number, SKU (stock keeping unit), ISBN (International Standard Book Number), and similar, often serve as primary keys.
 
