@@ -106,7 +106,7 @@ You only need to create another class that inherits from `Model`.
 The model you will create next, `Reader`, is simple and similar to `Book`.
 
 Here’s the schema representation of Reader:  
-![]()  
+![reader schema](images/reader.webp)  
 
 We have already provided the Reader class declaration and the representation method.
 
