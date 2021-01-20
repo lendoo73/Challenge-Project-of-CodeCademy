@@ -73,7 +73,8 @@ reviews = db.relationship(
 
 ### Fetching one object
 
-For `Review` object we can fetch its authoring `Reader` through the backref field specified in `Reader`’s `.relationship()` attribute. `backref = 'reviewer'`
+For `Review` object we can fetch its authoring `Reader` through the backref field specified in `Reader`’s `.relationship()` attribute.  
+`backref = 'reviewer'`  
 For example, to fetch the author of review `id = 111` we do the following:
 ```
 review = Review.query.get(111)
