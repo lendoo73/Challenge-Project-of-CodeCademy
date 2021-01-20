@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Book selected for the year {{year}}</title>
+    </head>
+    <body>
+        {% for book in books %}
+             <p>{{ book.title }}</p>
+             {% for review in book.reviews %}
+                   {% include '_review.html' %}
+             {% endfor %}
+        {% else %}
+         <p> Sorry. There are no books suggested in the year {{year}}</p>
+        {% endfor %}
+    </body>
+</html>
