@@ -9,12 +9,12 @@ db = SQLAlchemy(app)
 
 #declaring the Book model
 class Book(db.Model):
-    id = db.Column(db.Integer, primary_key = True) #primary key column
-    title = db.Column(db.String(80), index = True, unique = True) # book title
+    id = db.Column(db.Integer, primary_key = True)                          #primary key column
+    title = db.Column(db.String(80), index = True, unique = True)           # book title
     author_name = db.Column(db.String(50), index = True, unique = False)
     author_surname = db.Column(db.String(80), index = True, unique = False) #author surname
-    month = db.Column(db.String(20), index = True, unique = False) #the month of the book suggestion
-    year = db.Column(db.Integer, index = True, unique = False) #the year of the book suggestion
+    month = db.Column(db.String(20), index = True, unique = False)          #the month of the book suggestion
+    year = db.Column(db.Integer, index = True, unique = False)              #the year of the book suggestion
     reviews = db.relationship('Review', backref = 'book', lazy = 'dynamic') #relationship of Books and Reviews
     
     #Get a nice printout for Book objects
@@ -36,12 +36,12 @@ class Reader(db.Model):
 
 #declaring the Review model
 class Review(db.Model):
-    id = db.Column(db.Integer, primary_key = True) #primary key column, automatically generated IDs
-    stars = db.Column(db.Integer, unique = False) #a review's rating
-    text = db.Column(db.String(200), unique = False) #a review's text
+    id = db.Column(db.Integer, primary_key = True)                    #primary key column, automatically generated IDs
+    stars = db.Column(db.Integer, unique = False)                     #a review's rating
+    text = db.Column(db.String(200), unique = False)                  #a review's text
     #here below is the foreign key column linking to the primary key (id) of the Book model (book). 
     #Note the lower case here: 'book.id' instead of 'Book.id'
-    book_id = db.Column(db.Integer, db.ForeignKey('book.id')) #foreign key column
+    book_id = db.Column(db.Integer, db.ForeignKey('book.id'))         #foreign key column
     reviewer_id = db.Column(db.Integer, db.ForeignKey('reader.id'))
 
     #get a nice printout for Review objects
