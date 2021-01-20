@@ -193,5 +193,76 @@ db.session.commit()
 ```
 If you want to undo the update, you can use `db.session.rollback()` instead of committing.
 
+## [Session: Removing database entries](https://www.codecademy.com/courses/learn-flask/lessons/flask-read-update-delete-database/exercises/removing-with-cascading)
 
+Removing entries is an important aspect of database management and is used often in real-world applications. 
+Users unsubscribe from services, products are removed from web applications, and some relationships are lost (unfollowing other users).
 
+However, before we proceed, we need to be careful about one-to-many relationships. 
+If we remove a reader, we would expect that all the reader’s reviews are also removed from our database. 
+Similarly, removing a book should also remove all the reviews for that book. 
+This procedure is called ***cascading deletion***. 
+Unfortunately, the way we previously declared our `Reader` and `Book` models will not perform the cascading deletion by default. 
+To enable cascading deletions, we did a naive solution in this exercise by changing our models and re-initializing the database. 
+In practice, database migration management is used to update a database schema.
+
+To enable cascade deletions, we changed the models in the **app.py** by adding the `cascade` parameter to the `.relationship()` fields of `Reader` and `Book` models:
+```
+reviews = db.relationship(
+    'Review', 
+    backref = 'reviewer', 
+    lazy = 'dynamic', 
+    cascade = 'all, delete, delete-orphan'
+)
+```
+In contrast, removing a review does not have any other cascading consequences on `Book` and `Reader` tables. 
+Hence, specifying the cascading deletion option in `Review` is not needed.
+
+Finally, to remove a reader with `id = 753` we use the following command:
+```
+db.session.delete(Reader.query.get(753))
+```
+You can notice that when the reader with `id = 753` is deleted, all their reviews are deleted as well.
+
+## [Queries and templates](https://www.codecademy.com/courses/learn-flask/lessons/flask-read-update-delete-database/exercises/queries-in-views)
+
+In this exercise we combine database queries with Jinja templates. 
+In the **routes.py** file, besides the `home()` route listing all the books in the database, we also added several routes for displaying web pages with filtered entries from the database. For example,
+```
+@app.route('/books/<year>')
+def books(year):
+   books = Book.query.filter_by(year = year)
+   return render_template('display_books.html', year = year, books = books)
+```
+is a dynamic route with the `year` variable that can be set to some valid year in the URL. 
+Next, we filter out the books from the asked year and display them using the **display_books.html** file (you can find in the templates folder). 
+The template expects the provided `year` and a list of `books` to display.
+
+Type or copy-paste the following: [http://localhost:8000/books/2020](http://localhost:8000/books/2020). 
+You see all the books suggested in 2020, together with all the reviews for each book. `{% include '_review.html' %}`
+
+If the list of the retrieved queries is empty, we handle that in the **display_books.html** template by outputting that there are no books suggested in that year. 
+```
+{% for book in books %}
+...
+{% else %}
+    <p> Sorry. There are no books suggested in the year {{year}}</p>
+{% endfor %}
+```
+Alternatively, one can use `.first_or_404()` as we do in the following:
+```
+reader = Reader.query.filter_by(id = user_id).first_or_404(description = "There is no user with this ID.")
+```
+If a reader with some `id` does not exist in the database, *404 error is returned with a custom made message*.
+
+## [Review](https://www.codecademy.com/courses/learn-flask/lessons/flask-read-update-delete-database/exercises/flask-review)
+
+In this lesson you learned how to:
+1. query all entries with `query.all()`, or fetch an entry based on the value of its primary key with `query.get(id)`.
+2. retrieve related objects by using the attributes instantiated with `db.relationship()` in your model: `Reader.query.get(123).reviews.all()`.
+3. use `filter` and `filter_by` to select database entries based on some criterion: `Book.query.filter(Book.year = 2020).all()`.
+4. filter database entries by analyzing the patterns in their column values: `emails = Reader.query.filter(Reader.email.like('%.%@%')).all()`.
+5. add new entries to a database, or how to rollback in case the transaction had erroneous entries.
+6. update existing entries in the database: `Reader.query.get(3).email = “new_email@example.com”`.
+7. remove database entries: `db.session.delete(Reader.query.get(753))`.
+8. combine databases with your web application’s templates (views).
