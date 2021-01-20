@@ -45,3 +45,4 @@ readers = Reader.query.all()
 for reader in readers: 
     print(reader.name)
 ```
+![database entries](images/database-entries.webp)
