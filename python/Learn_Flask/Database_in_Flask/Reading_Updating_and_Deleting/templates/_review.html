@@ -1,0 +1,7 @@
+    <table>
+        <tr valign="top">
+            <td>
+              <a href="{{ url_for('profile', user_id=review.reviewer.id) }}">{{ review.reviewer.name }} {{ review.reviewer.surname }}</a> says:<br>{{ review.text }} Stars: {{ review.stars }}            
+            </td>
+        </tr>
+    </table>
