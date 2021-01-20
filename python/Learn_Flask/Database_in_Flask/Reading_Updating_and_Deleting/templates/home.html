@@ -1,0 +1,9 @@
+ <html>
+   <body>
+     <h1> Welcome to your favorite Book Club! </h1>
+     <h2> All the suggested books we have so far: </h2>
+     {% for book in books %}
+        <p>{{book.title}} by {{book.author_name}} {{book.author_surname}} suggested in {{book.month}}, {{book.year}}</p>
+     {% endfor %}
+    </body>
+</html>
