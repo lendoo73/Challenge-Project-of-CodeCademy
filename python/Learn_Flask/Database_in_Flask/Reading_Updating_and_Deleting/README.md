@@ -46,3 +46,58 @@ for reader in readers:
     print(reader.name)
 ```
 ![database entries](images/database-entries.webp)
+
+## [Queries: retrieve related objects](https://www.codecademy.com/courses/learn-flask/lessons/flask-read-update-delete-database/exercises/queries-related-objects)
+
+The models we declared contain relationships. 
+Readers write multiple reviews and have multiple annotations. 
+Similarly, books have multiple reviews and multiple annotations. 
+In this exercise we will see how we can fetch all the reviews made by a reader, and to fetch the author of a review.
+
+### Fetching many objects
+
+We fetch related objects of some object by accessing its attribute defined with `.relationship()`. 
+For example, to fetch all reviews of a reader with `id = 123` we do the following:
+```
+reader = Reader.query.get(123)
+reviews_123 = reader.reviews.all()
+```
+Note that `reviews` attribute was defined as a column in the model for `Reader` using the `.relationship()` method (see **app.py** to remind yourself). 
+```
+reviews = db.relationship(
+    'Review', 
+    backref = 'reviewer', 
+    lazy = 'dynamic'
+)
+```
+
+### Fetching one object
+
+For `Review` object we can fetch its authoring `Reader` through the backref field specified in `Reader`’s `.relationship()` attribute. `backref = 'reviewer'`
+For example, to fetch the author of review `id = 111` we do the following:
+```
+review = Review.query.get(111)
+reviewer_111 = review.reviewer
+```
+You can modify the examples above so not to have temporary variables (`reader` and `review_1`) by chaining the operations:
+```
+reviews_123 = Reader.query.get(123).reviews.all()
+```
+and
+```
+reviewer_111 = Review.query.get(111).reviewer
+```
+Notice the subtle difference between the examples above. 
+The first needs `.all()` because one reader can have many reviews. 
+In the second example, we do not use `.all()` since each review is associated with only one reader. 
+That is our one-to-many relationship.
+
+
+
+
+
+
+
+
+
+
