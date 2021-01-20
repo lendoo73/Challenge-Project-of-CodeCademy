@@ -5,7 +5,7 @@
 Your database has a number of readers who subscribed to your book club and some books you already assigned to be read. 
 Also some of your readers wrote reviews about the books and some of them might have some annotations made while reading their books on an eReader. 
 The schema representing the database:
-![database shema]()
+![database shema](images/books-schema.webp)
 
 What can you do with the database?
 
