@@ -93,8 +93,56 @@ The first needs `.all()` because one reader can have many reviews.
 In the second example, we do not use `.all()` since each review is associated with only one reader. 
 That is our one-to-many relationship.
 
+## [Queries: filtering](https://www.codecademy.com/courses/learn-flask/lessons/flask-read-update-delete-database/exercises/queries-filtering)
 
+Often times you don’t want to retrieve all the entries from a table but select only those that satisfy some criterion. 
+Criteria are usually based on the values of the table’s columns. 
+To filter a query, SQLAlchemy provides the `.filter()` method.
 
+For example, to select books from a specific year from the `Book` table we use the following command:
+```
+Book.query.filter(Book.year == 2020).all()
+```
+Notice the additional `.all()` method. 
+`.filter()` returns a `Query` object that needs to be further refined. 
+This can be done by using several additional methods like `.all()` that returns a list of all results, `.count()` that counts the number of fetched entries, or `.first()` that returns only one result, namely the first one.
+```
+Book.query.filter(Book.year == 2020).first()
+```
+Multiple criteria may be specified as comma separated and the interpretation of a comma is a Boolean `and`:
+```
+Review.query.filter(Review.stars <= 3, Review.book_id == 1).all()
+```
+This query will return all entries in the `Review` table that have fewer than 3 stars for the book with `id = 1`.
+
+Note: there is also the `.filter_by()` method that uses only a simple attribute-value test for filtering.
+
+## [Queries: more advanced filtering](https://www.codecademy.com/courses/learn-flask/lessons/flask-read-update-delete-database/exercises/queries-advanced-filtering)
+
+Flask-SQLALchemy allows more complex queries and operations such as checking whether a column starts, or ends, with some string. 
+One can also order retrieved queries by some criterion. 
+There are many more possible queries, but here we cover only some of them.
+
+For example, to retrieve e-mails that end with `edu` we do:
+```
+education = Reader.query.filter(Reader.email.endswith('edu')).all()
+```
+To retrieve all the readers with e-mails that contain a ‘`.`’ before the ‘`@`’ symbol we use `.like()`:
+```
+emails = Reader.query.filter(Reader.email.like('%.%@%')).all()
+```
+You might recognize the `like` operator from SQL. 
+It is used to search for a specified pattern in a column. 
+The wildcard `%` represents zero, one, or multiple characters.
+
+In the two examples above, we used methods on the column of the table (SQLAlchemy’s `ColumnElement`).
+
+To order books by year we use the `.order_by()` method on `Query`:
+```
+ordered_books = Book.query.order_by(Book.year).all()
+```
+We suggest checking the [SQLAlchemy Core + ORM documentation](https://docs.sqlalchemy.org/en/13/orm/tutorial.html#querying) 
+to see other querying options.
 
 
 
