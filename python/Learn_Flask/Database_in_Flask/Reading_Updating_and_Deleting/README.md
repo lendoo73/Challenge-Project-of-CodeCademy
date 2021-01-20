@@ -144,9 +144,54 @@ ordered_books = Book.query.order_by(Book.year).all()
 We suggest checking the [SQLAlchemy Core + ORM documentation](https://docs.sqlalchemy.org/en/13/orm/tutorial.html#querying) 
 to see other querying options.
 
+## [Session: add and rollback](https://www.codecademy.com/courses/learn-flask/lessons/flask-read-update-delete-database/exercises/session-add-rollback)
 
+A set of operations such as ***addition, removal, or updating*** database entries is called a **database transaction**. 
+A **database session** consists of ***one or more transactions***. 
+The act of **committing** ends a transaction by ***saving the transactions*** permanently to the database. 
+In contrast, **rollback** ***rejects the pending transactions*** and changes are not permanently saved in the database.
 
+In Flask-SQLAlchemy, a database is changed in the context of a session, which can be accessed as the `session` attribute of the database instance. 
+An entry is added to a session with the `add()` method. 
+The changes in a session are permanently written to a database when `.commit()` is executed.
 
+For example, we create new readers and would like to add them to our database:
+```
+from app import db, Reader
+
+new_reader1 = Reader(name = "Nova", surname = "Yeni", email = "nova.yeni@example.com")
+new_reader2 = Reader(name = "Nova", surname = "Yuni", email = "nova.yeni@example.com")
+new_reader3 = Reader( name = "Tom", surname = "Grey", email = "tom.grey@example.edu")
+```
+Note that we didn’t specify the primary key `id` value. 
+**Primary keys don’t have to be specified explicitly**, and the values are automatically generated after the transaction is committed.
+
+Adding each new entry to the database has the same pattern:
+```
+db.session.add(new_reader1)
+try:
+    db.session.commit()
+except:
+    db.session.rollback()
+```
+Notice that we surrounded `db.session.commit()` with a try-except block. 
+Why did we do that? 
+If you look more carefully, `new_reader1` and `new_reader2` have the same e-mail, and when we declared the `Reader` model, we made the e-mail column unique (see the **app.py** file).  
+`email = db.Column(db.String(120), unique = True, index = True, nullable=False)`  
+As a consequence, we want to undo the most recent addition to the transaction by using `db.session.rollback()` and continue with other additions without interruption.
+
+## [Session: updating existing entries](https://www.codecademy.com/courses/learn-flask/lessons/flask-read-update-delete-database/exercises/session-updating-entries)
+
+Sometimes you will need to update a certain column value of an entry in your database. 
+This is rather easy in the context of SQLAlchemy ORM and is done in the same way you would change Python object’s attribute.
+
+The commands below change the email of a reader with `id = 3` and commit the changes to the database:
+```
+reader = Reader.query.get(3)
+reader.email = “new_email@example.com”
+db.session.commit()
+```
+If you want to undo the update, you can use `db.session.rollback()` instead of committing.
 
 
 
