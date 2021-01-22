@@ -164,7 +164,7 @@ The reason is simple: we need to explicitly initialize the database according to
 We can initialize our database in two ways:
 1. Using the interactive Python shell.
    * In the command-line terminal, navigate to the application folder and enter Python’s interactive mode:  
-     `$ python3`
+     `$ python3`                   # or py
    * Import the database instance `db` from **app.py**:  
      `>>> from app import db`  
      (this assumes the application file is called app.py)
