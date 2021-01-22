@@ -1,0 +1,9 @@
+{% extends "_base.html" %}
+<!-- Exports header and navbar from header.html 
+     or any file you want-->
+{% block title %}Page Not Found{% endblock %} 
+{% block content %} 
+
+  <h1>Oops! It seems you cannot access this page yet. You might need to first import routes in app.py</h1> 
+  <a href={{url_for('greeting')}}><p>Click Here</a>To go to back to the Initial greeting page</p> 
+  {% endblock %} 

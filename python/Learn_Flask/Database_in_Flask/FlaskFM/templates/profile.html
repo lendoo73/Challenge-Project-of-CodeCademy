@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<h2>Hi, {{user.username}}. Would you like to edit your playlist?</h2>
+
+<div class="row">
+  <div class="column" style="background-color:#BDB76B;">
+    <h2>Available songs:</h2>
+    {% for song in songs %}
+        <p>{{song}} {% if my_playlist %}<a href="{{url_for('add_item', user_id = user.id, song_id = song.id, playlist_id = my_playlist.id)}}">Add</a>{% endif %}</p>
+    {% endfor %}
+  </div>
+
+  <div class="column" style="background-color:#F0F8FF;">
+    <h2>Your current playlist:</h2>
+    {% if my_playlist %}
+    {% for song in my_playlist.items %}
+        <p>{{song}} <a href="{{url_for('remove_item', user_id = user.id, item_id = song.id)}}">Remove</a></p>
+    {%endfor%}
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

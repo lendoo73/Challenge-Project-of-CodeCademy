@@ -1,0 +1,13 @@
+{% extends "_base.html" %}
+{% block content %}
+<h5 class = "title"><span>Welcome to FlaskFM!</span></h5>
+Welcome to the world of sharing song preferences. You can see music playlists of people all around the world. Below you can find a list of our current users. Feel free to explore what music they like.
+    {% if current_users|length == 0 %}
+    <p style="color:blue;"> Ooops. There are no users currently in your database. Make sure to add them first. </p>
+    {% endif %}
+    <ul>
+    {% for user in current_users %}
+    <li class = "link"><a href="{{ url_for('profile', user_id = user.id)}}">{{user}}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
