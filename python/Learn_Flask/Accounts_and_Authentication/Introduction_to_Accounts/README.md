@@ -44,7 +44,7 @@ print(hash_match) # will print True
   * the hashed string 
   * and a new string 
 which we are checking the hash against. 
-It returns a boolean indicating if the string was a match to the hash.
+* It returns a boolean indicating if the string was a match to the hash.
 
 
 
