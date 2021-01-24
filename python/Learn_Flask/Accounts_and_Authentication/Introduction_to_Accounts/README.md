@@ -55,14 +55,16 @@ There are some fields we might want to store for each of our users no matter wha
 For example, these fields can include: **`id`**, **`username`**, **`email`**, **`password_hash`**, and **`joined_at_date`**. 
 A good way to store this data is in a User model within your database. 
 For example, given some database `db`:
-**```
+**
+```
 class User (db.Model):
   id = db.Column(db.Integer, primary_key = True)
   username = db.Column(db.String(64), index = True, unique = True)
   email = db.Column(db.String(120), index = True, unique = True)
   password_hash = db.Column(db.String(128))
   joined_at_date = db.Column(db.DateTime(), index = True, default = datetime.utcnow)
-```**
+```
+**
 here we instantiate a model User
 that stores primary key id as an Integer
 username, email and password_hash as Strings, and
