@@ -127,10 +127,164 @@ Lastly, we need to make sure to update our template file to make sure the form i
 
 ## [Login in with Flask](https://www.codecademy.com/courses/learn-flask/lessons/flask-accounts/exercises/logging-in-with-flask-login)
 
+We currently have a working form grabbing user data and signing them up to our application. 
+Next, let’s allow users to login by using a Flask-Login object called `LoginManager()`.
+```
+login_manager = LoginManager()
+login_manager.init_app(app)
+```
+* here we create a `LoginManager` object and initialize it with the `init_app()` method and our application object `app`
 
+Flask-Login provides us with a helpful decorator that we’ll place on endpoints we want to be protected. 
+Remember, decorators allow us to run bits of code before ultimately running a function or in this case our flask endpoint.
+```
+@app.route('/user/<username>')
+@login_required
+def user(username):
+  user = User.query.filter_by(username = username).first_or_404()
+  return render_template('user.html', user = user)
+```
+* the `@login_required` decorator is used to protect the `user` route
+* the `User` table is queried for a user that matches the provided username
 
+We will use this decorator on every Flask endpoint that we want only accessible by logged in users. 
+This will check to make sure the user login is still stored in memory. 
+So long as the user memory has not been cleared with a logout or browser refreshing clear, the `LoginManager()` will be able to retrieve the identity of the user before allowing them to access the information on that page.
 
+We also need an additional helper function to load our individual user when trying to access protected routes.
+```
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+```
+* the `load_user()` function loads a user with a given `user_id`
 
+We can then login a user with a login route, paired with a login form, as shown below:
+```
+@app.route('/login', methods=['GET','POST'])
+def login():
+  form = LoginForm(csrf_enabled = False)
+  if form.validate_on_submit():
+    user = User.query.filter_by(email = form.email.data).first()
+    if user and user.check_password(form.password.data):
+      login_user(user, remember = form.remember.data)
+      next_page = request.args.get('next')
+      return redirect(next_page) if next_page else redirect(url_for('index', _external = True, _scheme = 'https'))
+    else:
+      return redirect(url_for('login', _external = True, _scheme = 'https'))
+  return render_template('login.html', form = form)
+```
+* initialize a `LoginForm` `form`
+* if the form validates, query the `User` table for the user with an email that matches the provided email
+* if a user is found `user.check_password(form.password.data)` checks the form entered password against the user’s password
+* if there is a match, `login_user()` logs `user` in and redirects to either `next_page` or the index route
+* if no user is found or the password does not match, we redirect to the login route
 
+## [Associating User Actions](https://www.codecademy.com/courses/learn-flask/lessons/flask-accounts/exercises/ensuring-user-action-integrity)
 
+Our users are now able to create accounts and log in. 
+You may be curious, and ask yourself, “How can I make sure that they manipulate only their data and not someone else’s?”
 
+We solve this association problem by making every dinner party an instance of a `DinnerParty` model, where each party is created by an instance of the `User` model. 
+We can then use the unique identifying attributes of each object to ensure functionality like creating new dinner parties hosted by a specific user and letting users RSVP to a specific dinner party.
+
+We can update our user endpoint with functionality to check for existing dinner parties and create a new dinner party using a form:
+```
+def user(username):
+  user = User.query.filter_by(username = username).first_or_404()
+  dinner_parties = DinnerParty.query.filter_by(party_host_id = user.id)
+  if dinner_parties is None:
+    dinner_parties = []
+  form = DinnerPartyForm(csrf_enabled = False)
+```
+* query the `DinnerParty` model for all dinner parties where the party host is our logged-in user, and store the parties in `dinner_parties`
+* if there is no dinner party hosted by the logged-in user, set `dinner_parties` to an empty list
+* create a `DinnerPartyForm` named `form`
+
+Once the user submits the form for a new dinner party, we can use the form data to create a new `DinnerParty` instance:
+```
+  # user route continued
+  if form.validate_on_submit():
+    new_dinner_party = DinnerParty(
+      date = form.date.data,
+      venue = form.venue.data,
+      main_dish = form.main_dish.data,
+      number_seats = int(form.number_seats.data), 
+      party_host_id = user.id,
+      attendees = username)
+    db.session.add(new_dinner_party)
+    db.session.commit()
+  return render_template('user.html', user = user, dinner_parties = dinner_parties, form = form)
+```
+* if `form` validates, create a new `DinnerParty` object `new_dinner_party`
+* the `DinnerParty` attributes (`date`, `venue`, …, `attendees`) are assigned values from their accompanying form field data
+* the `attendees` attribute is initialized with the logged-in user’s `username`
+* `new_dinner_party` is added to the session and committed
+
+We can create a new route that will allow users to see all the dinner parties that are happening and provide a form for RSVPing to a specific party:
+```
+def rsvp(username):
+  user = User.query.filter_by(username = username).first_or_404()
+  dinner_parties = DinnerParty.query.all()
+  if dinner_parties is None:
+    dinner_parties = []
+  form = RsvpForm(csrf_enabled = False)
+  if form.validate_on_submit():
+    dinner_party = DinnerParty.query.filter_by(id = int(form.party_id.data)).first()
+    dinner_party.attendees += f", {username}"
+    db.session.commit()
+  return render_template('rsvp.html', user = user, dinner_parties = dinner_parties, form = form)
+```
+* set `user` to the logged-in user
+* query all dinner parties in the `DinnerParty` model and save them to `dinner_parties` for display on the page
+* create an RSVP form named `form`
+* if `form` validates, query the `DinnerParty` model for the dinner party with an `id` that matches the `id` entered in the form
+* update the attendee list with the logged-in user’s `username` and commit the change
+
+## [Success and Error Handling](https://www.codecademy.com/courses/learn-flask/lessons/flask-accounts/exercises/success-and-error-handling-with-flask-flash)
+
+As we round things up, it’s a good idea to make sure the user experience is thoughtful by implementing a way to notify the user when an RSVP succeeds or if they need to try again in case an error occurs.
+
+Flask provides us with the `flash()` method to communicate messages powered by the backend. 
+With flash, Flask can record a message at the end of a request and access it on the next request only. 
+We can thus use flash to notify users whether their important actions succeed or fail.
+
+Consider the second half of the RSVP route from the previous exercise. 
+We can update our code to better notify users of what occurs as follows:
+```
+# second half of rsvp route
+  if form.validate_on_submit():
+    dinner_party = DinnerParty.query.filter_by(id = int(form.party_id.data)).first()
+    # new try block
+    try:
+      dinner_party.attendees += f", {username}"
+      db.session.commit()
+      # find the host of dinner_party
+      host = User.query.filter_by(id = int(dinner_party.party_host_id)).first()
+      flash(f"You successfully RSVP'd to {host.username}'s dinner party on {dinner_party.date}!")
+    # new except block
+    except:
+      flash("Please enter a valid Party ID to RSVP!")
+  return render_template('rsvp.html', user = user, dinner_parties = dinner_parties, form = form)
+```
+* the update to `dinner_party.attendees` and the commit now occur inside a try block
+* the `User` model is queried for the user hosting `dinner_party` and stored in `host`
+* inside the `try` block, `flash()` is given a string message as an argument to notify the user that an RSVP successfully occurred
+* an `except` block is called when there is an error RSVP’ing
+* inside the `except` block, `flash()` is given a string message as an argument to notify the user that they were not able to RSVP successfully
+
+With the route updated, we can access our flashed messages in a template file and display them on our page as follows:
+```
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      {{ message }}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+```
+* the `get_flashed_messages()` function returns all flashed messages in the last session and saves the messages to `messages`
+* `if` there are any messages, we `for` loop through each `message` in `messages` and display the message `{{ message }}`
+
+It’s best practice to look at your code and evaluate areas where things can go wrong. 
+When you identify these points, you can utilize `flash()` to provide feedback to the user on what exactly happened and how they can proceed.
