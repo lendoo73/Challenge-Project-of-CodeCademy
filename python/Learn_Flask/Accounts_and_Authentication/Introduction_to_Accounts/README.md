@@ -55,7 +55,6 @@ There are some fields we might want to store for each of our users no matter wha
 For example, these fields can include: **`id`**, **`username`**, **`email`**, **`password_hash`**, and **`joined_at_date`**. 
 A good way to store this data is in a User model within your database. 
 For example, given some database `db`:
-**
 ```
 class User (db.Model):
   id = db.Column(db.Integer, primary_key = True)
@@ -64,18 +63,73 @@ class User (db.Model):
   password_hash = db.Column(db.String(128))
   joined_at_date = db.Column(db.DateTime(), index = True, default = datetime.utcnow)
 ```
-**
-here we instantiate a model User
-that stores primary key id as an Integer
-username, email and password_hash as Strings, and
-joined_at_date as a DateTime
-In addition to this informational data, we want to add methods that represent different user needs. We could write these methods ourselves, but Flask-Login does that work for us with the help of mixins. Mixins help us inject some standard code into a class to make life easier. In this case, we will inherit the methods and properties of the UserMixin class.
+* here we instantiate a model `User`
+* that stores primary key `id` as an `Integer`
+* `username`, `email` and `password_hash` as `String`s, and
+* `joined_at_date` as a `DateTime`
 
+In addition to this informational data, we want to add methods that represent different user needs. 
+We could write these methods ourselves, but Flask-Login does that work for us with the help of mixins. 
+Mixins help us inject some standard code into a class to make life easier. 
+In this case, we will inherit the methods and properties of the `UserMixin` class.
+```
 from flask_login import UserMixin
  
 class User(UserMixin, db.Model)
-when we inherit from UserMixin, we inherit some of the following functions: is_active(), is_authenticated(), is_anonymous()
-these functions will be helpful later on for understanding the state of our users
+```
+* when we inherit from UserMixin, we inherit some of the following functions: `is_active()`, `is_authenticated()`, `is_anonymous()`
+* these functions will be helpful later on for understanding the state of our users
+
+## [Signing up with WTForms](https://www.codecademy.com/courses/learn-flask/lessons/flask-accounts/exercises/signing-up-with-wtforms)
+
+Now that we’ve got a database setup, our dinner application is starting to take shape. 
+We’re going to need to get some data from our friends in order to make their dinner party accounts.
+
+We could get all kinds of juicy information from them like their favorite dish or favorite chef, but for now, we’ll just grab their email address, username, and password. 
+To get this information we’ll need to provide the user with an interface that has input areas for the respective fields that need to be filled out. 
+An HTML form is a perfect way to gather this data!
+
+We will use WTForms to create forms that make it easy for us to grab the data we need.
+```
+class RegistrationForm(FlaskForm):
+  username = StringField('Username', validators = [DataRequired()])
+  email = StringField('Email', validators = [DataRequired(), Email()])
+  password = PasswordField('Password', validators = [DataRequired()])
+  password2 = PasswordField('Repeat Password', validators = [DataRequired(), EqualTo('password')])
+  submit = SubmitField('Register')
+```
+* a class `RegistrationForm` is defined and inherits from `FlaskForm`
+* `StringField`s `username` and `email` are defined with the appropriate validators
+* `PasswordField`s `password` and `password2` are defined with the appropriate validators to ensure the same password is entered twice
+* a `SubmitField` named `submit` is defined
+
+And we will have a route that allows the users to create an account.
+```
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+  form = RegistrationForm()
+  if form.validate_on_submit():
+    user = User(
+      username = form.username.data, 
+      email = form.email.data
+    )
+    user.set_password(form.password.data)
+    db.session.add(user)
+    db.session.commit()
+  return render_template('register.html', form = form)
+```
+* a `RegistrationForm` named `form` is created
+* if the form is validated upon submission, a `User` named `user` is created with a `username` and `email` from the form data
+* the `user`‘s password is set and hashed using the `set_password` method
+* the `user` is added to the database session and the session is committed
+
+Lastly, we need to make sure to update our template file to make sure the form is displayed properly to our users.
+
+## [Login in with Flask](https://www.codecademy.com/courses/learn-flask/lessons/flask-accounts/exercises/logging-in-with-flask-login)
+
+
+
+
 
 
 
