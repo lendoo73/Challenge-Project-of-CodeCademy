@@ -106,21 +106,28 @@ The code below is the logic we use to log a user in if their password is correct
 def index():
   if flask.request.method == 'GET':
     return '''
-    <p>Your credentials:
-    username: TheCodeLearner
-    password: !aehashf0qr324*&#W)*E!
-    </p>
-               <form action='/' method='POST'>
-                <input type='text' name='email' id='email' placeholder='email'/>
-                <input type='password' name='password' id='password' placeholder='password'/>
-                <input type='submit' name='submit'/>
-               </form>
-               '''
+      <p>Your credentials:
+        username: TheCodeLearner
+        password: !aehashf0qr324*&#W)*E!
+      </p>
+      <form action='/' method='POST'>
+        <input type='text' name='email' id='email' placeholder='email'/>
+        <input type='password' name='password' id='password' placeholder='password'/>
+        <input type='submit' name='submit'/>
+        </form>
+    '''
   email = "TheCodeLearner"
   if flask.request.form['password'] == "!aehashf0qr324*&#W)*E!":
-    user = User(email="TheCodeLearner@gmail.com", username="TheCodeLearner",password="!aehashf0qr324*&#W)*E!")
+    user = User(
+      email = "TheCodeLearner@gmail.com", 
+      username = "TheCodeLearner",
+      password = "!aehashf0qr324*&#W)*E!"
+    )
     login_user(user)
-    return render_template("logged_in.html", current_user=user )
+    return render_template(
+      "logged_in.html", 
+      current_user = user
+    )
   return login_manager.unauthorized()
 ```
 
@@ -160,21 +167,35 @@ To display the user we pass it in from the endpoint and access that variable in 
 ```
 This will enable us to see our data when we log in!
 
+## [Logout](https://www.codecademy.com/courses/learn-flask/lessons/flask-authentication/exercises/logout)
 
+You’ve successfully authenticated, Nice. 
+Now only logged in users can see our zesty recipe! 
+But now that you’re done you don’t want to remain logged in. 
+Let’s enable the logout feature to protect the recipe.
 
+Flask-login provides us with a `logout_user` method to facilitate this.
+```
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+```
+Awesome! 
+We have our logout working on our back end. 
+Lets implement a logout link in our html to trigger the logout code to run.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+in **logged_in.html** update the code with the logout link
+```
+<!DOCTYPE>
+<head>
+</head>
+<body>
+  <a 
+    class="blue pull-left" 
+    href="{{ url_for('logout') }}"
+  >Logout</a>
+</body>
+```
+Congrats on learning authentication with Flask!
