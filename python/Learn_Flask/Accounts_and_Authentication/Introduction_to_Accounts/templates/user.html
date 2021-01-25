@@ -1,0 +1,46 @@
+<head><style>
+body {
+  background-color: #E8DCD9;
+  font-family: cursive;
+}</style></head>
+
+<center><h1 style="color:red">Welcome back {{current_user.username}}!</h1>
+  <h2>List of dinner parties you are currently planning: 
+{% for party in dinner_parties %}
+<ul>&#128205;{{ party.date }} - {{ party.venue }} - {{ party.main_dish }} - {{ party.number_seats }} People</ul>
+{% endfor %}
+    </h2>
+    <h1 class="blue">Plan a new dinner party:</h1>
+
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.date.label }}<br>
+            {{ form.date(size=32) }}<br>
+            {% for error in form.date.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.venue.label }}<br>
+            {{ form.venue(size=64) }}<br>
+            {% for error in form.venue.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.main_dish.label }}<br>
+            {{ form.main_dish(size=32) }}<br>
+            {% for error in form.main_dish.error %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.number_seats.label }}<br>
+            {{ form.number_seats(size=32) }}<br>
+            {% for error in form.number_seats.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form></center>
