@@ -29,6 +29,8 @@ We can add hashing functionality to a Flask application using the security modul
 
 To hash a password:
 ```
+from werkzeug.security import generate_password_hash, check_password_hash
+
 hashed_password = generate_password_hash("noONEwillEVERguessTHIS")
 ```
 * `generate_password_hash()` takes a string as an argument and returns a hash of the string
