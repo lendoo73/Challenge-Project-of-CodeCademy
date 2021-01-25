@@ -92,14 +92,16 @@ We can replace this with a template that users who fail to login see.
 
 Best practices for user authentication using Flask is to make it hard for someone to use a stolen credential.
 
-To achieve this in Flask use the Flask’s Werkzeug library which has `generate_password_hash` method to generate a hash, and `check_password_hash` method to compare login input with the value returned from the check_password_hash method.
+To achieve this in Flask use the Flask’s Werkzeug library which has `generate_password_hash` method to generate a hash, and `check_password_hash` method to compare login input with the value returned from the `check_password_hash` method.
 
 Our login code will check whether the value passed in is the same as the hardcoded user we are using to emulate a database.
 
-We create a User class to represent a user. This object takes advantage of UserMixin (Mixins are prepackaged code of common code needs). In this case we use UserMixin because it allows us to take advantage of common user account functions without having to write it all ourselves from scratch.
+We create a `User` class to represent a user. 
+This object takes advantage of `UserMixin` (Mixins are prepackaged code of common code needs). 
+In this case we use `UserMixin` because it allows us to take advantage of common user account functions without having to write it all ourselves from scratch.
 
 The code below is the logic we use to log a user in if their password is correct.
-
+```
 @app.route('/', methods=['GET', 'POST'])
 def index():
   if flask.request.method == 'GET':
@@ -120,7 +122,43 @@ def index():
     login_user(user)
     return render_template("logged_in.html", current_user=user )
   return login_manager.unauthorized()
+```
 
+## [Show Logged in user](https://www.codecademy.com/courses/learn-flask/lessons/flask-authentication/exercises/show-logged-in-user)
+
+In the previous lesson we were able to write the login code. 
+Now in this section we will show the logged in user.
+
+Lets zoom into this code: Notice how we pass in user into the `current_user` object. 
+We will be using that `current_user` object in our html.
+```
+def index():
+ ...
+ if flask.request.form['password'] == "!aehashf0qr324*&#W)*E!":
+   user = User(
+     email = "TheCodeLearner@gmail.com", 
+     username = "TheCodeLearner",
+     password = "!aehashf0qr324*&#W)*E!"
+   )
+   login_user(user)
+   return render_template(
+     "logged_in.html", 
+     current_user = user     # pass the user to the logged_in.html template
+   )
+ return 'Bad login'
+```
+Now when we login successfully we are sent to a page showing our logged in info. 
+Most likely in our application you will be serving dynamic pages of html. 
+We can use Jinja templates to render our data from the backend. 
+To display the user we pass it in from the endpoint and access that variable in our html.
+```
+<h1>Welcome to Our Home Page</h1>
+ 
+<p>Welcome back {{current_user.username}}</p>
+ 
+<a class="blue pull-left" href="{{ url_for('index') }}">back</a>
+```
+This will enable us to see our data when we log in!
 
 
 
