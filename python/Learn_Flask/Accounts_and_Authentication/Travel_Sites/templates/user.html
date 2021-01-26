@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head><style>
+body {
+  background-color: #E8DCD9;
+  font-family: cursive;
+}</style></head>
+
+<center><h1 style="color:red">Welcome back {{current_user.username}}!</h1>
+  <h2>List of trips you are currently planning: 
+{% for post in posts %}
+<ul>&#128205;{{ post.city }} - {{ post.description }}</ul>
+{% endfor %}
+    </h2>
+    <h1 class="blue">Plan a trip to this city:</h1>
+
+  
+
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.city.label }}<br>
+            {{ form.city(size=32) }}<br>
+            {% for error in form.city.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.country.label }}<br>
+            {{ form.country(size=64) }}<br>
+            {% for error in form.country.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.description.label }}<br>
+            {{ form.description(size=32) }}<br>
+            {% for error in form.description.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form></center>
+
+{% endblock %}
