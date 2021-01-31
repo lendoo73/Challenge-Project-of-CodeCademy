@@ -13,5 +13,6 @@ class User:
       message.text = new_text
 
 class Admin(User):
+  # overrided method
   def edit_message(self, message, new_text):
     message.text = new_text
