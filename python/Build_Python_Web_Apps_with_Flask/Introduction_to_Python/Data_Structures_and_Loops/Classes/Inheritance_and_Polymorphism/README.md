@@ -91,3 +91,9 @@ We catch both `RefrigeratorException` and `MicrowaveException` in our try/except
 
 Explore [Python’s exception hierarchy](https://docs.python.org/3/library/exceptions.html#exception-hierarchy) 
 in the Python documentation!
+
+## [Overriding Methods](https://www.codecademy.com/paths/build-python-web-apps-flask/tracks/flask-python-data-structures-loops/modules/learn-python3-classes/lessons/inheritance-and-polymorphism/exercises/overriding-methods)
+
+In Python, all we have to do to override a method definition is to offer a new definition for the method in our subclass.
+
+An overridden method is one that has a different definition from its parent class.
