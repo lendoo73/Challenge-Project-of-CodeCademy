@@ -184,5 +184,103 @@ When **two classes have the same method names and attributes**, we say they impl
 An interface in Python usually refers to the names of the methods and the arguments they take. 
 Other programming languages have more rigid definitions of what an interface is, but it usually hinges on the fact that different objects from different classes can perform the same operation (even if it is implemented differently for each class).
 
+## [Polymorphism](https://www.codecademy.com/paths/build-python-web-apps-flask/tracks/flask-python-data-structures-loops/modules/learn-python3-classes/lessons/inheritance-and-polymorphism/exercises/polymorphism)
 
+All this talk of interfaces demonstrates flexibility in programming. 
+Flexibility in programming is a broad philosophy, but what’s worth remembering is that we want to implement forms that are familiar in our programs so that usage is expected. 
+For example, let’s think of the `+` operator. 
+It’s easy to think of it as a single function that “adds” whatever is on the left with whatever is on the right, but it does many different things in different contexts:
+```
+# For an int and an int, + returns an int
+2 + 4 == 6
+ 
+# For a float and a float, + returns a float
+3.1 + 2.1 == 5.2
+ 
+# For a string and a string, + returns a string
+"Is this " + "addition?" == "Is this addition?"
+ 
+# For a list and a list, + returns a list
+[1, 2] + [3, 4] == [1, 2, 3, 4]
+```
+Look at all the different things that `+` does! 
+The hope is that all of these things are, for the arguments given to them, the intuitive result of adding them together. 
+Polymorphism is the term used to describe the same syntax (like the `+` operator here, but it could be a method name) doing different actions depending on the type of data.
 
+Polymorphism is an abstract concept that covers a lot of ground, but defining class hierarchies that all implement the same interface is a way of introducing polymorphism to our code.
+
+## [Dunder Methods](https://www.codecademy.com/paths/build-python-web-apps-flask/tracks/flask-python-data-structures-loops/modules/learn-python3-classes/lessons/inheritance-and-polymorphism/exercises/dunder-methods)
+
+One way that we can introduce **polymorphism** to our class definitions is by using Python’s special dunder methods. 
+We’ve explored a few already, the constructor `__init__()` and the string representation method `__repr__`, but that’s only scratching the tip of the iceberg.
+
+Python gives us the power to define dunder methods that define a custom-made class to look and behave like a Python builtin. 
+What does that mean? 
+Say we had a class that has an addition method:
+```
+class Color:
+  def __init__(self, red, green, blue):
+    self.red = red
+    self.green = green
+    self.blue = blue
+ 
+ 
+  def __repr__(self):
+    return "Color with RGB = ({red}, {green}, {blue})".format(red=self.red, green=self.green, blue=self.blue)
+ 
+  def add(self, other):
+    """
+    Adds two RGB colors together
+    Maximum value is 255
+    """
+    new_red = min(self.red + other.red, 255)
+    new_green = min(self.green + other.green, 255)
+    new_blue = min(self.blue + other.blue, 255)
+ 
+    return Color(new_red, new_green, new_blue)
+ 
+red = Color(255, 0, 0)
+blue = Color(0, 0, 255)
+ 
+magenta = red.add(blue)
+print(magenta)
+# Prints "Color with RGB = (255, 0, 255)"
+```
+In this code we defined a `Color` class that implements an addition function. 
+Unfortunately, `red.add(blue)` is a little verbose for something that we have an intuitive symbol for (i.e., the `+` symbol). 
+Well, Python offers the dunder method `__add__` for this very reason! 
+If we rename the `add()` method above to something that looks like this:
+```
+class Color: 
+  def __add__(self, other):
+    """
+    Adds two RGB colors together
+    Maximum value is 255
+    """
+    new_red = min(self.red + other.red, 255)
+    new_green = min(self.green + other.green, 255)
+    new_blue = min(self.blue + other.blue, 255)
+ 
+    return Color(new_red, new_green, new_blue)
+```
+Then, if we create the colors:
+```
+red = Color(255, 0, 0)
+green = Color(0, 255, 0)
+blue = Color(0, 0, 255)
+``` 
+### We can add them together using the `+` operator!
+```
+# Color with RGB: (255, 0, 255)
+magenta = red + blue
+ 
+# Color with RGB: (0, 255, 255)
+cyan = green + blue
+ 
+# Color with RGB: (255, 255, 0)
+yellow = red + green
+ 
+# Color with RGB: (255, 255, 255)
+white = red + green + blue
+```
+Since we defined an `__add__` method for our `Color` class, we were able to add these objects together using the `+` operator.
