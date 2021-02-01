@@ -6,4 +6,4 @@
 
 # [HTTP Status Codes](https://www.restapitutorial.com/httpstatuscodes.html)
 
-# [HTTP Errors: 404](HTTP Errors: 404)
+# [HTTP Errors: 404](https://www.codecademy.com/articles/http-errors-404)
