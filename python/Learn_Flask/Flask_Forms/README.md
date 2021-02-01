@@ -48,7 +48,7 @@ As sites get larger and their file structure becomes more complex the paths of F
 In this case paths that are hard coded into the navigation elements such as hyperlinks and forms may break.
 
 Flask addresses the challenge of expanding file structures with `url_for()`. 
-The function `url_for()` takes a route’s function name as an argument and returns the associated URL path. 
+**The function `url_for()` takes a route’s function name as an argument and returns the associated URL path.** 
 Given the following Flask route declaration:
 ```
 @app.route('/')
