@@ -112,6 +112,12 @@ float |	accepts positive floating point values
 path | like string but also accepts slashes
 uuid | accepts UUID strings
 
+### Run on localhost
+
+* Open the command line
+* go to the directory where the code saved: `cd <path>`
+* start flask server: `flask run`
+* in the browser navigate to the [http://localhost:5000](http://localhost:5000)
 
 ### [Run on Glitch](https://first-flask.glitch.me)
 
