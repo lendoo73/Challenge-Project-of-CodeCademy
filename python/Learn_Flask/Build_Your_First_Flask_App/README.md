@@ -111,12 +111,3 @@ int |	accepts positive integers
 float |	accepts positive floating point values
 path | like string but also accepts slashes
 uuid | accepts UUID strings
-
-
-
-
-
-
-
-
-
