@@ -1,4 +1,4 @@
-# [Flask_Templates](https://www.codecademy.com/courses/learn-flask/lessons/flask-templates/exercises/introduction)
+# [Flask Templates](https://www.codecademy.com/courses/learn-flask/lessons/flask-templates/exercises/introduction)
 
 ## [Introduction](https://www.codecademy.com/courses/learn-flask/lessons/flask-templates/exercises/introduction)
 
