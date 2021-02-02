@@ -113,6 +113,15 @@ Here’s the schema representation of Reader:
 Often times in real-world applications we will have entities that are somehow related. 
 Students take courses, customers buy products, and users comment on posts. 
 In SQLAlchemy we can declare a relationship with a field initialized with the `.relationship()` method. 
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
+
 In one-to-many relationships, the relationship field is used on the ‘one’ side of the relationship. 
 In our use case we have the following one-to-many relationships:
 1. One book ———< many reviews for that book
