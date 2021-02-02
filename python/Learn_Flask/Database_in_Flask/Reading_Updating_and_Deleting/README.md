@@ -62,7 +62,7 @@ For example, to fetch all reviews of a reader with `id = 123` we do the followin
 reader = Reader.query.get(123)
 reviews_123 = reader.reviews.all()
 ```
-Note that `reviews` attribute was defined as a column in the model for `Reader` using the `.relationship()` method (see **app.py** to remind yourself). 
+Note that **`reviews` attribute was defined as a column in the model for `Reader` using the `.relationship()`** method (see **app.py** to remind yourself). 
 ```
 reviews = db.relationship(
     'Review', 
@@ -73,8 +73,8 @@ reviews = db.relationship(
 
 ### Fetching one object
 
-For `Review` object we can fetch its authoring `Reader` through the backref field specified in `Reader`’s `.relationship()` attribute.  
-`backref = 'reviewer'`  
+For `Review` object we can fetch its authoring `Reader` through **the backref field specified in `Reader`’s `.relationship()` attribute.  
+`backref = 'reviewer'`**  
 For example, to fetch the author of review `id = 111` we do the following:
 ```
 review = Review.query.get(111)
