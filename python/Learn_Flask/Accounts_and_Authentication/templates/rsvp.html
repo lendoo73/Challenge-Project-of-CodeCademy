@@ -1,0 +1,36 @@
+<head>
+</head>
+
+<body>
+    <!-- replace the empty list with the function to get all flashed messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <h1>Dinner Parties</h1>
+    {% if dinner_parties|length == 0 %}
+        <p style="color:blue;"> Ooops. There are no dinner parties currently planned. Add one! </p>
+    {% endif %}
+    <ul>
+        {% for party in dinner_parties %}
+            <li>{{ party.date }} - {{ party.venue }} - {{ party.main_dish }} - ID: {{ party.id }} - {{ party.attendees }}
+            </li>
+        {% endfor %}
+    </ul>
+    <h1 class="blue">RSVP to a Party:</h1>
+
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.party_id.label }}<br>
+            {{ form.party_id(size=32) }}<br>
+            {% for error in form.party_id.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>

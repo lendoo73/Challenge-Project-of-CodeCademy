@@ -1,0 +1,14 @@
+<head>
+</head>
+<h1>Dinner Party Guests</h1>
+{% if current_user.is_authenticated %}
+    Hi {{ current_user.username }}!
+{% endif %}
+{% if current_users|length == 0 %}
+    <p style="color:blue;"> Ooops. There are no users currently in your database. Make sure to add them first. </p>
+{% endif %}
+<ul>
+    {% for user in current_users %}
+        <li>{{ user.email }}</li>
+    {% endfor %}
+</ul>
