@@ -52,8 +52,7 @@ def home():
 
 @login_manager.unauthorized_handler
 def unauthorized():
-    # do stuff
-    return "You are not logged in. Click here to get <a href="+ str("/")+">back to Landing Page</a>"
+	return "You are not logged in. Click here to get <a href="+ str("/")+">back to Landing Page</a>"
 
 @app.route("/logout")
 @login_required
