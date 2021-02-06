@@ -28,7 +28,6 @@ def register():
   #check if current_user logged in, if so redirect to a page that makes sense
   if current_user.is_authenticated:
     return redirect(url_for("index"))
-    form = RegistrationForm()
   form = RegistrationForm()
   if form.validate_on_submit():
     user = User(
