@@ -221,6 +221,7 @@ Hence, specifying the cascading deletion option in `Review` is not needed.
 Finally, to remove a reader with `id = 753` we use the following command:
 ```
 db.session.delete(Reader.query.get(753))
+db.session.commit()
 ```
 You can notice that when the reader with `id = 753` is deleted, all their reviews are deleted as well.
 
