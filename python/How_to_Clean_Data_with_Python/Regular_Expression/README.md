@@ -109,6 +109,8 @@ The regex
 `mo{2,4}` will match the text `moooo` in the string `moooo`, and not return a match of `moo`, or `mooo`. 
 This is because the fixed quantifier wants to match the largest number of `o`s as possible, which is 4 in the string `moooo`.
 
+## [Quantifiers - Optional](https://www.codecademy.com/courses/practical-data-cleaning/lessons/nlp-regex-conceptual/exercises/quantifiers-optional)
+**Optional quantifiers**, indicated by the question mark `?`, allow us to indicate a character in a regex is optional, or can appear either `0` times or `1` time. 
 
 
 
