@@ -120,10 +120,14 @@ The second command takes the second two characters of each value in the `birthda
 The third command takes the rest of each value in the `birthday` column and puts it into a `year` column.
 
 # [Splitting by Character](https://www.codecademy.com/courses/practical-data-cleaning/lessons/pandas-data-cleaning/exercises/splitting-char)
-Let’s say we have a column called “type” with data entries in the format "admin_US" or "user_Kenya". Just like we saw before, this column actually contains two types of data. One seems to be the user type (with values like “admin” or “user”) and one seems to be the country this user is in (with values like “US” or “Kenya”).
+Let’s say we have a column called `type` with data entries in the format `admin_US` or `user_Kenya`. 
+Just like we saw before, this column actually contains two types of data. 
+One seems to be the user type (with values like `admin` or `user`) and one seems to be the `country` this user is in (with values like `US` or `Kenya`).
 
-We can no longer just split along the first 4 characters because admin and user are of different lengths. Instead, we know that we want to split along the "_". Using that, we can split this column into two separate, cleaner columns:
-
+We can no longer just split along the first 4 characters because `admin` and `user` are of different lengths. 
+Instead, we know that we want to split along the `_`. 
+Using that, we can split this column into two separate, cleaner columns:
+```
 # Create the 'str_split' column
 df['str_split'] = df.type.str.split('_')
  
@@ -132,7 +136,7 @@ df['usertype'] = df.str_split.str.get(0)
  
 # Create the 'country' column
 df['country'] = df.str_split.str.get(1)
-This would transform a table like:
+```
 
 
 
