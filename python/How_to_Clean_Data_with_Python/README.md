@@ -75,4 +75,24 @@ Thus, we often use `.columns()` to rename the columns after melting:
 df.columns(["Account", "Account Type", "Amount"])
 ```
 
+# [Dealing with Duplicates](https://www.codecademy.com/courses/practical-data-cleaning/lessons/pandas-data-cleaning/exercises/duplicates)
+Often we see duplicated rows of data in the DataFrames we are working with. 
+This could happen due to errors in data collection or in saving and loading the data.
+
+To check for duplicates, we can use the pandas function `.duplicated()`, which will return a Series telling us which rows are duplicate rows.
+
+We can use the pandas `.drop_duplicates()` function to remove all rows that are duplicates of another row.
+
+If we wanted to remove every row with a duplicate value in the `item` column, we could specify a subset:
+```
+fruits = fruits.drop_duplicates(
+  subset = ['item']
+)
+```
+By default, this keeps the first occurrence of the duplicate.
+
+Make sure that the columns you drop duplicates from are specifically the ones ***where duplicates don’t belong***. 
+You wouldn’t want to drop duplicates with the `price` column as a subset, for example, because it’s okay if multiple items cost the same amount!
+
+
 
