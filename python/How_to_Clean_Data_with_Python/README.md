@@ -138,7 +138,18 @@ df['usertype'] = df.str_split.str.get(0)
 df['country'] = df.str_split.str.get(1)
 ```
 
+# [Looking at Types](https://www.codecademy.com/courses/practical-data-cleaning/lessons/pandas-data-cleaning/exercises/dtypes)
+Each column of a DataFrame can hold items of the same *data type* or *dtype*. 
+The **dtypes** that pandas uses are: `float`, `int`, `bool`, `datetime`, `timedelta`, `category` and `object`. 
+Often, we want to convert between types so that we can do better analysis. 
+If a numerical category like `num_users` is stored as a Series of objects instead of ints, 
+for example, it makes it more difficult to do something like make a line graph of users over time.
 
+To see the types of each column of a DataFrame, we can use:
+```
+print(df.dtypes)
+```
+The `dtype` of the `dtypes` attribute itself is an `object`! It is a `Series` object. Series objects compose all DataFrames.
 
 
 
