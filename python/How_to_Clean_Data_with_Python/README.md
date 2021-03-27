@@ -94,5 +94,29 @@ By default, this keeps the first occurrence of the duplicate.
 Make sure that the columns you drop duplicates from are specifically the ones ***where duplicates don’t belong***. 
 You wouldn’t want to drop duplicates with the `price` column as a subset, for example, because it’s okay if multiple items cost the same amount!
 
+# [Splitting by Index](https://www.codecademy.com/courses/practical-data-cleaning/lessons/pandas-data-cleaning/exercises/splitting-index)
+In trying to get clean data, we want to make sure each column represents one type of measurement. 
+Often, multiple measurements are recorded in the same column, and we want to separate these out so that we can do individual analysis on each variable.
+
+Let’s say we have a column `birthday` with data formatted in `MMDDYYYY` format. 
+In other words, `11011993` represents a birthday of `November 1, 1993`. 
+We want to split this data into `day`, `month`, and `year` so that we can use these columns as separate features.
+
+In this case, we know the exact structure of these strings. 
+The *first two characters* will always correspond to the `month`, the *second two* to the `day`, and the *rest of the string* will always correspond to `year`. 
+We can easily break the data into three separate columns by splitting the strings using `.str`:
+```
+# Create the 'month' column
+df['month'] = df.birthday.str[0:2]
+ 
+# Create the 'day' column
+df['day'] = df.birthday.str[2:4]
+ 
+# Create the 'year' column
+df['year'] = df.birthday.str[4:]
+```
+The first command takes the first two characters of each value in the `birthday` column and puts it into a `month` column. 
+The second command takes the second two characters of each value in the `birthday` column and puts it into a `day` column. 
+The third command takes the rest of each value in the `birthday` column and puts it into a `year` column.
 
 
