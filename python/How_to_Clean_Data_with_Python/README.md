@@ -151,5 +151,6 @@ print(df.dtypes)
 ```
 The `dtype` of the `dtypes` attribute itself is an `object`! It is a `Series` object. Series objects compose all DataFrames.
 
+# [String Parsing](https://www.codecademy.com/courses/practical-data-cleaning/lessons/pandas-data-cleaning/exercises/string-parsing-i)
 
 
