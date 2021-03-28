@@ -233,6 +233,16 @@ Now, our `df` looks like this:
 | 10/19/2018 | chest flyes - 15 reps | 15 | chest flyes
 | … | … | … | …
 
+# [Missing Values](https://www.codecademy.com/courses/practical-data-cleaning/lessons/pandas-data-cleaning/exercises/fill-drop-na)
+We often have data with missing elements, as a result of a problem with the data collection process or errors in the way the data was stored. 
+The missing elements normally show up as `NaN` (or Not a Number) values:
+| day | bill | tip | num_guests
+| --- | --- | --- | --- 
+| Mon | 10.1 | 1 | 1
+| Mon | 20.75 | 5.5	| 2
+| Tue | 19.95 |	5.5 | NaN
+| Wed |	44.10 |	15 | 3
+| Wed |	NaN |1 | 1
 
 
 
