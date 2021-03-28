@@ -156,10 +156,10 @@ Sometimes we need to modify strings in our DataFrames to help us transform them 
 For example, in our fruits table from before:
 | item |	price |	calories
 | --- | :---: | :---:
-| “banana” |	“$1” |	105
-| “apple” |	“$0.75” |	95
-| “peach” |	“$3” |	55
-| “peach” |	“$4” |	55
-| “clementine” |	“$2.5” |	35
+| banana |	$1 |	105
+| apple |	$0.75 |	95
+| peach |	$3 |	55
+| peach |	$4 |	55
+| clementine |	$2.5 |	35
 
 
