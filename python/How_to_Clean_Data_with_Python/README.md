@@ -213,7 +213,25 @@ which would result in this DataFrame `split_df`:
 | 5	| chest flyes - | 15 | reps
 | … | … | … | …
 
-
+Then, we can assign columns from this DataFrame to the original `df`:
+```
+df.reps = pd.to_numeric(split_df[1])
+df.exercise = split_df[2].replace(
+    '[\- ]', 
+    '', 
+    regex = True
+)
+```
+Now, our `df` looks like this:
+| date | exerciseDescription | reps |exercise
+| --- | --- | --- | ---
+| 10/18/2018 | lunges - 30 reps | 30 |lunges
+| 10/18/2018 | squats - 20 reps | 20 | squats
+| 10/18/2018 | deadlifts - 25 reps | 25 | deadlifts
+| 10/18/2018 | jumping jacks - 30 reps | 30 | jumping jacks
+| 10/19/2018 | lunges - 40 reps | 40 | lunges
+| 10/19/2018 | chest flyes - 15 reps | 15 | chest flyes
+| … | … | … | …
 
 
 
