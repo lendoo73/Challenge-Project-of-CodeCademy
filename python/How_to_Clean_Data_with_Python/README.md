@@ -190,7 +190,26 @@ Suppose we had this DataFrame df representing a workout regimen:
 | 10/18/2018 |	jumping jacks - 30 reps
 | 10/19/2018 |	lunges - 40 reps
 | 10/19/2018 |	chest flyes - 15 reps
+It would be helpful to separate out data like `30 lunges` into 2 columns with the number of reps, `30`, and the type of exercise, `lunges`. 
+Then, we could compare the increase in the number of lunges done over time, for example.
 
+To extract the numbers from the string we can use pandas’ `.str.split()` function:
+```
+split_df = df['exerciseDescription'].str.split(
+    '(\d+)', 
+    expand = True
+)
+```
+which would result in this DataFrame `split_df`:
+| * * |	0 |	1 |	2
+| --- | --- | --- | ---
+| 0 | lunges - | 30 | reps
+| 1 | squats - | 20 | reps
+| 2 | deadlifts - |	25 | | reps
+| 3 | jumping jacks - |	30 | reps
+| 4	| lunges - | 40 | reps
+| 5	| chest flyes - | 15 | reps
+| … | … | … | …
 
 
 
