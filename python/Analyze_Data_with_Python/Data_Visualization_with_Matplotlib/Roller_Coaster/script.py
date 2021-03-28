@@ -161,9 +161,6 @@ def create_scatterplot(df, col1, col2):
 
 #create_scatterplot(captain_df, "speed", "height")
 plt.clf()
-#create_scatterplot(captain_df, "speed", "length")
-
-plt.clf()
 
 # 11:
 seating_types = captain_df.groupby("seating_type").name.count().reset_index().rename(columns = {"name": "Count"}).sort_values(by = ["Count"], ascending = False)
