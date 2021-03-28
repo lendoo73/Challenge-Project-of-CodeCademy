@@ -288,7 +288,14 @@ This command will result in the DataFrame with the respective mean of the column
 | Wed |	44.10 |	15 | 3
 | Wed |	23.725 | 1 | 1
 
+# [Review](https://www.codecademy.com/courses/practical-data-cleaning/lessons/pandas-data-cleaning/exercises/review)
+Great! We have looked at a number of different methods we may use to get data into the format we want for analysis.
 
-
-
-
+Specifically, we have covered:
+* **diagnosing** the “tidiness” of the **data**
+* **reshaping** the **data**
+* **combining multiple files**
+* **changing the types of values**
+* **dropping or filling missing values** - how we deal with data that is incomplete or missing
+* **manipulating strings** to represent the data better
+You can use these methods to transform your datasets to be clean and easy to work with!
