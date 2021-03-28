@@ -190,6 +190,7 @@ Suppose we had this DataFrame df representing a workout regimen:
 | 10/18/2018 |	jumping jacks - 30 reps
 | 10/19/2018 |	lunges - 40 reps
 | 10/19/2018 |	chest flyes - 15 reps
+
 It would be helpful to separate out data like `30 lunges` into 2 columns with the number of reps, `30`, and the type of exercise, `lunges`. 
 Then, we could compare the increase in the number of lunges done over time, for example.
 
