@@ -152,5 +152,14 @@ print(df.dtypes)
 The `dtype` of the `dtypes` attribute itself is an `object`! It is a `Series` object. Series objects compose all DataFrames.
 
 # [String Parsing](https://www.codecademy.com/courses/practical-data-cleaning/lessons/pandas-data-cleaning/exercises/string-parsing-i)
+Sometimes we need to modify strings in our DataFrames to help us transform them into more meaningful metrics. 
+For example, in our fruits table from before:
+| item |	price |	calories
+| --- | --- | ---
+| “banana” |	“$1” |	105
+| “apple” |	“$0.75” |	95
+| “peach” |	“$3” |	55
+| “peach” |	“$4” |	55
+| “clementine” |	“$2.5” |	35
 
 
