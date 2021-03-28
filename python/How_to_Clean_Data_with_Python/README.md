@@ -224,7 +224,7 @@ df.exercise = split_df[2].replace(
 ```
 Now, our `df` looks like this:
 | date | exerciseDescription | reps |exercise
-| --- | --- | --- | ---
+| --- | --- | :---: | :---:
 | 10/18/2018 | lunges - 30 reps | 30 |lunges
 | 10/18/2018 | squats - 20 reps | 20 | squats
 | 10/18/2018 | deadlifts - 25 reps | 25 | deadlifts
