@@ -115,7 +115,7 @@ for race in races.columns[:-1]:
   races[f"{race}_pop"] = (races.TotalPop * races[race] / 100).round()
 
 print(races.head())
-# create barplot for each race:
+# create pie-chart:
 sum_of_races = [ races[f"{race}_pop"].sum() for race in races if race in race_types]
 print(sum_of_races)
 plt.pie(
