@@ -178,3 +178,28 @@ Then, we can use the pandas function `.to_numeric()` to convert strings containi
 fruit.price = pd.to_numeric(fruit.price)
 ```
 
+# [More String Parsing](https://www.codecademy.com/courses/practical-data-cleaning/lessons/pandas-data-cleaning/exercises/string-parsing-ii)
+Sometimes we want to do analysis on numbers that are hidden within string values. 
+We can use regex to extract this numerical data from the strings they are trapped in. 
+Suppose we had this DataFrame df representing a workout regimen:
+| date |	exerciseDescription
+| --- | ---
+| 10/18/2018 |	lunges - 30 reps
+| 10/18/2018 |	squats - 20 reps
+| 10/18/2018 |	deadlifts - 25 reps
+| 10/18/2018 |	jumping jacks - 30 reps
+| 10/19/2018 |	lunges - 40 reps
+| 10/19/2018 |	chest flyes - 15 reps
+
+
+
+
+
+
+
+
+
+
+
+
+
