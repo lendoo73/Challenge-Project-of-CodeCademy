@@ -207,7 +207,7 @@ which would result in this DataFrame `split_df`:
 | --- | --- | --- | ---
 | 0 | lunges - | 30 | reps
 | 1 | squats - | 20 | reps
-| 2 | deadlifts - |	25 | | reps
+| 2 | deadlifts - |	25 | reps
 | 3 | jumping jacks - |	30 | reps
 | 4	| lunges - | 40 | reps
 | 5	| chest flyes - | 15 | reps
