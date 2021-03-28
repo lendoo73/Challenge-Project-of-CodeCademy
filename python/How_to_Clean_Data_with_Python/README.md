@@ -162,4 +162,19 @@ For example, in our fruits table from before:
 | peach |	$4 |	55
 | clementine |	$2.5 |	35
 
+We can see that the `price` column is actually composed of strings representing dollar amounts. 
+This column could be much better represented in floats, so that we could take the mean, calculate other aggregate statistics, or compare different fruits to one another in terms of price.
+
+First, we can use what we know of regex to get rid of all of the dollar signs:
+```
+fruit.price = fruit['price'].replace(
+    '[\$,]', 
+    '', 
+    regex = True
+)
+```
+Then, we can use the pandas function `.to_numeric()` to convert strings containing numerical values to integers or floats:
+```
+fruit.price = pd.to_numeric(fruit.price)
+```
 
