@@ -215,24 +215,78 @@ Or, we can specify multiple different attributes! What if we wanted a tag with a
 ```
 soup.find_all(attrs={'class':'banner', 'id':'jumbotron'})
 ```
-Using A Function
-If our selection starts to get really complicated, we can separate out all of the logic that we’re using to choose a tag into its own function. Then, we can pass that function into .find_all()!
 
+## Using A Function
+If our selection starts to get really complicated, we can separate out all of the logic that we’re using to choose a tag into its own function. 
+Then, we can pass that function into `.find_all()`!
+```
 def has_banner_class_and_hello_world(tag):
     return tag.attr('class') == "banner" and tag.string == "Hello world"
  
 soup.find_all(has_banner_class_and_hello_world)
+```
 This command would find an element that looks like this:
-
+```
 <div class="banner">Hello world</div>
+```
 but not an element that looks like this:
-
+```
 <div>Hello world</div>
+```
 Or this:
-
+```
 <div class="banner">What's up, world!</div>
+```
 
+# [Select for CSS Selectors](https://www.codecademy.com/courses/learn-web-scraping/lessons/web-scraping-with-beautiful-soup/exercises/select-for-css-selectors)
+Another way to capture your desired elements with the `soup` object is to use CSS selectors. 
+The `.select()` method will take in all of the CSS selectors you normally use in a `.css` file!
+```
+<h1 class='results'>Search Results for: <span class='searchTerm'>Funfetti</span></h1>
+<div class='recipeLink'><a href="spaghetti.html">Funfetti Spaghetti</a></div>
+<div class='recipeLink' id="selected"><a href="lasagna.html">Lasagna de Funfetti</a></div>
+<div class='recipeLink'><a href="cupcakes.html">Funfetti Cupcakes</a></div>
+<div class='recipeLink'><a href="pie.html">Pecan Funfetti Pie</a></div>
+```
+If we wanted to select all of the elements that have the class `'recipeLink'`, we could use the command:
+```
+soup.select(".recipeLink")
+```
+If we wanted to select the element that has the id `'selected'`, we could use the command:
+```
+soup.select("#selected")
+```
+Let’s say we wanted to loop through all of the links to these funfetti recipes that we found from our search.
+```
+for link in soup.select(".recipeLink > a"):
+  webpage = requests.get(link)
+  new_soup = BeautifulSoup(webpage)
+```
+This loop will go through each link in each `.recipeLink` div and create a soup object out of the webpage it links to. 
+So, it would first make soup out of `<a href="spaghetti.html">Funfetti Spaghetti</a>`, then `<a href="lasagna.html">Lasagna de Funfetti</a>` , and so on.
 
-
-
-
+# [Reading Text](https://www.codecademy.com/courses/learn-web-scraping/lessons/web-scraping-with-beautiful-soup/exercises/reading-text)
+When we use BeautifulSoup to select HTML elements, we often want to grab the text inside of the element, so that we can analyze it. 
+We can use `.get_text()` to retrieve the text inside of whatever tag we want to call it on.
+```
+<h1 class="results">Search Results for: <span class='searchTerm'>Funfetti</span></h1>
+```
+If this is the HTML that has been used to create the `soup` object, we can make the call:
+```
+soup.get_text()
+```
+Which will return:
+```
+'Search Results for: Funfetti'
+```
+Notice that this combined the text inside of the outer `h1` tag with the text contained in the `span` tag inside of it! 
+Using `get_text()`, it looks like both of these strings are part of just one longer string. 
+If we wanted to separate out the texts from different tags, we could specify a separator character. 
+This command would use a `.` character to separate:
+```
+soup.get_text('|')
+```
+Now, the command returns:
+```
+'Search Results for: |Funfetti'
+```
