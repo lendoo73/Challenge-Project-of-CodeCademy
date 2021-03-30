@@ -178,6 +178,7 @@ This function can take in just the name of a tag and returns a list of all occur
 ```
 print(soup.find_all("h1"))
 ```
+```
 ['<h1>World's Best Chocolate Chip Cookies</h1>', '<h1>Ingredients</h1>']
 ```
 `.find_all()` is far more flexible than just accessing elements directly through the soup object. 
