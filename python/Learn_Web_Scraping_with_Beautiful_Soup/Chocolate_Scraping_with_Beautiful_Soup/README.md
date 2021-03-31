@@ -18,4 +18,4 @@ What’s the relationship between cocoa solids percentage and rating?
 
 Can we find a way to answer these questions, or uncover more questions, using BeautifulSoup and Pandas?
 
-#### [Run on Replit <img src="https://repl.it/public/images/logo.svg" width="20" height="20" />](replit.com/@lendoo73/ChocolateScrapingWithBeautifulSoup)
+#### [Run on Replit <img src="https://repl.it/public/images/logo.svg" width="14" height="14" />](replit.com/@lendoo73/ChocolateScrapingWithBeautifulSoup)
