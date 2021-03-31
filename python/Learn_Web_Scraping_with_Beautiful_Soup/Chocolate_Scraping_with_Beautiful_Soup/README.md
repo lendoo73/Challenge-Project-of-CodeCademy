@@ -3,7 +3,7 @@
 # [Chocolate Scraping with Beautiful Soup](https://www.codecademy.com/courses/learn-web-scraping/projects/chocolate-scraping-with-beautiful-soup)
 After eating chocolate bars your whole life, you’ve decided to go on a quest to find the greatest chocolate bar in the world.
 
-You’ve found a website that has over 1700 reviews of chocolate bars from all around the world. 
+You’ve found a website ([Cacao Ratings](https://content.codecademy.com/courses/beautifulsoup/cacao/index.html)) that has over 1700 reviews of chocolate bars from all around the world. 
 It’s displayed in the web browser on this page.
 
 The data is displayed in a table, instead of in a `csv` or `json`. 
