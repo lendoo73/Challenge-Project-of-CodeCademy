@@ -312,14 +312,14 @@ This is necessary to construct the binary search tree because we’ll be relying
 
 Our high-level strategy before moving through the checkpoints.
 1. **base case:** the input list is empty
-  2. Return `"No Child"` to represent the lack of node
+    2. Return `"No Child"` to represent the lack of node
 3. **recursive step:** the input list must be divided into two halves
-  4. Find the middle index of the list
-  5. Store the value located at the middle index
-  6. Make a tree node with a `"data"` key set to the value
-  7. Assign tree node’s `"left child"` to a recursive call using the **left half of the list**
-  8. Assign tree node’s `"right child"` to a recursive call using the **right half of the list**
-  9. Return the tree node
+    4. Find the middle index of the list
+    5. Store the value located at the middle index
+    6. Make a tree node with a `"data"` key set to the value
+    7. Assign tree node’s `"left child"` to a recursive call using the **left half of the list**
+    8. Assign tree node’s `"right child"` to a recursive call using the **right half of the list**
+    9. Return the tree node
 
 
 
