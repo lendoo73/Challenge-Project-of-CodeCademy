@@ -101,6 +101,7 @@ sum_to_one(5)
 ```
 What do you think? We added one to the input, how many more recursive calls were necessary?
 
+If you chose an input large enough, you should see a **`RecursionError`**.
 
 
 
