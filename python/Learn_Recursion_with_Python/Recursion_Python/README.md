@@ -85,7 +85,7 @@ In other words, are we recursing once more for each new element in the list?
 That’s ***linear*** or ***`O(N)`***.
 
 Let’s analyze our previous function, `sum_to_one()`.
-
+```
 sum_to_one(4)
 # recursive call to sum_to_one(3)
 # recursive call to sum_to_one(2)
@@ -98,6 +98,7 @@ sum_to_one(5)
 # recursive call to sum_to_one(3)
 # recursive call to sum_to_one(2)
 # recursive call to sum_to_one(1)
+```
 What do you think? We added one to the input, how many more recursive calls were necessary?
 
 
