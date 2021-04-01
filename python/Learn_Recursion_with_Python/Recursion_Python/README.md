@@ -255,7 +255,26 @@ For this problem, we have two scenarios as we move through the list.
     * All set!
 Which is the base case and which is the recursive step?
 
+# [Fibonacci? Fibonaccu!](https://www.codecademy.com/courses/learn-recursion-python/lessons/recursion-python/exercises/recursion-python-fibbonacci)
+So far our recursive functions have all included a **single recursive call** within the function definition.
 
+Let’s explore a problem which pushes us to use **multiple recursive calls** within the function definition.
+
+Fibonacci numbers are integers which follow a specific sequence: the next Fibonacci number is the **sum of the previous two Fibonacci numbers**.
+
+We have a self-referential definition which means this problem is a great candidate for a recursive solution!
+
+We’ll start by considering **the base case**. 
+The Fibonacci Sequence starts with `0` and `1` respectively. 
+If our function receives an input in that range, we don’t need to do any work.
+
+If we receive an input greater than `1`, things get a bit trickier. 
+This recursive step requires **two previous** Fibonacci numbers to calculate the **current** Fibonacci number.
+
+That means we need two recursive calls in our recursive step.
+```
+fibonacci(3) == fibonacci(1) + fibonacci(2) 
+```
 
 
 
