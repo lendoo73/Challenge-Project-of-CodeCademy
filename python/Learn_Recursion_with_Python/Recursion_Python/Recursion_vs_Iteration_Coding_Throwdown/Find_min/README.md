@@ -1,4 +1,4 @@
-# `find_min()`
+# [`find_min()`](https://www.codecademy.com/courses/learn-recursion-python/lessons/iteration-recursion-python/exercises/iteration-recursion-python-min)
 find the minimum value in a list.
 ```
 def find_min(my_list):
