@@ -1,4 +1,4 @@
-# `is_palindrome()`
+# [`is_palindrome()`](https://www.codecademy.com/courses/learn-recursion-python/lessons/iteration-recursion-python/exercises/iteration-recursion-python-palindrome)
 Palindromes are words which read the same forward and backward. Here’s an iterative function that checks whether a given string is a palindrome:
 ```
 def is_palindrome(my_string):
