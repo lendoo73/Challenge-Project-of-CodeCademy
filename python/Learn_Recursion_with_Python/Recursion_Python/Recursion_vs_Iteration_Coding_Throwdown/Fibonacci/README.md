@@ -1,4 +1,4 @@
-# `fibonacci()`
+# [`fibonacci()`](https://www.codecademy.com/courses/learn-recursion-python/lessons/iteration-recursion-python/exercises/iteration-recursion-python-fib)
 `fibonacci()` should return the `n`th Fibonacci number, where `n` is the number given as input. 
 The first two numbers of a Fibonacci Sequence start with `0` and `1`. 
 Every subsequent number is the sum of the previous two.
