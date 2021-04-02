@@ -1,4 +1,4 @@
-# `factorial()`
+# [`factorial()`](https://www.codecademy.com/courses/learn-recursion-python/lessons/iteration-recursion-python/exercises/iteration-recursion-python-intro)
 This function returns the product of every number from 1 to the given input.
 ```
 # runtime: Linear - O(N)
