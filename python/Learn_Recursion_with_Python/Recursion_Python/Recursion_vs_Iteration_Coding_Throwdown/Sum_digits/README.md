@@ -1,4 +1,4 @@
-# `sum_digits()`
+# [`sum_digits()`](https://www.codecademy.com/courses/learn-recursion-python/lessons/iteration-recursion-python/exercises/iteration-recursion-python-sum-digits)
 This function produces the sum of all the digits in a positive number as if they were each a single number:
 ```
 # Linear - O(N), where "N" is the number of digits in the number
