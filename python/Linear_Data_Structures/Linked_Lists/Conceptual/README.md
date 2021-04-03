@@ -39,3 +39,14 @@ If you accidentally remove the single link to a node, that node’s data and any
 To properly maintain the list when removing a node from the middle of a linked list, you need to be sure to adjust the link on the previous node so that it points to the following node.
 
 Depending on the language, nodes which are not referenced are removed automatically. “Removing” a node is equivalent to removing all references to the node.
+
+# [Linked List Review](https://www.codecademy.com/courses/linear-data-structures/lessons/learn-linked-lists-general/exercises/linked-lists-general-review)
+Linked Lists:
+
+* Are comprised of nodes
+* The nodes contain a link to the next node (and also the previous node for bidirectional linked lists)
+* Can be unidirectional or bidirectional
+* Are a basic data structure, and form the basis for many other data structures
+* Have a single head node, which serves as the first node in the list
+* Require some maintenance in order to add or remove nodes
+* The methods we used are an example and depend on the exact use case and/or programming language being used
