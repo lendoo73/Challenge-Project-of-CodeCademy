@@ -22,6 +22,7 @@ This is a **Last In, First Out** or **LIFO structure**. A less frequently used t
 <p align="center">
     <img src="weight_Stacking.webp" width=600 />
 </p>
+
 # [Stacks Implementation](https://www.codecademy.com/courses/linear-data-structures/lessons/learn-stacks-general/exercises/stacks-general-implementation)
 Stacks can be implemented using a linked list as the underlying data structure because it’s more efficient than a list or array.
 
