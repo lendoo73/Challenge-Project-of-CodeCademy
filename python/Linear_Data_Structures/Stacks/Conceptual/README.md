@@ -20,4 +20,4 @@ You can peek and read the top weight without removing it from the stack.
 The last plate that you put down becomes the first, and only, one that you can access. 
 This is a **Last In, First Out** or **LIFO structure**. A less frequently used term is First In, Last Out, or FILO.
 
-<img src="weight_Stacking.webp" />
+<img src="weight_Stacking.webp width=600" />
