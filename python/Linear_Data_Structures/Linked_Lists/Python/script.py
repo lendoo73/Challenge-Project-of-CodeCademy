@@ -36,18 +36,22 @@ class LinkedList:
   def remove_node(self, value_to_remove, remove_all = False):
     current_node = self.get_head_node()
     if current_node.get_value() == value_to_remove:
+      # remove head_node by set the next node as head_node:
       self.head_node = current_node.get_next_node()
       if remove_all == False:
         return
       else:
         self.remove_node(value_to_remove, True)
+    # traverse the list to find the node with 'value_to_remove':
     while current_node:
       next_node = current_node.get_next_node()
       if next_node.get_value() == value_to_remove:
+        # set new link to current node to bypass next node (delete as garbage collection)
         current_node.set_next_node(next_node.get_next_node())
         if remove_all == False:
           break
       if next_node.get_next_node():
+        # still have some node to traverse
         current_node = next_node
       else: break
         
