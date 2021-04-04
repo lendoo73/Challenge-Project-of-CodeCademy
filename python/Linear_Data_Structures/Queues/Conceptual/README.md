@@ -19,7 +19,8 @@ If they just want to know who is next in line, they can peek and get their name 
 
 The first person in the queue is the first to be served. 
 Queues are a First In, First Out or FIFO structure.
-
-<img alt="Queues" src="movie_line.webp" width="600" />
+<p align="center">
+  <img alt="Queues" src="movie_line.webp" width="600" />
+</p>
 
 #### [Cheatsheet](https://www.codecademy.com/learn/linear-data-structures/modules/cspath-queues/cheatsheet)
