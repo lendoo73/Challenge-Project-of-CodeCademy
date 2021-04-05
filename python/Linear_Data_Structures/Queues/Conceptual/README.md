@@ -38,5 +38,5 @@ If a queue has a limit on the amount of data that can be placed into it, it is c
 Similar to stacks, attempting to enqueue data onto an already full queue will result in a *queue overflow*. 
 If you attempt to dequeue data from an empty queue, it will result in a *queue underflow*.
 <p align="center">
-  <img alt="Queues" src="queue_linked_list.svg" width="600" />
+  <img alt="Queues" src="queue_linked_list.svg" width="800" />
 </p>
