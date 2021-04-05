@@ -150,7 +150,30 @@ lambda x: [OUTCOME IF TRUE] if [CONDITIONAL] else [OUTCOME IF FALSE]
 mylambda = lambda age: "Welcome to BattleCity!" if age >= 13 else "You must be over 13"
 ```
 
+## [Applying a Lambda to a Column](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-ii/exercises/lambda-apply-column)
+In Pandas, we often use lambda functions to perform complex operations on columns. 
+For example, suppose that we want to create a column containing the email provider for each email address in the following table:
 
+| Name |	Email
+| --- | ---
+| JOHN SMITH |	john.smith@gmail.com
+| Jane Doe |	jdoe@yahoo.com
+| joe schmo |	joeschmo@hotmail.com
+
+We could use the following code with a lambda function and the [string method](https://www.codecademy.com/courses/learn-python-3/lessons/string-methods/exercises/splitting-strings)
+`.split()`:
+```
+df['Email Provider'] = df.Email.apply(
+    lambda x: x.split('@')[-1]
+)
+```
+The result would be:
+
+| Name |	Email |	Email Provider
+| --- | --- | ---
+| JOHN SMITH |	john.smith@gmail.com |	gmail.com
+| Jane Doe |	jdoe@yahoo.com |	yahoo.com
+| joe schmo |	joeschmo@hotmail.com |	hotmail.com
 
 
 
