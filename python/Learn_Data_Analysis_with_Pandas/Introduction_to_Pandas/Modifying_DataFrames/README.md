@@ -73,8 +73,8 @@ df['Sales Tax'] = df.Price * 0.075
 ```
 Now our table has a column called `Sales Tax`:
 
-| Product ID |	Product Description |	Cost to Manufacture |	Price |	Sales | Tax
-| --- | --- | --- | --- | --- | --- 
+| Product ID |	Product Description |	Cost to Manufacture |	Price |	Sales Tax
+| --- | --- | --- | --- | ---
 | 1 |	3 inch screw |	0.50 |	0.75 |	0.06
 | 2 |	2 inch nail |	0.10 |	0.25 |	0.02
 | 3 |	hammer | 3.00 |	5.50 |	0.41
