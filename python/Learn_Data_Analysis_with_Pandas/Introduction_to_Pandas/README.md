@@ -145,26 +145,31 @@ When we select a single column, the result is called a *Series*.
 # [Selecting Multiple Columns](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/select-multiple-columns)
 When you have a larger DataFrame, you might want to select just a few columns.
 
-For instance, let’s return to a DataFrame of orders from ShoeFly.com:
+For instance, let’s return to a DataFrame of `orders` from ShoeFly.com:
 
-id	first_name	last_name	email	shoe_type	shoe_material	shoe_color
-54791	Rebecca	Lindsay	RebeccaLindsay57@hotmail.com	clogs	faux-leather	black
-53450	Emily	Joyce	EmilyJoyce25@gmail.com	ballet flats	faux-leather	navy
-91987	Joyce	Waller	Joyce.Waller@gmail.com	sandals	fabric	black
-14437	Justin	Erickson	Justin.Erickson@outlook.com	clogs	faux-leather	red
+| id |	first_name |	last_name |	email |	shoe_type |	shoe_material |	shoe_color
+| --- | --- | --- | --- | --- | --- | --- 
+| 54791 |	Rebecca |	Lindsay |	RebeccaLindsay57@hotmail.com |	clogs |	faux-leather |	black
+| 53450 |	Emily |	Joyce |	EmilyJoyce25@gmail.com |	ballet flats |	faux-leather |	navy
+| 91987 |	Joyce |	Waller |	Joyce.Waller@gmail.com |	sandals |	fabric |	black
+| 14437 |	Justin |	Erickson |	Justin.Erickson@outlook.com |	clogs |	faux-leather |	red
 
-We might just be interested in the customer’s last_name and email. We want a DataFrame like this:
+We might just be interested in the customer’s `last_name` and `email`. 
+We want a DataFrame like this:
 
-last_name	email
-Lindsay	RebeccaLindsay57@hotmail.com
-Joyce	EmilyJoyce25@gmail.com
-Waller	Joyce.Waller@gmail.com
-Erickson	Justin.Erickson@outlook.com
+| last_name |	email
+| --- | --- 
+| Lindsay |	RebeccaLindsay57@hotmail.com
+| Joyce |	EmilyJoyce25@gmail.com
+| Waller |	Joyce.Waller@gmail.com
+| Erickson |	Justin.Erickson@outlook.com
 
-To select two or more columns from a DataFrame, we use a list of the column names. To create the DataFrame shown above, we would use:
-
+To select two or more columns from a DataFrame, we use a list of the column names. 
+To create the DataFrame shown above, we would use:
+```
 new_df = orders[['last_name', 'email']]
-*Note: *Make sure that you have a double set of brackets ([[]]), or this command won’t work!
+```
+*Note: *Make sure that you have a double set of brackets (`[[]]`), or this command won’t work!
 
 
 
