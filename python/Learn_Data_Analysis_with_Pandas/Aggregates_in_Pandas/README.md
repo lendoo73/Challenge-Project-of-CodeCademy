@@ -84,6 +84,7 @@ The output might look something like this:
 | Bob |	90
 | Chris |	75
 | …	
+
 In general, we use the following syntax to calculate aggregates:
 ```
 df.groupby('column1').column2.measurement()
