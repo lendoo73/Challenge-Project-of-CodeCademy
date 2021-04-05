@@ -96,13 +96,16 @@ where:
 * **`measurement`** is the measurement function we want to apply (`mean` in our example)
 
 # [Calculating Aggregate Functions II](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-aggregates/exercises/groupby-ii)
-After using groupby, we often need to clean our resulting data.
+After using `groupby`, we often need to clean our resulting data.
 
-As we saw in the previous exercise, the groupby function creates a new Series, not a DataFrame. For our ShoeFly.com example, the indices of the Series were different values of shoe_type, and the name property was price.
+As we saw in the previous exercise, the `groupby` function **creates a new Series**, not a DataFrame. 
+For our ShoeFly.com example, the indices of the Series were different values of `shoe_type`, and the name property was `price`.
 
-Usually, we’d prefer that those indices were actually a column. In order to get that, we can use reset_index(). This will transform our Series into a DataFrame and move the indices into their own column.
+Usually, we’d prefer that those indices were actually a column. 
+In order to get that, we can use `reset_index()`. 
+This will **transform our Series into a DataFrame** and move the indices into their own column.
 
-Generally, you’ll always see a groupby statement followed by reset_index:
+Generally, you’ll always see a `groupby` statement followed by `reset_index`:
 
 df.groupby('column1').column2.measurement()
     .reset_index()
