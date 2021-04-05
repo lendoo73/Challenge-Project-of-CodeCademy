@@ -175,8 +175,34 @@ The result would be:
 | Jane Doe |	jdoe@yahoo.com |	yahoo.com
 | joe schmo |	joeschmo@hotmail.com |	hotmail.com
 
+## [Applying a Lambda to a Row](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-ii/exercises/lambda-apply-row)
+We can also operate on multiple columns at once. 
+If we use apply without specifying a single column and add the argument `axis = 1`, the input to our lambda function will be an entire row, not a column. 
+To access particular values of the row, we use the syntax `row.column_name` or `row[‘column_name’]`.
 
+Suppose we have a table representing a grocery list:
 
+| Item |	Price |	Is taxed?
+| --- | --- | ---
+| Apple |	1.00 |	No
+| Milk |	4.20 |	No
+| Paper Towels |	5.00 |	Yes
+| Light Bulbs |	3.75 |	Yes
+If we want to add in the price with tax for each line, we’ll need to look at two columns: `Price` and `Is taxed?`.
+
+If `Is taxed?` is `Yes`, then we’ll want to multiply `Price` by `1.075` (for 7.5% sales tax).
+
+If `Is taxed?` is `No`, we’ll just have `Price` without multiplying it.
+
+We can create this column using a lambda function and the keyword `axis = 1`:
+```
+df['Price with Tax'] = df.apply(
+    lambda row: row['Price'] * 1.075 
+        if row['Is taxed?'] == 'Yes'
+        else row['Price'],
+    axis = 1
+)
+```
 
 
 
