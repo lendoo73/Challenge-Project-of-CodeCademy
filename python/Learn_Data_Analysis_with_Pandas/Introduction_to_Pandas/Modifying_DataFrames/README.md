@@ -222,7 +222,41 @@ df.columns = ['First Name', 'Age']
 ```
 This command edits the existing DataFrame `df`.
 
+## [Renaming Columns II](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-ii/exercises/rename-columns-ii)
+You also can rename individual columns by using the `.rename` method. 
+Pass a dictionary like the one below to the `columns` keyword argument:
+```
+{
+    'old_column_name1': 'new_column_name1', 
+    'old_column_name2': 'new_column_name2'
+}
+```
+Here’s an example:
+```
+df = pd.DataFrame({
+    'name': ['John', 'Jane', 'Sue', 'Fred'],
+    'age': [23, 29, 21, 18]
+})
+df.rename(
+    columns = {
+        'name': 'First Name',
+        'age': 'Age'
+    },
+    inplace = True
+)
+```
+The code above will rename `name` to `First Name` and `age` to `Age`.
 
+Using `rename` with only the `columns` keyword will create a **new** DataFrame, leaving your original DataFrame unchanged. 
+That’s why we also passed in the keyword argument **`inplace = True`**. 
+Using `inplace = True` lets us edit the original DataFrame.
+
+There are several reasons why `.rename` is preferable to `.columns`:
+* You can rename just one column
+* You can be specific about which column names are getting changed (with `.column` you can accidentally switch column names if you’re not careful)
+
+*Note: *If you misspell one of the original column names, this command won’t fail. 
+It just won’t change anything.
 
 
 
