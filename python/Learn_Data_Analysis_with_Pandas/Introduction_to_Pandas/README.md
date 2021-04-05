@@ -63,3 +63,35 @@ This command produces a DataFrame `df2` that looks like this:
 | Joe Schmo |	789 Broadway |	51
 
 In this example, we were able to control the ordering of the columns because we used lists.
+
+# [Comma Separated Variables (CSV)](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/what-is-csv)
+We now know how to create our own DataFrame. 
+However, most of the time, we’ll be working with datasets that already exist. 
+One of the most common formats for big datasets is the *CSV*.
+
+*CSV (comma separated values)* is a text-only spreadsheet format. 
+You can find CSVs in lots of places:
+* Online datasets (here’s an example from [data.gov](https://catalog.data.gov/dataset?res_format=CSV))
+* Export from Excel or Google Sheets
+* Export from SQL
+
+The first row of a CSV contains column headings. 
+All subsequent rows contain values. 
+Each column heading and each variable is separated by a comma:
+```
+column1,column2,column3
+value1,value2,value3
+```
+That example CSV represents the following table:
+
+| column1 |	column2 | column3
+| --- | --- | ---
+| value1 |	value2 | value3
+
+
+
+
+
+
+
+
