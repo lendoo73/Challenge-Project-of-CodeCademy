@@ -80,6 +80,34 @@ Now our table has a column called `Sales Tax`:
 | 3 |	hammer | 3.00 |	5.50 |	0.41
 | 4 |	screwdriver |	2.50 |	3.00 |	0.22
 
+## [Performing Column Operations](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-ii/exercises/columns-apply)
+Often, the column that we want to add is related to existing columns, but requires a calculation more complex than multiplication or addition.
+
+For example, imagine that we have the following table of customers.
+
+| Name |	Email
+| --- | ---
+| JOHN SMITH |	john.smith@gmail.com
+| Jane Doe |	jdoe@yahoo.com
+| joe schmo |	joeschmo@hotmail.com
+
+It’s a little annoying that the capitalization is different for each row. 
+Perhaps we’d like to make it more consistent by making all of the letters uppercase.
+
+We can use the `apply` function to apply a function to every value in a particular column. 
+For example, this code overwrites the existing `'Name'` columns by applying the function `upper` to every row in `'Name'`.
+```
+from string import upper
+ 
+df['Name'] = df.Name.apply(upper)
+```
+The result:
+
+| Name |	Email
+| --- | ---
+| JOHN SMITH |	john.smith@gmail.com
+| JANE DOE |	jdoe@yahoo.com
+| JOE SCHMO |	joeschmo@hotmail.com
 
 
 
