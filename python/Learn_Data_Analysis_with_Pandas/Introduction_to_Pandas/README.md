@@ -276,8 +276,48 @@ df[df.age < 30]
 df[df.name != 'Clara Oswald']
 ```
 
+# [Select Rows with Logic II](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/select-rows-logic-ii)
+You can also combine multiple logical statements, as long as each statement is in parentheses.
 
+For instance, suppose we wanted to select all rows where the customer’s age was under 30 or the customer’s name was “Martha Jones”:
 
+| name |	address	phone |	age
+| --- | --- | ---
+| Martha Jones |	123 Main St. |	234-567-8910 |	28
+| Rose Tyler |	456 Maple Ave. |	212-867-5309 |	22
+| Donna Noble |	789 Broadway |	949-123-4567 |	35
+| Amy Pond |	98 West End Ave. |	646-555-1234 |	29
+| Clara Oswald |	54 Columbus Ave. |	714-225-1957 |	31
+| …			
 
+We could use the following code:
+```
+df[(df.age < 30) |
+   (df.name == 'Martha Jones')]
+```
+In Python, `|` means “or” and `&` means “and”.
+
+# [Select Rows with Logic III](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/select-rows-isin)
+Suppose we want to select the rows where the customer’s name is either “Martha Jones”, “Rose Tyler” or “Amy Pond”.
+
+| name |	address	phone |	age
+| --- | --- | ---
+| Martha Jones |	123 Main St. |	234-567-8910 |	28
+| Rose Tyler |	456 Maple Ave. |	212-867-5309 |	22
+| Donna Noble |	789 Broadway |	949-123-4567 |	35
+| Amy Pond |	98 West End Ave. |	646-555-1234 |	29
+| Clara Oswald |	54 Columbus Ave. |	714-225-1957 |	31
+| … |	… |	… |	…
+
+We could use the `isin` command to check that `df.name` is one of a list of values:
+```
+df[df.name.isin([
+    'Martha Jones',
+    'Rose Tyler',
+    'Amy Pond'
+])]
+```
+
+# [Setting indices](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/reset-index)
 
 
