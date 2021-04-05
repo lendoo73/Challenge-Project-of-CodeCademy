@@ -188,6 +188,7 @@ Suppose we have a table representing a grocery list:
 | Milk |	4.20 |	No
 | Paper Towels |	5.00 |	Yes
 | Light Bulbs |	3.75 |	Yes
+
 If we want to add in the price with tax for each line, we’ll need to look at two columns: `Price` and `Is taxed?`.
 
 If `Is taxed?` is `Yes`, then we’ll want to multiply `Price` by `1.075` (for 7.5% sales tax).
