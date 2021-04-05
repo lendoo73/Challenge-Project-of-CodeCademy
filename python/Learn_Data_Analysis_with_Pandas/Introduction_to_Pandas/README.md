@@ -319,5 +319,35 @@ df[df.name.isin([
 ```
 
 # [Setting indices](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/reset-index)
+When we select a subset of a DataFrame using logic, we end up with non-consecutive indices. 
+This is inelegant and makes it hard to use `.iloc()`.
 
+We can fix this using the method `.reset_index()`. 
+For example, here is a DataFrame called `df` with non-consecutive indices:
 
+| First | Name |	Last Name
+| --- | --- | ---
+| 0 | 	John |	Smith
+| 4 |	Jane |	Doe
+| 7 |	Joe |	Schmo
+
+If we use the command `df.reset_index()`, we get a new DataFrame with a new set of indices:
+
+| index | First | Name |	Last Name
+| --- | --- | ---
+| 0 |	0 |	John |	Smith
+| 1 |	4 |	Jane |	Doe
+| 2 |	7 |	Joe |	Schmo
+
+Note that the old indices have been moved into a new column called `'index'`. 
+Unless you need those values for something special, it’s probably better to use the keyword `drop = True` so that you don’t end up with that extra column. 
+If we run the command `df.reset_index(drop = True)`, we get a new DataFrame that looks like this:
+
+| First | Name |	Last Name
+| --- | --- | ---
+| 0 |	John |	Smith
+| 1 |	Jane |	Doe
+| 2 |	Joe |	Schmo
+
+Using `.reset_index()` will return a new DataFrame, but we usually just want to modify our existing DataFrame. 
+If we use the keyword `inplace = True` we can just modify our existing DataFrame.
