@@ -88,6 +88,89 @@ That example CSV represents the following table:
 | --- | --- | ---
 | value1 |	value2 | value3
 
+# [Loading and Saving CSVs](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/load-save-csv)
+When you have data in a CSV, you can load it into a DataFrame in Pandas using `.read_csv()`:
+```
+pd.read_csv('my-csv-file.csv')
+```
+In the example above, the `.read_csv()` method is called. 
+The CSV file called `my-csv-file` is passed in as an argument.
+
+We can also save data to a CSV, using `.to_csv()`.
+```
+df.to_csv('new-csv-file.csv')
+```
+In the example above, the `.to_csv()` method is called on `df` (which represents a DataFrame object). 
+The name of the CSV file is passed in as an argument (`new-csv-file.csv`). 
+By default, this method will save the CSV file in your current directory.
+
+# [Inspect a DataFrame](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/inspect-dataframe)
+When we load a new DataFrame from a CSV, we want to know what it looks like.
+
+If it’s a small DataFrame, you can display it by typing `print(df)`.
+
+If it’s a larger DataFrame, it’s helpful to be able to inspect a few items without having to look at the entire DataFrame.
+
+The method `.head()` gives the first 5 rows of a DataFrame. 
+If you want to see more rows, you can pass in the positional argument `n`. 
+For example, `df.head(10)` would show the first 10 rows.
+
+The method `df.info()` gives some statistics for each column.
+
+# [Select Columns](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/select-columns)
+Now we know how to create and load data. 
+Let’s select parts of those datasets that are interesting or important to our analyses.
+
+Suppose you have the DataFrame called `customers`, which contains the ages of your customers:
+
+| name |	age
+| --- | ---
+| Rebecca Erikson |	35
+| Thomas Roberson |	28
+| Diane Ochoa |	42
+| … |	…
+
+Perhaps you want to take the average or plot a histogram of the ages. 
+In order to do either of these tasks, you’d need to select the column.
+
+There are two possible syntaxes for selecting all values from a column:
+1. Select the column as if you were selecting a value from a dictionary using a key. 
+In our example, we would type `customers['age']` to select the ages.
+2. If the name of a column follows all of the rules for a variable name (doesn’t start with a number, doesn’t contain spaces or special characters, etc.),  
+then you can select it using the following notation: `df.MySecondColumn`. 
+In our example, we would type `customers.age`.
+
+When we select a single column, the result is called a *Series*.
+
+# [Selecting Multiple Columns](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/select-multiple-columns)
+When you have a larger DataFrame, you might want to select just a few columns.
+
+For instance, let’s return to a DataFrame of orders from ShoeFly.com:
+
+id	first_name	last_name	email	shoe_type	shoe_material	shoe_color
+54791	Rebecca	Lindsay	RebeccaLindsay57@hotmail.com	clogs	faux-leather	black
+53450	Emily	Joyce	EmilyJoyce25@gmail.com	ballet flats	faux-leather	navy
+91987	Joyce	Waller	Joyce.Waller@gmail.com	sandals	fabric	black
+14437	Justin	Erickson	Justin.Erickson@outlook.com	clogs	faux-leather	red
+
+We might just be interested in the customer’s last_name and email. We want a DataFrame like this:
+
+last_name	email
+Lindsay	RebeccaLindsay57@hotmail.com
+Joyce	EmilyJoyce25@gmail.com
+Waller	Joyce.Waller@gmail.com
+Erickson	Justin.Erickson@outlook.com
+
+To select two or more columns from a DataFrame, we use a list of the column names. To create the DataFrame shown above, we would use:
+
+new_df = orders[['last_name', 'email']]
+*Note: *Make sure that you have a double set of brackets ([[]]), or this command won’t work!
+
+
+
+
+
+
 
 
 
