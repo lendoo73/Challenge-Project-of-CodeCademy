@@ -41,4 +41,25 @@ This command creates a DataFrame called `df1` that looks like this:
 
 Note that the columns will appear in alphabetical order because dictionaries don’t have any inherent order for columns.
 
+# [Create a DataFrame II](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/create-dataframe-ii)
+You can also add data using lists.
 
+For example, you can pass in a list of lists, where each one represents a row of data. 
+Use the keyword argument `columns` to pass a list of column names.
+```
+df2 = pd.DataFrame([
+    ['John Smith', '123 Main St.', 34],
+    ['Jane Doe', '456 Maple Ave.', 28],
+    ['Joe Schmo', '789 Broadway', 51]
+    ],
+    columns=['name', 'address', 'age'])
+``` 
+This command produces a DataFrame `df2` that looks like this:
+
+| name | address | age
+| --- | --- | ---
+| John Smith | 123 Main St. | 34
+| Jane Doe |	456 Maple Ave. |	28
+| Joe Schmo |	789 Broadway |	51
+
+In this example, we were able to control the ordering of the columns because we used lists.
