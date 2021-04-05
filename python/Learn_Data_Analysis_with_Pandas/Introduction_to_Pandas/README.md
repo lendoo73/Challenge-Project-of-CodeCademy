@@ -197,45 +197,46 @@ When we select a single row, the result is a Series (just like when we select a 
 # [Selecting Multiple Rows](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-i/exercises/select-multiple-rows)
 You can also select multiple rows from a DataFrame.
 
-Here are a few more rows from ShoeFly.com’s orders DataFrame:
+Here are a few more rows from ShoeFly.com’s `orders` DataFrame:
 
-id	first_name	last_name	email	shoe_type	shoe_material	shoe_color
-54791	Rebecca	Lindsay	RebeccaLindsay57@hotmail.com	clogs	faux-leather	black
-53450	Emily	Joyce	EmilyJoyce25@gmail.com	ballet flats	faux-leather	navy
-91987	Joyce	Waller	Joyce.Waller@gmail.com	sandals	fabric	black
-14437	Justin	Erickson	Justin.Erickson@outlook.com	clogs	faux-leather	red
-79357	Andrew	Banks	AB4318@gmail.com	boots	leather	brown
-52386	Julie	Marsh	JulieMarsh59@gmail.com	sandals	fabric	black
-20487	Thomas	Jensen	TJ5470@gmail.com	clogs	fabric	navy
-76971	Janice	Hicks	Janice.Hicks@gmail.com	clogs	faux-leather	navy
-21586	Gabriel	Porter	GabrielPorter24@gmail.com	clogs	leather	brown
+| id |	first_name |	last_name |	email |	shoe_type |	shoe_material |	shoe_color
+| --- | --- | --- | --- | --- | --- | --- 
+| 54791 |	Rebecca |	Lindsay |	RebeccaLindsay57@hotmail.com |	clogs |	faux-leather |	black
+| 53450 |	Emily |	Joyce |	EmilyJoyce25@gmail.com |	ballet flats |	faux-leather |	navy
+| 91987 |	Joyce |	Waller |	Joyce.Waller@gmail.com |	sandals |	fabric |	black
+| 14437 |	Justin |	Erickson |	Justin.Erickson@outlook.com |	clogs |	faux-leather| 	red
+| 79357 |	Andrew |	Banks |	AB4318@gmail.com |	boots |	leather	brown
+| 52386 |	Julie |	Marsh |	JulieMarsh59@gmail.com |	sandals |	fabric |	black
+| 20487 |	Thomas |	Jensen |	TJ5470@gmail.com |	clogs |	fabric |	navy
+| 76971 |	Janice |	Hicks |	Janice.Hicks@gmail.com |	clogs |	faux-leather |	navy
+| 21586 |	Gabriel |	Porter |	GabrielPorter24@gmail.com |	clogs |	leather	brown
 
 Here are some different ways of selecting multiple rows:
+* `orders.iloc[3:7]` would select all rows starting at the 3rd row and up to but not including the 7th row (i.e., the 3rd row, 4th row, 5th row, and 6th row)
 
-orders.iloc[3:7] would select all rows starting at the 3rd row and up to but not including the 7th row (i.e., the 3rd row, 4th row, 5th row, and 6th row)
+| id |	first_name |	last_name |	email |	shoe_type |	shoe_material |	shoe_color
+| --- | --- | --- | --- | --- | --- | --- 
+| 14437 |	Justin |	Erickson |	Justin.Erickson@outlook.com |	clogs |	faux-leather |	red
+| 79357 |	Andrew |	Banks |	AB4318@gmail.com |	boots |	leather	brown
+| 52386 |	Julie |	Marsh |	JulieMarsh59@gmail.com |	sandals |	fabric |	black
+| 20487 |	Thomas |	Jensen |	TJ5470@gmail.com |	clogs |	fabric |	navy
 
-id	first_name	last_name	email	shoe_type	shoe_material	shoe_color
-14437	Justin	Erickson	Justin.Erickson@outlook.com	clogs	faux-leather	red
-79357	Andrew	Banks	AB4318@gmail.com	boots	leather	brown
-52386	Julie	Marsh	JulieMarsh59@gmail.com	sandals	fabric	black
-20487	Thomas	Jensen	TJ5470@gmail.com	clogs	fabric	navy
+* `orders.iloc[:4]` would select all rows up to, but not including the 4th row (i.e., the 0th, 1st, 2nd, and 3rd rows)
 
-orders.iloc[:4] would select all rows up to, but not including the 4th row (i.e., the 0th, 1st, 2nd, and 3rd rows)
+| id |	first_name |	last_name |	email |	shoe_type |	shoe_material |	shoe_color
+| --- | --- | --- | --- | --- | --- | --- 
+| 54791 |	Rebecca |	Lindsay |	RebeccaLindsay57@hotmail.com |	clogs |	faux-leather |	black
+| 53450 |	Emily |	Joyce |	EmilyJoyce25@gmail.com |	ballet flats |	faux-leather |	navy
+| 91987 |	Joyce |	Waller |	Joyce.Waller@gmail.com |	sandals |	fabric |	black
+| 14437 |	Justin |	Erickson |	Justin.Erickson@outlook.com |	clogs |	faux-leather| 	red
 
-id	first_name	last_name	email	shoe_type	shoe_material	shoe_color
-54791	Rebecca	Lindsay	RebeccaLindsay57@hotmail.com	clogs	faux-leather	black
-53450	Emily	Joyce	EmilyJoyce25@gmail.com	ballet flats	faux-leather	navy
-91987	Joyce	Waller	Joyce.Waller@gmail.com	sandals	fabric	black
-14437	Justin	Erickson	Justin.Erickson@outlook.com	clogs	faux-leather	red
+* `orders.iloc[-3:]` would select the rows starting at the 3rd to last row and up to and including the final row
 
-orders.iloc[-3:] would select the rows starting at the 3rd to last row and up to and including the final row
-
-id	first_name	last_name	email	shoe_type	shoe_material	shoe_color
-20487	Thomas	Jensen	TJ5470@gmail.com	clogs	fabric	navy
-76971	Janice	Hicks	Janice.Hicks@gmail.com	clogs	faux-leather	navy
-21586	Gabriel	Porter	GabrielPorter24@gmail.com	clogs	leather	brown
-Instructions
-
+| id |	first_name |	last_name |	email |	shoe_type |	shoe_material |	shoe_color
+| --- | --- | --- | --- | --- | --- | --- 
+| 20487 |	Thomas |	Jensen |	TJ5470@gmail.com |	clogs |	fabric |	navy
+| 76971 |	Janice |	Hicks |	Janice.Hicks@gmail.com |	clogs |	faux-leather |	navy
+| 21586 |	Gabriel |	Porter |	GabrielPorter24@gmail.com |	clogs |	leather	brown
 
 
 
