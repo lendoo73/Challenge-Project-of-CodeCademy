@@ -8,9 +8,7 @@ df = pd.DataFrame([
   ['April', 80, 80, 54, 180],
   ['May', 51, 54, 54, 154],
   ['June', 112, 109, 79, 129]],
-  columns=['month', 'clinic_east',
-           'clinic_north', 'clinic_south',
-           'clinic_west']
+  columns = ['month', 'clinic_east', 'clinic_north', 'clinic_south', 'clinic_west']
 )
 
 clinic_north_south = df[["clinic_north", "clinic_south"]]
