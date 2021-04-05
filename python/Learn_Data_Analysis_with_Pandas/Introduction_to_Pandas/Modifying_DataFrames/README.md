@@ -255,7 +255,7 @@ There are several reasons why `.rename` is preferable to `.columns`:
 * You can rename just one column
 * You can be specific about which column names are getting changed (with `.column` you can accidentally switch column names if you’re not careful)
 
-*Note: *If you misspell one of the original column names, this command won’t fail. 
+> Note: If you misspell one of the original column names, this command won’t fail. 
 It just won’t change anything.
 
 
