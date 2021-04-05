@@ -38,6 +38,30 @@ Our new DataFrame looks like this:
 | 3 |	hammer |	3.00 |	5.50 |	50
 | 4 |	screwdriver |	2.50 |	3.00 |	35
 
+## [Adding a Column II](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-ii/exercises/add-column-ii)
+We can also add a new column that is the same for all rows in the DataFrame. 
+Let’s return to our inventory example:
+
+| Product ID |	Product Description |	Cost to Manufacture |	Price
+| --- | --- | --- | --- 
+| 1 |	3 inch screw |	0.50 |	0.75
+| 2 |	2 inch nail |	0.10 |	0.25
+| 3 |	hammer |	3.00 |	5.50
+| 4 |	screwdriver |	2.50 |	3.00
+
+Suppose we know that all of our products are currently in-stock. 
+We can add a column that says this:
+```
+df['In Stock?'] = True
+```
+Now all of the rows have a column called `In Stock?` with value `True`.
+
+| Product ID |	Product Description |	Cost to Manufacture |	Price |	In Stock?
+| --- | --- | --- | --- | --- 
+| 1 |	3 inch screw |	0.50 |	0.75 |	True
+| 2 |	2 inch nail |	0.10 |	0.25 |	True
+| 3 |	hammer |	3.00 |	5.50 |	True
+| 4 |	screwdriver | 2.50 |	3.00 |	True
 
 
 
