@@ -222,7 +222,7 @@ df.groupby(['Location', 'Day of Week'])['Total Sales'].mean().reset_index()
 The results might look something like this:
 
 | Location |	Day of Week |	Total Sales
-| --- | --- | ---
+| --- | :---: | ---
 | Chelsea |	M |	402.50
 | Chelsea |	Tu |	422.75
 | Chelsea |	W |	452.00
