@@ -91,8 +91,20 @@ new_df = pd.merge(orders, customers)
 ```
 This will match up all of the customer information to the orders that each customer made.
 
+# [Inner Merge III](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-multiple-tables/exercises/inner-merge-iii)
 
+In addition to using `pd.merge`, each DataFrame has its own `merge` method. 
+For instance, if you wanted to merge `orders` with `customers`, you could use:
+```
+new_df = orders.merge(customers)
+```
+This produces the same DataFrame as if we had called `pd.merge(orders, customers)`.
 
+We generally use this when we are joining more than two DataFrames together because we can “chain” the commands. 
+The following command would merge `orders` to `customers`, and then the resulting DataFrame to `products`:
+```
+big_df = orders.merge(customers).merge(products)
+```
 
 
 
