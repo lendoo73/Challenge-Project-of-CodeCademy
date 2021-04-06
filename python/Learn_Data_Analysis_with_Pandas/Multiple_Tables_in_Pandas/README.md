@@ -255,6 +255,8 @@ The resulting table would look like this:
 | Leslie May |	leslie_may@gmail.com |	626-987-6543
 | Aaron Burr |	nan |	303-456-7891
 
+# [Left and Right Merge](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-multiple-tables/exercises/left-merge)
+
 
 
 
