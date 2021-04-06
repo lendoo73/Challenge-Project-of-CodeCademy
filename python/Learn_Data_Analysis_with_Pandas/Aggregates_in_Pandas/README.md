@@ -207,7 +207,7 @@ We can easily do this by passing a list of column names into the `groupby` metho
 Imagine that we run a chain of stores and have data about the number of sales at different locations on different days:
 
 | Location |	Date |	Day of Week |	Total Sales
-| --- | --- | ---- | ----
+| --- | --- | :---: | ----
 | West Village |	February 1 |	W |	400
 | West Village |	February 2 |	Th |	450
 | Chelsea |	February 1 |	W |	375
@@ -237,7 +237,7 @@ When we perform a `groupby` across multiple columns, we often want to change how
 For instance, recall the example where we are running a chain of stores and have data about the number of sales at different locations on different days:
 
 | Location |	Date |	Day of Week |	Total Sales
-| --- | --- | --- | ---
+| --- | --- | :---: | ---
 | West Village |	February 1 |	W |	400
 | West Village |	February 2 |	Th |	450
 | Chelsea |	February 1 |	W |	375
@@ -247,7 +247,7 @@ We suspected that there might be different sales on different days of the week a
 This gave us results that looked like this:
 
 | Location |	Day of Week |	Total Sales
-| --- | --- | ---
+| --- | :---: | ---
 | Chelsea |	M |	300
 | Chelsea |	Tu |	310
 | Chelsea |	W |	320
