@@ -199,6 +199,36 @@ The output, `high_earners` might look like this:
 | 2 |	product |	48
 | …		
 
+# [Calculating Aggregate Functions IV](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-aggregates/exercises/groupby-iv)
+
+Sometimes, we want to group by more than one column. 
+We can easily do this by passing a list of column names into the `groupby` method.
+
+Imagine that we run a chain of stores and have data about the number of sales at different locations on different days:
+
+| Location |	Date |	Day of Week |	Total Sales
+| --- | --- | ---- | ----
+| West Village |	February 1 |	W |	400
+| West Village |	February 2 |	Th |	450
+| Chelsea |	February 1 |	W |	375
+| Chelsea |	February 2 |	Th |	390
+
+We suspect that sales are different at different locations on different days of the week. 
+In order to test this hypothesis, we could calculate the average sales for each store on each day of the week across multiple months. 
+The code would look like this:
+```
+df.groupby(['Location', 'Day of Week'])['Total Sales'].mean().reset_index()
+```
+The results might look something like this:
+
+| Location |	Day of Week |	Total Sales
+| Chelsea |	M |	402.50
+| Chelsea |	Tu |	422.75
+| Chelsea |	W |	452.00
+| …		
+| West Village |	M |	390
+| West Village |	Tu |	400
+| …		
 
 
 
