@@ -106,8 +106,43 @@ The following command would merge `orders` to `customers`, and then the resultin
 big_df = orders.merge(customers).merge(products)
 ```
 
+# [Merge on Specific Columns](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-multiple-tables/exercises/left-on)
 
+In the previous example, the `merge` function “knew” how to combine tables based on the columns that were the same between two tables. 
+For instance, `products` and `orders` both had a column called `product_id`. 
+This won’t always be true when we want to perform a merge.
 
+Generally, the `products` and `customers` DataFrames would not have the columns `product_id` or `customer_id`. 
+Instead, they would both be called `id` and it would be implied that the id was the `product_id` for the products table and `customer_id` for the customers table. 
+They would look like this:
+
+## Customers
+
+| id |	customer_name |	address |	phone_number
+| --- | --- | --- | ---
+| 1 |	John Smith |	123 Main St. |	212-123-4567
+| 2 |	Jane Doe |	456 Park Ave. |	949-867-5309
+| 3	| Joe Schmo |	798 Broadway |	112-358-1321
+
+## Products
+| id |	description |	price
+| --- | --- | ---
+| 1 |	thing-a-ma-jig |	5
+| 2 |	whatcha-ma-call-it |	10
+| 3 |	doo-hickey |	7
+| 4 |	gizmo |	3
+
+**How would this affect our merges?**
+Because the `id` columns would mean something different in each table, our default merges would be wrong.
+
+One way that we could address this problem is to use `.rename` to rename the columns for our merges. 
+In the example below, we will rename the column `id` to `customer_id`, so that `orders` and `customers` have a common column for the merge.
+```
+pd.merge(
+    orders,
+    customers.rename(columns = {'id': 'customer_id'})
+)
+```
 
 
 
