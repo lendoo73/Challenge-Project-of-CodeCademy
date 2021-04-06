@@ -231,7 +231,67 @@ The results might look something like this:
 | West Village |	Tu |	400
 | …		
 
+# [Pivot Tables](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-aggregates/exercises/pivot-tables)
 
+When we perform a `groupby` across multiple columns, we often want to change how our data is stored. 
+For instance, recall the example where we are running a chain of stores and have data about the number of sales at different locations on different days:
+
+| Location |	Date |	Day of Week |	Total Sales
+| --- | --- | --- | ---
+| West Village |	February 1 |	W |	400
+| West Village |	February 2 |	Th |	450
+| Chelsea |	February 1 |	W |	375
+| Chelsea |	February 2 |	Th |	390
+
+We suspected that there might be different sales on different days of the week at different stores, so we performed a `groupby` across two different columns (`Location` and `Day of Week`). 
+This gave us results that looked like this:
+
+| Location |	Day of Week |	Total Sales
+| --- | --- | ---
+| Chelsea |	M |	300
+| Chelsea |	Tu |	310
+| Chelsea |	W |	320
+| Chelsea |	Th |	290
+| …		
+| West Village |	Th |	400
+| West Village |	F |	390
+| West Village |	Sa |	250
+| …		
+
+In order to test our hypothesis, it would be more useful if the table was formatted like this:		
+
+| Location |	M |	Tu |	W |	Th |	F |	Sa |	Su
+| --- | --- | --- | --- | --- | --- | --- | ---
+| Chelsea |	400 |	390 |	250 |	275 |	300 |	150 |	175
+| West Village |	300 |	310 |	350 |	400 |	390 |	250 |	200
+| …							
+
+Reorganizing a table in this way is called **pivoting**. 
+The new table is called a **pivot table**.
+
+In Pandas, the command for pivot is:
+```
+df.pivot(
+    columns = 'ColumnToPivot',
+    index = 'ColumnToBeRows',
+    values = 'ColumnToBeValues'
+)
+```
+For our specific example, we would write the command like this:
+```
+# First use the groupby statement:
+unpivoted = df.groupby(
+    ['Location', 'Day of Week']
+)['Total Sales'].mean().reset_index()
+
+# Now pivot the table
+pivoted = unpivoted.pivot(
+    columns = 'Day of Week',
+    index = 'Location',
+    values = 'Total Sales'
+)
+```    
+Just like with `groupby`, the output of a pivot command is a new DataFrame, but the indexing tends to be “weird”, so we usually follow up with **`.reset_index()`**.
 
 
 
