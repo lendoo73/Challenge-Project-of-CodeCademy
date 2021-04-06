@@ -160,6 +160,53 @@ Our DataFrame now looks like:
 | 3 |	white |	2
 | …		
 
+# [Calculating Aggregate Functions III](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-aggregates/exercises/groupby-iii)
+
+Sometimes, the operation that you want to perform is more complicated than `mean` or `count`. 
+In those cases, you can use the `apply` method and lambda functions, just like we did for individual column operations. 
+Note that the input to our lambda function will always be a list of values.
+
+A great example of this is calculating percentiles. 
+Suppose we have a DataFrame of employee information called `df` that has the following columns:
+* `id`: the employee’s id number
+* `name`: the employee’s name
+* `wage`: the employee’s hourly wage
+* `category`: the type of work that the employee does
+
+Our data might look something like this:
+
+| id |	name |	wage |	category
+| --- | --- | --- | ---
+| 10131 |	Sarah Carney |	39 |	product
+| 14189 |	Heather Carey |	17 |	design
+| 15004 |	Gary Mercado |	33 |	marketing
+| 11204 |	Cora Copaz |	27 |	design
+| …			
+
+If we want to calculate the 75th percentile (i.e., the point at which 75% of employees have a lower wage and 25% have a higher wage) for each `category`, we can use the following combination of `apply` and a lambda function:
+```
+# np.percentile can calculate any percentile over an array of values
+high_earners = df.groupby('category').wage
+    .apply(lambda x: np.percentile(x, 75))
+    .reset_index()
+```
+The output, `high_earners` might look like this:
+
+|    | category |	wage
+| --- | --- | ---
+|0 |	design |	23
+| 1 |	marketing |	35
+| 2 |	product |	48
+| …		
+
+
+
+
+
+
+
+
+
 
 
 
