@@ -203,7 +203,13 @@ The resulting table would look like this:
 | 7 |	1 |	1 |	1 |	2017-02-02 00:00:00 |	1 |	John Smith |	123 Main St. |	212-123-4567
 | 8 |	1 |	4 |	1 |	2017-02-02 00:00:00 |	1 |	John Smith |	123 Main St. |	212-123-4567
 
+# [Mismatched Merges](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-multiple-tables/exercises/mismatched-merge)
 
+In our previous examples, there were always matching values when we were performing our merges. 
+What happens when that isn’t true?
+
+Let’s imagine that our `products` table is out of date and is missing the newest product: Product 5. 
+What happens when someone orders it?
 
 
 
