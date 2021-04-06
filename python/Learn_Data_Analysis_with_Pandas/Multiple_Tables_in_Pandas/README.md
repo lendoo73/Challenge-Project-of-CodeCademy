@@ -346,9 +346,11 @@ That would result in the following DataFrame:
 | Kitty Pryde |	kitkat@gmail.com
 | Charles Xavier |	cxavier@hotmail.com
 
+# [Review](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-multiple-tables/exercises/review-ii)
 
+This lesson introduced some methods for combining multiple DataFrames:
 
-
-
-
-
+* Creating a DataFrame made by matching the common columns of two DataFrames is called a `merge`
+* We can specify which columns should be matches by using the keyword arguments `left_on` and `right_on`
+* We can combine DataFrames whose rows don’t all match using `left`, `right`, and `outer` merges and the `how` keyword argument
+* We can stack or concatenate DataFrames with the same columns using `pd.concat`
