@@ -49,7 +49,7 @@ Suppose we have the following three tables that describe our eCommerce business:
 | 8 |	1 |	4 |	1 | 	2017-02-02
 
 * `products` — a table with product IDs, descriptions, and prices:
-* 
+
 | product_id |	description |	price
 | --- | --- | ---
 | 1 |	thing-a-ma-jig |	5
