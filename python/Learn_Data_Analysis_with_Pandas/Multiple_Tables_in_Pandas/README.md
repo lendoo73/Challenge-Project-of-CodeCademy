@@ -277,25 +277,32 @@ pd.merge(company_a, company_b, how = 'left')
 ```
 The result would look like this:
 
-name	email	phone
-Sally Sparrow	sally.sparrow@gmail.com	None
-Peter Grant	pgrant@yahoo.com	212-345-6789
-Leslie May	leslie_may@gmail.com	626-987-6543
-Now let’s say we want a list of all customers who have phone but no email. We can do this by performing a Right Merge.
+| name |	email |	phone
+| --- | --- | ---
+| Sally Sparrow |	sally.sparrow@gmail.com |	None
+| Peter Grant |	pgrant@yahoo.com |	212-345-6789
+| Leslie May |	leslie_may@gmail.com |	626-987-6543
 
-Right Merge
-Right merge is the exact opposite of left merge. Here, the merged table will include all rows from the second (right) table, but only rows from the first (left) table that match the second table.
+Now let’s say we want a list of all customers who have phone but no email. 
+We can do this by performing a **Right Merge**.
 
-By listing company_a first and company_b second, we get all customers from Company B, and only customers from Company A who are also customers of Company B.
+## Right Merge
 
-pd.merge(company_a, company_b, how="right")
+Right merge is the exact opposite of left merge. 
+Here, the merged table will include all rows from the second (right) table, but only rows from the first (left) table that match the second table.
+
+By listing `company_a` first and `company_b` second, we get all customers from Company B, and only customers from Company A who are also customers of Company B.
+```
+pd.merge(company_a, company_b, how = "right")
+```
 The result would look like this:
 
-name	email	phone
-Peter Grant	pgrant@yahoo.com	212-345-6789
-Leslie May	leslie_may@gmail.com	626-987-6543
-Aaron Burr	None	303-456-7891
-Instructions
+| name |	email |	phone
+| --- | --- | ---
+| Peter Grant |	pgrant@yahoo.com |	212-345-6789
+| Leslie May |	leslie_may@gmail.com |	626-987-6543
+| Aaron Burr |	None |	303-456-7891
+
 
 
 
