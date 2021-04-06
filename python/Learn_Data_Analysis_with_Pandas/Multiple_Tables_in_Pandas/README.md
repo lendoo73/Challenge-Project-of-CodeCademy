@@ -75,7 +75,21 @@ We can see that Customer 2’s name is Jane Doe and that she lives at 456 Park A
 
 Doing this kind of matching is called **merging** two DataFrames.
 
+# [Inner Merge II](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-multiple-tables/exercises/inner-merge-ii)
 
+It is easy to do this kind of matching for one row, but hard to do it for multiple rows.
+
+Luckily, Pandas can efficiently do this for the entire table. 
+We use the `.merge` method.
+
+The `.merge` method looks for columns that are common between two DataFrames and then looks for rows where those column’s values are the same. 
+It then combines the matching rows into a single row in a new table.
+
+We can call the `pd.merge` method with two tables like this:
+```
+new_df = pd.merge(orders, customers)
+```
+This will match up all of the customer information to the orders that each customer made.
 
 
 
