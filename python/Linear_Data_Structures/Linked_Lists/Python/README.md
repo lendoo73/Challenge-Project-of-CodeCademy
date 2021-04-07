@@ -7,7 +7,7 @@ So before we start building out the LinkedList itself, we want to build up a Nod
 Remember that a node contains two elements:
 * data
 * a link to the next node
-```
+```Python
 class Node():
   
   def __init__(self, value, next_node = None):
