@@ -84,10 +84,19 @@ Therefore the time complexity for linear search in its average case is `O(N/2)`.
 
 Based on Big O simplification rules, which you can learn about in the Big O lesson, we simplify the time complexity in this case to `O(N)`.
 
+# [Time Complexity of Linear Search](https://www.codecademy.com/courses/search-algorithms/lessons/linear-conceptual/exercises/time-complexity-linear)
 
+Linear search runs in linear time. 
+Its efficiency can be expressed as a linear function, with the number of comparisons to find a target increasing linearly as the size of the list, N, increases.
 
+The time complexity for linear search in Big-O notation is `O(N)`.
 
-
+A time complexity of `O(N)` means the number of comparisons is proportional to the number of elements, `N`, in the list. 
+With a list with twice as many elements, linear search will take at most twice as long to perform the search. 
+The time complexity of linear search is also dependent on the best case, worst case, and average case scenarios.
+<p align="center">
+  <img alt="best case" src="worst_case_2.webp" width="600" />
+</p>
 
 
 
