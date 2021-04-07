@@ -104,5 +104,5 @@ The time complexity of linear search is also dependent on the best case, worst c
   * **Worst Case**: The algorithm requires only `n` comparison to find the target value in the last position of the list or does not exist in the list.
   * **Average Case**: The algorithm makes `N/2` comparisons.
 * Linear search is a good choice for a search algorithm when:
-  * You expect the target value to be positioned near the beginning of the list.
-  * A search needs to be performed on an unsorted list because linear search traverses the entire list from beginning to end, regardless of its order.
+  * You expect the target value to be positioned **near the beginning** of the list.
+  * A search needs to be performed on an **unsorted list** because linear search traverses the entire list from beginning to end, regardless of its order.
