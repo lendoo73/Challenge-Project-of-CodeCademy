@@ -41,9 +41,27 @@ However, linear search is a great choice if you expect to find the target value 
   <img alt="best case" src="best_case.webp" width="600" />
 </p>
 
-The best case performance for linear search occurs when the target value exists in the list and is in the first position of the list. In this case, the linear search algorithm will only be required to make one comparison. The time complexity for linear search in its best case is O(1).
+The best case performance for linear search occurs when the target value exists in the list and is in the first position of the list. 
+In this case, the linear search algorithm will only be required to make one comparison. 
+The time complexity for linear search in its best case is O(1).
 
-You decide to visit a new coffee shop for an espresso. Unfamiliar with their menu, you are unsure if they serve espresso, so you use Linear Search to scan the menu. You are able to efficiently find your desired drink because it was at the top of the menu.
+# [Worst Case Performance](https://www.codecademy.com/courses/search-algorithms/lessons/linear-conceptual/exercises/worst-case-linear)
+
+There are two worst cases for linear search.
+
+**Case 1**: when the target value at the end of the list.
+<p align="center">
+  <img alt="best case" src="best_case.webp" width="600" />
+</p>
+
+**Case 2**: when the target value does not exist in the list.
+<p align="center">
+  <img alt="best case" src="best_case.webp" width="600" />
+</p>
+
+In both cases, the linear search algorithm is required to scan the entire list of N elements and, therefore, makes N comparisons.
+
+For this reason, the time complexity for linear search in its worst case is O(N).
 
 
 
