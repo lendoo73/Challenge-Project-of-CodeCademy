@@ -51,12 +51,12 @@ There are two worst cases for linear search.
 
 **Case 1**: when the target value at the end of the list.
 <p align="center">
-  <img alt="best case" src="best_case.webp" width="600" />
+  <img alt="best case" src="worst_case.webp" width="600" />
 </p>
 
 **Case 2**: when the target value does not exist in the list.
 <p align="center">
-  <img alt="best case" src="best_case.webp" width="600" />
+  <img alt="best case" src="worst_case_2.webp" width="600" />
 </p>
 
 In both cases, the linear search algorithm is required to scan the entire list of N elements and, therefore, makes N comparisons.
