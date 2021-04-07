@@ -15,7 +15,7 @@ If a match is found, the linear search function will return the index of the mat
 Otherwise, the function will raise a `ValueError`, a special error to indicate that the value was not found.
 
 Here is the pseudocode for linear search as a function:
-```Texinfo
+```Python
 # For each element in the search_list
     # if element equal target value then
        # return its index
