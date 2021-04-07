@@ -25,7 +25,7 @@ We then take the following steps:
 
 We eventually run out of values in the list, or find the target value.
 <p align="center">
-  <img alt="best case" src="worst_case_2.webp" width="600" />
+  <img alt="best case" src="binarySearch.webp" width="600" />
 </p>
 
 
