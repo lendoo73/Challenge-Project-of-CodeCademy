@@ -33,12 +33,17 @@ The steps are:
 3. If the first element is not equal to the target value, check the next element in the list.
 4. Continue steps 1-3 until the element is found or the end of the list is reached.
 
-For example, we can use the linear search algorithm to find the target value 22 in a list. 
-The algorithm iteratively moves through the list until it finds a 22 in the 7th position of the list.
+# [Best Case Performance](https://www.codecademy.com/courses/search-algorithms/lessons/linear-conceptual/exercises/best-case-linear)
 
-![linear search](linear-search-demo-1.webp)
+Linear search is not considered the most efficient search algorithm, especially for lists of large magnitudes. 
+However, linear search is a great choice if you expect to find the target value at the beginning of the list, or if you have a small list.
 
-<h3 style="color:#ff0000">Danger</h3>
+alt text
+
+The best case performance for linear search occurs when the target value exists in the list and is in the first position of the list. In this case, the linear search algorithm will only be required to make one comparison. The time complexity for linear search in its best case is O(1).
+
+You decide to visit a new coffee shop for an espresso. Unfamiliar with their menu, you are unsure if they serve espresso, so you use Linear Search to scan the menu. You are able to efficiently find your desired drink because it was at the top of the menu.
+
 
 
 
