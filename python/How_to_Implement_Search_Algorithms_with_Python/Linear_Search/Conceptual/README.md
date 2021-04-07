@@ -95,7 +95,7 @@ A time complexity of `O(N)` means the number of comparisons is proportional to t
 With a list with twice as many elements, linear search will take at most twice as long to perform the search. 
 The time complexity of linear search is also dependent on the best case, worst case, and average case scenarios.
 <p align="center">
-  <img alt="best case" src="worst_case_2.webp" width="600" />
+  <img alt="best case" src="linearSearchGraph1_bg.svg" width="600" />
 </p>
 
 
