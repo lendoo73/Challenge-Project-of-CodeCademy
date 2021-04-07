@@ -24,9 +24,7 @@ We then take the following steps:
   * Start at step 1 using the **left half** of the list.
 
 We eventually run out of values in the list, or find the target value.
-<p align="center">
-  <img alt="best case" src="binarySearch.webp" width="600" />
-</p>
+
 
 
 
