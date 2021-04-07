@@ -94,20 +94,15 @@ The time complexity for linear search in Big-O notation is `O(N)`.
 A time complexity of `O(N)` means the number of comparisons is proportional to the number of elements, `N`, in the list. 
 With a list with twice as many elements, linear search will take at most twice as long to perform the search. 
 The time complexity of linear search is also dependent on the best case, worst case, and average case scenarios.
-<p align="center">
-  <img alt="best case" src="linearSearchGraph1_bg.svg" width="600" />
-</p>
 
+# [Review](https://www.codecademy.com/courses/search-algorithms/lessons/linear-conceptual/exercises/review-linear)
 
+* Linear search is a search algorithm that sequentially checks whether a given value is an element of a specified list by scanning the elements of a list one-by-one until it finds the target value.
 
-
-
-
-
-
-
-
-
-
-
-
+* The time complexity for linear search is `O(N)`, but its performance is dependent on its input:
+  * **Best Case**: The algorithm requires only 1 comparison to find the target value in the first position of the list.
+  * **Worst Case**: The algorithm requires only `n` comparison to find the target value in the last position of the list or does not exist in the list.
+  * **Average Case**: The algorithm makes `N/2` comparisons.
+* Linear search is a good choice for a search algorithm when:
+  * You expect the target value to be positioned near the beginning of the list.
+  * A search needs to be performed on an unsorted list because linear search traverses the entire list from beginning to end, regardless of its order.
