@@ -38,7 +38,7 @@ The steps are:
 Linear search is not considered the most efficient search algorithm, especially for lists of large magnitudes. 
 However, linear search is a great choice if you expect to find the target value at the beginning of the list, or if you have a small list.
 
-![best case](best case.webp)
+![best case](best_case.webp)
 
 The best case performance for linear search occurs when the target value exists in the list and is in the first position of the list. In this case, the linear search algorithm will only be required to make one comparison. The time complexity for linear search in its best case is O(1).
 
