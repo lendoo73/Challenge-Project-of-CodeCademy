@@ -36,6 +36,7 @@ The steps are:
 For example, we can use the linear search algorithm to find the target value 22 in a list. 
 The algorithm iteratively moves through the list until it finds a 22 in the 7th position of the list.
 
+![linear search](linear-search-demo-1.webp)
 
 
 
