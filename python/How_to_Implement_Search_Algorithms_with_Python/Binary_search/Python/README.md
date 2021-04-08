@@ -34,7 +34,7 @@ This is wasteful! At each recursive call we’re copying `N/2` elements where `N
 
 We can do better by using pointers instead of copying the list. 
 Pointers are indices stored in a variable that mark the beginning and end of a list:
-```python
+```Python
 vehicles = ["car", "jet", "camel", "boat"]
 start_of_list = 0
 end_of_list = len(vehicles)
