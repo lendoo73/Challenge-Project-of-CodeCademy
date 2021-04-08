@@ -22,3 +22,24 @@ Here is the pseudocode for linear search as a function:
 # if element is not found then 
     # raise a ValueError
 ```
+
+# [Finding Duplicates](https://www.codecademy.com/courses/search-algorithms/lessons/linear-implementation/exercises/find-duplicates)
+
+With a few changes to our code, we can modify linear search to solve more complex search problems.
+
+Our linear search function, linear_search(), currently finds whether one given value exists in a list, returns the index of the first occurrence of the value in the list, and stops. But what if we wanted to find every occurrence of the target value in a list?
+
+The following is a list of locations for your favorite music artist’s upcoming tour:
+
+["New York City", "Los Angeles", "Bangkok", "Istanbul", "London", "New York City", "Toronto"]
+
+In order to find all duplicates of a target value in a list, we modify the algorithm to match the following pseudocode:
+```
+# For each element in the searchList
+  # if element equal target value then
+    # Add its index to a list of occurrences
+# if the list of occurrences is empty
+  # raise ValueError
+# otherwise
+  # return the list occurrences
+```
