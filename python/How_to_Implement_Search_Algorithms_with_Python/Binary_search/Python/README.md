@@ -57,12 +57,22 @@ vehicles[middle_of_list : end_of_list]
 With pointers, we’ll track which sub-list we’re searching within the original input and there’s no need for copying.
 
 Our overall strategy is the same, but we’ll need to change the following sections:
+* `binary_search()` has two parameters
+    * It should have four
+* Our base case checks for an empty list
+    * It should check whether the pointers indicate an empty sub-list
+* Our recursive calls use copied sub-lists
+    * They should update the pointers to indicate which portion of the list we’re searching.
+* Our “right-half” recursive calls do some arithmetic.
+    * That’s no longer necessary!
 
-binary_search() has two parameters
-It should have four
-Our base case checks for an empty list
-It should check whether the pointers indicate an empty sub-list
-Our recursive calls use copied sub-lists
-They should update the pointers to indicate which portion of the list we’re searching.
-Our “right-half” recursive calls do some arithmetic.
-That’s no longer necessary!
+
+
+
+
+
+
+
+
+
+
