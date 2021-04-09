@@ -174,12 +174,20 @@ Again, **say each line aloud** so you become more comfortable speaking about the
 
 Track the variables used and update them as you go.
 
-[![Video](https://img.youtube.com/vi/qZpIz_lmp4Q/2.jpg)](https://www.youtube.com/watch?v=qZpIz_lmp4Q)
+[![Video](https://img.youtube.com/vi/qZpIz_lmp4Q/0.jpg)](https://www.youtube.com/watch?v=qZpIz_lmp4Q)
 
+# [Analyzing Time and Space Complexity](https://www.codecademy.com/courses/technical-interview-practice-python/lessons/technical-interview-wb/exercises/technical-interview-wb-optimize)
 
+You’re satisfied with your implementation and you’ve demonstrated how it works, but you’re not quite done.
 
+Analyze the time and space complexity of the solution. 
+With this step you are demonstrating that you care about the efficiency of your code.
 
+Explain your code’s big O notation. 
+If you can optimize to a more efficient runtime, explain how that would work. 
+If you can’t optimize, explain why it’s not possible.
 
+[![Video](https://img.youtube.com/vi/bn5ORboA-6Y/0.jpg)](https://www.youtube.com/watch?v=bn5ORboA-6Y)
 
 
 
