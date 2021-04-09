@@ -27,6 +27,8 @@ The steps are:
 
 [![Video](https://www.youtube.com/watch?v=SgAVxPV9JVk/0.jpg)](https://www.youtube.com/watch?v=SgAVxPV9JVk)
 
+[![Video](https://img.youtube.com/vi/SgAVxPV9JVk/0.jpg)](https://www.youtube.com/watch?v=SgAVxPV9JVk)
+
 #### [Cheatsheet](https://www.codecademy.com/learn/technical-interview-practice-python/modules/technical-interviews-whiteboarding/cheatsheet)
 
 
