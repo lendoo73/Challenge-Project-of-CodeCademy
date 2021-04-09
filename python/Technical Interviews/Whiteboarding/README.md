@@ -174,7 +174,7 @@ Again, **say each line aloud** so you become more comfortable speaking about the
 
 Track the variables used and update them as you go.
 
-[![Video](https://img.youtube.com/vi/qZpIz_lmp4Q/0.jpg)](https://www.youtube.com/watch?v=qZpIz_lmp4Q)
+[![Video](https://img.youtube.com/vi/qZpIz_lmp4Q/1.jpg)](https://www.youtube.com/watch?v=qZpIz_lmp4Q)
 
 
 
