@@ -191,7 +191,8 @@ If you can’t optimize, explain why it’s not possible.
 
 # [Review](https://www.codecademy.com/courses/technical-interview-practice-python/lessons/technical-interview-wb/exercises/technical-interview-wb-review)
 
-Technical interviews judge the candidate’s ability to perform technical aspects of the job. Whiteboarding is a type of technical interview which requires the candidate to code a solution without the assistance of a text editor.
+Technical interviews judge the candidate’s ability to perform technical aspects of the job. 
+Whiteboarding is a type of technical interview which requires the candidate to code a solution without the assistance of a text editor.
 
 Coding an efficient solution is important, but the ultimate goal as an interviewee is to convince the interviewer you would be a desirable co-worker.
 
@@ -201,12 +202,12 @@ Our whiteboarding strategies revolve around communication at every step.
 
 The steps are:
 
-Clarify the Problem
-Create Inputs
-Outline the Solution
-Code the Solution
-Test the Solution
-Analyze the Solution
+1. **Clarify** the Problem
+2. Create **Inputs**
+3. **Outline** the Solution
+4. **Code** the Solution
+5. **Test** the Solution
+6. **Analyze** the Solution
 
-
+[![Video](https://img.youtube.com/vi/eADUTW9mrEo/0.jpg)](https://www.youtube.com/watch?v=eADUTW9mrEo)
 
