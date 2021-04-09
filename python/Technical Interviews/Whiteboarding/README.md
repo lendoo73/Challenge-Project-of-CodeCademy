@@ -98,7 +98,39 @@ Watch the video to see how we made inputs/outputs.
 
 [![Video](https://img.youtube.com/vi/tccfJmGM0XI/0.jpg)](https://www.youtube.com/watch?v=tccfJmGM0XI)
 
+# [Writing the Outline](https://www.codecademy.com/courses/technical-interview-practice-python/lessons/technical-interview-wb/exercises/technical-interview-wb-outline)
 
+It’s time to start breaking down the problem by category.
+
+Given a question which requires the use of a stack, what do you know about stacks? 
+Have you encountered other problems that use stacks and how were they solved?
+
+Is this a searching question? 
+Can you sort the input and will that help? 
+Does this problem sound like it can be modeled as a graph, with vertices and connected edges?
+
+Understanding the applications of different data structures is very useful! 
+The more questions you practice, the more you will be able to see patterns between problems.
+
+This step varies the most because it requires details of the specific problem, but regardless of the question make certain you are communicating with the interviewer as a potential co-worker. 
+Show them your thought process!
+
+During this step, the interviewer may make suggestions on how to proceed. 
+Acknowledge the interviewer and incorporate their suggestions into your approach.
+
+Don’t disregard their input! 
+It gives the impression you would be difficult to work with on the job.
+
+When you and the interviewer are satisfied with a workable solution, write the steps next to your input. 
+Follow these steps as you write code on the board.
+
+Come up with an outline of how to solve the Pythagorean Triplet problem.
+
+Don’t worry about efficiency, just aim for high-level steps which will produce the correct output.
+
+Watch the video when you’re ready to move on.
+
+[![Video](https://img.youtube.com/vi/yt-YB_9ZHUE/0.jpg)](https://www.youtube.com/watch?v=yt-YB_9ZHUE)
 
 
 
