@@ -69,5 +69,42 @@ Watch the video to see how we clarified this question.
 
 [![Video](https://img.youtube.com/vi/xzYgM0eIauA/0.jpg)](https://www.youtube.com/watch?v=xzYgM0eIauA)
 
+# [Producing Inputs and Finding Edge Cases](https://www.codecademy.com/courses/technical-interview-practice-python/lessons/technical-interview-wb/exercises/technical-interview-wb-input)
+
+When the question is clear, we then produce concrete inputs and outputs. 
+These inputs guide a solution for the remainder of the interview so write them on the board!
+
+You may still be unclear how to solve the problem in code, but it’s certain that given an input, `X`, your function will produce an output, `Y`.
+
+Make one input the happy path: input that reflects a common scenario.
+
+For example, you’re asked to write a function which capitalizes the first letter of an input string.
+
+A good input could be `"apple"`, which returns `"Apple"` because this demonstrates the function’s purpose.
+
+If the input were `"Apple"`, it would return `"Apple"`. 
+That’s correct but less informative.
+
+Also think about edge cases, or inputs which **do not** reflect a common scenario and may cause problems.
+
+For the capitalization function, what should you return if given `None` as input? 
+Or a number?
+
+Write inputs and outputs for the Pythagorean Triplet problem.
+
+Try to give yourself a few different cases.
+
+Watch the video to see how we made inputs/outputs.
+
+[![Video](https://img.youtube.com/vi/tccfJmGM0XI/0.jpg)](https://www.youtube.com/watch?v=tccfJmGM0XI)
+
+
+
+
+
+
+
+
+
 
 
