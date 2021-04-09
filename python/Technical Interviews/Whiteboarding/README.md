@@ -29,10 +29,8 @@ The steps are:
 
 #### [Cheatsheet](https://www.codecademy.com/learn/technical-interview-practice-python/modules/technical-interviews-whiteboarding/cheatsheet)
 
-<video width="320" height="240" controls>
-  <source src="https://www.youtube.com/watch?v=SgAVxPV9JVk" />
-Your browser does not support the video tag.
-</video>
+<iframe width="700" height="394" src="https://www.youtube.com/embed/SgAVxPV9JVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 
