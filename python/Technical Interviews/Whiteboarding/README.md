@@ -30,8 +30,44 @@ The steps are:
 
 #### [Cheatsheet](https://www.codecademy.com/learn/technical-interview-practice-python/modules/technical-interviews-whiteboarding/cheatsheet)
 
+# [Clarifying the Problem](https://www.codecademy.com/courses/technical-interview-practice-python/lessons/technical-interview-wb/exercises/technical-interview-wb-clarify)
 
+Whiteboarding interviews begin with a problem from the interviewer. 
+The interviewee must be confident they understand the dimensions of the problem!
 
+Software development is full of ambiguity. 
+Programming requires concrete deliverables, but company needs can be murky. 
+Even when the need is clear, a feature could have dozens of possible implementations. 
+The ability to clearly define a problem is an important skill to demonstrate.
+
+When the interviewer presents their technical question, repeat the question back to the interviewer **in your own words**. 
+This gives you a moment to think and will resolve any glaring misunderstandings.
+
+Once you’ve repeated the question, **ask every clarifying question that comes to mind**.
+
+Assumptions must be communicated to the interviewer so there is agreement on the scope of the problem.
+
+For example, if asked:
+> Write a function that returns duplicate characters in string.
+
+Here are some questions which may come to mind:
+* What is the desired return value? True|False, a list of characters, or …?
+* Do punctuation and spaces count as “characters”?
+* Should case be considered? Are "a" and "A" duplicates?
+* Should we be checking for [Unicode](https://en.wikipedia.org/wiki/Unicode) characters?
+* Can we assume it’s a 26 character alphabet?
+
+We’ll apply these steps to a single problem through the rest of the lesson.
+```
+Given a list of numbers, return whether the list contains Pythagorean Triplets.
+```
+Rephrase this problem in your own words and write that down.
+
+Then, write down every question or assumption you have.
+
+Watch the video to see how we clarified this question.
+
+[![Video](https://img.youtube.com/vi/xzYgM0eIauA/0.jpg)](https://www.youtube.com/watch?v=xzYgM0eIauA)
 
 
 
