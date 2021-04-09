@@ -132,11 +132,27 @@ Watch the video when you’re ready to move on.
 
 [![Video](https://img.youtube.com/vi/yt-YB_9ZHUE/0.jpg)](https://www.youtube.com/watch?v=yt-YB_9ZHUE)
 
+# [Coding the Solution](https://www.codecademy.com/courses/technical-interview-practice-python/lessons/technical-interview-wb/exercises/technical-interview-wb-code)
 
+We’ve finally come to the portion where you’ll write some code! 
+Previous steps improve your odds for success because you have an outline and clear inputs for testing.
 
+Writing code on the board is a collaborative process. 
+Refer to your outline and explain the step you’re implementing.
 
+The goal is to be facing the interviewer when talking through the implementation and facing the board when you’re writing the code.
 
+Try to avoid writing code in silence or narrating at a low level like `“for… i… in… range… length of the list… colon”` when writing `for i in range(len(input_list)):`.
 
+When you’re finished with the implementation, look it over for any mistaken syntax or logical errors.
+
+Code the solution to the Pythagorean Triplets problem by writing it out on paper. 
+Use your outline from the previous exercise as a guide.
+
+Before writing each step on paper, say what you will do out loud. 
+Better to practice by yourself than in a real interview!
+
+[![Video](https://img.youtube.com/vi/hwoGhge9y5I/0.jpg)](https://www.youtube.com/watch?v=hwoGhge9y5I)
 
 
 
