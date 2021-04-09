@@ -25,6 +25,8 @@ The steps are:
 5. **Test** the Solution
 6. **Analyze** the Solution
 
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
+
 #### [Cheatsheet](https://www.codecademy.com/learn/technical-interview-practice-python/modules/technical-interviews-whiteboarding/cheatsheet)
 
 
