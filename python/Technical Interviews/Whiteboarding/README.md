@@ -28,7 +28,12 @@ The steps are:
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://www.youtube.com/watch?v=SgAVxPV9JVk)
 
 #### [Cheatsheet](https://www.codecademy.com/learn/technical-interview-practice-python/modules/technical-interviews-whiteboarding/cheatsheet)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SgAVxPV9JVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<video width="320" height="240" controls>
+  <source src="https://www.youtube.com/watch?v=SgAVxPV9JVk" />
+Your browser does not support the video tag.
+</video>
+
 
 
 
