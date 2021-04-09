@@ -25,9 +25,10 @@ The steps are:
 5. **Test** the Solution
 6. **Analyze** the Solution
 
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://www.youtube.com/watch?v=SgAVxPV9JVk)
 
 #### [Cheatsheet](https://www.codecademy.com/learn/technical-interview-practice-python/modules/technical-interviews-whiteboarding/cheatsheet)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SgAVxPV9JVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
