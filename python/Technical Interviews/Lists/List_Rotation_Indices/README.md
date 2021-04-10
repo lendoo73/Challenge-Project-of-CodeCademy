@@ -20,7 +20,7 @@ For space complexity, we can optimize by constructing ***in-place solutions***, 
 **Single variable declarations** are considered `O(1)`, or **constant space**, because we’re not allocating memory in relation to the input.
 
 This example function adds `"!"` to each string in a list.
-```python
+```Python
 def constant_space(list_of_strings):
   # variable the same regardless of input
   exclamation = "!"
