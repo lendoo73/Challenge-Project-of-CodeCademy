@@ -41,10 +41,15 @@ def linear_space(list_of_strings):
   # holds as many new values as the input!
   return exclamation_list   
 ```
-Given a list and a positive integer, return the same list “rotated” a number of times that match the input integer. This time, we’ll rotate the list backward and use O(1) space.
-
+Given a list and a positive integer, **return the same list** “rotated” a number of times that match the input integer. 
+This time, we’ll rotate the list backward and use **`O(1)` space**.
+```python
 list = ['a', 'b', 'c', 'd', 'e', 'f']
 rotate(list, 1)
 # ['b', 'c', 'd', 'e', 'f', 'a']
 rotate(list, 4)
 # ['e', 'f', 'a', 'b', 'c', 'd']
+```
+
+
+
