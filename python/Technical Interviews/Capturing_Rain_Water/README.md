@@ -2,9 +2,10 @@
 
 # [Capturing Rain Water](https://www.codecademy.com/courses/technical-interview-practice-python/projects/rain-water)
 
-A histogram is a chart which consists of a series of bars. A Python list can represent a histogram by containing integers, each of which represents the height of a single bar.
+A histogram is a chart which consists of a series of bars. 
+A Python list can represent a histogram by containing integers, each of which represents the height of a single bar.
 
-The list [4, 2, 1, 3, 0, 1, 2] would represent the following histogram:
+The list `[4, 2, 1, 3, 0, 1, 2]` would represent the following histogram:
 
 histogram without water
 For our problem, imagine that rainwater has fallen over the histogram and collected between the bars. Here’s how the previous histogram would look filled with water:
