@@ -7,10 +7,12 @@ A Python list can represent a histogram by containing integers, each of which re
 
 The list `[4, 2, 1, 3, 0, 1, 2]` would represent the following histogram:
 
-histogram without water
-For our problem, imagine that rainwater has fallen over the histogram and collected between the bars. Here’s how the previous histogram would look filled with water:
+![histogram without water](histogram_v1.svg)
 
-histogram with water
+For our problem, imagine that rainwater has fallen over the histogram and collected between the bars. 
+Here’s how the previous histogram would look filled with water:
+
+![histogram with water](histogram_v1.svg)
 We need to write a function which calculates the total water captured from an input of a list of integers.
 
 Our function would return 6 from the previous example.
