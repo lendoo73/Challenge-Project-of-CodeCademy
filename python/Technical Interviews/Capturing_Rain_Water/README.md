@@ -13,10 +13,9 @@ For our problem, imagine that rainwater has fallen over the histogram and collec
 Here’s how the previous histogram would look filled with water:
 
 ![histogram with water](histogram_v2.svg)
+
 We need to write a function which calculates the total water captured from an input of a list of integers.
 
-Our function would return 6 from the previous example.
+Our function would return `6` from the previous example.
 
-Throughout this project, run your code by saving it in the text editor, then typing python3 script.py in the terminal and pressing enter.
-
-If you get stuck during this project, check out the project walk-through video which ca
+[Walk-through video](https://www.youtube.com/watch?v=Ke6JtGIU4yc)
