@@ -19,3 +19,5 @@ We need to write a function which calculates the total water captured from an in
 Our function would return `6` from the previous example.
 
 #### [Walk-through video](https://www.youtube.com/watch?v=Ke6JtGIU4yc)
+
+#### [Trapping Rain Water](https://www.geeksforgeeks.org/trapping-rain-water/)
