@@ -9,7 +9,7 @@ You should expect at least one technical interview question that requires workin
 This lesson introduces common interview problems that involve lists. 
 We solve each question in two ways: 
 * an inefficient naive solution 
-* * and an optimized solution which improves the *big O time* and/or *space efficiency*.
+* and an optimized solution which improves the *big O time* and/or *space efficiency*.
 
 The problems are meant to be open-ended: tests will pass with the correct output from a given input. 
 Optimal implementations require that code executes within a time or space requirement.
