@@ -16,6 +16,6 @@ rotate(list, 3)
 ```
 ## Clarifying Questions:
 
-* Are there constraints on time or space efficiency? Nope! Just solve the problem.
-* Should I account for negative inputs? The rotation input will always be positive.
-* What if the rotation is greater than the list length? Continue wrapping! The “rotated” list would be the same as the original when `k` is equal to the length.
+* **Are there constraints on time or space efficiency?** Nope! Just solve the problem.
+* **Should I account for negative inputs?** The rotation input will always be positive.
+* **What if the rotation is greater than the list length?** Continue wrapping! The “rotated” list would be the same as the original when `k` is equal to the length.
