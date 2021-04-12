@@ -28,3 +28,16 @@ The traversal takes linear time.
 * `.traverse()`: prints the value of each `Node` in the linked list starting at the head.
 * `.size()`: returns the count of `Node` instances stored by the `LinkedList`.
 * `.__repr__()`: a special method you won’t use directly. Call `print()` and pass an instance of `LinkedList` to see a string representation.
+
+<hr />
+
+# [Review](https://www.codecademy.com/courses/technical-interview-practice-python/lessons/tip-python-linked-lists/exercises/tip-python-ll-review)
+
+Linked lists are a sequential data structure like lists, but they store data in a different way. 
+Lists store data sequentially in the computer’s memory. 
+Linked lists track the internal memory address of the data so values can be stored anywhere in memory.
+
+The benefit of storing the memory address is that linked lists can insert or delete data in constant time, whereas a list would require linear time. 
+The drawback is that linked lists do not have index access, so searching and accessing values are linear time operations.
+
+The key to understanding linked lists lies in the manipulation of the property `.next`, where a node references the following node in the linked list.
