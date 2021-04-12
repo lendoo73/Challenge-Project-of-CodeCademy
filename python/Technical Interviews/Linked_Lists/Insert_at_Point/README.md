@@ -32,7 +32,7 @@ To recap:
 
 <details>
   <summary>My solution</summary>
-  <code>
+  ```
    def insert(self, node_value, location):
     # if location is 0 insert to the head
     if location == 0:
@@ -58,5 +58,5 @@ To recap:
       new_node = Node(node_value, current_node.next)
     current_node.next = new_node
     return self
-  </code>
+  ```
 </details>
