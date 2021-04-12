@@ -44,3 +44,18 @@ def n_from_last(self, n):
 
 </p>
 </details>
+<hr />
+<details title="Click me to show...">
+<summary>
+ 
+## CodeCademy solution
+
+</summary>
+<p>
+     
+```python
+
+```
+
+</p>
+</details>
