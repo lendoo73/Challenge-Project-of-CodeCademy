@@ -32,11 +32,7 @@ To recap:
 
 
 <details>
-<summary>
-
-#### My solution
-
-</summary>
+<summary><h2>>My solution</h2></summary>
 <p>
      
 ```python
