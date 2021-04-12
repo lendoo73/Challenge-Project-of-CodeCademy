@@ -31,7 +31,7 @@ We’ll need to traverse from the head node and change the `.next` property on t
 * return `self` at the end of the function.
 
 
-<details>
+<details title="Click me to show...">
 <summary>
  
 ## My solution
