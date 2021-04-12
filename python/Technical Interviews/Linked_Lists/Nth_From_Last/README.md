@@ -16,14 +16,18 @@ We’ll need to be creative in how we solve this problem since we only have a re
 
 The `.size()` method on `LinkedList` may be helpful.
 
-To recap:
+## To recap:
 * write a method in the `LinkedList` class: `.n_from_last()`.
 * `.n_from_last()` takes one argument:
   * the number of nodes counting from the tail.
 * return the node instance at that location.
 
-<details>
-<summary><b>My solution</b></summary>
+<details title="Click me to show...">
+<summary>
+ 
+## My solution
+
+</summary>
 <p>
      
 ```python
