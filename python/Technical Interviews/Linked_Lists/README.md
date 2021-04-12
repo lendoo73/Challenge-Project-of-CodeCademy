@@ -22,6 +22,7 @@ We must traverse, or move through each node starting at the head, to find a valu
 The traversal takes linear time.
 
 <hr />
+
 `LinkedList` has the following methods:
 * `.add()`: receives a value, initializes a `Node` with the value, and sets the instance as the new head.
 * `.traverse()`: prints the value of each `Node` in the linked list starting at the head.
