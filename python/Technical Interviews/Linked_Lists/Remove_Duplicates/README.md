@@ -26,3 +26,37 @@ We have “removed” `'b'` from the linked list. <a href="https://github.com/le
 * write a method in the `LinkedList` class: `.remove_duplicates()`.
 * `.remove_duplicates()` takes no arguments.
 * return `self` after all duplicate nodes are removed.
+
+<hr />
+<details title="Click me to show...">
+<summary>
+ 
+## My solution
+
+</summary>
+<p>
+     
+```python
+def remove_duplicates(self):
+    previous_node = self.head
+    current_node = self.head.next
+    
+    # traverse to the end:
+    while current_node:
+        # check if the value is unique:
+        value = current_node.val
+        if value == previous_node.val:
+            # this value is duplicated -> remove node:
+            previous_node.next = current_node.next
+        else:
+            # unique value -> refresh the previous node
+            previous_node = current_node
+      
+        # move to the next node:
+        current_node = current_node.next
+      
+    return self
+```
+
+</p>
+</details>
