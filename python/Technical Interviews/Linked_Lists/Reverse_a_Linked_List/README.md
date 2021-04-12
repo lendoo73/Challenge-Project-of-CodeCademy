@@ -18,3 +18,31 @@ For the head node, this means `.next` points to `None`.
 * write a function: `reverse()`.
 * `reverse()` takes one argument, an instance of `LinkedList`.
 * return an instance of `LinkedList` which contains all the nodes from the input in reverse order.
+
+<hr />
+<details title="Click me to show...">
+<summary>
+ 
+## My solution
+
+</summary>
+<p>
+     
+```python
+def reverse(linked_list):
+    prev_node = linked_list.head
+    current_node = linked_list.head.next
+
+    while current_node:
+        # add current node to the beginning:
+        linked_list.add(current_node.val)
+        # delete current node:
+        prev_node.next = current_node.next
+        # move to the next node:
+        current_node = current_node.next
+    
+    return linked_list
+```
+
+</p>
+</details>
