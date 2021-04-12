@@ -23,7 +23,7 @@ linked_list.insert('t', 0)
 ```
 We’ll need to traverse from the head node and change the `.next` property on two nodes.
 
-To recap:
+## To recap:
 * write a method in the `LinkedList` class: `.insert()`.
 * `.insert()` takes two arguments:
   * the *value* which will be used to initialize a `Node`.
@@ -32,7 +32,9 @@ To recap:
 
 
 <details>
-<summary><b>My solution</b></summary>
+<summary>
+## My solution
+</summary>
 <p>
      
 ```python
