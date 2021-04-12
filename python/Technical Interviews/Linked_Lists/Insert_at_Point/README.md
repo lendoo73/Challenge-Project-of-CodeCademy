@@ -78,9 +78,7 @@ def insert(self, node_value, location):
 </summary>
 <p>
      
-```python
-
-```
+No given solution....
 
 </p>
 </details>
