@@ -46,3 +46,18 @@ def reverse(linked_list):
 
 </p>
 </details>
+<hr />
+<details title="Click me to show...">
+<summary>
+ 
+## CodeCademy solution
+
+</summary>
+<p>
+     
+```python
+
+```
+
+</p>
+</details>
