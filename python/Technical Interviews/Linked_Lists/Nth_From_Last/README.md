@@ -21,3 +21,21 @@ To recap:
 * `.n_from_last()` takes one argument:
   * the number of nodes counting from the tail.
 * return the node instance at that location.
+
+<details>
+<summary><b>My solution</b></summary>
+<p>
+     
+```python
+def n_from_last(self, n):
+    size = self.size()
+    current_node = self.head
+    
+    for i in range(size - n - 1):
+        current_node = current_node.next
+    
+    return current_node
+```
+
+</p>
+</details>
