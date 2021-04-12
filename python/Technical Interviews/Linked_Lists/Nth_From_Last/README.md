@@ -22,6 +22,7 @@ The `.size()` method on `LinkedList` may be helpful.
   * the number of nodes counting from the tail.
 * return the node instance at that location.
 
+<hr />
 <details title="Click me to show...">
 <summary>
  
