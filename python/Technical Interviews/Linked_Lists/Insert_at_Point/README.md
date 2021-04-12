@@ -32,8 +32,8 @@ To recap:
 
 
 <details>
-    <summary>My solution</summary>
-    <p>
+<summary>My solution</summary>
+<p>
      
 ```python
 def insert(self, node_value, location):
@@ -63,5 +63,5 @@ def insert(self, node_value, location):
     return self
 ```
 
-    </p>
+</p>
 </details>
