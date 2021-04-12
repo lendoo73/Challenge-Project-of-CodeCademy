@@ -69,7 +69,18 @@ def has_cycle(linked_list):
 <p>
      
 ```python
-
+def has_cycle(linked_list):
+    slow, fast = linked_list.head, linked_list.head
+    while slow and fast:
+        slow = slow.next
+        fast = fast.next
+        if fast:
+            fast = fast.next
+        else:
+            return False
+        if fast == slow:
+            return True
+    return False
 ```
 
 </p>
