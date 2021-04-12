@@ -33,7 +33,9 @@ We’ll need to traverse from the head node and change the `.next` property on t
 
 <details>
 <summary>
+ 
 ## My solution
+
 </summary>
 <p>
      
