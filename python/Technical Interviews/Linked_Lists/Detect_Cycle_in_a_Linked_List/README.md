@@ -30,3 +30,32 @@ a == other_a
 * write a function: `has_cycle()`.
 * `has_cycle()` takes an instance of `LinkedList` as the argument.
 * return a Boolean which indicates whether a cycle exists.
+
+<hr />
+<details title="Click me to show...">
+<summary>
+ 
+## My solution
+
+</summary>
+<p>
+     
+```python
+def has_cycle(linked_list):
+    current_node = linked_list.head
+    unique = []
+  
+    while current_node:
+        node_id = id(current_node)
+        if node_id in unique:
+            return True
+        # this is unique Node -> appen to the unique list:
+        unique.append(node_id)
+        # move to the next node:
+        current_node = current_node.next
+
+    return False
+```
+
+</p>
+</details>
