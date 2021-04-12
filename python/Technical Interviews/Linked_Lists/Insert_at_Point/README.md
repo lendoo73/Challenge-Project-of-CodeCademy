@@ -30,7 +30,10 @@ To recap:
   * the insertion *location* for the node instance.
 * return `self` at the end of the function.
 
-### My solution
+
+<details>
+    <summary>My solution</summary>
+    <p>
 ```python
 def insert(self, node_value, location):
     # if location is 0 insert to the head
@@ -58,3 +61,5 @@ def insert(self, node_value, location):
     current_node.next = new_node
     return self
 ```
+    </p>
+</details>
