@@ -24,3 +24,43 @@ In the example, the head node of our new linked list would be `'a'` node.
 * write a function: `merge()`.
 * `merge()` takes two arguments: two sorted linked lists.
 * return an instance of `LinkedList` which contains all the nodes from both of the input lists in sorted order.
+
+<hr />
+<details title="Click me to show...">
+<summary>
+ 
+## My solution
+
+</summary>
+<p>
+     
+```python
+def merge(linked_list_a, linked_list_b):
+    current_a_node = linked_list_a.head
+    current_b_node = linked_list_b.head
+    
+    # if required swap to start with the smaller header:
+    if current_a_node.val > current_b_node.val:
+        current_a_node, current_b_node = current_b_node, current_a_node
+  
+    while current_b_node:
+        if current_a_node.next.val < current_b_node.val:
+            # got to next a:
+            current_a_node = current_a_node.next
+        else:
+            # cut both list:
+            temporary_a = current_a_node.next 
+            temporary_b = current_b_node.next 
+
+            # insert 'current b':
+            current_a_node.next = current_b_node
+            
+            # merge the cutted lists:
+            current_a_node.next.next = temporary_a
+            current_b_node = temporary_b 
+  
+    return linked_list_a
+```
+
+</p>
+</details>
