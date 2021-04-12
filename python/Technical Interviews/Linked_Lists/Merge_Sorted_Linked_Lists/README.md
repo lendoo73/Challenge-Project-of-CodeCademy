@@ -39,7 +39,7 @@ def merge(linked_list_a, linked_list_b):
     current_a_node = linked_list_a.head
     current_b_node = linked_list_b.head
     
-    # if required swap to start with the smaller header:
+    # if required swap because have to start with the smaller header:
     if current_a_node.val > current_b_node.val:
         current_a_node, current_b_node = current_b_node, current_a_node
   
