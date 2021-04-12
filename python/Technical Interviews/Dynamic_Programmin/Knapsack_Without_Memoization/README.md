@@ -15,17 +15,17 @@ This is another ideal situation to apply dynamic programming, but to start we’
 We can total each combination’s weight and value to find the most lucrative collection.
 
 To help, we’re given a `Loot` class with `name`, `weight`, and `value` properties.
-
+```python
 computer = Loot("Computer", 2, 12)
 print(computer)
 # Computer: 
 #     weighs 2,
 #     valued at 12, 
-We also have a powerset() function which creates a list of all combinations.
-
+```
+We also have a `powerset()` function which creates a list of all combinations.
+```python
 fruits = ['apple', 'orange', 'grape']
 fruit_combinations = power_set(fruits)
 print(fruit_combinations)
 #[(), ('apple',), ('orange',), ('grape',), ('apple', 'orange'), ('apple', 'grape'), ('orange', 'grape'), ('apple', 'orange', 'grape')]
- 
-Note: Codecademy does not endorse thievery!
+```
