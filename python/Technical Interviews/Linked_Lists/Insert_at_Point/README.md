@@ -29,3 +29,8 @@ To recap:
   * the *value* which will be used to initialize a `Node`.
   * the insertion *location* for the node instance.
 * return `self` at the end of the function.
+
+<details>
+  <summary>My solution</summary>
+  Béla
+</details>
