@@ -85,3 +85,41 @@ def merge_point(linked_list_a, linked_list_b):
 
 </p>
 </details>
+<hr />
+<details title="Click me to show...">
+<summary>
+ 
+## CodeCademy solution
+
+</summary>
+<p>
+     
+```python
+def merge_point(linked_list_a, linked_list_b):
+    size_of_a = linked_list_a.size()
+    size_of_b = linked_list_b.size()
+  
+    diff = abs(size_of_a - size_of_b)
+    
+    if size_of_a > size_of_b:
+        bigger = linked_list_a.head
+        smaller = linked_list_b.head
+    else:
+        bigger = linked_list_b.head
+        smaller = linked_list_a.head
+  
+    for i in range(diff):
+        bigger = bigger.next
+
+    while bigger and smaller:
+        if bigger == smaller:
+            return bigger
+        bigger = bigger.next
+        smaller = smaller.next
+
+    return None
+```
+
+</p>
+</details>
+
