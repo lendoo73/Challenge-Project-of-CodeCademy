@@ -32,7 +32,7 @@ To recap:
 
 
 <details>
-<summary style="font-size: 20px;"> **My solution** </summary>
+<summary style="font-size: 20px;"><bold>My solution</bold></summary>
 <p>
      
 ```python
