@@ -29,3 +29,24 @@ The function uses your sample distribution to determine the sample size and esti
 It returns two outputs: 
 * the t-statistic (which we won’t cover in this course), 
 * and the p-value.
+
+# [Assumptions of a One Sample T-Test](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/t-tests-in-scipy/exercises/assumptions-of-a-t-test)
+
+When running any hypothesis test, it is important to know and verify the assumptions of the test. 
+The assumptions of a one-sample t-test are as follows:
+* The sample was randomly selected from the population
+  * For example, if you only collect data for site visitors who agree to share their personal information, this subset of visitors was not randomly selected and may differ from the larger population.
+* The individual observations were independent
+  * For example, if one visitor to BuyPie loves the apple pie they bought so much that they convinced their friend to buy one too, those observations were not independent.
+* The data is normally distributed without outliers OR the sample size is large (enough)
+  * There are no set rules on what a “large enough” sample size is, but a common threshold is around 40. 
+  For sample sizes smaller than 40, and really all samples in general, it’s a good idea to make sure to plot a histogram of your data and check for outliers, multi-modal distributions (with multiple humps), or skewed distributions. 
+  If you see any of those things for a small sample, a t-test is probably not appropriate.
+
+In general, if you run an experiment that violates (or possibly violates) one of these assumptions, you can still run the test and report the results — but you should also report assumptions that were not met and acknowledge that the test results could be flawed.
+
+
+
+
+
+
