@@ -45,8 +45,11 @@ The assumptions of a one-sample t-test are as follows:
 
 In general, if you run an experiment that violates (or possibly violates) one of these assumptions, you can still run the test and report the results — but you should also report assumptions that were not met and acknowledge that the test results could be flawed.
 
+# [Review](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/t-tests-in-scipy/exercises/review)
 
-
-
-
-
+* One-sample t-tests are used for comparing a sample mean to an expected population mean
+* A one-sample t-test can be implemented in Python using the SciPy `ttest_1samp()` function
+* Assumptions of a one-sample t-test include:
+ * The sample was randomly drawn from the population of interest
+ * The observations in the sample are independent
+ * The sample size is large “enough” or the sample data is normally distributed
