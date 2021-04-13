@@ -37,3 +37,4 @@ If we’re lucky, we’ll sample 2 blue dots and 1 red dot, as shown on the left
 However, we could also randomly sample 3 blue dots, or 2 red dots and 1 blue dot — both of which do not match the population. 
 Inferential statistics allows us to look at a sample and then quantify our uncertainty about how similar (or different) the entire population might be.
 
+![descriptive_inferential_statistics.png](descriptive_inferential_statistics.png)
