@@ -245,7 +245,17 @@ print(p_value) #output: 0.12
 ```
 We end up with a p-value that is **twice as large as the one-sided p-value**.
 
+# [Writing a Binomial Test Function](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/writing-a-binomial-test-function)
 
+So far, we’ve conducted a simulated binomial hypothesis test for Live-it-LIVE.com. 
+In this exercise, we’ll use our code from the previous exercises to write our own binomial test function. Our function will use simulation, so it will estimate (albeit fairly accurately) the same p-values we would get using much more complex mathematical equations.
+
+A function has been outlined for you in script.py which contains the code that we used for Live_it_LIVE inside a function named simulation_binomial_test(). Your goal in the next few exercises will be to edit this function so that it takes in any values for the following:
+
+The observed sample statistic (eg., 41 purchases)
+The sample size (eg., 500 visitors)
+The null probability of success (eg., 0.10 probability of a purchase)
+The function should return a p-value for a one-sided test where the alternative hypothesis is that the true probability of success is LESS THAN the null.   
 
 
 
