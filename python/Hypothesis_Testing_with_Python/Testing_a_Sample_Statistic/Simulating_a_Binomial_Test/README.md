@@ -251,4 +251,32 @@ So far, we’ve conducted a simulated binomial hypothesis test for Live-it-LIVE.
 In this exercise, we’ll use our code from the previous exercises to write our own binomial test function. 
 Our function will use simulation, so it will estimate (albeit fairly accurately) the same p-values we would get using much more complex mathematical equations.
 
+# [Binomial Testing with SciPy](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/binomial-testing-with-scipy)
 
+More formally, the binomial distribution describes the number of expected “successes” in an experiment with some number of “trials”. 
+In the example you just worked through, the experiment consisted of 500 people visiting Live-it-LIVE.com. 
+For each of those **trials** (visitors), we **expected** a 10% chance of a purchase (success), but **observed** only 41 **successes** (less than 10%).
+
+SciPy has a function called `binom_test()`, which performs a binomial test for you. 
+The default alternative hypothesis for the `binom_test()` function is two-sided, but this can be changed using the alternative parameter (eg., `alternative = 'less'` will run a one-sided lower tail test).
+
+**`binom_test()`** requires three inputs, 
+* the number of **observed successes**, 
+* the number of total **trials**, 
+* and an **expected** probability of success. 
+
+For example, with 10 flips of a fair coin (trials), the **expected** probability of heads is *0.5*. 
+Let’s imagine we get *2* heads (**observed successes**) in *10* flips (**trials**). 
+Is the coin weighted? 
+The function call for this binomial test would look like:
+```python
+from scipy import binom_test
+p_value = binom_test(
+    2,         # the number of observed successes
+    n = 10,    # the number of total trials
+    p = 0.5    # the expected probability of success
+)
+print(p_value) #output: 0.109
+```
+This tells us that 
+**IF the true probability of heads is 0.5, the probability of observing 2 or fewer heads OR 8 or more heads is 0.109 (10.9%)**.
