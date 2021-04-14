@@ -143,7 +143,29 @@ print(max_heads) #output: 10
 ```
 Thus, if we flip a fair coin 10 times, we could observe anywhere between 0 and 10 heads by random chance.
 
+# [Inspecting the Null Distribution](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/inspecting-the-null-distribution)
 
+In the previous exercise, we simulated 10000 different samples of 500 visitors, 
+where each visitor had a 10% chance of making a purchase, and calculated the number of purchases per sample. 
+Upon further inspection, we saw that those numbers ranged from around 25 to 75. 
+This is useful information, but we can learn even more from inspecting the full distribution.
+
+For example, recall our 10000 coin flip experiments: 
+for each experiment, we flipped a fair coin 10 times and recorded the number of heads in a list named `outcomes`. 
+We can plot a histogram of `outcomes` using `matplotlib.pyplot.hist()`. 
+We can also add a vertical line at any x-value using `matplotlib.pyplot.axvline()`:
+```python
+import matplotlib.pyplot as plt
+plt.hist(outcomes)
+plt.axvline(2, color = 'r')
+plt.show()
+```
+Output:
+![distribution of coin flips]()
+
+This histogram shows us that, over 10000 experiments, we observed as few as 0 and as many as 10 heads out of 10 flips. 
+However, we were most likely to observe around 4-6 heads. 
+It would be unlikely to observe only 2 heads (where the vertical red line is).
 
 
 
