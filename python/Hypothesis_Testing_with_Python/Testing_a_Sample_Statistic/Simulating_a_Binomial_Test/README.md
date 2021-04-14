@@ -168,7 +168,28 @@ This histogram shows us that, over 10000 experiments, we observed as few as 0 an
 However, we were most likely to observe around 4-6 heads. 
 It would be unlikely to observe only 2 heads (where the vertical red line is).
 
+# [Confidence Intervals](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/confidence-intervals)
 
+So far, we’ve inspected the null distribution and calculated the minimum and maximum values. 
+While the number of purchases in each simulated sample ranged roughly from 25 to 75 by random chance, upon further inspection of the distribution, we saw that those extreme values happened very rarely.
+
+By reporting an interval covering 95% of the values instead of the full range, we can say something like: 
+“we are 95% confident that, if each visitor has a 10% chance of making a purchase, a random sample of 500 visitors will make between 37 and 63 purchases.” 
+We can use the `np.percentile()` function to calculate this 95% interval as follows:
+```python
+np.percentile(
+    outcomes, 
+    [2.5,97.5]
+)
+# output: [37. 63.]
+```
+We calculated the 2.5th and 97.5th percentiles so that exactly 5% of the data falls outside those percentiles 
+(2.5% above the 97.5th percentile, and 2.5% below the 2.5th percentile). 
+This leaves us with a range covering 95% of the data.
+
+If our observed statistic falls outside this interval, then we can conclude it is unlikely that the null hypothesis is true. 
+In this example, because 41 falls within the 95% interval (37 - 63), 
+it is still reasonably likely that we observed a lower purchase rate by random chance, even though the null hypothesis was true.
 
 
 
