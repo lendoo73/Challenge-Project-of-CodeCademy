@@ -218,6 +218,7 @@ This calculation is equivalent to calculating the proportion of this histogram t
 We estimated that the probability of observing 2 or fewer heads is about 0.059 (5.9%). 
 This probability (0.059) is referred to as a ***one-sided p-value***.
 
+# [Calculating a Two-Sided P-Value](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/calculating-a-p-value-part-ii)
 
 
 
