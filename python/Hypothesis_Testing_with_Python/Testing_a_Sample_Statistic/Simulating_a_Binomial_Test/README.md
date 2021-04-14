@@ -231,7 +231,7 @@ What is the probability of observing either two or fewer heads OR eight or more 
 (Note that two and eight are both three away from five). 
 The calculation now estimates the proportion of the null histogram that is colored in red:
 
-![null distribution for 10 coin flips with a probability of heads equal to 0.5, and all bars above x-values <=2 or >=8 are shaded red, illustrating a two-sided hypothesis test]()
+![null distribution for 10 coin flips with a probability of heads equal to 0.5, and all bars above x-values <=2 or >=8 are shaded red, illustrating a two-sided hypothesis test](two_sided_coin_flip.svg)
 
 This proportion can be calculated in Python as follows. 
 Note that the `|` symbol is similar to `'or'`, but works for comparing multiple values at once.
