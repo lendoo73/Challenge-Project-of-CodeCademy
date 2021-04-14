@@ -12,15 +12,17 @@ def simulation_binomial_test(observed_successes, n, p, alternative_hypothesis):
     num_purchased = np.sum(simulated_monthly_visitors == 'y')
     null_outcomes.append(num_purchased)
 
-  #calculate a 1-sided p-value
   null_outcomes = np.array(null_outcomes)
-
+  
+  #calculate a 1-sided p-value; lower tail one-sided test:
   if alternative_hypothesis == "less":
     p_value = np.sum(null_outcomes <= observed_successes) / len(null_outcomes)
   
+  # upper tail one-sided test:
   if alternative_hypothesis == "greater":
     p_value = np.sum(null_outcomes >= observed_successes) / len(null_outcomes)
   
+  # two-sided test:
   if alternative_hypothesis == "not_equal":
     difference = np.abs(p * n - observed_successes)
     upper = p * n + difference
