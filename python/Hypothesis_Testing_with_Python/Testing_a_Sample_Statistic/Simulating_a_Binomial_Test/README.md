@@ -299,7 +299,7 @@ To summarize, here are some of the things you’ve learned about hypothesis test
 
 ## `simulation_binomial_test()` function:
 The  `simulation_binomial_test()` function now has an input named `alternative_hypothesis` that can be equal to
-* `less`: calculating a One-Sided P-Value
-* `not_equal`: calculating a Two-Sided P-Value
-* `greater`
+* `less`: calculating a One-Sided P-Value; (lower tail one-sided test)
+* `not_equal`: calculating a Two-Sided P-Value; (two-sided test)
+* `greater`: calculating a One-Sided P-Value; (upper tail one-sided test:)
 
