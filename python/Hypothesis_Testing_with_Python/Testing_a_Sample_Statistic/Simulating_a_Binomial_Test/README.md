@@ -102,7 +102,46 @@ If we run this code a few times, we’ll likely see different results each time.
 This will give us get a sense for the range in the number of heads that could occur by random chance, even if the coin is fair. 
 We’re more likely to see numbers like four, five, or six, but maybe we’ll see something more extreme every once in a while — ten heads in a row, or even zero!
 
+# [Simulating the Null Distribution II](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/simulating-the-null-distribution-part-2)
 
+In the last exercise, we simulated a random sample of 500 visitors, where each visitor had a 10% chance of making a purchase. 
+When we pressed “Run” a few times, we saw that the number of purchases varied from sample to sample, but was **around 50**.
+
+Similarly, we simulated a single random sample of 10 coin flips, where each flip had a 50% chance of coming up heads. 
+We saw that the number of simulated heads was not necessarily 5, but somewhere around 5.
+
+By running the same simulated experiment many times, we can get a sense for how much a particular outcome (like the number of purchases, or heads) varies by random chance. Consider the following code:
+```python
+outcomes = []
+for i in range(10000): 
+    flips = np.random.choice(
+        ['heads', 'tails'], 
+        size = 10, 
+        p = [0.5, 0.5]
+    )
+    num_heads = np.sum(flips == 'heads')
+    outcomes.append(num_heads)
+print(outcomes)
+## output is something like: [3, 4, 5, 8, 5, 6, 4, 5, 3, 2, 8, 5, 7, 4, 4, 5, 4, 3, 6, 5,...]
+```
+In this code chunk, we’ve done the following:
+* initialized an empty list named `outcomes` to store the number of ‘heads’ from simulated samples of coin flips
+* set up a for-loop to repeat the steps below 10000 times:
+    * flip a fair coin 10 times
+    * calculate the number of those 10 flips that came up heads
+    * append that number onto `outcomes`
+
+Note that 10000 is an arbitrarily chosen large number — it’s big enough that it will yield almost all possible outcomes of our experiment, 
+and small enough that the simulation still runs quickly. 
+From inspecting the output, we can see that the number of ‘heads’ varied between 0 and 10:
+```python
+min_heads = np.min(outcomes) 
+print(min_heads) #output: 0
+ 
+max_heads = np.max(outcomes)
+print(max_heads) #output: 10
+```
+Thus, if we flip a fair coin 10 times, we could observe anywhere between 0 and 10 heads by random chance.
 
 
 
