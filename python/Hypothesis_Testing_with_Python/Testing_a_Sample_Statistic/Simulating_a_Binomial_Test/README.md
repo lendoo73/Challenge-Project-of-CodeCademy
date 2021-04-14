@@ -79,7 +79,28 @@ If you try this yourself, it’s perfectly reasonable that you’ll get only fou
 Because this is a random process, we can’t guarantee that exactly half of our coin flips will come up heads. 
 Similarly, even if each Live-it-LIVE visitor has a 10% chance of making a purchase, that doesn’t mean we expect **exactly 10%** to do so in any given sample.
 
+# [Simulating the Null Distribution I](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/simulating-the-null-distribution-part-1)
 
+The first step in running a hypothesis test is to form a ***null hypothesis***. 
+For the question of whether the purchase rate at Live-it-LIVE.com was different from 10% this month, 
+the null hypothesis describes a world in which the true probability of a visitor making a purchase was exactly 10%, 
+but by random chance, we observed that only 41 visitors (8.2%) made a purchase.
+
+Let’s return to the coin flip example from the previous exercise. 
+We can simulate 10 coin flips and print out the number of those flips that came up heads using the following code:
+```python
+flips = np.random.choice(
+    ['heads', 'tails'], 
+    size = 10, 
+    p = [0.5, 0.5]
+)
+num_heads = np.sum(flips == 'heads')
+print(num_heads)
+## output: 4
+```
+If we run this code a few times, we’ll likely see different results each time. 
+This will give us get a sense for the range in the number of heads that could occur by random chance, even if the coin is fair. 
+We’re more likely to see numbers like four, five, or six, but maybe we’ll see something more extreme every once in a while — ten heads in a row, or even zero!
 
 
 
