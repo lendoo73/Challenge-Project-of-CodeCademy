@@ -297,9 +297,17 @@ To summarize, here are some of the things you’ve learned about hypothesis test
     * using those simulated samples to generate a null distribution
     * comparing an observed sample statistic to that null distribution
 
-## `simulation_binomial_test()` function:
+#### `simulation_binomial_test()` function:
 The  `simulation_binomial_test()` function now has an input named `alternative_hypothesis` that can be equal to
 * `less`: calculating a One-Sided P-Value; (lower tail one-sided test)
 * `not_equal`: calculating a Two-Sided P-Value; (two-sided test)
 * `greater`: calculating a One-Sided P-Value; (upper tail one-sided test:)
 
+#### Documentation
+
+# [Scipy Statistical Functions | Python](https://www.codecademy.com/courses/hypothesis-testing-python/external_resources/ext-doc-scipy-statistical-functions)
+
+## [Scipy Documentation - Statistical Functions](https://docs.scipy.org/doc/scipy/reference/stats.html)
+
+In this documentation, you will find information about SciPy’s functions for statistical analysis. 
+This is helpful if you would like to perform statistical analyses and/or mathematical computations on data in Python.
