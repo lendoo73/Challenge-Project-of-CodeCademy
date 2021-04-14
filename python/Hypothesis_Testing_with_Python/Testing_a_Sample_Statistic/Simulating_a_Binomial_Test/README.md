@@ -161,6 +161,7 @@ plt.axvline(2, color = 'r')
 plt.show()
 ```
 Output:
+
 ![distribution of coin flips](ten_coin_null.svg)
 
 This histogram shows us that, over 10000 experiments, we observed as few as 0 and as many as 10 heads out of 10 flips. 
