@@ -191,7 +191,32 @@ If our observed statistic falls outside this interval, then we can conclude it i
 In this example, because 41 falls within the 95% interval (37 - 63), 
 it is still reasonably likely that we observed a lower purchase rate by random chance, even though the null hypothesis was true.
 
+# [Calculating a One-Sided P-Value](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/calculating-a-p-value-part-i)
 
+***P-value*** calculations and interpretations depend on the *alternative hypothesis* of a test, a description of the difference from expectation that we are interested in.
+
+For example, let’s return to the 10-coin-flip example from earlier. 
+Suppose that we flipped a coin 10 times and observed only 2 heads. 
+We might run a hypothesis test with the following null and alternative hypotheses:
+* **Null**: the probability of heads **is 0.5**
+* **Alternative**: the probability of heads is **less than 0.5**
+
+This hypothesis test asks the question: IF the probability of heads is 0.5, what’s the probability of observing 2 or fewer heads among a single sample of 10 coin flips?
+
+Earlier, we used a for-loop to repeatedly (10000 times!) flip a fair coin 10 times, and store the number of heads (for each set of 10 flips) in a list named `outcomes`. 
+The probability of observing 2 or fewer heads among 10 coin flips is approximately equal to the proportion of those 10000 experiments where we observed 0, 1, or 2 heads:
+```python
+import numpy as np
+outcomes = np.array(outcomes)
+p_value = np.sum(outcomes <= 2) / len(outcomes) 
+print(p_value) #output: 0.059
+```
+This calculation is equivalent to calculating the proportion of this histogram that is colored in red: 
+
+![null distribution with bars colored red for values less than or equal to 2]()
+
+We estimated that the probability of observing 2 or fewer heads is about 0.059 (5.9%). 
+This probability (0.059) is referred to as a ***one-sided p-value***.
 
 
 
