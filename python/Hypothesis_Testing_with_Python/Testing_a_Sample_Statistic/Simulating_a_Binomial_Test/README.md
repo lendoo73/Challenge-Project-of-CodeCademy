@@ -220,7 +220,30 @@ This probability (0.059) is referred to as a ***one-sided p-value***.
 
 # [Calculating a Two-Sided P-Value](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/calculating-a-p-value-part-ii)
 
+In the previous exercise, we calculated a one-sided p-value. 
+In this exercise, we’ll estimate a p-value for a 2-sided test, which is the default setting for many functions in Python (and other languages, like R!).
 
+In our 10-coin-flip experiment, remember that we observed 2 heads, which is 3 less than the expected value of 5 (50% of 10) if the null hypothesis is true. 
+The two sided test focuses on the number of heads being three **different** from expectation, rather than just less than. 
+The hypothesis test now asks the following question:  
+Suppose that the true probability of heads is 50%. 
+What is the probability of observing either two or fewer heads OR eight or more heads? 
+(Note that two and eight are both three away from five). 
+The calculation now estimates the proportion of the null histogram that is colored in red:
+
+![null distribution for 10 coin flips with a probability of heads equal to 0.5, and all bars above x-values <=2 or >=8 are shaded red, illustrating a two-sided hypothesis test]()
+
+This proportion can be calculated in Python as follows. 
+Note that the `|` symbol is similar to `'or'`, but works for comparing multiple values at once.
+```python
+import numpy as np
+outcomes = np.array(outcomes)
+p_value = np.sum(
+    (outcomes <= 2) | (outcomes >= 8)
+) / len(outcomes)
+print(p_value) #output: 0.12
+```
+We end up with a p-value that is **twice as large as the one-sided p-value**.
 
 
 
