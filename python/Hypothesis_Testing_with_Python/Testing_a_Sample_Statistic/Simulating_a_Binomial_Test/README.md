@@ -40,3 +40,59 @@ samp_size = len(candy)
  
 ## number with chocolate: 
 total_with_chocolate = np.sum(candy.chocolate == 'yes')
+```
+
+# [Simulating Randomness](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/simulating-randomness)
+
+In the last exercise, we calculated that there were 500 site visitors to live-it-LIVE.com this month and 41 of them made a purchase. 
+In comparison, if each of the 500 visitors had a 10% chance of making a purchase, we would expect around 50 of those visitors to buy something. 
+Is 41 different enough from 50 that we should question whether this months’ site visitors really had a 10% chance of making a purchase?
+
+To conceptualize why our **expectation (50)** and **observation (41)** might not be equal
+— EVEN IF there was no dip in the purchase probability — 
+let’s turn to a common probability example: flipping a fair coin. 
+We can simulate a coin flip in Python using the `numpy.random.choice()` function:
+```python
+flip = np.random.choice(
+    ['heads', 'tails'], 
+    size = 1, 
+    p = [0.5, 0.5]
+)
+print(flip) 
+## output is either ['heads'] or ['tails']
+```
+If we run this code (or flip a real coin) a few times, we’ll find that 
+— just like we can’t know ahead of time whether any single visitor to Live-it-LIVE.com will make a purchase — we can’t predict the outcome of any individual coin flip.
+
+If we flip a fair coin 10 times in a row, we expect about 5 of those coins to come up heads (50%). 
+We can simulate this in python by changing the `size` parameter of `numpy.random.choice()`:
+```python
+flip = np.random.choice(
+    ['heads', 'tails'], 
+    size = 10, 
+    p = [0.5, 0.5]
+)
+print(flip)
+## output is something like: ['heads' 'heads' 'heads' 'tails' 'tails' 'heads' 'heads' 'tails' 'heads' 'heads']
+```
+If you try this yourself, it’s perfectly reasonable that you’ll get only four heads, or maybe six or seven! 
+Because this is a random process, we can’t guarantee that exactly half of our coin flips will come up heads. 
+Similarly, even if each Live-it-LIVE visitor has a 10% chance of making a purchase, that doesn’t mean we expect **exactly 10%** to do so in any given sample.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
