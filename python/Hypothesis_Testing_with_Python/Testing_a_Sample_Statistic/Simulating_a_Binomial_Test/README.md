@@ -280,3 +280,26 @@ print(p_value) #output: 0.109
 ```
 This tells us that 
 **IF the true probability of heads is 0.5, the probability of observing 2 or fewer heads OR 8 or more heads is 0.109 (10.9%)**.
+
+# [Review](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/simulating-a-binomial-test/exercises/binomial-test-simulation-review)
+
+Congratulations! 
+You now know how to run a binomial hypothesis test using a SciPy function — or by simulating it yourself! 
+This will serve you well as a data scientist because it will enable you to investigate what’s going on if pre-written functions return surprising results. 
+You also now have a conceptual understanding of how a binomial test works and what questions it aims to answer. 
+To summarize, here are some of the things you’ve learned about hypothesis tests in general:
+* All hypothesis tests start with a null and alternative hypothesis
+* Outcomes of a hypothesis test that might be reported include:
+    * confidence intervals
+    * p-values
+* A hypothesis test can be simulated by:
+    * taking repeated random samples where the null hypothesis is assumed to be true
+    * using those simulated samples to generate a null distribution
+    * comparing an observed sample statistic to that null distribution
+
+## `simulation_binomial_test()` function:
+The  `simulation_binomial_test()` function now has an input named `alternative_hypothesis` that can be equal to
+* `less`
+* `not_equal`
+* `greater`
+
