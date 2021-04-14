@@ -213,7 +213,7 @@ print(p_value) #output: 0.059
 ```
 This calculation is equivalent to calculating the proportion of this histogram that is colored in red: 
 
-![null distribution with bars colored red for values less than or equal to 2]()
+![null distribution with bars colored red for values less than or equal to 2](one_sided_coin_flip.svg)
 
 We estimated that the probability of observing 2 or fewer heads is about 0.059 (5.9%). 
 This probability (0.059) is referred to as a ***one-sided p-value***.
