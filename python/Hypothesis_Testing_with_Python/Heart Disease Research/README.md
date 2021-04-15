@@ -11,6 +11,6 @@ The principal investigators responsible for data collection were:
 3. University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.
 4. V.A. Medical Center, Long Beach and Cleveland Clinic Foundation: Robert Detrano, M.D., Ph.D.
 
-<p align=""center>
+<p align="center">
   <img alt="heart" src="heart.jpg" />
 </p>
