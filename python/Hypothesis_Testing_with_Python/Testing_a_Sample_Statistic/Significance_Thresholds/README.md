@@ -115,12 +115,3 @@ If the null hypothesis is true for every hypothesis test
 To address this problem, it is important to plan research out ahead of time: 
 decide what questions you want to address and figure out how many hypothesis tests you need to run. 
 When running multiple tests, use a lower significance threshold (eg., 0.01) for each test to reduce the probability of making a type I error.
-
-
-
-
-
-
-
-
-
