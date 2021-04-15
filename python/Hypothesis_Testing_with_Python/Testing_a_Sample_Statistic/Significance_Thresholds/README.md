@@ -105,11 +105,11 @@ We now have to run 10 hypothesis tests, one for each question.
 
 If the null hypothesis is true for every hypothesis test 
 (the probability of a correct answer is 70% for every question) and we use a .05 significance level for each test, then:
-* When we run a hypothesis test for a single question, we have a 95% chance of getting the right answer 
+* When we run a hypothesis test for a single question, we have a 95% chance of getting the right answer  
 (a p-value > 0.05) — and a 5% chance of making a type I error.
-* When we run hypothesis tests for two questions, we have only a 90% chance of getting the right answer for both hypothesis tests 
+* When we run hypothesis tests for two questions, we have only a 90% chance of getting the right answer for both hypothesis tests  
 (.95*.95 = 0.90) — and a 10% chance of making at least one type I error.
-* When we run hypothesis tests for all 10 questions, we have a 60% chance of getting the right answer for all ten hypothesis tests 
+* When we run hypothesis tests for all 10 questions, we have a 60% chance of getting the right answer for all ten hypothesis tests  
 (0.95^10 = 0.60) — and a 40% chance of making at least one type I error.
 
 To address this problem, it is important to plan research out ahead of time: 
