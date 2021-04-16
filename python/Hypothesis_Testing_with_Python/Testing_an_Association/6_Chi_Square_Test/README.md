@@ -11,7 +11,7 @@ Did these age groups have significantly different preferences?
 
 In SciPy, we can use the function `chi2_contingency()` to perform a Chi-Square test. 
 The input to `chi2_contingency` is a contingency table, which can be created using the pandas `crosstab()` function as follows:
-```pythom
+```python
 #create table:
 import pandas as pd
 
