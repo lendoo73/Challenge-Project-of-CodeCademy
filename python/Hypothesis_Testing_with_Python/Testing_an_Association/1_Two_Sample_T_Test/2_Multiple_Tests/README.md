@@ -1,6 +1,6 @@
 #### HYPOTHESIS TESTING: ASSOCIATIONS
 
-# [Multiple Tests]
+# [Multiple Tests](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/hypothesis-testing-associations/exercises/multiple-tests)
 
 In the previous exercise, we used a two-sample t-test to investigate an association between 
 * a quantitative variable (time spent on a website) 
