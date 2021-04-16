@@ -16,3 +16,5 @@ In this lesson, we have reviewed a few different ways to run a hypothesis test f
 * **Two Sample T-Tests** (for an association between a quantitative variable and a binary categorical variable)
 * **ANOVA** and **Tukey Tests** (for an association between a quantitative variable and a non-binary categorical variable)
 * **Chi-Square Tests** (for an association between two categorical variables)
+
+![association diagram](association_diagram.webp)
