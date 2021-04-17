@@ -86,7 +86,7 @@ Then, we can use a two-sample t-test to determine the probability that the claw 
 The data might look like this:
 
 | | Species |	Claw size (in)
-| --- | --- | ---
+| --- | --- | *---*
 | 0 |	black |	1.48
 | 1 |	grizzly |	2.01
 | 2 |	grizzly |	1.89
