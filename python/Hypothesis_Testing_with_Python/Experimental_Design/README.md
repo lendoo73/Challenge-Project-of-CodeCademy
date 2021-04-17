@@ -27,3 +27,51 @@ Finally, we can use a hypothesis test to determine the likelihood that, if we co
 
 If we have a sample of **quantitative data**, such as *height*, *weight*, or *amount spent*, we should use a **one-sample t-test**. 
 If we have a sample of **binary data**, such as *whether or not someone made a purchase* or *clicked a link*, we should use a **binomial test**.
+
+### Example: one sample t-test
+
+Suppose we want to compare exam scores for students who attended a test prep program to the global average score of 35 points. 
+Do students who attend this program score higher than 35 points? 
+The global average is the hypothesized population value and the average of the exam scores of students who attended the program is the sample statistic 
+(in this case, sample mean).
+
+Below is the code to run a one-sample t-test to address the above question. 
+In this example the **alternative hypothesis** is that *the sample mean is significantly different than 35*, and the **null hypothesis** is that *the sample mean is 35*.
+```pythom
+from scipy.stats import ttest_1samp
+ 
+global_average_score = 35
+sample_scores = [12, 42, 37, 18, 23, 39, 45, … , 52]
+ 
+t_stat, p_value = ttest_1samp(sample_scores, global_average_score)
+```
+
+### Example: binomial test
+
+If we instead have a sample of **binary data** and want to compare a sample proportion/frequency to an underlying probability (population value), a binomial test is appropriate. 
+The classic example of a binomial test is tossing a coin to determine if it’s fair (fair means that the probability of either heads or tails is exactly 50%).
+
+For example, suppose that you collect sample data from a coin by tossing it 100 times, and find that 45 flips result in heads. 
+Based on this sample, what is the probability that the coin is actually fair (if you flipped it infinitely many times, exactly half those flips would be heads)? 
+The following code runs the binomial test to answer this question:
+```python
+from scipy.stats import binom_test
+ 
+p_value = binom_test(45, 100, p = 0.50)
+```
+The **alternative hypothesis** for this test is that the *probability is different than p = 0.50*, and the **null** is that it is *equal to 0.50*.
+
+Here are some other examples of situations where a binomial test would be useful
+* Is the number of passengers who show up for a flight fewer than normal?
+* Is the open rate on a marketing email different from the company target?
+
+
+
+
+
+
+
+
+
+
+
