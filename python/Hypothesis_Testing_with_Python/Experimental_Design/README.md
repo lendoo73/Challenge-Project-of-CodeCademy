@@ -37,7 +37,7 @@ The global average is the hypothesized population value and the average of the e
 
 Below is the code to run a one-sample t-test to address the above question. 
 In this example the **alternative hypothesis** is that *the sample mean is significantly different than 35*, and the **null hypothesis** is that *the sample mean is 35*.
-```pythom
+```python
 from scipy.stats import ttest_1samp
  
 global_average_score = 35
@@ -129,6 +129,8 @@ from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
 tukey_results = pairwise_tukeyhsd(tree_data.height, tree_data.species, 0.05)
 ```
+
+### Example: Chi-Square test
 
 
 
