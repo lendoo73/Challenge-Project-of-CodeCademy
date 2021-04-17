@@ -13,4 +13,4 @@ In this article, we are going to briefly review some of them and when they are a
 
 Here is a summary table of some of the hypothesis tests we’ll cover:
 
-![]()
+![table of hypothesi tests](article_graphic.webp)
