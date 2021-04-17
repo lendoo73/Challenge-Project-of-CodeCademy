@@ -106,8 +106,29 @@ tstat, pval = ttest_ind(grizzly_bear, black_bear)
 ```
 Other examples of two-sample t-tests include studies like drug trials or psychology studies with a control and experimental group or A/B Testing with quantitative data like “time spent on a website”. 
 
+### Example: ANOVA and Tukey’s range test
 
+In cases similar to the two-sample t-test, but **when the categorical variable has three or more categories**, 
+an **ANOVA** can be used *to see if there is a significant difference between any of the groups*. 
+Then, if at least one pair of groups are significantly different, **Tukey’s range test** can be used *to determine which groups are different*. 
+This is better than running multiple two-sample t-tests because it leads to a lower probability of making a type I error.
 
+For example, if we want to compare the heights of three different tree species, in order to test the hypothesis that average tree heights vary by species, 
+we can use an ANOVA. 
+Then, if the p-value from the ANOVA is below our significance threshold, we can run Tukey’s range test to determine which tree species have significantly different heights.
+
+The code to run these tests is as follows:
+```python
+# ANOVA Test
+from scipy.stats import f_oneway
+
+fstat, pval = f_oneway(heights_pine, heights_oak, heights_spruce)
+ 
+# Tukey’s Range Test
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+
+tukey_results = pairwise_tukeyhsd(tree_data.height, tree_data.species, 0.05)
+```
 
 
 
