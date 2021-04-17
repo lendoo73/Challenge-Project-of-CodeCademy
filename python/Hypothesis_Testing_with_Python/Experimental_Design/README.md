@@ -65,9 +65,46 @@ Here are some other examples of situations where a binomial test would be useful
 * Is the number of passengers who show up for a flight fewer than normal?
 * Is the open rate on a marketing email different from the company target?
 
+## Testing for an association between two variables at the population level
 
+When we have a sample of **data with two variables**, and **want to know if there is an association between those variables** at the population level, 
+we’ll need a different set of hypothesis tests. 
+For example, we might be interested in the relationship between:
+* claw size and species of bear (black vs grizzly bears)
+* tree height and the species of tree (for pine, oak, and spruce trees)
+* subscription rates for 2 versions of a web page among all site visitors
 
+In each of these examples, we cannot observe the entire population of interest (eg., the entire wild population of each species of bear). 
+Instead, we can collect data for a smaller sample and then use a hypothesis test to understand the likelihood that a similar association exists among the population we care about.
 
+### Example: two-sample t-test
+
+A **two-sample t-test** is used to investigate an association **between a quantitative variable and a binary categorical variable**. 
+For example, suppose we want to test if there is an association between claw size (quantitative) and species: black or grizzly bear (binary categorical). 
+To answer this question, we could sample a selection of black bears and grizzly bears, then calculate the average claw size for each species. 
+Then, we can use a two-sample t-test to determine the probability that the claw sizes for these two species are significantly different (among the entire population of black and grizzly bears). 
+The data might look like this:
+
+| | Species |	Claw size (in)
+| --- | --- | ---
+| 0 |	black |	1.48
+| 1 |	grizzly |	2.01
+| 2 |	grizzly |	1.89
+| 3 |	black |	1.65
+| 4 |	black |	1.58
+
+And the code to run the two-sample t-test will look like this:
+```python
+from scipy.stats import ttest_ind
+ 
+#separate out claw lengths for two species
+grizzly_bear = data.claw_length[data.species == 'grizzly']
+black_bear = data.claw_length[data.species == 'black']
+ 
+#run the t-test here:
+tstat, pval = ttest_ind(grizzly_bear, black_bear)
+```
+Other examples of two-sample t-tests include studies like drug trials or psychology studies with a control and experimental group or A/B Testing with quantitative data like “time spent on a website”. 
 
 
 
