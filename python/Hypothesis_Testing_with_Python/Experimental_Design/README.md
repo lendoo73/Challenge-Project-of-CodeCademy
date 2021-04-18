@@ -132,6 +132,43 @@ tukey_results = pairwise_tukeyhsd(tree_data.height, tree_data.species, 0.05)
 
 ### Example: Chi-Square test
 
+When looking at the **relationship between two categorical variables**, we can run a **Chi-Square Test** to see if there is a significant association between the variables. 
+**Both variables can have any number of categories.** 
+Some examples include testing an association between:
+* Smoking and lung cancer
+* Website version and whether or not someone subscribed
+* Education level and tax income bracket (multiple categories such as “under 40k”, ”40k-60k”, ”60-80k”, etc)
 
+For example, suppose we are interested in understanding whether there is an association between the version of a website someone sees and whether or not they subscribe. 
+The data may look something like this:
 
+| | Web Version |	Subscribed? 
+| --- | :---:| :---:
+| 0 |	A |	yes
+| 1 |	A |	yes
+| 2 |	B |	yes
+| 3 |	B |	no
+| 4 |	A |	no
+
+These variables can then be summarized using a contingency table:
+
+| Subscribed |	no |	yes
+| --- | :---: | :---:
+| Web Version		
+| A |	23 |	27
+| B |	16 |	34
+
+Finally, a Chi-Square test evaluates whether the observed contingency table is significantly different from the table that would be expected 
+if there were no association between the variables. 
+The code to create the contingency table and run the Chi-Square test looks something like this:
+```python
+import pandas as pd
+from scipy.stats import chi2_contingency
+ 
+# create contingency table
+ab_contingency = pd.crosstab(data.Web_Version, data.Subscribed)
+ 
+# run a Chi-Square test
+chi2, pval, dof, expected = chi2_contingency(ab_contingency)
+```
 
