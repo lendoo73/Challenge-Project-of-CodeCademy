@@ -108,13 +108,14 @@ However, we can see this is a temporary fluctuation.
 After this brief moment of “significance” the conversion rate decreases and our results become insignificant again. 
 By arbitrarily extending the study until it reaches significance, we fool ourselves!
 
+# [Review](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/a-b-test-sample-size-calculator/exercises/review)
 
-
-
-
-
-
-
-
-
-
+Suppose that you are running a business and want to see if a new advertisement will drive more clicks on your website. 
+Currently, about 10% of people who see your ad are clicking on it. 
+You want to run the new ad if at least 14% of people will click the new ad. 
+When you run your Chi-Square test after collecting your data, you plan to use a significance threshold of 0.05, so that your chances of a false positive are relatively low. 
+Try the following:
+* Based on the description above, identify the baseline conversion rate and significance threshold
+* Based on the description above, calculate the minimum detectable effect (hint: it’s not 4%!)
+* Plug in your baseline, minimum detectable effect, and significance threshold to the provided calculator
+* Calculate the total sample size needed for this experiment (note: this calculator assumes that exactly half of the sample will see each version of the ad)
