@@ -36,7 +36,7 @@ Output:
 | name |	16 |	34
 
 We would then use this table to run a Chi-Square test and get a p-value:
-```˙python
+```python
 chi2, pval, dof, expected = chi2_contingency(X)
 print(pval) #Output: 0.2186
 ```
