@@ -31,6 +31,7 @@ print(X)
 Output:
 
 | Opened |	no |	yes
+| --- | --- | ---
 | Email		
 | control |	23 |	27
 | name |	16 |	34
