@@ -165,10 +165,16 @@ however, it simultaneously increases the false positive rate (the probability of
 Finally, if the project manager chooses a larger minimum detectable effect/lift, then they’ll be able to decrease the sample size without decreasing power. 
 However, if they set up their test to detect a minimum lift of 30% (for example), they may not be able to detect smaller differences that are still meaningful.
 
+# [Review](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/experimental-design/exercises/review)
 
+* The significance threshold for a test is equal to the false positive rate
+* The power of a test is the probability of correctly detecting a significant result
+* Increasing sample size increases the power of a test
+* Increasing the significance threshold increases power, but also increases the false positive rate
+* Larger sample sizes are needed to detect smaller effect sizes
 
+Two notes about the terminology in the sample size calculator:
 
-
-
-
-
+1. **Baseline conversion rate** is equivalent to our `control_rate` in the code.
+2. **Minimum detectable effect (MDE)** is the smallest effect size (or `lift`) that we want our test to be able to detect. 
+If the MDE is larger than our true `lift`, power will decrease because our sample size might not be large enough to detect the difference between the two groups.
