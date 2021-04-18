@@ -110,8 +110,32 @@ result = ('significant' if pval < 0.05 else 'not significant')
 print(result)
 ```
 
+# [Estimating Power](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/experimental-design/exercises/estimating-power)
 
+In the last exercise, we learned how to simulate a dataset for a Chi-Square test, run the test, and then output a result: 
+‘significant’ or ‘not significant’. 
+In this exercise, we’ll repeat that process many times so that we can inspect the relative frequency of each outcome.
 
+To do this, we’ll start by creating an empty list to store the results of our repeated experiments. 
+Next, we’ll move all of our simulation code (to create a sample dataset, run a Chi-Square test, and determine a result) inside of a for-loop. 
+In each iteration of the loop, we’ll append the outcome to our results list so that we can inspect it later.
+
+The outline of the code looks something like this:
+```
+Set the sample size and subscription probabilities
+Create an empty list named `results`
+
+Repeat 100 times in a for-loop:
+   Simulate a dataset
+   Run a Chi-Square test
+   Use the p-value to determine significance
+   Append the result ('significant' or 'not significant') to `results`
+```
+Finally, we can inspect results by calculating the proportion of simulated tests where the result was 'significant':
+```python
+results =  np.array(results)
+print(np.sum(results == 'significant') / 100)
+```
 
 
 
