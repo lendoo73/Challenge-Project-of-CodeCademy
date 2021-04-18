@@ -95,8 +95,18 @@ Here are two important rules for making sure that A/B tests remain unbiased:
 
 Test data is sensitive to changes in sample size, which is why it is important to calculate beforehand.
 
-![]()
+![A/B test](conversion_rate_x_samples_Updated_1-01.svg)
 
+Inspect the graph aboves. 
+It shows an A/B Test where the baseline was 5%, and we want to see a lift of 50% (i.e., we want our second option to have at least a 7.5% conversion rate). 
+A sample size calculator tells us that we need 210 observations. 
+The chart shows the cumulative conversion rate after each new observation. 
+When we reach our desired sample size of 210, our cumulative conversion rate is slightly higher than 5%, but the difference is not significantly different (indicated by red). 
+By extending the experiment to 320 samples, the difference becomes significantly different (indicated by green). 
+We might conclude that our results are significant if we stopped the experiment at this point. 
+However, we can see this is a temporary fluctuation. 
+After this brief moment of “significance” the conversion rate decreases and our results become insignificant again. 
+By arbitrarily extending the study until it reaches significance, we fool ourselves!
 
 
 
