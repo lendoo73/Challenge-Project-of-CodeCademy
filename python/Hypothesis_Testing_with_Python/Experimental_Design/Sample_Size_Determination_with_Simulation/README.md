@@ -151,6 +151,8 @@ On the other hand, if there’s no difference in the probability of an email bei
 (lift = 0), a ‘significant’ result would be a false-positive (also called a type I error). 
 This would lead us to invest time and resources into adding first names into email subjects when there’s no real pay-off in the long run.
 
+# [Trade Offs](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/experimental-design/exercises/trade-offs)
+
 
 
 
