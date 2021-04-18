@@ -137,7 +137,19 @@ results =  np.array(results)
 print(np.sum(results == 'significant') / 100)
 ```
 
+# [False Positives and True Positives](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/experimental-design/exercises/false-positives-and-true-positives)
 
+In the previous exercise, we simulated 1,000 datasets and ran a Chi-Square test for each one, recording whether the results were ‘significant’ or ‘not significant’. 
+This allowed us to estimate the proportion of simulated datasets that led to a ‘significant’ result.
+
+In general, we hope that the test reflects reality. 
+We therefore want the result to be ‘significant’ if there really is a significant difference in the probability of an open for the two email subjects (lift > 0). 
+In that case, the proportion of significant results is the true positive rate, also called the power of the test. 
+Most sample size calculators aim for a power of 80%.
+
+On the other hand, if there’s no difference in the probability of an email being opened for the two email subjects 
+(lift = 0), a ‘significant’ result would be a false-positive (also called a type I error). 
+This would lead us to invest time and resources into adding first names into email subjects when there’s no real pay-off in the long run.
 
 
 
