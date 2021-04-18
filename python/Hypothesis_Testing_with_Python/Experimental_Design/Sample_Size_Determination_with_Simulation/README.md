@@ -153,7 +153,17 @@ This would lead us to invest time and resources into adding first names into ema
 
 # [Trade Offs](https://www.codecademy.com/courses/hypothesis-testing-python/lessons/experimental-design/exercises/trade-offs)
 
+At this point, let’s return to the point of view of a product manager who is actually planning this A/B test. 
+Suppose that the product manager wants to be able to accurately detect a lift of 30% (or higher), 
+but also wants to avoid false positives (they don’t want to change the email subjects unless there’s actually a difference between them). 
+To plan their test, the product manager needs to consider the following:
+* Increasing the sample size increases the power of the test (the probability of detecting a difference if there is one); 
+however, larger sample sizes require more time and resources.
+* Increasing the significance threshold also increases the power of the test; 
+however, it simultaneously increases the false positive rate (the probability of detecting a difference when there isn’t one).
 
+Finally, if the project manager chooses a larger minimum detectable effect/lift, then they’ll be able to decrease the sample size without decreasing power. 
+However, if they set up their test to detect a minimum lift of 30% (for example), they may not be able to detect smaller differences that are still meaningful.
 
 
 
