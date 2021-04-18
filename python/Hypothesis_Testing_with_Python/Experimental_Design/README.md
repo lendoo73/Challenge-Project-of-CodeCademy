@@ -172,3 +172,31 @@ ab_contingency = pd.crosstab(data.Web_Version, data.Subscribed)
 chi2, pval, dof, expected = chi2_contingency(ab_contingency)
 ```
 
+## Finding a representative sample
+
+Beyond choosing a hypothesis test, it is important to understand whether the data you have meets the assumptions of the test you want to run. 
+Each hypothesis test has a unique set of assumptions, which we won’t cover in detail in this article; 
+however, there is one assumption that all hypothesis tests share: **the data was randomly sampled from the population of interest**.
+
+This is important because random sampling ensures that the sample is representative of the population in terms of observed (and unobserved) characteristics. 
+Unfortunately, there may be situations where random sampling is impossible, but it is important to understand how this can bias results of a test.
+
+For example, let’s return to the example with the yogurt company “The Dairy Culture”. 
+Let’s say the company had multiple factories, but the quality assurance team only collected yogurts from one specific factory. 
+The data is thus not randomly sampled from the entire population that we care about (all factories), and could be biased if the quality of yogurt differs at each one.
+
+There can also be ethical issues that arise when a sample is not representative of a population. 
+When developing and testing a vaccine, for example, researchers must make sure to find volunteers from an appropriate proportion of 
+genders, races, age ranges, pre-existing conditions, and so on to test efficacy for the entire population that the vaccine will be used on. 
+If the vaccine manufacturers test on a sample that doesn’t include sufficient data for one race, there is a risk that there could be reduced 
+(if during the initial research phase) or unknown efficacy for that group.
+
+It can often be challenging to find a representative sample or even to recognize when there is biased data, but it is essential to think about when designing an experiment.
+
+## Next steps
+
+Now that you’ve learned to choose a **hypothesis test** and have thought about the sample you’ll need to answer your questions, 
+you’re well on your way to designing your own experiments! 
+The next step in the design process is to choose a sample size and figure out the details of how and when you’re going to collect your data.
+
+
