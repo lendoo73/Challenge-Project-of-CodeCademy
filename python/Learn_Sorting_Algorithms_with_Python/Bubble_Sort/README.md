@@ -71,4 +71,4 @@ Other languages provide multiple assignment which removes the need for a tempora
 list[index_1], list[index_2] = list[index_2], list[index_1]
 ```
 
-![swap]()
+![swap](swap.webp)
