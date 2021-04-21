@@ -85,10 +85,9 @@ The `n` signifies the number of elements in the list.
 In a worst case scenario, the inner loop does `n-1` comparisons for each `n` element in the list.
 
 Therefore we calculate the algorithm’s efficiency as:
-```
-\mathcal{O}(n(n-1)) = \mathcal{O}(n(n)) = \mathcal{O}(n^2)O(n(n−1))=O(n(n))=O(n 
-2)
-```
+
+![algorithm’s efficiency calculation](efficiency.jpg)
+
 The diagram analyzes the pseudocode implementation of bubble sort to show how we draw this conclusion.
 
 When calculating the run-time efficiency of an algorithm, we drop the constant (-1), which simplifies our inner loop comparisons to n.
