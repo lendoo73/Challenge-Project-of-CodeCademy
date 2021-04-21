@@ -94,6 +94,7 @@ When calculating the run-time efficiency of an algorithm, we drop the constant (
 
 This is how we arrive at the algorithm’s runtime: `O(n^2)`.
 
+![Boubble Sort Efficiency diagram](Sorting_Course_Efficiency_Diagram_1.svg)
 
 
 
