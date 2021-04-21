@@ -90,9 +90,9 @@ Therefore we calculate the algorithm’s efficiency as:
 
 The diagram analyzes the pseudocode implementation of bubble sort to show how we draw this conclusion.
 
-When calculating the run-time efficiency of an algorithm, we drop the constant (-1), which simplifies our inner loop comparisons to n.
+When calculating the run-time efficiency of an algorithm, we drop the constant (`-1`), which simplifies our inner loop comparisons to `n`.
 
-This is how we arrive at the algorithm’s runtime: O(n^2).
+This is how we arrive at the algorithm’s runtime: `O(n^2)`.
 
 
 
