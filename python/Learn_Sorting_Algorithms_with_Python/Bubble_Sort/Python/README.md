@@ -33,3 +33,6 @@ We’ll have two loops:
 Inside the second loop, we’ll take the index of the loop and compare the element at that index with the element at the next index. 
 If they’re out of order, we’ll make a swap!
 
+# [Bubble Sort: Optimized](https://www.codecademy.com/courses/sorting-algorithms/lessons/bubble-sort-python/exercises/bubble-sort-python-review)
+
+
