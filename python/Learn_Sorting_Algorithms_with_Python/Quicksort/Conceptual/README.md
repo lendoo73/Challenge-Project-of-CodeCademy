@@ -37,7 +37,7 @@ If the smaller and greater groupings are roughly equal, this cuts the problem in
 Depending on the implementation, the sub-arrays of one element each are recombined into a new array with sorted ordering, 
 or values within the original array are swapped in-place, producing a sorted mutation of the original array.
 
-[![Watch the video](https://img.youtube.com/vi/-oXfZUyA7Po)](https://youtu.be/-oXfZUyA7Po)
+[![Watch the video](https://img.youtube.com/vi/-oXfZUyA7Po/0.jpg)](https://youtu.be/-oXfZUyA7Po)
 
 
 
