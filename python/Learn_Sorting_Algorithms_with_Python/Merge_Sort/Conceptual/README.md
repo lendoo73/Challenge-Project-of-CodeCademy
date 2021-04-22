@@ -57,7 +57,7 @@ should go at the end of the resulting list (they’re larger than every element 
 
 ![merge sort](merge_ex_2.svg)
 
-
+# [Merge Sort Performance](https://www.codecademy.com/courses/sorting-algorithms/lessons/merge-sort-conceptual/exercises/merge-sort-performance)
 
 
 
