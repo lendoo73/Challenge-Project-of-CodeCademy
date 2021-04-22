@@ -74,7 +74,7 @@ Ideally, this process of dividing the array will produce sub-lists of nearly equ
 When the dividing step returns sub-lists that have one or less elements, each sub-list is sorted. 
 The sub-lists are recombined, or swaps are made in the original array, to produce a sorted list of values.
 
-![Quicksort]()
+![Quicksort](quicksort.svg)
 
 
 
