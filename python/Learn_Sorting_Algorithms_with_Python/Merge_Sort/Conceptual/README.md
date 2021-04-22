@@ -28,4 +28,4 @@ When merging two single-element lists, we check if the first element is smaller 
 Then we return the two-element list with the smaller element followed by the larger element.
 
 
-![merge sort](merge_ex_3.svg)
+![merge sort](merge_ex_1.svg)
