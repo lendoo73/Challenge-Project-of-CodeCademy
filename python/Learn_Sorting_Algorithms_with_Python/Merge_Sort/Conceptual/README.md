@@ -29,3 +29,5 @@ Then we return the two-element list with the smaller element followed by the lar
 
 
 ![merge sort](merge_ex_1.svg)
+
+# [Merging](https://www.codecademy.com/courses/sorting-algorithms/lessons/merge-sort-conceptual/exercises/merging)
