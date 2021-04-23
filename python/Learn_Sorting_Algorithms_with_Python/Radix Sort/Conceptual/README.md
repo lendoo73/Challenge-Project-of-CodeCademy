@@ -43,8 +43,21 @@ This system that we used is called base-10 because of that.
 
 ![radix](radix2.svg)
 
+# [Sorting By Radix](https://www.codecademy.com/courses/sorting-algorithms/lessons/radix-sort-conceptual/exercises/sorting-by-radix)
 
+So how does a radix sort use this base numbering system to sort integers? 
+First, there are two different kinds of radix sort: *most significant digit*, or **MSD**, and *least significant digit*, or **LSD**.
 
+Both radix sorts organize the input list into ten “buckets”, one for each digit. 
+The numbers are placed into the buckets based on the MSD (left-most digit) or LSD (right-most digit). 
+For example, the number 2367 would be placed into the bucket “2” for MSD and into “7” for LSD.
+
+This bucketing process is repeated over and over again until all digits in the longest number have been considered. 
+The order within buckets for each iteration is preserved. 
+For example, the numbers 23, 25 and 126 are placed in the “3”, “5”, and “6” buckets for an initial LSD bucketing. 
+On the second iteration of the algorithm, they are all placed into the “2” bucket, but the order is preserved as `23, 25, 126`.
+
+![radix-bucket](radix3.svg)
 
 
 
