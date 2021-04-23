@@ -36,8 +36,12 @@ This is where it’s useful to incorporate the shorthand of exponential notation
 It’s important to note that 10<sup>0</sup> is equal to 1. 
 Each position corresponds to a different exponent of 10.
 
-So why 10? It’s a consequence of how many digits are in our alphabet for numbering. Since we have 10 digits (0-9) we can count all the way up to 9 before we need to use a different position. This system that we used is called base-10 because of that.
+So why 10? 
+It’s a consequence of how many digits are in our alphabet for numbering. 
+Since we have 10 digits (0-9) we can count all the way up to 9 before we need to use a different position. 
+This system that we used is called base-10 because of that.
 
+![radix]()
 
 
 
