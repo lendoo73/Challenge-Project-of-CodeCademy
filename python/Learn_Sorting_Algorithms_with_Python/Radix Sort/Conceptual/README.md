@@ -59,9 +59,24 @@ On the second iteration of the algorithm, they are all placed into the “2” b
 
 ![radix-bucket](radix3.svg)
 
+# [Radix Sort Performance](https://www.codecademy.com/courses/sorting-algorithms/lessons/radix-sort-conceptual/exercises/radix-performance)
 
+The most amazing feature of radix sort is that it manages to sort a list of integers without performing any comparisons whatsoever. 
+We call this a non-comparison sort.
 
+This makes its performance a little difficult to compare to most other comparison-based sorts. 
+Consider a list of length n. 
+For each iteration of the algorithm, we are deciding which bucket to place each of the n entries into.
 
+How many iterations do we have? 
+Remember that we continue iterating until we examine each digit. 
+This means we need to iterate for how ever many digits we have. 
+We’ll call this average number of digits the word-size or w.
+
+This means the complexity of radix sort is O(wn). 
+Assuming the length of the list is much larger than the number of digits, we can consider w a constant factor and this can be reduced to O(n).
+
+![radix - time complexity](radix4.svg)
 
 
 
