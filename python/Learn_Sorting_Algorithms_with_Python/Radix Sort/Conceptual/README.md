@@ -41,7 +41,7 @@ It’s a consequence of how many digits are in our alphabet for numbering.
 Since we have 10 digits (0-9) we can count all the way up to 9 before we need to use a different position. 
 This system that we used is called base-10 because of that.
 
-![radix]()
+![radix](radix2.svg)
 
 
 
