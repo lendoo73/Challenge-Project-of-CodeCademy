@@ -78,8 +78,10 @@ Assuming the length of the list is much larger than the number of digits, we can
 
 ![radix - time complexity](radix4.svg)
 
+# [Radix Review](https://www.codecademy.com/courses/sorting-algorithms/lessons/radix-sort-conceptual/exercises/radix-review)
 
-
-
-
-
+* A radix is the base of a number system. For the decimal number system, the radix is 10.
+* Radix sort has two variants - MSD and LSD
+* Numbers are bucketed based on the value of digits moving left to right (for MSD) or right to left (for LSD)
+* Radix sort is considered a non-comparison sort
+* The performance of radix sort is O(n)
