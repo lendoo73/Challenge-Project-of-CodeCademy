@@ -17,4 +17,4 @@ Given the strange ordering of the store, they do not always get the books placed
 The owner wants you to research methods of fixing the book ordering throughout the day and sorting the books in the morning. 
 It is currently taking too long!
 
-[project walkthrough video](https://www.youtube.com/watch?v=_0C5lqlAOE0)
+[Project walkthrough video](https://www.youtube.com/watch?v=_0C5lqlAOE0)
