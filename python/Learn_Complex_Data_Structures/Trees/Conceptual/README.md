@@ -84,7 +84,7 @@ Let’s walk through locating the value `31`.
 We found the value `31`!
 In a dataset of fifteen elements, we only made three comparisons.
 
-![Tree varietals](cs_tree_varietals.svg)
+![Binary Search Tree](Binary_Search_Tree_Visualization_Updated_1.svg)
 
 
 
