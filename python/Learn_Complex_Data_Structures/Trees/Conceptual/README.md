@@ -15,4 +15,4 @@ We depict those references as lines drawn between rectangles.
 
 Trees are often displayed with a single node at the top and connected nodes branching downwards.
 
-![Tree]()
+![Tree](TreeNode.svg)
