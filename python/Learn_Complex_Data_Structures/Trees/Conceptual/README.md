@@ -60,7 +60,7 @@ otherwise, they wouldn’t be trees!
 Each time we move from a parent to a child, we’re moving down a level. 
 Depending on the orientation we refer to this as the **depth** (counting levels down from the root node) or **height** (counting levels up from a leaf node).
 
-![Tree varietals](TreeNode.svg)
+![Tree varietals](cs_tree_varietals.svg)
 
 
 
