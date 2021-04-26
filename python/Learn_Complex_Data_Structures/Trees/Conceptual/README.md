@@ -37,10 +37,30 @@ It’s extremely common to have nodes act as both parent and child to different 
 
 When a node has ***no children***, we refer to it as a ***leaf*** node.
 
+These terms: 
+* root, 
+* leaf, 
+* child, 
+* sibling, 
+* and parent 
 
+give us a precise way to communicate the relationships between nodes.
 
+# [Tree Varietals](https://www.codecademy.com/courses/complex-data-structures/lessons/learn-trees-general/exercises/general-trees-varietals)
 
+Trees come in various shapes and sizes depending on the dataset modeled.
 
+Some are wide, with parent nodes referencing many child nodes.
+
+Some are deep, with many parent-child relationships.
+
+Trees can be both wide and deep, but each node will only ever have **at most one parent**; 
+otherwise, they wouldn’t be trees!
+
+Each time we move from a parent to a child, we’re moving down a level. 
+Depending on the orientation we refer to this as the **depth** (counting levels down from the root node) or **height** (counting levels up from a leaf node).
+
+![Tree varietals](TreeNode.svg)
 
 
 
