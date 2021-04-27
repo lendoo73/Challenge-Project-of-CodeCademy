@@ -30,7 +30,7 @@ That element could be a button, some text, an image, or any other HTML element.
 When the event is triggered, we target all elements of the class `shoe-information` and call `.hide()` on them. 
 Check out the gif below to see an example.
 
-![]()
+![Hide](hide-gif.gif)
 
 In this gif, the `shoe-information` element hides when the `hide-arrow` button is clicked. 
 Notice that the HTML elements below the `shoe-information` element move up to fill the space left by the hidden element.
