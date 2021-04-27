@@ -29,3 +29,62 @@ $('#login').click(() => {
 });
 ```
 In this example, the same toggle functionality is accomplished using just three lines of code.
+
+# [jQuery Methods](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-setup/exercises/jquery-methods)
+
+In the last exercise, you used jQuery to cut twelve lines of code down to three.
+
+Let’s use Legos as an analogy for understanding how jQuery works. 
+With an infinite number of Legos, you could build an entire city — of course, this would take a long time. 
+What if you were given pre-made Lego buildings, Lego roads, Lego parks, etc? 
+You could build a city much faster.
+
+The JavaScript language represents an infinite supply of Lego blocks — the possibilities are endless but time-consuming. 
+The pre-made Lego structures are like jQuery methods. 
+You can use these methods to add dynamic behavior, such as `.hide()`, `.show()`, `.fadeIn()`, `.fadeOut()` etc., to HTML elements.
+
+The example in the last exercise took twelve lines of JavaScript, but was achieved with only three lines of jQuery’s `.click()` and `.toggle()` methods.
+
+# [jQuery Library](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-setup/exercises/jquery-library)
+
+We are going to use jQuery to add some interactivity to the MOVE Gear site, an online marketplace for athletic apparel.
+
+To use the jQuery library, **index.html** must load it with the other dependencies. 
+Take a look at the attached diagram to see where various dependencies load in an HTML document.
+
+The document is loaded from top to bottom. 
+So the 
+* style dependencies in the `<head>` will load first, 
+* then the structural elements in the `<body>` will load next. 
+
+It has become common practice to link the main JavaScript file at the bottom of the HTML document 
+because a good deal of the content of the script will require that the dependencies, style sheets and elements exist 
+before the browser can run the JavaScript that uses and references those things.
+
+When you add the jQuery library to your project in the next exercise, you will do so on the line before the `</body>` tag. 
+Because HTML files load from top to bottom, adding the jQuery library at the bottom of your project will ensure that it will not affect the HTML (structure) and CSS (style) load times.
+
+The image below displays the structural separation of JavaScript, HTML, and CSS in an HTML file.
+
+![The structural separation in an HTML file]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
