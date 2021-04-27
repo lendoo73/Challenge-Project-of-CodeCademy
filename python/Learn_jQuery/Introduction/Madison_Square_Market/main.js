@@ -1,7 +1,8 @@
-// 1. add click event handlers
+// 1. 
 $(document).ready(
   () => {
-    // 2.
+    // 2. add click event handlers to multiple element: 
+    // https://api.jquery.com/multiple-selector/
     $("#cart, #account, #help").on("click", () => {
       // 3. appear drop-down menu 
       $(event.target.nextElementSibling).show();
