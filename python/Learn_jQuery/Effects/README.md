@@ -89,6 +89,8 @@ The second time the arrow is clicked, `.toggle()` hides the shoe information bec
 There’s no need to have a different button for `.hide()` and `.show()`; 
 `.toggle()` can do both!
 
+# [fading](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-effects/exercises/fade)
+
 
 
 
