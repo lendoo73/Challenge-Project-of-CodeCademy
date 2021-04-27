@@ -66,7 +66,7 @@ Because HTML files load from top to bottom, adding the jQuery library at the bot
 
 The image below displays the structural separation of JavaScript, HTML, and CSS in an HTML file.
 
-![The structural separation in an HTML file]()
+![The structural separation in an HTML file](jquery-diagrams_webpage-buildingblocks.svg)
 
 
 
