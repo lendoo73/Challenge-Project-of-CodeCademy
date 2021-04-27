@@ -68,9 +68,41 @@ The image below displays the structural separation of JavaScript, HTML, and CSS 
 
 ![The structural separation in an HTML file](jquery-diagrams_webpage-buildingblocks.svg)
 
+# [Adding jQuery](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-setup/exercises/adding-jquery)
 
+To include jQuery, we use a `<script>` tag as follows:
+```Javascript
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+```
+In this example, the jQuery library is loaded from the jQuery *content delivery network (CDN)*. 
+A CDN is a collection of servers that can deliver content.
 
+You must include the `<script>` tag in the HTML document before you link to a JavaScript file that uses the jQuery library. 
+The **`integrity`** and **`crossorigin`** properties in the example ensure ***the file is delivered without any third-party manipulation***.
 
+We will use jQuery methods in a JavaScript file called **main.js**, which we will load into **index.html** using a `<script>` tag. 
+We need to load the jQuery library before the **main.js** file. 
+Otherwise, the computer will not understand the jQuery used in **main.js**.
+
+# [.ready()](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-setup/exercises/ready)
+
+The jQuery library makes it quick and easy to add visual effects and interactivity to your web page. 
+However, a web page must be rendered in a user’s browser before it’s possible to have any dynamic behavior. 
+To solve this problem, we will use our first jQuery method.
+
+The jQuery `.ready()` method waits until the HTML page’s DOM is ready to manipulate. 
+You should wrap all JavaScript behavior inside of the `.ready()` method. 
+This will make sure the web page is rendered in the browser before any jQuery code executes.
+```Javascript
+$(document).ready(() => {
+ 
+});
+```
+In the example above, the `.ready()` method waits until the browser finishes rendering the HTML document before triggering a callback function. 
+We will write all of our jQuery behavior inside this callback function.
 
 
 
