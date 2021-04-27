@@ -50,7 +50,7 @@ The only difference is that we are calling a different method on the targeted el
 This time we are calling the `.show()` method on the shoe’s textual information.
 
 Check out the gif below to see `.show()` in action!
-![Show](hide-gif.gif)
+![Show](show-gif.gif)
 
 In this gif, all elements of class `shoe-information-2` appear when an element of class `show-arrow` is clicked.
 
