@@ -7,7 +7,7 @@ The JavaScript community contributes to a collection of libraries that extend an
 In this course, you will learn about jQuery, a JavaScript library that makes it easy to add dynamic behavior to HTML elements.
 
 Let’s look at an example of how JavaScript is used to add dynamic behavior to a web page (don’t worry about understanding the code).
-```
+```JavaScript
 const login = document.getElementById('login');
 const loginMenu = document.getElementById('loginMenu');
  
@@ -23,7 +23,7 @@ In this example, JavaScript is used to apply behavior to an HTML element with id
 The behavior allows a user to click a **LOGIN** button that toggles a login form.
 
 The code below accomplishes the same behavior with jQuery.
-```
+```JavaScript
 $('#login').click(() => {
   $('#loginMenu').toggle()
 });
