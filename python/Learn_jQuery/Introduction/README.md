@@ -104,19 +104,89 @@ $(document).ready(() => {
 In the example above, the `.ready()` method waits until the browser finishes rendering the HTML document before triggering a callback function. 
 We will write all of our jQuery behavior inside this callback function.
 
+# [Targeting by Class](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-setup/exercises/targeting-by-class)
 
+Let’s look at the code we just pasted into our **main.js** file:
+```javascript
+$(document).ready(() => {
+ 
+});
+```
+In the example above, **`document`** is a special keyword that we use to target the HTML document and create a jQuery object.
 
+We can use the same `$()` syntax to create jQuery objects for elements on a web page. 
+Typically, we pass a string into `$()` to target elements by id, class, or tag. 
+Once targeted, we can use `.` notation to attach a handler method that triggers a callback function.
 
+Let’s consider how we can target elements by class. 
+We can reference elements by class name with the following syntax:
+```javascript
+$('.someClass').handlerMethod();
+```
+In the example above, every element with a class of `'someClass'` is targeted. 
+Note, we prepend the class name with a period (`.someClass`). 
+Then, we call the `.handlerMethod()` on all of the referenced items.
 
+# [Targeting by id](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-setup/exercises/targeting-by-id)
 
+While classes allow us to target multiple elements at once, we can also target single elements by `id`.
 
+To select by `id`, we prepend the element’s id name with the `#` symbol.
+```javascript
+$('#someId').hide();
+```
+In the example above, we target the `#someId` element and call the `.hide()` method on it. 
+The `.hide()` method hides the `someId` element when the web page renders to a client’s browser.
 
+# [jQuery Objects](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-setup/exercises/jquery-objects)
 
+Now that you’ve seen some jQuery in action, let’s dive a bit deeper into syntax. 
+You’ve probably noticed the `$` symbol before anything we target. 
+The `$` symbol is an alias for the `jQuery` function. 
+The `$` symbol and `jQuery` are interchangeable.
 
+The `jQuery` function takes a parameter that targets an element, like `'#navMenu'`, and turns it into a jQuery object. 
+Then, you can call any jQuery method on a jQuery object.
 
+Developers often save jQuery objects in variables, like so:
+```javascript
+const $jQueryObject = $('.someClass');
+```
+Notice our variable name, `$jQueryObject`, starts with the (`$`) character. 
+It is best practice to name jQuery object variables with a leading `$`. 
+It is a naming convention that reminds you and lets others know that a given variable is a jQuery object.
 
+# [Event Handlers](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-setup/exercises/event-handlers)
 
+Now that we’ve got jQuery up and running, let’s give it a little gas! 
+The jQuery `.on()` method adds event handlers to jQuery objects. 
+The method takes two parameters: 
+* a string declaring the event to listen for (the handler) 
+* and a callback function to fire when the event is detected.
+```javascript
+$('#login').on('click', () => {
+  $loginForm.show();
+})
+```
+In the example above, we use `.on()` to add the click event handler to the `#login` element. 
+Inside of the callback function, we use the `.show()` method to show the jQuery object saved in the `$loginForm` variable.
 
+When a user clicks the login element, the login form appears.
 
+# [Review: jQuery Introduction](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-setup/exercises/review)
 
+That’s just a taste of what you can do with jQuery. 
+While there’s still a lot to learn, in this unit you used jQuery to add dynamic behavior to a website. 
+With jQuery objects, you can quickly target elements, handle events and add visual effects with just a few lines of code.
 
+That said, when using any jQuery tools, it is important to consider how events and effects will appear on different platforms.
+
+In this lesson, you learned:
+* About JavaScript libraries.
+* How to add jQuery to your web page.
+* How to avoid loading errors with the `.ready()` method.
+* About jQuery objects and their methods.
+* How to target elements by id and class.
+* Naming conventions for storing jQuery objects in JavaScript variables.
+* How to add event handlers with `.on()`.
+* A couple jQuery effects, such as `.hide()` and `.show()`.
