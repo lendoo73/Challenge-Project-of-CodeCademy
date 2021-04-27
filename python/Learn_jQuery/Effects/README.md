@@ -50,9 +50,57 @@ The only difference is that we are calling a different method on the targeted el
 This time we are calling the `.show()` method on the shoe’s textual information.
 
 Check out the gif below to see `.show()` in action!
+
 ![Show](show-gif.gif)
 
 In this gif, all elements of class `shoe-information-2` appear when an element of class `show-arrow` is clicked.
+
+# [.toggle()](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-effects/exercises/toggle)
+
+Our table now has two buttons that hide and show our image. 
+But wouldn’t it be nice to have one button do both? 
+It is common for web pages to have one button that will either hide or show elements depending on their current state. 
+We can achieve this by using the `.toggle()` method.
+```javascript
+$('.toggle-button').on('click', () => {
+  $('.shoe-information-3').toggle();
+});
+```
+In the above code we call the `.toggle()` method on elements of class `shoe-information-3`. 
+If the information is visible, clicking the `.toggle-button` will hide it, as if the following code were run.
+```javascript
+$('.toggle-button').on('click', () => {
+  $('.shoe-information-3').hide();
+});
+```
+At the same time, if the shoe information is hidden, it will show itself as if the following code were run:
+```javascript
+$('.toggle-button').on('click', () => {
+  $('.shoe-information-3').show();
+});
+```
+Take a look at the gif below to see the `.toggle()` method being called.
+
+![Toggle](toggle-gif.gif)
+
+In this gif, the `.toggle()` method is called twice. 
+The first time the arrow is clicked, `.toggle()` shows the shoe information because it was hidden. 
+The second time the arrow is clicked, `.toggle()` hides the shoe information because the information was being shown. 
+There’s no need to have a different button for `.hide()` and `.show()`; 
+`.toggle()` can do both!
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
