@@ -146,7 +146,7 @@ In the above code, we call the `.slideDown()` method on the elements of class `m
 The `slow` parameter determines the speed of the animation. 
 That code will produce something that looks like this:
 
-![Sliding](fadeIn-gif.gif)
+![Sliding](slideDown-gif.gif)
 
 The menu-button element is clicked and the menu-content element slides down into place
 
