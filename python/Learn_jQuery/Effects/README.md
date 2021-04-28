@@ -155,18 +155,26 @@ Use the [documentation](https://api.jquery.com/category/effects/)
 to find their names and read about their usage. 
 One is used to slide elements up, and the other is used to toggle sliding effects.
 
+# [Review: Effects](https://www.codecademy.com/courses/learn-jquery/lessons/jquery-effects/exercises/review)
 
+To review, the methods that we learned were:
+* `.hide()`
+* `.show()`
+* `.toggle()`
 
+These methods instantly hide or show elements on a web page.
 
+* `.fadeOut()`
+* `.fadeIn()`
+* `.fadeToggle()`
 
+These methods make elements disappear or appear over a given period of time.
 
+* `.slideUp()`
+* `.slideDown()`
+* `.slideToggle()`
 
+These methods make elements slide up or down into place over a given period of time.
 
-
-
-
-
-
-
-
-
+Using these effects, you can make your web pages eye-catching and dynamic. 
+And thanks to the magic of jQuery all of this can be done with very few lines of code!
