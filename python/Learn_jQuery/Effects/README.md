@@ -94,7 +94,7 @@ There’s no need to have a different button for `.hide()` and `.show()`;
 In this exercise, you will learn about two new methods that are similar to `.hide()` and `.show()`. 
 Take a look at the gif below:
 
-![Fade in](toggle-gif.gif)
+![Fade in](fadeIn-gif.gif)
 
 In this gif, the `.fadeIn()` method is called on an HTML element. 
 Instead of instantly showing the element, `.fadeIn()` and `.fadeOut()` make the element appear or disappear over a given period of time. 
