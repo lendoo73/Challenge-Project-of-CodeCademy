@@ -58,22 +58,70 @@ $('.choice').on('click', event => {
   $(event.currentTarget).parent().hide();
 });
 ```
-```javascript
-$('.choice').on('click', event => {
-  $(event.currentTarget).parent().hide();
-});
-```
-In the example above, the .parent() method targets the parent element of '.choice' elements and removes it from the DOM.
-
+In the example above, the `.parent()` method targets the parent element of `'.choice'` elements and removes it from the DOM.
+```js
 $('.choice').on('click', event => {
   $(this).siblings().removeClass('selected');
   $(event.currentTarget).addClass('selected');
 });
-In the code above, the .siblings() method targets elements adjacent to the clicked '.choice' and removes the 'selected' class from any previously clicked '.choice's. Then the 'selected' class is added only to the clicked '.choice'.
+```
+In the code above, the `.siblings()` method targets elements adjacent to the clicked `'.choice'` and removes the `'selected'` class from any previously clicked `'.choice'`s. 
+Then the `'selected'` class is added only to the clicked `'.choice'`.
 
+# [Closest](https://www.codecademy.com/courses/learn-jquery/lessons/traversing-the-dom/exercises/closest)
 
+To select an element close to the current element, we can use jQuery’s `.closest()` method.
 
+The `.closest()` method will travel up the DOM tree to find a specified selector closest to it. 
+Its syntax looks like:
+```js
+$('.example-class-one').closest('.another-class');
+```
+In the example above:
+* The `.closest()` method is called on `'.example-class-one'` elements.
+* The method then targets the element selected by the `.closest()` method with a class of `'.another-class'`.
+```html
+<div class='.another-class'>
+  <p class='.example-class-one'>1</p>
+</div>
+<div class='.another-class'>
+  <p class='.example-class-two'>2</p>
+</div>
+```
+Given this HTML, the jQuery above would select the `<div>` element that wraps the paragraph with a value of 1, 
+because it is the closest element, up the DOM tree, with the class `.another-class`.
 
+# [Next](https://www.codecademy.com/courses/learn-jquery/lessons/traversing-the-dom/exercises/next)
+
+Sometimes you don’t want to target all the siblings of an element — you just want to target the next one. 
+That’s where the aptly-named `.next()` method comes in!
+
+The code below is HTML for a menu. 
+The list of food types is hidden, `<ol style='display:none'>`.
+```html
+<div class='heading'>MENU</div>
+<ol style='display: none'>
+  <li>Appetizers</li>
+  <li>Entrees</li>
+  <li>Salads</li>
+  <li>Sides</li>
+  <li>Desserts</li>
+</ol>
+```
+Since the `div` and `<ol>` exist on the same level of the DOM, they are siblings. 
+Since there are no elements between them, the `<ol>` is the next sibling of `'.heading'`. 
+We can add an event handler to the `div` element and use the `.next()` method to show and hide the `<ol>` using the `.toggle()` method.
+```js
+const $heading = $('.heading');
+$heading.on('click', () => {
+  $(event.currentTarget).next().toggle();
+});
+```
+In the example above, the `.on()` method attaches the click event handler to `$heading`. 
+Then the callback function will toggle the class of the `$heading`‘s `next` sibling, the `ol` element.
+
+It’s important to note that jQuery also has a method called [`.prev()`](https://api.jquery.com/prev/) 
+that can look at the previous sibling.
 
 
 
