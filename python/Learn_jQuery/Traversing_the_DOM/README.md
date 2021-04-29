@@ -58,6 +58,11 @@ $('.choice').on('click', event => {
   $(event.currentTarget).parent().hide();
 });
 ```
+```javascript
+$('.choice').on('click', event => {
+  $(event.currentTarget).parent().hide();
+});
+```
 In the example above, the .parent() method targets the parent element of '.choice' elements and removes it from the DOM.
 
 $('.choice').on('click', event => {
