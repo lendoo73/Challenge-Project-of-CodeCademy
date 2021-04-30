@@ -21,7 +21,7 @@ Our MinHeap class will store two pieces of information:
 * A count of the elements within the heap.
 
 To make our lives easier, we’ll always keep one *sentinel* element at the beginning inside the list: `None`.
-```python
+```py
 heap = MinHeap()
 print(heap.heap_list)
 # [None]
@@ -29,7 +29,12 @@ print(heap.count)
 # 0
 ```
 This dummy value will save us the trouble of checking whether the list is empty and simplify the methods we define in later lessons.
-
+```py
+class MinHeap:
+  def __init__(self):
+    self.heap_list = [None]
+    self.count = 0
+```
 
 
 
