@@ -62,7 +62,7 @@ One more swap and we’ve restored the heap properties.
 The parent value, `2`, is lesser than the child, `3`. 
 We can see that `3`‘s children `5` and `14` are also greater.
 
-![Heap representation](heap-representation.svg)
+![Heapify Up](heapup.gif)
 
 
 
