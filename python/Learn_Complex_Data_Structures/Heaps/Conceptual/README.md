@@ -42,7 +42,7 @@ The location of each child or parent derives from a formula using the index.
 * right child: `(index * 2) + 2`
 * parent: `(index - 1) / 2` — **not used on the root!**
 
-![Min Heap Example](min_heap_example.jpg)
+![Heap representation](heap-representation.svg)
 
 # [Adding an Element: Heapify Up](https://www.codecademy.com/courses/complex-data-structures/lessons/conceptual-heaps/exercises/conceptual-heaps-heapify-up)
 
