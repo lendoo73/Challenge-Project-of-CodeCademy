@@ -21,7 +21,7 @@ Think of the min-heap as a binary tree with two qualities:
 These two properties are the defining characteristics of the min-heap. 
 By maintaining these two properties, we can efficiently retrieve and update the minimum value.
 
-![Min Heap Example]()
+![Min Heap Example](min_heap_example.jpg)
 
 # [Heap Representations](https://www.codecademy.com/courses/complex-data-structures/lessons/conceptual-heaps/exercises/conceptual-heaps-representation)
 
