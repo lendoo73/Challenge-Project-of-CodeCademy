@@ -36,8 +36,30 @@ class MinHeap:
     self.count = 0
 ```
 
+# [Adding an Element: Heapify Up I](https://www.codecademy.com/courses/complex-data-structures/lessons/python-heaps/exercises/python-heaps-heapify-up-i)
 
+The min-heap is no good if all it ever contains is `None`. 
+Let’s build the functionality to add elements while maintaining the heap properties.
 
+Our `MinHeap` will abide by two principles:
+* The element at **index `1`** is the **minimum value** in the entire list.
+* Every **“child”** element in the list must be **larger than** their **“parent”**.
+
+The first element we add to the list will be the minimum because there are no other elements. 
+
+For now, let’s define `.add()` which will allow us to add elements into the `.heap_list`. 
+We’ll also start defining `.heapify_up()`, which will do the work of maintaining the heap properties as we add additional elements.
+```py
+  def add(self, element):
+    print("Adding element to self.heap_list.")
+    self.count += 1
+    self.heap_list.append(element)
+    self.heapify_up()
+```
+```py
+  def heapify_up(self):
+    print("Restoring the heap property…")
+```
 
 
 
