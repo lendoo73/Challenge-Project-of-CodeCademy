@@ -70,7 +70,7 @@ This differs from earlier examples when every edge was bi-directional.
 Note the path `spikes` to `lasers` to `piranhas` to `spikes`. 
 This path is a **cycle**, because it *ends* on the vertex *where* it *began*: `spikes`.
 <p align="center">
-  <directed_graph.svg" width="800" alt="directed graph" />
+  <img src="directed_graph.svg" width="800" alt="directed graph" />
 </p>
 
 
