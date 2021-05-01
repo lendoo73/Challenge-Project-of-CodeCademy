@@ -54,7 +54,7 @@ These costs are essential to algorithms that find the shortest distance between 
 
 In a weighted graph, **the shortest path is not always the least expensive**.
 <p align="center">
-  <img src="ezgif-7-d9da3674dc08.webp" width="600" alt="disconnected graph" />
+  <img src="ezgif-7-d9da3674dc08.webp" width="800" alt="disconnected graph" />
 </p>
 
 
