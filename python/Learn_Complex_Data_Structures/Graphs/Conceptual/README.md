@@ -110,5 +110,5 @@ Let’s review some key terms:
 * **`adjacency matrix`**: Graph representation where vertices are both the rows and the columns. Each cell represents a possible edge.
 * **`adjacency list`**: Graph representation where each vertex has a list of all the vertices it shares an edge with.
 
-
+![Representing Graphs](adjacency_matrix_2.webp)
 
