@@ -96,6 +96,9 @@ class Graph:
     self.graph_dict[vertex.value] = vertex
 ```
 
+# [Import Interlude](https://www.codecademy.com/courses/complex-data-structures/lessons/python-graphs/exercises/python-graphs-import-interlude)
+
+
 
 
 
