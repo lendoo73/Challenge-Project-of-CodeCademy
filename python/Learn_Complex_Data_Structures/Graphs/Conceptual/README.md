@@ -14,6 +14,8 @@ Web pages can be vertices, and the hyperlinks which connect them are edges.
 
 Real-world relationships modeled as graphs are numerous, making them an essential concept to master.
 
+<img src="route_map.svg" width="300" />
+
 ![Introduction to Graphs](route_map.svg)
 
 
