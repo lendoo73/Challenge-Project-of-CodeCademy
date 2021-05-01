@@ -73,6 +73,25 @@ This path is a **cycle**, because it *ends* on the vertex *where* it *began*: `s
   <img src="directed_graph.svg" width="800" alt="directed graph" />
 </p>
 
+# [Representing Graphs](https://www.codecademy.com/courses/complex-data-structures/lessons/conceptual-graphs/exercises/conceptual-graphs-representation)
 
+We typically represent the vertex-edge relationship of a graph in two ways: 
+* an **adjacency list** 
+* or an **adjacency matrix**.
 
+An adjacency matrix is a table. 
+Across the top, every vertex in the graph appears as a column. 
+Down the side, every vertex appears again as a row. 
+Edges can be bi-directional, so each vertex is listed twice.
+
+To find an edge between `B` and `P`, we would look for the `B` row and then trace across to the `P` column. 
+The contents of this cell represent a possible edge.
+
+Our diagram uses `1` to mark an edge, `0` for the absence of an edge. 
+In a weighted graph, the cell contains the cost of that edge.
+
+In an adjacency list, each vertex contains a list of the vertices where an edge exists. 
+To find an edge, one looks through the list for the desired vertex.
+
+![Representing Graphs](adjacency_matrix_2.webp)
 
