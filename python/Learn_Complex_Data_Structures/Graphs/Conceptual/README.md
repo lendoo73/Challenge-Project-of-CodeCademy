@@ -37,7 +37,7 @@ The paths from `Alice` to `Patty` could go
 No path exists between `Sally` and `Ted`. 
 When *no path exists between two vertices*, a graph is ***disconnected***.
 <p align="center">
-  <img src="route_map.svg" width="600" alt="Introduction to Graphs" />
+  <img src="disconnected_graph.svg" width="600" alt="Introduction to Graphs" />
 </p>
 
 
