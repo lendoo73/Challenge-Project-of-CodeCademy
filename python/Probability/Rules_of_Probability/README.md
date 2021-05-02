@@ -35,7 +35,7 @@ We can write the union of two events mathematically as **(A or B)**.
 The intersection of two sets encompasses **any element** that **exists in both** of the sets. 
 Visually:
 
-![intersection venndiagram](intersection-venndiagram.svg)
+![intersection venndiagram](images/intersection-venndiagram.svg)
 
 
 
