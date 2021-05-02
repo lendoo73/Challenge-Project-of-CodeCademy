@@ -185,7 +185,9 @@ We can visualize this calculation as follows:
 
 This animation gives a visual representation of the addition rule formula, which is:
 
-<img align="center" alt="the probability of the union of A and B formula" src="images/the_probability_of_the_union_of_A_and_B_formula.svg" />
+<p align="center">
+  <img alt="the probability of the union of A and B formula" src="images/the_probability_of_the_union_of_A_and_B_formula.svg" />
+</p>
 
 
 
