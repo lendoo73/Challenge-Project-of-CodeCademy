@@ -223,5 +223,21 @@ For example, if we want to represent the probability that we choose a red marble
   <img alt="conditional probability" src="images/conditional_probability.svg" />
 </p>
 
+From the above diagram, we know that:
+
+<p align="center">
+  <img alt="3 in 4" src="images/conditional_probability_3_in_4.svg" />
+</p>
+
+
+
+
+
+
+
+
+
+
+
 
 
