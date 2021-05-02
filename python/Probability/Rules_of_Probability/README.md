@@ -203,6 +203,7 @@ For mutually exclusive events, the addition rule formula is:
   <img alt="mutually exclusive events formula" src="images/mutually_exclusive_events_formula.svg" />
 </p>
 
+This is because the **intersection is empty**, so we don’t need to remove any overlap between the two events.
 
 
 
