@@ -229,9 +229,19 @@ From the above diagram, we know that:
   <img alt="3 in 4" src="images/conditional_probability_3_in_4.svg" />
 </p>
 
+What if we picked out two marbles with replacement? 
+What does the conditional probability look like? 
+Well, let’s think about this. 
+Regardless of which marble we pick out first, it will be put back into the bag. 
+Therefore, the probability of picking out a red marble or a blue marble second is unaffected by the first outcome.
 
+Therefore, for independent events, we can say the following:
 
-
+<p align="center">
+  <img alt="Probability of B first A second" src="images/p_of_b_first_a_second.svg" />
+  and
+  <img alt="Probability of A first B second" src="images/p_of_a_first_b_second.svg" />
+</p>
 
 
 
