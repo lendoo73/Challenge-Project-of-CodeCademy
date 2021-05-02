@@ -115,9 +115,16 @@ Suppose we flip a coin ten times.
   Yes, they are independent.
 </details>
 
+# [Mutually Exclusive Events](https://www.codecademy.com/courses/probability-mssp/lessons/rules-of-probability/exercises/mutually-exclusive-events)
 
+### Two events are considered mutually exclusive if they cannot occur at the same time. 
 
+For example, consider a single coin flip: the events “tails” and “heads” are mutually exclusive because we cannot get both tails and heads on a single flip.
 
+We can visualize two mutually exclusive events as a pair of non-overlapping circles. 
+They do not overlap because there is no outcome for one event that is also in the sample space for the other:
+
+![mutually exclusive venndiagram](images/mutually-exclusive-venndiagram.svg)
 
 
 
