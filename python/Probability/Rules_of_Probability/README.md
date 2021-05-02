@@ -43,14 +43,27 @@ We can write the union of two events mathematically as **(A and B)**.
 
 ## Complement
 
-Lastly, the complement of a set consists of **all** possible outcomes outside of the set**. 
+Lastly, the complement of a set consists of **all possible outcomes outside of the set**. 
 Visually:
 
 ![complement venndiagram](images/complement-venndiagram.svg)
 
+Consider set `A` from the above example (rolling an odd number on a 6-sided die). 
+The complement of this set would be rolling an even number: {2, 4, 6}. 
+We can write the complement of set `A` as `A`<sup>`C`</sup>. 
+One key feature of complements is that **a set and its complement cover the entire sample space**. 
+In this die roll example, **the set of even numbers and odd numbers** would **cover all possible rolls**: {1, 2, 3, 4, 5, 6}.
 
+# [Independence and Dependence](https://www.codecademy.com/courses/probability-mssp/lessons/rules-of-probability/exercises/independence-and-dependence)
 
+Imagine that we flip a fair coin 5 times and get 5 heads in a row. 
+Does this affect the probability of getting heads on the next flip? 
+Even though we may feel like it’s time to see “tails”, it is impossible for a past coin flip to impact a future one. 
+The fact that **previous** coin flips **do not affect future ones** is called **independence**. 
 
+#### Two events are independent if the occurrence of one event does not affect the probability of the other.
+
+Are there cases where previous events DO affect the outcome of the next event? Suppose we have a bag of five marbles: two marbles are blue and three marbles are red. If we take one marble out of the bag, what is the probability that the second marble we take out is blue?
 
 
 
