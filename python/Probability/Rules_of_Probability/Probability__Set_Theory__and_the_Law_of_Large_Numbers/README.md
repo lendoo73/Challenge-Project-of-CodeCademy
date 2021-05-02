@@ -32,10 +32,18 @@ Therefore, we can say:
 <h3 align="center">
 {1, 2, 3, 4, 5} = {5, 3, 2, 4, 1}
 </h3>
-
-
-
-
+When defining a set, we often use a capital letter. 
+For example:
+<h3 align="center">
+A = {1, 2 ,3 ,4 ,5}
+</h3>
+Sets can also contain subsets. 
+Set A is a subset of set B if all the elements in A exist within B. 
+For example:
+<h3 align="center">
+A = {1, 2, 3}
+B = {1, 2, 3, 4, 5}
+</h3>
 
 
 
