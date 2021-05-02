@@ -94,10 +94,18 @@ We pick out two cards from a standard deck of 52 cards without replacement.
 * **Event B** is that we pick an Ace on the second draw.
 <details>
   <summary>Are events A and B independent?</summary>
-  Events A and B are dependent.
+  Not, they are dependent.
 </details>
 <hr />
 
+Suppose we roll a six-sided die two times. 
+* **Event A** is that we roll a 3 on the first roll. 
+* **Event B** is that we roll a 3 on the second roll. Are events A and B independent?
+<details>
+  <summary>Are events A and B independent?</summary>
+  Yes, they are independent.
+</details>
+<hr />
 
 
 
