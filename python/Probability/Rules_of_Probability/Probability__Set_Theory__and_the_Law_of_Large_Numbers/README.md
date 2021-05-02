@@ -67,15 +67,14 @@ S = {HH, TT, HT, TH}
 Suppose we are interested in the probability of one specific outcome: HH. 
 A **specific outcome** (or set of outcomes) is known as an event and is a subset of the sample space. 
 Three events we might look at in this sample space are:
-
-\begin{aligned} \text{Getting Two Heads} \\ A = \{HH\} \\ \text{Getting Two Tails} \\ B = \{TT\} \\ \text{Getting Both a Heads and Tails}\\ C = \{HT, TH\} \end{aligned} 
-Getting Two Heads
-A={HH}
-Getting Two Tails
-B={TT}
-Getting Both a Heads and Tails
-C={HT,TH}
-​	 
+<h3 align="center">
+Getting Two Heads <br />
+A = {HH} <br />
+Getting Two Tails <br />
+B = {TT} <br />
+Getting Both a Heads and Tails <br />
+C = {HT, TH}
+</h3>
 The frequentist definition of probability is as follows: If we run an experiment an infinite amount of times, the probability of each event is the proportion of times it occurs. Unfortunately, we don’t have the ability to flip two coins an infinite amount of times — but we can estimate probabilities by choosing some other large number, such as 1000. Let’s give it a try!
 
 Okay, we have flipped two coins 1000 times. Wasn’t that FUN? Here are each of the outcomes and the number of times we observed each one:
