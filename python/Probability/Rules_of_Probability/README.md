@@ -89,13 +89,10 @@ We will explore applications of this further in the lesson!
 
 We pick out two cards from a standard deck of 52 cards without replacement. 
 * **Event A** is that we pick an Ace on the first draw. 
-* **Event B** is that we pick an Ace on the second draw. Are events A and B independent?
-
+* **Event B** is that we pick an Ace on the second draw.
 <details>
-<summary><b>My section header in bold</b></summary>
-
-Any folded content here. It requires an empty line just above it.
-
+  <summary>Are events A and B independent?</summary>
+  Events A and B are **Dependent**.
 </details>
 
 
