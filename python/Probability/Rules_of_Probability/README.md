@@ -181,7 +181,7 @@ We can visualize this calculation as follows:
 
 <img alt="the probability of the union of A and B" src="images/addition-rule-independent-venndiagram.webp" width="600px" />
 
-probability of the union of A and B = probability A + probability B - intersection of A and B
+**Probability of the union of A and B = probability A + probability B - intersection of A and B**
 
 
 
