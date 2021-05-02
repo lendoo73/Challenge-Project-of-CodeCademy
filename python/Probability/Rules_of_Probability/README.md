@@ -238,7 +238,7 @@ Therefore, the probability of picking out a red marble or a blue marble second i
 Therefore, for independent events, we can say the following:
 
 <p align="center">
-  <img alt="Probability of B first A second" src="images/p_of_b_first_a_second.svg" />
+  <img alt="Probability of B first A second" src="images/p_of_b_first_a_second.svg" /><br />
   and
   <img alt="Probability of A first B second" src="images/p_of_a_first_b_second.svg" />
 </p>
