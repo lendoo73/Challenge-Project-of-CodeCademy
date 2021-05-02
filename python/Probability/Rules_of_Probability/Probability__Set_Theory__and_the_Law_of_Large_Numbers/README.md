@@ -100,7 +100,7 @@ So, the probability of two heads on two coin flips is approximately:
 Based on these 1000 trials, we would estimate there is a 25.2 percent chance of getting two heads on two coin flips. 
 This is great! 
 However, if we do this same procedure over and over again, we may get slightly different results. 
-For example, if we repeat the experiment another 1000 times, we might get two heads only 24.2 percent of the time.
+For example, if we repeat the experiment another 1000 times, we might get two heads only 24.2 percent of the time.  
 
 If we want to feel confident that we are close to the **true probability** of a particular event, we can leverage the law of large numbers.
 
