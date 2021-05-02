@@ -183,9 +183,9 @@ We can visualize this calculation as follows:
 
 **Probability of the union of A and B = Probability A + Probability B - Probability of the intersection of A and B**
 
+This animation gives a visual representation of the addition rule formula, which is:
 
-
-
+<img alt="the probability of the union of A and B formula" src="images/the_probability_of_the_union_of_A_and_B_formula.svg" />
 
 
 
