@@ -212,10 +212,16 @@ Using a bag of marbles as an example, let’s remind ourselves of the definition
 
 ![dependent event](images/marble-diagram-1.svg)
 
+If we pick two marbles from a bag of five marbles without replacement, the probability that the second marble is red depends on the color of the first marble. 
+We have a special name for this: **conditional probability**. 
+In short, conditional probability measures the probability of one event occurring, given that another one has already occurred.
 
+Notationally, we denote the word “given” with a vertical line. 
+For example, if we want to represent the probability that we choose a red marble given the first marble is blue, we can write:
 
-
-
+<p align="center">
+  <img alt="conditional probability" src="images/conditional_probability.svg" />
+</p>
 
 
 
