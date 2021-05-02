@@ -179,7 +179,7 @@ This is the **probability of the union of A and B**:
 
 We can visualize this calculation as follows:
 
-![the probability of the union of A and B](images/addition-rule-independent-venndiagram.webp)
+<img alt="the probability of the union of A and B" src="images/addition-rule-independent-venndiagram.webp" width="600px" />
 
 
 
