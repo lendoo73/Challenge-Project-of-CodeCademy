@@ -63,7 +63,11 @@ The fact that **previous** coin flips **do not affect future ones** is called **
 
 ### Two events are independent if the occurrence of one event does not affect the probability of the other.
 
-Are there cases where previous events DO affect the outcome of the next event? Suppose we have a bag of five marbles: two marbles are blue and three marbles are red. If we take one marble out of the bag, what is the probability that the second marble we take out is blue?
+Are there cases where previous events do affect the outcome of the next event? 
+Suppose we have a bag of five marbles: two marbles are blue and three marbles are red. 
+If we take one marble out of the bag, what is the probability that the second marble we take out is blue?
+
+![dependent event](images/marble-diagram-1.svg)
 
 
 
