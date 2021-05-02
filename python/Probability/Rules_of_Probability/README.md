@@ -23,6 +23,19 @@ We can represent this visually as a *Venn diagram*.
 
 ![union-venndiagram](images/union-venndiagram.svg)
 
+For example, let’s say we have two sets, `A` and `B`. 
+* `A` represents rolling an odd number with a six-sided die (the set {1, 3, 5}). 
+* `B` represents rolling a number greater than two (the set {3, 4, 5, 6}). 
+
+The union of these two sets would be everything in either set `A`, set `B`, or both: {1, 3, 4, 5, 6}. 
+We can write the union of two events mathematically as **(A or B)**.
+
+## Intersection
+
+The intersection of two sets encompasses **any element** that **exists in both** of the sets. 
+Visually:
+
+![intersection venndiagram](intersection-venndiagram.svg)
 
 
 
