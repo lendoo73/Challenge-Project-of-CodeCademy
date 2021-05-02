@@ -88,8 +88,9 @@ Here are each of the outcomes and the number of times we observed each one:
 * {TT}: 247
 * {HT}: 256
 * {TH}: 245
+* 
 To calculate the estimated probability of any one outcome, we use the following formula:
-
+![formula of estimated probability]()
 
 
 
