@@ -197,8 +197,11 @@ then events `A` and `B` cannot both happen.
 
 <img alt="the probability of the union of A and B when they are mutually exclusive" src="images/addition-rule-dependent-venndiagram.webp" width="600px" />
 
+For mutually exclusive events, the addition rule formula is:
 
-
+<p align="center">
+  <img alt="mutually exclusive events formula" src="images/mutually_exclusive_events_formula.svg" />
+</p>
 
 
 
