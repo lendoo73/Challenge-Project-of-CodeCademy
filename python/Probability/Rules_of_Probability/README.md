@@ -173,7 +173,9 @@ Let’s go back to one of our first examples:
 What if we want to find the probability of one or both events occurring? 
 This is the **probability of the union of A and B**:
 
-#### P(A or B)
+<h4 align="center">
+  P(A or B)
+</h4>
 
 
 
