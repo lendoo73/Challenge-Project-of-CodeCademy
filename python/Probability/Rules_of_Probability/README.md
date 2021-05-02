@@ -37,11 +37,16 @@ Visually:
 
 ![intersection venndiagram](images/intersection-venndiagram.svg)
 
+The intersection of the above sets (`A` represents rolling an odd number on a six-sided die and `B` represents rolling a number greater than two) 
+includes any value that appears in both sets: {3, 5}. 
+We can write the union of two events mathematically as **(A and B)**.
 
+## Complement
 
+Lastly, the complement of a set consists of **all** possible outcomes outside of the set**. 
+Visually:
 
-
-
+![complement venndiagram](images/complement-venndiagram.svg)
 
 
 
