@@ -205,9 +205,12 @@ For mutually exclusive events, the addition rule formula is:
 
 This is because the **intersection is empty**, so we don’t need to remove any overlap between the two events.
 
+# [Conditional Probability](https://www.codecademy.com/courses/probability-mssp/lessons/rules-of-probability/exercises/conditional-probability)
 
+If we want to calculate the probability that a pair of dependent events both occur, we need to define conditional probability. 
+Using a bag of marbles as an example, let’s remind ourselves of the definition of **dependent events**:
 
-
+![dependent event](images/marble-diagram-1.svg)
 
 
 
