@@ -104,8 +104,18 @@ For example, if we repeat the experiment another 1000 times, we might get two he
 
 If we want to feel confident that we are close to the **true probability** of a particular event, we can leverage the law of large numbers.
 
+## Law of Large Numbers
 
+We can’t repeat our random experiment an infinite amount of times (as much FUN as that would be!). 
+However, we can still flip both coins a large number of times. 
+As we flip both coins more and more, the observed proportion of times each event occurs will converge to its true probability. 
+This is called the law of large numbers.
 
+Let’s observe the law of large numbers in real-time. 
+We will use Python to simulate flipping both coins as many times as we want and watch the proportion of two heads converge to its true probability.
+
+Let’s walk through each part of the code below one step at a time. 
+You do not need to worry about every line of code, but understanding the overall objective will help you build your understanding of probability.
 
 
 
