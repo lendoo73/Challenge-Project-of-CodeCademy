@@ -239,7 +239,7 @@ Therefore, for independent events, we can say the following:
 
 <p align="center">
   <img alt="Probability of B first A second" src="images/p_of_b_first_a_second.svg" />
-  <p>and</p>
+  <br />and<br />
   <img alt="Probability of A first B second" src="images/p_of_a_first_b_second.svg" />
 </p>
 
