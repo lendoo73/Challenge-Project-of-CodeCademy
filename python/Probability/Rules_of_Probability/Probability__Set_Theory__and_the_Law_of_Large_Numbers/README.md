@@ -42,6 +42,7 @@ Set A is a subset of set B if all the elements in A exist within B.
 For example:
 <h3 align="center">
 A = {1, 2, 3}
+<br />
 B = {1, 2, 3, 4, 5}
 </h3>
 
