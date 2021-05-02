@@ -177,6 +177,10 @@ This is the **probability of the union of A and B**:
   P(A or B)
 </h4>
 
+We can visualize this calculation as follows:
+
+![the probability of the union of A and B](images/addition-rule-independent-venndiagram.webp)
+
 
 
 
