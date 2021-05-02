@@ -142,7 +142,6 @@ Where does the blue line on the graph converge to after many trials?
 ```py
 import matplotlib.pyplot as plt
 import numpy as np
-import codecademylib3
 
 def coin_flip_experiment():
   # defining our two coins as lists
