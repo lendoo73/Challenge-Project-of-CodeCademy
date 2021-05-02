@@ -90,7 +90,7 @@ Here are each of the outcomes and the number of times we observed each one:
 * {TH}: 245
 * 
 To calculate the estimated probability of any one outcome, we use the following formula:
-![formula of estimated probability]()
+![formula of estimated probability](formula_of_estimated_probability.svg)
 
 
 
