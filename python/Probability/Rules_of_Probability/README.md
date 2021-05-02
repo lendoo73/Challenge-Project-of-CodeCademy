@@ -189,5 +189,26 @@ This animation gives a visual representation of the addition rule formula, which
   <img alt="the probability of the union of A and B formula" src="images/the_probability_of_the_union_of_A_and_B_formula.svg" />
 </p>
 
+We subtract the intersection of events `A` and `B` because it is included twice in the addition of P(A) and P(B).
+
+What if the events are mutually exclusive? 
+On a single die roll, if event `A` is that the roll is less than or equal to 2 and event `B` is that the roll is greater than or equal to 5, 
+then events `A` and `B` cannot both happen.
+
+<img alt="the probability of the union of A and B when they are mutually exclusive" src="images/addition-rule-dependent-venndiagram.webp" width="600px" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
