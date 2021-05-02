@@ -78,8 +78,25 @@ In this case, the events would be **independent**.
 
 ![independent event](images/marble-diagram-2.svg)
 
+Why do we care if events are independent or dependent? 
+Knowing this helps us quantify the probability of events that depend on preexisting knowledge. 
+This helps researchers understand and predict complex processes such as:
+* Effectiveness of vaccines
+* The weather on a particular day
+* Betting odds for professional sports games
 
+We will explore applications of this further in the lesson!
 
+We pick out two cards from a standard deck of 52 cards without replacement. 
+* **Event A** is that we pick an Ace on the first draw. 
+* **Event B** is that we pick an Ace on the second draw. Are events A and B independent?
+
+<details>
+<summary><b>My section header in bold</b></summary>
+
+Any folded content here. It requires an empty line just above it.
+
+</details>
 
 
 
