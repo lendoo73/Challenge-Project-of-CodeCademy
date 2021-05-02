@@ -75,14 +75,19 @@ B = {TT} <br />
 Getting Both a Heads and Tails <br />
 C = {HT, TH}
 </h4>
-The frequentist definition of probability is as follows: If we run an experiment an infinite amount of times, the probability of each event is the proportion of times it occurs. Unfortunately, we don’t have the ability to flip two coins an infinite amount of times — but we can estimate probabilities by choosing some other large number, such as 1000. Let’s give it a try!
+The frequentist definition of probability is as follows: 
+If we run an experiment an infinite amount of times, the probability of each event is the proportion of times it occurs. 
+Unfortunately, we don’t have the ability to flip two coins an infinite amount of times — 
+but we can estimate probabilities by choosing some other large number, such as 1000. 
+Let’s give it a try!
 
-Okay, we have flipped two coins 1000 times. Wasn’t that FUN? Here are each of the outcomes and the number of times we observed each one:
-
-{HH}: 252
-{TT}: 247
-{HT}: 256
-{TH}: 245
+Okay, we have flipped two coins 1000 times. 
+Wasn’t that FUN? 
+Here are each of the outcomes and the number of times we observed each one:
+* {HH}: 252
+* {TT}: 247
+* {HT}: 256
+* {TH}: 245
 To calculate the estimated probability of any one outcome, we use the following formula:
 
 
