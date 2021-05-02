@@ -126,14 +126,41 @@ They do not overlap because there is no outcome for one event that is also in th
 
 ![mutually exclusive venndiagram](images/mutually-exclusive-venndiagram.svg)
 
+What about events that are **not mutually exclusive**? 
+If event `A` is rolling an odd number and event `B` is rolling a number greater than two, these events are not mutually exclusive. 
+**They have** an **intersection** of {3, 5}. 
 
+### Any events that have a non-empty intersection are not mutually exclusive.
 
+<hr />
 
+We have a bag of five marbles: three are green and two are blue. 
+Suppose that we pick one marble from the bag. 
+* **Event A** is that the marble is green. 
+* **Event B** is that the marble is blue.
+<details>
+  <summary>Are these events mutually exclusive?</summary>
+  Yes, they are mutually exclusive.
+</details>
+<hr />
 
+We roll a die once. 
+* **Event A** is rolling an odd number. 
+* **Event B** is rolling a number greater than four.
+<details>
+  <summary>Are these events mutually exclusive?</summary>
+  Not, they are not mutually exclusive.
+</details>
+<hr />
 
-
-
-
+We roll a die once. 
+* **Event A** is rolling an even number. 
+* **Event B** is rolling a number less than two. 
+<details>
+  <summary>Are these events mutually exclusive?</summary>
+  Yes, they are mutually exclusive.
+</details>
+<hr />
 
 
 
