@@ -88,6 +88,7 @@ This helps researchers understand and predict complex processes such as:
 We will explore applications of this further in the lesson!
 
 <hr />
+
 We pick out two cards from a standard deck of 52 cards without replacement. 
 * **Event A** is that we pick an Ace on the first draw. 
 * **Event B** is that we pick an Ace on the second draw.
