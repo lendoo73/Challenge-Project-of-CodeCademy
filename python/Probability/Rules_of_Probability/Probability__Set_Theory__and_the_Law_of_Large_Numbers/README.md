@@ -21,7 +21,7 @@ In simple terms, **a set is a collection of things**.
 For example, we can use a set to represent items in a backpack. 
 We might have:
 <p align="center">
-{Book, Paper, Folder, Hat, Pen, Snack}
+#### {Book, Paper, Folder, Hat, Pen, Snack}
 </p>
 Notationally, mathematicians often represent sets with curly braces. 
 Sets also follow **two key rules**:
@@ -30,7 +30,7 @@ Sets also follow **two key rules**:
 
 Therefore, we can say:
 <p align="center">
-{1, 2, 3, 4, 5} = {5, 3, 2, 4, 1}
+#### {1, 2, 3, 4, 5} = {5, 3, 2, 4, 1}
 </p>
 
 
