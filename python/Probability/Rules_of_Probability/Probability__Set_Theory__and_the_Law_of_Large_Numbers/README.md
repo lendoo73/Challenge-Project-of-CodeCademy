@@ -185,3 +185,18 @@ plt.legend()
 plt.show()
 ```
 #### [Run on Replit](https://www.replit.com/@lendoo73/Probability-Set-Theory-and-the-Law-of-Large-Numbers)
+
+After setting `num_trials` to large numbers, we see that the proportion of trials resulting in two heads converges to 0.25. 
+The horizontal line at y = 0.25 is completely covered after about one hundred thousand flips. 
+By simulating a huge number of flips in Python, we have shown that the true probability of seeing two heads on two separate coin flips is equal to 0.25.
+
+## Review
+
+We have covered:
+* An introduction to probability
+* An introduction to set theory
+* Sample spaces and events
+* The law of large numbers
+
+This completes our brief introduction to what probability is and how we can represent it. 
+Now, it’s time to dive into ways we can calculate probability and expand on our knowledge.
