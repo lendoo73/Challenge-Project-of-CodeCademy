@@ -23,8 +23,15 @@ We might have:
 <p align="center">
 {Book, Paper, Folder, Hat, Pen, Snack}
 </p>
+Notationally, mathematicians often represent sets with curly braces. 
+Sets also follow **two key rules**:
+* Each element in a set is distinct.
+* The elements in a set are in no particular order.
 
-
+Therefore, we can say:
+<p align="center">
+\{1, 2, 3, 4, 5\} = \{5, 3, 2, 4, 1\}{1,2,3,4,5}={5,3,2,4,1}
+</p>
 
 
 
