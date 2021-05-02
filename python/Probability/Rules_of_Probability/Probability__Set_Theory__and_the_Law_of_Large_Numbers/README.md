@@ -30,7 +30,7 @@ Sets also follow **two key rules**:
 
 Therefore, we can say:
 <h3 align="center">
-#### {1, 2, 3, 4, 5} = {5, 3, 2, 4, 1}
+{1, 2, 3, 4, 5} = {5, 3, 2, 4, 1}
 </h3>
 
 
