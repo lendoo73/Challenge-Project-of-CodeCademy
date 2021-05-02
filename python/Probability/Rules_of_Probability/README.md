@@ -69,7 +69,14 @@ If we take one marble out of the bag, what is the probability that the second ma
 
 ![dependent event](images/marble-diagram-1.svg)
 
+This describes two events that are **dependent**. 
+The probability of grabbing a blue marble in the second event depends on whether we take out a red or a blue marble in the first event.
 
+What if we had put back the first marble? 
+Is the probability that we pick a blue marble second independent or dependent on what we pick out first? 
+In this case, the events would be **independent**.
+
+![independent event](images/marble-diagram-2.svg)
 
 
 
