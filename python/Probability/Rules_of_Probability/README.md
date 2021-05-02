@@ -162,7 +162,18 @@ We roll a die once.
 </details>
 <hr />
 
+# [Addition Rule](https://www.codecademy.com/courses/probability-mssp/lessons/rules-of-probability/exercises/addition-rule)
 
+Now, it’s time to apply these concepts to calculate probabilities.
+
+Let’s go back to one of our first examples: 
+* **event A** is rolling an odd number on a six-sided die and 
+* **event B** is rolling a number greater than two. 
+
+What if we want to find the probability of one or both events occurring? 
+This is the **probability of the union of A and B**:
+
+### P(A or B)
 
 
 
