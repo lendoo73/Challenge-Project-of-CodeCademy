@@ -20,7 +20,9 @@ Set theory is a branch of mathematics based around the concept of sets.
 In simple terms, **a set is a collection of things**. 
 For example, we can use a set to represent items in a backpack. 
 We might have:
-##### {Book, Paper, Folder, Hat, Pen, Snack}
+<p align="center">
+{Book, Paper, Folder, Hat, Pen, Snack}
+</p>
 
 
 
