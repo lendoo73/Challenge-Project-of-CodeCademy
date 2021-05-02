@@ -21,7 +21,7 @@ In simple terms, **a set is a collection of things**.
 For example, we can use a set to represent items in a backpack. 
 We might have:
 <h4 align="center">
-{Book, Paper, Folder, Hat, Pen, Snack}
+  {Book, Paper, Folder, Hat, Pen, Snack}
 </h4>
 Notationally, mathematicians often represent sets with curly braces. 
 Sets also follow **two key rules**:
@@ -30,20 +30,19 @@ Sets also follow **two key rules**:
 
 Therefore, we can say:
 <h4 align="center">
-{1, 2, 3, 4, 5} = {5, 3, 2, 4, 1}
+  {1, 2, 3, 4, 5} = {5, 3, 2, 4, 1}
 </h4>
 When defining a set, we often use a capital letter. 
 For example:
 <h4 align="center">
-A = {1, 2 ,3 ,4 ,5}
+  A = {1, 2 ,3 ,4 ,5}
 </h4>
 Sets can also contain subsets. 
 Set A is a subset of set B if all the elements in A exist within B. 
 For example:
 <h4 align="center">
-A = {1, 2, 3}
-<br />
-B = {1, 2, 3, 4, 5}
+  A = {1, 2, 3}<br />
+  B = {1, 2, 3, 4, 5}
 </h4>
 Here, set A is a subset of B because all elements of A are contained within B.
 
@@ -62,18 +61,18 @@ There are four sample points in this experiment:
 
 We can write the full sample space for this experiment as follows:
 <h4 align="center">
-S = {HH, TT, HT, TH}
+  S = {HH, TT, HT, TH}
 </h4>
 Suppose we are interested in the probability of one specific outcome: HH. 
 A **specific outcome** (or set of outcomes) is known as an event and is a subset of the sample space. 
 Three events we might look at in this sample space are:
 <h4 align="center">
-Getting Two Heads <br />
-A = {HH} <br />
-Getting Two Tails <br />
-B = {TT} <br />
-Getting Both a Heads and Tails <br />
-C = {HT, TH}
+  Getting Two Heads <br />
+  A = {HH} <br />
+  Getting Two Tails <br />
+  B = {TT} <br />
+  Getting Both a Heads and Tails <br />
+  C = {HT, TH}
 </h4>
 The frequentist definition of probability is as follows: 
 If we run an experiment an infinite amount of times, the probability of each event is the proportion of times it occurs. 
@@ -88,9 +87,10 @@ Here are each of the outcomes and the number of times we observed each one:
 * {TT}: 247
 * {HT}: 256
 * {TH}: 245
-* 
-To calculate the estimated probability of any one outcome, we use the following formula:
-![formula of estimated probability](formula_of_estimated_probability.svg)
 
+To calculate the estimated probability of any one outcome, we use the following formula:
+<p align="center">
+  ![formula of estimated probability](formula_of_estimated_probability.svg)
+</p>
 
 
