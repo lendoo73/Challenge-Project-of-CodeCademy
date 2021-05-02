@@ -45,6 +45,46 @@ A = {1, 2, 3}
 <br />
 B = {1, 2, 3, 4, 5}
 </h3>
+Here, set A is a subset of B because all elements of A are contained within B.
+
+## Experiments and Sample Spaces
+
+In probability, an **experiment** is something that *produces observation(s) with some level of uncertainty*. 
+A **sample point** is a *single possible outcome of an experiment*. 
+Finally, a **sample space** is the *set of all possible sample points for an experiment*.
+
+For example, suppose that we run an experiment where we flip a coin twice and record whether each flip results in heads or tails. 
+There are four sample points in this experiment: 
+1. two heads (HH), 
+2. tails and then heads (TH), 
+3. heads and then tails (HT), 
+4. or two tails (TT). 
+
+We can write the full sample space for this experiment as follows:
+<h3 align="center">
+S = {HH, TT, HT, TH}
+</h3>
+Suppose we are interested in the probability of one specific outcome: HH. 
+A **specific outcome** (or set of outcomes) is known as an event and is a subset of the sample space. 
+Three events we might look at in this sample space are:
+
+\begin{aligned} \text{Getting Two Heads} \\ A = \{HH\} \\ \text{Getting Two Tails} \\ B = \{TT\} \\ \text{Getting Both a Heads and Tails}\\ C = \{HT, TH\} \end{aligned} 
+Getting Two Heads
+A={HH}
+Getting Two Tails
+B={TT}
+Getting Both a Heads and Tails
+C={HT,TH}
+​	 
+The frequentist definition of probability is as follows: If we run an experiment an infinite amount of times, the probability of each event is the proportion of times it occurs. Unfortunately, we don’t have the ability to flip two coins an infinite amount of times — but we can estimate probabilities by choosing some other large number, such as 1000. Let’s give it a try!
+
+Okay, we have flipped two coins 1000 times. Wasn’t that FUN? Here are each of the outcomes and the number of times we observed each one:
+
+{HH}: 252
+{TT}: 247
+{HT}: 256
+{TH}: 245
+To calculate the estimated probability of any one outcome, we use the following formula:
 
 
 
