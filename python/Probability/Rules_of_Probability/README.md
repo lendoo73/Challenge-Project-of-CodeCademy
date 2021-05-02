@@ -243,6 +243,8 @@ Therefore, for independent events, we can say the following:
   <img alt="Probability of A first B second" src="images/p_of_a_first_b_second.svg" />
 </p>
 
+# [Multiplication Rule](https://www.codecademy.com/courses/probability-mssp/lessons/rules-of-probability/exercises/multiplication-rule)
+
 
 
 
