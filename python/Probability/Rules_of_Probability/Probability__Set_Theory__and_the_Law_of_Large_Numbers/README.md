@@ -92,5 +92,15 @@ To calculate the estimated probability of any one outcome, we use the following 
 <p align="center">
   <img alt="formula of estimated probability" src="formula_of_estimated_probability.svg" />
 </p>
+In this scenario, a trial is a single run of our experiment (two coin flips). 
+So, the probability of two heads on two coin flips is approximately:
+<p align="center">
+  <img alt="probability of two heads" src="probability_of_two_heads.svg" />
+</p>
+
+
+
+
+
 
 
