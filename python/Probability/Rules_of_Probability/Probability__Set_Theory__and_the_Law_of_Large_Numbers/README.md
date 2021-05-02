@@ -29,22 +29,22 @@ Sets also follow **two key rules**:
 * The elements in a set are in no particular order.
 
 Therefore, we can say:
-<h3 align="center">
+<h4 align="center">
 {1, 2, 3, 4, 5} = {5, 3, 2, 4, 1}
-</h3>
+</h4>
 When defining a set, we often use a capital letter. 
 For example:
-<h3 align="center">
+<h4 align="center">
 A = {1, 2 ,3 ,4 ,5}
-</h3>
+</h4>
 Sets can also contain subsets. 
 Set A is a subset of set B if all the elements in A exist within B. 
 For example:
-<h3 align="center">
+<h4 align="center">
 A = {1, 2, 3}
 <br />
 B = {1, 2, 3, 4, 5}
-</h3>
+</h4>
 Here, set A is a subset of B because all elements of A are contained within B.
 
 ## Experiments and Sample Spaces
@@ -61,20 +61,20 @@ There are four sample points in this experiment:
 4. or two tails (TT). 
 
 We can write the full sample space for this experiment as follows:
-<h3 align="center">
+<h4 align="center">
 S = {HH, TT, HT, TH}
-</h3>
+</h4>
 Suppose we are interested in the probability of one specific outcome: HH. 
 A **specific outcome** (or set of outcomes) is known as an event and is a subset of the sample space. 
 Three events we might look at in this sample space are:
-<h3 align="center">
+<h4 align="center">
 Getting Two Heads <br />
 A = {HH} <br />
 Getting Two Tails <br />
 B = {TT} <br />
 Getting Both a Heads and Tails <br />
 C = {HT, TH}
-</h3>
+</h4>
 The frequentist definition of probability is as follows: If we run an experiment an infinite amount of times, the probability of each event is the proportion of times it occurs. Unfortunately, we don’t have the ability to flip two coins an infinite amount of times — but we can estimate probabilities by choosing some other large number, such as 1000. Let’s give it a try!
 
 Okay, we have flipped two coins 1000 times. Wasn’t that FUN? Here are each of the outcomes and the number of times we observed each one:
