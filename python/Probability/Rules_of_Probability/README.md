@@ -107,6 +107,13 @@ Suppose we roll a six-sided die two times.
 </details>
 <hr />
 
+Suppose we flip a coin ten times. 
+* **Event A** is that we flip all heads on the first five flips. 
+* **Event B** is that we flip all heads on the second five flips. 
+<details>
+  <summary>Are events A and B independent?</summary>
+  Yes, they are independent.
+</details>
 
 
 
