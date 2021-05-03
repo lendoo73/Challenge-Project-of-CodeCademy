@@ -317,7 +317,7 @@ Let’s look at the simplest example: flipping a fair coin twice.
 Visually on a tree diagram, we see:
 
 <p align="center">
-  <img alt="Coin tree-diagram" src="images/coin-tree-diagram.svg" />
+  <img alt="Coin tree-diagram" src="images/coin-tree-diagram.svg" width="600px" />
 </p>
 
 
