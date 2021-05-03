@@ -257,9 +257,25 @@ The general formula for the probability that two events occur simultaneously is:
   <img alt="the probability of the intersection of A and B" src="images/p_a_and_b.svg" />
 </p>
 
+However, for independent events, we can simplify this formula slightly.
 
+## Dependent Events
 
+Let’s go back to our bag of marbles example. 
+We have five marbles: 
+* two are blue, 
+* and three are red. 
 
+We pick two marbles without replacement. 
+What if we want to know the probability of choosing a *blue marble first AND a blue marble second*?
+
+Taking conditional probability into account, the multiplication rule for these two dependent events is:
+
+<p align="center">
+  <img alt="the probability of the intersection of A and B example 1" src="images/p_a_and_b_example_1.svg" /><br />
+  <img alt="the probability of the intersection of A and B example 2" src="images/p_a_and_b_example_2.svg" /><br />
+  <img alt="the probability of the intersection of A and B example 3" src="images/p_a_and_b_example_3.svg" /><br />
+</p>
 
 
 
