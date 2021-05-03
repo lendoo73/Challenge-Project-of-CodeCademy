@@ -427,7 +427,10 @@ Finally, if we plug all of these into the Bayes’ theorem formula, we get:
   <img alt="Probability of Positive and Strep Troat" src="images/p_of_pos_and_strep.svg" />
 </p>
 
+There is a 91.4% chance that you actually have strep throat given you test positive. 
+This is not obvious from the information outlined in our tree diagram, but with the power of Bayes theorem, we were able to calculate it!
 
+Let’s practice some more of this in the questions below.
 
 
 
