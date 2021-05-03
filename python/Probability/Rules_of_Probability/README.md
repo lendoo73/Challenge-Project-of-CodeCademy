@@ -341,13 +341,20 @@ The possible results of these tests are shown in the next set of branches:
 This is labeled as:
 
 <p align="center">
-  <img alt="conditional prob tree" src="images/strep_troat_pos.svg" /><br />
+  <img alt="Strep troat positive" src="images/strep_troat_pos.svg" /><br />
   and<br />
-  <img alt="conditional prob tree" src="images/strep_troat_neg.svg" /><br />
+  <img alt="Strep troat negative" src="images/strep_troat_neg.svg" /><br />
 </p>
 
+* If a person does not have strep throat, there is a 98% chance their test will be negative and a 2% chance it will be positive. This can be labeled as:
 
+<p align="center">
+  <img alt="No Strep troat negative" src="images/no_strep_troat_neg.svg" /><br />
+  and<br />
+  <img alt="No Strep troat positiv" src="images/no_strep_troat_pos.svg" /><br />
+</p>
 
+Finally, let’s look at the four possible pairs of outcomes that form the terminal branches of our diagram:
 
 
 
