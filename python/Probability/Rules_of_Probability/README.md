@@ -431,7 +431,15 @@ There is a 91.4% chance that you actually have strep throat given you test posit
 This is not obvious from the information outlined in our tree diagram, but with the power of Bayes theorem, we were able to calculate it!
 
 Let’s practice some more of this in the questions below.
+Find:
 
+<p align="center">
+  <img alt="Positive and No Strep Troat" src="images/pos_and_no_strep.svg" />
+</p>
+
+<p align="center">
+  <img alt="Probability of Positive and No Strep Troat" src="images/p_of_pos_and_no_strep.svg" />
+</p>
 
 
 
