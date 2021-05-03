@@ -277,17 +277,48 @@ Taking conditional probability into account, the multiplication rule for these t
   <img alt="the probability of the intersection of A and B example 3" src="images/p_a_and_b_example_3.svg" /><br />
 </p>
 
+This is one potential outcome when picking two marbles out of the bag. 
+One way to visualize all possible outcomes of a pair of events is a tree diagram.
 
+Tree diagrams have the following properties:
+* Each branch represents a specific set of events.
+* The probabilities the terminal branches (all possible sets of outcomes) sum to one.
+* We multiply across branches (using the multiplication rule!) to calculate the probability that each branch (set of outcomes) will occur.
 
+## Independent Event]
 
+For two independent events, the multiplication rule becomes less complicated. 
+The probability of two independent events occurring is:
 
+<p align="center">
+  <img alt="the probability of the intersection of A and B independent" src="images/p_a_and_b_independent.svg" />
+</p>
 
+This is because the following is true for independent events:
 
+<p align="center">
+  <img alt="the probability of the intersection of A and B independent" src="images/p_a_and_b_independent_2.svg" />
+</p>
 
+Let’s look at the simplest example: flipping a fair coin twice. 
+* **Event A** is that we get tails on the first flip, 
+* and **event B** is that we get tails on the second flip. 
 
+<p align="center">
+  <img alt="the probability of the intersection of A and B independent example" src="images/p_a_and_b_independent_example.svg" />
+</p>
 
+, so according to our formula, the probability of getting tails on both flips would be:
 
+<p align="center">
+  <img alt="the probability of the intersection of A and B independent example result" src="images/p_a_and_b_independent_example_result.svg" />
+</p>
 
+Visually on a tree diagram, we see:
+
+<p align="center">
+  <img alt="Coin tree-diagram" src="coin-tree-diagram.svg" />
+</p>
 
 
 
