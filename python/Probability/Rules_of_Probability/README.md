@@ -400,6 +400,7 @@ We know:
 
 <p align="center">
   <img alt="Strep troat positive" src="images/strep_troat_pos.svg" /><br />
+  <img alt="Strep troat positive" src="images/p_strep_troat.svg" /><br />
 </p>
 
 
