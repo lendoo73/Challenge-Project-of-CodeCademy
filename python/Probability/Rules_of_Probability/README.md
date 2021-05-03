@@ -451,13 +451,16 @@ Since the only two events given a patient is positive are ST or NO ST, we can sa
   <img alt="Alternative method result" src="images/alternative_method_result.svg" />
 </p>
 
+# [Review](https://www.codecademy.com/courses/probability-mssp/lessons/rules-of-probability/exercises/review)
 
-
-
-
-
-
-
-
-
-
+We have finished our exploration into the rules of probability! To recap, we have covered:
+* The union and intersection of two events
+* The complement of an event
+* Independent and dependent events
+* Mutually exclusive events
+* How to calculate the union of two events using the addition rule
+* What conditional probability is and how to calculate it
+* How to calculate simultaneous events using the multiplication rule
+* How to use tree diagrams to map out possible outcomes
+* What Bayes’ theorem is and how to calculate it
+* Application of conditional probability and Bayes’ theorem
