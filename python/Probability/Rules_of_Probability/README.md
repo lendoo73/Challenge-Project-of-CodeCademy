@@ -355,6 +355,24 @@ This is labeled as:
 </p>
 
 Finally, let’s look at the four possible pairs of outcomes that form the terminal branches of our diagram:
+<p align="center">
+  <img alt="Probability of Strep troat and positive" src="images/p_strep_troat_and_pos.svg" /><br />
+  <img alt="Probability of Strep troat and negative" src="images/p_strep_troat_and_neg.svg" /><br />
+  <img alt="Probability of No Strep troat and positive" src="images/p_no_strep_troat_and_pos.svg" /><br />
+  <img alt="Probability of No Strep troat and negative" src="images/p_no_strep_troat_and_neg.svg" /><br />
+</p>
+
+Together, these add up to one since they capture all potential outcomes after patients are tested.
+
+It’s great that we have all this information. 
+However, we are missing something. 
+If someone gets a positive result, what is the probability that they have strep throat? 
+Notationally, we can write this probability as:
+
+
+
+
+
 
 
 
