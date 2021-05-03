@@ -320,7 +320,31 @@ Visually on a tree diagram, we see:
   <img alt="Coin tree-diagram" src="images/coin-tree-diagram.svg" width="800px" />
 </p>
 
+# [Conditional Probability Continued](https://www.codecademy.com/courses/probability-mssp/lessons/rules-of-probability/exercises/application-conditional-probability)
 
+We have introduced conditional probability as a part of the multiplication rule for dependent events. 
+However, let’s go a bit more in-depth with it as it is a powerful probability tool that has real-world applications.
+
+For this problem, we will follow along the tree diagram on bellow.
+
+<p align="center">
+  <img alt="conditional prob tree" src="images/conditional_prob_tree.svg" />
+</p>
+
+Suppose that the following is true (this is shown in the first set of branches in the diagram):
+* 20 percent of the population has strep throat.
+* 80 percent of the population does not have strep throat.
+
+Now suppose that we test a bunch of people for strep throat. 
+The possible results of these tests are shown in the next set of branches:
+* If a person has strep throat, there is an 85% chance their test will be positive and a 15% chance it will be negative. 
+This is labeled as:
+
+<p align="center">
+  <img alt="conditional prob tree" src="images/strep_troat_pos.svg" /><br />
+  and<br />
+  <img alt="conditional prob tree" src="images/strep_troat_neg.svg" /><br />
+</p>
 
 
 
