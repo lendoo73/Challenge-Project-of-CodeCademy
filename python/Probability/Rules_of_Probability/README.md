@@ -407,9 +407,9 @@ What about P(+)?
 Is this something we know? 
 Well, let’s think about this. 
 There are four possible outcomes:
-* Having strep throat and testing positive
+* Having strep throat and testing positive (0.17)
 * Having strep throat and testing negative
-* Not having strep throat and testing positive
+* Not having strep throat and testing positive (0.016)
 * Not having strep throat and testing negative
 
 We only care about the two outcomes where a patient test positives for P(+). 
