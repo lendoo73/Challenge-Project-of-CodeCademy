@@ -245,6 +245,34 @@ Therefore, for independent events, we can say the following:
 
 # [Multiplication Rule](https://www.codecademy.com/courses/probability-mssp/lessons/rules-of-probability/exercises/multiplication-rule)
 
+We have looked at the addition rule, which describes the probability one event OR another event (or both) occurs. 
+What if we want to calculate the probability that two events happen simultaneously? 
+For two events, `A` and `B`, this is `P(A and B)` or the **probability of the intersection of A and B**.
+
+## General Formula
+
+The general formula for the probability that two events occur simultaneously is:
+
+<p align="center">
+  <img alt="the probability of the intersection of A and B" src="images/p_a_and_b.svg" />
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
