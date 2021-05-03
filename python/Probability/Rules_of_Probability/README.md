@@ -415,7 +415,11 @@ There are four possible outcomes:
 We only care about the two outcomes where a patient test positives for P(+). 
 Therefore, we can say:
 
-
+<p align="center">
+  <img alt="Probability of positive formula" src="images/p_pos_formula.svg" /><br />
+  <img alt="Probability of positive formula" src="images/p_pos_example.svg" /><br />
+  <img alt="Probability of positive formula" src="images/p_pos_example_2.svg" />
+</p>
 
 
 
