@@ -396,6 +396,10 @@ Using Bayes’ theorem:
   <img alt="Bayes Theorem example" src="images/bayes_theorem_example.svg" />
 </p>
 
+We know:
 
+<p align="center">
+  <img alt="Bayes Theorem example" src="images/bayes_theorem_example.svg" />
+</p>
 
 
