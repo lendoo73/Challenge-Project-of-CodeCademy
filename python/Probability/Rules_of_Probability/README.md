@@ -441,6 +441,18 @@ Find:
   <img alt="Probability of Positive and No Strep Troat" src="images/p_of_pos_and_no_strep.svg" />
 </p>
 
+### Alternative Method
+
+Since the only two events given a patient is positive are ST or NO ST, we can say the following:
+
+<p align="center">
+  <img alt="Alternative method formula" src="images/alternative_method_formula.svg" /><br/ >
+  <img alt="Alternative method formula 2" src="images/alternative_method_formula_2.svg" /><br/ >
+  <img alt="Alternative method result" src="images/alternative_method_result.svg" />
+</p>
+
+
+
 
 
 
