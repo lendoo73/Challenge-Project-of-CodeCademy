@@ -375,6 +375,26 @@ Notationally, we can write this probability as:
 
 In the next exercise, we’ll explore how we can use our tree diagram to calculate this probability.
 
+# [Bayes' Theorem](https://www.codecademy.com/courses/probability-mssp/lessons/rules-of-probability/exercises/bayes-theorem)
+
+Imagine that you are a patient who has recently tested positive for strep throat. 
+You may want to know the probability that you HAVE strep throat, given that you tested positive:
+
+<p align="center">
+  <img alt="Probability of Positive Test and Strep Troat" src="images/p_pos_and_st.svg" />
+</p>
+
+To calculate this probability, we will use something called ***Bayes Theorem***, which states the following:
+
+<p align="center">
+  <img alt="Bayes Theorem formula" src="images/bayes_theorem_formula.svg" />
+</p>
+
+Using Bayes’ theorem:
+
+<p align="center">
+  <img alt="Bayes Theorem example" src="images/bayes_theorem_example.svg" />
+</p>
 
 
 
