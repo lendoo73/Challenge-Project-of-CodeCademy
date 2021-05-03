@@ -274,7 +274,7 @@ Taking conditional probability into account, the multiplication rule for these t
 <p align="center">
   <img alt="the probability of the intersection of A and B example 1" src="images/p_a_and_b_example_1.svg" /><br />
   <img alt="the probability of the intersection of A and B example 2" src="images/p_a_and_b_example_2.svg" /><br />
-  <img alt="the probability of the intersection of A and B example 3" src="images/p_a_and_b_example_3.svg" /><br />
+  <img alt="the probability of the intersection of A and B example 3" src="images/p_a_and_b_example_3.svg" />
 </p>
 
 This is one potential outcome when picking two marbles out of the bag. 
@@ -343,7 +343,7 @@ This is labeled as:
 <p align="center">
   <img alt="Strep troat positive" src="images/strep_troat_pos.svg" /><br />
   and<br />
-  <img alt="Strep troat negative" src="images/strep_troat_neg.svg" /><br />
+  <img alt="Strep troat negative" src="images/strep_troat_neg.svg" />
 </p>
 
 * If a person does not have strep throat, there is a 98% chance their test will be negative and a 2% chance it will be positive. This can be labeled as:
@@ -351,7 +351,7 @@ This is labeled as:
 <p align="center">
   <img alt="No Strep troat negative" src="images/no_strep_troat_neg.svg" /><br />
   and<br />
-  <img alt="No Strep troat positiv" src="images/no_strep_troat_pos.svg" /><br />
+  <img alt="No Strep troat positiv" src="images/no_strep_troat_pos.svg" />
 </p>
 
 Finally, let’s look at the four possible pairs of outcomes that form the terminal branches of our diagram:
@@ -359,7 +359,7 @@ Finally, let’s look at the four possible pairs of outcomes that form the termi
   <img alt="Probability of Strep troat and positive" src="images/p_strep_troat_and_pos.svg" /><br />
   <img alt="Probability of Strep troat and negative" src="images/p_strep_troat_and_neg.svg" /><br />
   <img alt="Probability of No Strep troat and positive" src="images/p_no_strep_troat_and_pos.svg" /><br />
-  <img alt="Probability of No Strep troat and negative" src="images/p_no_strep_troat_and_neg.svg" /><br />
+  <img alt="Probability of No Strep troat and negative" src="images/p_no_strep_troat_and_neg.svg" />
 </p>
 
 Together, these add up to one since they capture all potential outcomes after patients are tested.
@@ -400,7 +400,7 @@ We know:
 
 <p align="center">
   <img alt="Strep troat positive" src="images/strep_troat_pos.svg" /><br />
-  <img alt="Strep troat positive" src="images/p_strep_troat.svg" /><br />
+  <img alt="Strep troat positive" src="images/p_strep_troat.svg" />
 </p>
 
 
