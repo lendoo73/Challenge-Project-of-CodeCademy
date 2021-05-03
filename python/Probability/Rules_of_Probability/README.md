@@ -421,9 +421,11 @@ Therefore, we can say:
   <img alt="Probability of positive formula" src="images/p_pos_example_2.svg" />
 </p>
 
+Finally, if we plug all of these into the Bayes’ theorem formula, we get:
 
-
-
+<p align="center">
+  <img alt="Probability of Positive and Strep Troat" src="images/p_of_pos_and_strep.svg" />
+</p>
 
 
 
