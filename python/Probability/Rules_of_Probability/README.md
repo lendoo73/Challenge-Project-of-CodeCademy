@@ -369,9 +369,11 @@ However, we are missing something.
 If someone gets a positive result, what is the probability that they have strep throat? 
 Notationally, we can write this probability as:
 
+<p align="center">
+  <img alt="Probability of Positive Test and Strep Troat" src="images/p_pos_and_st.svg" />
+</p>
 
-
-
+In the next exercise, we’ll explore how we can use our tree diagram to calculate this probability.
 
 
 
