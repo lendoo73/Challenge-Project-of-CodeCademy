@@ -399,7 +399,7 @@ Using Bayes’ theorem:
 We know:
 
 <p align="center">
-  <img alt="Bayes Theorem example" src="images/bayes_theorem_example.svg" />
+  <img alt="Strep troat positive" src="images/strep_troat_pos.svg" /><br />
 </p>
 
 
