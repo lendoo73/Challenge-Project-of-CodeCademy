@@ -121,7 +121,7 @@ We can calculate this using the following equation where P(x) is the probability
     <img alt="PMF Range formula 4" src="images/pmf_range_formula_4.svg" />
 </div>
 
-
+# [Probability Mass Function Over a Range using Python](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/probability-mass-function-over-a-range-using-python)
 
 
 
