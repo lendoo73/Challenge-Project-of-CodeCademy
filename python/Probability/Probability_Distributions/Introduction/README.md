@@ -112,8 +112,14 @@ We can visualize this scenario with the probability mass function:
 
 ![Using the Probability Mass Function Over a Range](images/Binomial-Distribution-PMF-Probability-over-a-Range.webp)
 
+We can calculate this using the following equation where P(x) is the probability of observing the number x successes:
 
-
+<div align="center">
+    <img alt="PMF Range formula" src="images/pmf_range_formula_1.svg" /><br />
+    <img alt="PMF Range formula 2" src="images/pmf_range_formula_2.svg" /><br />
+    <img alt="PMF Range formula 3" src="images/pmf_range_formula_3.svg" /><br />
+    <img alt="PMF Range formula 4" src="images/pmf_range_formula_4.svg" />
+</div>
 
 
 
