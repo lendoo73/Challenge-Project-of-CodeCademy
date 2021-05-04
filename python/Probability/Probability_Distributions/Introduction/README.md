@@ -110,7 +110,7 @@ One way we could do this is by adding up the probabilities of each value.
 Let’s say we were flipping a fair coin 5 times, and we wanted to know the probability of getting between 1 and 3 heads. 
 We can visualize this scenario with the probability mass function:
 
-![Using the Probability Mass Function Over a Range](images/Binomial-Distribution-PMF-Probability-over-a-Range)
+![Using the Probability Mass Function Over a Range](images/Binomial-Distribution-PMF-Probability-over-a-Range.svg)
 
 
 
