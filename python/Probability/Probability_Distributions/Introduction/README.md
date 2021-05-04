@@ -74,7 +74,7 @@ This experiment would be classified as a `Binomial(n = 10, p = 0.5)` distributio
 The graph below shows the probability mass function for this experiment. 
 The heights of the bars represent the probability of observing each possible outcome as calculated by the PMF.
 
-![Binom PMF](binom_pmf_10_5.svg)
+![Binom PMF](images/binom_pmf_10_5.svg)
 
 
 
