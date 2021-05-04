@@ -35,3 +35,73 @@ Output:
 
 # [2, 5]
 ```
+
+# [Discrete and Continuous Random Variables](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/discrete-and-continuous-random-variables)
+
+## Discrete Random Variables
+
+**When the possible values in a sample space are countable**, the random variable is called a discrete random variable. 
+For example, rolling a regular 6-sided die would be considered a discrete random variable because the outcome options are limited to the numbers on the die.
+
+Discrete random variables are also common when observing counting events, such as how many people entered a store on a randomly selected day. 
+In this case, the values are countable in that they are limited to whole numbers (you can’t observe half of a person).
+
+## Continuous Random Variables
+
+**When the possible values in a sample space are uncountable**, the random variable is called a continuous random variable. 
+These are generally measurement variables and are uncountable because measurements can always be more precise – meters, centimeters, millimeters, etc.
+
+For example, the temperature in Los Angeles on a randomly chosen day is a continuous random variable. 
+The temperature measurement can always extend to another decimal place (96 degrees, 96.44 degrees, 96.437 degrees, etc.).
+
+# [Probability Mass Functions](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/probability-mass-functions)
+
+The probability mass function (PMF) defines the specific probability distribution of the random variable. 
+It is used to calculate the probability that a specific event from a discrete random variable occurs. 
+For example, a PMF can be used to calculate the probability of rolling a three from a fair six-sided die.
+
+Probability distributions explain the probabilities of observing the possible outcomes of an event. 
+There are many different probability distributions. 
+Each distribution has its own parameters that describe specific random events. 
+You may be familiar with some of these parameters, like the mean and standard deviation, that define some of the most commonly used distributions in statistics.
+
+For example, the distribution for flipping a fair coin ten times and counting the number of heads we observe is called a *binomial distribution*. 
+The parameters for the binomial distribution are:
+* `n` for the sample size (number of observations, in this case: ten coin flips)
+* `p` for the probability of success (probability of seeing our determined outcome, in this case: the probability of seeing heads is 0.5)
+
+This experiment would be classified as a `Binomial(n = 10, p = 0.5)` distribution. 
+The graph below shows the probability mass function for this experiment. 
+The heights of the bars represent the probability of observing each possible outcome as calculated by the PMF.
+
+![Binom PMF](binom_pmf_10_5.svg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
