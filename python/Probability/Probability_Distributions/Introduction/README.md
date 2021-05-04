@@ -76,13 +76,41 @@ The heights of the bars represent the probability of observing each possible out
 
 ![Binom PMF](images/binom_pmf_10_5.svg)
 
+**The sum of the heights of all the bars will always equal 1.**
 
+# [Calculating Probabilities using Python](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/calculating-probabilities-using-python)
 
+The `binom.pmf()` method from the `scipy.stats` library can be used to calculate the probability of observing a specific value in an experiment. 
+This method takes 3 values:
+* `x`: the value of interest
+* `n`: the sample size
+* `p`: the probability of success
 
+For example, in our experiment to flip a fair coin 10 times and count the number of heads, 
+we can use the probability mass function to calculate the probability of observing a specific number, let’s say 6:
+```py
+# import necessary library
+import scipy.stats as stats
+ 
+# st.binom.pmf(x, n, p)
+print(stats.binom.pmf(6, 10, 0.5))
+Output:
 
+# 0.205078
+```
+Notice that two of the three values that go into the `stats.binomial.pmf()` method are the parameters that define the binomial distribution: 
+`n` represents the number of trials and `p` represents the probability of success.
 
+# [Using the Probability Mass Function Over a Range](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/using-the-probability-mass-function-over-a-range)
 
+We have seen that we can calculate the probability of observing a specific value using a probability mass function. 
+What if we wanted to find the probability of observing a range of values for a discrete random variable? 
+One way we could do this is by adding up the probabilities of each value.
 
+Let’s say we were flipping a fair coin 5 times, and we wanted to know the probability of getting between 1 and 3 heads. 
+We can visualize this scenario with the probability mass function:
+
+![Using the Probability Mass Function Over a Range](Binomial-Distribution-PMF-Probability-over-a-Range)
 
 
 
