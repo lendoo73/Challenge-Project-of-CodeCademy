@@ -179,9 +179,37 @@ Instead, we could also use the fact that the sum of all of the possible values i
     <img alt="The Probability of 8 to 10 head" src="images/the_sum_of_all_of_the_possible_values_2.svg" />
 </div>
 
+Now instead of summing up 9 values for the probabilities between 0 and 8 heads, we can do 1 minus the sum of two values and get the same result:
+```py
+import scipy.stats as stats
+# less than or equal to 8
+1 - (stats.binom.pmf(9, n = 10, p = 0.5) + stats.binom.pmf(10, n = 10, p = 0.5))
+```
+Output:
+```py
+# 0.98926
+```
 
+# [Cumulative Distribution Function](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/cumulative-distribution-function)
 
+The cumulative distribution function for discrete random variables is similar to probability mass functions. 
+However, instead of the probability of observing a specific number, 
+cumulative distribution functions can be used **to calculate the probability of observing a specific number or less from a given event**.
 
+As previously discussed, the probabilities for all possible values in a given probability distribution add up to 1. 
+The value of a cumulative distribution function at a given value is equal to the **sum of the probabilities lower** than it, with a value of 1 for the largest possible number.
+
+Cumulative distribution functions are constantly increasing, so for two different numbers that the random variable could take on, the value of the function will always be greater for the larger number. Mathematically, this is represented as:
+
+\text{If}\; x_1 < x_2, \to CDF(x_1) < CDF(x_2)Ifx 
+1
+​	 <x 
+2
+​	 ,→CDF(x 
+1
+​	 )<CDF(x 
+2
+​	 )
 
 
 
