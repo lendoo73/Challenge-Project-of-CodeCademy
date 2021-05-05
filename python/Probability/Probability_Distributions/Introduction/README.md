@@ -239,7 +239,11 @@ It is important to note that to include the lower bound in the range, the value 
 In this example, we wanted to know the probability from 3 to 6, which includes 3. 
 Mathematically, this looks like the following equation:
 
-
+<div align="center">
+    <img alt="CDF Range Formula" src="images/cdf_range_formula.svg" /><br />
+    or 
+    <img alt="CDF Range Formula 2" src="images/cdf_range_formula_2.svg" />
+</div>
 
 
 
