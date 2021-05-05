@@ -341,17 +341,74 @@ We can use the cumulative distribution function to calculate the area under the 
 
 ![the probability that a randomly chosen woman is less than 158 cm tall](images/norm_pdf_167_8_filled.svg)
 
+We can calculate the area of the blue region in Python using the `norm.cdf()` method from the `scipy.stats` library. 
+This method takes on 3 values:
+* `x`: the value of interest
+* `loc`: the mean of the probability distribution
+* `scale`: the standard deviation of the probability distribution
 
+```py
+import scipy.stats as stats
+ 
+# stats.norm.cdf(x, loc, scale)
+print(stats.norm.cdf(
+    158,        # woman is less than 158 cm tall
+    167.64,     # women’s heights have a mean of 167.64 cm
+    8           # standard deviation: 8 cm
+))
+Output:
+```py
+# 0.1141
+```
 
+# [Probability Density Functions and Cumulative Distribution Function](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/probability-density-functions-and-cumulative-distribution-function)
 
+We can take the difference between two overlapping ranges to calculate the probability that a random selection will be 
+within a range of values for continuous distributions. 
+This is essentially the same process as calculating the probability of a range of values for discrete distributions.
 
+![difference between two overlapping ranges](images/Normal-PDF-Range.webp)
 
+Let’s say we wanted to calculate the probability of randomly observing a woman between 165 cm to 175 cm, assuming heights still follow the Normal(167.74, 8) distribution. 
+We can calculate the probability of observing these values or less. 
+The difference between these two probabilities will be the probability of randomly observing a woman in this given range. 
+This can be done in python using the `norm.cdf()` method from the `scipy.stats` library. 
+As mentioned before, this method takes on 3 values:
+* `x`: the value of interest
+* `loc`: the mean of the probability distribution
+* `scale`: the standard deviation of the probability distribution
+```py
+import scipy.stats as stats
+# P(165 < X < 175) = P(X < 175) - P(X < 165)
+# stats.norm.cdf(x, loc, scale) - stats.norm.cdf(x, loc, scale)
+print(stats.norm.cdf(175, 167.74, 8) - stats.norm.cdf(165, 167.74, 8))
+```
+Output:
+```py
+# 0.45194
+```
+We can also calculate the probability of randomly observing a value or greater by subtracting the probability of observing less than than the given value from 1. 
+This is possible because we know that the total area under the curve is 1, 
+so the probability of observing something greater than a value is 1 minus the probability of observing something less than the given value.
 
+Let’s say we wanted to calculate the probability of observing a woman taller than 172 centimeters, assuming heights still follow the Normal(167.74, 8) distribution. 
+We can think of this as the opposite of observing a woman shorter than 172 centimeters. 
+We can visualize it this way:
 
+![the probability of observing a woman taller than 172 centimeters](images/norm_pdf_167_8_filled2.svg)
 
-
-
-
+We can use the following code to calculate the blue area by taking 1 minus the red area:
+```py
+import scipy.stats as stats
+ 
+# P(X > 172) = 1 - P(X < 172)
+# 1 - stats.norm.cdf(x, loc, scale)
+print(1 - stats.norm.cdf(172, 167.74, 8))
+```
+Output:
+```
+# 0.29718
+```
 
 
 
