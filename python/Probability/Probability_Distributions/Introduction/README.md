@@ -297,6 +297,62 @@ Mathematically, this looks like the following:
     <img alt="The probability of more than 6 heads" src="images/p_more_than_6.svg" />
 </div>
 
+Note that “more than 6 heads” does not include 6. 
+In python, we would calculate this probability using the following code:
+```py
+import scipy.stats as stats
+print(1 - stats.binom.cdf(6, 10, 0.5))
+```
+Output:
+```py
+# 0.171875
+```
+
+# [Probability Density Functions](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/probability-density-functions)
+
+Similar to how discrete random variables relate to probability mass functions, continuous random variables relate to probability density functions. 
+They define the probability distributions of continuous random variables and span across all possible values that the given random variable can take on.
+
+When graphed, a probability density function is a curve across all possible values the random variable can take on, and the total area under this curve adds up to 1.
+
+The following image shows a probability density function. 
+The highlighted area represents the probability of observing a value within the highlighted range.
+
+![probability density function](images/Adding-Area.webp)
+
+In a probability density function, we cannot calculate the probability at a single point. 
+This is because the area of the curve underneath a single point is always zero. 
+The gif below showcases this.
+
+![we cannot calculate the probability at a single point](images/Normal-Distribution-Area-to-Zero.webp)
+
+As we can see from the visual above, as the interval becomes smaller, the width of the area under the curve becomes smaller as well. 
+When trying to evaluate the area under the curve at a specific point, the width of that area becomes 0, and therefore the probability equals 0.
+
+We can calculate the area under the curve using the cumulative distribution function for the given probability distribution.
+
+For example, heights fall under a type of probability distribution called a normal distribution. 
+The parameters for the normal distribution are the mean and the standard deviation, and we use the form Normal(mean, standard deviation) as shorthand.
+
+We know that women’s heights have a mean of `167.64` cm with a standard deviation of `8` cm, which makes them fall under the `Normal(167.64, 8)` distribution.
+
+Let’s say we want to know the probability that a randomly chosen woman is less than 158 cm tall. 
+We can use the cumulative distribution function to calculate the area under the probability density function curve from 0 to 158 to find that probability.
+
+![the probability that a randomly chosen woman is less than 158 cm tall](images/norm_pdf_167_8_filled.svg)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
