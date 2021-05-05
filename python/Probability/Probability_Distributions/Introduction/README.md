@@ -207,7 +207,15 @@ Mathematically, this is represented as:
     <img alt="constantly increasing" src="images/constantly_increasing_formula.svg" />
 </div>
 
+We showed how the probability mass function could be used to 
+calculate the probability of observing less than 3 heads out of 10 coin flips by adding up the probabilities of observing 0, 1, and 2 heads. 
+The cumulative distribution function produces the same answer by evaluating the function at `CDF(X = 2)`. 
+In this case, using the cumulative distribution function would be a simpler method compared to the probability mass function 
+because we are making 1 calculation rather than adding together 3 separate calculations.
 
+The animation at the bottom shows the relationship between the probability mass function and the cumulative distribution function. 
+The top plot is the PMF, while the bottom plot is the corresponding CDF. 
+When looking at the graph of a CDF, each y-axis value is the sum of the probabilities less than or equal to it in the PMF.
 
 
 
