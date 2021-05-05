@@ -199,17 +199,13 @@ cumulative distribution functions can be used **to calculate the probability of 
 As previously discussed, the probabilities for all possible values in a given probability distribution add up to 1. 
 The value of a cumulative distribution function at a given value is equal to the **sum of the probabilities lower** than it, with a value of 1 for the largest possible number.
 
-Cumulative distribution functions are constantly increasing, so for two different numbers that the random variable could take on, the value of the function will always be greater for the larger number. Mathematically, this is represented as:
+Cumulative distribution functions are **constantly increasing**, 
+so for two different numbers that the random variable could take on, the value of the function will always be greater for the larger number. 
+Mathematically, this is represented as:
 
-\text{If}\; x_1 < x_2, \to CDF(x_1) < CDF(x_2)Ifx 
-1
-​	 <x 
-2
-​	 ,→CDF(x 
-1
-​	 )<CDF(x 
-2
-​	 )
+<div align="center">
+    <img alt="constantly increasing" src="images/constantly_increasing_formula.svg" />
+</div>
 
 
 
