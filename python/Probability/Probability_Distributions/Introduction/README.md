@@ -245,9 +245,19 @@ Mathematically, this looks like the following equation:
     <img alt="CDF Range Formula 2" src="images/cdf_range_formula_2.svg" />
 </div>
 
+# [Using the Cumulative Distribution Function in Python](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/using-the-cumulative-distribution-function-in-python)
 
+We can use the `binom.cdf()` method from the `scipy.stats` library to calculate the cumulative distribution function. 
+This method takes 3 values:
+* `x`: the value of interest, looking for the probability of this value or less
+* `n`: the sample size
+* `p`: the probability of success
 
+Calculating the probability of observing 6 or fewer heads from 10 fair coin flips (0 to 6 heads) mathematically looks like the following:
 
+<div align="center">
+    <img alt="The probability of observing 6 or fewer heads" src="images/p_0_to_6_heads.svg" />
+</div>
 
 
 
