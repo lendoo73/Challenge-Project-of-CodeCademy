@@ -217,7 +217,10 @@ The animation at the bottom shows the relationship between the probability mass 
 The top plot is the PMF, while the bottom plot is the corresponding CDF. 
 When looking at the graph of a CDF, each y-axis value is the sum of the probabilities less than or equal to it in the PMF.
 
-[![PMF - CDF animation](images/pmf_cdf_animation.svg)](https://static-assets.codecademy.com/skillpaths/master-stats-ii/probability-distributions/cdf-vs-pmf/animated.html)
+<a href="https://static-assets.codecademy.com/skillpaths/master-stats-ii/probability-distributions/cdf-vs-pmf/animated.html">
+ <img src="images/pmf_cdf_animation.svg" width="600px" alt="PMF - CDF animation" />
+</a>
+
 
 
 
