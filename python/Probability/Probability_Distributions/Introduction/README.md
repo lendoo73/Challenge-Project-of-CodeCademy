@@ -259,9 +259,26 @@ Calculating the probability of observing 6 or fewer heads from 10 fair coin flip
     <img alt="The probability of observing 6 or fewer heads" src="images/p_0_to_6_heads.svg" />
 </div>
 
+In python, we use the following code:
+```py
+import scipy.stats as stats
+ 
+print(stats.binom.cdf(
+    6,      # looking for the probability of this value or less
+    10,     # the sample size
+    0.5)    # the probability of success
+)
+```
+Output:
+```py
+0.828125
+```
+Calculating the probability of observing between 4 and 8 heads from 10 fair coin flips can be thought of as 
+taking the difference of the value of the cumulative distribution function at 8 from the cumulative distribution function at 3:
 
-
-
+<div align="center">
+    <img alt="The probability of observing between 4 and 8 heads" src="images/p_from_4_8.svg" />
+</div>
 
 
 
