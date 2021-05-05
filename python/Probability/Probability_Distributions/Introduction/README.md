@@ -221,7 +221,23 @@ When looking at the graph of a CDF, each y-axis value is the sum of the probabil
  <img src="images/pmf_cdf_animation.svg" width="700px" alt="PMF - CDF animation" />
 </a>
 
+# [Cumulative Distribution Function continued](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/cumulative-distribution-function-continued)
 
+We can use a cumulative distribution function to calculate the probability of a specific range 
+by taking the difference between two values from the cumulative distribution function. 
+For example, to find the probability of observing between 3 and 6 heads, 
+we can take the probability of observing 6 or fewer heads and subtracting the probability of observing 2 or fewer heads. 
+This leaves a remnant of between 3 and 6 heads.
+
+The visual at the bottom demonstrates how this works. 
+
+<a href="https://static-assets.codecademy.com/skillpaths/master-stats-ii/probability-distributions/cdf-animation/animation.html">
+ <img src="images/cdf_range_animation.svg" width="700px" alt="CDF Range animation" />
+</a>
+
+It is important to note that to include the lower bound in the range, the value being subtracted should be one less than the lower bound. 
+In this example, we wanted to know the probability from 3 to 6, which includes 3. 
+Mathematically, this looks like the following equation:
 
 
 
