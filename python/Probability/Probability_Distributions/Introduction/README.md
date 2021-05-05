@@ -280,7 +280,22 @@ taking the difference of the value of the cumulative distribution function at 8 
     <img alt="The probability of observing between 4 and 8 heads" src="images/p_from_4_8.svg" />
 </div>
 
+In python, we use the following code:
+```py
+import scipy.stats as stats
 
+print(stats.binom.cdf(8, 10, 0.5) - stats.binom.cdf(3, 10, 0.5))
+```
+Output:
+```py
+# 0.81738
+```
+To calculate the probability of observing more than 6 heads from 10 fair coin flips we subtract the value of the cumulative distribution function at 6 from 1. 
+Mathematically, this looks like the following:
+
+<div align="center">
+    <img alt="The probability of more than 6 heads" src="images/p_more_than_6.svg" />
+</div>
 
 
 
