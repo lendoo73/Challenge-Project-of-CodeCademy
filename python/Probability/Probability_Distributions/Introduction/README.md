@@ -123,6 +123,75 @@ We can calculate this using the following equation where P(x) is the probability
 
 # [Probability Mass Function Over a Range using Python](https://www.codecademy.com/courses/probability-mssp/lessons/introduction-to-probability-distributions/exercises/probability-mass-function-over-a-range-using-python)
 
+We can use the same `binom.pmf()` method from the `scipy.stats` library to calculate the probability of observing a range of values. 
+As mentioned in a previous exercise, the `binom.pmf` method takes 3 values:
+* `x`: the value of interest
+* `n`: the sample size
+* `p`: the probability of success
+
+We can set up each individual method and sum the resulting values to determine the probability of a range. 
+In this case, we are calculating the probability of observing between 2 and 4 heads from 10 coin flips:
+```py
+import scipy.stats as stats
+ 
+# calculating P(2-4 heads) = P(2 heads) + P(3 heads) + P(4 heads) for flipping a coin 10 times
+print(stats.binom.pmf(2, n=10, p=.5) + stats.binom.pmf(3, n=10, p=.5) + stats.binom.pmf(4, n=10, p=.5))
+Output:
+
+# 0.366211
+We can also calculate the probability of observing less than a certain value, let’s say 3 heads, by adding up the probabilities of the values below it:
+
+import scipy.stats as stats
+ 
+# calculating P(less than 3 heads) = P(0 heads) + P(1 head) + P(2 heads) for flipping a coin 10 times
+print(stats.binom.pmf(0, n=10, p=.5) + stats.binom.pmf(1, n=10, p=.5) + stats.binom.pmf(2, n=10, p=.5))
+```
+Output:
+```py
+# 0.0546875
+```
+Note that because our desired range is less than 3 heads, we do not include that value in the summation.
+
+When there are many possible values, this task of summing values can be difficult. 
+If we want to know the probability of observing 8 or fewer heads from 10 coin flips, we could add up the values from 0 to 8:
+```py
+import scipy.stats as stats
+ 
+stats.binom.pmf(0, n = 10, p = 0.5) 
++ stats.binom.pmf(1, n = 10, p = 0.5) 
++ stats.binom.pmf(2, n = 10, p = 0.5) 
++ stats.binom.pmf(3, n = 10, p = 0.5) 
++ stats.binom.pmf(4, n = 10, p = 0.5) 
++ stats.binom.pmf(5, n = 10, p = 0.5) 
++ stats.binom.pmf(6, n = 10, p = 0.5) 
++ stats.binom.pmf(7, n = 10, p = 0.5) 
++ stats.binom.pmf(8, n = 10, p = 0.5)
+```
+Output:
+```py
+# 0.98926
+```
+This involves a lot of repetitive code. 
+Instead, we could also use the fact that the sum of all of the possible values is equal to 1 and subtract off the probabilities of higher values:
+
+<div align="center">
+    <img alt="The sum of all of the possible values" src="images/the_sum_of_all_of_the_possible_values.svg" /><br />
+    <img alt="The Probability of 8 to 10 head" src="images/the_sum_of_all_of_the_possible_values_2.svg" />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
