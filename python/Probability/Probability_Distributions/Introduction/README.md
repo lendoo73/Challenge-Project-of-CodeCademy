@@ -241,7 +241,7 @@ Mathematically, this looks like the following equation:
 
 <div align="center">
     <img alt="CDF Range Formula" src="images/cdf_range_formula.svg" /><br />
-    or 
+    or <br />
     <img alt="CDF Range Formula 2" src="images/cdf_range_formula_2.svg" />
 </div>
 
