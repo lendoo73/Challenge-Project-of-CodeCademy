@@ -125,6 +125,6 @@ rvs = stats.poisson.rvs(10, size = 1000)
 ```
 The histogram of this sampling looks like the following:
 
-![10 sales per week](images/pois_10_1000samp.svg.svg)
+![a sample of 1000 random values](images/pois_10_1000samp.svg)
 
 
