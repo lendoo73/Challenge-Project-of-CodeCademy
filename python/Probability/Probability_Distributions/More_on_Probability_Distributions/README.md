@@ -108,6 +108,23 @@ If we take this value to be our expected value of a Poisson Distribution, the pr
 
 ![10 sales per week](images/pois_10_pmf_red.svg)
 
+The tallest bar represents the value with the highest probability of occurring. 
+In this case, the tallest bar is at 10. 
+This does not, however, mean that we will make 10 sales. 
+It means that on average, across all weeks, we expect our average to equal about 10 sales per week.
 
+Let’s look at this another way. 
+Let’s take a sample of 1000 random values from the Poisson distribution with the expected value of 10. 
+We can use the `poisson.rv()` method in the `scipy.stats` library to generate random values:
+```py
+import scipy.stats as stats
+ 
+# generate random variable
+# stats.poisson.rvs(lambda, size = num_values)
+rvs = stats.poisson.rvs(10, size = 1000)
+```
+The histogram of this sampling looks like the following:
+
+![10 sales per week](images/pois_10_1000samp.svg.svg)
 
 
