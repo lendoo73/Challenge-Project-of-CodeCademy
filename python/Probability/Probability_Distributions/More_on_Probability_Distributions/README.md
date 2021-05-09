@@ -106,7 +106,7 @@ But what does this mean?
 Let’s put this into context: let’s say we are salespeople, and after many weeks of work, we calculate our average to be 10 sales per week. 
 If we take this value to be our expected value of a Poisson Distribution, the probability mass function will look as follows:
 
-![The PMF for the Poisson(7) distribution](images/pois_7_pmf.svg)
+![10 sales per week](images/pois_10_pmf_red.svg)
 
 
 
