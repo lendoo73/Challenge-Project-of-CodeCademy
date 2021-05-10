@@ -285,8 +285,7 @@ There are several properties of expectation and variance that are consistent thr
     <img src="images/expected_value_of_two_independent_random_variables.svg" alt="expected value of two independent random variables" />
 </div>
 
-For example, if we wanted to count the total number of heads between 10 fair quarter flips and 6 fair nickel flips, 
-the expected value combined would be 5 heads (from the quarters) and 3 heads (from the nickels) so 8 heads overall.
+     For example, if we wanted to count the total number of heads between 10 fair quarter flips and 6 fair nickel flips, the expected value combined would be 5 heads (from the quarters) and 3 heads (from the nickels) so 8 heads overall.
 
 2. Multiplying a random variable by a constant a changes the expected value to be a times the expected value of the random variable:
 
