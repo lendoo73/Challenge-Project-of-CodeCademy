@@ -347,4 +347,31 @@ Let’s say that X is the event getting a heads on a single fair coin flip, and 
     </p>
 </div>
 
+# [Review](https://www.codecademy.com/courses/probability-mssp/lessons/more-on-probability-distributions/exercises/review)
+
+Let’s practice calculating different values from the Poisson distribution:
+
+## 1.
+
+You work at ambulance dispatch where the number of calls that come in daily follows the Poisson distribution with lambda equal to 9. 
+There’s a rule that a team can go on no more than 12 calls a day. 
+But how often could this happen?
+
+## 2.
+
+Let’s say that you have to call in a backup team if you have 10 or more calls in a given day. 
+But you don’t want to have to call in a backup team unless they really will be needed. 
+But what is the probability that they will be called and not needed?
+
+## 3.
+
+A certain tennis star has a first-serve rate of 62%. 
+Let’s say they serve 80 times in a given match. 
+What is the expected value of the number of serves they make?
+
+## 4.
+
+At the same first-serve rate, what is the variance of this player’s first-serves?
+
+
 
