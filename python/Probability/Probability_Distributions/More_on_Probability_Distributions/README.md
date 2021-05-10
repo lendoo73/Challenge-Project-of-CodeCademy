@@ -162,9 +162,68 @@ Also, take note that the height of the bars in the second bar decrease since the
     <img src="images/poisson_lambda_15.svg" alt="Poisson distribution with lambda 15" width="500px" />
 </div>
 
+As we can see, as the parameter lambda increases, the variance — or spread — of possible values increases as well.
 
+We can calculate the variance of a sample using the `numpy.var()` method:
+```py
+import scipy.stats as stats
+import numpy as np
+ 
+rand_vars = stats.poisson.rvs(4, size = 1000)
+print(np.var(rand_vars))
+```
+Output:
+```py
+3.864559
+```
+Because this is calculated from a sample, it is possible that the variance might not equal EXACTLY lambda. 
+However, we do expect it to be relatively close when the sample size is large, like in this example.
 
+Another way to view the increase in possible values is to take the range of a sample (the minimum and maximum values in a set). 
+The following code will take draw 1000 random variables from the Poisson distribution with 
+lambda = 4 and then print the minimum and maximum values observed using the `.min()` and `.max()` Python functions:
+```py
+import scipy.stats as stats
+ 
+rand_vars = stats.poisson.rvs(4, size = 1000)
+ 
+print(min(rand_vars), max(rand_vars))
+```
+Output:
+```py
+0 12
+```
+If we increase the value of lambda to 10, let’s see how the minimum and maximum values change:
+```py
+import scipy.stats as stats
+ 
+rand_vars = stats.poisson.rvs(10, size = 1000)
+ 
+print(min(rand_vars), max(rand_vars))
+```
+Output:
+```py
+1 22
+```
+These values are spread wider, indicating a larger variance.
 
+# [Expected Value of the Binomial Distribution](https://www.codecademy.com/courses/probability-mssp/lessons/more-on-probability-distributions/exercises/expected-value-of-the-binomial-distribution)
+
+Other types of distributions have expected values and variances based on the given parameters, just like the Poisson distribution. 
+Recall that the Binomial distribution has parameters 
+`n`, representing the number of events and 
+`p`, representing the probability of “success” (or the specific outcome we are looking for occurring).
+
+Consider the following scenario: we flip a fair coin 10 times and count the number of heads we observe. 
+How many heads would you expect to see? 
+You might naturally think 5, and you would be right! 
+What we are doing is calculating the expected value without even realizing it. 
+We take the 10 coin flips and multiply it by the chance of getting heads, or one-half, getting the answer of 5 heads. 
+And that is exactly the equation for the expected value of the binomial distribution:
+
+<div align="center">
+    <img src="images/Expected_Value_of_the_Binomial_Distribution.svg" alt="Expected Value of the Binomial Distribution" />
+</div>
 
 
 
