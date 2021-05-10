@@ -231,4 +231,24 @@ Note that if we were counting the number of heads out of 5 fair coin flips, the 
     <img src="images/number_of_heads_out_of_5_fair_coin_flips.svg" alt="Expected number of heads out of 5 fair coin flipsn" />
 </div>
 
+It is ok for the expected value to be a fraction or have decimal values, though it would be impossible to observe 2.5 heads.
+
+Let’s look at a different example. 
+Let’s say we forgot to study, and we are going to guess **B** on all 20 questions of a multiple-choice quiz. 
+If we assume that every letter option (A, B, C, and D) has the same probability of being the right answer for each question, how many questions would we expect to get correct?
+`n` would equal 20, because there are 20 questions, and `p` would equal 0.25, because there is a 1 in 4 chance that **B** will be the right answer. 
+Using the equation, we can calculate:
+
+<div align="center">
+    <img src="images/expected_right_answers.svg" alt="Expected right answers" />
+</div>
+
+
+
+
+
+
+
+
+
 
