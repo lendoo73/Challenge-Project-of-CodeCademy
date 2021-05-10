@@ -287,12 +287,19 @@ There are several properties of expectation and variance that are consistent thr
 
 For example, if we wanted to count the total number of heads between 10 fair quarter flips and 6 fair nickel flips, the expected value combined would be 5 heads (from the quarters) and 3 heads (from the nickels) so 8 heads overall.
 
-2. Multiplying a random variable by a constant a changes the expected value to be a times the expected value of the random variable:<div align="center">
+2. Multiplying a random variable by constant `a` changes the expected value to be `a` times the expected value of the random variable:
+
+<div align="center">
     <img src="images/multiplying_variable.svg" alt="expected value of Multiplying a random variable" />
-</div>For example, the expected number of heads from 10 fair coin flips is 5. If we wanted to calculate the number of heads from this event run 4 times (40 total coin flips), the expected value would now be 4 times the original expected value, or 20.
+</div>
 
+For example, the expected number of heads from 10 fair coin flips is 5. If we wanted to calculate the number of heads from this event run 4 times (40 total coin flips), the expected value would now be 4 times the original expected value, or 20.
 
+3. Adding a constant `a` to the distribution changes the expected value by the value `a`:
 
+<div align="center">
+    <img src="images/adding_constant_a.svg" alt="Adding constant a to the distribution" />
+</div>
 
 
 
