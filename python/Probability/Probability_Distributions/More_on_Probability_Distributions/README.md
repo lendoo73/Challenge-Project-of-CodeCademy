@@ -243,9 +243,25 @@ Using the equation, we can calculate:
     <img src="images/expected_right_answers.svg" alt="Expected right answers" />
 </div>
 
+# [Variance of the Binomial Distribution](https://www.codecademy.com/courses/probability-mssp/lessons/more-on-probability-distributions/exercises/variance-of-the-binomial-distribution)
 
+Variance for the Binomial distribution is similarly calculated using the `n` and `p` parameters. 
+Let’s use the 10 fair coin flips example to try to understand how variance is calculated. 
+Each coin flip has a certain probability of landing as heads or tails: 0.5 and 0.5, respectively.
 
+The variance of a single coin flip will be the probability that the success happens times the probability that it does not happen: 
+`p * (1 - p)`, or `0.5 * 0.5`. 
+Because we have `n = 10` number of coin flips, the variance of a single fair coin flip is multiplied by the number of flips. 
+Thus we get the equation:
 
+<div align="center">
+    <p>
+        <img src="images/variance_of_the_binomial_distribution_formula.svg" alt="Variance of the Binomial Distribution formula" />
+    </p>
+    <p>
+        <img src="images/variance_of_10_flips.svg" alt="Variance of the 10 coin flips" />
+    </p>
+</div>
 
 
 
