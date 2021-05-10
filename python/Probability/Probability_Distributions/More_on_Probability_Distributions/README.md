@@ -127,4 +127,33 @@ The histogram of this sampling looks like the following:
 
 ![a sample of 1000 random values](images/pois_10_1000samp.svg)
 
+We can see observations of as low as 2 but as high as 20. 
+The tallest bars are at 9 and 10. 
+If we took the average of the 1000 random samples, we would get:
+```py
+print(rvs.mean())
+```
+Output:
+```py
+10.009
+```
+This value is very close to 10, confirming that over the 1000 observations, the expected value (or average) is 10.
+
+When we talk about the expected value, we mean the average over many observations. 
+This relates to the Law of Large Numbers: 
+the more samples we have, the more likely samples will resemble the true population, and the mean of the samples will approach the expected value. 
+So even though the salesperson may make 3 sales one week, they may make 16 the next, and 11 the week after. 
+In the long run, after many weeks, the expected value (or average) would still be 10.
+
+
+
+
+
+
+
+
+
+
+
+
 
