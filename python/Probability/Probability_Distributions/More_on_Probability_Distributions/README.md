@@ -301,8 +301,14 @@ For example, the expected number of heads from 10 fair coin flips is 5. If we wa
     <img src="images/adding_constant_a.svg" alt="Adding constant a to the distribution" />
 </div>
 
+Let’s say that a test was given and graded, and the average grade was 78 out of 100 points. 
+If the teacher decided to curve the grade by adding 2 points to everyone’s grade, the average would now be 80 points.
 
+## Properties of Variance
 
+1. Increasing the values in a distribution by a constant `a` does not change the variance:
 
-
+<div align="center">
+    <img src="images/variance_if_increasing_the_values.svg" alt="Varinace if increasing the values in a distribution" />
+</div>
 
