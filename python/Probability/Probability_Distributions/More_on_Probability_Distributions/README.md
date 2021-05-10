@@ -158,8 +158,8 @@ Notice that in the second plot, the spread of the distribution increases.
 Also, take note that the height of the bars in the second bar decrease since there are more possible values in the distribution.
 
 <div>
-    <img src="images/poisson_lambda_3.svg" alt="Poisson distribution with lambda 3" width="300px" />
-    <img src="images/poisson_lambda_15.svg" alt="Poisson distribution with lambda 15" width="300px" />
+    <img src="images/poisson_lambda_3.svg" alt="Poisson distribution with lambda 3" width="400px" />
+    <img src="images/poisson_lambda_15.svg" alt="Poisson distribution with lambda 15" width="400px" />
 </div>
 
 ![a sample of 1000 random values](images/poisson_lambda_3.svg)
