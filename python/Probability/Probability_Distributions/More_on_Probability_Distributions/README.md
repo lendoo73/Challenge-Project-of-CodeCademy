@@ -145,9 +145,20 @@ the more samples we have, the more likely samples will resemble the true populat
 So even though the salesperson may make 3 sales one week, they may make 16 the next, and 11 the week after. 
 In the long run, after many weeks, the expected value (or average) would still be 10.
 
+# [Spread of the Poisson Distribution](https://www.codecademy.com/courses/probability-mssp/lessons/more-on-probability-distributions/exercises/variance-of-the-poisson-distribution)
 
+Probability distributions also have calculable variances. 
+**Variances** are a way of measuring *the spread or dispersion of values and probabilities in the distribution*. 
+For the **Poisson distribution**, the **variance** is simply *the value of lambda (λ)*, meaning that the expected value and variance are equivalent in Poisson distributions.
 
+We know that the Poisson distribution has a discrete random variable and must be greater than 0 (think, a salesperson cannot have less than 0 sales, a shop cannot have fewer than 0 customers), so as the expected value increases, the number of possible values the distribution can take on would also increase.
 
+The first plot below shows a Poisson distribution with lambda equal to three, and the second plot shows a Poisson distribution with lambda equal to fifteen. 
+Notice that in the second plot, the spread of the distribution increases. 
+Also, take note that the height of the bars in the second bar decrease since there are more possible values in the distribution.
+
+![a sample of 1000 random values](images/poisson_lambda_3.svg)
+![a sample of 1000 random values](images/poisson_lambda_15.svg)
 
 
 
