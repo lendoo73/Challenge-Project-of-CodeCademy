@@ -263,7 +263,13 @@ Thus we get the equation:
     </p>
 </div>
 
+Let’s consider our 20 multiple choice quiz again. 
+The variance around getting an individual question correct would be `p * (1 - p)`, or `0.25 * 0.75`. 
+We then multiply this variance for all 20 questions in the quiz and get:
 
+<div align="center">
+    <img src="images/variance_an_individual_question_correct.svg" alt="20 multiple choice quiz variance" />
+</div>
 
 
 
