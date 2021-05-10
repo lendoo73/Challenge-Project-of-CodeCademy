@@ -162,8 +162,7 @@ Also, take note that the height of the bars in the second bar decrease since the
     <img src="images/poisson_lambda_15.svg" alt="Poisson distribution with lambda 15" width="400px" />
 </div>
 
-![a sample of 1000 random values](images/poisson_lambda_3.svg)
-![a sample of 1000 random values](images/poisson_lambda_15.svg)
+
 
 
 
