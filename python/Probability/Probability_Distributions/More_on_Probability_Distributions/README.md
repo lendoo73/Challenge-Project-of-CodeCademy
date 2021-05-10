@@ -323,9 +323,14 @@ though the expected value (or average) of the test changes from 78 to 80, the sp
     <img src="images/variance_if_scaling_the_values.svg" alt="Varinace if scalin the values in a distribution" />
 </div>
 
+For example, if we wanted to calculate the number of heads from 10 fair coin flips run 4 times (40 total coin flips), 
+the variance would be multiplied 4<sup>2</sup> times the original variance.
 
+3. The variance of the sum of two random variables is the sum of the individual variances:
 
-
+<div align="center">
+    <img src="images/variance_of_the_sum_of_two_random_variables.svg" alt="Varinace of the sum of two random variables" />
+</div>
 
 
 
