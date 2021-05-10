@@ -271,6 +271,30 @@ We then multiply this variance for all 20 questions in the quiz and get:
     <img src="images/variance_an_individual_question_correct.svg" alt="20 multiple choice quiz variance" />
 </div>
 
+We would expect to get 5 correct answers, but the overall variance of the probability distribution is 3.75.
+
+# [Properties of Expectation and Variance](https://www.codecademy.com/courses/probability-mssp/lessons/more-on-probability-distributions/exercises/properties-of-expectation-and-variance)
+
+There are several properties of expectation and variance that are consistent through all distributions:
+
+## Properties of Expectation
+
+1. The expected value of two independent random variables is the sum of each expected value separately:
+
+<div align="center">
+    <img src="images/expected_value_of_two_independent_random_variables.svg" alt="expected value of two independent random variables" />
+</div>
+
+For example, if we wanted to count the total number of heads between 10 fair quarter flips and 6 fair nickel flips, 
+the expected value combined would be 5 heads (from the quarters) and 3 heads (from the nickels) so 8 heads overall.
+
+2. Multiplying a random variable by a constant a changes the expected value to be a times the expected value of the random variable:
+
+
+
+
+
+
 
 
 
