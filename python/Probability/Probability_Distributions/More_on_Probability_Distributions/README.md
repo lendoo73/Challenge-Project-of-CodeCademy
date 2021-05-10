@@ -225,7 +225,10 @@ And that is exactly the equation for the expected value of the binomial distribu
     <img src="images/Expected_Value_of_the_Binomial_Distribution.svg" alt="Expected Value of the Binomial Distribution" />
 </div>
 
+Note that if we were counting the number of heads out of 5 fair coin flips, the expected value would be:
 
-
+<div align="center">
+    <img src="images/number_of_heads_out_of_5_fair_coin_flips.svg" alt="Expected number of heads out of 5 fair coin flipsn" />
+</div>
 
 
