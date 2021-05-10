@@ -332,8 +332,19 @@ the variance would be multiplied 4<sup>2</sup> times the original variance.
     <img src="images/variance_of_the_sum_of_two_random_variables.svg" alt="Varinace of the sum of two random variables" />
 </div>
 
+This principle ONLY holds if the X and Y are independent random variables. 
+Let’s say that X is the event getting a heads on a single fair coin flip, and Y is the event rolling a 2 on a fair six-sided die:
 
-
-
+<div align="center">
+    <p>
+        <img src="images/varionace_of_getting_head.svg" alt="Varinace of getting Head" />
+    </p>
+    <p>
+        <img src="images/rolling_2_on_die.svg" alt="Varinace of rolling Two on Die" />
+    </p>
+    <p>
+        <img src="images/variance_of_head_and_rolling_2.svg" alt="Varinace of getting Head and rolling Two" />
+    </p>
+</div>
 
 
