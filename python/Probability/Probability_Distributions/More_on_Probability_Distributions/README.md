@@ -312,3 +312,23 @@ If the teacher decided to curve the grade by adding 2 points to everyone’s gra
     <img src="images/variance_if_increasing_the_values.svg" alt="Varinace if increasing the values in a distribution" />
 </div>
 
+This is because the variance of a constant is `0` (there is no range for a single number). 
+Adding a constant to a random variable does not add any additional variance. 
+Let’s take the previous example with the teacher curving grades: 
+though the expected value (or average) of the test changes from 78 to 80, the spread and dispersion (or variance) of the test scores stays the same.
+
+2. Scaling the values of a random variable by a constant a scales the variance by the constant squared:
+
+<div align="center">
+    <img src="images/variance_if_scaling_the_values.svg" alt="Varinace if scalin the values in a distribution" />
+</div>
+
+
+
+
+
+
+
+
+
+
