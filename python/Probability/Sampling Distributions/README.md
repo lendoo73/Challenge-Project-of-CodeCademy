@@ -99,5 +99,23 @@ Note that the CLT only applies to the sampling distribution of the mean and not 
 
 # [CLT Continued](https://www.codecademy.com/courses/probability-mssp/lessons/sampling-distributions-mssp/exercises/clt-continued)
 
+Now that we’ve examined the CLT from a high level, let’s get into the details.
 
+The CLT not only establishes that the sampling distribution will be normally distributed, but it also allows us to describe that normal distribution quantitatively. 
+Normal distributions are described by their mean `μ` (mu) and standard deviation `σ` (sigma).
+
+Let’s break this up:
+* We take samples of size n from a population (that has a true population mean `μ` and standard deviation of `σ`) and calculate the sample mean `x`.
+* Given that n is sufficiently large (n > 30), the sampling distribution of the means will be normally distributed with:
+    * mean `x` approximately equal to the population mean `μ`
+    * standard deviation equal to the population standard deviation divided by the square root of the sample size. We can write this out as:
+    ![The distribution of the `sample_means`](images/sample_dist_std.jpg)	 
+
+We’ll focus on the first point in this exercise and the second point in the next exercise.
+
+As an example of this, let’s look again at our salmon fish population. Last exercise, we saw that the sampling distribution of the mean was normally distributed. In the plot below, we can see that the mean of the simulated sampling distribution is approximately equal to the population mean.
+
+This graph shows the distribution of salmon weights across the entire population. The mean is at about 60.7 pounds. The distribution is right-skewed as it ranges from 0 to almost 300 pounds.This graph shows the sampling distribution of salmon weights across a sample size of 50. The mean is at about 60.8 pounds which is almost identical to the population mean. The sampling distribution is also approximately normal showcasing both key ideas behind the central limit theorem.
+
+In the workspace, we’ve simulated a sampling distribution of the mean using a sample size of 50.
 
