@@ -131,3 +131,6 @@ The sampling distribution is also approximately normal showcasing both key ideas
 
 In the workspace, we’ve simulated a sampling distribution of the mean using a sample size of 50.
 
+# [Standard Error](https://www.codecademy.com/courses/probability-mssp/lessons/sampling-distributions-mssp/exercises/standard-error)
+
+
