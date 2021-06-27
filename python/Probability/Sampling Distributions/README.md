@@ -60,7 +60,8 @@ sns.histplot(sample_means, stat='density')
 plt.title("Sampling Distribution of the Mean")
 plt.show()
 ```
-The distribution of the sample_means looks like this:
+The distribution of the `sample_means` looks like this:
+![]()
 
 This is a sampling distribution with a sample of 500. The distribution is centered around x=60 and looks fairly symmetrical.
 
