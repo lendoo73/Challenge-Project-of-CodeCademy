@@ -62,7 +62,7 @@ plt.show()
 ```
 The distribution of the `sample_means` looks like this:
 
-![The distribution of the `sample_means`](sampling_dist.svg)
+![The distribution of the `sample_means`](images/sampling_dist.svg)
 
 This is a sampling distribution with a sample of 500. The distribution is centered around x=60 and looks fairly symmetrical.
 
