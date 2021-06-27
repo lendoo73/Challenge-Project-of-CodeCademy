@@ -40,7 +40,7 @@ In order to understand how much variation we can expect in those sample means, w
 This process gives us an estimate of the sampling distribution of the mean for a sample size of 50 fish.
 
 The code to accomplish this is shown below:
-```
+```py
 salmon_population = population['Salmon_Weight']
  
 sample_size = 50
