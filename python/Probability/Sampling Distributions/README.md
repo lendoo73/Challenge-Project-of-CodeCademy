@@ -66,5 +66,6 @@ The distribution of the `sample_means` looks like this:
 
 This is a sampling distribution with a sample of 500. The distribution is centered around x=60 and looks fairly symmetrical.
 
-Note that we can look at a sampling distribution for any statistic. For example, we could estimate the sampling distribution of the maximum by calculating the maximum of each sample, rather than the mean (as shown above).
+Note that we can look at a sampling distribution for any statistic. 
+For example, we could estimate the sampling distribution of the maximum by calculating the maximum of each sample, rather than the mean (as shown above).
 
