@@ -149,3 +149,20 @@ Two important things to note about this formula is that:
 * As **sample size increases**, the **standard error** will **decrease**.
 * As the population **standard deviation increases, so will the standard error**.
 
+# [Biased Estimators](https://www.codecademy.com/courses/probability-mssp/lessons/sampling-distributions-mssp/exercises/biased-estimators)
+
+According to the Central Limit Theorem, the mean of the sampling distribution of the mean is equal to the population mean. 
+This is the case for some, but not all, sampling distributions. 
+Remember, you can have a sampling distribution for any sample statistic, including:
+* mean
+* median
+* max / min
+* variance
+Because the mean of the sampling distribution of the mean is equal to the mean of the population, we call it an unbiased estimator. 
+A statistic is called an unbiased estimator of a population parameter if the mean of the sampling distribution of the statistic is 
+equal to the value of the statistic for the population.
+
+The maximum is one example of a biased estimator, meaning that the mean of the sampling distribution of the maximum is not centered at the population maximum.
+
+
+
