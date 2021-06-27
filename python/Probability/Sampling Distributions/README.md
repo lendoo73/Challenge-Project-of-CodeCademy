@@ -113,9 +113,21 @@ Let’s break this up:
 
 We’ll focus on the first point in this exercise and the second point in the next exercise.
 
-As an example of this, let’s look again at our salmon fish population. Last exercise, we saw that the sampling distribution of the mean was normally distributed. In the plot below, we can see that the mean of the simulated sampling distribution is approximately equal to the population mean.
+As an example of this, let’s look again at our salmon fish population. 
+Last exercise, we saw that the sampling distribution of the mean was normally distributed. 
+In the plot below, we can see that the mean of the simulated sampling distribution is approximately equal to the population mean.
 
-This graph shows the distribution of salmon weights across the entire population. The mean is at about 60.7 pounds. The distribution is right-skewed as it ranges from 0 to almost 300 pounds.This graph shows the sampling distribution of salmon weights across a sample size of 50. The mean is at about 60.8 pounds which is almost identical to the population mean. The sampling distribution is also approximately normal showcasing both key ideas behind the central limit theorem.
+![The distribution of the `sample_means`](images/pop_mean.svg)	 
+
+This graph shows the distribution of salmon weights across the entire population. 
+The mean is at about 60.7 pounds. 
+The distribution is right-skewed as it ranges from 0 to almost 300 pounds.
+
+![The distribution of the `sample_means`](images/mean_sampling_dist.svg)	
+
+This graph shows the sampling distribution of salmon weights across a sample size of 50. 
+The mean is at about 60.8 pounds which is almost identical to the population mean. 
+The sampling distribution is also approximately normal showcasing both key ideas behind the central limit theorem.
 
 In the workspace, we’ve simulated a sampling distribution of the mean using a sample size of 50.
 
