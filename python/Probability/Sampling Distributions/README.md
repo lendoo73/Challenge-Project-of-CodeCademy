@@ -87,9 +87,13 @@ The salmon weight is skewed right, meaning the tail of the distribution is longe
 
 This graph shows the distribution of salmon weights across the entire population. The distribution is right-skewed as it ranges from 0 to almost 300 pounds.
 
-Next, we’ve simulated a sampling distribution of the mean (using a sample size of 100) and super-imposed a normal distribution on top of it. Note how the estimated sampling distribution follows the normal curve almost perfectly.
+Next, we’ve simulated a sampling distribution of the mean (using a sample size of 100) and super-imposed a normal distribution on top of it. 
+Note how the estimated sampling distribution follows the normal curve almost perfectly.
 
-This graph shows the sampling distribution of salmon weights across a sample size of 50. The sampling distribution is approximately normal, despite the population distribution being right-skewed, showcasing one of the key ideas behind the central limit theorem.
+![The distribution of the `sample_means`](images/normal_samp_distribution.svg)
+
+This graph shows the sampling distribution of salmon weights across a sample size of 50. 
+The sampling distribution is approximately normal, despite the population distribution being right-skewed, showcasing one of the key ideas behind the central limit theorem.
 
 Note that the CLT only applies to the sampling distribution of the mean and not other statistics like maximum, minimum, and variance!
 
