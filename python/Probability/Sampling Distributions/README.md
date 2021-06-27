@@ -69,3 +69,28 @@ This is a sampling distribution with a sample of 500. The distribution is center
 Note that we can look at a sampling distribution for any statistic. 
 For example, we could estimate the sampling distribution of the maximum by calculating the maximum of each sample, rather than the mean (as shown above).
 
+# [Central Limit Theorem](https://www.codecademy.com/courses/probability-mssp/lessons/sampling-distributions-mssp/exercises/central-limit-theorem)
+
+So far, we’ve defined the term sampling distribution and shown how we can simulate an approximated sampling distribution for a few different statistics 
+(mean, maximum, variance, etc.). 
+The ***Central Limit Theorem (CLT)*** allows us to specifically describe the sampling distribution of the mean.
+
+The CLT states that the sampling distribution of the mean is normally distributed as long as the population is not too skewed or the sample size is large enough. 
+Using a sample size of n > 30 is usually a good rule of thumb, regardless of what the distribution of the population is like. 
+If the distribution of the population is normal, the sample size can be smaller than that.
+
+Let’s take another look at the salmon weight to see how the CLT applies here. 
+The first plot below shows the population distribution. 
+The salmon weight is skewed right, meaning the tail of the distribution is longer on the right than on the left.
+
+![The distribution of the `sample_means`](images/pop_distribution.svg)
+
+This graph shows the distribution of salmon weights across the entire population. The distribution is right-skewed as it ranges from 0 to almost 300 pounds.
+
+Next, we’ve simulated a sampling distribution of the mean (using a sample size of 100) and super-imposed a normal distribution on top of it. Note how the estimated sampling distribution follows the normal curve almost perfectly.
+
+This graph shows the sampling distribution of salmon weights across a sample size of 50. The sampling distribution is approximately normal, despite the population distribution being right-skewed, showcasing one of the key ideas behind the central limit theorem.
+
+Note that the CLT only applies to the sampling distribution of the mean and not other statistics like maximum, minimum, and variance!
+
+
