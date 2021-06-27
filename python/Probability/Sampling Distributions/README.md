@@ -97,4 +97,7 @@ The sampling distribution is approximately normal, despite the population distri
 
 Note that the CLT only applies to the sampling distribution of the mean and not other statistics like maximum, minimum, and variance!
 
+# [CLT Continued](https://www.codecademy.com/courses/probability-mssp/lessons/sampling-distributions-mssp/exercises/clt-continued)
+
+
 
