@@ -138,17 +138,14 @@ The second part of the Central Limit Theorem is:
 The sampling distribution of the mean is normally distributed, with standard deviation equal to the **population standard deviation** 
 (often denoted as the greek letter, sigma) **divided by the square root of the sample size** (often denoted as n):
 
-\frac{\sigma}{\sqrt{n}} 
- 
-The standard deviation of a sampling distribution is also known as the standard error of the estimate of the mean. In many instances, we cannot know the population standard deviation, so we estimate the standard error using the sample standard deviation:
+![standard error formula](images/standard_error_formula.jpg)	
 
-\frac{standard\ deviation\ of\ our\ sample}{\sqrt{\text{sample size}}} 
-sample size
-​	 
-standard deviation of our sample
-​	 
+The standard deviation of a sampling distribution is also known as the **standard error of the estimate of the mean**. 
+In many instances, we cannot know the population standard deviation, so we estimate the standard error using the sample standard deviation:
+
+![standard error formula](images/standard_error_of_the_estimate_of_the_mean.jpg)	
+
 Two important things to note about this formula is that:
-
-As sample size increases, the standard error will decrease.
-As the population standard deviation increases, so will the standard error.
+* As **sample size increases**, the **standard error** will **decrease**.
+* As the population **standard deviation increases, so will the standard error**.
 
