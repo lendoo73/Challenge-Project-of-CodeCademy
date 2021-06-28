@@ -17,7 +17,7 @@ plt.ylabel('weight (kg)')
 plt.show()
 ```
 
-![height vs. weight](height_weight_scatter.svg)
+![height vs. weight](images/height_weight_scatter.svg)
 scatter plot showing a positive linear relationship between height and weight (people who are taller tend to weigh more)
 
 When we look at this plot, we see that there is some evidence of a relationship between height and weight: people who are taller tend to weigh more. 
