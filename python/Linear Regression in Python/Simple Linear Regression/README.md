@@ -24,3 +24,5 @@ Scatter plot showing a positive linear relationship between height and weight (p
 When we look at this plot, we see that there is some evidence of a relationship between height and weight: people who are taller tend to weigh more. 
 In the following exercises, we’ll learn how to model this relationship with a line. 
 If you were to draw a line through these points to describe the relationship between height and weight, what line would you draw?
+
+# [Equation of a Line](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/equation-of-a-line)
