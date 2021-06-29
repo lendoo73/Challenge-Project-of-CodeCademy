@@ -81,6 +81,35 @@ The total squared error (loss) is:
 Notice that we square each individual distance so that points below and above the line contribute equally to loss (when we square a negative number, the result is positive). 
 To find the best-fit line, we need to find the slope and intercept of the line that minimizes loss.
 
+# [Fitting a Linear Regression Model in Python](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/fitting-a-linear-regression-model-in-python)
+
+There are a number of Python libraries that can be used to fit a linear regression, 
+but in this course, we will use the `OLS.from_formula()` function from `statsmodels.api` because it uses simple syntax and provides comprehensive model summaries.
+
+Suppose we have a dataset named `body_measurements` with columns `height` and `weight`. 
+If we want to fit a model that can predict weight based on height, we can create the model as follows:
+```py
+model = sm.OLS.from_formula('weight ~ height', data = body_measurements)
+```
+
+We used the formula `'weight ~ height'` because we want to predict **weight** (it is the **outcome** variable) using **height** as a **predictor**. 
+Then, we can fit the model using `.fit()`:
+```py
+results = model.fit()
+```
+Finally, we can inspect a summary of the results using `print(results.summary())`. 
+For now, we’ll only look at the coefficients using `results.params`, but the full summary table is useful because it contains other important diagnostic information.
+```py
+print(results.params)
+```
+Output:
+```py
+Intercept   -21.67
+height        0.50
+dtype: float64
+```
+This tells us that the best-fit intercept is `-21.67`, and the best-fit slope is `0.50`.
+
 
 
 
