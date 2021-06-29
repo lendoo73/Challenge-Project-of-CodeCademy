@@ -110,7 +110,53 @@ dtype: float64
 ```
 This tells us that the best-fit intercept is `-21.67`, and the best-fit slope is `0.50`.
 
+# [Using a Regression Model for Prediction](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/using-a-regression-model-for-prediction)
 
+Suppose that we have a dataset of heights and weights for 100 adults. 
+We fit a linear regression and print the coefficients:
+```py
+model = sm.OLS.from_formula('weight ~ height', data = body_measurements)
+results = model.fit()
+print(results.params)
+```
+Output:
+```py
+Intercept   -21.67
+height        0.50
+dtype: float64
+```
+This regression allows us to predict the weight of an adult if we know their height. 
+To make a prediction, we need to plug in the intercept and slope to our equation for a line. 
+The equation is:
+
+![prediction](images/prediction.jpg)
+
+To make a prediction, we can plug in any height. 
+For example, we can calculate that the expected weight for a 160cm tall person is 58.33kg:
+
+![weight for a 160cm tall person](images/weight_for_a_160cm_tall_person.jpg)
+
+In python, we can calculate this by plugging in values or by accessing the intercept and slope from `results.params` using their indices (`0` and `1`, respectively):
+```py
+print(0.50 * 160 - 21.67) 
+# Output: 58.33
+ 
+# OR:
+ 
+print(results.params[1]*160 + results.params[0])
+# Output: 58.33
+```
+We can also do this calculation using the `.predict()` method on the fitted model. 
+To predict the weight of a 160 cm tall person, we need to first create a new dataset with `height` equal to `160` as shown below:
+```py
+newdata = {"height":[160]}
+print(results.predict(newdata))
+Output:
+
+0      58.33
+dtype: float64
+```
+Note that we get the same result (`58.33`) as with the other methods; however, it is returned as a data frame.
 
 
 
