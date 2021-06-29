@@ -51,3 +51,37 @@ image showing a line with a point at the y-axis (a vertical line where the x-var
 The line also has two other points, which are connected by a horizontal and vertical dashed line, labeled "run" and "rise," respectively. 
 The slope is calculated as rise/run which is equal to -2 in this example.
 
+# [Finding the "Best" Line](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/finding-the-best-line)
+
+In the last exercise, we tried to eye-ball what the best-fit line might look like. 
+In order to actually choose a line, we need to come up with some criteria for what “best” actually means.
+
+Depending on our ultimate goals and data, we might choose different criteria; 
+however, a common choice for linear regression is ordinary least squares (OLS). 
+In simple OLS regression, we assume that the relationship between two variables x and y can be modeled as:
+
+![ols_formula](images/ols_formula.jpg)
+
+We define “best” as the line that minimizes the total squared error for all data points. 
+This total squared error is called the loss function in machine learning. 
+For example, consider the following plot:
+
+![loss](images/loss.jpg)
+
+plot showing two points on either side of a line. 
+One point is one unit below the line and has a label of -1; the other is 3 units above the line and has a label of 3
+
+In this plot, we see two points on either side of a line. 
+One of the points is one unit below the line (labeled -1). 
+The other point is three units above the line (labeled 3). 
+The total squared error (loss) is:
+
+![loss](images/loss_example.jpg)
+
+Notice that we square each individual distance so that points below and above the line contribute equally to loss (when we square a negative number, the result is positive). 
+To find the best-fit line, we need to find the slope and intercept of the line that minimizes loss.
+
+
+
+
+
