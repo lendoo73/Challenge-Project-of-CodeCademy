@@ -158,5 +158,7 @@ dtype: float64
 ```
 Note that we get the same result (`58.33`) as with the other methods; however, it is returned as a data frame.
 
+# [Interpreting a Regression Model](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/interpreting-a-regression-model)
+
 
 
