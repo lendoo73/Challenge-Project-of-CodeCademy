@@ -66,7 +66,7 @@ We define “best” as the line that minimizes the total squared error for all 
 This total squared error is called the loss function in machine learning. 
 For example, consider the following plot:
 
-![loss](images/loss.jpg)
+![loss](images/loss.svg)
 
 plot showing two points on either side of a line. 
 One point is one unit below the line and has a label of -1; the other is 3 units above the line and has a label of 3
