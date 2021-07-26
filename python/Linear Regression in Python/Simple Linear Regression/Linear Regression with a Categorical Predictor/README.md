@@ -113,6 +113,16 @@ We can use the intercept and two slopes to construct the following equation to p
 
 ### *rent = 3327.4 + 1811.5 * borough[T.Manhattan] - 811.3 * borough[T.Queens]*
 
+
+
+
+
+
+
+
+
+
+
 To understand and interpret this equation, we can construct separate equations for each borough:
 
 Equation 1: Brooklyn
