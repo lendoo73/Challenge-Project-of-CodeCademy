@@ -232,18 +232,22 @@ Output:
 dtype: float64
 ```
 
-The residuals are the differences between each of these fitted values and the true values of the outcome variable. They can be calculated by subtracting the fitted values from the actual values. We can perform this element-wise subtraction in Python by simply subtracting one python series from the other, as shown below:
-
+The residuals are the differences between each of these fitted values and the true values of the outcome variable. 
+They can be calculated by subtracting the fitted values from the actual values. 
+We can perform this element-wise subtraction in Python by simply subtracting one python series from the other, as shown below:
+```py
 residuals = body_measurements.weight - fitted_values
 print(residuals.head())
+```
 Output:
-
+```
 0   -2.673077
 1   -1.100962
 2    3.278846
 3   -3.711538
 4    2.841346
 dtype: float64
+```
 
 
 
