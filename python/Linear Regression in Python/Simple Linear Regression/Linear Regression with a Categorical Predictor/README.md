@@ -65,8 +65,8 @@ Output:
  [1. 0. 1.]]
 ```
 
-The first column is all `1`s, just like we would get for a quantitative predictor; but the second two columns were formed based on the borough variable. 
-Remember that the first five values of the borough column looked like this:
+The first column is all `1`s, just like we would get for a quantitative predictor; but the second two columns were formed based on the `borough` variable. 
+Remember that the first five values of the `borough` column looked like this:
 |       |
 | ---- |
 | borough |
@@ -76,27 +76,43 @@ Remember that the first five values of the borough column looked like this:
 | Queens |
 | Queens |
 
-Note that the second column of the X matrix [0, 1, 1, 0, 0] is an indicator variable for Manhattan: it is equal to 1 where the value of borough is 'Manhattan' and 0 otherwise. Meanwhile, the third column of the X matrix ([0, 0, 0, 1, 1]) is an indicator variable for Queens: it is equal to 1 where the value of borough is 'Queens' and 0 otherwise.
+Note that the second column of the X matrix `[0, 1, 1, 0, 0]` is an indicator variable for Manhattan: 
+it is equal to `1` where the value of `borough` is `'Manhattan'` and `0` otherwise. 
+Meanwhile, the third column of the X matrix (`[0, 0, 0, 1, 1]`) is an indicator variable for Queens: 
+it is equal to `1` where the value of borough is `'Queens'` and `0` otherwise.
 
-The X matrix does not contain an indicator variable for Brooklyn. That’s because this data set only contains three possible values of borough: 'Brooklyn', 'Manhattan', and 'Queens'. In order to recreate the borough column, we only need two indicator columns — because any apartment that is not in 'Manhattan' or 'Queens' must be 'Brooklyn'. For example, the first row of the X matrix has 0s in both indicator columns, indicating that the apartment must be in Brooklyn. Mathematically, we say that a 'Brooklyn' indicator creates collinearity in the X matrix. In regular English: a 'Brooklyn' indicator does not add any new information.
+The X matrix does not contain an indicator variable for Brooklyn. 
+That’s because this data set only contains three possible values of `borough`: `'Brooklyn'`, `'Manhattan'`, and `'Queens'`. 
+In order to recreate the `borough` column, we only need two indicator columns — because any apartment that is not in `'Manhattan'` or `'Queens'` must be `'Brooklyn'`. 
+For example, the first row of the X matrix has `0`s in both indicator columns, indicating that the apartment must be in Brooklyn. 
+Mathematically, we say that a `'Brooklyn'` indicator creates collinearity in the X matrix. 
+In regular English: a `'Brooklyn'` indicator does not add any new information.
 
-Because 'Brooklyn' is missing from the X matrix, it is the reference category for this model.
+Because `'Brooklyn'` is missing from the X matrix, it is the ***reference category*** for this model.
 
-Implementation and Interpretation
-Let’s now fit a linear regression model using statsmodels and print out the model coefficients:
+## Implementation and Interpretation
 
+Let’s now fit a linear regression model using `statsmodels` and print out the model coefficients:
+```py
 import statsmodels.api as sm
 model = sm.OLS.from_formula('rent ~ borough', rentals).fit()
 print(model.params)
-Output:
+```
 
+Output:
+```
 Intercept               3327.403751
 borough[T.Manhattan]    1811.536627
 borough[T.Queens]       -811.256430
 dtype: float64
-In the output, we see two different slopes: one for borough[T.Manhattan] and one for borough[T.Queens], which are the two indicator variables we saw in the X matrix. We can use the intercept and two slopes to construct the following equation to predict rent:
+```
 
-rent = 3327.4 + 1811.5 * borough[T.Manhattan] - 811.3 * borough[T.Queens]rent=3327.4+1811.5∗borough[T.Manhattan]−811.3∗borough[T.Queens]
+In the output, we see two different slopes: 
+one for `borough[T.Manhattan]` and one for `borough[T.Queens]`, which are the two indicator variables we saw in the X matrix. 
+We can use the intercept and two slopes to construct the following equation to predict rent:
+
+### *rent = 3327.4 + 1811.5 * borough[T.Manhattan] - 811.3 * borough[T.Queens]rent=3327.4+1811.5∗borough[T.Manhattan]−811.3∗borough[T.Queens]*
+
 To understand and interpret this equation, we can construct separate equations for each borough:
 
 Equation 1: Brooklyn
