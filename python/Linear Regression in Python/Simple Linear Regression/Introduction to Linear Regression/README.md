@@ -249,6 +249,55 @@ Output:
 dtype: float64
 ```
 
+# [Assumptions of Linear Regression Part 2](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/assumptions-of-linear-regression-part-2)
+
+Once we’ve calculated the fitted values and residuals for a model, we can check the normality and homoscedasticity assumptions of linear regression.
+
+## Normality assumption
+
+The normality assumption states that the residuals should be normally distributed. 
+To check this assumption, we can inspect a histogram of the residuals and make sure that the distribution looks approximately normal (no skew or multiple “humps”):
+```py
+plt.hist(residuals)
+plt.show()
+```
+
+![predicts weight based on height](images/resids_normal.svg)
+
+symmetric histogram with a single hump
+
+These residuals appear normally distributed, leading us to conclude that the normality assumption is satisfied.
+
+If the plot instead looked something like the distribution below (which is skewed right), we would be concerned that the normality assumption is not met:
+
+![predicts weight based on height](images/resids_not_normal.svg)
+
+histogram which is right skewed: there is a longer tail on the right side than the left
+
+## Homoscedasticity assumption
+
+Homoscedasticity is a fancy way of saying that the residuals have equal variation across all values of the predictor variable. 
+A common way to check this is by plotting the residuals against the fitted values.
+```py
+plt.scatter(fitted_values, residuals)
+plt.show()
+```
+
+![predicts weight based on height](images/fittedvals_resids_nopattern.svg)
+
+scatter plot with a splatter of randomly distributed points
+
+If the homoscedasticity assumption is met, then this plot will look like a random splatter of points, centered around y = 0 (as in the example above).
+
+If there are any patterns or asymmetry, that would indicate the assumption is NOT met and linear regression may not be appropriate. 
+For example:
+
+![predicts weight based on height](images/fittedvals_resids_pattern.svg)
+
+scatter plot with a funnel-shaped pattern of points
+
+
+
 
 
 
