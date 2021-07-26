@@ -24,12 +24,13 @@ rentals = pd.read_csv('rentals.csv')
 print(rentals.head(5))
 ```
 
-rent	borough
-0	5295	Brooklyn
-1	4020	Manhattan
-2	16000	Manhattan
-3	3150	Queens
-4	2955	Queens
+| | rent |	borough |
+| ---- | ---- | ---- |
+| 0 | 5295 |	Brooklyn |
+| 1 |	4020 |	Manhattan |
+| 2 |	16000 |	Manhattan |
+| 3 |	3150 |	Queens |
+| 4 |	2955 |	Queens |
 
 The X Matrix
 To understand how we can fit a regression model with a categorical predictor, it’s useful to walk through what happens when we use statsmodels.api.OLS.from_formula() to create a model. When we pass a formula to this function (like 'weight ~ height' or 'rent ~ borough'), it actually creates a new data set, which we don’t see. This new data set is often referred to as the X matrix, and it is used to fit the model.
