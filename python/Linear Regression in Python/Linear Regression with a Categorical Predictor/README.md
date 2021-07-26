@@ -2,19 +2,28 @@
 
 Learn how to fit and interpret a linear model with a categorical predictor that has more than two categories.
 
-Introduction
-Linear regression is a machine learning technique that can be used to model the relationship between a quantitative variable and some other variable(s). Those other variables can be either quantitative (e.g., height or salary) or categorical (e.g., job industry or hair color). However, if we want to include categorical predictors in a linear regression model, we need to treat them a little differently than quantitative variables. This article will explore the implementation and interpretation of a single categorical predictor with more than two categories.
+## Introduction
 
-The Data
-As an example, we’ll use a dataset from StreetEasy that contains information about housing rentals in New York City. For now, we’ll only focus on two columns of this dataset:
+Linear regression is a machine learning technique that can be used to model the relationship between a quantitative variable and some other variable(s). 
+Those other variables can be either quantitative (e.g., height or salary) or categorical (e.g., job industry or hair color). 
+However, if we want to include categorical predictors in a linear regression model, we need to treat them a little differently than quantitative variables. 
+This article will explore the implementation and interpretation of a single categorical predictor with more than two categories.
 
-rent: the rental price of each apartment
-borough: the borough that the apartment is located in, with three possible values ('Manhattan', 'Brooklyn', and 'Queens')
+## The Data
+
+As an example, we’ll use a [dataset from StreetEasy](https://github.com/Codecademy/datasets/tree/master/streeteasy) 
+that contains information about housing rentals in New York City. 
+For now, we’ll only focus on two columns of this dataset:
+* **rent**: the rental price of each apartment
+* **borough**: the borough that the apartment is located in, with three possible values (**'Manhattan'**, **'Brooklyn'**, and **'Queens'**)
+
 The first five rows of data are printed below:
-
+```py
 import pandas as pd
 rentals = pd.read_csv('rentals.csv')
 print(rentals.head(5))
+```
+
 rent	borough
 0	5295	Brooklyn
 1	4020	Manhattan
