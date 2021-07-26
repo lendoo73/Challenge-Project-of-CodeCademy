@@ -343,7 +343,32 @@ This will output the following plot (without the additional labels or colors):
 
 Same scatterplot as above, but with a line connecting the middle of the non-bball player heights to the middle of the bball player heights.
 
+# [Categorical Predictors: Fit and Interpretation](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/categorical-predictors-fit-and-interpretation)
 
+Now that we’ve seen what a regression model with a binary predictor looks like visually, we can actually fit the model using `statsmodels.api.OLS.from_formula()`, 
+the same way we did for a quantitative predictor:
+
+```py
+model = sm.OLS.from_formula('height ~ play_bball', data)
+results = model.fit()
+print(results.params)
+```
+Output:
+```
+Intercept     169.016
+play_bball     14.628
+dtype: float64
+```
+Note that this will work if the `play_bball` variable is coded with `0`s and `1`s, but it will also work if it is coded with `True`s and `False`s, 
+or even if it is coded with strings like `'yes'` and `'no'` 
+(in this case, the coefficient label will look something like `play_bball[T.yes]` in the params output, indicating that `'yes'` corresponds to a `1`).
+
+To interpret this output, we first need to remember that the intercept is the expected value of the outcome variable when the predictor is equal to zero. 
+In this case, the intercept is therefore the mean height of non-basketball players.
+
+The slope is the expected difference in the outcome variable for a one unit difference in the predictor variable. 
+In this case, a one unit difference in `play_bball` is the difference between not being a basketball player and being a basketball player. 
+Therefore, the slope is the difference in mean heights for basketball players and non-basketball players.
 
 
 
