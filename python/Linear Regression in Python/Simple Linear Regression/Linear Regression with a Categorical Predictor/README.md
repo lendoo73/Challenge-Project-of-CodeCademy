@@ -32,13 +32,20 @@ print(rentals.head(5))
 | 3 |	3150 |	Queens |
 | 4 |	2955 |	Queens |
 
-The X Matrix
-To understand how we can fit a regression model with a categorical predictor, it’s useful to walk through what happens when we use statsmodels.api.OLS.from_formula() to create a model. When we pass a formula to this function (like 'weight ~ height' or 'rent ~ borough'), it actually creates a new data set, which we don’t see. This new data set is often referred to as the X matrix, and it is used to fit the model.
+## The X Matrix
 
-When we use a quantitative predictor, the X matrix looks similar to the original data, but with an additional column of 1s in front (the reasoning behind this column of 1s is the subject of a future article — for now, no need to worry about it!). However, when we fit the model with a categorical predictor, something else happens: we end up with additional column(s) of 1s and 0s.
+To understand how we can fit a regression model with a categorical predictor, 
+it’s useful to walk through what happens when we use `statsmodels.api.OLS.from_formula()` to create a model. 
+When we pass a formula to this function (like `'weight ~ height'` or `'rent ~ borough'`), it actually creates a new data set, which we don’t see. 
+This new data set is often referred to as the *X matrix*, and it is used to fit the model.
 
-For example, let’s say we want to fit a regression predicting rent based on borough. We can see the X matrix for this model using patsy.dmatrices(), which is implemented behind the scenes in statsmodels:
+When we use a quantitative predictor, the X matrix looks similar to the original data, but with an additional column of `1`s in front 
+(the reasoning behind this column of `1`s is the subject of a future article — for now, no need to worry about it!). 
+However, when we fit the model with a categorical predictor, something else happens: we end up with additional column(s) of `1`s and `0`s.
 
+For example, let’s say we want to fit a regression predicting rent based on `borough`. 
+We can see the X matrix for this model using `patsy.dmatrices()`, which is implemented behind the scenes in statsmodels:
+```py
 import pandas as pd
 import patsy
  
@@ -47,21 +54,28 @@ y, X = patsy.dmatrices('rent ~ borough', rentals)
  
 # Print out the first 5 rows of X
 print(X[0:5])
-Output:
+```
 
+Output:
+```py
 [[1. 0. 0.]
  [1. 1. 0.]
  [1. 1. 0.]
  [1. 0. 1.]
  [1. 0. 1.]]
-The first column is all 1s, just like we would get for a quantitative predictor; but the second two columns were formed based on the borough variable. Remember that the first five values of the borough column looked like this:
+```
 
-borough
-Brooklyn
-Manhattan
-Manhattan
-Queens
-Queens
+The first column is all `1`s, just like we would get for a quantitative predictor; but the second two columns were formed based on the borough variable. 
+Remember that the first five values of the borough column looked like this:
+| |
+| ---- |
+| borough |
+| Brooklyn |
+| Manhattan |
+| Manhattan |
+| Queens |
+| Queens |
+
 Note that the second column of the X matrix [0, 1, 1, 0, 0] is an indicator variable for Manhattan: it is equal to 1 where the value of borough is 'Manhattan' and 0 otherwise. Meanwhile, the third column of the X matrix ([0, 0, 0, 1, 1]) is an indicator variable for Queens: it is equal to 1 where the value of borough is 'Queens' and 0 otherwise.
 
 The X matrix does not contain an indicator variable for Brooklyn. That’s because this data set only contains three possible values of borough: 'Brooklyn', 'Manhattan', and 'Queens'. In order to recreate the borough column, we only need two indicator columns — because any apartment that is not in 'Manhattan' or 'Queens' must be 'Brooklyn'. For example, the first row of the X matrix has 0s in both indicator columns, indicating that the apartment must be in Brooklyn. Mathematically, we say that a 'Brooklyn' indicator creates collinearity in the X matrix. In regular English: a 'Brooklyn' indicator does not add any new information.
