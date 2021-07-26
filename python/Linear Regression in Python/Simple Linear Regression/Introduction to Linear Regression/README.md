@@ -370,8 +370,10 @@ The slope is the expected difference in the outcome variable for a one unit diff
 In this case, a one unit difference in `play_bball` is the difference between not being a basketball player and being a basketball player. 
 Therefore, the slope is the difference in mean heights for basketball players and non-basketball players.
 
+# [Review](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/review)
 
-
-
-
-
+You’ve learned to:
+* Fit a simple OLS linear regression model
+* Use both **quantitative** and **binary categorical predictors**
+* Interpret the **coefficients** of a regression model
+* Check the **assumptions** of a regression model
