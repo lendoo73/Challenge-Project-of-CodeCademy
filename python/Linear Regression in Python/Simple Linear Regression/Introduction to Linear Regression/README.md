@@ -160,5 +160,9 @@ Note that we get the same result (`58.33`) as with the other methods; however, i
 
 # [Interpreting a Regression Model](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/interpreting-a-regression-model)
 
+Let’s again inspect the output for a regression that predicts weight based on height. 
+The regression line looks something like this:
+
+![predicts weight based on height](images/height_weight_scatter_line.svg)
 
 
