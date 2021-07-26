@@ -67,7 +67,7 @@ Output:
 
 The first column is all `1`s, just like we would get for a quantitative predictor; but the second two columns were formed based on the borough variable. 
 Remember that the first five values of the borough column looked like this:
-| |
+
 | ---- |
 | borough |
 | Brooklyn |
