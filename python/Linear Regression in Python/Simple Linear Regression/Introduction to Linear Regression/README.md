@@ -196,7 +196,54 @@ the magnitude AND the direction of the relationship between the `x` and `y` vari
 For example, suppose we had instead fit a regression of weight with minutes of exercise per day as a predictor — and calculated a slope of `-0.1`. 
 We would interpret this to mean that people who exercise for one additional minute per day are expected to weigh 0.1 kg LESS.
 
+# [Assumptions of Linear Regression Part 1](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/assumptions-of-linear-regression-part-1)
 
+There are a number of assumptions of simple linear regression, which are important to check if you are fitting a linear model. 
+The first assumption is that the relationship between the outcome variable and predictor is linear (can be described by a line). 
+We can check this before fitting the regression by simply looking at a plot of the two variables.
+
+The next two assumptions (normality and heteroscedasticity) are easier to check after fitting the regression. 
+We will learn more about these assumptions in the following exercises, but first, we need to calculate two things: 
+***fitted values*** and ***residuals***.
+
+Again consider our regression model to predict weight based on height (model formula `'weight ~ height'`). 
+The fitted values are the predicted weights for each person in the dataset that was used to fit the model, 
+while the residuals are the differences between the predicted weight and the true weight for each person. 
+Visually:
+
+![predicts weight based on height](images/resids_fvs.svg)
+
+plot showing a line with points on either side. 
+Dotted lines connect each point to the closest vertical location on the line, which is labeled as the fitted value for that point.
+
+We can calculate the fitted values using `.predict()` by passing in the original data. 
+The result is a pandas series containing predicted values for each person in the original dataset:
+```py
+fitted_values = results.predict(body_measurements)
+print(fitted_values.head())
+```
+Output:
+```
+0    66.673077
+1    59.100962
+2    71.721154
+3    70.711538
+4    65.158654
+dtype: float64
+```
+
+The residuals are the differences between each of these fitted values and the true values of the outcome variable. They can be calculated by subtracting the fitted values from the actual values. We can perform this element-wise subtraction in Python by simply subtracting one python series from the other, as shown below:
+
+residuals = body_measurements.weight - fitted_values
+print(residuals.head())
+Output:
+
+0   -2.673077
+1   -1.100962
+2    3.278846
+3   -3.711538
+4    2.841346
+dtype: float64
 
 
 
