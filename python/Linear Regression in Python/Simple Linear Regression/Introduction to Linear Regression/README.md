@@ -322,10 +322,10 @@ To re-create the scatter plot with the best fit line, we could use the following
 print(data.groupby('play_bball').mean().height)
 ```
 Output:
- | play_bball
---- | ---
-0 |	169.016
-1 |	183.644
+|  | play_bball |
+| --- | --- |
+| 0 |	169.016 |
+| 1 |	183.644 |
 
 ```py
 # Create scatter plot
