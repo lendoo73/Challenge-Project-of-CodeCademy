@@ -165,4 +165,19 @@ The regression line looks something like this:
 
 ![predicts weight based on height](images/height_weight_scatter_line.svg)
 
+Note that the units of the intercept and slope of a regression line match the units of the original variables; 
+the intercept of this line is measured in kg, and the slope is measured in kg/cm. 
+To make sense of the intercept (which we calculated previously as -21.67 kg), let’s zoom out on this plot:
+
+![predicts weight based on height](images/height_weight_intercept.svg)
+
+
+
+
+
+
+
+
+
+
 
