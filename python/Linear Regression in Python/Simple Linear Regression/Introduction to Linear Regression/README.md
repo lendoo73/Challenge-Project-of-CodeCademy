@@ -296,6 +296,53 @@ For example:
 
 scatter plot with a funnel-shaped pattern of points
 
+# [Categorical Predictors](https://www.codecademy.com/courses/linear-regression-mssp/lessons/introduction-to-linear-regression/exercises/categorical-predictors)
+
+In the previous exercises, we used a quantitative predictor in our linear regression, but it’s important to note that we can also use categorical predictors. 
+The simplest case of a categorical predictor is a binary variable (only two categories).
+
+For example, suppose we surveyed 100 adults and asked them to report their height in cm and whether or not they play basketball. 
+We’ve coded the variable `bball_player` so that it is equal to `1` if the person plays basketball and `0` if they do not. 
+A plot of `height` vs. `bbball_player` is below:
+
+![predicts weight based on height](images/height_bball.svg)
+
+Scatter plot of height vs. whether or not someone plays basketball (0 means they don't, and 1 means they do); 
+non-basketball players appear shorter on average than basketball players.
+
+We see that people who play basketball tend to be taller than people who do not. 
+Just like before, we can draw a line to fit these points. 
+Take a moment to think about what that line might look like!
+
+You might have guessed (correctly!) that the best fit line for this plot is the one that goes through the mean height for each group. 
+To re-create the scatter plot with the best fit line, we could use the following code:
+
+```py
+# Calculate group means
+print(data.groupby('play_bball').mean().height)
+```
+Output:
+ | play_bball
+--- | ---
+0 |	169.016
+1 |	183.644
+
+```py
+# Create scatter plot
+plt.scatter(data.play_bball, data.height)
+ 
+# Add the line using calculated group means
+plt.plot([0,1], [169.016, 183.644])
+ 
+# Show the plot
+plt.show()
+```
+This will output the following plot (without the additional labels or colors):
+
+![predicts weight based on height](images/height_bball_line.svg)
+
+Same scatterplot as above, but with a line connecting the middle of the non-bball player heights to the middle of the bball player heights.
+
 
 
 
