@@ -171,8 +171,30 @@ To make sense of the intercept (which we calculated previously as -21.67 kg), le
 
 ![predicts weight based on height](images/height_weight_intercept.svg)
 
+plot of height vs. weight with a regression line drawn through the points, zoomed out so that we can see where the line crosses the y-axis (a vertical line at x = 0)
 
+We see that the intercept is the predicted value of the outcome variable (weight) when the predictor variable (height) is equal to zero. 
+In this case, the interpretation of the intercept is that a person who is 0 cm tall is expected to weigh -21 kg. 
+This is pretty non-sensical because it’s impossible for someone to be 0 cm tall!
 
+However, in other cases, this value does make sense and is useful to interpret. 
+For example, if we were predicting ice cream sales based on temperature, the intercept would be the expected sales when the temperature is 0 degrees.
+
+To visualize the slope, let’s zoom in on our plot:
+
+![predicts weight based on height](images/height_weight_slope2.svg)
+
+plot of height vs. weight with a regression line drawn through the points, 
+zoomed in so that we can see that each horizontal increase of height by 1cm is associated with a 0.5 kg increase in height.
+
+Remember that slope can be thought of as rise/run — the ratio between the vertical and horizontal distances between any two points on the line. 
+Therefore, the slope (which we previously calculated to be `0.50` kg/cm) is the expected difference in the outcome variable (weight) for a one unit difference in the predictor variable (height). 
+In other words, we expect that a one centimeter difference in height is associated with 0.5 additional kilograms of weight.
+
+Note that the slope gives us two pieces of information: 
+the magnitude AND the direction of the relationship between the `x` and `y` variables. 
+For example, suppose we had instead fit a regression of weight with minutes of exercise per day as a predictor — and calculated a slope of `-0.1`. 
+We would interpret this to mean that people who exercise for one additional minute per day are expected to weigh 0.1 kg LESS.
 
 
 
