@@ -119,76 +119,98 @@ To understand and interpret this equation, we can construct separate equations f
 
 When an apartment is located in Brooklyn, both `borough[T.Manhattan]` and `borough[T.Queens]` will be equal to zero and the equation becomes:
 
-\begin{aligned} rent = 3327.4 + 1811.5 * 0 - 811.3 * 0 \\ rent = 3327.4 \end{aligned} 
+### *rent = 3327.4 + 1811.5 ∗ 0 − 811.3 ∗ 0*
+### *rent = 3327.4*
 
-rent=3327.4+1811.5∗0−811.3∗0
-rent=3327.4
-​	 
 In other words, the intercept is the predicted (average) rental price for an apartment in Brooklyn (the reference category).
 
-Equation 2: Manhattan
-When an apartment is located in Manhattan, borough[T.Manhattan] = 1 and borough[T.Queens] = 0. The equation becomes:
+### Equation 2: Manhattan
 
-\begin{aligned} rent = 3327.4 + 1811.5 * 1 - 811.3 * 0 \\ rent = 3327.4 + 1811.5 \\ rent = 5138.9 \end{aligned} 
-rent=3327.4+1811.5∗1−811.3∗0
-rent=3327.4+1811.5
-rent=5138.9
-​	 
-We see that the predicted (average) rental price for an apartment in Manhattan is 3327.4 + 1811.5: the intercept (which is the average price in Brooklyn) plus the slope on borough[T.Manhattan]. We can therefore interpret the slope on borough[T.Manhattan] as the difference in average rental price between apartments in Brooklyn (the reference category) and Manhattan.
+When an apartment is located in Manhattan, `borough[T.Manhattan] = 1` and `borough[T.Queens] = 0`. 
+The equation becomes:
 
-Equation 3: Queens
-When an apartment is located in Queens, borough[T.Manhattan] = 0 and borough[T.Queens] = 1. The equation becomes:
+### *rent = 3327.4 + 1811.5 ∗ 1 − 811.3 ∗ 0*
+### *rent = 3327.4 + 1811.5*
+### *rent = 5138.9*
 
-\begin{aligned} rent = 3327.4 + 1811.5 * 0 - 811.3 * 1 \\ rent = 3327.4 - 811.3 \\ rent = 2516.1 \end{aligned} 
-rent=3327.4+1811.5∗0−811.3∗1
-rent=3327.4−811.3
-rent=2516.1
-​	 
-We see that the predicted (average) rental price for an apartment in Queens is 3327.4 - 811.3: the intercept (which is the average price in Brooklyn) plus the slope on borough[T.Queens] (which happens to be negative because Queens apartments are less expensive than Brooklyn apartments). We can therefore interpret the slope on borough[T.Queens] as the difference in average rental price between apartments in Brooklyn (the reference category) and Queens.
+We see that the predicted (average) rental price for an apartment in Manhattan is 3327.4 + 1811.5: 
+the intercept (which is the average price in Brooklyn) plus the slope on `borough[T.Manhattan]`. 
+We can therefore interpret the slope on `borough[T.Manhattan]` as the difference in average rental price between apartments in Brooklyn (the reference category) and Manhattan.
+
+### Equation 3: Queens
+
+When an apartment is located in Queens, `borough[T.Manhattan] = 0` and `borough[T.Queens] = 1`. 
+The equation becomes:
+
+### *rent = 3327.4 + 1811.5 ∗ 0 − 811.3 ∗ 1*
+### *rent = 3327.4 − 811.3*
+### *rent = 2516.1*
+
+We see that the predicted (average) rental price for an apartment in Queens is 3327.4 - 811.3: 
+the intercept (which is the average price in Brooklyn) plus the slope on `borough[T.Queens]` 
+(which happens to be negative because Queens apartments are less expensive than Brooklyn apartments). 
+We can therefore interpret the slope on `borough[T.Queens]` as the difference in average rental price between apartments in Brooklyn (the reference category) and Queens.
 
 We can verify our understanding of all these coefficients by printing out the average rental prices by borough:
-
+```py
 print(rentals.groupby('borough').mean())
+```
 Output:
-
+```py
                   rent
 borough               
 Brooklyn   3327.403751
 Manhattan  5138.940379
 Queens     2516.147321
-The average prices in each borough come out to the exact same values that we predicted based on the linear regression model! For now, this may seem like an overly complicated way to recover mean rental prices by borough, but it is important to understand how this works in order to build up more complex linear regression models in the future.
+```
+The average prices in each borough come out to the exact same values that we predicted based on the linear regression model! 
+For now, this may seem like an overly complicated way to recover mean rental prices by borough, 
+but it is important to understand how this works in order to build up more complex linear regression models in the future.
 
-Changing the Reference Category
-In the example above, we saw that 'Brooklyn' was the default reference category (because it comes first alphabetically), but we can easily change the reference category in the model as follows:
+## Changing the Reference Category
 
+In the example above, we saw that `'Brooklyn'` was the default reference category (because it comes first alphabetically), 
+but we can easily change the reference category in the model as follows:
+```py
 model = sm.OLS.from_formula('rent ~ C(borough, Treatment("Manhattan"))', rentals).fit()
 print(model.params)
+```
 Output:
-
+```py
 Intercept                                         5138.940379
 C(borough, Treatment("Manhattan"))[T.Brooklyn]   -1811.536627
 C(borough, Treatment("Manhattan"))[T.Queens]     -2622.793057
 dtype: float64
-In this example, the reference category is 'Manhattan'. Therefore, the intercept is the mean rental price in Manhattan, and the other slopes are the mean differences for Brooklyn and Queens in comparison to Manhattan.
+```
+In this example, the reference category is `'Manhattan'`. 
+Therefore, the intercept is the mean rental price in Manhattan, and the other slopes are the mean differences for Brooklyn and Queens in comparison to Manhattan.
 
-Other Python Libraries for fitting Linear Models
-There are a few different Python libraries that can be used to fit linear regression models. It is therefore important to understand how this implementation differs for each library. In statsmodels, the creation of the X matrix happens completely “behind the scenes” once we pass in a model formula.
+## Other Python Libraries for fitting Linear Models
 
-In scikit-learn (another popular library for linear regression), we actually need to construct the indicator variables ourselves. Note that we do not have to construct the extra column of 1s that we saw in the X matrix — this also happens behind the scenes in scikit-learn. In order to construct those indicator variables, the pandas get_dummies() function is extremely useful:
+There are a few different Python libraries that can be used to fit linear regression models. 
+It is therefore important to understand how this implementation differs for each library. 
+In `statsmodels`, the creation of the X matrix happens completely “behind the scenes” once we pass in a model formula.
 
+In `scikit-learn` (another popular library for linear regression), we actually need to construct the indicator variables ourselves. 
+Note that we do not have to construct the extra column of `1`s that we saw in the X matrix — this also happens behind the scenes in `scikit-learn`. 
+In order to construct those indicator variables, the pandas `get_dummies()` function is extremely useful:
+```py
 import pandas as pd
 rentals = pd.get_dummies(rentals, columns = ['borough'], drop_first = True)
 print(rentals.head())
+```
 Output:
-
+```py
     rent  borough_Manhattan  borough_Queens
 0   5295                  0               0
 1   4020                  1               0
 2  16000                  1               0
 3   3150                  0               1
 4   2955                  0               1
-Setting drop_first = True tells Python to drop the first indicator variable (for 'Brooklyn' in thie case), which is what we need for linear regression. We can then fit the exact same model using scikit-learn as follows:
-
+```
+Setting `drop_first = True` tells Python to drop the first indicator variable (for `'Brooklyn'` in thie case), which is what we need for linear regression. 
+We can then fit the exact same model using `scikit-learn` as follows:
+```py
 from sklearn.linear_model import LinearRegression
  
 X = rentals[['borough_Manhattan', 'borough_Queens']]
@@ -199,8 +221,14 @@ regr = LinearRegression()
 regr.fit(X, y)
 print(regr.intercept_)
 print(regr.coef_)
+```
+```py
 LinearRegression()
 [3327.40375123]
 [[1811.5366274  -811.25642981]]
-Conclusion
-In this article, we’ve walked through an example of how to implement and interpret categorical predictors in a linear regression model. In the process, we’ve learned a little bit about what happens behind the scenes when we fit a linear model using statsmodels or scikit-learn. This knowledge will help prepare us to fit and interpret more complex models that build upon these foundations.
+```
+
+## Conclusion
+In this article, we’ve walked through an example of how to implement and interpret categorical predictors in a linear regression model. 
+In the process, we’ve learned a little bit about what happens behind the scenes when we fit a linear model using statsmodels or scikit-learn. 
+This knowledge will help prepare us to fit and interpret more complex models that build upon these foundations.
