@@ -131,9 +131,11 @@ In other words, the intercept is the predicted (average) rental price for an apa
 When an apartment is located in Manhattan, `borough[T.Manhattan] = 1` and `borough[T.Queens] = 0`. 
 The equation becomes:
 
-### *rent = 3327.4 + 1811.5 ∗ 1 − 811.3 ∗ 0*
-### *rent = 3327.4 + 1811.5*
-### *rent = 5138.9*
+<h3 align="center">
+    <p><i>rent = 3327.4 + 1811.5 ∗ 1 − 811.3 ∗ 0</i></p>
+    <p><i>rent = 3327.4 + 1811.5</i></p>
+    <p><i>rent = 5138.9</i></p>
+</h3>
 
 We see that the predicted (average) rental price for an apartment in Manhattan is 3327.4 + 1811.5: 
 the intercept (which is the average price in Brooklyn) plus the slope on `borough[T.Manhattan]`. 
@@ -144,9 +146,11 @@ We can therefore interpret the slope on `borough[T.Manhattan]` as the difference
 When an apartment is located in Queens, `borough[T.Manhattan] = 0` and `borough[T.Queens] = 1`. 
 The equation becomes:
 
-### *rent = 3327.4 + 1811.5 ∗ 0 − 811.3 ∗ 1*
-### *rent = 3327.4 − 811.3*
-### *rent = 2516.1*
+<h3 align="center">
+    <p><i>rent = 3327.4 + 1811.5 ∗ 0 − 811.3 ∗ 1</i></p>
+    <p><i>rent = 3327.4 − 811.3</i></p>
+    <p><i>rent = 2516.1</i></p>
+</h3>
 
 We see that the predicted (average) rental price for an apartment in Queens is 3327.4 - 811.3: 
 the intercept (which is the average price in Brooklyn) plus the slope on `borough[T.Queens]` 
