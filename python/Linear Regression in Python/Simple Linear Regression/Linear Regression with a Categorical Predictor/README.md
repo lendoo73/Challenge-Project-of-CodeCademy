@@ -111,7 +111,7 @@ In the output, we see two different slopes:
 one for `borough[T.Manhattan]` and one for `borough[T.Queens]`, which are the two indicator variables we saw in the X matrix. 
 We can use the intercept and two slopes to construct the following equation to predict rent:
 
-<h2><i>rent = 3327.4 + 1811.5 * borough[T.Manhattan] - 811.3 * borough[T.Queens]</i></h2>
+<h3 align="center"><i>rent = 3327.4 + 1811.5 * borough[T.Manhattan] - 811.3 * borough[T.Queens]</i></h3>
 
 To understand and interpret this equation, we can construct separate equations for each borough:
 
