@@ -113,22 +113,14 @@ We can use the intercept and two slopes to construct the following equation to p
 
 ### *rent = 3327.4 + 1811.5 * borough[T.Manhattan] - 811.3 * borough[T.Queens]*
 
-
-
-
-
-
-
-
-
-
-
 To understand and interpret this equation, we can construct separate equations for each borough:
 
-Equation 1: Brooklyn
-When an apartment is located in Brooklyn, both borough[T.Manhattan] and borough[T.Queens] will be equal to zero and the equation becomes:
+### Equation 1: Brooklyn
+
+When an apartment is located in Brooklyn, both `borough[T.Manhattan]` and `borough[T.Queens]` will be equal to zero and the equation becomes:
 
 \begin{aligned} rent = 3327.4 + 1811.5 * 0 - 811.3 * 0 \\ rent = 3327.4 \end{aligned} 
+
 rent=3327.4+1811.5∗0−811.3∗0
 rent=3327.4
 ​	 
