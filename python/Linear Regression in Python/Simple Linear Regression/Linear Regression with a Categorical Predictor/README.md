@@ -120,8 +120,8 @@ To understand and interpret this equation, we can construct separate equations f
 When an apartment is located in Brooklyn, both `borough[T.Manhattan]` and `borough[T.Queens]` will be equal to zero and the equation becomes:
 
 <h3 align="center">
-    <i>rent = 3327.4 + 1811.5 ∗ 0 − 811.3 ∗ 0</i>
-    <i>rent = 3327.4</i>
+    <p><i>rent = 3327.4 + 1811.5 ∗ 0 − 811.3 ∗ 0</i></p>
+    <p><i>rent = 3327.4</i></p>
 </h3>
 
 In other words, the intercept is the predicted (average) rental price for an apartment in Brooklyn (the reference category).
