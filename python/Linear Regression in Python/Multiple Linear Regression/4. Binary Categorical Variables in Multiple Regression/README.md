@@ -78,17 +78,40 @@ For the group that didn’t eat breakfast, we substitute 0 for `breakfast` and s
     </p>
 </h4>
  
-If we inspect these two equations, we see that the only difference is the larger intercept for the group that ate breakfast (55.2) compared to the group that didn’t eat breakfast (32.7). The coefficient on hours_studied is the same for both groups.
+If we inspect these two equations, we see that the only difference is the larger intercept for the group that ate breakfast (55.2) 
+compared to the group that didn’t eat breakfast (32.7). 
+The coefficient on `hours_studied` is the same for both groups.
 
-We can visualize this regression equation by adding both lines to the scatter plot of score and hours_studied with plt.plot() as follows:
-
+We can visualize this regression equation by adding both lines to the scatter plot of `score` and `hours_studied` with `plt.plot()` as follows:
+```py
 import seaborn as sns
 import matplotlib.pyplot as plt
  
-sns.lmplot(x='hours_studied', y='score', hue='breakfast', markers=['o', 'x'], fit_reg=False, data=survey)
-plt.plot(survey.hours_studied, 42.2+8.7*survey.hours_studied, color='blue',linewidth=5)
-plt.plot(survey.hours_studied, 49.7+8.7*survey.hours_studied, color='orange',linewidth=5)
+sns.lmplot(
+    x = 'hours_studied', 
+    y = 'score', 
+    hue = 'breakfast', 
+    markers = ['o', 'x'], 
+    fit_reg = False, 
+    data = survey
+)
+plt.plot(
+    survey.hours_studied, 
+    42.2 + 8.7 * survey.hours_studied, 
+    color = 'blue',
+    linewidth = 5
+)
+plt.plot(
+    survey.hours_studied, 
+    49.7 + 8.7 * survey.hours_studied, 
+    color = 'orange',
+    linewidth = 5
+)
 plt.show()
-Plot showing hours studied on the x-axis and score on the y-axis. Two parallel regression lines run in a positive direction over the scatter plot: the line for the group that didn't eat breakfast starts at a lower intercept than the line for the group that did eat breakfast.
+```
+![scatterplot](e4_binarylines3.svg)
+Plot showing hours studied on the x-axis and score on the y-axis. 
+Two parallel regression lines run in a positive direction over the scatter plot: 
+the line for the group that didn't eat breakfast starts at a lower intercept than the line for the group that did eat breakfast.
 
 From the plot, we can see the regression lines have the same slope. The orange line for the breakfast-eaters starts higher, but increases at the same rate as the blue line for the group that didn’t eat breakfast.
