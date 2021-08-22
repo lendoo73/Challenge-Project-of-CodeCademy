@@ -5,31 +5,78 @@
 Binary categorical variables are variables with exactly two possible values. 
 In a regression model, these two values are generally coded as 1 or 0. 
 For example, a multiple regression equation from the `survey` dataset might look like this:
+<h4>
+    <p><em><code>score = 32.7 + 8.5 * hours_studied + 22.5 * breakfast</code></em></p>
+</h4>
+`breakfast` is a binary categorical predictor with two possible values: “ate breakfast,” which is coded as `1` in the model and “didn’t eat breakfast,” which is coded as `0`. 
+If we substitute these values for `breakfast` in the regression equation, we end up with two equations: one for each group.
 
-
-\text{score} = 32.7 + 8.5*\text{hours\_studied} + 22.5* \text{breakfast}score=32.7+8.5∗hours_studied+22.5∗breakfast
-breakfast is a binary categorical predictor with two possible values: “ate breakfast,” which is coded as 1 in the model and “didn’t eat breakfast,” which is coded as 0. If we substitute these values for breakfast in the regression equation, we end up with two equations: one for each group.
-
-For breakfast eaters, we substitute 1 for breakfast and simplify:
-
-\begin{aligned} \text{score} = 32.7 + 8.5*\text{hours\_studied} + 22.5*\bm{1}& \\ \text{score} = 32.7 + 8.5*\text{hours\_studied} + 22.5& \\ \text{score} = (32.7 + 22.5) + 8.5*\text{hours\_studied}& \\ \text{score} = 55.2 + 8.5*\text{hours\_studied}& \\ \end{aligned} 
-score=32.7+8.5∗hours_studied+22.5∗1
-score=32.7+8.5∗hours_studied+22.5
-score=(32.7+22.5)+8.5∗hours_studied
-score=55.2+8.5∗hours_studied
-​
-  
-​
+For breakfast eaters, we substitute 1 for `breakfast` and simplify:
+<h4>
+    <p>
+        <em>
+            <code>
+                score = 32.7 + 8.5 * hours_studied + 22.5 * 1
+            </code>
+        </em>
+    </p>
+</h4>
+<h4>
+    <p>
+        <em>
+            <code>
+                score = 32.7 + 8.5 * hours_studied + 22.5
+            </code>
+        </em>
+    </p>
+</h4>
+<h4>
+    <p>
+        <em>
+            <code>
+                score = (32.7 + 22.5) + 8.5 * hours_studied
+            </code>
+        </em>
+    </p>
+</h4>
+<h4>
+    <p>
+        <em>
+            <code>
+                score = 55.2 + 8.5 * hours_studied
+            </code>
+        </em>
+    </p>
+</h4>
  
-For the group that didn’t eat breakfast, we substitute 0 for breakfast and simplify:
-
-\begin{aligned} \text{score} = 32.7 + 8.5*\text{hours\_studied} + 22.5*\bm{0}& \\ \text{score} = 32.7 + 8.5*\text{hours\_studied} + 0& \\ \text{score} = 32.7 + 8.5*\text{hours\_studied}& \\ \end{aligned} 
-score=32.7+8.5∗hours_studied+22.5∗0
-score=32.7+8.5∗hours_studied+0
-score=32.7+8.5∗hours_studied
-​
-  
-​
+For the group that didn’t eat breakfast, we substitute 0 for `breakfast` and simplify:
+<h4>
+    <p>
+        <em>
+            <code>
+                score = 32.7 + 8.5 * hours_studied + 22.5 * 0
+            </code>
+        </em>
+    </p>
+</h4>
+<h4>
+    <p>
+        <em>
+            <code>
+                score = 32.7 + 8.5 * hours_studied + 0
+            </code>
+        </em>
+    </p>
+</h4>
+<h4>
+    <p>
+        <em>
+            <code>
+                score = 32.7 + 8.5 * hours_studied
+            </code>
+        </em>
+    </p>
+</h4>
  
 If we inspect these two equations, we see that the only difference is the larger intercept for the group that ate breakfast (55.2) compared to the group that didn’t eat breakfast (32.7). The coefficient on hours_studied is the same for both groups.
 
