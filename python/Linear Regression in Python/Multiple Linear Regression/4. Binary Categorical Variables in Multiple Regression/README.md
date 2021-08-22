@@ -109,9 +109,12 @@ plt.plot(
 )
 plt.show()
 ```
+
 ![scatterplot](e4_binarylines3.svg)
+
 Plot showing hours studied on the x-axis and score on the y-axis. 
 Two parallel regression lines run in a positive direction over the scatter plot: 
 the line for the group that didn't eat breakfast starts at a lower intercept than the line for the group that did eat breakfast.
 
-From the plot, we can see the regression lines have the same slope. The orange line for the breakfast-eaters starts higher, but increases at the same rate as the blue line for the group that didn’t eat breakfast.
+From the plot, we can see the regression lines have the same slope. 
+The orange line for the breakfast-eaters starts higher, but increases at the same rate as the blue line for the group that didn’t eat breakfast.
