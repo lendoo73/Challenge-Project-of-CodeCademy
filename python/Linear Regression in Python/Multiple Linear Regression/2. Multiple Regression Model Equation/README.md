@@ -11,7 +11,7 @@ Since we will be adding at least two predictors to a multiple regression equatio
     </li>
     <li>
         Next, instead of using the names `b` and `m`, we use the names `b0` and `b1`, respectively.
-        <p align="center"><code>y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub></code></p>
+        <p><code>y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub></code></p>
         Notice that we’ve also changed our variable name `x` to `x1` because it is our FIRST predictor.
     </li>
     <li>
