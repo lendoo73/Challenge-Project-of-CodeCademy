@@ -17,10 +17,26 @@ The following code calculates the correlation pairs from dataset `df` and saves 
 ```py
 corr_grid = df.corr()
 ```
-For easy visual detection, we can use Python’s heatmap() function from seaborn to create a heat map of correlations between quantitative variables in a dataset. The code to produce a heat map from corr_grid is shown below.
-
-sns.heatmap(corr_grid, xticklabels=corr_grid.columns, yticklabels=corr_grid.columns, vmin=-1, center=0, vmax=1, cmap='PuOr', annot=True)
+For easy visual detection, we can use Python’s `heatmap()` function from `seaborn` to create a heat map of correlations between quantitative variables in a dataset. 
+The code to produce a heat map from `corr_grid` is shown below.
+```py
+sns.heatmap(
+    corr_grid, 
+    xticklabels = corr_grid.columns, 
+    yticklabels = corr_grid.columns, 
+    vmin = -1, 
+    center = 0, 
+    vmax = 1, 
+    cmap = 'PuOr', 
+    annot = True
+)
 plt.show()
-Plot showing grid of paired correlations from -1 to 1 for variables price, area, rooms, and repairs. Higher absolute correlations are darker.
+```
 
-The heat map above is particularly dark purple (near 1) for the area and rooms variables, indicating a strong linear relationship (corr = 0.95). If we were running a multiple regression to predict price, we might decide to keep only one of those two variables in order to avoid multicollinearity.
+![heatmap](e10_heatmap3.svg)
+
+Plot showing grid of paired correlations from   `-1` to `1` for variables `price`, `area`, `rooms`, and `repairs`. 
+Higher absolute correlations are darker.
+
+The heat map above is particularly dark purple (near 1) for the `area` and `rooms` variables, indicating a strong linear relationship (corr = 0.95). 
+If we were running a multiple regression to predict `price`, we might decide to keep only one of those two variables in order to avoid multicollinearity.
