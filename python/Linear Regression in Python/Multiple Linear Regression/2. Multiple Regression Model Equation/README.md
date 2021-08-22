@@ -31,8 +31,9 @@ and another variable that indicates whether a student ate breakfast (`breakfast`
     <p><em><code>score = b<sub>0</sub> + b<sub>1</sub> * hours_studied + b<sub>2</sub> * breakfast</code></em></p>
 </h4>
 
-Of course, after fitting our model, the intercept (b0) and coefficients (b1 and b2) could be filled in with actual numbers from the output of our regression. For instance, our final equation might have an intercept of 32.7, a coefficient of 8.5 on hours_studied, and a coefficient of 22.5 on breakfast:
-
-\text{score} = 32.7 + 8.5*\text{hours\_studied} + 22.5*\text{breakfast}score=32.7+8.5∗hours_studied+22.5∗breakfast
-Instructions
+Of course, after fitting our model, the intercept (`b0`) and coefficients (`b1` and `b2`) could be filled in with actual numbers from the output of our regression. 
+For instance, our final equation might have an intercept of 32.7, a coefficient of 8.5 on `hours_studied`, and a coefficient of 22.5 on `breakfast`:
+<h4>
+    <p><em><code>score = 32.7 + 8.5 * hours_studied + 22.5 * breakfast</code></em></p>
+</h4>
 
