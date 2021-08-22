@@ -2,16 +2,23 @@
 
 # [Quantitative Variables in Multiple Regression](https://www.codecademy.com/courses/linear-regression-mssp/lessons/stats-multiple-linear-regression/exercises/quantitative-variables-in-multiple-regression)
 
-In the previous exercises, we looked at regression models with one quantitative predictor and one binary predictor, but we can also have models with multiple quantitative predictors. For example, consider the following model using the survey dataset (assignments is the number of homework assignments the student has completed):
-
+In the previous exercises, we looked at regression models with one quantitative predictor and one binary predictor, 
+but we can also have models with multiple quantitative predictors. 
+For example, consider the following model using the `survey` dataset (`assignments` is the number of homework assignments the student has completed):
+```py
 import statsmodels.api as sm
-model = sm.OLS.from_formula('score ~ hours_studied + assignments', data=survey).fit()
+model = sm.OLS.from_formula(
+    'score ~ hours_studied + assignments', 
+    data = survey)
+.fit()
 print(model.params)
  
 # Output:
 # Intercept        16.676498
 # hours_studied     6.273886
 # assignments       4.687796
+```
+
 From the coefficients above, our regression equation is:
 
 \text{score} = 16.7 + 6.3*\text{hours\_studied} + 4.7*\text{assignments}score=16.7+6.3∗hours_studied+4.7∗assignments
