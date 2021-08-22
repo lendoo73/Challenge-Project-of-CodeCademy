@@ -4,7 +4,8 @@
 
 Binary categorical variables are variables with exactly two possible values. 
 In a regression model, these two values are generally coded as 1 or 0. 
-For example, a multiple regression equation from the survey dataset might look like this:
+For example, a multiple regression equation from the `survey` dataset might look like this:
+
 
 \text{score} = 32.7 + 8.5*\text{hours\_studied} + 22.5* \text{breakfast}score=32.7+8.5∗hours_studied+22.5∗breakfast
 breakfast is a binary categorical predictor with two possible values: “ate breakfast,” which is coded as 1 in the model and “didn’t eat breakfast,” which is coded as 0. If we substitute these values for breakfast in the regression equation, we end up with two equations: one for each group.
