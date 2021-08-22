@@ -12,6 +12,8 @@ For predicting `score` based on `hours_studied` and `breakfast`, the multiple re
 </h4>
 Take a look at the scatter plot with regression lines on top:
 
+![scatterplot](e5_constantvars3.svg)
+
 Scatter plot showing hours studied on the x-axis and score on the y-axis. Parallel regression lines for each group of breakfast show a positive relationship between score and hours studied. Dashed vertical lines at 2, 3, and 4 hours studied show the same distance between the lines at these x values.
 We can interpret the regression coefficients as follows:
 
