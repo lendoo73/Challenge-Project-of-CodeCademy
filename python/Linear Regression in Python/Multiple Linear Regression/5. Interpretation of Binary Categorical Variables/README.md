@@ -7,8 +7,9 @@ we don’t need to make these equations every time we want to interpret a binary
 
 In the `survey` dataset, `breakfast` is a binary variable that is equal to `1` for students who ate breakfast on test day and `0` for those who didn’t. 
 For predicting `score` based on `hours_studied` and `breakfast`, the multiple regression equation is:
-
-\text{score} = 32.7 + 8.5*\text{hours\_studied} + 22.5*\text{breakfast}score=32.7+8.5∗hours_studied+22.5∗breakfast
+<h4>
+    <p><em><code>score = 32.7 + 8.5 * hours_studied + 22.5 * breakfast</code></em></p>
+</h4>
 Take a look at the scatter plot with regression lines on top:
 
 Scatter plot showing hours studied on the x-axis and score on the y-axis. Parallel regression lines for each group of breakfast show a positive relationship between score and hours studied. Dashed vertical lines at 2, 3, and 4 hours studied show the same distance between the lines at these x values.
