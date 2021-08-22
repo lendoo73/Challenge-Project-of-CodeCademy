@@ -28,7 +28,7 @@ While this is the proper mathematical way to write a multiple regression equatio
 For example, if we are modeling test scores (`score`) based on number of hours studied (`hours_studied`) 
 and another variable that indicates whether a student ate breakfast (`breakfast`), our multiple regression equation might look like this:
 <h4>
-    <p>score = b<sub>0</sub> + b<sub>1</sub> * hours_studied + b<sub>2</sub> * breakfast</p>
+    <p><em>score = b<sub>0</sub> + b<sub>1</sub> * hours_studied + b<sub>2</sub> * breakfast</em></p>
 </h4>
 
 Of course, after fitting our model, the intercept (b0) and coefficients (b1 and b2) could be filled in with actual numbers from the output of our regression. For instance, our final equation might have an intercept of 32.7, a coefficient of 8.5 on hours_studied, and a coefficient of 22.5 on breakfast:
