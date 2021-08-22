@@ -4,8 +4,10 @@
 
 We often write the equation of a line in the form `y = mx + b`, where **`m`** is the **slope** of the line and **`b`** is the **y-intercept**. 
 Since we will be adding at least two predictors to a multiple regression equation, it is helpful to modify our ordering and notation of this equation:
+
 * First, we may rewrite this equation by putting the intercept term first and the slope term second.
 <p align="center"><code>y = b + mx</code></p>
+
 * Next, instead of using the names `b` and `m`, we use the names `b0` and `b1`, respectively.
 <p align="center"><code>y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub></code></p> 
  
