@@ -138,7 +138,7 @@ If our dataset has n data points, we will have n such equations:
         ...
     <br />
     <em>
-        y<sub>n/sub> = b<sub>0</sub> + b<sub>1</sub> * x<sub>1n/sub> + b<sub>2</sub> * x<sub>2n/sub> + ... + b<sub>m</sub> * x<sub>mn</sub> + error<sub>n</sub>
+        y<sub>n</sub> = b<sub>0</sub> + b<sub>1</sub> * x<sub>1n</sub> + b<sub>2</sub> * x<sub>2n</sub> + ... + b<sub>m</sub> * x<sub>mn</sub> + error<sub>n</sub>
     </em>
 </h3>
 The matrix formulation for multiple linear regression thus looks as follows:
