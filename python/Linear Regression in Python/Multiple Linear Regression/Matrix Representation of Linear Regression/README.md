@@ -34,12 +34,18 @@ print(bk.head(5))
 ```
 |  |	rent |	bedrooms |	bathrooms |	size_sqft |	min_to_subway |	building_age_yrs |	has_washer_dryer |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 |	3600 |	3.0 |	2 |	900 |	4 |	15 |	0 |
-| 1 |	3900 |	3.0 |	2 |	1000 |	4 |	8 |	0 |
-| 2 |	2700 |	2.0 |	1 |	900 |	4 |	96 |	0 |
+| 0 |	3600 |	3.0 |	2 |	900  |	4 |	15 |	0 |
+| 1 |	3900 |	3.0 |	2 |	1000 |	4 |	8  |	0 |
+| 2 |	2700 |	2.0 |	1 |	900  |	4 |	96 |	0 |
 | 3 |	4900 |	1.0 |	1 |	1216 |	6 |	88 |	0 |
 | 4 |	3900 |	0.0 |	1 |	1100 |	3 |	85 |	0 |
 
+A quick glance at the dataset tells us that there is more than one variable that might be predictive of rental price. 
+For starters, let’s focus on the apartment size. 
+Suppose we fit the date with the following simple linear regression model with **slope `m`** and **intercept `b`**:
+<p align="center">
+    rent = m ∗ size_sqft + b + error
+</p>
 
 
 
