@@ -46,6 +46,12 @@ Suppose we fit the date with the following simple linear regression model with *
 <p align="center">
     <em>rent = m ∗ size_sqft + b + error</em>
 </p>
+This equation is actually short-hand for a large number of equations — one for each apartment in our dataset. 
+The first five equations (corresponding to the first five rows of the dataset) are:
+<p align="center">
+    <em>3600 = m ∗ 900 + b + error<sub>1</sub></em>
+</p>
+
 
 
 
