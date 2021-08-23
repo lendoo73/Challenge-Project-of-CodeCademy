@@ -171,16 +171,88 @@ Without going too deep into the math, the solution to this problem looks like th
 
 ## Regression Solution using the Matrix Method
 
+The **y** and **X** matrices discussed so far are exactly the same as the inputs to a regression model run using **`statsmodels`**‘s **`sm.OLS`** function. 
+Let’s build a multiple regression model where we regress the rental price on 
+* the age of the building, 
+* time taken to get to the nearest subway 
+* and whether the building has a washer-dryer unit or not. 
 
+We can fit this model in two steps using `patsy`, which allows us to examine the design matrix:
+```py
+from patsy import dmatrices
 
+y, X = dmatrices(
+    'rent ~ building_age_yrs + min_to_subway + has_washer_dryer', 
+    bk, 
+    return_type = 'dataframe'
+)
 
+print(X)
+```
+Output:
+```py
+     Intercept  building_age_yrs  min_to_subway  has_washer_dryer
+0           1.0              15.0            4.0               0.0
+1           1.0               8.0            4.0               0.0
+2           1.0              96.0            4.0               0.0
+...         ...               ...            ...               ...
+ 
+1011        1.0               5.0            1.0               0.0
+1012        1.0             116.0            3.0               1.0
+```
+Note how `patsy` has already done the work of adding a column of 1’s for us! 
+We’re
+now ready to fit this data using the **`Ordinary Least Squares (OLS)`** Method:
+```py
+import statsmodels.api as sm
 
+model = sm.OLS(y,X)
+results = model.fit()
 
+print(results.params, '\n', results.summary().extra_txt)
+```
+Output:
+```py
+Intercept           3696.170035
+building_age_yrs      -5.465115
+min_to_subway        -25.179742
+has_washer_dryer     719.578411
+dtype: float64
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+```
+A quick examination of the results tell us:
+* There is a negative slope for building age and minutes to the nearest subway.
+* There is a high positive slope associated with having a washer-dryer and the intercept is comparable to the average rent of a Brooklyn apartment unit.
 
+(The `extra_txt` attribute of the `summary` object usually appears at the bottom of the summary - there is nothing much to note here at the moment.)
 
+Next, let’s use the matrix solution we saw earlier to calculate the coefficients. 
+We’ll use `numpy`‘s matrix algebra methods to do all the math. 
+Then, we can compare the slopes and intercept to what we calculated using `statsmodels`. 
+First, let’s convert our X to a `numpy` matrix object:
+```py
+import numpy as np
 
-
-
+np.set_printoptions( suppress = True )
+X_matrix = np.matrix( X.to_numpy() )
+print( X_matrix )
+```
+Output:
+```py
+[[  1.  15.   4.   0.]
+ [  1.   8.   4.   0.]
+ [  1.  96.   4.   0.]
+ ...
+ [  1. 117.   5.   0.]
+ [  1.   5.   1.   0.]
+ [  1. 116.   3.   1.]]
+```
+Let’s take a closer look at our solution equation:
+<div align="center">
+    <br />
+    <img src="formula/calculate_the_beta_matrix.jpg" />
+</div>
 
 
 
