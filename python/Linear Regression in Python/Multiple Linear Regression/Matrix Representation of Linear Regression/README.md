@@ -169,6 +169,7 @@ Without going too deep into the math, the solution to this problem looks like th
     <img src="formula/calculate_the_beta_matrix.jpg" />
 </div>
 
+## Regression Solution using the Matrix Method
 
 
 
