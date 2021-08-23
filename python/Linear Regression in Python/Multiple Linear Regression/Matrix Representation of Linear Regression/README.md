@@ -66,6 +66,9 @@ We create
 * and a column matrix of the errors
 
 and rewrite the five equations above as one matrix equation:
+<div align="center">
+    <img src="formula/one_matrix_equation.jpg" />
+</div>
 
 
 
