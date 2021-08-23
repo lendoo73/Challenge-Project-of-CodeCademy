@@ -88,7 +88,7 @@ This works because of the following matrix algebra (this is how matrix multiplic
 Therefore, the most simple version of our matrix equation look like this:
 <div align="center">
     <br />
-    <img src="formula/two_column_matrix_equation.jpg" />
+    <img src="formula/simple_two_column_matrix_equation.jpg" />
 </div>
 
 
