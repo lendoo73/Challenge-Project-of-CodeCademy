@@ -147,6 +147,7 @@ The matrix formulation for multiple linear regression thus looks as follows:
     <br />
     <img src="formula/matrix_formulation_for_multiple_linear_regression.jpg" />
 </div>
+
 We still have the same 4 matrices that we had in the case of simple linear regression:
 * a column matrix **y** of the **outcome variable** values
 * the **design matrix X** which has a **column of 1’s** and a **column for each predictor** variable
