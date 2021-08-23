@@ -102,7 +102,15 @@ Using these shorthands, the matrix representation of the regression equation is 
     <img src="formula/matrix_representation_of_the_regression_equation.jpg" />
 </div>
 
+## Multiple Linear Regression
 
+Now there are more factors than the size of an apartment that likely influence its rental price. 
+If we want to regress on more than one of these variables, our regression equation will look as follows:
+<p align="center">
+    <em>
+        rent = b<sub>0</sub> + b<sub>1</sub> * size_sqft + b<sub>2</sub> * min_to_subway + b<sub>3</sub> * has_washer_dryer + ... + error
+    </em>
+</p>
 
 
 
