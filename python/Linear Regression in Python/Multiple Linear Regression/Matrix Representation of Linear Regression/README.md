@@ -142,6 +142,10 @@ If our dataset has n data points, we will have n such equations:
     </em>
 </h3>
 The matrix formulation for multiple linear regression thus looks as follows:
+<div align="center">
+    <br />
+    <img src="formula/matrix_formulation_for_multiple_linear_regression.jpg" />
+</div>
 
 
 
