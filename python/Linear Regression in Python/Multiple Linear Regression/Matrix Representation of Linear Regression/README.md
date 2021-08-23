@@ -92,6 +92,7 @@ Therefore, the most simple version of our matrix equation look like this:
     <br />
     <img src="formula/simple_two_column_matrix_equation.jpg" />
 </div>
+
 In total we have 4 matrices in this equation:
 * A one-column matrix on the left hand side of the equation containing the **outcome variable** values (rent here) that we will call **y**
 * A two-column matrix on the right hand side that contains a **column of 1’s** and a **column of the predictor** variable values (size_sqft here) that we will call **X**. This is also known as the **design matrix** or **X matrix**.
