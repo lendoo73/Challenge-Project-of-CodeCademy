@@ -160,7 +160,14 @@ In its condensed form the equation is exactly the same as the one we saw in the 
     <img src="formula/matrix_representation_of_the_regression_equation.jpg" />
 </div>
 
-
+To solve the regression problem, we need to calculate the *beta* matrix such that the sum of the squared errors is minimized. 
+This is the **Ordinary Least Squares (OLS)** method. 
+We can solve this problem using a combination of calculus and matrix algebra. 
+Without going too deep into the math, the solution to this problem looks like this (we’ll explain some of the notation later in this article!):
+<div align="center">
+    <br />
+    <img src="formula/calculate_the_beta_matrix.jpg" />
+</div>
 
 
 
