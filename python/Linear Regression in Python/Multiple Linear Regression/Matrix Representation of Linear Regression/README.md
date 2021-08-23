@@ -50,6 +50,10 @@ This equation is actually short-hand for a large number of equations — one for
 The first five equations (corresponding to the first five rows of the dataset) are:
 <p align="center">
     <em>3600 = m ∗ 900 + b + error<sub>1</sub></em>
+    <em>3900 = m ∗ 1000 + b + error<sub>2</sub></em>
+    <em>2700 = m ∗ 900 + b + error<sub>3</sub></em>
+    <em>4900 = m ∗ 1216 + b + error<sub>4</sub></em>
+    <em>3900 = m ∗ 1100 + b + error<sub>5</sub></em>
 </p>
 
 
