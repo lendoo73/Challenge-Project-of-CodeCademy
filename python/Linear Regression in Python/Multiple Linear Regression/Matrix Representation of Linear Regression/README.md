@@ -69,6 +69,9 @@ and rewrite the five equations above as one matrix equation:
 <div align="center">
     <img src="formula/one_matrix_equation.jpg" />
 </div>
+We can do so because when we add two matrices of the same size, 
+an element in one matrix gets added to the corresponding element in the other matrix that occupies the same position (row, column). 
+Also, when we multiply a matrix by a constant, each element gets multiplied by it. So:
 
 
 
