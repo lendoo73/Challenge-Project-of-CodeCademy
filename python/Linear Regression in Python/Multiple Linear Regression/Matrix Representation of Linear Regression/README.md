@@ -32,8 +32,8 @@ bk = df[[
 
 print(bk.head(5))
 ```
-  |	rent |	bedrooms |	bathrooms |	size_sqft |	min_to_subway |	building_age_yrs |	has_washer_dryer 
---- | --- | --- | --- | --- | --- | ---
+|   |	rent |	bedrooms |	bathrooms |	size_sqft |	min_to_subway |	building_age_yrs |	has_washer_dryer 
+| --- | --- | --- | --- | --- | --- | --- |
 |0 |	3600 |	3.0 |	2 |	900 |	4 |	15 |	0 |
 |1 |	3900 |	3.0 |	2 |	1000 |	4 |	8 |	0 |
 |2 |	2700 |	2.0 |	1 |	900 |	4 |	96 |	0 |
