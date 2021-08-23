@@ -44,7 +44,7 @@ A quick glance at the dataset tells us that there is more than one variable that
 For starters, let’s focus on the apartment size. 
 Suppose we fit the date with the following simple linear regression model with **slope `m`** and **intercept `b`**:
 <p align="center">
-    rent = m ∗ size_sqft + b + error
+    <em>rent = m ∗ size_sqft + b + error</em>
 </p>
 
 
