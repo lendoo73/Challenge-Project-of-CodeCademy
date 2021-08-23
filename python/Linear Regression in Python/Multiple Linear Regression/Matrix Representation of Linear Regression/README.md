@@ -61,8 +61,8 @@ When we fit this linear regression model, we are trying to find the values of *m
 We create 
 * a column matrix of rents (the outcome variable), 
 * a column matrix of apartment sizes (the predictor variable) 
-* and a column matrix of the errors</br >
-and rewrite the five equations above as one matrix equation:
+* and a column matrix of the errors
+</br >and rewrite the five equations above as one matrix equation:
 
 
 
