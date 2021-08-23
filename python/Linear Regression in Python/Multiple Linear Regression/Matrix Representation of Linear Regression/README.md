@@ -154,7 +154,7 @@ We still have the same 4 matrices that we had in the case of simple linear regre
 * a column matrix of the **intercept** and **slopes**, the **solution matrix**
 * the **error matrix**
 
-
+In its condensed form the equation is exactly the same as the one we saw in the case of simple linear regression:
 
 
 
