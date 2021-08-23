@@ -113,7 +113,14 @@ If we want to regress on more than one of these variables, our regression equati
         rent = b<sub>0</sub> + b<sub>1</sub> * size_sqft + b<sub>2</sub> * min_to_subway + b<sub>3</sub> * has_washer_dryer + ... + error
     </em>
 </h3>
-
+We are now in the territory of Multiple Linear Regression models. 
+If we denote the different predictor variables by *{x1, x2, x3, …, xm}*, their corresponding slopes by *{b1,b2,b3,.., bm}* and the intercept by *b0*, 
+we can write a more general form of the above equation:
+<h3 align="center">
+    <em>
+        y = b<sub>0</sub> + b<sub>1</sub> * x<sub>1</sub> + b<sub>2</sub> * x<sub>2</sub> + ... + b<sub>m</sub> * x<sub>m</sub> + error
+    </em>
+</h3>
 
 
 
