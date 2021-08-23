@@ -90,9 +90,17 @@ Therefore, the most simple version of our matrix equation look like this:
     <br />
     <img src="formula/simple_two_column_matrix_equation.jpg" />
 </div>
+In total we have 4 matrices in this equation:
+* A one-column matrix on the left hand side of the equation containing the **outcome variable** values (rent here) that we will call **y**
+* A two-column matrix on the right hand side that contains a **column of 1’s** and a **column of the predictor** variable values (size_sqft here) that we will call **X**. This is also known as the **design matrix** or **X matrix**.
+* A one-column matrix containing the **intercept b** and the **slope m**, i.e, the **solution matrix** that we will denote by the Greek letter **beta**. The goal of the regression problem is to evaluate this matrix.
+* A one-column matrix of the residuals or errors, the error matrix. The regression problem can be solved by minimizing the sum of the squares of the elements of this matrix. The error matrix will be denoted by the Greek letter epsilon.
 
-
-
+Using these shorthands, the matrix representation of the regression equation is thus:
+<div align="center">
+    <br />
+    <img src="formula/matrix_representation_of_the_regression_equation.jpg" />
+</div>
 
 
 
