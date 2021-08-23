@@ -79,7 +79,11 @@ Also, when we multiply a matrix by a constant, each element gets multiplied by i
     and similarity:<br />
     <img src="formula/b_matrix_equation.jpg" />
 </div>
-
+We can simplify this even further by combining the column of 1’s with the column of the apartment sizes (the predictor variable) into a two-column matrix. 
+This works because of the following matrix algebra (this is how matrix multiplication works!):
+<div align="center">
+    <img src="formula/two_column_matrix_equation.jpg" />
+</div>
 
 
 
