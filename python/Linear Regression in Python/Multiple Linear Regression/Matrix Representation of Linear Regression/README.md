@@ -254,8 +254,118 @@ Let’s take a closer look at our solution equation:
     <img src="formula/calculate_the_beta_matrix.jpg" />
 </div>
 
+The `T` in this expression stands for the transpose of a matrix which is the matrix obtained by interchanging the rows and columns of a matrix. 
+We first write down the transpose using `numpy`‘s `.transpose()` method and obtain the solution as follows:
+```py
+X_t = X_matrix.transpose()
+beta = np.linalg.inv( X_t * X_matrix ) * X_t * y.to_numpy()
 
+print(beta)
+```
+Output:
+```py
+[[3696.17003521]
+ [  -5.46511521]
+ [ -25.17974166]
+ [ 719.5784114 ]]
+```
+We get the same values as we did using `statsmodels`!
 
+## The Matrix Representation and Multicollinearity
+
+It is essential that our inputs to the regression not be collinear, i.e, we need to make sure we don’t have multicollinearity. 
+The reason behind this is related to the matrix solution of the regression problem. 
+Multicollinearity happens **when two or more input variables are linearly related**. 
+For instance, suppose we have another variable that indicates the seconds it takes to get to the nearest subway. 
+It differs from the `min_to_subway` predictor variable exactly by a factor of 60 (1 min = 60 secs).
+```py
+bk['secs_to_subway'] = bk['min_to_subway'] * 60.0
+
+y, X = patsy.dmatrices(
+    'rent ~ building_age_yrs + min_to_subway + secs_to_subway + has_washer_dryer', 
+    bk, 
+    return_type = 'dataframe'
+)
+```
+If we run a multiple regression model on both of these variables using the matrix solution method described above, `numpy` throws up the following error:
+```py
+---------------------------------------------------------------------------
+LinAlgError                               Traceback (most recent call last)
+<ipython-input-13-732894adb9ea> in <module>
+----> 1 beta = np.linalg.inv(X_matrix.transpose()*X_matrix)*X_matrix.transpose()*y.to_numpy()
+      2 print(beta)
+...
+_raise_linalgerror_singular(err, flag)
+....
+LinAlgError: Singular matrix
+```
+In this scenario, we might already have felt skeptical about running a regression on these two columns together as 
+they contain pretty much the same information - the time taken to the subway. 
+Mathematically, when there are two (or more) **linearly related columns** in the design matrix, it is called a **singular matrix**. 
+A singular matrix has a property called an eigenvalue that is very close to zero and this makes the matrix solution for the regression problem unsolvable.
+
+What happens when we try to fit this model using `statsmodels`?
+```py
+model = sm.OLS(y,X)
+results = model.fit()
+
+print(results.params ,'\n', results.summary().extra_txt)
+```
+Output:
+```py
+Intercept           3696.170035
+building_age_yrs      -5.465115
+min_to_subway         -0.006992
+secs_to_subway        -0.419546
+has_washer_dryer     719.578411
+dtype: float64
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 6.01e-28. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+```
+We see that statsmodels does gives us a solution but the results tell us that something is wrong here: 
+one of the slopes is very close to zero and the Notes indicate that one of the eigenvalues is extremely close to zero. 
+This is why it is a great idea to first look at the correlation matrix between all the predictor variables in a dataset 
+to determine which variables might be collinear before proceeding to fit a regression model.
+
+Let us consider what this would look like in the case of categorical variables. 
+Suppose we made a dummy variable, `no_washer_dryer` that is basically the opposite of `has_washer_dryer`. 
+We’re going to try to fit a model that incorporates this obviously collinear variable as well:
+```py
+bk['no_washer_dryer'] = np.logical_not( bk['has_washer_dryer'] )
+y, X = dmatrices(
+    'rent ~ building_age_yrs + has_washer_dryer + no_washer_dryer', 
+    bk, 
+    return_type = 'dataframe'
+)
+
+model = sm.OLS(y,X)
+results = model.fit()
+
+print(results.params ,'\n', results.summary().extra_txt)
+```
+Output:
+```py
+Intercept                  2637.744542
+no_washer_dryer[T.True]     945.446042
+building_age_yrs             -5.608355
+has_washer_dryer           1692.298500
+dtype: float64 
+ Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 5.59e-30. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+```
+Once again we get the warning about an eigenvalue that’s very close to zero and the possibility that the design matrix is singular, 
+suggesting that we need to reconsider our inputs to the regression model. 
+For categorical variables, this means we need to be careful not to include the reference group in our model.
+
+To recap:
+
+* **For quantitative variables**, *check the correlation matrix* to catch highly correlated variables.
+* **For categorical variables**, *check the that at least one category (the reference group) is omitted from the X matrix*.
+* It is important to check if there are warnings contained within the summary object outputted by `statsmodels`.
 
 
 
