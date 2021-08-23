@@ -49,11 +49,11 @@ Suppose we fit the date with the following simple linear regression model with *
 This equation is actually short-hand for a large number of equations — one for each apartment in our dataset. 
 The first five equations (corresponding to the first five rows of the dataset) are:
 <div align="center">
-    <p><em>3600 = m ∗ 900 + b + error<sub>1</sub></em></p>
-    <p><em>3900 = m ∗ 1000 + b + error<sub>2</sub></em></p>
-    <p><em>2700 = m ∗ 900 + b + error<sub>3</sub></em></p>
-    <p><em>4900 = m ∗ 1216 + b + error<sub>4</sub></em></p>
-    <p><em>3900 = m ∗ 1100 + b + error<sub>5</sub></em></p>
+    <em>3600 = m ∗ 900 + b + error<sub>1</sub></em><br />
+    <em>3900 = m ∗ 1000 + b + error<sub>2</sub></em><br />
+    <em>2700 = m ∗ 900 + b + error<sub>3</sub></em><br />
+    <em>4900 = m ∗ 1216 + b + error<sub>4</sub></em><br />
+    <em>3900 = m ∗ 1100 + b + error<sub>5</sub></em><br />
 </div>
 
 
