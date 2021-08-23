@@ -121,6 +121,27 @@ we can write a more general form of the above equation:
         y = b<sub>0</sub> + b<sub>1</sub> * x<sub>1</sub> + b<sub>2</sub> * x<sub>2</sub> + ... + b<sub>m</sub> * x<sub>m</sub> + error
     </em>
 </h3>
+If our dataset has n data points, we will have n such equations:
+<h3 align="center">
+    <em>
+        y<sub>1</sub> = b<sub>0</sub> + b<sub>1</sub> * x<sub>11</sub> + b<sub>2</sub> * x<sub>21</sub> + ... + b<sub>m</sub> * x<sub>m1</sub> + error<sub>1</sub>
+    </em>
+    <br />
+    <em>
+        y<sub>2</sub> = b<sub>0</sub> + b<sub>1</sub> * x<sub>12</sub> + b<sub>2</sub> * x<sub>22</sub> + ... + b<sub>m</sub> * x<sub>m2</sub> + error<sub>2</sub>
+    </em>
+    <br />
+    <em>
+        y<sub>3</sub> = b<sub>0</sub> + b<sub>1</sub> * x<sub>13</sub> + b<sub>2</sub> * x<sub>23</sub> + ... + b<sub>m</sub> * x<sub>m3/sub> + error<sub>3</sub>
+    </em>
+    <br />
+        ...
+    <br />
+    <em>
+        y<sub>n/sub> = b<sub>0</sub> + b<sub>1</sub> * x<sub>1n/sub> + b<sub>2</sub> * x<sub>2n/sub> + ... + b<sub>m</sub> * x<sub>mn ub> + error<sub>n</sub>
+    </em>
+</h3>
+The matrix formulation for multiple linear regression thus looks as follows:
 
 
 
