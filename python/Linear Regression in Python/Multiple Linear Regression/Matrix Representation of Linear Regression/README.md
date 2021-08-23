@@ -55,7 +55,14 @@ The first five equations (corresponding to the first five rows of the dataset) a
     <em>4900 = m ∗ 1216 + b + error<sub>4</sub></em><br />
     <em>3900 = m ∗ 1100 + b + error<sub>5</sub></em><br />
 </div>
+When we fit this linear regression model, we are trying to find the values of *m* and *b* such that the sum of the squared error terms above 
+*(eg., error_1^2 + error_2^2 + error_3^2 + error_4^2 + error_5^2 + ….)* is minimized.
 
+We create 
+* a column matrix of rents (the outcome variable), 
+* a column matrix of apartment sizes (the predictor variable) 
+* and a column matrix of the errors 
+and rewrite the five equations above as one matrix equation:
 
 
 
