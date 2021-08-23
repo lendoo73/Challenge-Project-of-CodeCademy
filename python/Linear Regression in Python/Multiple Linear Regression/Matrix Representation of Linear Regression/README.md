@@ -96,7 +96,7 @@ In total we have 4 matrices in this equation:
 * A one-column matrix on the left hand side of the equation containing the **outcome variable** values (rent here) that we will call **y**
 * A two-column matrix on the right hand side that contains a **column of 1’s** and a **column of the predictor** variable values (size_sqft here) that we will call **X**. This is also known as the **design matrix** or **X matrix**.
 * A one-column matrix containing the **intercept b** and the **slope m**, i.e, the **solution matrix** that we will denote by the Greek letter **beta**. The goal of the regression problem is to evaluate this matrix.
-* A one-column matrix of the residuals or errors, the error matrix. The regression problem can be solved by minimizing the sum of the squares of the elements of this matrix. The error matrix will be denoted by the Greek letter epsilon.
+* A one-column matrix of the residuals or errors, the **error matrix**. The regression problem can be solved by minimizing the sum of the squares of the elements of this matrix. The error matrix will be denoted by the Greek letter epsilon.
 
 Using these shorthands, the matrix representation of the regression equation is thus:
 <div align="center">
@@ -146,8 +146,11 @@ The matrix formulation for multiple linear regression thus looks as follows:
     <br />
     <img src="formula/matrix_formulation_for_multiple_linear_regression.jpg" />
 </div>
-
-
+We still have the same 4 matrices that we had in the case of simple linear regression:
+* a column matrix **y** of the **outcome variable** values
+* the **design matrix X** which has a **column of 1’s** and a **column for each predictor** variable
+* a column matrix of the **intercept** and **slopes**, the **solution matrix**
+* the **error matrix**
 
 
 
