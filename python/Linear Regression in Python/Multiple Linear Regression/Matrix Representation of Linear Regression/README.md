@@ -76,7 +76,7 @@ Also, when we multiply a matrix by a constant, each element gets multiplied by i
     <img src="formula/m_matrix_equation.jpg" />
 </div>
 <div align="center">
-    and similarity:
+    and similarity:<br />
     <img src="formula/b_matrix_equation.jpg" />
 </div>
 
