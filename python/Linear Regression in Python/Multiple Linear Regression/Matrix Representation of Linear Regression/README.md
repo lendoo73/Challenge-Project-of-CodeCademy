@@ -155,7 +155,10 @@ We still have the same 4 matrices that we had in the case of simple linear regre
 * the **error matrix**
 
 In its condensed form the equation is exactly the same as the one we saw in the case of simple linear regression:
-
+<div align="center">
+    <br />
+    <img src="formula/matrix_representation_of_the_regression_equation.jpg" />
+</div>
 
 
 
