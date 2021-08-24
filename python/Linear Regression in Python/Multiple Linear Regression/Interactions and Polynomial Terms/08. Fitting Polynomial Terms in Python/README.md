@@ -45,24 +45,25 @@ Correspondingly, the new term shows up in our model equation as `sleep` squared.
 
 We can check happiness scores by substituting in different values of sleep.
 * For 2 hours of sleep: <br /><em>happy = -0 .06 + 1.32 * 2 - 0.06 * 2<sup>2</sup> = 2.34</em>
+* For 10 hours of sleep: <br /><em>happy = -0 .06 + 1.32 * 10 - 0.06 * 10<sup>2</sup> = 7.14</em>
+* For 14 hours of sleep: <br /><em>happy = -0 .06 + 1.32 * 14 - 0.06 * 14<sup>2</sup> = 6.66</em>
 
-happy = -.06 + 1.32*2 - .06*22 = 2.34
+Our curved model picks up on the pattern that beyond about 10 hours of sleep, more sleep is not associated with greater happiness. 
+Perhaps the people who sleep a lot are ill so they need more sleep and are less happy, 
+or perhaps sleeping too much causes problems in other parts of their lives that takes away from their happiness. 
+We can’t know the exact cause from our model, just the association.
 
-For 10 hours of sleep:
+Note that we can use Python and our model results to perform the above computations for us. 
+Below is code to compute happy when sleep is 10 and 14. 
+Since we use exact rather than rounded numbers here, the results are slightly different but more accurate than our original work.
+```py
+print(modelP.params[0] + modelP.params[1] * 10 + modelP.params[2] * np.power(10,2))
 
-happy = -.06 + 1.32*10 - .06*102 = 7.14
-
-For 14 hours of sleep:
-
-happy = -.06 + 1.32*14 - .06*142 = 6.66
-
-Our curved model picks up on the pattern that beyond about 10 hours of sleep, more sleep is not associated with greater happiness. Perhaps the people who sleep a lot are ill so they need more sleep and are less happy, or perhaps sleeping too much causes problems in other parts of their lives that takes away from their happiness. We can’t know the exact cause from our model, just the association.
-
-Note that we can use Python and our model results to perform the above computations for us. Below is code to compute happy when sleep is 10 and 14. Since we use exact rather than rounded numbers here, the results are slightly different but more accurate than our original work.
-
-print(modelP.params[0] + modelP.params[1]*10 + modelP.params[2]*np.power(10,2))
 # Output:
 # 6.9626120786831445
-print(modelP.params[0] + modelP.params[1]*14 + modelP.params[2]*np.power(14,2))
+
+print(modelP.params[0] + modelP.params[1] * 14 + modelP.params[2] * np.power(14, 2))
+
 # Output:
 # 6.308953414816589
+```
