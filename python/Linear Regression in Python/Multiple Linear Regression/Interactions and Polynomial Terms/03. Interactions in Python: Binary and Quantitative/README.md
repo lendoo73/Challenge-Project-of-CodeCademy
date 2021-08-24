@@ -11,16 +11,24 @@ We got the following model coefficients:
 # exercise     -0.894058
 ```
 Using these coefficients, our regression equation is:
+
 <h4>
-    <em><code>
+    <em>
         happy = 10.3 − 0.7 ∗ stress − 0.9 ∗ exercise
-    </code></em>
+    </em>
 </h4>
 
-In the Python library statsmodels.api, we can easily add an interaction term to the model formula by adding a third predictor that combines stress and exercise with a colon (stress:exercise). The code to run the updated model and print the coefficients is shown below.
-
+In the Python library `statsmodels.api`, we can easily add an interaction term to the model formula by 
+adding a third predictor that combines `stress` and `exercise` with a colon (`stress:exercise`). 
+The code to run the updated model and print the coefficients is shown below.
+```py
 import statsmodels.api as sm
-model = sm.OLS.from_formula('happy ~ stress + exercise + stress:exercise', data=happiness).fit()
+
+model = sm.OLS.from_formula(
+    'happy ~ stress + exercise + stress:exercise', 
+    data = happiness
+).fit()
+
 print(model.params)
  
 # Output:
@@ -28,7 +36,16 @@ print(model.params)
 # stress             -0.971225
 # exercise           -3.135705
 # stress:exercise     0.357365
-In addition to the expected coefficients, when we add the interaction term, the coefficient table shows a new term with a coefficient: stress:exercise. The coefficient on stress:exercise is really a coefficient on a whole new variable formed by multiplying stress by exercise. Thus, our regression equation for this model looks like this:
+```
+In addition to the expected coefficients, when we add the interaction term, the coefficient table shows a new term with a coefficient: `stress:exercise`. 
+The coefficient on `stress:exercise` is really a coefficient on a whole new variable formed by multiplying `stress` by `exercise`. 
+Thus, our regression equation for this model looks like this:
 
-\text{happy} = 12.1 - 1.0*\text{stress} - 3.1*\text{exercise} + 0.4*\text{stress}*\text{exercise}happy=12.1−1.0∗stress−3.1∗exercise+0.4∗stress∗exercise
-Note that our other coefficients changed slightly with the additional predictor. This is because we have explicitly pulled out more of the relationship between stress and exercise, causing the other coefficients to adjust to take this into account.
+<h4>
+    <em>
+        happy = 12.1 − 1.0 ∗ stress − 3.1 ∗ exercise + 0.4 ∗ stress ∗ exercise
+    </em>
+</h4>
+
+Note that our other coefficients changed slightly with the additional predictor. 
+This is because we have explicitly pulled out more of the relationship between stress and exercise, causing the other coefficients to adjust to take this into account.
