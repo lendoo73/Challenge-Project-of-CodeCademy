@@ -37,11 +37,14 @@ print(modelP.params)
 This creates a second predictor term in the model with an additional coefficient. 
 Correspondingly, the new term shows up in our model equation as `sleep` squared.
 
-happy = -.06 + 1.32*sleep - .06*sleep2
+<h4>
+    <em>
+        happy = -0.06 + 1.32 * sleep - 0.06 * sleep<sup>2</sup>
+    </em>
+</h4>
 
 We can check happiness scores by substituting in different values of sleep.
-
-For 2 hours of sleep:
+* For 2 hours of sleep: <em>happy = -0 .06 + 1.32 * 2 - 0.06 * 2<sup>2</sup> = 2.34</em>
 
 happy = -.06 + 1.32*2 - .06*22 = 2.34
 
