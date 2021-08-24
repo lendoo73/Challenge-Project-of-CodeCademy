@@ -41,7 +41,7 @@ print(model.params)
 ```
 Using these coefficients, we can plot two lines with differing intercepts for each exercise group.
 
-![happy level vs. stress level with two parallel lines](images/e1_parallel.svg)
+![happy level vs. stress level with two parallel lines](images/e2_parallel.svg)
 
 Scatter plot showing happy versus stress with two parallel lines: A lower one for the exercise group and a higher one for the non-exercise group.
 
