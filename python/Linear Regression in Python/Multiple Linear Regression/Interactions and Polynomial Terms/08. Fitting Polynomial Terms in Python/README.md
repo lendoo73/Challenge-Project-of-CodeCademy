@@ -44,7 +44,7 @@ Correspondingly, the new term shows up in our model equation as `sleep` squared.
 </h4>
 
 We can check happiness scores by substituting in different values of sleep.
-* For 2 hours of sleep: <em>happy = -0 .06 + 1.32 * 2 - 0.06 * 2<sup>2</sup> = 2.34</em>
+* For 2 hours of sleep: <br /><em>happy = -0 .06 + 1.32 * 2 - 0.06 * 2<sup>2</sup> = 2.34</em>
 
 happy = -.06 + 1.32*2 - .06*22 = 2.34
 
