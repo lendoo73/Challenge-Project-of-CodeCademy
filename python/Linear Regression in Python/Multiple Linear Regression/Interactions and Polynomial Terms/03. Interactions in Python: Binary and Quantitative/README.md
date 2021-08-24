@@ -12,9 +12,9 @@ We got the following model coefficients:
 ```
 Using these coefficients, our regression equation is:
 <h4>
-    <em>
+    <em><code>
         happy = 10.3 − 0.7 ∗ stress − 0.9 ∗ exercise
-    </em>
+    </code></em>
 </h4>
 
 In the Python library statsmodels.api, we can easily add an interaction term to the model formula by adding a third predictor that combines stress and exercise with a colon (stress:exercise). The code to run the updated model and print the coefficients is shown below.
