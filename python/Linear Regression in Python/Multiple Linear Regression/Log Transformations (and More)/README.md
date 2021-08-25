@@ -188,33 +188,68 @@ print(model2.params)
 # Intercept     7.511024
 # birth_rate   -0.130456
 ```
-log(phones) = 7.51 - 0.13*birth\_ratelog(phones)=7.51−0.13∗birth_rate
-We can always interpret the coefficient on birth_rate in the traditional way: for every increase of one birth per 1000 people, the natural log of phones decreases by 0.13 phones per 1000 people. While this is accurate, it’s not very informative about the relationship between phones and birth_rate. To examine this relationship, we need to do a little math with logs and exponentiation.
 
-To get a more direct relationship between phones and birth_rate, we first have to exponentiate the coefficient on birth_rate. This means we raise e to the power of the coefficient on birth_rate. We may write this as e-0.13, or more simply as exp(-0.13), and we can use NumPy to compute this in Python. In short, we’re doing this because exponentiating both sides of the regression equation cancels out the log on phones, but we’ll save the more thorough explanation for the bonus section at the end of this article.
+<h3 align="center">
+    <em>
+        log(phones) = 7.51 − 0.13 ∗ birth_rate
+    </em>
+</h3>
+ 
+We can always interpret the coefficient on `birth_rate` in the traditional way: 
+for every increase of one birth per 1000 people, the natural log of `phones` decreases by 0.13 phones per 1000 people. 
+While this is accurate, it’s not very informative about the relationship between `phones` and `birth_rate`. 
+To examine this relationship, we need to do a little math with logs and exponentiation.
 
+To get a more direct relationship between `phones` and `birth_rate`, we first have to exponentiate the coefficient on `birth_rate`. 
+This means we raise e to the power of the coefficient on `birth_rate`. 
+We may write this as e<sup>-0.13</sup>, or more simply as `exp(-0.13)`, and we can use NumPy to compute this in Python. 
+In short, we’re doing this because exponentiating both sides of the regression equation cancels out the log on `phones`, but we’ll save the more thorough explanation for the bonus section at the end of this article.
+```py
 import numpy as np
+
 np.exp(-0.13)
+
 # Output
 # 0.8780954309205613
+```
 Then we also subtract 1 to change our coefficient into an easily readable percentage change:
+```py
+np.exp(-0.13) - 1
 
-np.exp(-0.13)-1
 # Output:
 # -0.1219045690794387
-We are now ready to interpret this coefficient: for every additional birth per 1000 people, the number of phones per 1000 people decreases by about 12.2 PERCENT. Our interpretation changes from the traditional additive relationship, where increases in the predictor are associated with differences in UNITS of the outcome, to a multiplicative relationship, where increases in the predictor are associated with differences in the PERCENTAGE of the outcome.
+```
+We are now ready to interpret this coefficient: for every additional birth per 1000 people, the number of phones per 1000 people decreases by about 12.2 PERCENT. 
+Our interpretation changes from the traditional additive relationship, where increases in the predictor are associated with differences in UNITS of the outcome, 
+to a multiplicative relationship, where increases in the predictor are associated with differences in the PERCENTAGE of the outcome.
 
-We also see this change in the interpretation of the intercept: rather than the arithmetic mean, the exponentiated intercept exp(7.51) is the geometric mean number of phones for countries with a birth rate of 0. The arithmetic mean is computed by SUMMING values, while the geometric mean is computed by MULTIPLYING values.
+We also see this change in the interpretation of the intercept: 
+rather than the arithmetic mean, the exponentiated intercept `exp(7.51)` is the geometric mean number of phones for countries with a birth rate of 0. 
+The arithmetic mean is computed by SUMMING values, while the geometric mean is computed by MULTIPLYING values.
 
-Conclusion
-Log transformations of the dependent variable are a way to overcome issues with meeting the requirements of normality and homoscedasticity of the residuals for multiple linear regression. Unfortunately, a log transformation won’t fix these issues in every case (it may even make things worse!), so it’s important to reassess normality and homoscedasticity after making the transformation and running the new model. Log transformations can also be performed on predictors, and there are other dependent variable transformations available as well (e.g., square-rooting). To learn more about some of these transformations, check out the Penn State Statistics Department’s website.
+## Conclusion
 
-Bonus: Logs in more detail
-Why did taking the log of the dependent variable help?
-As we recall from the scatter plot of phones versus birth_rate, there were a lot of large positive residuals for lower birth rates and a lot of smaller residuals for higher birth rates. Taking the log of phones brought the large residuals lower and the small residuals higher, which gave us a more even spread with less extremes. But why did this happen? Let’s take a quick look at what happens as e is raised to higher exponents. Note that we use 2.718 as an approximation of e here.
+Log transformations of the dependent variable are a way to overcome issues with meeting the requirements of normality 
+and homoscedasticity of the residuals for multiple linear regression. 
+Unfortunately, a log transformation won’t fix these issues in every case (it may even make things worse!), 
+so it’s important to reassess normality and homoscedasticity after making the transformation and running the new model. 
+Log transformations can also be performed on predictors, and there are other dependent variable transformations available as well (e.g., square-rooting). 
+To learn more about some of these transformations, check out the [Penn State Statistics Department’s website](https://online.stat.psu.edu/stat501/lesson/9).
 
-power	epower	multiplied	output	difference
-1	e1	2.718	2.718	—
+## Bonus: Logs in more detail
+
+### Why did taking the log of the dependent variable help?
+
+As we recall from the scatter plot of `phones` versus `birth_rate`, 
+there were a lot of large positive residuals for lower birth rates and a lot of smaller residuals for higher birth rates. 
+Taking the log of `phones` brought the large residuals lower and the small residuals higher, which gave us a more even spread with less extremes. 
+But why did this happen? 
+Let’s take a quick look at what happens as e is raised to higher exponents. 
+Note that we use `2.718` as an approximation of ***e*** here.
+
+| power |	e<sup>power</sup> |	multiplied | 	output |	difference |
+| --- | --- | --- | --- | --- |
+| 1 |	esup>1</sup> | 2.718  |	2.718	— |
 2	e2	2.718*2.718	7.388	4.670
 3	e3	2.718*2.718*2.718	20.079	15.409
 4	e4	2.718*2.718*2.718*2.718	54.576	34.497
