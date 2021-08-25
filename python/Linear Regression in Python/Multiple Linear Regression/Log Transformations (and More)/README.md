@@ -60,42 +60,68 @@ plt.show()
 
 ![phones vs. birth rate](images/annotated_pVb1.svg)
 
-Scatter plot of phones on the y-axis plotted against birth rate on the x-axis. The pattern appears negative, but the points are widely dispersed on the left and narrow to almost a flat line of points as we move right. The automatically plotted regression line shows a negative relationship, but cuts through curves in the pattern of points. The points of nine countries are highlighted and their residuals are drawn in. From left to right across the plot the countries are: Bermuda, Cuba, Australia, Algeria, Israel, Fiji, Nepal, Mayotte, and Angola.
+Scatter plot of phones on the y-axis plotted against birth rate on the x-axis. 
+The pattern appears negative, but the points are widely dispersed on the left and narrow to almost a flat line of points as we move right. 
+The automatically plotted regression line shows a negative relationship, but cuts through curves in the pattern of points. 
+The points of nine countries are highlighted and their residuals are drawn in. 
+From left to right across the plot the countries are: Bermuda, Cuba, Australia, Algeria, Israel, Fiji, Nepal, Mayotte, and Angola.
 
-The scatter plot shows a negative correlation between phones and birth_rate. However, there are some indications that a simple linear regression may not be appropriate for this data:
+The scatter plot shows a negative correlation between `phones` and `birth_rate`. 
+However, there are some indications that a simple linear regression may not be appropriate for this data:
+* The relationship between `phones` and `birth_rate` is more curved than linear
+* There is more variation in `phones` for small values of `birth_rate` than for large values
 
-The relationship between phones and birth_rate is more curved than linear
-There is more variation in phones for small values of birth_rate than for large values
-To highlight this, we’ve circled some countries in the plot and have drawn arrows from the points down to the regression line–these are the residuals for these points. We can see a lot of variability in the size of residuals for low birth rates, with very minimal variability for higher birth rates.
+To highlight this, we’ve circled some countries in the plot and have drawn arrows from the points down to the regression line–these are the residuals for these points. 
+We can see a lot of variability in the size of residuals for low birth rates, with very minimal variability for higher birth rates.
 
-To better check our regression assumptions, we can fit the regression in Python using the following code and save both the residuals and predicted response values as the objects residuals1 and fitted_values1, respectively.
-
+To better check our regression assumptions, we can fit the regression in Python using the following code 
+and save both the residuals and predicted response values as the objects `residuals1` and `fitted_values1`, respectively.
+```py
 import statsmodels.api as sm
  
 # Fit regression model
-model1 = sm.OLS.from_formula('phones ~ birth_rate', data=countries).fit()
-# Save fitted values and residuals
-'fitted_values1' = model1.predict(countries)
-'residuals1' = countries.phones - fitted_values1
-Now we’ll produce some plots to check the modeling assumptions of normality and homoscedasticity of the residuals.
+model1 = sm.OLS.from_formula(
+    'phones ~ birth_rate', 
+    data = countries
+).fit()
 
+# Save fitted values and residuals
+fitted_values1 = model1.predict(countries)
+residuals1 = countries.phones - fitted_values1
+```
+Now we’ll produce some plots to check the modeling assumptions of normality and homoscedasticity of the residuals.
+```py
 # Check normality of residuals
 plt.hist(residuals1)
-plt.title('Model 1: Histogram of Residuals', fontsize=16, weight='bold')
+plt.title('Model 1: Histogram of Residuals', fontsize = 16, weight = 'bold')
 plt.show()
  
 # Check variance of residuals
 plt.scatter(fitted_values1, residuals1)
-plt.axhline(y=0, color='black', linestyle='-', linewidth=3)
-plt.title('Model 1: Residuals vs Fitted Values', fontsize=16, weight='bold')
+plt.axhline(
+    y = 0, 
+    color = 'black', 
+    linestyle = '-', 
+    linewidth = 3
+)
+plt.title('Model 1: Residuals vs Fitted Values', fontsize = 16, weight = 'bold')
 plt.show()
+```
+
+![Histogram of residuals](images/hist.svg)
+![residuals vs. fitted values](images/annotated_variance1.svg)
+
 Histogram of residuals that is right skewed.
 
 Scatter plot of residuals versus fitted values that shows points clustered close together on the left, widening dramatically as we move from left to right.
 
-In the histogram, we see some right skewing caused by the few very high residuals for countries like Bermuda, indicating we may not be meeting the normality assumption. Perhaps more concerning, the scatter plot of residuals against fitted values shows a wave-like pattern from narrow to wide, rather than the constant spread we look for to indicate that homoscedasticity has been met. We’ve additionally highlighted the same countries in the scatter plot again so we can see how their residuals map out in this plot compared to where we saw them in the original.
+In the histogram, we see some right skewing caused by the few very high residuals for countries like Bermuda, indicating we may not be meeting the normality assumption. 
+Perhaps more concerning, the scatter plot of residuals against fitted values shows a wave-like pattern from narrow to wide, 
+rather than the constant spread we look for to indicate that homoscedasticity has been met. 
+We’ve additionally highlighted the same countries in the scatter plot again so we can see how their residuals map out in this plot compared to where we saw them in the original.
 
-Log Transformation in Python
+## Log Transformation in Python
+
 Since we see two potential assumption violations, we are going to try a log transformation of the phones variable and check if it improves our concerns. In Python, we can easily take the log of phones using the NumPy function log(). Let’s add this new variable to our dataset and see how it looks compared to phones. Note that, generally, when we see log with no specified base in a statistics equation, we can assume the base is e (the mathematical constant 2.718…). In other words, log with no base means we are taking the natural log, or ln. Also, note that we can only take the log of a variable with values greater than zero; the log of values less than or equal to zero are undefined.
 
 import numpy as np
