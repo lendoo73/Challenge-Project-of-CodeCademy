@@ -304,7 +304,7 @@ Finally, by the quotient rule, we find that our coefficient on `birth_rate` is e
 We exponentiate both sides to find our exponentiated coefficient on `birth_rate` is 
 equal to a simple quotient that gives the percentage change in the `phones` variable between phones<sub>0</sub> and phones<sub>1</sub>.
 
-<div>
+<div align="center">
     <img src="images/log1.jpg" />
     <br />
     <img src="images/exp_log1.jpg" />
