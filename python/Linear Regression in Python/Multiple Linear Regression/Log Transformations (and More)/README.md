@@ -300,38 +300,14 @@ Then we subtract log(phones<sub>0</sub>) from both sides to isolate the `birth_r
     </em>
 </h3>
 
-Finally, by the quotient rule, we find that our coefficient on birth_rate is equal to a single log. We exponentiate both sides to find our exponentiated coefficient on birth_rate is equal to a simple quotient that gives the percentage change in the phones variable between phones0 and phones1.
+Finally, by the quotient rule, we find that our coefficient on `birth_rate` is equal to a single log. 
+We exponentiate both sides to find our exponentiated coefficient on `birth_rate` is 
+equal to a simple quotient that gives the percentage change in the `phones` variable between phones<sub>0</sub> and phones<sub>1</sub>.
 
-log(\frac{phones_1}{phones_0}) = -0.13log( 
-phones 
-0
-​
- 
-phones 
-1
-​
- 
-​
- )=−0.13
-exp(log(\frac{phones_1}{phones_0})) = exp(-0.13)exp(log( 
-phones 
-0
-​
- 
-phones 
-1
-​
- 
-​
- ))=exp(−0.13)
-\frac{phones_1}{phones_0} = exp(-0.13) 
-phones 
-0
-​
- 
-phones 
-1
-​
- 
-​
- =exp(−0.13)
+<div>
+    <img src="images/log1.jpg" />
+    <br />
+    <img src="images/exp_log1.jpg" />
+    <br />
+    <img src="images/1.jpg" />
+</div>
