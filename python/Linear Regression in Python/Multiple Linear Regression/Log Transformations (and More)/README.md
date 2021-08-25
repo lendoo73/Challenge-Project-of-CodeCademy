@@ -50,12 +50,16 @@ sns.lmplot(
 plt.title('Number of Phones vs Birth Rate', fontsize = 16, weight = 'bold')
 plt.show()
 ```
-country	birth_rate	phones
-0	Afghanistan	46.60	3.2
-1	Albania	15.11	71.2
-2	Algeria	17.14	78.1
-3	AmericanSamoa	22.46	259.5
-4	Andorra	8.71	497.2
+| country |	birth_rate |	phones |
+| --- | --- | --- |
+| 0 |	Afghanistan |	46.60 |	3.2 |
+| 1 |	Albania |	15.11 |	71.2 |
+| 2 |	Algeria |	17.14 |	78.1 |
+| 3 |	AmericanSamoa |	22.46 |	259.5 |
+| 4 |	Andorra |	8.71 |	497.2 |
+
+![phones vs. birth rate](annotated_pVb1.svg)
+
 Scatter plot of phones on the y-axis plotted against birth rate on the x-axis. The pattern appears negative, but the points are widely dispersed on the left and narrow to almost a flat line of points as we move right. The automatically plotted regression line shows a negative relationship, but cuts through curves in the pattern of points. The points of nine countries are highlighted and their residuals are drawn in. From left to right across the plot the countries are: Bermuda, Cuba, Australia, Algeria, Israel, Fiji, Nepal, Mayotte, and Angola.
 
 The scatter plot shows a negative correlation between phones and birth_rate. However, there are some indications that a simple linear regression may not be appropriate for this data:
