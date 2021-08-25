@@ -109,9 +109,10 @@ plt.show()
 ```
 
 ![Histogram of residuals](images/hist1.svg)
-![residuals vs. fitted values](images/annotated_variance1.svg)
 
 Histogram of residuals that is right skewed.
+
+![residuals vs. fitted values](images/annotated_variance1.svg)
 
 Scatter plot of residuals versus fitted values that shows points clustered close together on the left, widening dramatically as we move from left to right.
 
