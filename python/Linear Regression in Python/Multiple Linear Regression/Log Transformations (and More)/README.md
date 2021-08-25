@@ -123,18 +123,28 @@ We’ve additionally highlighted the same countries in the scatter plot again so
 
 ## Log Transformation in Python
 
-Since we see two potential assumption violations, we are going to try a log transformation of the phones variable and check if it improves our concerns. In Python, we can easily take the log of phones using the NumPy function log(). Let’s add this new variable to our dataset and see how it looks compared to phones. Note that, generally, when we see log with no specified base in a statistics equation, we can assume the base is e (the mathematical constant 2.718…). In other words, log with no base means we are taking the natural log, or ln. Also, note that we can only take the log of a variable with values greater than zero; the log of values less than or equal to zero are undefined.
-
+Since we see two potential assumption violations, we are going to try a log transformation of the `phones` variable and check if it improves our concerns. 
+In Python, we can easily take the log of `phones` using the NumPy function `log()`. 
+Let’s add this new variable to our dataset and see how it looks compared to `phones`. 
+Note that, generally, when we see log with no specified base in a statistics equation, we can assume the base is ***e*** (the mathematical constant ***2.718***…). 
+In other words, log with no base means we are taking the ***natural log***, or ***ln***. 
+Also, note that we can only take the log of a variable with values greater than zero; 
+the log of values less than or equal to zero are undefined.
+```py
 import numpy as np
+
 # Save log_phones to dataset
 countries['log_phones'] = np.log(countries.phones)
 print(countries.head())
-country	birth_rate	phones	log_phones
-0	Afghanistan	46.60	3.2	1.163151
-1	Albania	15.11	71.2	4.265493
-2	Algeria	17.14	78.1	4.357990
-3	AmericanSamoa	22.46	259.5	5.558757
-4	Andorra	8.71	497.2	6.208992
+```
+| | country |	birth_rate |	phones |	log_phones |
+| --- | --- | --- | --- | --- |
+| 0 |	Afghanistan |	46.60 |	3.2 |	1.163151 |
+| 1 |	Albania |	15.11 |	71.2 |	4.265493 |
+| 2 |	Algeria |	17.14 |	78.1 |	4.357990 |
+| 3 |	AmericanSamoa |	22.46 |	259.5 |	5.558757 |
+| 4 |	Andorra |	8.71 |	497.2 |	6.208992 |
+
 We can see that this transformation has drastically reduced the range of values for our dependent variable. Let’s run a second model predicting log_phones from birth_rate and see what else has changed.
 
 # Fit regression model
