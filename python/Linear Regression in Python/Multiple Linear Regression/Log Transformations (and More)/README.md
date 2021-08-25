@@ -145,30 +145,49 @@ print(countries.head())
 | 3 |	AmericanSamoa |	22.46 |	259.5 |	5.558757 |
 | 4 |	Andorra |	8.71 |	497.2 |	6.208992 |
 
-We can see that this transformation has drastically reduced the range of values for our dependent variable. Let’s run a second model predicting log_phones from birth_rate and see what else has changed.
-
+We can see that this transformation has drastically reduced the range of values for our dependent variable. 
+Let’s run a second model predicting `log_phones` from `birth_rate` and see what else has changed.
+```py
 # Fit regression model
-model2 = sm.OLS.from_formula('log_phones ~ birth_rate', data=countries).fit()
+model2 = sm.OLS.from_formula(
+    'log_phones ~ birth_rate', 
+    data = countries
+).fit()
+
 # Save fitted values and residuals
-'fitted_values2' = model2.predict(countries)
-'residuals2' = countries.log_phones - fitted_values2
-If we examine the scatter plot of log_phones against birth_rate, we can see a big change in the appearance of our data:
+fitted_values2 = model2.predict(countries)
+residuals2 = countries.log_phones - fitted_values2
+```
+If we examine the scatter plot of `log_phones` against `birth_rate`, we can see a big change in the appearance of our data:
 
-Scatter plot of log phones versus birth rate. The pattern is still negative, but the points now fit closer to the regression line and are more evenly spaced around it.
+![log phones vs. birth rate](images/annotated_pVb2.svg)
 
-While there’s some crowding in the upper lefthand corner, the pattern now appears much more linear and more evenly spaced about the regression line. Specifically, countries that had larger residuals earlier (like Bermuda and Australia) are now much closer to the line and each other vertically. Likewise, countries that had small residuals earlier (like Mayotte and Angola) are now further from the line and each other vertically. This change is reflected in both the histogram of the residuals (now much less skewed) and the scatter plot of the residuals versus the fitted values (now much more evenly spaced across the line y = 0).
+Scatter plot of log phones versus birth rate. 
+The pattern is still negative, but the points now fit closer to the regression line and are more evenly spaced around it.
+
+While there’s some crowding in the upper lefthand corner, the pattern now appears much more linear and more evenly spaced about the regression line. 
+Specifically, countries that had larger residuals earlier (like Bermuda and Australia) are now much closer to the line and each other vertically. 
+Likewise, countries that had small residuals earlier (like Mayotte and Angola) are now further from the line and each other vertically. 
+This change is reflected in both the histogram of the residuals (now much less skewed) 
+and the scatter plot of the residuals versus the fitted values (now much more evenly spaced across the line y = 0).
+
+![Histogram of residuals](images/hist2.svg)
 
 Histogram of residuals that is more bell-shaped than the first skewed histogram.
 
 Scatter plot of residuals against fitted values that shows a more even spread of points about the line y = 0 compared to the first model's scatter plot of residuals against fitted values.
 
-Interpretation
-While it’s great that our new variable seems to be better meeting our model assumptions, how do we interpret the coefficients in our model now that logs are involved? First, let’s look at the output of the model predicting log_phones from birth_rate and write out the regression equation:
+## Interpretation
 
+While it’s great that our new variable seems to be better meeting our model assumptions, how do we interpret the coefficients in our model now that logs are involved? 
+First, let’s look at the output of the model predicting `log_phones` from `birth_rate` and write out the regression equation:
+```py
 print(model2.params)
+
 # Output:
 # Intercept     7.511024
 # birth_rate   -0.130456
+```
 log(phones) = 7.51 - 0.13*birth\_ratelog(phones)=7.51−0.13∗birth_rate
 We can always interpret the coefficient on birth_rate in the traditional way: for every increase of one birth per 1000 people, the natural log of phones decreases by 0.13 phones per 1000 people. While this is accurate, it’s not very informative about the relationship between phones and birth_rate. To examine this relationship, we need to do a little math with logs and exponentiation.
 
