@@ -256,52 +256,50 @@ Note that we use `2.718` as an approximation of ***e*** here.
 | 5 |	e<sup>5</sup> |	2.718 * 2.718 * 2.718 * 2.718 * 2.718 |	148.336 |	93.760 |
 | 6 |	e<sup>6</sup> |	2.718 * 2.718 * 2.718 * 2.718 * 2.718 * 2.718 |	403.178 |	254.842 |
 
-As we can see from the table, every time the power e is raised to increases, the output nearly triples. This means the difference in the outputs between low powers is smaller than the difference in outputs between larger powers. Taking the log of the output column “undoes” this process, returning the corresponding value in the power column (e.g., log(2.718) = 1, log(7.388) = 2, etc.).
+As we can see from the table, every time the power ***e*** is raised to increases, the output nearly triples. 
+This means the difference in the outputs between low powers is smaller than the difference in outputs between larger powers. 
+Taking the log of the output column “undoes” this process, returning the corresponding value in the power column (e.g., ***log(2.718) = 1***, ***log(7.388) = 2***, etc.).
 
-In terms of our dataset, the output column is like the raw phones values, and the power column is the new log_phones variable. Big differences in the upper values of phones translate to the same size jump on the log_phones scale as small differences in the lower values of phones. Thus, translated to the log scale, the large values of phones (like those of Bermuda and Australia) pull in, while the small values of phones (like those of Mayotte and Angola) spread out.
+In terms of our dataset, the output column is like the raw `phones` values, and the power column is the new `log_phones` variable. 
+Big differences in the upper values of `phones` translate to the same size jump on the `log_phones` scale as small differences in the lower values of `phones`. 
+Thus, translated to the log scale, the large values of `phones` (like those of Bermuda and Australia) pull in, 
+while the small values of phones (like those of Mayotte and Angola) spread out.
 
-Why do we interpret the exponentiated coefficients on the predictors as percentage differences of the dependent variable?
-Let’s say birth_rate0 is a value of birth_rate and phones0 is the value of phones at birth_rate0 such that:
+### Why do we interpret the exponentiated coefficients on the predictors as percentage differences of the dependent variable?
 
-log(phones_0) = 7.51 - 0.13*birth\_rate_0log(phones 
-0
-​
- )=7.51−0.13∗birth_rate 
-0
-​
+Let’s say birth_rate<sub>0</sub> is a value of `birth_rate` and phones0<sub>0</sub> is the value of `phones` at birth_rate0<sub>0</sub> such that:
+
+<h3 align="center">
+    <em>
+        log(phones<sub>0</sub>) = 7.51 − 0.13 ∗ birth_rate<sub>0</sub>
+    </em>
+</h3>
  
-Let’s also say phones1 is the value of phones when birth_rate is increased by 1 birth from birth_rate0. Then,
+Let’s also say phones<sub>1</sub> is the value of `phones` when `birth_rate` is increased by 1 birth from birth_rate<sub>0</sub>. Then,
 
-log(phones_1) = 7.51 - 0.13*(birth\_rate_0 + 1)log(phones 
-1
-​
- )=7.51−0.13∗(birth_rate 
-0
-​
- +1)
-Next, we distribute the -0.13 and substitute log(phones0) for 7.51 - 0.13*birth_rate0. Then we subtract log(phones0) from both sides to isolate the birth_rate coefficient of -0.13.
+<h3 align="center">
+    <em>
+        log(phones<sub>1</sub>) = 7.51 - 0.13 * (birth_rate<sub>0</sub> + 1)
+    </em>
+</h3>
 
-log(phones_1) = 7.51 - 0.13*birth\_rate_0 - 0.13log(phones 
-1
-​
- )=7.51−0.13∗birth_rate 
-0
-​
- −0.13
-log(phones_1) = log(phones_0) - 0.13log(phones 
-1
-​
- )=log(phones 
-0
-​
- )−0.13
-log(phones_1) - log(phones_0) = -0.13log(phones 
-1
-​
- )−log(phones 
-0
-​
- )=−0.13
+Next, we distribute the `-0.13` and substitute log(phones<sub>0</sub>) for 7.51 - 0.13 * birth_rate<sub>0</sub>. 
+Then we subtract log(phones<sub>0</sub>) from both sides to isolate the `birth_rate` coefficient of `-0.13`.
+
+<h3 align="center">
+    <em>
+        log(phones<sub>1</sub>) = 7.51 - 0.13 * (birth_rate<sub>0</sub>  - 0.13
+    </em>
+    <br />
+    <em>
+        log(phones<sub>1</sub>) = log(phones<sub>0</sub>) - 0.13
+    </em>
+    <br />
+    <em>
+        log(phones<sub>1</sub>) - log(phones<sub>0</sub>) = -0.13
+    </em>
+</h3>
+
 Finally, by the quotient rule, we find that our coefficient on birth_rate is equal to a single log. We exponentiate both sides to find our exponentiated coefficient on birth_rate is equal to a simple quotient that gives the percentage change in the phones variable between phones0 and phones1.
 
 log(\frac{phones_1}{phones_0}) = -0.13log( 
