@@ -108,7 +108,7 @@ plt.title('Model 1: Residuals vs Fitted Values', fontsize = 16, weight = 'bold')
 plt.show()
 ```
 
-![Histogram of residuals](images/hist.svg)
+![Histogram of residuals](images/hist1.svg)
 ![residuals vs. fitted values](images/annotated_variance1.svg)
 
 Histogram of residuals that is right skewed.
