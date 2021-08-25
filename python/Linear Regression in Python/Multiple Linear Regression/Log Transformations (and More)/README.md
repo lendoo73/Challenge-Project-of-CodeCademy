@@ -305,9 +305,13 @@ We exponentiate both sides to find our exponentiated coefficient on `birth_rate`
 equal to a simple quotient that gives the percentage change in the `phones` variable between phones<sub>0</sub> and phones<sub>1</sub>.
 
 <div align="center">
-    <img src="images/log1.jpg" />
-    <br />
-    <img src="images/exp_log1.jpg" />
-    <br />
-    <img src="images/1.jpg" />
+    <p>
+        <img src="images/log1.jpg" />
+    <p/>
+    <p>
+        <img src="images/exp_log1.jpg" />
+    <p/>
+    <p>
+        <img src="images/1.jpg" />
+    <p/>
 </div>
