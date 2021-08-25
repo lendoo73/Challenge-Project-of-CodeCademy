@@ -249,12 +249,13 @@ Note that we use `2.718` as an approximation of ***e*** here.
 
 | power |	e<sup>power</sup> |	multiplied | 	output |	difference |
 | --- | --- | --- | --- | --- |
-| 1 |	esup>1</sup> | 2.718  |	2.718	— |
-2	e2	2.718*2.718	7.388	4.670
-3	e3	2.718*2.718*2.718	20.079	15.409
-4	e4	2.718*2.718*2.718*2.718	54.576	34.497
-5	e5	2.718*2.718*2.718*2.718*2.718	148.336	93.760
-6	e6	2.718*2.718*2.718*2.718*2.718*2.718	403.178	254.842
+| 1 |	e<sup>1</sup> | 2.718  |	2.718 |	— |
+| 2 |	e<sup>2</sup> |	2.718 * 2.718 |	7.388 |	4.670 |
+| 3 |	e<sup>3</sup> |	2.718 * 2.718 * 2.718 |	20.079 |	15.409 |
+| 4 |	e<sup>4</sup> |	2.718 * 2.718 * 2.718 * 2.718 |	54.576 |	34.497 |
+| 5 |	e<sup>5</sup> |	2.718 * 2.718 * 2.718 * 2.718 * 2.718 |	148.336 |	93.760 |
+| 6 |	e<sup>6</sup> |	2.718 * 2.718 * 2.718 * 2.718 * 2.718 * 2.718 |	403.178 |	254.842 |
+
 As we can see from the table, every time the power e is raised to increases, the output nearly triples. This means the difference in the outputs between low powers is smaller than the difference in outputs between larger powers. Taking the log of the output column “undoes” this process, returning the corresponding value in the power column (e.g., log(2.718) = 1, log(7.388) = 2, etc.).
 
 In terms of our dataset, the output column is like the raw phones values, and the power column is the new log_phones variable. Big differences in the upper values of phones translate to the same size jump on the log_phones scale as small differences in the lower values of phones. Thus, translated to the log scale, the large values of phones (like those of Bermuda and Australia) pull in, while the small values of phones (like those of Mayotte and Angola) spread out.
