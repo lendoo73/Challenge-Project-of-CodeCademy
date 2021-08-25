@@ -58,7 +58,7 @@ plt.show()
 | 3 |	AmericanSamoa |	22.46 |	259.5 |
 | 4 |	Andorra |	8.71 |	497.2 |
 
-![phones vs. birth rate](annotated_pVb1.svg)
+![phones vs. birth rate](images/annotated_pVb1.svg)
 
 Scatter plot of phones on the y-axis plotted against birth rate on the x-axis. The pattern appears negative, but the points are widely dispersed on the left and narrow to almost a flat line of points as we move right. The automatically plotted regression line shows a negative relationship, but cuts through curves in the pattern of points. The points of nine countries are highlighted and their residuals are drawn in. From left to right across the plot the countries are: Bermuda, Cuba, Australia, Algeria, Israel, Fiji, Nepal, Mayotte, and Angola.
 
