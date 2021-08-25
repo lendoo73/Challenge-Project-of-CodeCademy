@@ -50,8 +50,8 @@ sns.lmplot(
 plt.title('Number of Phones vs Birth Rate', fontsize = 16, weight = 'bold')
 plt.show()
 ```
-| country |	birth_rate |	phones |
-| --- | --- | --- |
+|  | country |	birth_rate |	phones |
+| ---- | --- | --- | --- |
 | 0 |	Afghanistan |	46.60 |	3.2 |
 | 1 |	Albania |	15.11 |	71.2 |
 | 2 |	Algeria |	17.14 |	78.1 |
