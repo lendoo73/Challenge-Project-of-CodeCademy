@@ -40,6 +40,7 @@ model2 = sm.OLS.from_formula(
     'rent ~ bedrooms + bathrooms + size_sqft + min_to_subway + floor + borough', 
     data = rentals_train
 ).fit()
+```
 
 * Then, we use those models to predict the rental price for the apartments in the test set:
 
