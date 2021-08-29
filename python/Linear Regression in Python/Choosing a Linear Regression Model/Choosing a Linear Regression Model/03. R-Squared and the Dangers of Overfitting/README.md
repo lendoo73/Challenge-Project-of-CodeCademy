@@ -29,6 +29,13 @@ However, adding a lot of additional predictors can lead to a different issue: ov
 To understand the intuition behind why overfitting is problematic, consider the following plot of rental prices vs. number of bathrooms. 
 We can perfectly predict each datapoint if we fit the zig-zagging line shown below:
 
-plot showing rent vs. bedrooms for 9 apartments. The points are all connected by a zig-zagging dotted line.
+![ zig-zag line](overfitting.svg)
 
-However, imagine that we collect a new sample of apartments in NYC and record the number of bathrooms in each. Then, suppose we want to use our model to predict rental prices. Even if the overall relationship between bathrooms and rent is the same in our new data, the exact values will be slightly different. Predictions based on the zig-zag line may be less accurate because the model was so heavily influenced by the quirks of the data we originally collected. A straight line through the middle of the points is actually more useful.
+plot showing rent vs. bedrooms for 9 apartments. 
+The points are all connected by a zig-zagging dotted line.
+
+However, imagine that we collect a new sample of apartments in NYC and record the number of bathrooms in each. 
+Then, suppose we want to use our model to predict rental prices. 
+Even if the overall relationship between bathrooms and rent is the same in our new data, the exact values will be slightly different. 
+Predictions based on the zig-zag line may be less accurate because the model was so heavily influenced by the quirks of the data we originally collected. 
+A straight line through the middle of the points is actually more useful.
