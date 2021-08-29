@@ -3,7 +3,7 @@
 # [R-Squared](https://www.codecademy.com/courses/linear-regression-mssp/lessons/choosing-a-linear-regression-model/exercises/r-squared)
 
 R-squared is one of the most common metrics to evaluate linear regression models. 
-We can interpret R-squared as the proportion of variation in an outcome variable that is explained by a linear regression model. 
+We can interpret **R-squared** as ***the proportion of variation in an outcome variable*** that is explained by a linear regression model. 
 More explained variation is generally better.
 
 For example, suppose we have a dataset containing information about apartment rentals for NYC apartments. 
