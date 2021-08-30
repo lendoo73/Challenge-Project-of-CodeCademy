@@ -157,3 +157,10 @@ X_train, X_test, y_train, y_test = train_test_split(
     test_size = 0.25
 )
 ```
+
+## Recap
+
+In this article, you have learned about two different modules for fitting linear regression models in Python. 
+Both statsmodels and scikit-learn have pros and cons for different applications, so there is no right or wrong choice between them! 
+However, understanding these two different implementations will help you become a more flexible statistician, data scientist, 
+or analyst, who can adapt to ever changing technologies and choose an appropriate option for the task at hand.
