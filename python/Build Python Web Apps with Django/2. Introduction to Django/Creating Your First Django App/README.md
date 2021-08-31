@@ -258,9 +258,75 @@ def index(request):
 Above, we have an `index()` view function for our home page. 
 When users visit our home page, the view function sends back an `HttpResponse` with the string `"This is the response!"` to be displayed on a web page.
 
+# [Using a View To Send an HTML Page](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/introduction-to-django/modules/introduction-to-django/lessons/creating-your-first-django-app/exercises/using-a-view-to-send-an-html-page)
 
+We just made a view that sends raw text to the browser. 
+But, websites aren’t just plain text! 
+In order to create stylish web pages, we mainly use HTML, CSS, and JavaScript.
 
+We can use Django to render an HTML page when a view function is called. 
+Django will look in each app folder inside `INSTALLED_APPS` for directories named **templates**. 
+The [best practice](https://docs.djangoproject.com/en/3.0/intro/tutorial03/#namespacing-url-names) 
+for structuring this folder is to *namespace* them. 
+That is to place our HTML pages inside a directory that has the same name as your app within the **templates/** directory.
 
+The resulting templates folder structure will look like this:
+```py
+myapp/
+└── templates/
+    └── myapp/
+      └── mytemplate.html
+```
+The reason for this nested structure is if there was a template file with the same name in a different application, Django would be unable to distinguish between them. 
+We need to be able to point Django at the right one and namespacing them ensures against future conflicts, 
+so that apps lower down in the `INSTALLED_APPS` setting do not override previous templates.
+
+With our file structure set up, we can build out the logic in our view function in **views.py** like so:
+```py
+from django.template import loader
+def home():
+  template = loader.get_template("app/home.html")
+  return HttpResponse(template.render())
+```
+In the above code, we import `loader` from `django.template`. 
+Inside the view function (`home()`) we load the template with `.get_template()`. 
+Then, we use the `.render()` method on the template object inside the `HttpResponse` object to send HTML pages to clients.
+
+# [Creating a Django Template](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/introduction-to-django/modules/introduction-to-django/lessons/creating-your-first-django-app/exercises/creating-a-django-template)
+
+To place content generated from Django inside the HTML file, we need to turn our static HTML file into a *template*.
+
+In the context of a web framework, templates are pages created with special markup that allows for backend data and commands to modify the contents of a page. 
+Django employs a special syntax called *Django Templating Language* to distinguish itself from HTML, CSS, and JavaScript. 
+That syntax in many template languages uses curly braces, sometimes referred to as *handlebars*, as a placeholder for data that is passed by Django.
+
+In the HTML, we use curly braces the braces like this:
+```html
+<h1>Hello, {{name}}</h1>
+```
+When we call the view to render the template, we can use something called a context to tell Django what to replace in the template. The relationships in the context are referred to as a name/value pair. By default, a context is an empty dictionary. Our context for name will look like this inside the view function:
+
+context = {"name": "Junior"}
+We then pass the context as an argument in the render function. The full view.py will look like this:
+
+from django.http import HttpResponse
+from django.template import loader
+def home(request):
+  context = {"name": "Junior"}
+  template = loader.get_template("app/home.html")
+  return HttpResponse(template.render(context))
+This would return a webpage that says “Hello, Junior” inside an <h1> tag.
+
+It’s quite common in Django to load templates, fill their context, and return an HttpResponse object with their rendered template. Django provides a shortcut for this pattern called the render() function! The render() function will do the work of loading the template and provide the contexts when they are passed as arguments.
+
+Our example above can be rewritten with the shortcut function like this:
+
+from django.shortcuts import render
+ 
+def home(request):
+  context = {"name": "Junior"}
+  return render(request, "app/home.html", context)
+Note that we no longer need to import loader and HttpResponse when we use the render() function. The render() function takes the request object as its first argument, a template name as its second argument, and a dictionary as an optional third argument that passes the context variables to the template.
 
 
 
