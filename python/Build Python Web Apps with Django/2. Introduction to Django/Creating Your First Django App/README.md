@@ -40,7 +40,31 @@ These are some of the “batteries” included in Django to help build projects 
 
 Later we’ll see how we can bootstrap a fully featured web application in only a handful of commands.
 
+# [How Django Works](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/introduction-to-django/modules/introduction-to-django/lessons/creating-your-first-django-app/exercises/how-django-works)
 
+Before we create our first Django web app, let’s take a little look into how Django works underneath the hood. 
+The Django project describes itself as an MTV framework, using Models, Templates and Views. 
+Let’s break down these components:
+* The model portion deals with data and databases, it can retrieve, store, and change data in a database.
+* The template determines how the data looks on a web page.
+* The view describes the data to be presented, and passes this information to the template.
+
+With the basics of the components explained let’s understand how they work together when we visit a Django website. 
+When a request comes to a web server, it’s passed to Django to figure out what is requested. 
+A client requests a URL, let’s use codecademy.com as an example, Django will take the web address and pass it to its urlresolver. 
+Django will try to match the URL to a list of patterns, and if there is a match, then pass the request to the associated view function.
+
+Imagine a mail carrier delivering a letter. 
+They walk down the street checking each house number until they find the exact one on the letter. 
+Once they find the house, they deliver the letter. 
+That’s how the urlresolver works!
+
+When we land on the right page, Django uses data from the model and feeds it into the view function to determine what data is shown. 
+That data is given to the template and presented to us via the web page.
+
+This is a bit of a simplified version of what Django is doing underneath the hood, but a key takeaway is that Django follows this MTV pattern.
+
+![mtv pattern](images/django_mtv_diagram_v2.svg)
 
 
 
