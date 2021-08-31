@@ -304,10 +304,15 @@ In the HTML, we use curly braces the braces like this:
 ```hbs
 <h1>Hello, {{name}}</h1>
 ```
-When we call the view to render the template, we can use something called a context to tell Django what to replace in the template. The relationships in the context are referred to as a name/value pair. By default, a context is an empty dictionary. Our context for name will look like this inside the view function:
-
+When we call the view to render the template, we can use something called a context to tell Django what to replace in the template. 
+The relationships in the context are referred to as a name/value pair. 
+By default, a context is an empty dictionary. 
+Our context for `name` will look like this inside the view function:
+```py
 context = {"name": "Junior"}
-We then pass the context as an argument in the render function. The full view.py will look like this:
+```
+We then pass the context as an argument in the render function. 
+The full **view.py** will look like this:
 
 from django.http import HttpResponse
 from django.template import loader
