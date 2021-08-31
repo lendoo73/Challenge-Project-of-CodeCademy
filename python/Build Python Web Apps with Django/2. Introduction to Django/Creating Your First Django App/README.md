@@ -98,7 +98,67 @@ We’ll start a project in this exercise, and in the next exercise we will go in
 
 # [Configuring Django Settings](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/introduction-to-django/modules/introduction-to-django/lessons/creating-your-first-django-app/exercises/configuring-django-settings)
 
+With only a one-line command, Django has started a functioning project! 
+Behind the scenes, Django will do all the configurations for us and store them in an inner directory with the same name as the project. 
+Important for us are **settings.py** and **urls.py**. 
+We can safely ignore the other files, just remember to not delete them by accident!
 
+**settings.py** is a Python file that contains configurations that we’ll be editing throughout the development of our project. 
+Inside, there is a list called `INSTALLED_APPS` which contains the apps that make up the Django project, more on these later. 
+After running the `startproject` command, our **settings.py** should contain:
+```py
+INSTALLED_APPS = [
+  'django.contrib.admin',
+  'django.contrib.auth',
+  'django.contrib.contenttypes',
+  'django.contrib.sessions',
+  'django.contrib.messages',
+  'django.contrib.staticfiles',
+]
+```
+We can see that Django pre-installs some common apps for us, such as admin, authentication, sessions, and an app to help manage static files. 
+When we create new applications for the project, we have to include them here so that Django will know about them!
+
+Further down in **settings.py**, is a dictionary named `DATABASES`. 
+It looks like:
+```py
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': BASE_DIR / 'db.sqlite3',
+  }
+}
+```
+We see that Django by default will set up an SQLite database for us. 
+In later lessons, we’ll learn how to use it to store content.
+
+Next, in the same directory where **settings.py** is located, is another Python file named **urls.py**. 
+Inside are the URL declarations for this Django project, or a “table of contents” for the Django project. 
+Remember earlier when we said that Django goes down a list of patterns to match a URL? 
+This is that list!
+
+When we first create the project, **urls.py** will include this:
+```py
+urlpatterns = [
+  path('admin/', admin.site.urls),
+]
+```
+This means that the admin app already has a route.
+
+Since the project comes pre-configured, we can start a server to test that the project works. 
+A development server can be started by using **manage.py** and providing the `runserver` command. 
+This command must be run in the root directory, the same directory where **manage.py** is located. 
+By default, Django will start a development server with port 8000, but an alternate port can be provided as an option.
+
+The full command will look like this:
+```py
+python3 manage.py runserver <port number>
+```
+The Django development server will hot-reload as changes are made to the project, so we don’t have to keep restarting the server as we develop. 
+The server will keep running until we stop it with the `ctrl + c`.
+
+**Note:** Our Codecademy Django environment must run the development server on port 4001 by providing the option `0.0.0.0:4001` This port is specific to working on Codecademy. 
+If you want to work locally on your computer, you can let Django set the default port for you.
 
 
 
