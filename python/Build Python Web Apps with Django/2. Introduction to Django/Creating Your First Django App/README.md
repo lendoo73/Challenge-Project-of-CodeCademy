@@ -313,27 +313,81 @@ context = {"name": "Junior"}
 ```
 We then pass the context as an argument in the render function. 
 The full **view.py** will look like this:
-
+```py
 from django.http import HttpResponse
 from django.template import loader
+
 def home(request):
   context = {"name": "Junior"}
   template = loader.get_template("app/home.html")
   return HttpResponse(template.render(context))
-This would return a webpage that says “Hello, Junior” inside an <h1> tag.
+```
+This would return a webpage that says “Hello, Junior” inside an `<h1>` tag.
 
-It’s quite common in Django to load templates, fill their context, and return an HttpResponse object with their rendered template. Django provides a shortcut for this pattern called the render() function! The render() function will do the work of loading the template and provide the contexts when they are passed as arguments.
+It’s quite common in Django to load templates, fill their context, and return an `HttpResponse` object with their rendered template. 
+Django provides a shortcut for this pattern called the `render()` function! 
+The `render()` function will do the work of loading the template and provide the contexts when they are passed as arguments.
 
 Our example above can be rewritten with the shortcut function like this:
-
+```py
 from django.shortcuts import render
  
 def home(request):
   context = {"name": "Junior"}
   return render(request, "app/home.html", context)
-Note that we no longer need to import loader and HttpResponse when we use the render() function. The render() function takes the request object as its first argument, a template name as its second argument, and a dictionary as an optional third argument that passes the context variables to the template.
+ ```
+Note that we no longer need to import `loader` and `HttpResponse` when we use the `render()` function. 
+The [`render()` function](https://docs.djangoproject.com/en/3.1/topics/http/shortcuts/#django.shortcuts.render) 
+takes 
+* the request object as its first argument, 
+* a template name as its second argument, 
+* and a dictionary as an optional third argument that passes the context variables to the template.
 
+# [Wiring Up a View](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/introduction-to-django/modules/introduction-to-django/lessons/creating-your-first-django-app/exercises/wiring-up-a-view)
 
+On the internet, every page needs its own URL because each URL displays unique information. 
+In Django, we can use something called a **URLconf**, for URL configuration. 
+This module is a set of patterns that Django will try to match the requested URL to find the correct view.
+
+An app’s URLconf is located in a file named **urls.py** inside the app’s directory. 
+At the top of the **urls.py** we import the `path` object from `django.urls` and we import the view functions from **views.py** 
+and add routes that direct to each of our view functions.
+
+The **urls.py** will look like this:
+
+from django.urls import path
+from . import views
+ 
+urlpatterns = [
+  path('', views.home),
+  path('profile/', views.profile, name="profile")  
+]
+After the import statements is a list of patterns called urlpatterns, which contain the routes to each view function. Each route is provided as a path() object that has three arguments: the URL route as a string, the name of the function of the view, and an optional name used to refer to the view.
+
+With the above example, when we navigate to the URL without any additional route, '', the home() view function will be called. Going to the URL ending with /profile will call the profile() view function.
+
+To make Django aware of the app’s URLconf, it must be included in the project’s URLconf, also called urls.py.
+
+The default urls.py folder for a project looks like this:
+
+from django.contrib import admin
+from django.urls import path
+ 
+urlpatterns = [
+  path("admin/", admin.site.urls),
+]
+We can see that Django already includes some URLs for us in urlpatterns. The admin page we visited earlier is already there: path('admin/', admin.site.urls).
+
+To include the app’s URLconf we import the include path from django.urls and add a path()to the urlpatterns.
+
+from django.contrib import admin
+from django.urls import include, path
+ 
+urlpatterns = [
+  path("admin/", admin.site.urls),
+  path("", include("myapp.urls")),
+]
+With both URLconfs set up, we can properly view our routes for the application: myapp in a web browser.
 
 
 
