@@ -64,7 +64,39 @@ That data is given to the template and presented to us via the web page.
 
 This is a bit of a simplified version of what Django is doing underneath the hood, but a key takeaway is that Django follows this MTV pattern.
 
+# [Starting a Django Project](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/introduction-to-django/modules/introduction-to-django/lessons/creating-your-first-django-app/exercises/starting-a-django-project)
 
+Now that we have a basic understanding of what Django is and how it works, let’s get started with creating a project. 
+Django provides us with `django-admin`, a command-line utility that helps us with a variety of administrative tasks. 
+We can use it with various commands by calling it in the terminal like this:
+```py
+django-admin <command> [options]
+```
+Running `django-admin help` will provide a list of possible commands.
+
+A Django project can be easily created with the `startproject` command. 
+It takes a couple of options– the name of the project and optionally the directory for our project. 
+The full command would look like this:
+```py
+django-admin startproject projectname
+```
+Django will then create a directory for the project, or the project root folder.
+```py
+my-project/
+  ├── my-project/
+  └── manage.py
+```
+Inside the project root folder is a Python file, **manage.py**, that contains a collection of useful functions used to administer the project. 
+This file performs the same actions as `django-admin` but is set specifically to the project. 
+We can do a number of things with it, such as starting a server.
+
+Alongside the **manage.py** is another directory with the same name as the project. 
+This folder is treated as a [Python package](https://docs.python.org/3/reference/import.html#regular-packages) 
+because of the presence of **__init__.py**, and inside this directory contains important settings and configuration files for the project.
+
+We’ll start a project in this exercise, and in the next exercise we will go into more detail about the specific files that are created.
+
+# [Configuring Django Settings](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/introduction-to-django/modules/introduction-to-django/lessons/creating-your-first-django-app/exercises/configuring-django-settings)
 
 
 
