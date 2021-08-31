@@ -301,7 +301,7 @@ Django employs a special syntax called *Django Templating Language* to distingui
 That syntax in many template languages uses curly braces, sometimes referred to as *handlebars*, as a placeholder for data that is passed by Django.
 
 In the HTML, we use curly braces the braces like this:
-```html
+```HTML
 <h1>Hello, {{name}}</h1>
 ```
 When we call the view to render the template, we can use something called a context to tell Django what to replace in the template. The relationships in the context are referred to as a name/value pair. By default, a context is an empty dictionary. Our context for name will look like this inside the view function:
