@@ -64,7 +64,6 @@ That data is given to the template and presented to us via the web page.
 
 This is a bit of a simplified version of what Django is doing underneath the hood, but a key takeaway is that Django follows this MTV pattern.
 
-![mtv pattern](images/django_mtv_diagram_v2.svg)
 
 
 
