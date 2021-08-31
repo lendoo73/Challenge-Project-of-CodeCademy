@@ -18,3 +18,46 @@ Django is an open-source project, supported by the
 It has been used by many well-known data-heavy websites such as Instagram, Youtube, and Dropbox. 
 In this lesson, we’ll create together our first Django app! 
 More importantly, we’ll experience first-hand how its design helps to take applications from concept to completion using its “batteries included” approach.
+
+# [What is a Web Framework?](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/introduction-to-django/modules/introduction-to-django/lessons/creating-your-first-django-app/exercises/what-is-a-web-framework)
+
+Let’s first establish what it means when we say ***Django is a web framework***.
+
+Web frameworks are a type of software development tool that makes it easier and faster to develop web applications. 
+They are a type of code library that provides code and patterns for database access, as well as templating systems for content. 
+They promote code reuse, so we don’t have to write as much code to get a project running. 
+Some features most web frameworks include are:
+* URL routing
+* Input form management and validation
+* Templating engines for HTML and CSS
+* Database configuration
+* Web security
+* Session repository and retrieval
+
+Out of the box, Django comes with an admin panel, a user authentication system, a database, 
+and something called object-relational mapper (ORM) that helps a web application interact with a database. 
+These are some of the “batteries” included in Django to help build projects faster without having to worry about which tools to use.
+
+Later we’ll see how we can bootstrap a fully featured web application in only a handful of commands.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
