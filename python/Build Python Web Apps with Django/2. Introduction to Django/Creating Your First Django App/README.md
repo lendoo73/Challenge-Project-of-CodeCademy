@@ -354,7 +354,7 @@ At the top of the **urls.py** we import the `path` object from `django.urls` and
 and add routes that direct to each of our view functions.
 
 The **urls.py** will look like this:
-
+```py
 from django.urls import path
 from . import views
  
@@ -362,24 +362,32 @@ urlpatterns = [
   path('', views.home),
   path('profile/', views.profile, name="profile")  
 ]
-After the import statements is a list of patterns called urlpatterns, which contain the routes to each view function. Each route is provided as a path() object that has three arguments: the URL route as a string, the name of the function of the view, and an optional name used to refer to the view.
+```
+After the import statements is a list of patterns called `urlpatterns`, which contain the routes to each view function. 
+Each route is provided as a `path()` object that has three arguments: 
+* the URL route as a string, 
+* the name of the function of the view, 
+* and an optional name used to refer to the view.
 
-With the above example, when we navigate to the URL without any additional route, '', the home() view function will be called. Going to the URL ending with /profile will call the profile() view function.
+With the above example, when we navigate to the URL without any additional route, `''`, the `home()` view function will be called. 
+Going to the URL ending with `/profile` will call the `profile()` view function.
 
-To make Django aware of the app’s URLconf, it must be included in the project’s URLconf, also called urls.py.
+To make Django aware of the app’s URLconf, it must be included in the project’s URLconf, also called **urls.py**.
 
-The default urls.py folder for a project looks like this:
-
+The default **urls.py** folder for a project looks like this:
+```py
 from django.contrib import admin
 from django.urls import path
  
 urlpatterns = [
   path("admin/", admin.site.urls),
 ]
-We can see that Django already includes some URLs for us in urlpatterns. The admin page we visited earlier is already there: path('admin/', admin.site.urls).
+```
+We can see that Django already includes some URLs for us in `urlpatterns`. 
+The admin page we visited earlier is already there: `path('admin/', admin.site.urls)`.
 
-To include the app’s URLconf we import the include path from django.urls and add a path()to the urlpatterns.
-
+To include the app’s URLconf we import the include path from `django.urls` and add a `path()` to the `urlpatterns`.
+```py
 from django.contrib import admin
 from django.urls import include, path
  
@@ -387,7 +395,8 @@ urlpatterns = [
   path("admin/", admin.site.urls),
   path("", include("myapp.urls")),
 ]
-With both URLconfs set up, we can properly view our routes for the application: myapp in a web browser.
+```
+With both URLconfs set up, we can properly view our routes for the application: `myapp` in a web browser.
 
 
 
