@@ -9,4 +9,6 @@ But if templates were written in pure HTML then we don’t really need Django.
 Rather, Django gives us [Django Template Language (DTL)](https://docs.djangoproject.com/en/3.1/ref/templates/language/) 
 which lets us inject variables, logic, and control flow inside of our HTML - supercharging our HTML files to do so much more than provide static content.
 
-![Django Template Language (DTL)](django_mtv_diagram_bg.svg)
+![Django’s MTV design pattern](django_mtv_diagram_bg.svg)
+
+Templates play an integral part of Django’s MTV design pattern, so you will look into finer detail, how this component relates to the overall process of creating a web app.
