@@ -38,9 +38,8 @@ It should look like this:
  
 {% endblock %}
 ```
-```html
-{% block content %}
- 
-{% endblock %}
-```
-Typically only page-specific content will go inside of these tags and is added from other templates. These blocks are usually left empty in the base template though. Multiple blocks can be created within the base template and then used in other templates. Blocks can be put anywhere within the base template. This is because not everything page-specific will necessarily go in the body.
+Typically only page-specific content will go inside of these tags and is added from other templates. 
+These blocks are usually left empty in the base template though. 
+Multiple blocks can be created within the base template and then used in other templates. 
+Blocks can be put anywhere within the base template. 
+This is because not everything page-specific will necessarily go in the body.
