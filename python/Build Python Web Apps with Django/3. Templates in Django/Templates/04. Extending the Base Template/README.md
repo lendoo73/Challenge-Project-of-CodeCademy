@@ -18,7 +18,7 @@ To use our base template in other templates, we need to include `{% extends "app
 ```
 But this code isn’t complete, we still need to tell our **base.html** what block of content to include. 
 This can be done by adding two tags to our document before and after the paragraphs that says `block content` and `endblock`.
-```pug
+```html
 {% extends "vetoffice/base.html" %}
  
 {% block content %}
