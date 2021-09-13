@@ -19,8 +19,11 @@ projectname/
          |-- appname/
              |-- file.css
 ```
-Once a CSS file is added to static/appname, it can be referenced within our templates inside of blocks formed in the base.html <head> elements. This is because static files will not be passed down to children of the base.html template. The files in our static/ folder should be loaded in the <header>. Therefore, we’ll add another block tag, like so:
-
+Once a CSS file is added to **static/appname**, it can be referenced within our templates inside of blocks formed in the **base.html** `<head>` elements. 
+This is because static files will not be passed down to children of the **base.html** template. 
+The files in our **static/** folder should be loaded in the `<head>`. 
+Therefore, we’ll add another block tag, like so:
+```html
 <!-- base.html -->
 <!DOCTYPE html>
 <head>
@@ -29,11 +32,18 @@ Once a CSS file is added to static/appname, it can be referenced within our temp
   {% endblock %}
 </head>
 ...
-Inside of the template we’ll be using, we first need to load in static files. This is typically done at the beginning of the file after extending from base.html. This will let us access all of our static files later. Then the block created from base.html can be added to the document. This is the block where the CSS will be loaded in. This is done by loading a CSS file as normal, except setting the href to a tag that says {% static 'appname/file.css' %}. It should look like the code below.
-
+Inside of the template we’ll be using, we first need to load in static files. 
+This is typically done at the beginning of the file after extending from **base.html**. 
+This will let us access all of our static files later. 
+Then the block created from **base.html** can be added to the document. 
+This is the block where the CSS will be loaded in. 
+This is done by loading a CSS file as normal, except setting the `href` to a tag that says `{% static 'appname/file.css' %}`. 
+It should look like the code below.
+```html
 <!-- template_example.html -->
 {% load static %}
  
 {% block head %}
 <link rel="stylesheet" href="{% static 'appname/file.css' %}">
 {% endblock %}
+```
