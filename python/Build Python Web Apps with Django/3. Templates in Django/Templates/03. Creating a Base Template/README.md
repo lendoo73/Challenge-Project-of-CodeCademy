@@ -33,6 +33,11 @@ Inside of these tags, we’ll be adding `block content`, and later another tag w
 This creates a block that we can add code to in other templates. 
 This block gives us the ability to later insert content that is specific to individual pages. 
 It should look like this:
+```pug
+{% block content %}
+ 
+{% endblock %}
+```
 ```html
 {% block content %}
  
