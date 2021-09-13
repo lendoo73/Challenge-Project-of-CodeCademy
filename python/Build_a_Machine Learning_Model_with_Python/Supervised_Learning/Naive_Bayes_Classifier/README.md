@@ -60,7 +60,7 @@ This is a pretty big assumption!
 To find this, we need to count up the total number of times “crib” appeared in our dataset of positive reviews.
 If we take that number and divide it by the total number of words in our positive review dataset, we will end up with the probability of “crib” appearing in a positive review.
 If we do this for every word in our review and multiply the results together, we have `P(review | positive)`.
-```
+```py
 for word in review_words:
   if word in pos_counter:
     word_in_pos = pos_counter[word]
@@ -76,7 +76,7 @@ If the unclassified review has a typo in it, it is very unlikely that that same 
 To solve this problem, we will use a technique called ***smoothing***.
 
 In this case, we smooth by adding 1 to the numerator of each probability and `N` to the denominator of each probability. `N` is the number of unique words in our review dataset.
-```
+```py
 pos_probability = 1
 neg_probability = 1
 
@@ -114,7 +114,7 @@ Since we’re only interested in comparing these two probabilities, there’s no
 We can completely ignore the denominator!
 
 Let’s see if our review was more likely to be positive or negative!
-```
+```py
 percent_pos = 0.5
 percent_neg = 0.5
 
@@ -151,7 +151,7 @@ We’re going to use scikit-learn’s `CountVectorizer` object.
 We need to create a `CountVectorizer` and teach it the vocabulary of the training set. This is done by calling the `.fit()` method.
 
 For example, in the code below, we’ve created a CountVectorizer that has been trained on the vocabulary `"Training"`, `"review"`, `"one"`, and `"Second"`.
-```
+```py
 from sklearn.feature_extraction.text import CountVectorizer
 
 vectorizer = CountVectorizer()
@@ -160,7 +160,7 @@ vectorizer.fit(["Training review one", "Second review"])
 ```
 After fitting the vectorizer, we can now call its `.transform()` method. 
 The `.transform()` method takes a list of strings and will transform those strings into counts of the trained words. 
-```
+```py
 counts = vectorizer.transform(["one review two review"])
 ```
 `counts` now stores the array `[2, 1, 0, 0]`. 
@@ -168,7 +168,7 @@ The word `"review"` appeared twice, the word `"one"` appeared once, and neither 
 
 But how did we know that the `2` corresponded to `review`? 
 You can print `vectorizer.vocabulary_` to see the index that each word corresponds to. 
-```
+```py
 {'one': 1, 'Training': 2, 'review': 0, 'Second': 3}
 ```
 Finally, notice that even though the word `"two"` was in our new review, there wasn’t an index for it in the vocabulary. 
