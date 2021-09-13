@@ -29,4 +29,5 @@ This can be done by adding two tags to our document before and after the paragra
 ```
 Notice that all we had to do was add three lines of DTL, and all of our HTML from our base template is now added to the template.
 
-Now that that both templates are set up, all of our common code can go inside of base.html, and any page-specific content can go inside of template.html. This will help with not only keeping the code organized, but also help make the code cleaner as we’ll only be seeing page-specific content in the templates from now on.
+Now that both templates are set up, all of our common code can go inside of **base.html**, and any page-specific content can go inside of **template.html**. 
+This will help with not only keeping the code organized, but also help make the code cleaner as we’ll only be seeing page-specific content in the templates from now on.
