@@ -32,6 +32,7 @@ Therefore, we’ll add another block tag, like so:
   {% endblock %}
 </head>
 ...
+```
 Inside of the template we’ll be using, we first need to load in static files. 
 This is typically done at the beginning of the file after extending from **base.html**. 
 This will let us access all of our static files later. 
