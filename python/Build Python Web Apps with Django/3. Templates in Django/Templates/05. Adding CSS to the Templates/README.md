@@ -11,7 +11,7 @@ We need a folder to store our CSS files, this folder will be in the applicationâ
 This folder will hold assets like pictures and CSS files. 
 Another folder will be created inside of **static/** that will be named after our application. 
 The full path should look like the one below:
-```text
+```txt
 projectname/
  |-- appname/
      |-- templates/
