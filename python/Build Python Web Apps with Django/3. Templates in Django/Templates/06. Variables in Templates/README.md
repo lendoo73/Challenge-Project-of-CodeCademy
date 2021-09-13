@@ -10,7 +10,8 @@ But, DTL can do so much more for us, like
 * grabbing variables from **views.py**, 
 * creating loops, 
 * if statements, 
-* and more! 
+
+and more! 
 
 In this exercise, we’ll start with creating variables.
 
