@@ -4,7 +4,7 @@
 
 With our base template created, we can *refactor* our other templates by removing the common elements. 
 Let’s say we wanted to refactor a template for an `about/` page, it might look like:
-```html
+```HTML
 <p>Welcome to your local veterinarian's office!</p>
  
 <p>Feel free to call us at 123-456-7890!</p>
