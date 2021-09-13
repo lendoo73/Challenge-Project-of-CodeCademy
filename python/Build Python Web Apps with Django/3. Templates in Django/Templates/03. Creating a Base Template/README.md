@@ -5,7 +5,7 @@
 We’ve now created a simple home page, but we’re missing some elements like a helpful navigation bar to move around the application. 
 A basic navigation bar looks like the following. 
 (Please note that we’ll be ignoring CSS for now)
-```html
+```HTML
 <div class="topnav" id="pageTopNav">
   <a href="#home" class="active">Home</a>
   <a href="#contact">Contact</a>
