@@ -18,4 +18,7 @@ projectname/
           |-- appname/
               |-- first_template.html
 ```
-In this lesson we’ll go over creating templates and getting the full use of the DTL inside of those templates to make it easier to design the front end of any Django application.
+In this lesson we’ll go over creating templates 
+and getting the full use of the DTL inside of those templates to make it easier to design the front end of any Django application.
+
+![profile](django_templates_nobg.gif)
