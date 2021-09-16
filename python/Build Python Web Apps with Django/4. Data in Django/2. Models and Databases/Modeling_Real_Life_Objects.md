@@ -10,6 +10,8 @@ Models are how real-life objects get represented in a Django application.
 Then to store this information, we need a database. 
 Conveniently, Django recognizes how common of an issue this is for developers and has a system set up for us to use.
 
+![Django's MTV design pattern](django_mtv_diagram_bg.svg)
+
 Django's MTV design pattern showing how models supply the data, views determine what data to show, and templates displaying the data
 
 Click next to see what Django offers!
