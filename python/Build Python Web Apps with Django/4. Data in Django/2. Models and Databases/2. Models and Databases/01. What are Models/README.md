@@ -2,7 +2,7 @@
 
 # [What are Models](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/data-in-django/modules/django-models-and-databases/lessons/django-models-and-databases/exercises/what-are-models)
 
-We’ve seen firsthand how Django uses the [Model-Template-View (MTV) pattern]() 
+We’ve seen firsthand how Django uses the [Model-Template-View (MTV) pattern](https://github.com/lendoo73/Challenge-Project-of-CodeCademy/tree/master/python/Build%20Python%20Web%20Apps%20with%20Django/4.%20Data%20in%20Django/2.%20Models%20and%20Databases/1.%20Modeling%20Real%20Life%20Objects) 
 to bring our apps to life. 
 This time around, we’ll focus on the model portion of this pattern which deals heavily with the data in our app — this means we’ll also dive into the database!
 
