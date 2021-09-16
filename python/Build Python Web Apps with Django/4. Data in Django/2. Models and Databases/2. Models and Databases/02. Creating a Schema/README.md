@@ -32,4 +32,4 @@ For this lesson, we’ll simplify the process and focus on the two models `Owner
 
 Look over the provided image to see the shape of our schema used in the Vet Office project.
 
-![the shape of our schema](schema_table_transparent)
+![the shape of our schema](schema_table_transparent.svg)
