@@ -26,3 +26,7 @@ In this lesson, we’ll go through:
 * Connecting the Models with the Database
 
 With that information out of the way, let’s Djan**go**!
+
+Review the GIF and see how everyday objects get translated into models.
+
+![how everyday objects get translated into models](django_models_and_fields.gif)
