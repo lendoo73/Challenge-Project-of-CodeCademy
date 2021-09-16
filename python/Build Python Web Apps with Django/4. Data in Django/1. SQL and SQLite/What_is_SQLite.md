@@ -33,10 +33,20 @@ CREATE TABLE celebs (
    age INTEGER
 );
 ```
-However, SQLite will not reject values of the wrong type. We could accidentally insert the wrong data types in the columns. Storing different data types in the same column is a bad habit that can lead to errors that are difficult to fix, so it’s important to be strict about your schema even though SQLite will not enforce it.
+However, SQLite will not reject values of the wrong type. 
+We could accidentally insert the wrong data types in the columns. 
+Storing different data types in the same column is a bad habit that can lead to errors that are difficult to fix, 
+so it’s important to be strict about your schema even though SQLite will not enforce it.
 
-Uses for SQLite
-Even considering the drawbacks, the benefits of being able to access and manipulate a database without involving a server application are huge. SQLite is used worldwide for testing, development, and in any other scenario where it makes sense for the database to be on the same disk as the application code. SQLite’s maintainers consider it to be among the most replicated pieces of software in the world.
+## Uses for SQLite
 
-Conclusion
-You now know about the database software that comes pre-configured for Django. Congratulations! For more info, check our article on other Relational Database Management Systems.
+Even considering the drawbacks, the benefits of being able to access and manipulate a database without involving a server application are huge. 
+SQLite is used worldwide for testing, development, and in any other scenario where it makes sense for the database to be on the same disk as the application code. 
+SQLite’s maintainers consider it to be among the [most replicated pieces of software in the world](https://www.sqlite.org/mostdeployed.html).
+
+## Conclusion
+
+You now know about the database software that comes pre-configured for Django. 
+Congratulations! 
+For more info, check our article on other [Relational Database Management Systems](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/data-in-django/modules/django-sql-and-sqlite/articles/django-what-is-sqlite).
+
