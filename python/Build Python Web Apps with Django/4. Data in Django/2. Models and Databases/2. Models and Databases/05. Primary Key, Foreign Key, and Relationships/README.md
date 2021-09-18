@@ -17,25 +17,39 @@ The second instance, `sunflower`, a primary key of `2` — then maybe a `daisy` 
 | sunflower |	2 |
 | daisy |	3 |
 
-In our apps, we often create multiple models that relate to each other in some way. For our example Flower model, we could have a gardener tend to flowers! This means we need to create another model called Gardener:
-
+In our apps, we often create multiple models that relate to each other in some way. 
+For our example `Flower` model, we could have a gardener tend to flowers! 
+This means we need to create another model called `Gardener`:
+```py
 class Gardener(models.Model):
   first_name = models.CharField(max_length=20)
   years_experience = models.IntegerField()
-Now the question is how do we show this relationship between Flower and Gardener? Well, let’s say that a Gardener instance can tend to multiple Flower instances, but a Flower instance can only have a single Gardener. This means we have a One to Many relationship, one Gardener for multiple Flowers. Conversely, Flowers have a Many to One relationship with a Gardener.
+```
+Now the question is how do we show this relationship between `Flower` and `Gardener`? 
+Well, let’s say that a `Gardener` instance can tend to multiple `Flower` instances, but a `Flower` instance can only have a single `Gardener`. 
+This means we have a [**One to Many**](https://en.wikipedia.org/wiki/One-to-many_%28data_model%29) 
+relationship, one `Gardener` for multiple `Flowers`. 
+Conversely, `Flowers` have a **Many to One** relationship with a `Gardener`.
 
-To make this connection known, we need to supply Flower with a foreign key of a Gardner, i.e. the Flower instances know which Gardener instance takes care of it.
-
+To make this connection known, we need to supply `Flower` with a [**foreign key**](https://docs.djangoproject.com/en/3.1/ref/models/fields/#foreignkey ) 
+of a `Gardner`, i.e. the `Flower` instances know which `Gardener` instance takes care of it.
+```py
 # Garden has a one-to-many relationship with Flower
 class Gardener(models.Model):
-  first_name = models.CharField(max_length=20)
+  first_name = models.CharField(max_length = 20)
   years_experience = models.IntegerField()
  
 # Flower has a many-to-one relationship with Gardener
 class Flower(models.Model):
-  petal_color = models.CharField(max_length=10)
+  petal_color = models.CharField(max_length = 10)
   petal_number = models.IntegerField()
   gardener = models.ForeignKey(Gardener, on_delete=models.CASCADE) 
-Notice that we added the gardener field using models.ForeignKey() and with arguments. The first argument is Gardener because that’s the model we want this foreign key to come from. Then we add on_delete=models.CASCADE to let Django know to delete the Flower instance if its connected Gardener instance is deleted. We’ll cover more about on_delete in a later lesson — for more information check out Django’s arguments documentation.
+```
+Notice that we added the `gardener` field using `models.ForeignKey()` and with arguments. 
+The first argument is `Gardener` because that’s the model we want this foreign key to come from. 
+Then we add `on_delete = models.CASCADE` to let Django know to delete the `Flower` instance if its connected `Gardener` instance is deleted. 
+We’ll cover more about `on_delete` in a later lesson — for more information check out [Django’s arguments documentation](https://docs.djangoproject.com/en/3.1/ref/models/fields/#arguments).
 
-Hypothetically, we could even supply Gardener with a foreign key as well if we wanted to link Gardener to another model, like a Garden for example! These foreign keys tell the database that a one-to-many relationship exists and the direction of this relationship. There are other types of relationships, but let’s implement a one-to-many relationship with our own models!
+Hypothetically, we could even supply `Gardener` with a foreign key as well if we wanted to link `Gardener` to another model, like a `Garden` for example! 
+These foreign keys tell the database that a one-to-many relationship exists and the direction of this relationship. 
+There are other types of relationships, but let’s implement a one-to-many relationship with our own models!
