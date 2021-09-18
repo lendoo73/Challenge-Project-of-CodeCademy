@@ -2,14 +2,21 @@
 
 # [Primary Key, Foreign Key, and Relationships](https://www.codecademy.com/paths/build-python-web-apps-with-django/tracks/data-in-django/modules/django-models-and-databases/lessons/django-models-and-databases/exercises/primary-key-foreign-key-and-relationships)
 
-Later on, we’ll use these models to create instances (specific model objects) in our database. With a Flower model, we could create instances with characteristics of flowers like a rose, a sunflower, or a daisy. Instances then correspond to rows, or records, in our database.
+Later on, we’ll use these models to create *instances* (specific model objects) in our database. 
+With a `Flower` model, we could create instances with characteristics of flowers like a rose, a sunflower, or a daisy. 
+Instances then correspond to rows, or records, in our database.
 
-We’d also need our instances to have a unique ID to help us keep track of each one. These IDs are called primary keys and Django helps us automatically create these unique IDs by incrementing by 1 each time. For example, if our first Flower instance is rose, it would have a primary key/ID of 1. The second instance, sunflower, a primary key of 2 — then maybe a daisy with a primary key of 3, and so forth:
+We’d also need our instances to have a unique ID to help us keep track of each one. 
+These IDs are called *primary keys* and Django helps us automatically create these unique IDs by incrementing by `1` each time. 
+For example, if our first `Flower` instance is `rose`, it would have a primary key/ID of `1`. 
+The second instance, `sunflower`, a primary key of `2` — then maybe a `daisy` with a primary key of `3`, and so forth:
 
-name	ID
-rose	1
-sunflower	2
-daisy	3
+| name |	ID |
+| --- | --- |
+| rose |	1 |
+| sunflower |	2 |
+| daisy |	3 |
+
 In our apps, we often create multiple models that relate to each other in some way. For our example Flower model, we could have a gardener tend to flowers! This means we need to create another model called Gardener:
 
 class Gardener(models.Model):
