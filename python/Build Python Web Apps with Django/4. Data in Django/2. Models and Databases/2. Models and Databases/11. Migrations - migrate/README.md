@@ -16,7 +16,7 @@ python3 manage.py migrate garden
 ```
 Where `garden` is the name of our app. 
 We should see some output like:
-
+```
 Operations to perform:
   Apply all migrations: gardens
 Running migrations:
