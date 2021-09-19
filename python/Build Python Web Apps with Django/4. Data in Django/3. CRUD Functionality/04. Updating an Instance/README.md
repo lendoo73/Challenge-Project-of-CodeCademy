@@ -20,7 +20,7 @@ If we want to change the field’s value, we can reassign it to something else.
 ```py
 >>> first_instance.name = "Ruqisa"
 ```
-When we hit <kbd>Enter</kbd> the instance’s `name` field value will be changed to `"Ruqisa"`. 
+When we hit <kbd><b>Enter</b></kbd> the instance’s `name` field value will be changed to `"Ruqisa"`. 
 If we type out `first_instance.name` again and hit <kbd><b>Enter</b></kbd> it will return an output value of `"Ruqisa"`.
 ```py
 >>> first_instance.name
