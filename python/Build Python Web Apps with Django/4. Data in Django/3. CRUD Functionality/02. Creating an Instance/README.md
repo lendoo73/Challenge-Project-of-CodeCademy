@@ -30,4 +30,4 @@ We’ve created our instance but we still need to save it to our database by cal
 With our instance made, we should exit out of the shell. 
 We can exit out of the Python shell by typing out the command `exit()`. 
 In Windows we can press <kbd>ctrl</kbd> + <kbd>Z</kbd>. 
-On Mac or Linux `ctrl` + `D`.
+On Mac or Linux <kbd>ctrl</kbd> + <kbd>D</kbd>.
