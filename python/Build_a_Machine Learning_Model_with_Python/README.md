@@ -11,7 +11,7 @@ Open-source ML library for Python. Built on NumPy, SciPy, and Matplotlib.
 
 ## [Linear Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
 
-```
+```py
 # Import and create the model:
 from sklearn.linear_model import LinearRegression
  
