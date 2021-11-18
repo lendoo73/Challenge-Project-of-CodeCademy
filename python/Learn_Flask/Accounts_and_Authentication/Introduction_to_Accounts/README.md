@@ -28,7 +28,7 @@ If a hack were to occur, the hackers would not be able to exploit the stolen inf
 We can add hashing functionality to a Flask application using the security module of the Werkzeug package.
 
 To hash a password:
-```
+```py
 from werkzeug.security import generate_password_hash, check_password_hash
 
 hashed_password = generate_password_hash("noONEwillEVERguessTHIS")
@@ -36,7 +36,7 @@ hashed_password = generate_password_hash("noONEwillEVERguessTHIS")
 * `generate_password_hash()` takes a string as an argument and returns a hash of the string
 
 We can also check a user-entered password against our hashed password to check for a match:
-```
+```py
 hash_match = check_password_hash(hashed_password, "IloveTHEcolorPURPLE123")
 print(hash_match) # will print False 
 hash_match = check_password_hash(hashed_password, "noONEwillEVERguessTHIS")
@@ -57,7 +57,7 @@ There are some fields we might want to store for each of our users no matter wha
 For example, these fields can include: **`id`**, **`username`**, **`email`**, **`password_hash`**, and **`joined_at_date`**. 
 A good way to store this data is in a User model within your database. 
 For example, given some database `db`:
-```
+```py
 class User (db.Model):
   id = db.Column(db.Integer, primary_key = True)
   username = db.Column(db.String(64), index = True, unique = True)
@@ -74,7 +74,7 @@ In addition to this informational data, we want to add methods that represent di
 We could write these methods ourselves, but Flask-Login does that work for us with the help of mixins. 
 Mixins help us inject some standard code into a class to make life easier. 
 In this case, we will inherit the methods and properties of the `UserMixin` class.
-```
+```py
 from flask_login import UserMixin
  
 class User(UserMixin, db.Model)
@@ -92,7 +92,7 @@ To get this information we’ll need to provide the user with an interface that 
 An HTML form is a perfect way to gather this data!
 
 We will use WTForms to create forms that make it easy for us to grab the data we need.
-```
+```py
 class RegistrationForm(FlaskForm):
   username = StringField('Username', validators = [DataRequired()])
   email = StringField('Email', validators = [DataRequired(), Email()])
@@ -106,7 +106,7 @@ class RegistrationForm(FlaskForm):
 * a `SubmitField` named `submit` is defined
 
 And we will have a route that allows the users to create an account.
-```
+```py
 @app.route('/register', methods=['GET', 'POST'])
 def register():
   form = RegistrationForm()
@@ -131,7 +131,7 @@ Lastly, we need to make sure to update our template file to make sure the form i
 
 We currently have a working form grabbing user data and signing them up to our application. 
 Next, let’s allow users to login by using a Flask-Login object called `LoginManager()`.
-```
+```py
 login_manager = LoginManager()
 login_manager.init_app(app)
 ```
@@ -139,7 +139,7 @@ login_manager.init_app(app)
 
 Flask-Login provides us with a helpful decorator that we’ll place on endpoints we want to be protected. 
 Remember, decorators allow us to run bits of code before ultimately running a function or in this case our flask endpoint.
-```
+```py
 @app.route('/user/<username>')
 @login_required
 def user(username):
@@ -154,7 +154,7 @@ This will check to make sure the user login is still stored in memory.
 So long as the user memory has not been cleared with a logout or browser refreshing clear, the `LoginManager()` will be able to retrieve the identity of the user before allowing them to access the information on that page.
 
 We also need an additional helper function to load our individual user when trying to access protected routes.
-```
+```py
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -162,7 +162,7 @@ def load_user(user_id):
 * the `load_user()` function loads a user with a given `user_id`
 
 We can then login a user with a login route, paired with a login form, as shown below:
-```
+```py
 @app.route('/login', methods=['GET','POST'])
 def login():
   form = LoginForm(csrf_enabled = False)
@@ -191,7 +191,7 @@ We solve this association problem by making every dinner party an instance of a 
 We can then use the unique identifying attributes of each object to ensure functionality like creating new dinner parties hosted by a specific user and letting users RSVP to a specific dinner party.
 
 We can update our user endpoint with functionality to check for existing dinner parties and create a new dinner party using a form:
-```
+```py
 def user(username):
   user = User.query.filter_by(username = username).first_or_404()
   dinner_parties = DinnerParty.query.filter_by(party_host_id = user.id)
@@ -204,7 +204,7 @@ def user(username):
 * create a `DinnerPartyForm` named `form`
 
 Once the user submits the form for a new dinner party, we can use the form data to create a new `DinnerParty` instance:
-```
+```py
   # user route continued
   if form.validate_on_submit():
     new_dinner_party = DinnerParty(
@@ -224,7 +224,7 @@ Once the user submits the form for a new dinner party, we can use the form data 
 * `new_dinner_party` is added to the session and committed
 
 We can create a new route that will allow users to see all the dinner parties that are happening and provide a form for RSVPing to a specific party:
-```
+```py
 def rsvp(username):
   user = User.query.filter_by(username = username).first_or_404()
   dinner_parties = DinnerParty.query.all()
@@ -253,7 +253,7 @@ We can thus use flash to notify users whether their important actions succeed or
 
 Consider the second half of the RSVP route from the previous exercise. 
 We can update our code to better notify users of what occurs as follows:
-```
+```py
 # second half of rsvp route
   if form.validate_on_submit():
     dinner_party = DinnerParty.query.filter_by(id = int(form.party_id.data)).first()
@@ -276,7 +276,7 @@ We can update our code to better notify users of what occurs as follows:
 * inside the `except` block, `flash()` is given a string message as an argument to notify the user that they were not able to RSVP successfully
 
 With the route updated, we can access our flashed messages in a template file and display them on our page as follows:
-```
+```py
 {% with messages = get_flashed_messages() %}
   {% if messages %}
     {% for message in messages %}
