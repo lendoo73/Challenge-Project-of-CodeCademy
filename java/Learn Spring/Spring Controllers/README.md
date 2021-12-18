@@ -128,3 +128,80 @@ See below for a table of helper methods and the requests to which they map.
 | `@PutMapping` |	Used to specify PUT requests to update existing resources
 | `@DeleteMapping` |	Used to specify DELETE requests to remove specific resources
 
+## [Using Query Parameters](https://www.codecademy.com/courses/learn-spring/lessons/responding-to-requests-with-spring/exercises/using-query-parameters)
+
+In the previous exercise, we discussed the use of helper methods to specify the HTTP method being used. 
+GET requests are used to retrieve information from the server, while POST, PUT, or DELETE requests are used to make changes to resources on the server. 
+In this exercise, we’ll discuss HOW those changes are transmitted from the user to the endpoint.
+
+When users need to pass data to the server, the term we use to describe the process is called binding. 
+The prime example of binding data from a user’s request to an endpoint occurs when a user needs to submit data. 
+Imagine an application where you enter a book’s ISBN and the response returned is either a `yes`, indicating the book is available for checkout, 
+or a `no`, indicating the book is not available. 
+When the user submits their request, we need a way to bind their entry to the endpoint that will provide the response. 
+Thankfully, there’s a Spring annotation for that!
+
+`@RequestParam` is an annotation that can be used at the method parameter level. 
+It allows us to parse query parameters and capture those parameters as method arguments. 
+This is incredibly helpful because we can take values passed in from the HTTP request, parse them, 
+and then bind the values to a controller method for further processing. 
+We also have the option of defining a default value for the method argument in case a value is not received from the client.
+
+In this example, let’s say the user submits their request for a book with 2 authors and a publishing year of 1995.
+
+```
+libraryapp.com/book?author_count=2&published_year=1995
+```
+
+The `author_count` and `published_year` values would map to the method parameters as follows:
+
+```java
+@GetMapping("/book")
+public Book isBookAvailable(@RequestParam int author_count, @RequestParam int published_year) {
+  return books.find(author_count, published_year);
+}
+```
+
+## [Using Template Path Variables](https://www.codecademy.com/courses/learn-spring/lessons/responding-to-requests-with-spring/exercises/using-template-path-variables)
+
+In the previous exercise, we discussed the use of `@RequestParam` to pass data from query parameters to a method. 
+`@RequestParam` is perfect to use when we want to filter the results or return several resources. 
+However, when we want to return more specific entities we can use the `@PathVariable` annotation.
+
+`@PathVariable` maps template variables in the request URI directly to a method’s parameters. 
+For example, we could define a template path
+
+```
+/books/{id}
+```
+
+and use the URI
+
+```
+localhost:4001/books/28937
+```
+
+to pass the path variable “28937” to a method’s `id` parameter. 
+On the server side, we would have an endpoint that looks up books by ID as follows:
+
+```java
+@GetMapping("/{id}")
+public Book isBookAvailable(@PathVariable int id)  {
+  return book.findByID(id);
+}
+```
+
+In the above example, use of the `@PathVariable` at the method parameter level allows us to take a variable received from the request URI 
+and pass it into a method as a parameter. 
+As a developer, this simple annotation affords us ample opportunities to process data from HTTP requests.
+
+> We’ve seen two ways to capture parameters from a request URI. 
+> `@RequestParam` captures the `id` included in the URI `/books?id=28937` 
+> and `@PathVariable` captures the `id` included in the URI `/books/28937` as long as the path includes the `{id}` variable in `books/{id}`.
+
+
+
+
+
+
+
