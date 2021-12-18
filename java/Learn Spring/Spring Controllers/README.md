@@ -91,3 +91,5 @@ Note: When specifying a selection from the `RequestMethod` enum, be sure to impo
 ```
 org.springframework.web.bind.annotation.RequestMethod
 ```
+
+## [Using HTTP Method Annotations](https://www.codecademy.com/courses/learn-spring/lessons/responding-to-requests-with-spring/exercises/using-http-method-annotations )
