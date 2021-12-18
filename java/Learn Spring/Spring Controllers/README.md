@@ -64,3 +64,30 @@ public class VirtualLibrary{
   }
 }
 ```
+
+## [Defining Base Paths]()
+We’ve discussed how to use `@RequestMapping` at the method level, now let’s discover how it can be used at the class level.
+
+When the `@RequestMapping` data annotation is used at the class level, the specified path argument will become the base path. 
+For example, a class with the data annotation `@RequestMapping("/books")` will map all appropriate requests to this class, 
+and in this case, “/books” becomes the base path. 
+Methods in this class can be further mapped, as shown in the previous exercise. 
+In the example shown below, “/books” is now the base path and the `getBookThumbnails` method is associated with the endpoint “/books/thumbnails”:
+
+```java
+@RestController
+@RequestMapping("/books")
+public class VirtualLibrary
+{
+  @RequestMapping(value = "/thumbnails", method = RequestMethod.GET)
+  public String[] getBookThumbnails() {
+    //returns thumbnails for all available titles
+  }
+}
+```
+
+Note: When specifying a selection from the `RequestMethod` enum, be sure to import the annotation using:
+
+```
+org.springframework.web.bind.annotation.RequestMethod
+```
