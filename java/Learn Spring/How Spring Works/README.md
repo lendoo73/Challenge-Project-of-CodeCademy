@@ -15,3 +15,5 @@
 ### [Making POST Requests with Curl](https://www.codecademy.com/courses/learn-spring/lessons/hello-spring/exercises/making-post-requests-with-curl)
 
 ### [Review](https://www.codecademy.com/courses/learn-spring/lessons/hello-spring/exercises/review)
+
+# [Spring Project Layout and Running Locally](https://www.codecademy.com/courses/learn-spring/articles/spring-project-layout-and-running-locally)
