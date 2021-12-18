@@ -199,6 +199,90 @@ As a developer, this simple annotation affords us ample opportunities to process
 > `@RequestParam` captures the `id` included in the URI `/books?id=28937` 
 > and `@PathVariable` captures the `id` included in the URI `/books/28937` as long as the path includes the `{id}` variable in `books/{id}`.
 
+## [Deserializing into Objects](https://www.codecademy.com/courses/learn-spring/lessons/responding-to-requests-with-spring/exercises/deserializing-into-objects)
+
+So far we have seen how methods accept HTTP requests and how they pass data from those requests to method parameters. 
+However, occasionally, the requests received will need to be more complex. 
+For example, instead of receiving the first name as a string parameter from an HTTP request, perhaps we may need to receive an entire form object. 
+How do we go about passing a custom object into a method via an HTTP request? 
+Also, how does the server understand how to properly translate that request? 
+You guessed it; there’s an annotation for that!
+
+We can use the `@RequestBody` annotation on the parameters of a method. 
+When used, this annotation allows Spring to automatically deserialize the HTTP request body into a Java object 
+which can be bound to the method and further processed. 
+The objects can be created by matching attributes with values in JSON.
+
+For example, we can rewrite the previous book example with `@RequestBody` if we define a `Book` object:
+
+```java
+class Book {
+  public int authorCount;
+  public int publishedYear;
+}
+```
+
+The new controller will have a single `Book` parameter instead of separate `authorCount` and `publishedYear` parameters:
+
+```java
+@GetMapping("/book")
+public Book isBookAvailable(@RequestBody Book book) {
+  return book.find(book.authorCount, book.publishedYear);
+}
+```
+
+Finally, the request would need to have `authorCount` and `publishedYear` in its body 
+(rather than the previous URL query parameters `?author_count=2&published_year=1995`):
+
+```
+curl -X POST --data '{\"authorCount\": \"2\", \"publishedYear\": \"1995\"}' "https://localhost:8080/.../book"
+```
+
+## [Clarifying with HTTP Status Codes](https://www.codecademy.com/courses/learn-spring/lessons/responding-to-requests-with-spring/exercises/clarifying-with-http-status-codes)
+
+Anytime an HTTP response is transmitted, a status code is included in the response. 
+HTTP status codes are used to determine if the request was successful or if some type of error occurred and every code has a specific meaning.
+
+The Spring framework uses an `HttpStatus` enumeration (enum) to represent different HTTP status codes. 
+If you are not familiar with enums in Java, you can learn about them in the [Oracle documentation](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html). 
+See the below table for HTTP status code ranges and what each range represents. 
+Also, if you’d like to see more information about specific status codes, you can [learn about them here](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+
+The actual constants in the `HttpStatus` enum loosely match the status code name, 
+e.g. a 201 Created code corresponds to `HttpStatus.CREATED` and a 400 Bad Request code corresponds to `HttpStatus.BAD_REQUEST`. 
+[The full list is on GitHub.](https://github.com/spring-projects/spring-framework/blob/main/spring-web/src/main/java/org/springframework/http/HttpStatus.java)
+
+## [Fine Tuning Responses with @ResponseStatus](https://www.codecademy.com/courses/learn-spring/lessons/responding-to-requests-with-spring/exercises/fine-tuning-responses-with-responsestatus)
+
+We know HTTP status codes can be used to determine if a request was successfully processed or if an error was generated. 
+However, we may want to fine-tune the HTTP response to give the user more information about what occurred.
+
+The `@ResponseStatus` annotation can be applied to methods to help with fine-tuning HTTP responses. 
+The annotation accepts parameters for the status `code` and `reason`.
+
+This can be used to customize messages in both failure and success responses. 
+Consider the scenario when an admin adds a new book to the collection. 
+When they enter all of the required information and click submit, 
+we can use `@ResponseStatus` to return an HTTP status showing the request was successful and a reason indicating the entry was created.
+
+```java
+@PutMapping(path="/book")
+@ResponseStatus(code = HttpStatus.CREATED, reason = "Book was successfully added")
+public string addNewBook(@RequestParam string title) {
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
