@@ -93,3 +93,38 @@ org.springframework.web.bind.annotation.RequestMethod
 ```
 
 ## [Using HTTP Method Annotations](https://www.codecademy.com/courses/learn-spring/lessons/responding-to-requests-with-spring/exercises/using-http-method-annotations )
+
+In the Mapping Requests exercise, we discussed several parameters for the `@RequestMapping` data annotation. 
+One of the arguments mentioned was the method argument. 
+As a reminder, the method argument is used to specify which HTTP method the given method should use. 
+However, the method argument is optional. 
+If we forget to specify it, our method defaults to responding to GET requests. 
+For this reason, we should always specify the HTTP method type.
+
+In addition to using the method argument of the `@RequestMapping` annotation, 
+Spring also offers several annotations which can be used to map to common request types. 
+These annotations perform the same function as `@RequestMapping`. 
+As shown in the example below, using the path and method argument of the `@RequestMapping` annotation 
+is equivalent to just passing in a path to one of the HTTP method annotations. 
+The four common HTTP methods we use to interact with resources are GET, POST, PUT, and DELETE. 
+Check out the table below to see how each method interacts with a resource.
+
+```java
+@RequestMapping("/about", method = RequestMethod.GET)
+```
+
+…is equivalent to…
+
+```java
+@GetMapping("/about")
+```
+
+See below for a table of helper methods and the requests to which they map.
+
+| HTTP Method Annotation |	Usage |
+| --- | --- |
+| `@GetMapping` | Used to specify GET requests to retrieve resources
+| `@PostMapping` |	Used to specify POST requests to create new resources
+| `@PutMapping` |	Used to specify PUT requests to update existing resources
+| `@DeleteMapping` |	Used to specify DELETE requests to remove specific resources
+
