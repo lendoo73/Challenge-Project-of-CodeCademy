@@ -272,20 +272,61 @@ public string addNewBook(@RequestParam string title) {
 }
 ```
 
+## [Exception Handling in Spring](https://www.codecademy.com/courses/learn-spring/lessons/responding-to-requests-with-spring/exercises/exception-handling-in-spring)
 
+In the previous exercise, we discussed the use of `@ResponseStatus` to apply custom HTTP status codes and reasons to an HTTP response. 
+However, if an error is encountered, we can use `ResponseStatusException` to exert even more control over the exception handling process.
 
+**`ResponseStatusException`** accepts up to 3 arguments:
 
+* `HttpStatus code`
+* `String reason`
+* `Throwable cause`
 
+We will focus on the HTTP status and reason arguments because they give us insight into whether or not the request was processed successfully 
+and a brief description of what happened if there was an issue.
 
+In a previous exercise, we looked at a method that returns books based on the client’s ISBN submission. 
+Clearly, the method is expecting a number, but if the client’s submission includes a character other than a number, an exception could be thrown.
 
+In the example below, we are accepting the ID from the client as a string and parsing it into an integer. 
+If the parse fails, a `NumberFormatException` will be thrown. 
+This type of exception may not be so helpful if it is returned to the client. 
+Therefore, we are catching this exception and throwing a new `ResponseStatusException` that will contain more detailed information. 
+In this way, we have exercised more control over the exception handling process and we can let the user know why the error occurred 
+and/or what they can do to resolve the issue.
 
+```java
+@GetMapping("/{id}")
+public Book isBookAvailable(@PathVariable string id) 
+{
+  if (id.isNumeric()) {
+    int id_int = Integer.parseInt(id)
+    return book.findByID(id_int)
+  } 
+  else {
+    throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The ID contained a non-numerical value.");
+  }
+}
+```
 
+> Both the `ResponseStatusException` class and `@ResponseStatus` annotation can be used to specify an HTTP status code. 
+> `ResponseStatusException` is used to create specific responses dynamically, while a `@ResponseStatus` determines the status code 
+> for any response returned by the method.
 
+## [Review](https://www.codecademy.com/courses/learn-spring/lessons/responding-to-requests-with-spring/exercises/review)
 
+Responding to HTTP requests is a complicated process. 
+Thankfully, the Spring framework handles this complexity and allows us to easily use the functionality. 
+Even when exceptions are thrown in Spring applications, the framework provides a way for us to access more information about the errors 
+using the `ResponseStatusException` class or the `@ResponseStatus` annotation.
 
+With the annotations we learned in this lesson, we can now:
+* Map HTTP requests to controllers and methods (`@RestController` and `@RequestMapping`)
+* Specify a path attribute to become a base path (`@RequestMapping` at the class level)
+* Declare request types using HTTP method annotations (`@GetMapping`, `@PostMapping`, `@PutMapping`, and `@DeleteMapping`)
+* Access request parameters in a method (`@RequestParam`)
+* Bind data using template variables (`@PathVariable`)
+* Fine-tune the status code returned by a method (`@ResponseStatus`)
 
-
-
-
-
-
+All of these annotations and `ResponseStatusException` are imported from the `org.springframework.web.bind.annotation` package.
