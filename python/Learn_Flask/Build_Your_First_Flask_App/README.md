@@ -19,12 +19,12 @@ We’ll now break down each step in creating a minimal Flask app.
 The Python module that contains all the classes and functions needed for building a Flask app is called **`flask`**.
 
 We can begin building our app by importing the Flask class, which is needed to create the main application object, from the `flask` module:
-```
+```py
 from flask import Flask
 ```
 Now, we can create an instance of the `Flask` class. 
 Let’s save the application object in a variable called `app`:
-```
+```py
 app = Flask(__name__)
 ```
 When creating a Flask object, we need to pass in the name of the application. 
@@ -45,7 +45,7 @@ Requests from different URLs can be directed to different endpoints in a process
 To build a route, we need to first define a function, known as a view function, that contains the code for processing the request and generating a response. 
 The response could be something as simple as a string of text. 
 Then, we can use the `route()` decorator to bind a URL to the view function such that the function will be triggered when the URL is visited:
-```
+```py
 @app.route('/')
 def home():
     return 'Hello, World!'
@@ -55,7 +55,7 @@ All URL paths must start with a leading slash.
 In the above example, if we visit [http://localhost:5000/](http://localhost:5000) in the browser, `Hello, World!` will be displayed on the webpage.
 
 Multiple URLs can also be bound to the same view function:
-```
+```py
 @app.route('/')
 @app.route('/home')
 def home():
@@ -67,13 +67,13 @@ Now, both [http://localhost:5000/](http://localhost:5000) and [http://localhost:
 
 The response we return from a view function is not limited to plain text or data. 
 It can also return HTML to be rendered on a webpage:
-```
+```py
 @app.route('/')
 def home():
     return '<h1>Hello, World!</h1>'
 ```
 We can use triple quotes to contain multi-line code:
-```
+```py
 @app.route('/')
 @app.route('/home')
 def home():
@@ -93,7 +93,7 @@ Let’s take a look at how we can use variable rules to allow for dynamic URLs.
 When specifying the URL to bind to a view function, we have the option of making any section of the path between the slashes (`/`) variable by indicating `<variable_name>`. 
 These variable parts will then be passed to the view function as arguments. 
 For example:
-```
+```py
 @app.route('/orders/<user_name>/<int:order_id>')
 def orders(user_name, order_id):
     return f'<p>Fetching order #{order_id} for {user_name}.</p>'
