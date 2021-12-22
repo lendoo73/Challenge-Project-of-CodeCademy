@@ -23,7 +23,7 @@ To work with files, which we will call templates, we use the Flask function `ren
 Used in the return statement, this function takes a template file name as an argument and returns the content to send to the client.
 It uses the Jinja2 template engine to generate HTML using the template file as blueprint.
 To use `render_template()` in our routes we need to import it from the `flask`.
-```
+```py
 from flask import Flask, render_template
  
 app = Flask(__name__)
@@ -39,7 +39,7 @@ All template files should be kept inside this directory.
 
 After the filename argument in `render_template()` we can add keyword arguments to be used as variables within the template. 
 These variables are assigned values or app data we would like to access within the template.
-```
+```py
 flask_variable = "Text for my template"
  
 render_template(
@@ -49,7 +49,7 @@ render_template(
 ```
 We’re assigning the value of `flask_variable` to `template_variable` which can be used in **my_template.html**.
 To add more than one variable separate each assignment with a comma.
-```
+```py
 render_template(
   "my_template.html", 
   template_var1 = "A string!", 
@@ -63,15 +63,15 @@ We can pass strings, integers, lists, dictionaries or any other objects to our t
 To access the variables in our templates we need to use the expression delimiter: `{{ }}`.
 
 The delimiter can be used inline with text and alongside HTML elements.
-```
+```py
 <h1>My Heading: {{ template_variable }}</h1>
 ```
 Certain operations can be performed inside expression delimiters {{ }}.
-```
+```py
 <p>Template number plus ten: {{ template_variable + 10 }}</p>
 ```
 List and dictionary elements can be accessed individually inside the expression delimiters {{ }}.
-```
+```py
 <p>Element at index 1: {{ template_list[1] }}</p>
 ```
 
@@ -79,12 +79,12 @@ List and dictionary elements can be accessed individually inside the expression 
 
 *Filters* are used by the template engine to act on template variables. 
 To use them simply follow the variable with the filter name inside the delimiter and separate them with the `|` character.
-```
+```py
 {{ variable | filter_name }}
 ```
 The filter title acts on a string variable and capitalizes the first letter in every word. 
 Given the variable assignment `template_heading = "my very interesting website"`.
-```
+```py
 {{ template_heading |  title }}
  
 OUTPUT
@@ -93,7 +93,7 @@ My Very Interesting Website
 Filters can also take arguments. 
 The `default` filter will output the text in its argument when a variable isn’t passed to the template. 
 Consider if `no_template_variable` is missing from the `render_template()` arguments.
-```
+```py
 {{ no_template_variable | default("I am not from a variable.") }}
  
 OUTPUT
@@ -120,7 +120,7 @@ Including conditionals such as if and if/else statements in our templates allows
 Let’s say we have a string variable passed to our template. When the variable contains an empty string will you want to output it or will you want to output another string? Remember the `default` filter doesn’t work in this situation so an if statement is needed.
 
 Using if statements in a template happens inside a statement delimiter block: {% %}.
-```
+```py
 {% if condition %}
   <p>This text will output if condition is True</p> 
 {% endif %}
@@ -128,7 +128,7 @@ Using if statements in a template happens inside a statement delimiter block: {%
 Notice the `{% endif %}` delimiter is necessary to close the if statement.
 
 The condition can include a variable that is tested using standard comparison operators, `<`, `>`, `<=`, `>=`, `==`, `!=`.
-```
+```py
 {% if template_variable == "Hello" %}
   <p>{{template_variable}}, World!</p> 
 {% endif %}
@@ -139,7 +139,7 @@ Variables can also be tested on their own.
 A variable defined as `None` or `False` or equates to `0` or contains an empty sequence such as `""` or `[]` will test as **False**.
 
 The `{% else %}` and `{% elif %}` delimiters can be included to create multi-branch if statements.
-```
+```py
 {% if template_number < 20 %}
   <p>{{ template_number }} is less than 20.</p> 
 {% elif template_number > 20 %}
@@ -157,7 +157,7 @@ Creating lists, tables or a group of images are all repetitive tasks that can be
 Using the same statement delimiter block as if statements `{% %}`, for loops step through a range of numbers, lists and dictionaries.
 The following code will create an ordered list where each line will output the index of the sequence:
 
-```
+```py
 <ol>
 {% for x in range(3) %}
   <li>{{ x }}</li>
@@ -169,25 +169,25 @@ Similar to the if statements we need to close the loop with an `% endfor %} bloc
 
 ### Iterate through a list variable:
 
-```
+```py
 {% for element in template_list %}
 ```
 
 ### Iterate through a string:
 
-```
+```py
 {% for char_in_string in “Hello!” %}
 ```
 
 ### Iterate through the keys of a dictionary variable:
 
-```
+```py
 {% for key in template_dict %}
 ```
 
 ### Iterate through keys AND values of a dictionary with `items()`:
 
-```
+```py
 {% for key, value in template_dict.items() %}
 ```
 Using the filter `dictsort` in a loop outputs the key/value pairs just like `items()`.
@@ -207,7 +207,7 @@ No, that would take too long.
 To solve this problem template files are used to share content across multiple templates. 
 The simplest case is a file that includes the top portion of the templates through the `<body>` tag and then the closing `</body>` and `</html>` tags. 
 Jinja2 statement delimiters are then used to identify the area of the template where specific content will be substituted in.
-```
+```py
 # base.html
 <html>
   <head>
@@ -221,7 +221,7 @@ Jinja2 statement delimiters are then used to identify the area of the template w
 To inherit this content in another template we will use the `extends` statement. 
 The code to be substituted should then be surrounded by `{% block content %}` and `{% endblock %}`. 
 All together this looks like the following template:
-```
+```py
 # index.html
 {% extends "base.html"  %}
  
@@ -230,7 +230,7 @@ All together this looks like the following template:
 {% endblock %}
 ```
 When a route returns `render_template("index.html")` the rendered page will have this content.
-```
+```py
 <html>
   <head>
     <title>MY WEBSITE</title>
