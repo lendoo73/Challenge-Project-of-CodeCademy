@@ -20,7 +20,7 @@ These are requests for data such as what to display in a browser window.
 When submitting a form through a website, the form data is sent as a POST request. 
 This type of request wants to add data to the app. 
 Routes can handle POST requests if it is specified in the `methods` argument of the `route()` decorator:
-```
+```py
 @app.route(
   "/", 
   methods = ["GET", "POST"]
@@ -32,13 +32,13 @@ When adding “POST” to a route’s methods, be sure to include “GET” if y
 
 Flask provides access to the data in the request through the `request` object. 
 Importing the `request` object allows us to access everything about the requests to our app including form data and the request method such as `GET` or `POST`.
-```
+```py
 from flask import request
 ```
 When data is sent via a form submission it can be accessed using the `form` attribute of the `request` object. 
 The `form` attribute is a dictionary with the form’s field names as the keys and the associated data as the values. 
 For example, if a text input had the name "my_text", then the data access would look like this:
-```
+```py
 text_in_field = request.form["my_text"]
 ```
 
@@ -50,12 +50,12 @@ In this case paths that are hard coded into the navigation elements such as hype
 Flask addresses the challenge of expanding file structures with `url_for()`.  
 **The function `url_for()` takes a route’s function name as an argument and returns the associated URL path.**   
 Given the following Flask route declaration:
-```
+```py
 @app.route('/')
 def index:
 ```
 These two hyperlinks below are identical:
-```
+```py
 <a href="/">Index Link</a>
  
 <a href="{{ url_for('index') }}">Index Link</a>
@@ -67,7 +67,7 @@ These two hyperlinks below are identical:
 **To pass variables** from the template to the app, keyword arguments can be added to `url_for()`. 
 They will be sent as arguments attached to the URL. 
 It can be accessed the same way as if it was added onto the path manually:
-```
+```py
 <a href="{{ url_for(
   'my_page', 
   id = 1
@@ -75,7 +75,7 @@ It can be accessed the same way as if it was added onto the path manually:
 ```
 This line creates a link that sends the value `1` to the route with the function name `my_page`. 
 The route can access the variable through `my_id`.
-```
+```py
 @app.route("/my_path/<int:my_id>"), methods = ["GET", "POST"])
 def my_page(my_id):
     # Access flask_name in this function
@@ -88,7 +88,7 @@ def my_page(my_id):
 Flask provides an alternative to web forms by creating a form class in the application, implementing the fields in the template and handling the data back in the application.
 
 A Flask form class inherits from the class `FlaskForm` and includes attributes for every field:
-```
+```py
 class CommentForm(FlaskForm):
   comment = StringField("Comment")
   submit = SubmitField("Add Comment")
@@ -102,7 +102,7 @@ Access to the fields of this form class is done through the attributes, `my_text
 The `StringField` and `SubmitField` classes are the same as `<input type=text...` and `<input type=submit...` respectively and are part of the [WTForms library](https://wtforms.readthedocs.io/en/2.3.x/).
 
 Below is a simple Flask app with the form class.
-```
+```py
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -129,20 +129,20 @@ In order to use this form in our template, we must create an instance of it and 
 Creating a form in the template is done by accessing attributes of the form passed to the template.
 
 Let’s use the following form as we work toward implementing it in a template:
-```
+```py
 class MyForm(FlaskForm):
     my_textfield = StringField("TextLabel")
     my_submit = SubmitField("SubmitName")
 ```
 In our application route we must instantiate the form and assign that instance to a template variable:
-```
+```py
 # app.py
 my_form = MyForm()
  
 return render_template(template_form = my_form)
 ```
 Moving to the template, creating a form we simply use the form class attributes as expressions.
-```
+```py
 # template.html
 <form action="/" method="post">
     {{ template_form.hidden_tag() }}
@@ -162,7 +162,7 @@ While not visible in the form, this field handles the necessary tasks to protect
 Just like the HTML version, this will initiate sending the form data back to the server.
 
 The HTML created from this form implementation is as follows:
-```
+```py
 <form action="/" method="post">
     <input id="csrf_token" name="csrf_token" type="hidden" value="ImI1YzIxZjUwZWMxNDg0ZDFiODAyZTY5M2U5MGU3MTg2OThkMTJkZjQi.XupI5Q.9HOwqyn3g2pveEHtJMijTu955NU">
     <label for="my_textfield">TextLabel</label>
@@ -177,13 +177,13 @@ Once a form is submitted, the data is sent back to the server through a `POST` r
 
 Using our FlaskForm class, data is now accessible through the form instance in the Flask app. 
 The data can be directly accessed by using the `data` attribute associated with each field in the class:
-```
+```py
 form_data = flask_form.my_textfield.data
 ```
 Keeping all the information and functionality attached to the form object has streamlined the form creation and data gathering process.
 
 Remember that when a route handles a form it is necessary to add the `POST` method to the route decorator.
-```
+```py
 @app.route(
   "/recipe/<int:id>", 
   methods = ["GET", "POST"]
@@ -199,12 +199,12 @@ We enable validation in our form class using the `validators` parameter in the f
 
 Validators come from the `wtform.validators` module. 
 Importing the `DataRequired()` validator is accomplished like this:
-```
+```py
 from wtforms.validators import DataRequired
 ```
 The `DataRequired()` validator simply requires a field to have something in it before the form is submitted. 
 Notifying the user that data is required is handled automatically.
-```
+```py
 comment =  StringField(
   "Comment",
   validators = [DataRequired()]
@@ -213,7 +213,7 @@ comment =  StringField(
 The `validators` argument takes a list of validator instances.
 
 The `FlaskForm` class also provides a method called `validate_on_submit()`, which we can used in our route to check for a valid form submission.
-```
+```py
 if my_form.validate_on_submit():
     # get form data
 ```
@@ -232,7 +232,7 @@ Let’s look at some additional form fields included in [WTForms](https://wtform
 
 The TextAreaField is a text field that supports multi-line input. 
 The data returned from a TextAreaField instance is a string that may include more whitespace characters such as newlines or tabs.
-```
+```py
 # Form class declaration
 my_text_area = TextAreaField("Text Area Label")
 ```
@@ -241,7 +241,7 @@ my_text_area = TextAreaField("Text Area Label")
 
 A checkbox element is created using the BooleanField object. 
 The data returned from a `BooleanField` instance is either `True` or `False`.
-```
+```py
 # Form class declaration
 my_checkbox = BooleanField("Checkbox Label")
 ```
@@ -252,7 +252,7 @@ A radio button group is created using the `RadioField` object.
 Since there are multiple buttons in this group, the instance declaration takes an argument for the group label and a keyword argument `choices` which takes a list of tuples.
 
 Each tuple represents a button in the group and contains the button identifier string and the button label string.
-```
+```py
 # Form class declaration
 my_radio_group = RadioField(
   "Radio Group Label", 
@@ -272,7 +272,7 @@ This is the role of the function `redirect()`.
 
 Consider the case where we create our form in one route, but after the form submission we want the user to end up in another route. 
 While we can set the `action` attribute in the HTML `<form>` tag go to any path, `redirect()` is the best option to move from one route to another.
-```
+```py
 redirect("url_string")
 ```
 Using this function inside another route will simply send us to the URL we specify. 
@@ -284,7 +284,7 @@ Rendering a template outside the initial route would mean you need to repeat som
 
 Once again, to avoid possible URL string pitfalls, we can utilize `url_for()` within `redirect()`. 
 This allows us to navigate routes by specifying the route function name instead of the URL path.
-```
+```py
 redirect(url_for(
   "new_route", 
   _external = True, 
@@ -295,7 +295,7 @@ We must add two new keyword arguments to our call of `url_for()`
 The keyword arguments **`_external = True`** and _**`scheme = 'https'`** ensure that the URL we redirect to is a secure HTTPS address and not an insecure HTTP address.
 
 Similarly, regular keyword arguments can be added if necessary:
-```
+```py
 redirect(url_for(
   "new_route", 
   new_var = this_var, 
