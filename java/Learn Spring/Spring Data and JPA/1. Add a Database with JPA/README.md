@@ -211,8 +211,78 @@ To make the `PersonRepository` available to the `PersonController` as a dependen
 
 In this exercise, you’ll do the same to enable the `PlantRepository` to be used by the `PlantController` class.
 
+## [Make Queries to Your Database: findAll](https://www.codecademy.com/courses/learn-spring/lessons/add-a-database-with-jpa/exercises/make-queries-to-your-database-findall)
 
+Now that you can communicate between your controller and your data access layer, you’ve bridged the gap between an end user of your API and the database.
 
+One of the fastest ways to test this functionality is by implementing some `GET` endpoints in the controller. 
+The `GET` request should be used to retrieve information out of your database, 
+so it makes sense that a `GET` request should trigger repository methods like `.findAll()` or `.findById(Integer id)`.
+
+Continuing the example of the `Person` model, our `PersonController` may include some `@GetMappings` to accomplish this:
+
+```java
+import java.lang.Iterable;
+import java.util.Optional;
+ 
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+ 
+import com.codecademy.people.entities.Person;
+import com.codecademy.people.repositories.PersonRepository;
+ 
+@RestController
+public class PersonController {
+ 
+  private final PersonRepository personRepository;
+ 
+  public PersonController(final PersonRepository personRepository) {
+    this.personRepository = personRepository;
+  }
+ 
+  @GetMapping("/people")
+  public Iterable<Person> getAllPeople() {
+    return this.personRepository.findAll();
+  }
+ 
+  @GetMapping("/people/{id}")
+  public Optional<Person> getPersonById(@PathVariable("id") Integer id) {
+    return this.personRepository.findById(id);
+  }
+}
+```
+
+In this example, the `"/people"` endpoint of this API will fetch all `Person` entries from the `PersonRepository` 
+using the `.findAll()` method offered by the `CrudRepository`. 
+It returns an `Iterable`, which is just a simplified interface for a collection in Java. 
+Note that the `Iterable` has a type parameter, `Person`.
+
+You would test this functionality by making a `GET` request with `curl`, or even navigating to that endpoint in a web browser!
+
+```
+curl localhost:4001/people
+ 
+# [
+#   {
+#     "id": 1,
+#     "eyeColor": "green",
+#     "name": "Tammy Green",
+#     "age": 31
+#   },
+#   {
+#     "id": 2,
+#     "eyeColor": "hazel",
+#     "name": "Rashid Jordan",
+#     "age": 14
+#   },
+#   {
+#     "id": 3,
+#     "eyeColor": "brown",
+#     "name": "Aneeqa Kumar",
+#     "age": 23
+#   }
+# ]
+```
 
 
 
