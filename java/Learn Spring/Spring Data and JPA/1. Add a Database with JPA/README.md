@@ -153,17 +153,21 @@ public interface PersonRepository extends CrudRepository<Person, Integer> {
 In this example, we create a new interface that extends the `CrudRepository`, and parameterize it with our `Person` model 
 and the type of its ID field, `Integer`.
 
-> The angle brackets (< >) are a special kind of syntax used in Java to provide more specific type information to a class, using type parameters. 
-> You may have seen these used when we have a List of things in Java, like List<Integer>. 
-> In this example, the first type parameter is used to ensure that our PersonRepository knows it is responsible for managing instances of the Person object. The second type parameter is used to tell the repository the type of the ID field, which enables methods like .findById.
+> The angle brackets (< >) are a special kind of syntax used in Java to provide more specific type information to a class, using 
+> [type parameters](https://docs.oracle.com/javase/tutorial/java/generics/types.html). 
+> You may have seen these used when we have a `List` of things in Java, like `List<Integer>`. 
+> In this example, the first type parameter is used to ensure that our `PersonRepository` 
+> knows it is responsible for managing instances of the `Person` object. 
+> The second type parameter is used to tell the repository the type of the `ID` field, which enables methods like `.findById`.
 
-Some methods that the CrudRepository interface offers us to enable CRUD functionality are:
+Some methods that the `CrudRepository` interface offers us to enable CRUD functionality are:
 
-.findById(Integer id): allows you to query the database to find an instance of your model by its ID field
-.findAll(): allows you to retrieve ALL the entries in the database for a given model
-.save(Person p): allows you to create AND modify instances of your model in the database
-.delete(Person p): allows you to delete instances of your model from the database
-In this exercise, you’ll use the CrudRepository interface to enable CRUD operations for the plant management application.
+* **`.findById(Integer id)`**: allows you to query the database to find an instance of your model by its ID field
+* **`.findAll()`**: allows you to retrieve ALL the entries in the database for a given model
+* **`.save(Person p)`**: allows you to create AND modify instances of your model in the database
+* **`.delete(Person p)`**: allows you to delete instances of your model from the database
+
+In this exercise, you’ll use the `CrudRepository` interface to enable CRUD operations for the plant management application.
 
 
 
