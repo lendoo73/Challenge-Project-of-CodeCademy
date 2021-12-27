@@ -169,7 +169,47 @@ Some methods that the `CrudRepository` interface offers us to enable CRUD functi
 
 In this exercise, you’ll use the `CrudRepository` interface to enable CRUD operations for the plant management application.
 
+## [Connect Your Repository to a Controller](https://www.codecademy.com/courses/learn-spring/lessons/add-a-database-with-jpa/exercises/connect-your-repository-to-a-controller)
 
+The repository interfaces provided by Spring Data JPA, such as `CrudRepository`, are very powerful for managing data without having to write too much code. 
+However, they are not of much use without a way for an end user of your API to interact with them.
+
+When a user wishes to interact with your API, they do so by making **REST** calls to a `RestController`. 
+A `RestController` is used as the layer of the application that takes requests from the user and accordingly sends commands to the repository 
+or data access layer to accomplish what task the user requested in their REST call.
+
+The repository must be a dependency of the controller, and you can make the repository bean available to the controller class using *dependency injection*.
+
+Since the extension of the `CrudRepository` will be used in the “Spring context,” it is implicitly a bean.
+
+To make a bean available to a class that depends on it, you can simply add it as a field of the class and include it in the constructor. 
+Spring Boot will automatically “wire” in the dependency when it discovers the dependency in the Spring context. 
+For the `PersonRepository` example, we could have a `PersonController` that looks like:
+
+```java
+import org.springframework.web.bind.annotation.RestController;
+ 
+import com.codecademy.people.repositories.PersonRepository;
+ 
+@RestController
+public class PersonController {
+  private final PersonRepository personRepository;
+ 
+  public PersonController(final PersonRepository personRepository) {
+    this.personRepository = personRepository;
+  }
+ 
+  // ... all REST endpoint mappings
+}
+```
+
+To make the `PersonRepository` available to the `PersonController` as a dependency, all that had to be done was:
+
+* Import the `PersonRepository` from the correct package
+* Add the `PersonRepository` as a field in the `PersonController` class
+* Add the `PersonRepository` to the constructor and assign it to the field appropriately
+
+In this exercise, you’ll do the same to enable the `PlantRepository` to be used by the `PlantController` class.
 
 
 
