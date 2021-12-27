@@ -125,14 +125,22 @@ you can apply these skills for the plant management application we are creating 
 
 ## [Create a Repository](https://www.codecademy.com/courses/learn-spring/lessons/add-a-database-with-jpa/exercises/create-a-repository)
 
-Now that we have learned how data models are defined, the next step is to determine how to use the model to interact with the database. Spring Data JPA uses repositories to accomplish this. A repository is a data access and manipulation layer that wraps around your data model. A repository will come with methods to call on instances of your data model like .save(), or .findAll(), or .findById(), enabling a no-code solution to interacting with a data model in a Spring Boot application.
+Now that we have learned how data models are defined, the next step is to determine how to use the model to interact with the database. 
+Spring Data JPA uses repositories to accomplish this. 
+A repository is a data access and manipulation layer that wraps around your data model. 
+A repository will come with methods to call on instances of your data model like `.save()`, or `.findAll()`, or .`findById()`, 
+enabling a no-code solution to interacting with a data model in a Spring Boot application.
 
-When developers build APIs that interact with or manage an underlying data model, there are usually some common functionalities that they want to enable. An API that manages a data model should be able to Create, Read, Update, and Delete instances of the model. For this reason, these kinds of APIs are called CRUD APIs.
+When developers build APIs that interact with or manage an underlying data model, there are usually some common functionalities that they want to enable. 
+An API that manages a data model should be able to **C**reate, **R**ead, **U**pdate, and **D**elete instances of the model. 
+For this reason, these kinds of APIs are called **CRUD API**s.
 
-Since this kind of functionality is so common, Spring Data JPA comes with a special kind of repository interface that gives you full CRUD functionality for your model. To use it, an application developer simply imports the repository interface, tells it what model it should wrap around, and it is good to use!
+Since this kind of functionality is so common, Spring Data JPA comes with a special kind of repository interface 
+that gives you full CRUD functionality for your model. 
+To use it, an application developer simply imports the repository interface, tells it what model it should wrap around, and it is good to use!
 
-Here’s an example of how the CrudRepository interface would work with the Person class from the previous exercise:
-
+Here’s an example of how the `CrudRepository` interface would work with the `Person` class from the previous exercise:
+```java
 import org.springframework.data.repository.CrudRepository;
  
 import com.codecademy.people.entities.Person;
@@ -140,9 +148,14 @@ import com.codecademy.people.entities.Person;
 // creating an extension of the CrudRepository that can manage our Person model
 public interface PersonRepository extends CrudRepository<Person, Integer> {
   // no method declarations are required! }
-In this example, we create a new interface that extends the CrudRepository, and parameterize it with our Person model and the type of its ID field, Integer.
+```
 
-The angle brackets (< >) are a special kind of syntax used in Java to provide more specific type information to a class, using type parameters. You may have seen these used when we have a List of things in Java, like List<Integer>. In this example, the first type parameter is used to ensure that our PersonRepository knows it is responsible for managing instances of the Person object. The second type parameter is used to tell the repository the type of the ID field, which enables methods like .findById.
+In this example, we create a new interface that extends the `CrudRepository`, and parameterize it with our `Person` model 
+and the type of its ID field, `Integer`.
+
+> The angle brackets (< >) are a special kind of syntax used in Java to provide more specific type information to a class, using type parameters. 
+> You may have seen these used when we have a List of things in Java, like List<Integer>. 
+> In this example, the first type parameter is used to ensure that our PersonRepository knows it is responsible for managing instances of the Person object. The second type parameter is used to tell the repository the type of the ID field, which enables methods like .findById.
 
 Some methods that the CrudRepository interface offers us to enable CRUD functionality are:
 
