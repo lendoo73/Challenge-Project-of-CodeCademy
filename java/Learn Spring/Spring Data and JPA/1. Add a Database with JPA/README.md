@@ -284,5 +284,56 @@ curl localhost:4001/people
 # ]
 ```
 
+## [Make Queries to Your Database: findById](https://www.codecademy.com/courses/learn-spring/lessons/add-a-database-with-jpa/exercises/make-queries-to-your-database-findbyid)
+
+Rather than get all items, our API users may want to find a specific entity in the database. 
+For this kind of request, we can use `CrudRepository` methods like `.findById(Integer id)`.
+
+Continuing the example of the `Person` model, we would add this endpoint to our `PersonController`:
+
+```java
+import java.util.Optional;
+// Other imports and class scaffolding omitted
+ 
+@GetMapping("/people/{id}")
+public Optional<Person> getPersonById(@PathVariable("id") Integer id) {
+  return this.personRepository.findById(id);
+}
+```
+
+The endpoint, `"/people/{id}"`, uses a path parameter so that the user of the API can pass in the `id` in the URL in their request. 
+The responsibility of the controller class is to extract this `id` from the request and pass it into the `.findById` method in the repository.
+
+Note that this method returns an `Optional<Person>`. 
+This is because the user may pass an ID that does not exist in the database. 
+The `Optional` type from Java will allow the response to gracefully return `null` in the response body 
+if the `id` supplied could not be found in the database.
+
+A request to this endpoint might look like:
+
+```
+# Request for an ID that exists
+curl localhost:4001/people/3
+ 
+# {
+#   "id": 3,
+#   "eyeColor": "brown",
+#   "name": "Aneeqa Kumar",
+#   "age": 23
+# }
+ 
+ 
+# Request for an ID that does not exist
+curl localhost:4001/people/50
+ 
+# null
+```
+
+
+
+
+
+
+
 
 
