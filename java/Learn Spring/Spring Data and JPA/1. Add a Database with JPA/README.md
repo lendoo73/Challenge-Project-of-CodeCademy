@@ -361,14 +361,15 @@ Now, let’s do something similar for our plants application.
 
 ## [Update a Database Entry](https://www.codecademy.com/courses/learn-spring/lessons/add-a-database-with-jpa/exercises/update-a-database-entry)
 
-The .save method from the CrudRepository interface can be used both for creating new entries in the database as well as updating existing entries.
+The `.save` method from the `CrudRepository` interface can be used both for creating new entries in the database as well as updating existing entries.
 
-A common flow is to fetch an entry from the database by its ID, update some attribute of the entry, and then call .save again to persist the change.
+A common flow is to fetch an entry from the database by its ID, update some attribute of the entry, and then call `.save` again to persist the change.
 
-Like how GET requests are used for reading entries from the database, and POST requests are used for creating new entries in the database, convention dictates that you should use PUT requests to update entries in the database.
+Like how `GET` requests are used for reading entries from the database, and `POST` requests are used for creating new entries in the database, 
+convention dictates that you should use `PUT` requests to update entries in the database.
 
-Here’s what a PUT endpoint to update a Person would look like:
-
+Here’s what a `PUT` endpoint to update a `Person` would look like:
+```java
 @PutMapping("/plants/{id}")
 public Person updatePerson(@PathVariable("id") Integer id, @RequestBody Person p) {
   Optional<Person> personToUpdateOptional = this.personRepository.findById(id);
@@ -392,19 +393,27 @@ public Person updatePerson(@PathVariable("id") Integer id, @RequestBody Person p
   Person updatedPerson = this.personRepository.save(personToUpdate);
   return updatedPerson;
 }
-In this example, the updatePerson method takes an Integer id as path parameter and a Person p as the request body.
+```
 
-The id path parameter is used in the call to this.personRepository.findById to find the Person entry in the PEOPLE table that we wish to update.
+In this example, the `updatePerson` method takes an `Integer id` as path parameter and a `Person p` as the request body.
 
-We first check if the id existed in the database with the .isPresent() method on the Optional<Person> personToUpdateOptional. If it was not present, that meant the id did NOT exist in the database, so the method terminates early by returning null to the response body.
+The `id` path parameter is used in the call to `this.personRepository.findById` to find the `Person` entry in the `PEOPLE` table that we wish to update.
 
-Otherwise, if .isPresent() was NOT false, we can proceed to .get() the underlying Person object out of the Optional and use it for the rest of the method.
+We first check if the `id` existed in the database with the `.isPresent()` method on the `Optional<Person> personToUpdateOptional`. 
+If it was not present, that meant the `id` did NOT exist in the database, so the method terminates early by returning `null` to the response body.
 
-The Person object passed in the request body is used to store the new field values that should be used to update the targeted entry. It does not need to have ALL the fields that a Person has. When Spring Boot (via Jackson) converts the request body to a Person object, it simply sets any fields that are missing to null. Because of this, we are able to use a single endpoint to update any field of the Person. We can use if statements to update a field of the target database entry ONLY IF the corresponding field in the request body object was not null.
+Otherwise, if `.isPresent()` was NOT false, we can proceed to `.get()` the underlying `Person` object out of the `Optional` 
+and use it for the rest of the method.
 
-Lastly, we call the CrudRepository .save method to persist the changes that we made to the person. We return the output of the .save method (updatedPerson) to the user in the response body, so that they can see how the target entry was updated.
+The `Person` object passed in the request body is used to store the new field values that should be used to update the targeted entry. 
+It does not need to have ALL the fields that a `Person` has. 
+When Spring Boot (via Jackson) converts the request body to a `Person` object, it simply sets any fields that are missing to `null`. 
+Because of this, we are able to use a single endpoint to update any field of the `Person`. 
+We can use `if` statements to update a field of the target database entry ONLY IF the corresponding field in the request body object was not null.
 
-Let’s create a similar PUT endpoint for our plants application.
+Lastly, we call the `CrudRepository` `.save` method to persist the changes that we made to the person. 
+We return the output of the `.save` method (`updatedPerson`) to the user in the response body, so that they can see how the target entry was updated.
+
 
 
 
