@@ -123,7 +123,34 @@ public void setAge(Integer age) {
 Now that you are equipped to define models and use JPA annotations to map them to relations, 
 you can apply these skills for the plant management application we are creating for the botanist!
 
+## [Create a Repository](https://www.codecademy.com/courses/learn-spring/lessons/add-a-database-with-jpa/exercises/create-a-repository)
 
+Now that we have learned how data models are defined, the next step is to determine how to use the model to interact with the database. Spring Data JPA uses repositories to accomplish this. A repository is a data access and manipulation layer that wraps around your data model. A repository will come with methods to call on instances of your data model like .save(), or .findAll(), or .findById(), enabling a no-code solution to interacting with a data model in a Spring Boot application.
+
+When developers build APIs that interact with or manage an underlying data model, there are usually some common functionalities that they want to enable. An API that manages a data model should be able to Create, Read, Update, and Delete instances of the model. For this reason, these kinds of APIs are called CRUD APIs.
+
+Since this kind of functionality is so common, Spring Data JPA comes with a special kind of repository interface that gives you full CRUD functionality for your model. To use it, an application developer simply imports the repository interface, tells it what model it should wrap around, and it is good to use!
+
+Here’s an example of how the CrudRepository interface would work with the Person class from the previous exercise:
+
+import org.springframework.data.repository.CrudRepository;
+ 
+import com.codecademy.people.entities.Person;
+ 
+// creating an extension of the CrudRepository that can manage our Person model
+public interface PersonRepository extends CrudRepository<Person, Integer> {
+  // no method declarations are required! }
+In this example, we create a new interface that extends the CrudRepository, and parameterize it with our Person model and the type of its ID field, Integer.
+
+The angle brackets (< >) are a special kind of syntax used in Java to provide more specific type information to a class, using type parameters. You may have seen these used when we have a List of things in Java, like List<Integer>. In this example, the first type parameter is used to ensure that our PersonRepository knows it is responsible for managing instances of the Person object. The second type parameter is used to tell the repository the type of the ID field, which enables methods like .findById.
+
+Some methods that the CrudRepository interface offers us to enable CRUD functionality are:
+
+.findById(Integer id): allows you to query the database to find an instance of your model by its ID field
+.findAll(): allows you to retrieve ALL the entries in the database for a given model
+.save(Person p): allows you to create AND modify instances of your model in the database
+.delete(Person p): allows you to delete instances of your model from the database
+In this exercise, you’ll use the CrudRepository interface to enable CRUD operations for the plant management application.
 
 
 
