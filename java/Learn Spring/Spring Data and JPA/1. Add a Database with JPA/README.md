@@ -446,7 +446,22 @@ we capture the object before it is deleted using `.findById`, and return that ob
 As was the case for getting and updating a plant by ID, we should use the `Optional` methods to check to see if the `id` supplied was valid, 
 and terminate the method early by returning `null` if it was not present in the database.
 
+## [Review](https://www.codecademy.com/courses/learn-spring/lessons/add-a-database-with-jpa/exercises/spring-data-jpa-i-review)
 
+Congratulations! You’ve completed a **CRUD** application end-to-end with *Spring Boot* and *Spring Data JPA*. Your application can:
 
+* **C**reate plants in the database by making **POST** requests and the `.save` method of `CrudRepository`
+* **R**ead plants in the database by making `GET` requests and the `.findAll()` and `.findById()` methods of `CrudRepository`
+* **U**pdate plants in the database by using getters and setters to check and modify fields in the `Plant` entity, and the `.save` method of `CrudRepository`
+* **D**elete plants in the database by using the `.delete` method of the `CrudRepository`.
 
+With this knowledge, you should be able to create any **CRUD** application with *Spring Boot* for any data model. 
+So lace your boots and spring into action!
 
+Play around with your Plants application! 
+Try using `curl` to stress test all of your endpoints and ensure you haven’t introduced any bugs unintentionally.
+
+If it makes it easier to read, you can “pipe” the output of `curl` into `json_pp` like below:
+```
+curl localhost:4001/plants | json_pp
+```
