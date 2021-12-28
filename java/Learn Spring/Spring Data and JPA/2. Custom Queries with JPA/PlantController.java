@@ -26,6 +26,29 @@ public class PlantController {
     this.plantRepository = plantRepository;
   }
 
+  @GetMapping("/plants/search")
+  public List<Plant> searchPlants(
+    @RequestParam(name="hasFruit", required = false) Boolean hasFruit,
+    @RequestParam(name="maxQuantity", required = false) Integer quantity
+  ) {
+    if (hasFruit != null && quantity != null && hasFruit) {
+      return this.plantRepository.findByHasFruitTrueAndQuantityLessThan(quantity);
+    }
+    if (hasFruit != null && quantity != null && !hasFruit) {
+      return this.plantRepository.findByHasFruitFalseAndQuantityLessThan(quantity);
+    }
+    if (hasFruit != null && hasFruit) {
+      return this.plantRepository.findByHasFruitTrue();
+    }
+    if (hasFruit != null && !hasFruit) {
+      return this.plantRepository.findByHasFruitFalse();
+    }
+    if (quantity != null) {
+      return this.plantRepository.findByQuantityLessThan(quantity);
+    }
+    return new ArrayList<>();
+  }
+
   @GetMapping("/plants")
   public Iterable<Plant> getAllPlants() {
     return this.plantRepository.findAll();
@@ -34,15 +57,6 @@ public class PlantController {
   @GetMapping("/plants/{id}")
   public Optional<Plant> getPlantById(@PathVariable("id") Integer id) {
     return this.plantRepository.findById(id);
-  }
-
-  @GetMapping("/plants/search")
-  public List<Plant> searchPlants(@RequestParam(name="hasFruit", required=false) Boolean hasFruit) {
-    if (hasFruit != null) {
-      return this.plantRepository.findByHasFruitTrue();
-    } else {
-      return new ArrayList<>();
-    } 
   }
 
   @PostMapping("/plants")
