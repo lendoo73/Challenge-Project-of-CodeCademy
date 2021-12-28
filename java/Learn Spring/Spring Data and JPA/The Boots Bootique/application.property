@@ -5,5 +5,5 @@ spring.jpa.hibernate.ddl-auto=create-drop
 spring.jpa.hibernate.hbm2ddl.auto=create
 spring.jpa.hibernate.use-new-id-generator-mappings=false
 spring.datasource.initialization-mode=always
-spring.datasource.url=jdbc:h2:~/boots.db
+spring.datasource.url=jdbc:h2:file:~/boots.db
 
