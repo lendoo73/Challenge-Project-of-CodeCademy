@@ -124,7 +124,18 @@ The rules for the method names are detailed in the [Spring documentation here](h
 
 Review the rules before proceeding to implement some custom query methods for the plant application in this exercise.
 
-
+`curl` CLI queries:
+```
+curl "localhost:4001/plants/search?hasFruit=false&maxQuantity=20"
+ 
+curl "localhost:4001/plants/search?hasFruit=false"
+ 
+curl "localhost:4001/plants/search?hasFruit=true"
+ 
+curl "localhost:4001/plants/search?hasFruit=true&maxQuantity=10"
+ 
+curl "localhost:4001/plants/search?maxQuantity=10"
+```
 
 
 
