@@ -414,6 +414,38 @@ We can use `if` statements to update a field of the target database entry ONLY I
 Lastly, we call the `CrudRepository` `.save` method to persist the changes that we made to the person. 
 We return the output of the `.save` method (`updatedPerson`) to the user in the response body, so that they can see how the target entry was updated.
 
+## [Delete a Database Entry](https://www.codecademy.com/courses/learn-spring/lessons/add-a-database-with-jpa/exercises/delete-a-database-entry)
+
+So far, you have:
+* Used a `POST` endpoint to Create a database entry
+* Used a `GET` endpoint to Read database entries
+* Used a `PUT` endpoint to Update a database entry
+
+Sounds like you’re just one capability away from having a full-fledged **CRUD** application!
+
+Implementing a `DELETE` endpoint that can **D**elete a database entry is straightforward. 
+The `CrudRepository` offers a delete method that accepts the instance of the model that you wish to delete. 
+For the `Person` example, this looks like:
+```java
+@DeleteMapping("/people/{id}")
+public Person deletePerson(@PathVariable("id") Integer id) {
+  Optional<Person> personToDeleteOptional = this.personRepository.findById(id);
+  if (!personToDeleteOptional.isPresent()) {
+    return null;
+  }
+  Person personToDelete = personToDeleteOptional.get();
+  this.personRepository.delete(personToDelete);
+  return personToDelete;
+}
+```
+
+Notice that the `.delete` method differs slightly from the `.save` method that we have seen, in that it does not return anything. 
+Instead of depending on the output of the `.delete` method to give a response back to the user of the API, 
+we capture the object before it is deleted using `.findById`, and return that object to the user after the `personToDelete` has been deleted.
+
+As was the case for getting and updating a plant by ID, we should use the `Optional` methods to check to see if the `id` supplied was valid, 
+and terminate the method early by returning `null` if it was not present in the database.
+
 
 
 
