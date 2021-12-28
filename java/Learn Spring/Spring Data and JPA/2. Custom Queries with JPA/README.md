@@ -137,8 +137,13 @@ curl "localhost:4001/plants/search?hasFruit=true&maxQuantity=10"
 curl "localhost:4001/plants/search?maxQuantity=10"
 ```
 
+## [Review](https://www.codecademy.com/courses/learn-spring/lessons/spring-custom-queries-with-jpa/exercises/review-custom-queries)
 
+Congratulations! 
+You can now wield the power of custom JPA queries! 
+Let’s do a brief review:
 
-
-
-
+* We can add custom filter queries to our extension of the `CrudRepository` simply by adding a properly formatted method name to the interface
+* We do not need to write the method bodies
+* The rules for defining custom queries is in the [Spring documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation)
+* We can create advanced query logic by adding phrases such as `And` and `LessThan` into the method name
