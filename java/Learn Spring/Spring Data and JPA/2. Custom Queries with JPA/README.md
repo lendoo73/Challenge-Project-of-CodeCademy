@@ -65,7 +65,64 @@ The rules for the method names are detailed in the
 
 2. We added `required = false` inside the `@RequestParam` annotation.
 
+## [Advanced Custom Queries](https://www.codecademy.com/courses/learn-spring/lessons/spring-custom-queries-with-jpa/exercises/advanced-custom-queries)
 
+Notice that we added `required = false` inside our previous `@RequestParam` annotation. 
+This allows us to optionally add more query parameters if the user would like to search by a different field value instead. 
+For example, we could extend the `PersonRepository` interface with another method:
+```java
+List<Person> findByAgeLessThan(Integer age);
+```
+
+and update the `searchPeople` method accordingly:
+
+```java
+@GetMapping("/people/search")
+public List<Person> searchPeople(
+  @RequestParam(name = "eyeColor", required = false) String eyeColor,
+  @RequestParam(name = "maxAge", required = false) Integer maxAge 
+) {
+  if (eyeColor != null) {
+    return this.personRepository.findByEyeColor(eyeColor)
+  } else if (maxAge != null) {
+    return this.personRepository.findByAgeLessThan(maxAge);
+  } else {
+    return new ArrayList<>();
+  }
+}
+```
+
+You can get even more advanced using **And** queries, so that you could query the `PEOPLE` table by both eyeColor and maxAge at the same time. 
+The new method declaration in the interface would look like:
+```java
+List<Person> findByEyeColorAndAgeLessThan(String eyeColor, Integer age);
+```
+
+The updated `searchPeople` method would look like:
+```java
+@GetMapping("/people/search")
+public List<Person> searchPeople(
+  @RequestParam(name = "eyeColor", required = false) String eyeColor,
+  @RequestParam(name = "maxAge", required = false) Integer maxAge 
+) {
+  if (eyeColor != null && maxAge != null) {
+    return this.personRepository.findByEyeColorAndAgeLessThan(eyeColor, maxAge);
+  } else if (eyeColor != null) {
+    return this.personRepository.findByEyeColor(eyeColor);
+  } else if (maxAge != null) {
+    return this.personRepository.findByAgeLessThan(maxAge);
+  } else {
+    return new ArrayList<>();
+  }
+}
+```
+
+As you can tell by now, Spring Data JPA’s `CrudRepository` is a lot more powerful than it initially lets on!
+
+The naming of the method declarations is extremely important here. 
+The rules for the method names are detailed in the [Spring documentation here](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation).
+
+Review the rules before proceeding to implement some custom query methods for the plant application in this exercise.
 
 
 
