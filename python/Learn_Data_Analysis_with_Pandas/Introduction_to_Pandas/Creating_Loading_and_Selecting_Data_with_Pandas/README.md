@@ -334,7 +334,7 @@ For example, here is a DataFrame called `df` with non-consecutive indices:
 If we use the command `df.reset_index()`, we get a new DataFrame with a new set of indices:
 
 | index | First | Name |	Last Name
-| --- | --- | ---
+| --- | --- | --- | ---
 | 0 |	0 |	John |	Smith
 | 1 |	4 |	Jane |	Doe
 | 2 |	7 |	Joe |	Schmo
