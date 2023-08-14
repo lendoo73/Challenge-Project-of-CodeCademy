@@ -66,7 +66,7 @@ The first few lines look like this:
 | Amy |	Assignment 1 |	75
 | Amy |	Assignment 2 |	35
 | Bob |	Assignment 1 |	99
-| Bob	Assignment 2 |	35
+| Bob | Assignment 2 |	35
 | …
 
 We want to get an average grade for each student across all assignments. 
