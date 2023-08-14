@@ -207,7 +207,7 @@ df['Price with Tax'] = df.apply(
 
 ## [Renaming Columns](https://www.codecademy.com/courses/data-processing-pandas/lessons/pandas-ii/exercises/rename-columns)
 When we get our data from other sources, we often want to change the column names. 
-For example, we might want all of the column names to follow variable name rules, so that we can use **`df.column_name`** (which tab-completes) rather than **`df['column_name']`** (which takes up extra space).
+For example, we might want all of the column names to follow variable name rules, so that we can use **`df.column_name`** (which tab-completes) rather than **`df['column name']`** (which takes up extra space).
 
 You can change all of the column names at once by setting the `.columns` property to a different list. 
 This is great when you need to change all of the column names at once, but be careful! 
