@@ -224,6 +224,7 @@ Company A has each customer’s name and email.
 Company B has each customer’s name and phone number. 
 They have some customers in common, but some are different.
 <hr />
+
 **`company_a`**
 
 | name |	email
