@@ -223,6 +223,7 @@ They each have a list of customers, but they keep slightly different data.
 Company A has each customer’s name and email. 
 Company B has each customer’s name and phone number. 
 They have some customers in common, but some are different.
+
 <hr />
 
 **`company_a`**
