@@ -34,7 +34,12 @@ print(predictions.score())        # returns the coefficient of determination R²
 import matplotlib.pyplot as plt
 
 plt.scatter(x_training_data, y_training_data) 
-plt.plot([min(x_training_data), max(x_training_data)], [min(predictions), max(predictions)], color='red')  # line of bets fit in red
+# line of bets fit in red
+plt.plot(
+    [min(x_training_data), max(x_training_data)],
+    [min(predictions), max(predictions)],
+    color='red'
+)
 plt.show()
 ```
 
