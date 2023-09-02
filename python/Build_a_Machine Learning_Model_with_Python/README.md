@@ -29,13 +29,21 @@ predictions = your_model.predict(your_x_data)
 print(predictions.score())        # returns the coefficient of determination R²
 ```
 
-Visualize
+### Visualize
 ```py
 import matplotlib.pyplot as plt
 
 plt.scatter(x_training_data, y_training_data) 
 plt.plot([min(x_training_data), max(x_training_data)], [min(predictions), max(predictions)], color='red')  # line of bets fit in red
 plt.show()
+```
+
+### Evaluating
+
+#### Calculate the Mean Squared Error (MSE)
+
+```py
+mse = np.mean( (y_training_data - predictions) ** 2 )
 ```
 
 ## [Naive Bayes](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB)
