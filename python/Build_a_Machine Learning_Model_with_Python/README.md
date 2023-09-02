@@ -84,6 +84,24 @@ N = len(x_training_data)
 f_statistic = (tse / J) / (sse / (N - J - 1))
 ```
 
+#### Hypothesis tests
+
+```py
+import statsmodels.api as sm
+
+X = sm.add_constant(x_training_data)
+results = sm.OLS(y_training_data, x_training_data).fit()
+
+# Get the overall results for the multivariate model
+print(results.summary())
+
+# Get only the results for the F-statistic and it's corresponding p-value
+F = np.identity(len(results.params))
+F = F[1:,:]
+
+print(results.f_test(F))
+```
+
 ## [Naive Bayes](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB)
 ```py
 # Import and create the model:
