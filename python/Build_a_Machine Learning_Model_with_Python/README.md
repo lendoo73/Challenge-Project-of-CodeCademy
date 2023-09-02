@@ -45,7 +45,29 @@ plt.show()
 
 ### Evaluating
 
-#### Calculate the Mean Squared Error (MSE)
+#### Calculate the Sum of Squared Errors (SSE)
+
+This measures how close the model predictions are to the true values.
+
+```py
+sse = sum( (y_training_data - predictions) ** 2 )
+```
+
+#### Calculate the Total Sum of Squars)
+
+```py
+tse = sum( (y_training_data - np.mean(y_training_data)) ** 2 )
+```
+
+#### Calculate Coefficient of determination ($R^2$) 
+
+It describes how well the model represents the data.
+
+```py
+r_squared = 1 - (sse / tse)
+```
+
+#### Calculate the Mean Squared Errors (MSE)
 
 ```py
 mse = np.mean( (y_training_data - predictions) ** 2 )
