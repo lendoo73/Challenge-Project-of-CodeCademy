@@ -73,6 +73,17 @@ r_squared = 1 - (sse / tse)
 mse = np.mean( (y_training_data - predictions) ** 2 )
 ```
 
+#### Calculate F-statistic
+
+J is the number of features.
+N is number of observations
+
+```py
+J = x_training_data.shape[1] if len(x_training_data.shape) > 1 else 1
+N = len(x_training_data)
+f_statistic = (tse / J) / (sse / (N - J - 1))
+```
+
 ## [Naive Bayes](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB)
 ```py
 # Import and create the model:
