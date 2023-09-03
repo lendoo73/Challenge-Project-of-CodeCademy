@@ -102,6 +102,27 @@ F = F[1:,:]
 print(results.f_test(F))
 ```
 
+## [Linear Regression OLS](https://www.statsmodels.org/dev/generated/statsmodels.regression.linear_model.OLS.html)
+
+```py
+from statsmodels.regression.linear_model import OLS
+
+model = OLS(y, X)
+results = model.fit()
+
+# Get the overall results for the multivariate model
+print(results.summary())
+
+bias = results.params[0]
+weights = results.params[1:]
+r_squared = results.rsquared
+
+# Predict:
+predictions = results.fittedvalues
+# or
+predictions = results.predict()
+```
+
 ## [Naive Bayes](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB)
 ```py
 # Import and create the model:
