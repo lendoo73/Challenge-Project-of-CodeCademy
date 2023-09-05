@@ -43,6 +43,10 @@ plt.plot(
 plt.show()
 ```
 
+```˙py
+plt.plot(x_training_data, your_model.coef_[0] * x_training_data + your_model.intercept_);
+```
+
 ### Evaluating
 
 #### Calculate the Sum of Squared Errors (SSE)
