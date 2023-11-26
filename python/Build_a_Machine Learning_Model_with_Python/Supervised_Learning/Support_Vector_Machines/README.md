@@ -204,7 +204,7 @@ We could visualize what this plane would look like in two dimensions to get the 
 
 ![visualized in 2D](images/curved_boundary.webp)
 
-## [Radial Bias Function Kernel](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/support-vector-machines-skill-path/lessons/machine-learning-support-vector-machine/exercises/rbf-kernel)
+## [Radial Basis Function Kernel](https://www.codecademy.com/paths/machine-learning/tracks/advanced-supervised-learning-skill-path/modules/support-vector-machines-skill-path/lessons/machine-learning-support-vector-machine/exercises/rbf-kernel)
 
 The most commonly used kernel in SVMs is a **radial basis function (rbf)** kernel. 
 This is the default kernel used in scikit-learn’s `SVC` object. 
