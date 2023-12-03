@@ -240,9 +240,9 @@ The missing elements normally show up as `NaN` (or Not a Number) values:
 | --- | --- | --- | --- 
 | Mon | 10.1 | 1 | 1
 | Mon | 20.75 | 5.5	| 2
-| Tue | 19.95 |	5.5 | NaN
+| Tue | 19.95 |	5.5 | **NaN**
 | Wed |	44.10 |	15 | 3
-| Wed |	NaN |1 | 1
+| Wed |	**NaN** |1 | 1
 
 The `num_guests` value for the 3rd row is missing, and the `bill` value for the 5th row is missing. 
 Some calculations we do will just skip the `NaN` values, but some calculations or visualizations we try to perform will break when a `NaN` is encountered.
